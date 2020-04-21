@@ -1,14 +1,17 @@
 package com.danny.dannys_ores;
 
+import com.danny.dannys_ores.generation.OreGen;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -30,6 +33,7 @@ public class Main {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+        DeferredWorkQueue.runLater(OreGen::generateOre);
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -46,4 +50,9 @@ public class Main {
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
     }
+
+//    @SubscribeEvent
+//    public void loadCompleteEvent(FMLLoadCompleteEvent event) {
+//        OreGen.generateOre();
+//    }
 }
