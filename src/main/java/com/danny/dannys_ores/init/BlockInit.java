@@ -18,16 +18,26 @@ import net.minecraftforge.registries.ObjectHolder;
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
 public class BlockInit {
 
-    public static final Block EXAMPLE_BLOCK = null;
+    public static final Block STONE_COPPER_ORE = null;
+    public static final Block STONE_TIN_ORE = null;
+    public static final Block STONE_SILVER_ORE = null;
+    public static final Block STONE_LEAD_ORE = null;
 
     @SubscribeEvent
     public static void registerBlocks(final RegistryEvent.Register<Block> event) {
-        event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)).setRegistryName("example_block"));
+        event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)).setRegistryName("stone_copper_ore"));
+        event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)).setRegistryName("stone_tin_ore"));
+        event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)).setRegistryName("stone_silver_ore"));
+        event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)).setRegistryName("stone_lead_ore"));
     }
 
     @SubscribeEvent
     public static void registerBlockItems(final RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(new BlockItem(EXAMPLE_BLOCK, new Item.Properties().group(Main.TAB)).setRegistryName("example_block"));
+        event.getRegistry().register(new BlockItem(STONE_COPPER_ORE, new Item.Properties().group(Main.TAB)).setRegistryName("stone_copper_ore"));
+        event.getRegistry().register(new BlockItem(STONE_TIN_ORE, new Item.Properties().group(Main.TAB)).setRegistryName("stone_tin_ore"));
+        event.getRegistry().register(new BlockItem(STONE_SILVER_ORE, new Item.Properties().group(Main.TAB)).setRegistryName("stone_silver_ore"));
+        event.getRegistry().register(new BlockItem(STONE_LEAD_ORE, new Item.Properties().group(Main.TAB)).setRegistryName("stone_lead_ore"));
+
     }
 
 }
