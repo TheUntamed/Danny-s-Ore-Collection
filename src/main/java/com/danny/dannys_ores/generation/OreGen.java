@@ -18,7 +18,7 @@ public class OreGen {
             //if(biome == Biomes.MOUNTAINS) {
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
                         Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                BlockInit.STONE_COPPER_ORE.getDefaultState(), 10)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(20, 5, 0, 45))));
+                                BlockInit.STONE_COPPER_ORE.get().getDefaultState(), 10)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(20, 5, 0, 45))));
             //}
         }
     }
