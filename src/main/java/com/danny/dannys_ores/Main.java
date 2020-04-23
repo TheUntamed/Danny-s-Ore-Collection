@@ -13,9 +13,11 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DeferredWorkQueue;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
@@ -28,7 +30,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(Main.MOD_ID)
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
 public class Main {
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "dannys_ores";
     public static Main instance;
 
@@ -38,8 +40,11 @@ public class Main {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         //Order of these registers is important. Items -> Blocks -> TileEntity
-        ItemInit.ITEMS.register(modEventBus);
+        //ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.spec);
+        Config.loadConfig();
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);

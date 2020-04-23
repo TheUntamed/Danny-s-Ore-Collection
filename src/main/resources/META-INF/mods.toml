@@ -12,9 +12,9 @@ version="1.15.2-0.1.0" #mandatory
 
 displayName="Danny's Ore Collection" #mandatory
 
-updateJSONURL="http://myurl.me/" #optional
+updateJSONURL="https://github.com/TheUntamed" #optional
 
-displayURL="http://example.com/" #optional
+displayURL="https://github.com/TheUntamed" #optional
 
 logoFile="examplemod.png" #optional
 

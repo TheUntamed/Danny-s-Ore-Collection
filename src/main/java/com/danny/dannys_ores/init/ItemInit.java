@@ -15,10 +15,10 @@ import net.minecraftforge.registries.DeferredRegister;
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ItemInit {
 
-    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Main.MOD_ID);
+   // public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Main.MOD_ID);
     //public static final Item example_item = null;
 
-    public static final RegistryObject<Item> DEF_ITEM = ITEMS.register("def_item", () -> new Item(new Item.Properties().group(Main.TAB)));
+    //public static final RegistryObject<Item> DEF_ITEM = ITEMS.register("def_item", () -> new Item(new Item.Properties().group(Main.TAB)));
 
 //    @SubscribeEvent
 //    public static void registerItems(final RegistryEvent.Register<Item> event) {
