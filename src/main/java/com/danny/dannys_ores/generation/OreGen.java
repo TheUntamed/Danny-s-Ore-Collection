@@ -5,6 +5,7 @@ import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.pattern.BlockMatcher;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;
@@ -93,7 +94,9 @@ public class OreGen {
                 if ((Config.isTempWhitelistStoneCopperOre.get() && Config.temperatureBlacklistStoneCopperOre.get().contains(biomeTS)) || (!Config.isTempWhitelistStoneCopperOre.get() && !Config.temperatureBlacklistStoneCopperOre.get().contains(biomeTS))) {
                     if ((Config.isBiomeWhitelistStoneCopperOre.get() && Config.biomeBlacklistStoneCopperOre.get().contains(biomeRNS)) || (!Config.isBiomeWhitelistStoneCopperOre.get() && !Config.biomeBlacklistStoneCopperOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.STONE_COPPER_ORE.getDefaultState(), Config.veinSizeStoneCopperOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Config.veinsPerChunkStoneCopperOre.get(), Config.minHeightStoneCopperOre.get(), 0, Config.maxHeightStoneCopperOre.get()))));
+                        //FillerBlockType.create("end_stone", null, new BlockMatcher(Blocks.END_STONE))
                     } } } } }
+
 
     private static void checkConfig(ArrayList biomeVerify, ArrayList tempVerify) {
         for (String name : Config.biomeBlacklistStoneCopperOre.get()) {
