@@ -49,8 +49,9 @@ public class Config {
     public static ForgeConfigSpec.IntValue lightValueStoneCopperOre;
     public static ForgeConfigSpec.IntValue minXpDropStoneCopperOre;
     public static ForgeConfigSpec.IntValue maxXpDropStoneCopperOre;
-    public static ForgeConfigSpec.DoubleValue explosionChanceStoneCopperOre;
+    public static ForgeConfigSpec.IntValue explosionChanceStoneCopperOre;
     public static ForgeConfigSpec.DoubleValue explosionRangeStoneCopperOre;
+    public static ForgeConfigSpec.BooleanValue enableExplosionDestructionStoneCopperOre;
 
     static {
         // = BUILDER.comment("").define("", false);
@@ -90,8 +91,9 @@ public class Config {
                     maxXpDropStoneCopperOre = BUILDER.comment("The maximum xp that drops from this ore. Is always 0 if silktouch is used.").defineInRange("maxXpDropStoneCopperOre", 0, 0,100000);
                 BUILDER.pop();
                 BUILDER.comment("Other settings for this ore.").push("others");
-                    explosionChanceStoneCopperOre = BUILDER.comment("The chance that this ore will explode when harvested. 0.01 = 1%, 1.0 = 100%").defineInRange("explosionChanceStoneCopperOre", 0.0, 0.0, 1.0);
-                    explosionRangeStoneCopperOre = BUILDER.comment("The range (in blocks) of the explosion.").defineInRange("explosionRangeStoneCopperOre", 3.0, 0.0, 100.0);
+                    explosionChanceStoneCopperOre = BUILDER.comment("The chance that this ore will explode when harvested. Unfortunately the values are not exact. Tests showed that 500 is much more than 50%.").defineInRange("explosionChanceStoneCopperOre", 0, 0, 1000);
+                    explosionRangeStoneCopperOre = BUILDER.comment("The range of the explosion.").defineInRange("explosionRangeStoneCopperOre", 3.0, 0.0, 100.0);
+                    enableExplosionDestructionStoneCopperOre = BUILDER.comment("If true, the explosion of this ore will destroy blocks.").define("enableExplosionDestructionStoneCopperOre", false);
                 BUILDER.pop();
             BUILDER.pop();
         BUILDER.pop();
