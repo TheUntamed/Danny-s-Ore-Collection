@@ -37,37 +37,17 @@ public class Main {
 
 
     public Main() {
-        //final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(EventPriority.LOWEST, this::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.spec);
         Config.loadConfig();
 
-        //Order of these registers is important. Items -> Blocks -> TileEntity
-        //ItemInit.ITEMS.register(modEventBus);
-        //BlockInit.BLOCKS.register(modEventBus);
-
-        //instance = this;
-        //MinecraftForge.EVENT_BUS.register(this);
+        instance = this;
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
-//    @SubscribeEvent
-//    public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
-//        final IForgeRegistry<Item> registry = event.getRegistry();
-//
-//        BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-//            final Item.Properties properties = new Item.Properties().group(Main.TAB);
-//            final BlockItem blockItem = new BlockItem(block, properties);
-//            blockItem.setRegistryName(block.getRegistryName());
-//            registry.register(blockItem);
-//        });
-//
-//        LOGGER.debug("Registered BlockItems!");
-//    }
-
     private void setup(final FMLCommonSetupEvent event) {
-        //DeferredWorkQueue.runLater(OreGen::generateOre);
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

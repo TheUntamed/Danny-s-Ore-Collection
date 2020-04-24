@@ -16,9 +16,16 @@ public class BasicOre extends Block {
         super(properties);
     }
 
+    private int getXP(Random random) {
+        if (this == BlockInit.STONE_COPPER_ORE) {
+            return MathHelper.nextInt(random, Config.minXpDropStoneCopperOre.get(), Config.maxXpDropStoneCopperOre.get());
+        } else {
+            return 0;
+        }
+    }
 
-//    @Override
-//    public int getExpDrop(BlockState state, net.minecraft.world.IWorldReader reader, BlockPos pos, int fortune, int silktouch) {
-//        return silktouch == 0 ? MathHelper.nextInt(new Random(), 2, 4) : 0;
-//    }
+    @Override
+    public int getExpDrop(BlockState state, net.minecraft.world.IWorldReader reader, BlockPos pos, int fortune, int silktouch) {
+        return silktouch == 0 ? this.getXP(RANDOM) : 0;
+    }
 }

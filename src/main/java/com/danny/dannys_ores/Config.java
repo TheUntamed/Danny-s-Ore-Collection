@@ -17,8 +17,6 @@ import java.util.List;
 This file was heavily inspired by the code of the mod almost-all-the-ores by waylanderou.
 https://github.com/waylanderou/almost-all-the-ores
  */
-//@ObjectHolder(Main.MOD_ID)
-//@Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
 public class Config {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static ForgeConfigSpec spec;
@@ -49,66 +47,8 @@ public class Config {
     public static ForgeConfigSpec.DoubleValue hardnessLevelStoneCopperOre;
     public static ForgeConfigSpec.DoubleValue resistanceLevelStoneCopperOre;
     public static ForgeConfigSpec.IntValue lightValueStoneCopperOre;
-//
-//    public static ForgeConfigSpec.BooleanValue enableAndesiteCopperOre;
-//    public static ForgeConfigSpec.IntValue veinSizeAndesiteCopperOre;
-//    public static ForgeConfigSpec.IntValue veinsPerChunkAndesiteCopperOre;
-//    public static ForgeConfigSpec.IntValue minHeightAndesiteCopperOre;
-//    public static ForgeConfigSpec.IntValue maxHeightAndesiteCopperOre;
-//    public static ForgeConfigSpec.BooleanValue isWhitelistAndesiteCopperOre;
-//    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistAndesiteCopperOre;
-//    public static ForgeConfigSpec.IntValue harvestLevelAndesiteCopperOre;
-//    public static ForgeConfigSpec.DoubleValue hardnessLevelAndesiteCopperOre;
-//    public static ForgeConfigSpec.DoubleValue resistanceLevelAndesiteCopperOre;
-//    public static ForgeConfigSpec.IntValue lightValueAndesiteCopperOre;
-//
-//    public static ForgeConfigSpec.BooleanValue enableDioriteCopperOre;
-//    public static ForgeConfigSpec.IntValue veinSizeDioriteCopperOre;
-//    public static ForgeConfigSpec.IntValue veinsPerChunkDioriteCopperOre;
-//    public static ForgeConfigSpec.IntValue minHeightDioriteCopperOre;
-//    public static ForgeConfigSpec.IntValue maxHeightDioriteCopperOre;
-//    public static ForgeConfigSpec.BooleanValue isWhitelistDioriteCopperOre;
-//    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistDioriteCopperOre;
-//    public static ForgeConfigSpec.IntValue harvestLevelDioriteCopperOre;
-//    public static ForgeConfigSpec.DoubleValue hardnessLevelDioriteCopperOre;
-//    public static ForgeConfigSpec.DoubleValue resistanceLevelDioriteCopperOre;
-//    public static ForgeConfigSpec.IntValue lightValueDioriteCopperOre;
-//
-//    public static ForgeConfigSpec.BooleanValue enableGraniteCopperOre;
-//    public static ForgeConfigSpec.IntValue veinSizeGraniteCopperOre;
-//    public static ForgeConfigSpec.IntValue veinsPerChunkGraniteCopperOre;
-//    public static ForgeConfigSpec.IntValue minHeightGraniteCopperOre;
-//    public static ForgeConfigSpec.IntValue maxHeightGraniteCopperOre;
-//    public static ForgeConfigSpec.BooleanValue isWhitelistGraniteCopperOre;
-//    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistGraniteCopperOre;
-//    public static ForgeConfigSpec.IntValue harvestLevelGraniteCopperOre;
-//    public static ForgeConfigSpec.DoubleValue hardnessLevelGraniteCopperOre;
-//    public static ForgeConfigSpec.DoubleValue resistanceLevelGraniteCopperOre;
-//    public static ForgeConfigSpec.IntValue lightValueGraniteCopperOre;
-//
-//    public static ForgeConfigSpec.BooleanValue enableNetherrackCopperOre;
-//    public static ForgeConfigSpec.IntValue veinSizeNetherrackCopperOre;
-//    public static ForgeConfigSpec.IntValue veinsPerChunkNetherrackCopperOre;
-//    public static ForgeConfigSpec.IntValue minHeightNetherrackCopperOre;
-//    public static ForgeConfigSpec.IntValue maxHeightNetherrackCopperOre;
-//    public static ForgeConfigSpec.BooleanValue isWhitelistNetherrackCopperOre;
-//    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistNetherrackCopperOre;
-//    public static ForgeConfigSpec.IntValue harvestLevelNetherrackCopperOre;
-//    public static ForgeConfigSpec.DoubleValue hardnessLevelNetherrackCopperOre;
-//    public static ForgeConfigSpec.DoubleValue resistanceLevelNetherrackCopperOre;
-//    public static ForgeConfigSpec.IntValue lightValueNetherrackCopperOre;
-//
-//    public static ForgeConfigSpec.BooleanValue enableEndStoneCopperOre;
-//    public static ForgeConfigSpec.IntValue veinSizeEndStoneCopperOre;
-//    public static ForgeConfigSpec.IntValue veinsPerChunkEndStoneCopperOre;
-//    public static ForgeConfigSpec.IntValue minHeightEndStoneCopperOre;
-//    public static ForgeConfigSpec.IntValue maxHeightEndStoneCopperOre;
-//    public static ForgeConfigSpec.BooleanValue isWhitelistEndStoneCopperOre;
-//    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEndStoneCopperOre;
-//    public static ForgeConfigSpec.IntValue harvestLevelEndStoneCopperOre;
-//    public static ForgeConfigSpec.DoubleValue hardnessLevelEndStoneCopperOre;
-//    public static ForgeConfigSpec.DoubleValue resistanceLevelEndStoneCopperOre;
-//    public static ForgeConfigSpec.IntValue lightValueEndStoneCopperOre;
+    public static ForgeConfigSpec.IntValue minXpDropStoneCopperOre;
+    public static ForgeConfigSpec.IntValue maxXpDropStoneCopperOre;
 
     static {
         // = BUILDER.comment("").define("", false);
@@ -128,19 +68,25 @@ public class Config {
         BUILDER.comment("Copper Ores").push("copper_ores");
             enableCopperOres = BUILDER.comment("Enable or disable all Copper Ore variants.").define("enableCopperOres", true);
             BUILDER.comment("Stone Copper Ore").push("stone_copper_ore");
-                enableStoneCopperOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableStoneCopperOre", true);
-                veinSizeStoneCopperOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeStoneCopperOre", 0, 0, 65536);
-                veinsPerChunkStoneCopperOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkStoneCopperOre", 0, 0, 65536);
-                minHeightStoneCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightStoneCopperOre", 0, 0, 256);
-                maxHeightStoneCopperOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightStoneCopperOre", 0, 0, 256);
-                isTempWhitelistStoneCopperOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistStoneCopperOre", false);
-                temperatureBlacklistStoneCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistStoneCopperOre", new ArrayList<String>());
-                isBiomeWhitelistStoneCopperOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistStoneCopperOre", false);
-                biomeBlacklistStoneCopperOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistStoneCopperOre", new ArrayList<String>());
-                harvestLevelStoneCopperOre = BUILDER.comment("The required tool level. Wood/Gold: 0, Stone: 1, Iron: 2, Diamond: 3, Above Diamond: 4+").defineInRange("harvestLevelStoneCopperOre", 3, 0, 2000000000);
-                hardnessLevelStoneCopperOre = BUILDER.comment("How long it takes to break the block. Has nothing to do with the required tool level. Default value is equal to the value of vanilla ores. Obsidian: 50.0, Bedrock: -1.00 (unbreakable)").defineInRange("hardnessLevelStoneCopperOre", 3.00, -1.00, 3600000.00);
-                resistanceLevelStoneCopperOre = BUILDER.comment("The Blast Resistance of the block. Default value is equal to the value of vanilla ores. Obsidian: 1200.0, Bedrock: 3600000.00").defineInRange("resistanceLevelStoneCopperOre", 3.00, 0.00, 3600000.00);
-                lightValueStoneCopperOre = BUILDER.comment("Should this block emit light? 0: disabled, 15: glowstone").defineInRange("lightValueStoneCopperOre", 0, 0, 15);
+                BUILDER.comment("Generation settings for this ore.").push("generation");
+                    enableStoneCopperOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableStoneCopperOre", true);
+                    veinSizeStoneCopperOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeStoneCopperOre", 0, 0, 65536);
+                    veinsPerChunkStoneCopperOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkStoneCopperOre", 0, 0, 65536);
+                    minHeightStoneCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightStoneCopperOre", 0, 0, 256);
+                    maxHeightStoneCopperOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightStoneCopperOre", 0, 0, 256);
+                    isTempWhitelistStoneCopperOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistStoneCopperOre", false);
+                    temperatureBlacklistStoneCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistStoneCopperOre", new ArrayList<String>());
+                    isBiomeWhitelistStoneCopperOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistStoneCopperOre", false);
+                    biomeBlacklistStoneCopperOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistStoneCopperOre", new ArrayList<String>());
+                BUILDER.pop();
+                BUILDER.comment("Block properties for this ore.").push("properties");
+                    harvestLevelStoneCopperOre = BUILDER.comment("The required tool level. Wood/Gold: 0, Stone: 1, Iron: 2, Diamond: 3, Above Diamond: 4+").defineInRange("harvestLevelStoneCopperOre", 1, 0, 2000000000);
+                    hardnessLevelStoneCopperOre = BUILDER.comment("How long it takes to break the block. Has nothing to do with the required tool level. Default value is equal to the value of vanilla ores. Obsidian: 50.0, Bedrock: -1.00 (unbreakable)").defineInRange("hardnessLevelStoneCopperOre", 3.00, -1.00, 3600000.00);
+                    resistanceLevelStoneCopperOre = BUILDER.comment("The Blast Resistance of the block. Default value is equal to the value of vanilla ores. Obsidian: 1200.0, Bedrock: 3600000.00").defineInRange("resistanceLevelStoneCopperOre", 3.00, 0.00, 3600000.00);
+                    lightValueStoneCopperOre = BUILDER.comment("Should this block emit light? 0: disabled, 15: glowstone").defineInRange("lightValueStoneCopperOre", 0, 0, 15);
+                    minXpDropStoneCopperOre = BUILDER.comment("The minimum xp that drops from this ore. Is always 0 if silktouch is used.").defineInRange("minXpDropStoneCopperOre", 0, 0, 100000);
+                    maxXpDropStoneCopperOre = BUILDER.comment("The maximum xp that drops from this ore. Is always 0 if silktouch is used.").defineInRange("maxXpDropStoneCopperOre", 0, 0,100000);
+                BUILDER.pop();
             BUILDER.pop();
         BUILDER.pop();
         spec = BUILDER.build();
