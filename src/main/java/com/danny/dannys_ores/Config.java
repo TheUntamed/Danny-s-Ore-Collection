@@ -3,8 +3,10 @@ package com.danny.dannys_ores;
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.io.WritingMode;
 import net.minecraftforge.common.ForgeConfigSpec;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -20,20 +22,6 @@ https://github.com/waylanderou/almost-all-the-ores
 public class Config {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static ForgeConfigSpec spec;
-//    public final OreConfig stoneCopper;
-//    public final OreConfig andesiteCopper;
-//    public final OreConfig dioriteCopper;
-//    public final OreConfig graniteCopper;
-//    public final OreConfig netherrackCopper;
-//    public final OreConfig endStoneCopper;
-
-//    Config() {
-//        ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
-//        builder.comment("General settings").push("general");
-//        stoneCopper = new OreConfig(builder, "stone_copper", true, 16, 8, 0, 60, 2, 3.0F, 3.0F, 0);
-//        builder.pop();
-//        spec = builder.build();
-//    }
 
     public static ForgeConfigSpec.BooleanValue disableStoneOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableAndesiteOreGeneration;
@@ -123,35 +111,18 @@ public class Config {
 //    public static ForgeConfigSpec.IntValue lightValueEndStoneCopperOre;
 
     static {
-        InitConfig();
-    }
-
-//    public static class OreConfig {
-//
-//        private OreConfig(ForgeConfigSpec.Builder builder, String name, boolean shouldGenerate,
-//            int perChunk, int veinSize, int minY,
-//            int maxY, int harvestLevel, double hardnessLevel, double resistanceLevel, int lightValue){
-//
-//            builder.comment("Generation settings for " + name + " ore.").push(name);
-//            builder.comment("Determines if " + name + " ore should generate.")
-//                    .define("shouldGenerate", shouldGenerate);
-//        }
-//    }
-
-    private static void InitConfig() {
         // = BUILDER.comment("").define("", false);
-
         BUILDER.comment("General settings").push("general");
-        disableStoneOreGeneration = BUILDER.comment("If true, the Stone variant of all ores will be disabled.").define("disableStoneOreGeneration", false);
-        disableAndesiteOreGeneration = BUILDER.comment("If true, the Andesite variant of all ores will be disabled.").define("disableAndesiteOreGeneration", false);
-        disableDioriteOreGeneration = BUILDER.comment("If true, the Diorite variant of all ores will be disabled.").define("disableDioriteOreGeneration", false);
-        disableGraniteOreGeneration = BUILDER.comment("If true, the Granite variant of all ores will be disabled.").define("disableGraniteOreGeneration", false);
-        disableNetherrackOreGeneration = BUILDER.comment("If true, the Netherrack variant of all ores will be disabled.").define("disableNetherrackOreGeneration", false);
-        disableEndStoneOreGeneration = BUILDER.comment("If true, the End Stone variant of all ores will be disabled.").define("disableEndStoneOreGeneration", false);
+            disableStoneOreGeneration = BUILDER.comment("If true, the Stone variant of all ores will be disabled.").define("disableStoneOreGeneration", false);
+            disableAndesiteOreGeneration = BUILDER.comment("If true, the Andesite variant of all ores will be disabled.").define("disableAndesiteOreGeneration", false);
+            disableDioriteOreGeneration = BUILDER.comment("If true, the Diorite variant of all ores will be disabled.").define("disableDioriteOreGeneration", false);
+            disableGraniteOreGeneration = BUILDER.comment("If true, the Granite variant of all ores will be disabled.").define("disableGraniteOreGeneration", false);
+            disableNetherrackOreGeneration = BUILDER.comment("If true, the Netherrack variant of all ores will be disabled.").define("disableNetherrackOreGeneration", false);
+            disableEndStoneOreGeneration = BUILDER.comment("If true, the End Stone variant of all ores will be disabled.").define("disableEndStoneOreGeneration", false);
 
-        disableOtherOverworldOreGeneration = BUILDER.comment("If true, the generation of overworld ores added by other mods will be disabled").define("disableOtherOverworldOreGeneration", false);
-        disableOtherNetherOreGeneration = BUILDER.comment("If true, the generation of nether ores added by other mods will be disabled").define("disableOtherNetherOreGeneration", false);
-        disableOtherEndOreGeneration = BUILDER.comment("If true, the generation of end ores added by other mods will be disabled").define("disableOtherEndOreGeneration", false);
+            disableOtherOverworldOreGeneration = BUILDER.comment("If true, the generation of overworld ores added by other mods will be disabled").define("disableOtherOverworldOreGeneration", false);
+            disableOtherNetherOreGeneration = BUILDER.comment("If true, the generation of nether ores added by other mods will be disabled").define("disableOtherNetherOreGeneration", false);
+            disableOtherEndOreGeneration = BUILDER.comment("If true, the generation of end ores added by other mods will be disabled").define("disableOtherEndOreGeneration", false);
         BUILDER.pop();
 
         BUILDER.comment("Copper Ores").push("copper_ores");
@@ -164,83 +135,18 @@ public class Config {
                 maxHeightStoneCopperOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightStoneCopperOre", 0, 0, 256);
                 isTempWhitelistStoneCopperOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistStoneCopperOre", false);
                 temperatureBlacklistStoneCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistStoneCopperOre", new ArrayList<String>());
-                isBiomeWhitelistStoneCopperOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isWhitelistStoneCopperOre", false);
+                isBiomeWhitelistStoneCopperOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistStoneCopperOre", false);
                 biomeBlacklistStoneCopperOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistStoneCopperOre", new ArrayList<String>());
-                harvestLevelStoneCopperOre = BUILDER.comment("The required tool level. Wood/Gold: 0, Stone: 1, Iron: 2, Diamond: 3, Above Diamond: 4+").defineInRange("harvestLevelStoneCopperOre", 0, 0, 2000000000);
+                harvestLevelStoneCopperOre = BUILDER.comment("The required tool level. Wood/Gold: 0, Stone: 1, Iron: 2, Diamond: 3, Above Diamond: 4+").defineInRange("harvestLevelStoneCopperOre", 3, 0, 2000000000);
                 hardnessLevelStoneCopperOre = BUILDER.comment("How long it takes to break the block. Has nothing to do with the required tool level. Default value is equal to the value of vanilla ores. Obsidian: 50.0, Bedrock: -1.00 (unbreakable)").defineInRange("hardnessLevelStoneCopperOre", 3.00, -1.00, 3600000.00);
                 resistanceLevelStoneCopperOre = BUILDER.comment("The Blast Resistance of the block. Default value is equal to the value of vanilla ores. Obsidian: 1200.0, Bedrock: 3600000.00").defineInRange("resistanceLevelStoneCopperOre", 3.00, 0.00, 3600000.00);
                 lightValueStoneCopperOre = BUILDER.comment("Should this block emit light? 0: disabled, 15: glowstone").defineInRange("lightValueStoneCopperOre", 0, 0, 15);
             BUILDER.pop();
-//            BUILDER.comment("Andesite Copper Ore").push("andesite_copper_ore");
-//                enableAndesiteCopperOre;
-//                veinSizeAndesiteCopperOre;
-//                veinsPerChunkAndesiteCopperOre;
-//                minHeightAndesiteCopperOre;
-//                maxHeightAndesiteCopperOre;
-//                isWhitelistAndesiteCopperOre;
-//                biomeBlacklistAndesiteCopperOre;
-//                harvestLevelAndesiteCopperOre;
-//                hardnessLevelAndesiteCopperOre;
-//                resistanceLevelAndesiteCopperOre;
-//                lightValueAndesiteCopperOre;
-//            BUILDER.pop();
-//            BUILDER.comment("Diorite Copper Ore").push("diorite_copper_ore");
-//                enableDioriteCopperOre;
-//                veinSizeDioriteCopperOre;
-//                veinsPerChunkDioriteCopperOre;
-//                minHeightDioriteCopperOre;
-//                maxHeightDioriteCopperOre;
-//                isWhitelistDioriteCopperOre;
-//                biomeBlacklistDioriteCopperOre;
-//                harvestLevelDioriteCopperOre;
-//                hardnessLevelDioriteCopperOre;
-//                resistanceLevelDioriteCopperOre;
-//                lightValueDioriteCopperOre;
-//            BUILDER.pop();
-//            BUILDER.comment("Granite Copper Ore").push("granite_copper_ore");
-//                enableGraniteCopperOre;
-//                veinSizeGraniteCopperOre;
-//                veinsPerChunkGraniteCopperOre;
-//                minHeightGraniteCopperOre;
-//                maxHeightGraniteCopperOre;
-//                isWhitelistGraniteCopperOre;
-//                biomeBlacklistGraniteCopperOre;
-//                harvestLevelGraniteCopperOre;
-//                hardnessLevelGraniteCopperOre;
-//                resistanceLevelGraniteCopperOre;
-//                lightValueGraniteCopperOre;
-//            BUILDER.pop();
-//            BUILDER.comment("Netherrack Copper Ore").push("netherrack_copper_ore");
-//                enableNetherrackCopperOre;
-//                veinSizeNetherrackCopperOre;
-//                veinsPerChunkNetherrackCopperOre;
-//                minHeightNetherrackCopperOre;
-//                maxHeightNetherrackCopperOre;
-//                isWhitelistNetherrackCopperOre;
-//                biomeBlacklistNetherrackCopperOre;
-//                harvestLevelNetherrackCopperOre;
-//                hardnessLevelNetherrackCopperOre;
-//                resistanceLevelNetherrackCopperOre;
-//                lightValueNetherrackCopperOre;
-//            BUILDER.pop();
-//            BUILDER.comment("End Stone Copper Ore").push("end_stone_copper_ore");
-//                enableEndStoneCopperOre;
-//                veinSizeEndStoneCopperOre;
-//                veinsPerChunkEndStoneCopperOre;
-//                minHeightEndStoneCopperOre;
-//                maxHeightEndStoneCopperOre;
-//                isWhitelistEndStoneCopperOre;
-//                biomeBlacklistEndStoneCopperOre;
-//                harvestLevelEndStoneCopperOre;
-//                hardnessLevelEndStoneCopperOre;
-//                resistanceLevelEndStoneCopperOre;
-//                lightValueEndStoneCopperOre;
-//            BUILDER.pop();
         BUILDER.pop();
         spec = BUILDER.build();
-////        BUILDER.comment("").push("");
-////
-////        BUILDER.pop();
+        //BUILDER.comment("").push("");
+        //
+        //BUILDER.pop();
     }
 
     public static void loadConfig() {
@@ -250,7 +156,7 @@ public class Config {
                 .writingMode(WritingMode.REPLACE)
                 .build();
         configData.load();
-        //spec.setConfig(configData);
+        spec.setConfig(configData);
     }
 
 }

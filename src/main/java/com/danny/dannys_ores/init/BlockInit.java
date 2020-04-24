@@ -23,34 +23,49 @@ import net.minecraftforge.registries.ObjectHolder;
 //@Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
 public class BlockInit {
 
-    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
-    public static final RegistryObject<Block> STONE_COPPER_ORE = BLOCKS.register("stone_copper_ore", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(Config.hardnessLevelStoneCopperOre.get().floatValue(), Config.resistanceLevelStoneCopperOre.get().floatValue()).harvestLevel(Config.harvestLevelStoneCopperOre.get()).lightValue(Config.lightValueStoneCopperOre.get())));
+//    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
+//    public static final RegistryObject<Block> STONE_COPPER_ORE = BLOCKS.register("stone_copper_ore", () -> new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(Config.hardnessLevelStoneCopperOre.get().floatValue(), Config.resistanceLevelStoneCopperOre.get().floatValue()).harvestLevel(Config.harvestLevelStoneCopperOre.get())));
 //    public static final RegistryObject<Block> ANDESITE_COPPER_ORE = BLOCKS.register("andesite_copper_ore", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(Config.hardnessLevelAndesiteCopperOre.get().floatValue(), Config.resistanceLevelAndesiteCopperOre.get().floatValue()).harvestLevel(Config.harvestLevelAndesiteCopperOre.get()).lightValue(Config.lightValueAndesiteCopperOre.get())));
 //    public static final RegistryObject<Block> DIORITE_COPPER_ORE = BLOCKS.register("diorite_copper_ore", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(Config.hardnessLevelDioriteCopperOre.get().floatValue(), Config.resistanceLevelDioriteCopperOre.get().floatValue()).harvestLevel(Config.harvestLevelDioriteCopperOre.get()).lightValue(Config.lightValueDioriteCopperOre.get())));
 //    public static final RegistryObject<Block> GRANITE_COPPER_ORE = BLOCKS.register("granite_copper_ore", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(Config.hardnessLevelGraniteCopperOre.get().floatValue(), Config.resistanceLevelGraniteCopperOre.get().floatValue()).harvestLevel(Config.harvestLevelGraniteCopperOre.get()).lightValue(Config.lightValueGraniteCopperOre.get())));
 //    public static final RegistryObject<Block> NETHERRACK_COPPER_ORE = BLOCKS.register("netherrack_copper_ore", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(Config.hardnessLevelNetherrackCopperOre.get().floatValue(), Config.resistanceLevelNetherrackCopperOre.get().floatValue()).harvestLevel(Config.harvestLevelNetherrackCopperOre.get()).lightValue(Config.lightValueNetherrackCopperOre.get())));
 //    public static final RegistryObject<Block> END_STONE_COPPER_ORE = BLOCKS.register("end_stone_copper_ore", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(Config.hardnessLevelEndStoneCopperOre.get().floatValue(), Config.resistanceLevelEndStoneCopperOre.get().floatValue()).harvestLevel(Config.harvestLevelEndStoneCopperOre.get()).lightValue(Config.lightValueEndStoneCopperOre.get())));
 
-//    public static final Block STONE_COPPER_ORE = null;
+    @ObjectHolder(Main.MOD_ID + ":stone_copper_ore")
+    public static final BasicOre STONE_COPPER_ORE = null;
 //    public static final Block STONE_TIN_ORE = null;
 //    public static final Block STONE_SILVER_ORE = null;
 //    public static final Block STONE_LEAD_ORE = null;
 //
-//    @SubscribeEvent
-//    public static void registerBlocks(final RegistryEvent.Register<Block> event) {
-//        event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)).setRegistryName("stone_copper_ore"));
+    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
+    public static class OresRegistryEvents {
+
+        @SubscribeEvent
+        public static void registerBlocks(final RegistryEvent.Register<Block> event) {
+            int copperHL;
+            registerBlock(event, Config.harvestLevelStoneCopperOre.get(), Config.hardnessLevelStoneCopperOre.get(), Config.resistanceLevelStoneCopperOre.get(), Config.lightValueStoneCopperOre.get(), "stone_copper_ore");
+        //event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(Config.harvestLevelStoneCopperOre.get()).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).lightValue(Config.lightValueStoneCopperOre.get())).setRegistryName("stone_copper_ore"));
 //        event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)).setRegistryName("stone_tin_ore"));
 //        event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)).setRegistryName("stone_silver_ore"));
 //        event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)).setRegistryName("stone_lead_ore"));
-//    }
-//
-//    @SubscribeEvent
-//    public static void registerBlockItems(final RegistryEvent.Register<Item> event) {
-//        event.getRegistry().register(new BlockItem(STONE_COPPER_ORE, new Item.Properties().group(Main.TAB)).setRegistryName("stone_copper_ore"));
+        }
+
+        @SubscribeEvent
+        public static void registerBlockItems(final RegistryEvent.Register<Item> event) {
+            registerItemBlock(STONE_COPPER_ORE, event);
+        //event.getRegistry().register(new BlockItem(STONE_COPPER_ORE, new Item.Properties().group(Main.TAB)).setRegistryName("stone_copper_ore"));
 //        event.getRegistry().register(new BlockItem(STONE_TIN_ORE, new Item.Properties().group(Main.TAB)).setRegistryName("stone_tin_ore"));
 //        event.getRegistry().register(new BlockItem(STONE_SILVER_ORE, new Item.Properties().group(Main.TAB)).setRegistryName("stone_silver_ore"));
 //        event.getRegistry().register(new BlockItem(STONE_LEAD_ORE, new Item.Properties().group(Main.TAB)).setRegistryName("stone_lead_ore"));
-//
-//    }
 
+        }
+
+        private static void registerBlock(RegistryEvent.Register<Block> event, int harvestLevel, double hardnessLevel, double resistanceLevel, int lightValue, String name) {
+            event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance((float) hardnessLevel, (float) resistanceLevel).lightValue(lightValue).harvestTool(net.minecraftforge.common.ToolType.PICKAXE).harvestLevel(harvestLevel)).setRegistryName(name));
+        }
+
+        private static void registerItemBlock(BasicOre block, RegistryEvent.Register<Item> event) {
+            event.getRegistry().register(new BlockItem(block, new Item.Properties().group(Main.TAB)).setRegistryName(block.getRegistryName()));
+        }
+    }
 }
