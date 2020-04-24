@@ -49,6 +49,8 @@ public class Config {
     public static ForgeConfigSpec.IntValue lightValueStoneCopperOre;
     public static ForgeConfigSpec.IntValue minXpDropStoneCopperOre;
     public static ForgeConfigSpec.IntValue maxXpDropStoneCopperOre;
+    public static ForgeConfigSpec.DoubleValue explosionChanceStoneCopperOre;
+    public static ForgeConfigSpec.DoubleValue explosionRangeStoneCopperOre;
 
     static {
         // = BUILDER.comment("").define("", false);
@@ -60,9 +62,9 @@ public class Config {
             disableNetherrackOreGeneration = BUILDER.comment("If true, the Netherrack variant of all ores will be disabled.").define("disableNetherrackOreGeneration", false);
             disableEndStoneOreGeneration = BUILDER.comment("If true, the End Stone variant of all ores will be disabled.").define("disableEndStoneOreGeneration", false);
 
-            disableOtherOverworldOreGeneration = BUILDER.comment("If true, the generation of overworld ores added by other mods will be disabled").define("disableOtherOverworldOreGeneration", false);
-            disableOtherNetherOreGeneration = BUILDER.comment("If true, the generation of nether ores added by other mods will be disabled").define("disableOtherNetherOreGeneration", false);
-            disableOtherEndOreGeneration = BUILDER.comment("If true, the generation of end ores added by other mods will be disabled").define("disableOtherEndOreGeneration", false);
+            disableOtherOverworldOreGeneration = BUILDER.comment("If true, the generation of overworld ores added by other mods will be disabled.").define("disableOtherOverworldOreGeneration", false);
+            disableOtherNetherOreGeneration = BUILDER.comment("If true, the generation of nether ores added by other mods will be disabled.").define("disableOtherNetherOreGeneration", false);
+            disableOtherEndOreGeneration = BUILDER.comment("If true, the generation of end ores added by other mods will be disabled.").define("disableOtherEndOreGeneration", false);
         BUILDER.pop();
 
         BUILDER.comment("Copper Ores").push("copper_ores");
@@ -81,11 +83,15 @@ public class Config {
                 BUILDER.pop();
                 BUILDER.comment("Block properties for this ore.").push("properties");
                     harvestLevelStoneCopperOre = BUILDER.comment("The required tool level. Wood/Gold: 0, Stone: 1, Iron: 2, Diamond: 3, Above Diamond: 4+").defineInRange("harvestLevelStoneCopperOre", 1, 0, 2000000000);
-                    hardnessLevelStoneCopperOre = BUILDER.comment("How long it takes to break the block. Has nothing to do with the required tool level. Default value is equal to the value of vanilla ores. Obsidian: 50.0, Bedrock: -1.00 (unbreakable)").defineInRange("hardnessLevelStoneCopperOre", 3.00, -1.00, 3600000.00);
-                    resistanceLevelStoneCopperOre = BUILDER.comment("The Blast Resistance of the block. Default value is equal to the value of vanilla ores. Obsidian: 1200.0, Bedrock: 3600000.00").defineInRange("resistanceLevelStoneCopperOre", 3.00, 0.00, 3600000.00);
+                    hardnessLevelStoneCopperOre = BUILDER.comment("How long it takes to break the block. Has nothing to do with the required tool level. Default value is equal to the value of vanilla ores. Obsidian: 50.0, Bedrock: -1.00 (unbreakable)").defineInRange("hardnessLevelStoneCopperOre", 3.0, -1.0, 3600000.0);
+                    resistanceLevelStoneCopperOre = BUILDER.comment("The Blast Resistance of the block. Default value is equal to the value of vanilla ores. Obsidian: 1200.0, Bedrock: 3600000.00").defineInRange("resistanceLevelStoneCopperOre", 3.0, 0.0, 3600000.0);
                     lightValueStoneCopperOre = BUILDER.comment("Should this block emit light? 0: disabled, 15: glowstone").defineInRange("lightValueStoneCopperOre", 0, 0, 15);
                     minXpDropStoneCopperOre = BUILDER.comment("The minimum xp that drops from this ore. Is always 0 if silktouch is used.").defineInRange("minXpDropStoneCopperOre", 0, 0, 100000);
                     maxXpDropStoneCopperOre = BUILDER.comment("The maximum xp that drops from this ore. Is always 0 if silktouch is used.").defineInRange("maxXpDropStoneCopperOre", 0, 0,100000);
+                BUILDER.pop();
+                BUILDER.comment("Other settings for this ore.").push("others");
+                    explosionChanceStoneCopperOre = BUILDER.comment("The chance that this ore will explode when harvested. 0.01 = 1%, 1.0 = 100%").defineInRange("explosionChanceStoneCopperOre", 0.0, 0.0, 1.0);
+                    explosionRangeStoneCopperOre = BUILDER.comment("The range (in blocks) of the explosion.").defineInRange("explosionRangeStoneCopperOre", 3.0, 0.0, 100.0);
                 BUILDER.pop();
             BUILDER.pop();
         BUILDER.pop();
