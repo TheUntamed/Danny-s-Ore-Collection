@@ -1,6 +1,7 @@
 package com.danny.dannys_ores.init;
 
 import com.danny.dannys_ores.Blocks.BasicOre;
+import com.danny.dannys_ores.Blocks.BasicOreItem;
 import com.danny.dannys_ores.Config;
 import com.danny.dannys_ores.Main;
 import net.minecraft.block.Block;
@@ -44,7 +45,7 @@ public class BlockInit {
         }
 
         private static void registerItemBlock(BasicOre block, RegistryEvent.Register<Item> event) {
-            event.getRegistry().register(new BlockItem(block, new Item.Properties().group(Main.TAB)).setRegistryName(block.getRegistryName()));
+            event.getRegistry().register(new BasicOreItem(block, new Item.Properties().group(Main.TAB)).setRegistryName(block.getRegistryName()));
         }
     }
 }

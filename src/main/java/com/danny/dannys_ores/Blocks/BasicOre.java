@@ -62,6 +62,11 @@ public class BasicOre extends Block {
             explosionRange = Config.explosionRangeStoneCopperOre.get().floatValue();
             explosionChance =  Config.explosionChanceStoneCopperOre.get();
             if (Config.enableExplosionDestructionStoneCopperOre.get()) {eM = Explosion.Mode.BREAK;} else {eM = Explosion.Mode.NONE;}
+        } else {
+            minXp = 0;
+            maxXp = 0;
+            explosionRange = 0.0F;
+            explosionChance = 0;
         }
     }
 }

@@ -31,6 +31,8 @@ public class Config {
     public static ForgeConfigSpec.BooleanValue disableOtherOverworldOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableOtherNetherOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableOtherEndOreGeneration;
+    public static ForgeConfigSpec.BooleanValue replaceVanillaOverworldOreGeneration;
+    public static ForgeConfigSpec.BooleanValue replaceVanillaNetherOreGeneration;
 
     public static ForgeConfigSpec.BooleanValue enableCopperOres;
 
@@ -52,20 +54,28 @@ public class Config {
     public static ForgeConfigSpec.IntValue explosionChanceStoneCopperOre;
     public static ForgeConfigSpec.DoubleValue explosionRangeStoneCopperOre;
     public static ForgeConfigSpec.BooleanValue enableExplosionDestructionStoneCopperOre;
+    public static ForgeConfigSpec.BooleanValue hasGlowEffectStoneCopperOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> statusEffectsStoneCopperOre;
+    public static ForgeConfigSpec.BooleanValue onlyInHandStoneCopperOre;
 
     static {
         // = BUILDER.comment("").define("", false);
         BUILDER.comment("General settings").push("general");
-            disableStoneOreGeneration = BUILDER.comment("If true, the Stone variant of all ores will be disabled.").define("disableStoneOreGeneration", false);
-            disableAndesiteOreGeneration = BUILDER.comment("If true, the Andesite variant of all ores will be disabled.").define("disableAndesiteOreGeneration", false);
-            disableDioriteOreGeneration = BUILDER.comment("If true, the Diorite variant of all ores will be disabled.").define("disableDioriteOreGeneration", false);
-            disableGraniteOreGeneration = BUILDER.comment("If true, the Granite variant of all ores will be disabled.").define("disableGraniteOreGeneration", false);
-            disableNetherrackOreGeneration = BUILDER.comment("If true, the Netherrack variant of all ores will be disabled.").define("disableNetherrackOreGeneration", false);
-            disableEndStoneOreGeneration = BUILDER.comment("If true, the End Stone variant of all ores will be disabled.").define("disableEndStoneOreGeneration", false);
-
-            disableOtherOverworldOreGeneration = BUILDER.comment("If true, the generation of overworld ores added by other mods will be disabled.").define("disableOtherOverworldOreGeneration", false);
-            disableOtherNetherOreGeneration = BUILDER.comment("If true, the generation of nether ores added by other mods will be disabled.").define("disableOtherNetherOreGeneration", false);
-            disableOtherEndOreGeneration = BUILDER.comment("If true, the generation of end ores added by other mods will be disabled.").define("disableOtherEndOreGeneration", false);
+            BUILDER.comment("Disable all Ores of certain stone variants").push("stone_variants");
+                disableStoneOreGeneration = BUILDER.comment("If true, the Stone variant of all ores will be disabled.").define("disableStoneOreGeneration", false);
+                disableAndesiteOreGeneration = BUILDER.comment("If true, the Andesite variant of all ores will be disabled.").define("disableAndesiteOreGeneration", false);
+                disableDioriteOreGeneration = BUILDER.comment("If true, the Diorite variant of all ores will be disabled.").define("disableDioriteOreGeneration", false);
+                disableGraniteOreGeneration = BUILDER.comment("If true, the Granite variant of all ores will be disabled.").define("disableGraniteOreGeneration", false);
+                disableNetherrackOreGeneration = BUILDER.comment("If true, the Netherrack variant of all ores will be disabled.").define("disableNetherrackOreGeneration", false);
+                disableEndStoneOreGeneration = BUILDER.comment("If true, the End Stone variant of all ores will be disabled.").define("disableEndStoneOreGeneration", false);
+            BUILDER.pop();
+            BUILDER.comment("Manipulate vanilla and other mods ore generation.").push("vanilla_and_other_mods");
+                replaceVanillaOverworldOreGeneration = BUILDER.comment("If true, vanilla overworld ores will be removed and replaced by the corresponding ores provided by this mod which can be tweaked in this config.").define("replaceVanillaOverworldOreGeneration", false);
+                replaceVanillaNetherOreGeneration = BUILDER.comment("If true, vanilla nether ores will be removed and replaced by the corresponding ores provided by this mod which can be tweaked in this config.").define("replaceVanillaNetherOreGeneration", false);
+                disableOtherOverworldOreGeneration = BUILDER.comment("If true, the generation of overworld ores added by other mods will be disabled.").define("disableOtherOverworldOreGeneration", false);
+                disableOtherNetherOreGeneration = BUILDER.comment("If true, the generation of nether ores added by other mods will be disabled.").define("disableOtherNetherOreGeneration", false);
+                disableOtherEndOreGeneration = BUILDER.comment("If true, the generation of end ores added by other mods will be disabled.").define("disableOtherEndOreGeneration", false);
+            BUILDER.pop();
         BUILDER.pop();
 
         BUILDER.comment("Copper Ores").push("copper_ores");
@@ -90,10 +100,15 @@ public class Config {
                     minXpDropStoneCopperOre = BUILDER.comment("The minimum xp that drops from this ore. Is always 0 if silktouch is used.").defineInRange("minXpDropStoneCopperOre", 0, 0, 100000);
                     maxXpDropStoneCopperOre = BUILDER.comment("The maximum xp that drops from this ore. Is always 0 if silktouch is used.").defineInRange("maxXpDropStoneCopperOre", 0, 0,100000);
                 BUILDER.pop();
-                BUILDER.comment("Other settings for this ore.").push("others");
+                BUILDER.comment("Explosion settings for this ore.").push("explosion");
                     explosionChanceStoneCopperOre = BUILDER.comment("The chance that this ore will explode when harvested. Unfortunately the values are not exact. Tests showed that 500 is much more than 50%.").defineInRange("explosionChanceStoneCopperOre", 0, 0, 1000);
                     explosionRangeStoneCopperOre = BUILDER.comment("The range of the explosion.").defineInRange("explosionRangeStoneCopperOre", 3.0, 0.0, 100.0);
                     enableExplosionDestructionStoneCopperOre = BUILDER.comment("If true, the explosion of this ore will destroy blocks.").define("enableExplosionDestructionStoneCopperOre", false);
+                BUILDER.pop();
+                BUILDER.comment("Settings for the item version of this ore.").push("item");
+                    hasGlowEffectStoneCopperOre = BUILDER.comment("If true, the item has the enchanted glow.").define("hasGlowEffectStoneCopperOre", false);
+                    statusEffectsStoneCopperOre = BUILDER.comment("The effects the ore should apply to the player while in his/her inventory. Syntax: \"effectid:level\". E.g.: [\"1:2\", \"3:5\"] provides Speed II and Haste V. Max level is 255. See the wiki for ID list.").define("statusEffectsStoneCopperOre", new ArrayList<String>());
+                    onlyInHandStoneCopperOre = BUILDER.comment("If true, status effects are only applied if the item is in hand.").define("onlyInHandStoneCopperOre", false);
                 BUILDER.pop();
             BUILDER.pop();
         BUILDER.pop();

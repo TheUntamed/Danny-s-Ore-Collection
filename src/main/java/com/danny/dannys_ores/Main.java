@@ -2,7 +2,6 @@ package com.danny.dannys_ores;
 
 import com.danny.dannys_ores.generation.OreGen;
 import com.danny.dannys_ores.init.BlockInit;
-import com.danny.dannys_ores.init.ItemInit;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;

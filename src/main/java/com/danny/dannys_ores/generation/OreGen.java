@@ -42,14 +42,14 @@ public class OreGen {
             if (biome.getCategory() != Biome.Category.NETHER && biome.getCategory() != Biome.Category.THEEND) {
                 if (Config.disableOtherOverworldOreGeneration.get()) {
                     biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
-                } else {
+                } else if (Config.replaceVanillaOverworldOreGeneration.get()) {
                     removeVanillaOverworldOres(biome);
                 }
             }
             if (biome.getCategory() == Biome.Category.NETHER) {
                 if(Config.disableOtherNetherOreGeneration.get()) {
                     biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
-                } else {
+                } else if (Config.replaceVanillaNetherOreGeneration.get()) {
                     removeNetherQuartzOre(biome);
                 }
             }
@@ -58,9 +58,7 @@ public class OreGen {
                     biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
                 }
             }
-            if (Config.enableCopperOres.get()) {
-                addCopperOreGeneration(biome, biomeRNS, biomeTS);
-            }
+            if (Config.enableCopperOres.get()) { addCopperOreGeneration(biome, biomeRNS, biomeTS); }
         }
     }
 
