@@ -1,7 +1,7 @@
 package com.danny.dannys_ores.Blocks;
 
-import com.danny.dannys_ores.Config;
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.configs.Copper;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -9,7 +9,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
@@ -52,9 +51,9 @@ public class BasicOreItem extends BlockItem {
 
     private void setValues() {
         if (this == BlockInit.STONE_COPPER_ORE.asItem()) {
-            glow = Config.hasGlowEffectStoneCopperOre.get();
-            statusEffects = Config.statusEffectsStoneCopperOre.get();
-            onlyIfSelected = Config.onlyInHandStoneCopperOre.get();
+            glow = Copper.hasGlowEffectStoneCopperOre.get();
+            statusEffects = Copper.statusEffectsStoneCopperOre.get();
+            onlyIfSelected = Copper.onlyInHandStoneCopperOre.get();
         } else {
             glow = false;
             onlyIfSelected = false;

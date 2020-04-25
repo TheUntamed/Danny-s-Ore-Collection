@@ -1,16 +1,14 @@
 package com.danny.dannys_ores.generation;
 
-import com.danny.dannys_ores.Config;
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.configs.Copper;
+import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.pattern.BlockMatcher;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placement.ConfiguredPlacement;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -40,25 +38,25 @@ public class OreGen {
             String biomeTS = biome.getTempCategory().toString();
 
             if (biome.getCategory() != Biome.Category.NETHER && biome.getCategory() != Biome.Category.THEEND) {
-                if (Config.disableOtherOverworldOreGeneration.get()) {
+                if (General.disableOtherOverworldOreGeneration.get()) {
                     biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
-                } else if (Config.replaceVanillaOverworldOreGeneration.get()) {
+                } else if (General.replaceVanillaOverworldOreGeneration.get()) {
                     removeVanillaOverworldOres(biome);
                 }
             }
             if (biome.getCategory() == Biome.Category.NETHER) {
-                if(Config.disableOtherNetherOreGeneration.get()) {
+                if(General.disableOtherNetherOreGeneration.get()) {
                     biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
-                } else if (Config.replaceVanillaNetherOreGeneration.get()) {
+                } else if (General.replaceVanillaNetherOreGeneration.get()) {
                     removeNetherQuartzOre(biome);
                 }
             }
             if (biome.getCategory() == Biome.Category.THEEND) {
-                if (Config.disableOtherEndOreGeneration.get()) {
+                if (General.disableOtherEndOreGeneration.get()) {
                     biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
                 }
             }
-            if (Config.enableCopperOres.get()) { addCopperOreGeneration(biome, biomeRNS, biomeTS); }
+            if (Copper.enableCopperOres.get()) { addCopperOreGeneration(biome, biomeRNS, biomeTS); }
         }
     }
 
@@ -87,20 +85,20 @@ public class OreGen {
     }
 
     private static void addCopperOreGeneration(Biome biome, String biomeRNS, String biomeTS) {
-        if (!Config.disableStoneOreGeneration.get()) {
-            if (Config.enableStoneCopperOre.get()) {
-                if ((Config.isTempWhitelistStoneCopperOre.get() && Config.temperatureBlacklistStoneCopperOre.get().contains(biomeTS)) || (!Config.isTempWhitelistStoneCopperOre.get() && !Config.temperatureBlacklistStoneCopperOre.get().contains(biomeTS))) {
-                    if ((Config.isBiomeWhitelistStoneCopperOre.get() && Config.biomeBlacklistStoneCopperOre.get().contains(biomeRNS)) || (!Config.isBiomeWhitelistStoneCopperOre.get() && !Config.biomeBlacklistStoneCopperOre.get().contains(biomeRNS))) {
-                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.STONE_COPPER_ORE.getDefaultState(), Config.veinSizeStoneCopperOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Config.veinsPerChunkStoneCopperOre.get(), Config.minHeightStoneCopperOre.get(), 0, Config.maxHeightStoneCopperOre.get()))));
+        if (!General.disableStoneOreGeneration.get()) {
+            if (Copper.enableStoneCopperOre.get()) {
+                if ((Copper.isTempWhitelistStoneCopperOre.get() && Copper.temperatureBlacklistStoneCopperOre.get().contains(biomeTS)) || (!Copper.isTempWhitelistStoneCopperOre.get() && !Copper.temperatureBlacklistStoneCopperOre.get().contains(biomeTS))) {
+                    if ((Copper.isBiomeWhitelistStoneCopperOre.get() && Copper.biomeBlacklistStoneCopperOre.get().contains(biomeRNS)) || (!Copper.isBiomeWhitelistStoneCopperOre.get() && !Copper.biomeBlacklistStoneCopperOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.STONE_COPPER_ORE.getDefaultState(), Copper.veinSizeStoneCopperOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Copper.veinsPerChunkStoneCopperOre.get(), Copper.minHeightStoneCopperOre.get(), 0, Copper.maxHeightStoneCopperOre.get()))));
                         //FillerBlockType.create("end_stone", null, new BlockMatcher(Blocks.END_STONE))
                     } } } } }
 
 
     private static void checkConfig(ArrayList biomeVerify, ArrayList tempVerify) {
-        for (String name : Config.biomeBlacklistStoneCopperOre.get()) {
+        for (String name : Copper.biomeBlacklistStoneCopperOre.get()) {
             if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in dannys_ores-common.toml in biomeBlacklistStoneCopperOre, please check the entries!"); }
         }
-        for (String temp : Config.temperatureBlacklistStoneCopperOre.get()) {
+        for (String temp : Copper.temperatureBlacklistStoneCopperOre.get()) {
             if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in dannys_ores-common.toml in temperatureBlacklistStoneCopperOre, please check the entries!"); }
         }
     }

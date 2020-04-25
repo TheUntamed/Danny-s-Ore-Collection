@@ -1,5 +1,6 @@
 package com.danny.dannys_ores;
 
+import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.generation.OreGen;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
@@ -30,8 +31,7 @@ public class Main {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.spec, "dannys_ores/" + Main.MOD_ID + "-common.toml");
-        Config.loadConfig();
+        General.loadConfig();
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);

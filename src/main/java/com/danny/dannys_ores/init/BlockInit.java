@@ -2,22 +2,14 @@ package com.danny.dannys_ores.init;
 
 import com.danny.dannys_ores.Blocks.BasicOre;
 import com.danny.dannys_ores.Blocks.BasicOreItem;
-import com.danny.dannys_ores.Config;
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.configs.Copper;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ObjectHolder;
 
 //@ObjectHolder(Main.MOD_ID)
@@ -32,7 +24,7 @@ public class BlockInit {
 
         @SubscribeEvent
         public static void registerBlocks(final RegistryEvent.Register<Block> event) {
-            registerBlock(event, Config.harvestLevelStoneCopperOre.get(), Config.hardnessLevelStoneCopperOre.get(), Config.resistanceLevelStoneCopperOre.get(), Config.lightValueStoneCopperOre.get(), "stone_copper_ore");
+            registerBlock(event, Copper.harvestLevelStoneCopperOre.get(), Copper.hardnessLevelStoneCopperOre.get(), Copper.resistanceLevelStoneCopperOre.get(), Copper.lightValueStoneCopperOre.get(), "stone_copper_ore");
         }
 
         @SubscribeEvent
