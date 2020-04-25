@@ -3,13 +3,14 @@ package com.danny.dannys_ores;
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.io.WritingMode;
 import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.registries.ObjectHolder;
 
+import java.io.IOException;
+import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -119,7 +120,20 @@ public class Config {
     }
 
     public static void loadConfig() {
-        final CommentedFileConfig configData = CommentedFileConfig.builder(FMLPaths.CONFIGDIR.get().resolve(Main.MOD_ID + "-common.toml"))
+        Path configPath = FMLPaths.CONFIGDIR.get();
+        Path myConfigPath = Paths.get(configPath.toAbsolutePath().toString(), "dannys_ores");
+        try
+        {
+            Files.createDirectory(myConfigPath);
+        }
+        catch (FileAlreadyExistsException e)
+        {
+            // Do nothing
+        }
+        catch (IOException e) {
+            Main.LOGGER.error("Failed to create config directory for Danny's Ores mod.", e);
+        }
+        final CommentedFileConfig configData = CommentedFileConfig.builder(FMLPaths.CONFIGDIR.get().resolve("dannys_ores/" + Main.MOD_ID + "-common.toml"))
                 .sync()
                 .autosave()
                 .writingMode(WritingMode.REPLACE)
