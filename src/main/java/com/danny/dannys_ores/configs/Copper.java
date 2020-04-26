@@ -40,8 +40,9 @@ public class Copper {
     public static ForgeConfigSpec.DoubleValue explosionRangeStoneCopperOre;
     public static ForgeConfigSpec.BooleanValue enableExplosionDestructionStoneCopperOre;
     public static ForgeConfigSpec.BooleanValue hasGlowEffectStoneCopperOre;
-    public static ForgeConfigSpec.ConfigValue<List<String>> statusEffectsStoneCopperOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> itemStatusEffectsStoneCopperOre;
     public static ForgeConfigSpec.BooleanValue onlyInHandStoneCopperOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> blockStatusEffectsStoneCopperOre;
 
     static {
         // = BUILDER.comment("").define("", false);
@@ -49,7 +50,7 @@ public class Copper {
         BUILDER.comment("Copper Ores").push("copper_ores");
             enableCopperOres = BUILDER.comment("Enable or disable all Copper Ore variants.").define("enableCopperOres", true);
             BUILDER.comment("Stone Copper Ore").push("stone_copper_ore");
-                BUILDER.comment("Generation settings for this ore. (Require game restart.)").push("generation");
+                BUILDER.comment("Generation settings for this ore. (Game restart required.)").push("generation");
                     enableStoneCopperOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableStoneCopperOre", true);
                     veinSizeStoneCopperOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeStoneCopperOre", 8, 0, 65536);
                     veinsPerChunkStoneCopperOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkStoneCopperOre", 8, 0, 65536);
@@ -60,7 +61,7 @@ public class Copper {
                     isBiomeWhitelistStoneCopperOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistStoneCopperOre", false);
                     biomeBlacklistStoneCopperOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistStoneCopperOre", new ArrayList<String>());
                 BUILDER.pop();
-                BUILDER.comment("Block properties for this ore. (Require game restart.)").push("properties");
+                BUILDER.comment("Block properties for this ore. (Game restart required.)").push("properties");
                     harvestLevelStoneCopperOre = BUILDER.comment("The required tool level. Wood/Gold: 0, Stone: 1, Iron: 2, Diamond: 3, Above Diamond: 4+").defineInRange("harvestLevelStoneCopperOre", 1, 0, 2000000000);
                     hardnessLevelStoneCopperOre = BUILDER.comment("How long it takes to break the block. Has nothing to do with the required tool level. Default value is equal to the value of vanilla ores. Obsidian: 50.0, Bedrock: -1.00 (unbreakable)").defineInRange("hardnessLevelStoneCopperOre", 3.0, -1.0, 3600000.0);
                     resistanceLevelStoneCopperOre = BUILDER.comment("The Blast Resistance of the block. Default value is equal to the value of vanilla ores. Obsidian: 1200.0, Bedrock: 3600000.00").defineInRange("resistanceLevelStoneCopperOre", 3.0, 0.0, 3600000.0);
@@ -73,10 +74,11 @@ public class Copper {
                     explosionRangeStoneCopperOre = BUILDER.comment("The range of the explosion.").defineInRange("explosionRangeStoneCopperOre", 3.0, 0.0, 100.0);
                     enableExplosionDestructionStoneCopperOre = BUILDER.comment("If true, the explosion of this ore will destroy blocks.").define("enableExplosionDestructionStoneCopperOre", false);
                 BUILDER.pop();
-                BUILDER.comment("Settings for the item version of this ore. (Can be applied live.)").push("item");
+                BUILDER.comment("Effects provided by this ore. (Can be applied live.)").push("effects");
                     hasGlowEffectStoneCopperOre = BUILDER.comment("If true, the item has the enchanted glow.").define("hasGlowEffectStoneCopperOre", false);
-                    statusEffectsStoneCopperOre = BUILDER.comment("The effects the ore should apply to the player while in his/her inventory. Syntax: \"effectid:level\". E.g.: [\"1:2\", \"3:5\"] provides Speed II and Haste V. Max level is 255. See the wiki for ID list.").define("statusEffectsStoneCopperOre", new ArrayList<String>());
+                    itemStatusEffectsStoneCopperOre = BUILDER.comment("The effects the ore should apply to the player while in his/her inventory. Syntax: \"effectid:level\". E.g.: [\"1:2\", \"3:5\"] provides Speed II and Haste V. Max level is 255. See the wiki for ID list.").define("statusEffectsStoneCopperOre", new ArrayList<String>());
                     onlyInHandStoneCopperOre = BUILDER.comment("If true, status effects are only applied if the item is in hand.").define("onlyInHandStoneCopperOre", false);
+                    blockStatusEffectsStoneCopperOre = BUILDER.comment("The effects the ore should apply to a living entity on touch. Syntax: \"effectid:level\". E.g.: [\"20:2\", \"31:1\"] provides Wither II and Bad Omen I. Max level is 255. See the wiki for ID list.").define("blockStatusEffectsStoneCopperOre", new ArrayList<String>());
                 BUILDER.pop();
             BUILDER.pop();
         BUILDER.pop();

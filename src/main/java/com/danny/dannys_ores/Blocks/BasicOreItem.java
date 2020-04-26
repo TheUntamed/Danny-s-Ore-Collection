@@ -9,6 +9,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
@@ -33,7 +34,7 @@ public class BasicOreItem extends BlockItem {
                     int value = Integer.parseInt(s.split(":")[1]);
                     if (0 < id && id < 33) {
                         ((PlayerEntity) entityIn).addPotionEffect(new EffectInstance(Effect.get(id), 1, (value-1)));
-                    } else if (id == 33) {
+                    } else if (id == 33 && !entityIn.isInvulnerableTo(DamageSource.ON_FIRE)) {
                         entityIn.setFire(1);
                     } else {
                         Main.LOGGER.warn("Invalid effect id '" + value + "' for '" + this.getRegistryName() + "' in dannys_ores-common.toml");
@@ -52,7 +53,7 @@ public class BasicOreItem extends BlockItem {
     private void setValues() {
         if (this == BlockInit.STONE_COPPER_ORE.asItem()) {
             glow = Copper.hasGlowEffectStoneCopperOre.get();
-            statusEffects = Copper.statusEffectsStoneCopperOre.get();
+            statusEffects = Copper.itemStatusEffectsStoneCopperOre.get();
             onlyIfSelected = Copper.onlyInHandStoneCopperOre.get();
         } else {
             glow = false;

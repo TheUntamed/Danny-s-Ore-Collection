@@ -6,7 +6,9 @@ import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.Copper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -33,7 +35,7 @@ public class BlockInit {
         }
 
         private static void registerBlock(RegistryEvent.Register<Block> event, int harvestLevel, double hardnessLevel, double resistanceLevel, int lightValue, String name) {
-            event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK).hardnessAndResistance((float) hardnessLevel, (float) resistanceLevel).lightValue(lightValue).harvestTool(net.minecraftforge.common.ToolType.PICKAXE).harvestLevel(harvestLevel)).setRegistryName(name));
+            event.getRegistry().register(new BasicOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance((float) hardnessLevel, (float) resistanceLevel).lightValue(lightValue).harvestTool(net.minecraftforge.common.ToolType.PICKAXE).harvestLevel(harvestLevel)).setRegistryName(name));
         }
 
         private static void registerItemBlock(BasicOre block, RegistryEvent.Register<Item> event) {
