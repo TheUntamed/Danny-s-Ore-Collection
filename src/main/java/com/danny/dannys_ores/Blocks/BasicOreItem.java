@@ -3,6 +3,7 @@ package com.danny.dannys_ores.Blocks;
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.Copper;
 import com.danny.dannys_ores.init.BlockInit;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
@@ -53,8 +54,44 @@ public class BasicOreItem extends BlockItem {
     private void setValues() {
         if (this == BlockInit.STONE_COPPER_ORE.asItem()) {
             glow = Copper.hasGlowEffectStoneCopperOre.get();
-            statusEffects = Copper.itemStatusEffectsStoneCopperOre.get();
+            statusEffects = Copper.statusEffectsStoneCopperOre.get();
             onlyIfSelected = Copper.onlyInHandStoneCopperOre.get();
+        } else if (this == BlockInit.ANDESITE_COPPER_ORE.asItem()) {
+            glow = Copper.hasGlowEffectAndesiteCopperOre.get();
+            statusEffects = Copper.statusEffectsAndesiteCopperOre.get();
+            onlyIfSelected = Copper.onlyInHandAndesiteCopperOre.get();
+        } else if (this == BlockInit.DIORITE_COPPER_ORE.asItem()) {
+            glow = Copper.hasGlowEffectDioriteCopperOre.get();
+            statusEffects = Copper.statusEffectsDioriteCopperOre.get();
+            onlyIfSelected = Copper.onlyInHandDioriteCopperOre.get();
+        } else if (this == BlockInit.GRANITE_COPPER_ORE.asItem()) {
+            glow = Copper.hasGlowEffectGraniteCopperOre.get();
+            statusEffects = Copper.statusEffectsGraniteCopperOre.get();
+            onlyIfSelected = Copper.onlyInHandGraniteCopperOre.get();
+        } else if (this == BlockInit.NETHERRACK_COPPER_ORE.asItem()) {
+            glow = Copper.hasGlowEffectNetherrackCopperOre.get();
+            statusEffects = Copper.statusEffectsNetherrackCopperOre.get();
+            onlyIfSelected = Copper.onlyInHandNetherrackCopperOre.get();
+        } else if (this == BlockInit.END_STONE_COPPER_ORE.asItem()) {
+            glow = Copper.hasGlowEffectEndStoneCopperOre.get();
+            statusEffects = Copper.statusEffectsEndStoneCopperOre.get();
+            onlyIfSelected = Copper.onlyInHandEndStoneCopperOre.get();
+        } else if (this == BlockInit.SAND_COPPER_ORE.asItem()) {
+            glow = Copper.hasGlowEffectSandCopperOre.get();
+            statusEffects = Copper.statusEffectsSandCopperOre.get();
+            onlyIfSelected = Copper.onlyInHandSandCopperOre.get();
+        } else if (this == BlockInit.GRAVEL_COPPER_ORE.asItem()) {
+            glow = Copper.hasGlowEffectGravelCopperOre.get();
+            statusEffects = Copper.statusEffectsGravelCopperOre.get();
+            onlyIfSelected = Copper.onlyInHandGravelCopperOre.get();
+        } else if (this == BlockInit.SANDSTONE_COPPER_ORE.asItem()) {
+            glow = Copper.hasGlowEffectSandstoneCopperOre.get();
+            statusEffects = Copper.statusEffectsSandstoneCopperOre.get();
+            onlyIfSelected = Copper.onlyInHandSandstoneCopperOre.get();
+        } else if (this == BlockInit.RED_SANDSTONE_COPPER_ORE.asItem()) {
+            glow = Copper.hasGlowEffectRedSandstoneCopperOre.get();
+            statusEffects = Copper.statusEffectsRedSandstoneCopperOre.get();
+            onlyIfSelected = Copper.onlyInHandRedSandstoneCopperOre.get();
         } else {
             glow = false;
             onlyIfSelected = false;

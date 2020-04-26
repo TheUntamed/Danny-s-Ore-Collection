@@ -35,26 +35,6 @@ public class BasicOre extends Block {
     }
 
     @Override
-    public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
-            if (entityIn instanceof LivingEntity) {
-                setValues();
-                LivingEntity livingentity = (LivingEntity)entityIn;
-                livingentity.addPotionEffect(new EffectInstance(Effects.WITHER, 40));
-                    for (String s : statusEffects) {
-                        int id = Integer.parseInt(s.split(":")[0]);
-                        int value = Integer.parseInt(s.split(":")[1]);
-                        if (0 < id && id < 33 && !(livingentity.isInvulnerableTo(DamageSource.WITHER) && id == 20)) {
-                            livingentity.addPotionEffect(new EffectInstance(Effect.get(id), 1, (value-1)));
-                        } else if (id == 33 && !livingentity.isInvulnerableTo(DamageSource.ON_FIRE)) {
-                            livingentity.setFire(1);
-                        } else {
-                            Main.LOGGER.warn("Invalid effect id '" + value + "' for '" + this.getRegistryName() + "' in dannys_ores-common.toml");
-                        }
-                    }
-            }
-    }
-
-    @Override
     public void onBlockHarvested(World worldIn, BlockPos pos, BlockState state, PlayerEntity player) {
         setValues();
         int i = RANDOM.nextInt(1000);
@@ -77,8 +57,61 @@ public class BasicOre extends Block {
             maxXp = Copper.maxXpDropStoneCopperOre.get();
             explosionRange = Copper.explosionRangeStoneCopperOre.get().floatValue();
             explosionChance =  Copper.explosionChanceStoneCopperOre.get();
-            statusEffects = Copper.blockStatusEffectsStoneCopperOre.get();
             if (Copper.enableExplosionDestructionStoneCopperOre.get()) {eM = Explosion.Mode.BREAK;} else {eM = Explosion.Mode.NONE;}
+        } else if (this == BlockInit.ANDESITE_COPPER_ORE) {
+            minXp = Copper.minXpDropAndesiteCopperOre.get();
+            maxXp = Copper.maxXpDropAndesiteCopperOre.get();
+            explosionRange = Copper.explosionRangeAndesiteCopperOre.get().floatValue();
+            explosionChance =  Copper.explosionChanceAndesiteCopperOre.get();
+            if (Copper.enableExplosionDestructionAndesiteCopperOre.get()) {eM = Explosion.Mode.BREAK;} else {eM = Explosion.Mode.NONE;}
+        } else if (this == BlockInit.DIORITE_COPPER_ORE) {
+            minXp = Copper.minXpDropDioriteCopperOre.get();
+            maxXp = Copper.maxXpDropDioriteCopperOre.get();
+            explosionRange = Copper.explosionRangeDioriteCopperOre.get().floatValue();
+            explosionChance =  Copper.explosionChanceDioriteCopperOre.get();
+            if (Copper.enableExplosionDestructionDioriteCopperOre.get()) {eM = Explosion.Mode.BREAK;} else {eM = Explosion.Mode.NONE;}
+        } else if (this == BlockInit.GRANITE_COPPER_ORE) {
+            minXp = Copper.minXpDropGraniteCopperOre.get();
+            maxXp = Copper.maxXpDropGraniteCopperOre.get();
+            explosionRange = Copper.explosionRangeGraniteCopperOre.get().floatValue();
+            explosionChance =  Copper.explosionChanceGraniteCopperOre.get();
+            if (Copper.enableExplosionDestructionGraniteCopperOre.get()) {eM = Explosion.Mode.BREAK;} else {eM = Explosion.Mode.NONE;}
+        } else if (this == BlockInit.NETHERRACK_COPPER_ORE) {
+            minXp = Copper.minXpDropNetherrackCopperOre.get();
+            maxXp = Copper.maxXpDropNetherrackCopperOre.get();
+            explosionRange = Copper.explosionRangeNetherrackCopperOre.get().floatValue();
+            explosionChance =  Copper.explosionChanceNetherrackCopperOre.get();
+            if (Copper.enableExplosionDestructionNetherrackCopperOre.get()) {eM = Explosion.Mode.BREAK;} else {eM = Explosion.Mode.NONE;}
+        } else if (this == BlockInit.END_STONE_COPPER_ORE) {
+            minXp = Copper.minXpDropEndStoneCopperOre.get();
+            maxXp = Copper.maxXpDropEndStoneCopperOre.get();
+            explosionRange = Copper.explosionRangeEndStoneCopperOre.get().floatValue();
+            explosionChance =  Copper.explosionChanceEndStoneCopperOre.get();
+            if (Copper.enableExplosionDestructionEndStoneCopperOre.get()) {eM = Explosion.Mode.BREAK;} else {eM = Explosion.Mode.NONE;}
+        } else if (this == BlockInit.SAND_COPPER_ORE) {
+            minXp = Copper.minXpDropSandCopperOre.get();
+            maxXp = Copper.maxXpDropSandCopperOre.get();
+            explosionRange = Copper.explosionRangeSandCopperOre.get().floatValue();
+            explosionChance =  Copper.explosionChanceSandCopperOre.get();
+            if (Copper.enableExplosionDestructionSandCopperOre.get()) {eM = Explosion.Mode.BREAK;} else {eM = Explosion.Mode.NONE;}
+        } else if (this == BlockInit.GRAVEL_COPPER_ORE) {
+            minXp = Copper.minXpDropGravelCopperOre.get();
+            maxXp = Copper.maxXpDropGravelCopperOre.get();
+            explosionRange = Copper.explosionRangeGravelCopperOre.get().floatValue();
+            explosionChance =  Copper.explosionChanceGravelCopperOre.get();
+            if (Copper.enableExplosionDestructionGravelCopperOre.get()) {eM = Explosion.Mode.BREAK;} else {eM = Explosion.Mode.NONE;}
+        } else if (this == BlockInit.SANDSTONE_COPPER_ORE) {
+            minXp = Copper.minXpDropSandstoneCopperOre.get();
+            maxXp = Copper.maxXpDropSandstoneCopperOre.get();
+            explosionRange = Copper.explosionRangeSandstoneCopperOre.get().floatValue();
+            explosionChance =  Copper.explosionChanceSandstoneCopperOre.get();
+            if (Copper.enableExplosionDestructionSandstoneCopperOre.get()) {eM = Explosion.Mode.BREAK;} else {eM = Explosion.Mode.NONE;}
+        } else if (this == BlockInit.RED_SANDSTONE_COPPER_ORE) {
+            minXp = Copper.minXpDropRedSandstoneCopperOre.get();
+            maxXp = Copper.maxXpDropRedSandstoneCopperOre.get();
+            explosionRange = Copper.explosionRangeRedSandstoneCopperOre.get().floatValue();
+            explosionChance =  Copper.explosionChanceRedSandstoneCopperOre.get();
+            if (Copper.enableExplosionDestructionRedSandstoneCopperOre.get()) {eM = Explosion.Mode.BREAK;} else {eM = Explosion.Mode.NONE;}
         } else {
             minXp = 0;
             maxXp = 0;
