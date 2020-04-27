@@ -91,6 +91,8 @@ public class General {
         configData.load();
         spec.setConfig(configData);
 
+        Iron.loadConfig();
         Copper.loadConfig();
+        Xp.loadConfig();
     }
 }
