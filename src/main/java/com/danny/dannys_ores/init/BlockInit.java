@@ -20,25 +20,16 @@ import net.minecraftforge.registries.ObjectHolder;
 //@Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
 public class BlockInit {
 
-    //@ObjectHolder(Main.MOD_ID + ":stone_copper_ore")
+
     public static final BasicOre STONE_COPPER_ORE = null;
-    //@ObjectHolder(Main.MOD_ID + ":andesite_copper_ore")
     public static final BasicOre ANDESITE_COPPER_ORE = null;
-    //@ObjectHolder(Main.MOD_ID + ":diorite_copper_ore")
     public static final BasicOre DIORITE_COPPER_ORE = null;
-    //@ObjectHolder(Main.MOD_ID + ":granite_copper_ore")
     public static final BasicOre GRANITE_COPPER_ORE = null;
-    //@ObjectHolder(Main.MOD_ID + ":netherrack_copper_ore")
     public static final BasicOre NETHERRACK_COPPER_ORE = null;
-    //@ObjectHolder(Main.MOD_ID + ":end_stone_copper_ore")
     public static final BasicOre END_STONE_COPPER_ORE = null;
-    //@ObjectHolder(Main.MOD_ID + ":sand_copper_ore")
     public static final BasicOre SAND_COPPER_ORE = null;
-    //@ObjectHolder(Main.MOD_ID + ":gravel_copper_ore")
     public static final BasicOre GRAVEL_COPPER_ORE = null;
-    //@ObjectHolder(Main.MOD_ID + ":sandstone_copper_ore")
     public static final BasicOre SANDSTONE_COPPER_ORE = null;
-    //@ObjectHolder(Main.MOD_ID + ":red_sandstone_copper_ore")
     public static final BasicOre RED_SANDSTONE_COPPER_ORE = null;
 
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)

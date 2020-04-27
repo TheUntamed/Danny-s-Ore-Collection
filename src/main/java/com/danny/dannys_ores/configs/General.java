@@ -24,6 +24,10 @@ public class General {
     public static ForgeConfigSpec.BooleanValue disableGraniteOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableNetherrackOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableEndStoneOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableSandOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableGravelOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableSandstoneOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableRedSandstoneOreGeneration;
 
     public static ForgeConfigSpec.BooleanValue disableOtherOverworldOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableOtherNetherOreGeneration;
@@ -41,6 +45,10 @@ public class General {
             disableGraniteOreGeneration = BUILDER.comment("If true, the Granite variant of all ores will be disabled.").define("disableGraniteOreGeneration", false);
             disableNetherrackOreGeneration = BUILDER.comment("If true, the Netherrack variant of all ores will be disabled.").define("disableNetherrackOreGeneration", false);
             disableEndStoneOreGeneration = BUILDER.comment("If true, the End Stone variant of all ores will be disabled.").define("disableEndStoneOreGeneration", false);
+            disableSandOreGeneration = BUILDER.comment("If true, the Sand variant of all ores will be disabled.").define("disableSandOreGeneration", false);
+            disableGravelOreGeneration = BUILDER.comment("If true, the Gravel variant of all ores will be disabled.").define("disableGravelOreGeneration", false);
+            disableSandstoneOreGeneration = BUILDER.comment("If true, the Sandstone variant of all ores will be disabled.").define("disableSandstoneOreGeneration", false);
+            disableRedSandstoneOreGeneration = BUILDER.comment("If true, the RedSandstone variant of all ores will be disabled.").define("disableRedSandstoneOreGeneration", false);
         BUILDER.pop();
         BUILDER.comment("Manipulate vanilla and other mods ore generation. (Game restart required.)").push("vanilla_and_other_mods");
             replaceVanillaOverworldOreGeneration = BUILDER.comment("If true, vanilla overworld ores will be removed and replaced by the corresponding ores provided by this mod which can be tweaked in this config.").define("replaceVanillaOverworldOreGeneration", false);

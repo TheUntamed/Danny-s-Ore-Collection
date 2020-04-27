@@ -31,7 +31,7 @@ public class OreGen {
             biomeVerify.add(biome.getRegistryName().toString());
             tempVerify.add(biome.getTempCategory().toString());
         }
-        checkConfig(biomeVerify, tempVerify);
+        ConfigChecker.checkConfig(biomeVerify, tempVerify);
 
         for (Biome biome : ForgeRegistries.BIOMES) {
             String biomeRNS = biome.getRegistryName().toString();
@@ -56,7 +56,7 @@ public class OreGen {
                     biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
                 }
             }
-            if (Copper.enableCopperOres.get()) { addCopperOreGeneration(biome, biomeRNS, biomeTS); }
+            if (Copper.enableCopperOres.get()) { CopperGen.addCopperGen(biome, biomeRNS, biomeTS); }
         }
     }
 
@@ -84,22 +84,20 @@ public class OreGen {
         biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_DECORATION).removeAll(featuresToRemove);
     }
 
-    private static void addCopperOreGeneration(Biome biome, String biomeRNS, String biomeTS) {
-        if (!General.disableStoneOreGeneration.get()) {
-            if (Copper.enableStoneCopperOre.get()) {
-                if ((Copper.isTempWhitelistStoneCopperOre.get() && Copper.temperatureBlacklistStoneCopperOre.get().contains(biomeTS)) || (!Copper.isTempWhitelistStoneCopperOre.get() && !Copper.temperatureBlacklistStoneCopperOre.get().contains(biomeTS))) {
-                    if ((Copper.isBiomeWhitelistStoneCopperOre.get() && Copper.biomeBlacklistStoneCopperOre.get().contains(biomeRNS)) || (!Copper.isBiomeWhitelistStoneCopperOre.get() && !Copper.biomeBlacklistStoneCopperOre.get().contains(biomeRNS))) {
-                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.STONE_COPPER_ORE.getDefaultState(), Copper.veinSizeStoneCopperOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Copper.veinsPerChunkStoneCopperOre.get(), Copper.minHeightStoneCopperOre.get(), 0, Copper.maxHeightStoneCopperOre.get()))));
-                        //FillerBlockType.create("end_stone", null, new BlockMatcher(Blocks.END_STONE))
-                    } } } } }
-
-
-    private static void checkConfig(ArrayList biomeVerify, ArrayList tempVerify) {
-        for (String name : Copper.biomeBlacklistStoneCopperOre.get()) {
-            if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in dannys_ores-common.toml in biomeBlacklistStoneCopperOre, please check the entries!"); }
-        }
-        for (String temp : Copper.temperatureBlacklistStoneCopperOre.get()) {
-            if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in dannys_ores-common.toml in temperatureBlacklistStoneCopperOre, please check the entries!"); }
-        }
-    }
+//    private static void addCopperOreGeneration(Biome biome, String biomeRNS, String biomeTS) {
+//        if (!General.disableStoneOreGeneration.get()) {
+//            if (Copper.enableStoneCopperOre.get()) {
+//                if ((Copper.isTempWhitelistStoneCopperOre.get() && Copper.temperatureBlacklistStoneCopperOre.get().contains(biomeTS)) || (!Copper.isTempWhitelistStoneCopperOre.get() && !Copper.temperatureBlacklistStoneCopperOre.get().contains(biomeTS))) {
+//                    if ((Copper.isBiomeWhitelistStoneCopperOre.get() && Copper.biomeBlacklistStoneCopperOre.get().contains(biomeRNS)) || (!Copper.isBiomeWhitelistStoneCopperOre.get() && !Copper.biomeBlacklistStoneCopperOre.get().contains(biomeRNS))) {
+//                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.STONE_COPPER_ORE.getDefaultState(), Copper.veinSizeStoneCopperOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Copper.veinsPerChunkStoneCopperOre.get(), Copper.minHeightStoneCopperOre.get(), 0, Copper.maxHeightStoneCopperOre.get()))));
+//                        //FillerBlockType.create("end_stone", null, new BlockMatcher(Blocks.END_STONE))
+//                    } } } }
+//        if (!General.disableStoneOreGeneration.get()) {
+//            if (Copper.enableStoneCopperOre.get()) {
+//                if ((Copper.isTempWhitelistStoneCopperOre.get() && Copper.temperatureBlacklistStoneCopperOre.get().contains(biomeTS)) || (!Copper.isTempWhitelistStoneCopperOre.get() && !Copper.temperatureBlacklistStoneCopperOre.get().contains(biomeTS))) {
+//                    if ((Copper.isBiomeWhitelistStoneCopperOre.get() && Copper.biomeBlacklistStoneCopperOre.get().contains(biomeRNS)) || (!Copper.isBiomeWhitelistStoneCopperOre.get() && !Copper.biomeBlacklistStoneCopperOre.get().contains(biomeRNS))) {
+//                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.STONE_COPPER_ORE.getDefaultState(), Copper.veinSizeStoneCopperOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Copper.veinsPerChunkStoneCopperOre.get(), Copper.minHeightStoneCopperOre.get(), 0, Copper.maxHeightStoneCopperOre.get()))));
+//                        //FillerBlockType.create("end_stone", null, new BlockMatcher(Blocks.END_STONE))
+//                    } } } }
+//    }
 }
