@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dannys_ores:block/stone_copper_ore" }
+    "": { "model": "dannys_ores:block/copper/stone_copper_ore" }
   }
 }

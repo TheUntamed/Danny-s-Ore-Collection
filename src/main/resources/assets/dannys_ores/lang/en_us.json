@@ -1,4 +1,15 @@
 {
+  "block.dannys_ores.stone_iron_ore": "Stone Iron Ore",
+  "block.dannys_ores.andesite_iron_ore": "Andesite Iron Ore",
+  "block.dannys_ores.diorite_iron_ore": "Diorite Iron Ore",
+  "block.dannys_ores.granite_iron_ore": "Granite Iron Ore",
+  "block.dannys_ores.netherrack_iron_ore": "Netherrack Iron Ore",
+  "block.dannys_ores.end_stone_iron_ore": "End Stone Iron Ore",
+  "block.dannys_ores.sand_iron_ore": "Sand Iron Ore",
+  "block.dannys_ores.gravel_iron_ore": "Gravel Iron Ore",
+  "block.dannys_ores.sandstone_iron_ore": "Sandstone Iron Ore",
+  "block.dannys_ores.red_sandstone_iron_ore": "Red Sandstone Iron Ore",
+
   "block.dannys_ores.stone_copper_ore": "Stone Copper Ore",
   "block.dannys_ores.andesite_copper_ore": "Andesite Copper Ore",
   "block.dannys_ores.diorite_copper_ore": "Diorite Copper Ore",
@@ -9,6 +20,17 @@
   "block.dannys_ores.gravel_copper_ore": "Gravel Copper Ore",
   "block.dannys_ores.sandstone_copper_ore": "Sandstone Copper Ore",
   "block.dannys_ores.red_sandstone_copper_ore": "Red Sandstone Copper Ore",
+
+  "block.dannys_ores.stone_xp_ore": "Stone Xp Ore",
+  "block.dannys_ores.andesite_xp_ore": "Andesite Xp Ore",
+  "block.dannys_ores.diorite_xp_ore": "Diorite Xp Ore",
+  "block.dannys_ores.granite_xp_ore": "Granite Xp Ore",
+  "block.dannys_ores.netherrack_xp_ore": "Netherrack Xp Ore",
+  "block.dannys_ores.end_stone_xp_ore": "End Stone Xp Ore",
+  "block.dannys_ores.sand_xp_ore": "Sand Xp Ore",
+  "block.dannys_ores.gravel_xp_ore": "Gravel Xp Ore",
+  "block.dannys_ores.sandstone_xp_ore": "Sandstone Xp Ore",
+  "block.dannys_ores.red_sandstone_xp_ore": "Red Sandstone Xp Ore",
 
   "itemGroup.dannys_ores_tab": "Danny's Ore Collection"
 }

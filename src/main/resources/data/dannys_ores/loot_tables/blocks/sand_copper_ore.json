@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dannys_ores:stone_lead_ore"
+          "name": "dannys_ores:sand_copper_ore"
         }
       ],
       "conditions": [

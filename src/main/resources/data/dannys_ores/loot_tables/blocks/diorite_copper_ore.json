@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dannys_ores:stone_tin_ore"
+          "name": "dannys_ores:diorite_copper_ore"
         }
       ],
       "conditions": [
