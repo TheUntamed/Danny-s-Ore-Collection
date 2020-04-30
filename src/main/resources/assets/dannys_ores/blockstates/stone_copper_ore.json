@@ -1,5 +1,8 @@
 {
+  "_comment": "Generated using MiningMark48's JSON Generator.",
   "variants": {
-    "": { "model": "dannys_ores:block/copper/stone_copper_ore" }
+    "": {
+      "model": "dannys_ores:block/stone_copper_ore"
+    }
   }
 }

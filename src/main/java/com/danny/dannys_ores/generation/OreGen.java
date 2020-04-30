@@ -1,9 +1,6 @@
 package com.danny.dannys_ores.generation;
 
-import com.danny.dannys_ores.configs.Copper;
-import com.danny.dannys_ores.configs.General;
-import com.danny.dannys_ores.configs.Iron;
-import com.danny.dannys_ores.configs.Xp;
+import com.danny.dannys_ores.configs.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.world.biome.Biome;
@@ -23,11 +20,13 @@ public class OreGen {
         //Check if config is correct
         ArrayList<String> biomeVerify = new ArrayList<>();
         ArrayList<String> tempVerify = new ArrayList<>();
-        for (Biome biome : ForgeRegistries.BIOMES) {
-            biomeVerify.add(biome.getRegistryName().toString());
-            tempVerify.add(biome.getTempCategory().toString());
+        if (General.enableConfigChecker.get()) {
+            for (Biome biome : ForgeRegistries.BIOMES) {
+                biomeVerify.add(biome.getRegistryName().toString());
+                tempVerify.add(biome.getTempCategory().toString());
+            }
+            ConfigChecker.checkConfig(biomeVerify, tempVerify);
         }
-        ConfigChecker.checkConfig(biomeVerify, tempVerify);
 
         for (Biome biome : ForgeRegistries.BIOMES) {
             String biomeRNS = biome.getRegistryName().toString();
@@ -36,14 +35,14 @@ public class OreGen {
             if (biome.getCategory() != Biome.Category.NETHER && biome.getCategory() != Biome.Category.THEEND) {
                 if (General.disableOtherOverworldOreGeneration.get()) {
                     biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
-                } else if (General.replaceVanillaOverworldOreGeneration.get()) {
+                } else if (General.removeVanillaOverworldOreGeneration.get()) {
                     removeVanillaOverworldOres(biome);
                 }
             }
             if (biome.getCategory() == Biome.Category.NETHER) {
                 if(General.disableOtherNetherOreGeneration.get()) {
                     biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
-                } else if (General.replaceVanillaNetherOreGeneration.get()) {
+                } else if (General.removeVanillaNetherOreGeneration.get()) {
                     removeNetherQuartzOre(biome);
                 }
             }
@@ -52,12 +51,15 @@ public class OreGen {
                     biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
                 }
             }
-            if (General.replaceVanillaOverworldOreGeneration.get()) {
-                if (Iron.enableIronOres.get()) { IronGen.addIronGen(biome, biomeRNS, biomeTS); }
-            }
-            if (General.replaceVanillaNetherOreGeneration.get()) {
 
-            }
+            if (Iron.enableIronOres.get()) { IronGen.addIronGen(biome, biomeRNS, biomeTS); }
+            if (Gold.enableGoldOres.get()) { GoldGen.addGoldGen(biome, biomeRNS, biomeTS); }
+            if (Coal.enableCoalOres.get()) { CoalGen.addCoalGen(biome, biomeRNS, biomeTS); }
+            if (Lapis.enableLapisOres.get()) { LapisGen.addLapisGen(biome, biomeRNS, biomeTS); }
+            if (Redstone.enableRedstoneOres.get()) { RedstoneGen.addRedstoneGen(biome, biomeRNS, biomeTS); }
+            if (Emerald.enableEmeraldOres.get()) { EmeraldGen.addEmeraldGen(biome, biomeRNS, biomeTS); }
+            if (Diamond.enableDiamondOres.get()) { DiamondGen.addDiamondGen(biome, biomeRNS, biomeTS); }
+            if (Quartz.enableQuartzOres.get()) { QuartzGen.addQuartzGen(biome, biomeRNS, biomeTS); }
             if (Copper.enableCopperOres.get()) { CopperGen.addCopperGen(biome, biomeRNS, biomeTS); }
             if (Xp.enableXpOres.get()) { XpGen.addXpGen(biome, biomeRNS, biomeTS); }
         }

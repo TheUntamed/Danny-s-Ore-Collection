@@ -10,7 +10,7 @@ modId="dannys_ores" #mandatory
 
 version="1.15.2-0.1.0" #mandatory
 
-displayName="Danny's Ore Collection" #mandatory
+displayName="Danny's Ores" #mandatory
 
 updateJSONURL="https://github.com/TheUntamed" #optional
 
@@ -23,7 +23,7 @@ credits="Thanks for this example mod goes to Java" #optional
 authors="Danny" #optional
 
 description='''
-Danny's Ore Collection is a mod providing all the Ores you could ever dream of. Highly configurable. This mod was made for Modpack developers but can be used by everyone who wants to.
+Danny's Ores is a mod providing all the Ores you could ever dream of. This mod was made for Modpack developers but can be used by everyone who wants to.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.examplemod]] #optional

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dannys_ores:blocks/iron/gravel_iron_ore"
+  }
+}

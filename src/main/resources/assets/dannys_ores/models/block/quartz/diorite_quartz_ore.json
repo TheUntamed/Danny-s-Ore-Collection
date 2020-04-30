@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dannys_ores:blocks/quartz/diorite_quartz_ore"
+  }
+}

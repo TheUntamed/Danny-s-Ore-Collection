@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dannys_ores:blocks/coal/red_sandstone_coal_ore"
+  }
+}
