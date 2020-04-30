@@ -1,6 +1,8 @@
 package com.danny.dannys_ores.generation;
 
+import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.General;
+import com.danny.dannys_ores.configs.Redstone;
 import com.danny.dannys_ores.configs.Redstone;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
@@ -19,6 +21,7 @@ public class RedstoneGen {
     }
 
     private static void addRedstoneOreGeneration(Biome biome, String biomeRNS, String biomeTS) {
+        // Vanilla
         if (General.enableCustomVanillaOreGeneration.get()) {
             if (Redstone.enableVanillaRedstoneOre.get()) {
                 if ((Redstone.isTempWhitelistVanillaRedstoneOre.get() && Redstone.temperatureBlacklistVanillaRedstoneOre.get().contains(biomeTS)) || (!Redstone.isTempWhitelistVanillaRedstoneOre.get() && !Redstone.temperatureBlacklistVanillaRedstoneOre.get().contains(biomeTS))) {

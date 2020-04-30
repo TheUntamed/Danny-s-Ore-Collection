@@ -1,6 +1,8 @@
 package com.danny.dannys_ores.generation;
 
+import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.General;
+import com.danny.dannys_ores.configs.Emerald;
 import com.danny.dannys_ores.configs.Emerald;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
@@ -19,6 +21,7 @@ public class EmeraldGen {
     }
 
     private static void addEmeraldOreGeneration(Biome biome, String biomeRNS, String biomeTS) {
+        // Vanilla
         if (General.enableCustomVanillaOreGeneration.get()) {
             if (Emerald.enableVanillaEmeraldOre.get()) {
                 if ((Emerald.isTempWhitelistVanillaEmeraldOre.get() && Emerald.temperatureBlacklistVanillaEmeraldOre.get().contains(biomeTS)) || (!Emerald.isTempWhitelistVanillaEmeraldOre.get() && !Emerald.temperatureBlacklistVanillaEmeraldOre.get().contains(biomeTS))) {

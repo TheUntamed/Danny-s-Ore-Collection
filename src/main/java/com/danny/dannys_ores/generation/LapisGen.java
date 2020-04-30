@@ -1,5 +1,6 @@
 package com.danny.dannys_ores.generation;
 
+import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.configs.Lapis;
 import com.danny.dannys_ores.init.BlockInit;
@@ -19,6 +20,7 @@ public class LapisGen {
     }
 
     private static void addLapisOreGeneration(Biome biome, String biomeRNS, String biomeTS) {
+        // Vanilla
         if (General.enableCustomVanillaOreGeneration.get()) {
             if (Lapis.enableVanillaLapisOre.get()) {
                 if ((Lapis.isTempWhitelistVanillaLapisOre.get() && Lapis.temperatureBlacklistVanillaLapisOre.get().contains(biomeTS)) || (!Lapis.isTempWhitelistVanillaLapisOre.get() && !Lapis.temperatureBlacklistVanillaLapisOre.get().contains(biomeTS))) {

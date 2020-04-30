@@ -9,9 +9,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.crafting.conditions.ModLoadedCondition;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -30,16 +32,20 @@ public class Main {
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "dannys_ores";
     public static Main instance;
+    public static boolean quark;
+    public static boolean  embellishcraft;
 
     public Main() {
-        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        instance = this;
 
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::doClientStuff);
+        MinecraftForge.EVENT_BUS.register(this);
+        quark = ModList.get().isLoaded("quark");
+        embellishcraft = ModList.get().isLoaded("embellishcraft");
         BlockInit.BLOCKS.register(modEventBus);
         General.loadConfig();
-        instance = this;
-        MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

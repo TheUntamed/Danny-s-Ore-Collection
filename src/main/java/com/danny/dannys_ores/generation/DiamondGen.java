@@ -1,6 +1,8 @@
 package com.danny.dannys_ores.generation;
 
+import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.General;
+import com.danny.dannys_ores.configs.Diamond;
 import com.danny.dannys_ores.configs.Diamond;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
@@ -19,6 +21,7 @@ public class DiamondGen {
     }
 
     private static void addDiamondOreGeneration(Biome biome, String biomeRNS, String biomeTS) {
+        // Vanilla
         if (General.enableCustomVanillaOreGeneration.get()) {
             if (Diamond.enableVanillaDiamondOre.get()) {
                 if ((Diamond.isTempWhitelistVanillaDiamondOre.get() && Diamond.temperatureBlacklistVanillaDiamondOre.get().contains(biomeTS)) || (!Diamond.isTempWhitelistVanillaDiamondOre.get() && !Diamond.temperatureBlacklistVanillaDiamondOre.get().contains(biomeTS))) {

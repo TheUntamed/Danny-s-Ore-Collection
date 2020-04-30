@@ -1,7 +1,10 @@
 package com.danny.dannys_ores.generation;
 
+import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.Copper;
 import com.danny.dannys_ores.configs.General;
+import com.danny.dannys_ores.configs.Copper;
+import com.danny.dannys_ores.configs.Copper;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
@@ -19,6 +22,7 @@ public class CopperGen {
     }
 
     private static void addCopperOreGeneration(Biome biome, String biomeRNS, String biomeTS) {
+        // Vanilla
         if (!General.disableStoneOreGeneration.get()) {
             if (Copper.enableStoneCopperOre.get()) {
                 if ((Copper.isTempWhitelistStoneCopperOre.get() && Copper.temperatureBlacklistStoneCopperOre.get().contains(biomeTS)) || (!Copper.isTempWhitelistStoneCopperOre.get() && !Copper.temperatureBlacklistStoneCopperOre.get().contains(biomeTS))) {

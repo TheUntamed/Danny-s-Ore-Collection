@@ -1,6 +1,9 @@
 package com.danny.dannys_ores.generation;
 
+import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.General;
+import com.danny.dannys_ores.configs.Coal;
+import com.danny.dannys_ores.configs.Coal;
 import com.danny.dannys_ores.configs.Coal;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
@@ -20,6 +23,7 @@ public class CoalGen {
     }
 
     private static void addCoalOreGeneration(Biome biome, String biomeRNS, String biomeTS) {
+        // Vanilla
         if (General.enableCustomVanillaOreGeneration.get()) {
             if (Coal.enableVanillaCoalOre.get()) {
                 if ((Coal.isTempWhitelistVanillaCoalOre.get() && Coal.temperatureBlacklistVanillaCoalOre.get().contains(biomeTS)) || (!Coal.isTempWhitelistVanillaCoalOre.get() && !Coal.temperatureBlacklistVanillaCoalOre.get().contains(biomeTS))) {

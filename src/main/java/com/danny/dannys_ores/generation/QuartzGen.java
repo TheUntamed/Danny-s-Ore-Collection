@@ -1,6 +1,8 @@
 package com.danny.dannys_ores.generation;
 
+import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.General;
+import com.danny.dannys_ores.configs.Quartz;
 import com.danny.dannys_ores.configs.Quartz;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
@@ -19,6 +21,7 @@ public class QuartzGen {
     }
 
     private static void addQuartzOreGeneration(Biome biome, String biomeRNS, String biomeTS) {
+        // Vanilla
         if (!General.disableStoneOreGeneration.get()) {
             if (Quartz.enableStoneQuartzOre.get()) {
                 if ((Quartz.isTempWhitelistStoneQuartzOre.get() && Quartz.temperatureBlacklistStoneQuartzOre.get().contains(biomeTS)) || (!Quartz.isTempWhitelistStoneQuartzOre.get() && !Quartz.temperatureBlacklistStoneQuartzOre.get().contains(biomeTS))) {

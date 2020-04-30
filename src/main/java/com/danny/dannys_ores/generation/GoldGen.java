@@ -1,6 +1,8 @@
 package com.danny.dannys_ores.generation;
 
+import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.General;
+import com.danny.dannys_ores.configs.Gold;
 import com.danny.dannys_ores.configs.Gold;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
@@ -19,6 +21,7 @@ public class GoldGen {
     }
 
     private static void addGoldOreGeneration(Biome biome, String biomeRNS, String biomeTS) {
+        // Vanilla
         if (General.enableCustomVanillaOreGeneration.get()) {
             if (Gold.enableVanillaGoldOre.get()) {
                 if ((Gold.isTempWhitelistVanillaGoldOre.get() && Gold.temperatureBlacklistVanillaGoldOre.get().contains(biomeTS)) || (!Gold.isTempWhitelistVanillaGoldOre.get() && !Gold.temperatureBlacklistVanillaGoldOre.get().contains(biomeTS))) {

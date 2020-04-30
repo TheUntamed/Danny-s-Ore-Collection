@@ -29,6 +29,21 @@ public class General {
     public static ForgeConfigSpec.BooleanValue disableSandstoneOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableRedSandstoneOreGeneration;
 
+    //Quark
+    public static ForgeConfigSpec.BooleanValue disableQuarkBasaltOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableQuarkLimestoneOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableQuarkJasperOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableQuarkMarbleOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableQuarkSlateOreGeneration;
+
+    //Embellishcraft
+    public static ForgeConfigSpec.BooleanValue disableEmbellishcraftBasaltOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableEmbellishcraftGneissOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableEmbellishcraftJadeOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableEmbellishcraftLarvikiteOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableEmbellishcraftMarbleOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableEmbellishcraftSlateOreGeneration;
+
     public static ForgeConfigSpec.BooleanValue enableCustomVanillaOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableOtherOverworldOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableOtherNetherOreGeneration;
@@ -41,16 +56,33 @@ public class General {
         BUILDER.comment("General settings").push("general");
             enableConfigChecker = BUILDER.comment("Checks your blacklists and whitelists for correct syntax. If something is wrong it will be printed to the log.").define("enableConfigChecker", false);
             BUILDER.comment("Disable all Ores of a certain stone variant (only affects ores of this mod).").push("stone_variants");
-                disableStoneOreGeneration = BUILDER.comment("If true, the Stone variant of all ores (except vanilla ores) will be disabled.").define("disableStoneOreGeneration", false);
-                disableAndesiteOreGeneration = BUILDER.comment("If true, the Andesite variant of all ores will be disabled.").define("disableAndesiteOreGeneration", false);
-                disableDioriteOreGeneration = BUILDER.comment("If true, the Diorite variant of all ores will be disabled.").define("disableDioriteOreGeneration", false);
-                disableGraniteOreGeneration = BUILDER.comment("If true, the Granite variant of all ores will be disabled.").define("disableGraniteOreGeneration", false);
-                disableNetherrackOreGeneration = BUILDER.comment("If true, the Netherrack variant of all ores (except vanilla ores) will be disabled.").define("disableNetherrackOreGeneration", false);
-                disableEndStoneOreGeneration = BUILDER.comment("If true, the End Stone variant of all ores will be disabled.").define("disableEndStoneOreGeneration", false);
-                disableSandOreGeneration = BUILDER.comment("If true, the Sand variant of all ores will be disabled.").define("disableSandOreGeneration", false);
-                disableGravelOreGeneration = BUILDER.comment("If true, the Gravel variant of all ores will be disabled.").define("disableGravelOreGeneration", false);
-                disableSandstoneOreGeneration = BUILDER.comment("If true, the Sandstone variant of all ores will be disabled.").define("disableSandstoneOreGeneration", false);
-                disableRedSandstoneOreGeneration = BUILDER.comment("If true, the RedSandstone variant of all ores will be disabled.").define("disableRedSandstoneOreGeneration", false);
+                BUILDER.comment("Vanilla stone variants").push("vanilla");
+                    disableStoneOreGeneration = BUILDER.comment("If true, the Stone variant of all ores (except vanilla ores) will be disabled.").define("disableStoneOreGeneration", false);
+                    disableAndesiteOreGeneration = BUILDER.comment("If true, the Andesite variant of all ores will be disabled.").define("disableAndesiteOreGeneration", false);
+                    disableDioriteOreGeneration = BUILDER.comment("If true, the Diorite variant of all ores will be disabled.").define("disableDioriteOreGeneration", false);
+                    disableGraniteOreGeneration = BUILDER.comment("If true, the Granite variant of all ores will be disabled.").define("disableGraniteOreGeneration", false);
+                    disableNetherrackOreGeneration = BUILDER.comment("If true, the Netherrack variant of all ores (except vanilla ores) will be disabled.").define("disableNetherrackOreGeneration", false);
+                    disableEndStoneOreGeneration = BUILDER.comment("If true, the End Stone variant of all ores will be disabled.").define("disableEndStoneOreGeneration", false);
+                    disableSandOreGeneration = BUILDER.comment("If true, the Sand variant of all ores will be disabled.").define("disableSandOreGeneration", false);
+                    disableGravelOreGeneration = BUILDER.comment("If true, the Gravel variant of all ores will be disabled.").define("disableGravelOreGeneration", false);
+                    disableSandstoneOreGeneration = BUILDER.comment("If true, the Sandstone variant of all ores will be disabled.").define("disableSandstoneOreGeneration", false);
+                    disableRedSandstoneOreGeneration = BUILDER.comment("If true, the RedSandstone variant of all ores will be disabled.").define("disableRedSandstoneOreGeneration", false);
+                BUILDER.pop();
+                BUILDER.comment("Quark stone variants. Quark has to be installed for the ores to generate at all.").push("quark");
+                    disableQuarkBasaltOreGeneration = BUILDER.comment("If true, the (Quark) Basalt variant of all ores will be disabled.").define("disableQuarkBasaltOreGeneration", false);
+                    disableQuarkLimestoneOreGeneration = BUILDER.comment("If true, the (Quark) Limestone variant of all ores will be disabled.").define("disableQuarkLimestoneOreGeneration", false);
+                    disableQuarkJasperOreGeneration = BUILDER.comment("If true, the (Quark) Jasper variant of all ores will be disabled.").define("disableQuarkJasperOreGeneration", false);
+                    disableQuarkMarbleOreGeneration = BUILDER.comment("If true, the (Quark) Marble variant of all ores will be disabled.").define("disableQuarkMarbleOreGeneration", false);
+                    disableQuarkSlateOreGeneration = BUILDER.comment("If true, the (Quark) Slate variant of all ores will be disabled.").define("disableQuarkSlateOreGeneration", false);
+                BUILDER.pop();
+                BUILDER.comment("Embellishcraft stone variants. Embellishcraft has to be installed for the ores to generate at all.").push("embellishcraft");
+                    disableEmbellishcraftBasaltOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Basalt variant of all ores will be disabled.").define("disableEmbellishcraftBasaltOreGeneration", false);
+                    disableEmbellishcraftGneissOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Gneiss variant of all ores will be disabled.").define("disableEmbellishcraftGneissOreGeneration", false);
+                    disableEmbellishcraftJadeOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Jade variant of all ores will be disabled.").define("disableEmbellishcraftJadeOreGeneration", false);
+                    disableEmbellishcraftLarvikiteOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Larvikite variant of all ores will be disabled.").define("disableEmbellishcraftLarvikiteOreGeneration", false);
+                    disableEmbellishcraftMarbleOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Marble variant of all ores will be disabled.").define("disableEmbellishcraftMarbleOreGeneration", false);
+                    disableEmbellishcraftSlateOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Slate variant of all ores will be disabled.").define("disableEmbellishcraftSlateOreGeneration", false);
+                BUILDER.pop();
             BUILDER.pop();
             BUILDER.comment("Manipulate vanilla and other mods ore generation.").push("vanilla_and_other_mods");
                 enableCustomVanillaOreGeneration = BUILDER.comment("If true, this mod will generate vanilla ores based on the configs of this mod. Works even if the corresponding stone variant is disabled.").define("enableCustomVanillaOreGeneration", true);

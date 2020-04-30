@@ -1,5 +1,7 @@
 package com.danny.dannys_ores.generation;
 
+import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.configs.Xp;
 import com.danny.dannys_ores.configs.Xp;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.init.BlockInit;
@@ -19,6 +21,7 @@ public class XpGen {
     }
 
     private static void addXpOreGeneration(Biome biome, String biomeRNS, String biomeTS) {
+        // Vanilla
         if (!General.disableStoneOreGeneration.get()) {
             if (Xp.enableStoneXpOre.get()) {
                 if ((Xp.isTempWhitelistStoneXpOre.get() && Xp.temperatureBlacklistStoneXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistStoneXpOre.get() && !Xp.temperatureBlacklistStoneXpOre.get().contains(biomeTS))) {
