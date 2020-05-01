@@ -367,8 +367,8 @@ public class Diamond {
         enableQuarkBasaltDiamondOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableQuarkBasaltDiamondOre", true);
         veinSizeQuarkBasaltDiamondOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkBasaltDiamondOre", 8, 0, 65536);
         veinsPerChunkQuarkBasaltDiamondOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkBasaltDiamondOre", 1, 0, 65536);
-        minHeightQuarkBasaltDiamondOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkBasaltDiamondOre", 0, 0, 256);
-        maxHeightQuarkBasaltDiamondOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkBasaltDiamondOre", 16, 0, 256);
+        minHeightQuarkBasaltDiamondOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkBasaltDiamondOre", 96, 0, 256);
+        maxHeightQuarkBasaltDiamondOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkBasaltDiamondOre", 128, 0, 256);
         isTempWhitelistQuarkBasaltDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkBasaltDiamondOre", false);
         temperatureBlacklistQuarkBasaltDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistQuarkBasaltDiamondOre", new ArrayList<String>());
         isBiomeWhitelistQuarkBasaltDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistQuarkBasaltDiamondOre", false);

@@ -367,8 +367,8 @@ public class Emerald {
         enableQuarkBasaltEmeraldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableQuarkBasaltEmeraldOre", true);
         veinSizeQuarkBasaltEmeraldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkBasaltEmeraldOre", 1, 0, 65536);
         veinsPerChunkQuarkBasaltEmeraldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkBasaltEmeraldOre", 11, 0, 65536);
-        minHeightQuarkBasaltEmeraldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkBasaltEmeraldOre", 0, 0, 256);
-        maxHeightQuarkBasaltEmeraldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkBasaltEmeraldOre", 32, 0, 256);
+        minHeightQuarkBasaltEmeraldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkBasaltEmeraldOre", 64, 0, 256);
+        maxHeightQuarkBasaltEmeraldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkBasaltEmeraldOre", 128, 0, 256);
         isTempWhitelistQuarkBasaltEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkBasaltEmeraldOre", false);
         temperatureBlacklistQuarkBasaltEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistQuarkBasaltEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistQuarkBasaltEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistQuarkBasaltEmeraldOre", false);

@@ -365,10 +365,10 @@ public class Quartz {
         BUILDER.comment("Basalt Quartz Ore (Quark)").push("quark_basalt_quartz_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableQuarkBasaltQuartzOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableQuarkBasaltQuartzOre", true);
-        veinSizeQuarkBasaltQuartzOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkBasaltQuartzOre", 9, 0, 65536);
-        veinsPerChunkQuarkBasaltQuartzOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkBasaltQuartzOre", 2, 0, 65536);
-        minHeightQuarkBasaltQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkBasaltQuartzOre", 0, 0, 256);
-        maxHeightQuarkBasaltQuartzOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkBasaltQuartzOre", 32, 0, 256);
+        veinSizeQuarkBasaltQuartzOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkBasaltQuartzOre", 14, 0, 65536);
+        veinsPerChunkQuarkBasaltQuartzOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkBasaltQuartzOre", 16, 0, 65536);
+        minHeightQuarkBasaltQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkBasaltQuartzOre", 10, 0, 256);
+        maxHeightQuarkBasaltQuartzOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkBasaltQuartzOre", 128, 0, 256);
         isTempWhitelistQuarkBasaltQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkBasaltQuartzOre", false);
         temperatureBlacklistQuarkBasaltQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistQuarkBasaltQuartzOre", new ArrayList<String>());
         isBiomeWhitelistQuarkBasaltQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistQuarkBasaltQuartzOre", false);

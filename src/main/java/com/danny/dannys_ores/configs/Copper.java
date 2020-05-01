@@ -373,10 +373,10 @@ public class Copper {
         BUILDER.comment("Basalt Copper Ore (Quark)").push("quark_basalt_copper_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableQuarkBasaltCopperOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableQuarkBasaltCopperOre", true);
-        veinSizeQuarkBasaltCopperOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkBasaltCopperOre", 9, 0, 65536);
-        veinsPerChunkQuarkBasaltCopperOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkBasaltCopperOre", 20, 0, 65536);
-        minHeightQuarkBasaltCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkBasaltCopperOre", 40, 0,256);
-        maxHeightQuarkBasaltCopperOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkBasaltCopperOre", 128, 0, 256);
+        veinSizeQuarkBasaltCopperOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkBasaltCopperOre", 4, 0, 65536);
+        veinsPerChunkQuarkBasaltCopperOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkBasaltCopperOre", 10, 0, 65536);
+        minHeightQuarkBasaltCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkBasaltCopperOre", 10, 0,256);
+        maxHeightQuarkBasaltCopperOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkBasaltCopperOre", 96, 0, 256);
         isTempWhitelistQuarkBasaltCopperOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkBasaltCopperOre", false);
         temperatureBlacklistQuarkBasaltCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistQuarkBasaltCopperOre", new ArrayList<String>());
         isBiomeWhitelistQuarkBasaltCopperOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistQuarkBasaltCopperOre", false);

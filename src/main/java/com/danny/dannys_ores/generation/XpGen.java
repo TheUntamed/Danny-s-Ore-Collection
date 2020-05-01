@@ -3,6 +3,7 @@ package com.danny.dannys_ores.generation;
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.Xp;
 import com.danny.dannys_ores.configs.Xp;
+import com.danny.dannys_ores.configs.Xp;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
@@ -81,6 +82,74 @@ public class XpGen {
                 if ((Xp.isTempWhitelistRedSandstoneXpOre.get() && Xp.temperatureBlacklistRedSandstoneXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistRedSandstoneXpOre.get() && !Xp.temperatureBlacklistRedSandstoneXpOre.get().contains(biomeTS))) {
                     if ((Xp.isBiomeWhitelistRedSandstoneXpOre.get() && Xp.biomeBlacklistRedSandstoneXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistRedSandstoneXpOre.get() && !Xp.biomeBlacklistRedSandstoneXpOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sandstone", null, new BlockMatcher(Blocks.RED_SANDSTONE)), BlockInit.RED_SANDSTONE_XP_ORE.get().getDefaultState(), Xp.veinSizeRedSandstoneXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkRedSandstoneXpOre.get(), Xp.minHeightRedSandstoneXpOre.get(), 0, Xp.maxHeightRedSandstoneXpOre.get()))));
+                    } } } }
+        // Quark
+        if (!General.disableQuarkBasaltOreGeneration.get() && Main.quark) {
+            if (Xp.enableQuarkBasaltXpOre.get()) {
+                if ((Xp.isTempWhitelistQuarkBasaltXpOre.get() && Xp.temperatureBlacklistQuarkBasaltXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistQuarkBasaltXpOre.get() && !Xp.temperatureBlacklistQuarkBasaltXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistQuarkBasaltXpOre.get() && Xp.biomeBlacklistQuarkBasaltXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistQuarkBasaltXpOre.get() && !Xp.biomeBlacklistQuarkBasaltXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("quark_basalt", null, new BlockMatcher(BlockInit.QUARK_BASALT != null ? BlockInit.QUARK_BASALT : Blocks.BARRIER)), BlockInit.QUARK_BASALT_XP_ORE.get().getDefaultState(), Xp.veinSizeQuarkBasaltXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkQuarkBasaltXpOre.get(), Xp.minHeightQuarkBasaltXpOre.get(), 0, Xp.maxHeightQuarkBasaltXpOre.get()))));
+                    } } } }
+        if (!General.disableQuarkMarbleOreGeneration.get() && Main.quark) {
+            if (Xp.enableQuarkMarbleXpOre.get()) {
+                if ((Xp.isTempWhitelistQuarkMarbleXpOre.get() && Xp.temperatureBlacklistQuarkMarbleXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistQuarkMarbleXpOre.get() && !Xp.temperatureBlacklistQuarkMarbleXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistQuarkMarbleXpOre.get() && Xp.biomeBlacklistQuarkMarbleXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistQuarkMarbleXpOre.get() && !Xp.biomeBlacklistQuarkMarbleXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("quark_marble", null, new BlockMatcher(BlockInit.QUARK_MARBLE != null ? BlockInit.QUARK_MARBLE : Blocks.BARRIER)), BlockInit.QUARK_MARBLE_XP_ORE.get().getDefaultState(), Xp.veinSizeQuarkMarbleXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkQuarkMarbleXpOre.get(), Xp.minHeightQuarkMarbleXpOre.get(), 0, Xp.maxHeightQuarkMarbleXpOre.get()))));
+                    } } } }
+        if (!General.disableQuarkSlateOreGeneration.get() && Main.quark) {
+            if (Xp.enableQuarkSlateXpOre.get()) {
+                if ((Xp.isTempWhitelistQuarkSlateXpOre.get() && Xp.temperatureBlacklistQuarkSlateXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistQuarkSlateXpOre.get() && !Xp.temperatureBlacklistQuarkSlateXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistQuarkSlateXpOre.get() && Xp.biomeBlacklistQuarkSlateXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistQuarkSlateXpOre.get() && !Xp.biomeBlacklistQuarkSlateXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("quark_slate", null, new BlockMatcher(BlockInit.QUARK_SLATE != null ? BlockInit.QUARK_SLATE : Blocks.BARRIER)), BlockInit.QUARK_SLATE_XP_ORE.get().getDefaultState(), Xp.veinSizeQuarkSlateXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkQuarkSlateXpOre.get(), Xp.minHeightQuarkSlateXpOre.get(), 0, Xp.maxHeightQuarkSlateXpOre.get()))));
+                    } } } }
+        if (!General.disableQuarkLimestoneOreGeneration.get() && Main.quark) {
+            if (Xp.enableQuarkLimestoneXpOre.get()) {
+                if ((Xp.isTempWhitelistQuarkLimestoneXpOre.get() && Xp.temperatureBlacklistQuarkLimestoneXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistQuarkLimestoneXpOre.get() && !Xp.temperatureBlacklistQuarkLimestoneXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistQuarkLimestoneXpOre.get() && Xp.biomeBlacklistQuarkLimestoneXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistQuarkLimestoneXpOre.get() && !Xp.biomeBlacklistQuarkLimestoneXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("quark_limestone", null, new BlockMatcher(BlockInit.QUARK_LIMESTONE != null ? BlockInit.QUARK_LIMESTONE : Blocks.BARRIER)), BlockInit.QUARK_LIMESTONE_XP_ORE.get().getDefaultState(), Xp.veinSizeQuarkLimestoneXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkQuarkLimestoneXpOre.get(), Xp.minHeightQuarkLimestoneXpOre.get(), 0, Xp.maxHeightQuarkLimestoneXpOre.get()))));
+                    } } } }
+        if (!General.disableQuarkJasperOreGeneration.get() && Main.quark) {
+            if (Xp.enableQuarkJasperXpOre.get()) {
+                if ((Xp.isTempWhitelistQuarkJasperXpOre.get() && Xp.temperatureBlacklistQuarkJasperXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistQuarkJasperXpOre.get() && !Xp.temperatureBlacklistQuarkJasperXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistQuarkJasperXpOre.get() && Xp.biomeBlacklistQuarkJasperXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistQuarkJasperXpOre.get() && !Xp.biomeBlacklistQuarkJasperXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("quark_jasper", null, new BlockMatcher(BlockInit.QUARK_JASPER != null ? BlockInit.QUARK_JASPER : Blocks.BARRIER)), BlockInit.QUARK_JASPER_XP_ORE.get().getDefaultState(), Xp.veinSizeQuarkJasperXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkQuarkJasperXpOre.get(), Xp.minHeightQuarkJasperXpOre.get(), 0, Xp.maxHeightQuarkJasperXpOre.get()))));
+                    } } } }
+        // Embellishcraft
+        if (!General.disableEmbellishcraftBasaltOreGeneration.get() && Main.quark) {
+            if (Xp.enableEmbellishcraftBasaltXpOre.get()) {
+                if ((Xp.isTempWhitelistEmbellishcraftBasaltXpOre.get() && Xp.temperatureBlacklistEmbellishcraftBasaltXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistEmbellishcraftBasaltXpOre.get() && !Xp.temperatureBlacklistEmbellishcraftBasaltXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistEmbellishcraftBasaltXpOre.get() && Xp.biomeBlacklistEmbellishcraftBasaltXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistEmbellishcraftBasaltXpOre.get() && !Xp.biomeBlacklistEmbellishcraftBasaltXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_basalt", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_BASALT != null ? BlockInit.EMBELLISHCRAFT_BASALT : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_BASALT_XP_ORE.get().getDefaultState(), Xp.veinSizeEmbellishcraftBasaltXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkEmbellishcraftBasaltXpOre.get(), Xp.minHeightEmbellishcraftBasaltXpOre.get(), 0, Xp.maxHeightEmbellishcraftBasaltXpOre.get()))));
+                    } } } }
+        if (!General.disableEmbellishcraftGneissOreGeneration.get() && Main.quark) {
+            if (Xp.enableEmbellishcraftGneissXpOre.get()) {
+                if ((Xp.isTempWhitelistEmbellishcraftGneissXpOre.get() && Xp.temperatureBlacklistEmbellishcraftGneissXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistEmbellishcraftGneissXpOre.get() && !Xp.temperatureBlacklistEmbellishcraftGneissXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistEmbellishcraftGneissXpOre.get() && Xp.biomeBlacklistEmbellishcraftGneissXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistEmbellishcraftGneissXpOre.get() && !Xp.biomeBlacklistEmbellishcraftGneissXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_gneiss", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_GNEISS != null ? BlockInit.EMBELLISHCRAFT_GNEISS : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_GNEISS_XP_ORE.get().getDefaultState(), Xp.veinSizeEmbellishcraftGneissXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkEmbellishcraftGneissXpOre.get(), Xp.minHeightEmbellishcraftGneissXpOre.get(), 0, Xp.maxHeightEmbellishcraftGneissXpOre.get()))));
+                    } } } }
+        if (!General.disableEmbellishcraftJadeOreGeneration.get() && Main.quark) {
+            if (Xp.enableEmbellishcraftJadeXpOre.get()) {
+                if ((Xp.isTempWhitelistEmbellishcraftJadeXpOre.get() && Xp.temperatureBlacklistEmbellishcraftJadeXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistEmbellishcraftJadeXpOre.get() && !Xp.temperatureBlacklistEmbellishcraftJadeXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistEmbellishcraftJadeXpOre.get() && Xp.biomeBlacklistEmbellishcraftJadeXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistEmbellishcraftJadeXpOre.get() && !Xp.biomeBlacklistEmbellishcraftJadeXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_jade", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_JADE != null ? BlockInit.EMBELLISHCRAFT_JADE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_JADE_XP_ORE.get().getDefaultState(), Xp.veinSizeEmbellishcraftJadeXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkEmbellishcraftJadeXpOre.get(), Xp.minHeightEmbellishcraftJadeXpOre.get(), 0, Xp.maxHeightEmbellishcraftJadeXpOre.get()))));
+                    } } } }
+        if (!General.disableEmbellishcraftLarvikiteOreGeneration.get() && Main.quark) {
+            if (Xp.enableEmbellishcraftLarvikiteXpOre.get()) {
+                if ((Xp.isTempWhitelistEmbellishcraftLarvikiteXpOre.get() && Xp.temperatureBlacklistEmbellishcraftLarvikiteXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistEmbellishcraftLarvikiteXpOre.get() && !Xp.temperatureBlacklistEmbellishcraftLarvikiteXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistEmbellishcraftLarvikiteXpOre.get() && Xp.biomeBlacklistEmbellishcraftLarvikiteXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistEmbellishcraftLarvikiteXpOre.get() && !Xp.biomeBlacklistEmbellishcraftLarvikiteXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_larvikite", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_LARVIKITE != null ? BlockInit.EMBELLISHCRAFT_LARVIKITE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_LARVIKITE_XP_ORE.get().getDefaultState(), Xp.veinSizeEmbellishcraftLarvikiteXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkEmbellishcraftLarvikiteXpOre.get(), Xp.minHeightEmbellishcraftLarvikiteXpOre.get(), 0, Xp.maxHeightEmbellishcraftLarvikiteXpOre.get()))));
+                    } } } }
+        if (!General.disableEmbellishcraftMarbleOreGeneration.get() && Main.quark) {
+            if (Xp.enableEmbellishcraftMarbleXpOre.get()) {
+                if ((Xp.isTempWhitelistEmbellishcraftMarbleXpOre.get() && Xp.temperatureBlacklistEmbellishcraftMarbleXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistEmbellishcraftMarbleXpOre.get() && !Xp.temperatureBlacklistEmbellishcraftMarbleXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistEmbellishcraftMarbleXpOre.get() && Xp.biomeBlacklistEmbellishcraftMarbleXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistEmbellishcraftMarbleXpOre.get() && !Xp.biomeBlacklistEmbellishcraftMarbleXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_marble", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_MARBLE != null ? BlockInit.EMBELLISHCRAFT_MARBLE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_MARBLE_XP_ORE.get().getDefaultState(), Xp.veinSizeEmbellishcraftMarbleXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkEmbellishcraftMarbleXpOre.get(), Xp.minHeightEmbellishcraftMarbleXpOre.get(), 0, Xp.maxHeightEmbellishcraftMarbleXpOre.get()))));
+                    } } } }
+        if (!General.disableEmbellishcraftSlateOreGeneration.get() && Main.quark) {
+            if (Xp.enableEmbellishcraftSlateXpOre.get()) {
+                if ((Xp.isTempWhitelistEmbellishcraftSlateXpOre.get() && Xp.temperatureBlacklistEmbellishcraftSlateXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistEmbellishcraftSlateXpOre.get() && !Xp.temperatureBlacklistEmbellishcraftSlateXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistEmbellishcraftSlateXpOre.get() && Xp.biomeBlacklistEmbellishcraftSlateXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistEmbellishcraftSlateXpOre.get() && !Xp.biomeBlacklistEmbellishcraftSlateXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_slate", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_SLATE != null ? BlockInit.EMBELLISHCRAFT_SLATE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_SLATE_XP_ORE.get().getDefaultState(), Xp.veinSizeEmbellishcraftSlateXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkEmbellishcraftSlateXpOre.get(), Xp.minHeightEmbellishcraftSlateXpOre.get(), 0, Xp.maxHeightEmbellishcraftSlateXpOre.get()))));
                     } } } }
     }
 }

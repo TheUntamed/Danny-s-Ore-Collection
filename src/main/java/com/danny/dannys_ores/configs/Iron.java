@@ -369,10 +369,10 @@ public class Iron {
         BUILDER.comment("Basalt Iron Ore (Quark)").push("quark_basalt_iron_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableQuarkBasaltIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableQuarkBasaltIronOre", true);
-        veinSizeQuarkBasaltIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkBasaltIronOre", 9, 0, 65536);
-        veinsPerChunkQuarkBasaltIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkBasaltIronOre", 20, 0, 65536);
-        minHeightQuarkBasaltIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkBasaltIronOre", 0, 0, 256);
-        maxHeightQuarkBasaltIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkBasaltIronOre", 64, 0, 256);
+        veinSizeQuarkBasaltIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkBasaltIronOre", 4, 0, 65536);
+        veinsPerChunkQuarkBasaltIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkBasaltIronOre", 10, 0, 65536);
+        minHeightQuarkBasaltIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkBasaltIronOre", 10, 0, 256);
+        maxHeightQuarkBasaltIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkBasaltIronOre", 128, 0, 256);
         isTempWhitelistQuarkBasaltIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkBasaltIronOre", false);
         temperatureBlacklistQuarkBasaltIronOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistQuarkBasaltIronOre", new ArrayList<String>());
         isBiomeWhitelistQuarkBasaltIronOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistQuarkBasaltIronOre", false);
