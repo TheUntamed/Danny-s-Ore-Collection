@@ -370,7 +370,7 @@ public class Iron {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableQuarkBasaltIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableQuarkBasaltIronOre", true);
         veinSizeQuarkBasaltIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkBasaltIronOre", 9, 0, 65536);
-        veinsPerChunkQuarkBasaltIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkBasaltIronOre", 10, 0, 65536);
+        veinsPerChunkQuarkBasaltIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkBasaltIronOre", 20, 0, 65536);
         minHeightQuarkBasaltIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkBasaltIronOre", 0, 0, 256);
         maxHeightQuarkBasaltIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkBasaltIronOre", 64, 0, 256);
         isTempWhitelistQuarkBasaltIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkBasaltIronOre", false);
@@ -383,7 +383,7 @@ public class Iron {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableQuarkLimestoneIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableQuarkLimestoneIronOre", true);
         veinSizeQuarkLimestoneIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkLimestoneIronOre", 9, 0, 65536);
-        veinsPerChunkQuarkLimestoneIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkLimestoneIronOre", 10, 0, 65536);
+        veinsPerChunkQuarkLimestoneIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkLimestoneIronOre", 20, 0, 65536);
         minHeightQuarkLimestoneIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkLimestoneIronOre", 0, 0, 256);
         maxHeightQuarkLimestoneIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkLimestoneIronOre", 64, 0, 256);
         isTempWhitelistQuarkLimestoneIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkLimestoneIronOre", false);
@@ -396,7 +396,7 @@ public class Iron {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableQuarkJasperIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableQuarkJasperIronOre", true);
         veinSizeQuarkJasperIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkJasperIronOre", 9, 0, 65536);
-        veinsPerChunkQuarkJasperIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkJasperIronOre", 10, 0, 65536);
+        veinsPerChunkQuarkJasperIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkJasperIronOre", 20, 0, 65536);
         minHeightQuarkJasperIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkJasperIronOre", 0, 0, 256);
         maxHeightQuarkJasperIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkJasperIronOre", 64, 0, 256);
         isTempWhitelistQuarkJasperIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkJasperIronOre", false);
@@ -409,7 +409,7 @@ public class Iron {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableQuarkMarbleIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableQuarkMarbleIronOre", true);
         veinSizeQuarkMarbleIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkMarbleIronOre", 9, 0, 65536);
-        veinsPerChunkQuarkMarbleIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkMarbleIronOre", 10, 0, 65536);
+        veinsPerChunkQuarkMarbleIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkMarbleIronOre", 20, 0, 65536);
         minHeightQuarkMarbleIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkMarbleIronOre", 0, 0, 256);
         maxHeightQuarkMarbleIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkMarbleIronOre", 64, 0, 256);
         isTempWhitelistQuarkMarbleIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkMarbleIronOre", false);
@@ -422,7 +422,7 @@ public class Iron {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableQuarkSlateIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableQuarkSlateIronOre", true);
         veinSizeQuarkSlateIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkSlateIronOre", 9, 0, 65536);
-        veinsPerChunkQuarkSlateIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkSlateIronOre", 10, 0, 65536);
+        veinsPerChunkQuarkSlateIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkSlateIronOre", 20, 0, 65536);
         minHeightQuarkSlateIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkSlateIronOre", 0, 0, 256);
         maxHeightQuarkSlateIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkSlateIronOre", 64, 0, 256);
         isTempWhitelistQuarkSlateIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkSlateIronOre", false);
@@ -437,7 +437,7 @@ public class Iron {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableEmbellishcraftBasaltIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableEmbellishcraftBasaltIronOre", true);
         veinSizeEmbellishcraftBasaltIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEmbellishcraftBasaltIronOre", 9, 0, 65536);
-        veinsPerChunkEmbellishcraftBasaltIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftBasaltIronOre", 10, 0, 65536);
+        veinsPerChunkEmbellishcraftBasaltIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftBasaltIronOre", 20, 0, 65536);
         minHeightEmbellishcraftBasaltIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEmbellishcraftBasaltIronOre", 0, 0, 256);
         maxHeightEmbellishcraftBasaltIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftBasaltIronOre", 64, 0, 256);
         isTempWhitelistEmbellishcraftBasaltIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEmbellishcraftBasaltIronOre", false);
@@ -450,7 +450,7 @@ public class Iron {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableEmbellishcraftGneissIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableEmbellishcraftGneissIronOre", true);
         veinSizeEmbellishcraftGneissIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEmbellishcraftGneissIronOre", 9, 0, 65536);
-        veinsPerChunkEmbellishcraftGneissIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftGneissIronOre", 10, 0, 65536);
+        veinsPerChunkEmbellishcraftGneissIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftGneissIronOre", 20, 0, 65536);
         minHeightEmbellishcraftGneissIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEmbellishcraftGneissIronOre", 0, 0, 256);
         maxHeightEmbellishcraftGneissIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftGneissIronOre", 64, 0, 256);
         isTempWhitelistEmbellishcraftGneissIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEmbellishcraftGneissIronOre", false);
@@ -463,7 +463,7 @@ public class Iron {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableEmbellishcraftJadeIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableEmbellishcraftJadeIronOre", true);
         veinSizeEmbellishcraftJadeIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEmbellishcraftJadeIronOre", 9, 0, 65536);
-        veinsPerChunkEmbellishcraftJadeIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftJadeIronOre", 10, 0, 65536);
+        veinsPerChunkEmbellishcraftJadeIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftJadeIronOre", 20, 0, 65536);
         minHeightEmbellishcraftJadeIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEmbellishcraftJadeIronOre", 0, 0, 256);
         maxHeightEmbellishcraftJadeIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftJadeIronOre", 64, 0, 256);
         isTempWhitelistEmbellishcraftJadeIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEmbellishcraftJadeIronOre", false);
@@ -476,7 +476,7 @@ public class Iron {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableEmbellishcraftLarvikiteIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableEmbellishcraftLarvikiteIronOre", true);
         veinSizeEmbellishcraftLarvikiteIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEmbellishcraftLarvikiteIronOre", 9, 0, 65536);
-        veinsPerChunkEmbellishcraftLarvikiteIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftLarvikiteIronOre", 10, 0, 65536);
+        veinsPerChunkEmbellishcraftLarvikiteIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftLarvikiteIronOre", 20, 0, 65536);
         minHeightEmbellishcraftLarvikiteIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEmbellishcraftLarvikiteIronOre", 0, 0, 256);
         maxHeightEmbellishcraftLarvikiteIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftLarvikiteIronOre", 64, 0, 256);
         isTempWhitelistEmbellishcraftLarvikiteIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEmbellishcraftLarvikiteIronOre", false);
@@ -489,7 +489,7 @@ public class Iron {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableEmbellishcraftMarbleIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableEmbellishcraftMarbleIronOre", true);
         veinSizeEmbellishcraftMarbleIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEmbellishcraftMarbleIronOre", 9, 0, 65536);
-        veinsPerChunkEmbellishcraftMarbleIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftMarbleIronOre", 10, 0, 65536);
+        veinsPerChunkEmbellishcraftMarbleIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftMarbleIronOre", 20, 0, 65536);
         minHeightEmbellishcraftMarbleIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEmbellishcraftMarbleIronOre", 0, 0, 256);
         maxHeightEmbellishcraftMarbleIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftMarbleIronOre", 64, 0, 256);
         isTempWhitelistEmbellishcraftMarbleIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEmbellishcraftMarbleIronOre", false);
@@ -502,7 +502,7 @@ public class Iron {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableEmbellishcraftSlateIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableEmbellishcraftSlateIronOre", true);
         veinSizeEmbellishcraftSlateIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEmbellishcraftSlateIronOre", 9, 0, 65536);
-        veinsPerChunkEmbellishcraftSlateIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftSlateIronOre", 10, 0, 65536);
+        veinsPerChunkEmbellishcraftSlateIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftSlateIronOre", 20, 0, 65536);
         minHeightEmbellishcraftSlateIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEmbellishcraftSlateIronOre", 0, 0, 256);
         maxHeightEmbellishcraftSlateIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftSlateIronOre", 64, 0, 256);
         isTempWhitelistEmbellishcraftSlateIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEmbellishcraftSlateIronOre", false);
