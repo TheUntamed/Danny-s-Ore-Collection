@@ -30,7 +30,7 @@ public class StoneVariants {
             enableStoneVariants = BUILDER.comment("Should stone variants added by this mod generate?").define("enableStoneVariants", true);
             BUILDER.comment("Hardened Stone generation settings.").push("hardened_stone_generation");
                 enableHardenedStoneGeneration = BUILDER.comment("Enable or disable Hardened Stone.").define("enableHardenedStoneGeneration", true);
-                clusterSizeHardenedStone = BUILDER.comment("The size of a cluster").defineInRange("clusterSizeHardenedStone", 8, 0, 65536);
+                clusterSizeHardenedStone = BUILDER.comment("The size of a cluster").defineInRange("clusterSizeHardenedStone", 180, 0, 65536);
                 clustersPerChunkHardenedStone = BUILDER.comment("How many clusters per chunk.").defineInRange("clustersPerChunkHardenedStone", 1, 0, 65536);
                 minHeightHardenedStone = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStone", 0, 0, 256);
                 maxHeightHardenedStone = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStone", 16, 0, 256);
