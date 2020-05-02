@@ -7,7 +7,6 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.common.ToolType;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
@@ -42,6 +41,8 @@ public class BlockInit {
     public static final Block EMBELLISHCRAFT_SLATE = null;
 
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
+
+    public static final RegistryObject<Block> HARDENED_STONE = BLOCKS.register("hardened_stone", () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(2.5F, 6.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
 
     public static final RegistryObject<Block> STONE_COPPER_ORE = BLOCKS.register("stone_copper_ore", () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE)));
     public static final RegistryObject<Block> ANDESITE_COPPER_ORE = BLOCKS.register("andesite_copper_ore", () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE)));

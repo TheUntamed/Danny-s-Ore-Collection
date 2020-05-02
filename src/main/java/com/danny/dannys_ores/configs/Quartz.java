@@ -240,7 +240,7 @@ public class Quartz {
         isTempWhitelistStoneQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistStoneQuartzOre", false);
         temperatureBlacklistStoneQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistStoneQuartzOre", new ArrayList<String>());
         isBiomeWhitelistStoneQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistStoneQuartzOre", false);
-        biomeBlacklistStoneQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistStoneQuartzOre", new ArrayList<String>());
+        biomeBlacklistStoneQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistStoneQuartzOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Andesite Quartz Ore").push("andesite_quartz_ore");
@@ -253,7 +253,7 @@ public class Quartz {
         isTempWhitelistAndesiteQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistAndesiteQuartzOre", false);
         temperatureBlacklistAndesiteQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistAndesiteQuartzOre", new ArrayList<String>());
         isBiomeWhitelistAndesiteQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistAndesiteQuartzOre", false);
-        biomeBlacklistAndesiteQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistAndesiteQuartzOre", new ArrayList<String>());
+        biomeBlacklistAndesiteQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistAndesiteQuartzOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Diorite Quartz Ore").push("diorite_quartz_ore");
@@ -266,7 +266,7 @@ public class Quartz {
         isTempWhitelistDioriteQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistDioriteQuartzOre", false);
         temperatureBlacklistDioriteQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistDioriteQuartzOre", new ArrayList<String>());
         isBiomeWhitelistDioriteQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistDioriteQuartzOre", false);
-        biomeBlacklistDioriteQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistDioriteQuartzOre", new ArrayList<String>());
+        biomeBlacklistDioriteQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistDioriteQuartzOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Granite Quartz Ore").push("granite_quartz_ore");
@@ -279,7 +279,7 @@ public class Quartz {
         isTempWhitelistGraniteQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistGraniteQuartzOre", false);
         temperatureBlacklistGraniteQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistGraniteQuartzOre", new ArrayList<String>());
         isBiomeWhitelistGraniteQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistGraniteQuartzOre", false);
-        biomeBlacklistGraniteQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistGraniteQuartzOre", new ArrayList<String>());
+        biomeBlacklistGraniteQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistGraniteQuartzOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Vanilla (Netherrack) Quartz Ore").push("vanilla_netherrack_quartz_ore");
@@ -292,7 +292,7 @@ public class Quartz {
         isTempWhitelistVanillaNetherQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistVanillaNetherQuartzOre", false);
         temperatureBlacklistVanillaNetherQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistVanillaNetherQuartzOre", new ArrayList<String>());
         isBiomeWhitelistVanillaNetherQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistVanillaNetherQuartzOre", false);
-        biomeBlacklistVanillaNetherQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistVanillaNetherQuartzOre", new ArrayList<String>());
+        biomeBlacklistVanillaNetherQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistVanillaNetherQuartzOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("End Stone Quartz Ore").push("end_stone_quartz_ore");
@@ -305,7 +305,7 @@ public class Quartz {
         isTempWhitelistEndStoneQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEndStoneQuartzOre", false);
         temperatureBlacklistEndStoneQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEndStoneQuartzOre", new ArrayList<String>());
         isBiomeWhitelistEndStoneQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEndStoneQuartzOre", false);
-        biomeBlacklistEndStoneQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistEndStoneQuartzOre", new ArrayList<String>());
+        biomeBlacklistEndStoneQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEndStoneQuartzOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sand Quartz Ore").push("sand_quartz_ore");
@@ -318,7 +318,7 @@ public class Quartz {
         isTempWhitelistSandQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistSandQuartzOre", false);
         temperatureBlacklistSandQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistSandQuartzOre", new ArrayList<String>());
         isBiomeWhitelistSandQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistSandQuartzOre", false);
-        biomeBlacklistSandQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandQuartzOre", new ArrayList<String>());
+        biomeBlacklistSandQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistSandQuartzOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Quartz Ore").push("gravel_quartz_ore");
@@ -331,7 +331,7 @@ public class Quartz {
         isTempWhitelistGravelQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistGravelQuartzOre", false);
         temperatureBlacklistGravelQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistGravelQuartzOre", new ArrayList<String>());
         isBiomeWhitelistGravelQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistGravelQuartzOre", false);
-        biomeBlacklistGravelQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistGravelQuartzOre", new ArrayList<String>());
+        biomeBlacklistGravelQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistGravelQuartzOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sandstone Quartz Ore").push("sandstone_quartz_ore");
@@ -344,7 +344,7 @@ public class Quartz {
         isTempWhitelistSandstoneQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistSandstoneQuartzOre", false);
         temperatureBlacklistSandstoneQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistSandstoneQuartzOre", new ArrayList<String>());
         isBiomeWhitelistSandstoneQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistSandstoneQuartzOre", false);
-        biomeBlacklistSandstoneQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandstoneQuartzOre", new ArrayList<String>());
+        biomeBlacklistSandstoneQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistSandstoneQuartzOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Red Sandstone Quartz Ore").push("red_sandstone_quartz_ore");
@@ -357,7 +357,7 @@ public class Quartz {
         isTempWhitelistRedSandstoneQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistRedSandstoneQuartzOre", false);
         temperatureBlacklistRedSandstoneQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandstoneQuartzOre", new ArrayList<String>());
         isBiomeWhitelistRedSandstoneQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandstoneQuartzOre", false);
-        biomeBlacklistRedSandstoneQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandstoneQuartzOre", new ArrayList<String>());
+        biomeBlacklistRedSandstoneQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistRedSandstoneQuartzOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
 

@@ -116,6 +116,7 @@ public class General {
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, General.spec, Main.MOD_ID + "/#general.toml");
 
+        StoneVariants.loadConfig();
         Iron.loadConfig();
         Gold.loadConfig();
         Lapis.loadConfig();

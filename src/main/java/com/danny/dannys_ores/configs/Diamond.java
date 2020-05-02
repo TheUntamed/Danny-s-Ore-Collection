@@ -240,7 +240,7 @@ public class Diamond {
         isTempWhitelistVanillaDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistVanillaDiamondOre", false);
         temperatureBlacklistVanillaDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistVanillaDiamondOre", new ArrayList<String>());
         isBiomeWhitelistVanillaDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistVanillaDiamondOre", false);
-        biomeBlacklistVanillaDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistVanillaDiamondOre", new ArrayList<String>());
+        biomeBlacklistVanillaDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistVanillaDiamondOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Andesite Diamond Ore").push("andesite_diamond_ore");
@@ -253,7 +253,7 @@ public class Diamond {
         isTempWhitelistAndesiteDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistAndesiteDiamondOre", false);
         temperatureBlacklistAndesiteDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistAndesiteDiamondOre", new ArrayList<String>());
         isBiomeWhitelistAndesiteDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistAndesiteDiamondOre", false);
-        biomeBlacklistAndesiteDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistAndesiteDiamondOre", new ArrayList<String>());
+        biomeBlacklistAndesiteDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistAndesiteDiamondOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Diorite Diamond Ore").push("diorite_diamond_ore");
@@ -266,7 +266,7 @@ public class Diamond {
         isTempWhitelistDioriteDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistDioriteDiamondOre", false);
         temperatureBlacklistDioriteDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistDioriteDiamondOre", new ArrayList<String>());
         isBiomeWhitelistDioriteDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistDioriteDiamondOre", false);
-        biomeBlacklistDioriteDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistDioriteDiamondOre", new ArrayList<String>());
+        biomeBlacklistDioriteDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistDioriteDiamondOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Granite Diamond Ore").push("granite_diamond_ore");
@@ -279,7 +279,7 @@ public class Diamond {
         isTempWhitelistGraniteDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistGraniteDiamondOre", false);
         temperatureBlacklistGraniteDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistGraniteDiamondOre", new ArrayList<String>());
         isBiomeWhitelistGraniteDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistGraniteDiamondOre", false);
-        biomeBlacklistGraniteDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistGraniteDiamondOre", new ArrayList<String>());
+        biomeBlacklistGraniteDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistGraniteDiamondOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Netherrack Diamond Ore").push("netherrack_diamond_ore");
@@ -292,7 +292,7 @@ public class Diamond {
         isTempWhitelistNetherrackDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistNetherrackDiamondOre", false);
         temperatureBlacklistNetherrackDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistNetherrackDiamondOre", new ArrayList<String>());
         isBiomeWhitelistNetherrackDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistNetherrackDiamondOre", false);
-        biomeBlacklistNetherrackDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistNetherrackDiamondOre", new ArrayList<String>());
+        biomeBlacklistNetherrackDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistNetherrackDiamondOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("End Stone Diamond Ore").push("end_stone_diamond_ore");
@@ -305,7 +305,7 @@ public class Diamond {
         isTempWhitelistEndStoneDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEndStoneDiamondOre", false);
         temperatureBlacklistEndStoneDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEndStoneDiamondOre", new ArrayList<String>());
         isBiomeWhitelistEndStoneDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEndStoneDiamondOre", false);
-        biomeBlacklistEndStoneDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistEndStoneDiamondOre", new ArrayList<String>());
+        biomeBlacklistEndStoneDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEndStoneDiamondOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sand Diamond Ore").push("sand_diamond_ore");
@@ -318,7 +318,7 @@ public class Diamond {
         isTempWhitelistSandDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistSandDiamondOre", false);
         temperatureBlacklistSandDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistSandDiamondOre", new ArrayList<String>());
         isBiomeWhitelistSandDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistSandDiamondOre", false);
-        biomeBlacklistSandDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandDiamondOre", new ArrayList<String>());
+        biomeBlacklistSandDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistSandDiamondOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Diamond Ore").push("gravel_diamond_ore");
@@ -331,7 +331,7 @@ public class Diamond {
         isTempWhitelistGravelDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistGravelDiamondOre", false);
         temperatureBlacklistGravelDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistGravelDiamondOre", new ArrayList<String>());
         isBiomeWhitelistGravelDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistGravelDiamondOre", false);
-        biomeBlacklistGravelDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistGravelDiamondOre", new ArrayList<String>());
+        biomeBlacklistGravelDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistGravelDiamondOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sandstone Diamond Ore").push("sandstone_diamond_ore");
@@ -344,7 +344,7 @@ public class Diamond {
         isTempWhitelistSandstoneDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistSandstoneDiamondOre", false);
         temperatureBlacklistSandstoneDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistSandstoneDiamondOre", new ArrayList<String>());
         isBiomeWhitelistSandstoneDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistSandstoneDiamondOre", false);
-        biomeBlacklistSandstoneDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandstoneDiamondOre", new ArrayList<String>());
+        biomeBlacklistSandstoneDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistSandstoneDiamondOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Red Sandstone Diamond Ore").push("red_sandstone_diamond_ore");
@@ -357,7 +357,7 @@ public class Diamond {
         isTempWhitelistRedSandstoneDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistRedSandstoneDiamondOre", false);
         temperatureBlacklistRedSandstoneDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandstoneDiamondOre", new ArrayList<String>());
         isBiomeWhitelistRedSandstoneDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandstoneDiamondOre", false);
-        biomeBlacklistRedSandstoneDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandstoneDiamondOre", new ArrayList<String>());
+        biomeBlacklistRedSandstoneDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistRedSandstoneDiamondOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
 

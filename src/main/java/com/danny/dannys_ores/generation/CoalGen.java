@@ -27,7 +27,7 @@ public class CoalGen {
             if (Coal.enableVanillaCoalOre.get()) {
                 if ((Coal.isTempWhitelistVanillaCoalOre.get() && Coal.temperatureBlacklistVanillaCoalOre.get().contains(biomeTS)) || (!Coal.isTempWhitelistVanillaCoalOre.get() && !Coal.temperatureBlacklistVanillaCoalOre.get().contains(biomeTS))) {
                     if ((Coal.isBiomeWhitelistVanillaCoalOre.get() && Coal.biomeBlacklistVanillaCoalOre.get().contains(biomeRNS)) || (!Coal.isBiomeWhitelistVanillaCoalOre.get() && !Coal.biomeBlacklistVanillaCoalOre.get().contains(biomeRNS))) {
-                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("stone", null, new BlockMatcher(Blocks.STONE)), Blocks.COAL_ORE.getDefaultState(), Coal.veinSizeVanillaCoalOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(9, 8, 0, 6))));
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("stone", null, new BlockMatcher(Blocks.STONE)), Blocks.COAL_ORE.getDefaultState(), Coal.veinSizeVanillaCoalOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Coal.veinsPerChunkVanillaCoalOre.get(), Coal.minHeightVanillaCoalOre.get(), 0, Coal.maxHeightVanillaCoalOre.get()))));
                     } } } }
         if (!General.disableAndesiteOreGeneration.get()) {
             if (Coal.enableAndesiteCoalOre.get()) {
