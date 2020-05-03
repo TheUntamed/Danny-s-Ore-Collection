@@ -65,6 +65,12 @@ public class XpGen {
                     if ((Xp.isBiomeWhitelistSandXpOre.get() && Xp.biomeBlacklistSandXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistSandXpOre.get() && !Xp.biomeBlacklistSandXpOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("sand", null, new BlockMatcher(Blocks.SAND)), BlockInit.SAND_XP_ORE.get().getDefaultState(), Xp.veinSizeSandXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkSandXpOre.get(), Xp.minHeightSandXpOre.get(), 0, Xp.maxHeightSandXpOre.get()))));
                     } } } }
+        if (!General.disableRedSandOreGeneration.get()) {
+            if (Xp.enableRedSandXpOre.get()) {
+                if ((Xp.isTempWhitelistRedSandXpOre.get() && Xp.temperatureBlacklistRedSandXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistRedSandXpOre.get() && !Xp.temperatureBlacklistRedSandXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistRedSandXpOre.get() && Xp.biomeBlacklistRedSandXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistRedSandXpOre.get() && !Xp.biomeBlacklistRedSandXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sand", null, new BlockMatcher(Blocks.RED_SAND)), BlockInit.RED_SAND_XP_ORE.get().getDefaultState(), Xp.veinSizeRedSandXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkRedSandXpOre.get(), Xp.minHeightRedSandXpOre.get(), 0, Xp.maxHeightRedSandXpOre.get()))));
+                    } } } }
         if (!General.disableGravelOreGeneration.get()) {
             if (Xp.enableGravelXpOre.get()) {
                 if ((Xp.isTempWhitelistGravelXpOre.get() && Xp.temperatureBlacklistGravelXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistGravelXpOre.get() && !Xp.temperatureBlacklistGravelXpOre.get().contains(biomeTS))) {
@@ -150,6 +156,13 @@ public class XpGen {
                 if ((Xp.isTempWhitelistEmbellishcraftSlateXpOre.get() && Xp.temperatureBlacklistEmbellishcraftSlateXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistEmbellishcraftSlateXpOre.get() && !Xp.temperatureBlacklistEmbellishcraftSlateXpOre.get().contains(biomeTS))) {
                     if ((Xp.isBiomeWhitelistEmbellishcraftSlateXpOre.get() && Xp.biomeBlacklistEmbellishcraftSlateXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistEmbellishcraftSlateXpOre.get() && !Xp.biomeBlacklistEmbellishcraftSlateXpOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_slate", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_SLATE != null ? BlockInit.EMBELLISHCRAFT_SLATE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_SLATE_XP_ORE.get().getDefaultState(), Xp.veinSizeEmbellishcraftSlateXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkEmbellishcraftSlateXpOre.get(), Xp.minHeightEmbellishcraftSlateXpOre.get(), 0, Xp.maxHeightEmbellishcraftSlateXpOre.get()))));
+                    } } } }
+        // Danny's Ores
+        if (!General.disableHardenedStoneOreGeneration.get()) {
+            if (Xp.enableHardenedStoneXpOre.get()) {
+                if ((Xp.isTempWhitelistHardenedStoneXpOre.get() && Xp.temperatureBlacklistHardenedStoneXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistHardenedStoneXpOre.get() && !Xp.temperatureBlacklistHardenedStoneXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistHardenedStoneXpOre.get() && Xp.biomeBlacklistHardenedStoneXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistHardenedStoneXpOre.get() && !Xp.biomeBlacklistHardenedStoneXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("hardened_stone", null, new BlockMatcher(BlockInit.HARDENED_STONE.get())), BlockInit.RED_SAND_XP_ORE.get().getDefaultState(), Xp.veinSizeHardenedStoneXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkHardenedStoneXpOre.get(), Xp.minHeightHardenedStoneXpOre.get(), 0, Xp.maxHeightHardenedStoneXpOre.get()))));
                     } } } }
     }
 }

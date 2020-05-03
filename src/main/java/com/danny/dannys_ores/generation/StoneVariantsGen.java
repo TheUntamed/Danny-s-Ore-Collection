@@ -1,8 +1,6 @@
 package com.danny.dannys_ores.generation;
 
-import com.danny.dannys_ores.configs.Coal;
-import com.danny.dannys_ores.configs.Diamond;
-import com.danny.dannys_ores.configs.StoneVariants;
+import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;

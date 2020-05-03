@@ -2,6 +2,7 @@ package com.danny.dannys_ores;
 
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.generation.OreGen;
+import com.danny.dannys_ores.generation.StoneGen;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -9,10 +10,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.crafting.conditions.ModLoadedCondition;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
@@ -49,6 +50,8 @@ public class Main {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+        // DeferredWorkQueue.runLater(StoneGen::generateStone);
+        // StoneGen.generateStone();
     }
 
     @SubscribeEvent
@@ -85,6 +88,7 @@ public class Main {
 
     @SubscribeEvent
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
+        StoneGen.generateStone();
         OreGen.generateOre();
     }
 }

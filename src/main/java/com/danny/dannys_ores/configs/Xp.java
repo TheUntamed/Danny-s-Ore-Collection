@@ -100,6 +100,18 @@ public class Xp {
     public static ForgeConfigSpec.IntValue minXpSandXpOre;
     public static ForgeConfigSpec.IntValue maxXpSandXpOre;
 
+    public static ForgeConfigSpec.BooleanValue enableRedSandXpOre;
+    public static ForgeConfigSpec.IntValue veinSizeRedSandXpOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkRedSandXpOre;
+    public static ForgeConfigSpec.IntValue minHeightRedSandXpOre;
+    public static ForgeConfigSpec.IntValue maxHeightRedSandXpOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistRedSandXpOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistRedSandXpOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandXpOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandXpOre;
+    public static ForgeConfigSpec.IntValue minXpRedSandXpOre;
+    public static ForgeConfigSpec.IntValue maxXpRedSandXpOre;
+
     public static ForgeConfigSpec.BooleanValue enableGravelXpOre;
     public static ForgeConfigSpec.IntValue veinSizeGravelXpOre;
     public static ForgeConfigSpec.IntValue veinsPerChunkGravelXpOre;
@@ -270,6 +282,19 @@ public class Xp {
     public static ForgeConfigSpec.IntValue minXpEmbellishcraftSlateXpOre;
     public static ForgeConfigSpec.IntValue maxXpEmbellishcraftSlateXpOre;
 
+    // Danny's Stone Variants
+    public static ForgeConfigSpec.BooleanValue enableHardenedStoneXpOre;
+    public static ForgeConfigSpec.IntValue veinSizeHardenedStoneXpOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkHardenedStoneXpOre;
+    public static ForgeConfigSpec.IntValue minHeightHardenedStoneXpOre;
+    public static ForgeConfigSpec.IntValue maxHeightHardenedStoneXpOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistHardenedStoneXpOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistHardenedStoneXpOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistHardenedStoneXpOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistHardenedStoneXpOre;
+    public static ForgeConfigSpec.IntValue minXpHardenedStoneXpOre;
+    public static ForgeConfigSpec.IntValue maxXpHardenedStoneXpOre;
+
     static {
         // = BUILDER.comment("").define("", false);
 
@@ -392,6 +417,23 @@ public class Xp {
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
         minXpSandXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpSandXpOre", 0, 0, 1000000);
         maxXpSandXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpSandXpOre", 0, 0, 1000000);
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Red Sand Xp Ore").push("red_sand_xp_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableRedSandXpOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableRedSandXpOre", true);
+        veinSizeRedSandXpOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandXpOre", 1, 0, 65536);
+        veinsPerChunkRedSandXpOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkRedSandXpOre", 11, 0, 65536);
+        minHeightRedSandXpOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightRedSandXpOre", 40, 0, 256);
+        maxHeightRedSandXpOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightRedSandXpOre", 128, 0, 256);
+        isTempWhitelistRedSandXpOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistRedSandXpOre", false);
+        temperatureBlacklistRedSandXpOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandXpOre", new ArrayList<String>());
+        isBiomeWhitelistRedSandXpOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandXpOre", false);
+        biomeBlacklistRedSandXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandXpOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
+        minXpRedSandXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpRedSandXpOre", 0, 0, 1000000);
+        maxXpRedSandXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpRedSandXpOre", 0, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Xp Ore").push("gravel_xp_ore");
@@ -634,6 +676,25 @@ public class Xp {
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
         minXpEmbellishcraftSlateXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftSlateXpOre", 0, 0, 1000000);
         maxXpEmbellishcraftSlateXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftSlateXpOre", 0, 0, 1000000);
+        BUILDER.pop();
+        BUILDER.pop();
+
+        // Danny's Stone Variants
+        BUILDER.comment("Hardened Stone Xp Ore").push("hardened_stone_xp_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableHardenedStoneXpOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneXpOre", true);
+        veinSizeHardenedStoneXpOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneXpOre", 9, 0, 65536);
+        veinsPerChunkHardenedStoneXpOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneXpOre", 20, 0, 65536);
+        minHeightHardenedStoneXpOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneXpOre", 40, 0, 256);
+        maxHeightHardenedStoneXpOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneXpOre", 128, 0, 256);
+        isTempWhitelistHardenedStoneXpOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneXpOre", false);
+        temperatureBlacklistHardenedStoneXpOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneXpOre", new ArrayList<String>());
+        isBiomeWhitelistHardenedStoneXpOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneXpOre", false);
+        biomeBlacklistHardenedStoneXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistHardenedStoneXpOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
+        minXpHardenedStoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpHardenedStoneXpOre", 0, 0, 1000000);
+        maxXpHardenedStoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpHardenedStoneXpOre", 0, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

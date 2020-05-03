@@ -65,6 +65,12 @@ public class CoalGen {
                     if ((Coal.isBiomeWhitelistSandCoalOre.get() && Coal.biomeBlacklistSandCoalOre.get().contains(biomeRNS)) || (!Coal.isBiomeWhitelistSandCoalOre.get() && !Coal.biomeBlacklistSandCoalOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("sand", null, new BlockMatcher(Blocks.SAND)), BlockInit.SAND_COAL_ORE.get().getDefaultState(), Coal.veinSizeSandCoalOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Coal.veinsPerChunkSandCoalOre.get(), Coal.minHeightSandCoalOre.get(), 0, Coal.maxHeightSandCoalOre.get()))));
                     } } } }
+        if (!General.disableRedSandOreGeneration.get()) {
+            if (Coal.enableRedSandCoalOre.get()) {
+                if ((Coal.isTempWhitelistRedSandCoalOre.get() && Coal.temperatureBlacklistRedSandCoalOre.get().contains(biomeTS)) || (!Coal.isTempWhitelistRedSandCoalOre.get() && !Coal.temperatureBlacklistRedSandCoalOre.get().contains(biomeTS))) {
+                    if ((Coal.isBiomeWhitelistRedSandCoalOre.get() && Coal.biomeBlacklistRedSandCoalOre.get().contains(biomeRNS)) || (!Coal.isBiomeWhitelistRedSandCoalOre.get() && !Coal.biomeBlacklistRedSandCoalOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sand", null, new BlockMatcher(Blocks.RED_SAND)), BlockInit.RED_SAND_COAL_ORE.get().getDefaultState(), Coal.veinSizeRedSandCoalOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Coal.veinsPerChunkRedSandCoalOre.get(), Coal.minHeightRedSandCoalOre.get(), 0, Coal.maxHeightRedSandCoalOre.get()))));
+                    } } } }
         if (!General.disableGravelOreGeneration.get()) {
             if (Coal.enableGravelCoalOre.get()) {
                 if ((Coal.isTempWhitelistGravelCoalOre.get() && Coal.temperatureBlacklistGravelCoalOre.get().contains(biomeTS)) || (!Coal.isTempWhitelistGravelCoalOre.get() && !Coal.temperatureBlacklistGravelCoalOre.get().contains(biomeTS))) {
@@ -150,6 +156,13 @@ public class CoalGen {
                 if ((Coal.isTempWhitelistEmbellishcraftSlateCoalOre.get() && Coal.temperatureBlacklistEmbellishcraftSlateCoalOre.get().contains(biomeTS)) || (!Coal.isTempWhitelistEmbellishcraftSlateCoalOre.get() && !Coal.temperatureBlacklistEmbellishcraftSlateCoalOre.get().contains(biomeTS))) {
                     if ((Coal.isBiomeWhitelistEmbellishcraftSlateCoalOre.get() && Coal.biomeBlacklistEmbellishcraftSlateCoalOre.get().contains(biomeRNS)) || (!Coal.isBiomeWhitelistEmbellishcraftSlateCoalOre.get() && !Coal.biomeBlacklistEmbellishcraftSlateCoalOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_slate", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_SLATE != null ? BlockInit.EMBELLISHCRAFT_SLATE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_SLATE_COAL_ORE.get().getDefaultState(), Coal.veinSizeEmbellishcraftSlateCoalOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Coal.veinsPerChunkEmbellishcraftSlateCoalOre.get(), Coal.minHeightEmbellishcraftSlateCoalOre.get(), 0, Coal.maxHeightEmbellishcraftSlateCoalOre.get()))));
+                    } } } }
+        // Danny's Ores
+        if (!General.disableHardenedStoneOreGeneration.get()) {
+            if (Coal.enableHardenedStoneCoalOre.get()) {
+                if ((Coal.isTempWhitelistHardenedStoneCoalOre.get() && Coal.temperatureBlacklistHardenedStoneCoalOre.get().contains(biomeTS)) || (!Coal.isTempWhitelistHardenedStoneCoalOre.get() && !Coal.temperatureBlacklistHardenedStoneCoalOre.get().contains(biomeTS))) {
+                    if ((Coal.isBiomeWhitelistHardenedStoneCoalOre.get() && Coal.biomeBlacklistHardenedStoneCoalOre.get().contains(biomeRNS)) || (!Coal.isBiomeWhitelistHardenedStoneCoalOre.get() && !Coal.biomeBlacklistHardenedStoneCoalOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("hardened_stone", null, new BlockMatcher(BlockInit.HARDENED_STONE.get())), BlockInit.RED_SAND_COAL_ORE.get().getDefaultState(), Coal.veinSizeHardenedStoneCoalOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Coal.veinsPerChunkHardenedStoneCoalOre.get(), Coal.minHeightHardenedStoneCoalOre.get(), 0, Coal.maxHeightHardenedStoneCoalOre.get()))));
                     } } } }
     }
 }

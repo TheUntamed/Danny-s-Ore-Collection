@@ -83,6 +83,16 @@ public class Diamond {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistSandDiamondOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistSandDiamondOre;
 
+    public static ForgeConfigSpec.BooleanValue enableRedSandDiamondOre;
+    public static ForgeConfigSpec.IntValue veinSizeRedSandDiamondOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkRedSandDiamondOre;
+    public static ForgeConfigSpec.IntValue minHeightRedSandDiamondOre;
+    public static ForgeConfigSpec.IntValue maxHeightRedSandDiamondOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistRedSandDiamondOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistRedSandDiamondOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandDiamondOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandDiamondOre;
+
     public static ForgeConfigSpec.BooleanValue enableGravelDiamondOre;
     public static ForgeConfigSpec.IntValue veinSizeGravelDiamondOre;
     public static ForgeConfigSpec.IntValue veinsPerChunkGravelDiamondOre;
@@ -225,6 +235,17 @@ public class Diamond {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftSlateDiamondOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftSlateDiamondOre;
 
+    // Danny's Stone Variants
+    public static ForgeConfigSpec.BooleanValue enableHardenedStoneDiamondOre;
+    public static ForgeConfigSpec.IntValue veinSizeHardenedStoneDiamondOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkHardenedStoneDiamondOre;
+    public static ForgeConfigSpec.IntValue minHeightHardenedStoneDiamondOre;
+    public static ForgeConfigSpec.IntValue maxHeightHardenedStoneDiamondOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistHardenedStoneDiamondOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistHardenedStoneDiamondOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistHardenedStoneDiamondOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistHardenedStoneDiamondOre;
+
     static {
         // = BUILDER.comment("").define("", false);
 
@@ -319,6 +340,19 @@ public class Diamond {
         temperatureBlacklistSandDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistSandDiamondOre", new ArrayList<String>());
         isBiomeWhitelistSandDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistSandDiamondOre", false);
         biomeBlacklistSandDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistSandDiamondOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Red Sand Diamond Ore").push("red_sand_diamond_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableRedSandDiamondOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableRedSandDiamondOre", true);
+        veinSizeRedSandDiamondOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandDiamondOre", 8, 0, 65536);
+        veinsPerChunkRedSandDiamondOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkRedSandDiamondOre", 1, 0, 65536);
+        minHeightRedSandDiamondOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightRedSandDiamondOre", 0, 0, 256);
+        maxHeightRedSandDiamondOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightRedSandDiamondOre", 128, 0, 256);
+        isTempWhitelistRedSandDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistRedSandDiamondOre", false);
+        temperatureBlacklistRedSandDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandDiamondOre", new ArrayList<String>());
+        isBiomeWhitelistRedSandDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandDiamondOre", false);
+        biomeBlacklistRedSandDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistRedSandDiamondOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Diamond Ore").push("gravel_diamond_ore");
@@ -505,6 +539,21 @@ public class Diamond {
         temperatureBlacklistEmbellishcraftSlateDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEmbellishcraftSlateDiamondOre", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftSlateDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEmbellishcraftSlateDiamondOre", false);
         biomeBlacklistEmbellishcraftSlateDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEmbellishcraftSlateDiamondOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+
+        // Danny's Stone Variants
+        BUILDER.comment("Hardened Stone Diamond Ore").push("hardened_stone_diamond_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableHardenedStoneDiamondOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneDiamondOre", true);
+        veinSizeHardenedStoneDiamondOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneDiamondOre", 9, 0, 65536);
+        veinsPerChunkHardenedStoneDiamondOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneDiamondOre", 20, 0, 65536);
+        minHeightHardenedStoneDiamondOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneDiamondOre", 40, 0, 256);
+        maxHeightHardenedStoneDiamondOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneDiamondOre", 128, 0, 256);
+        isTempWhitelistHardenedStoneDiamondOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneDiamondOre", false);
+        temperatureBlacklistHardenedStoneDiamondOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneDiamondOre", new ArrayList<String>());
+        isBiomeWhitelistHardenedStoneDiamondOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneDiamondOre", false);
+        biomeBlacklistHardenedStoneDiamondOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistHardenedStoneDiamondOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

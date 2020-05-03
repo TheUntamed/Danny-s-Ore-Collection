@@ -83,6 +83,16 @@ public class Coal {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistSandCoalOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistSandCoalOre;
 
+    public static ForgeConfigSpec.BooleanValue enableRedSandCoalOre;
+    public static ForgeConfigSpec.IntValue veinSizeRedSandCoalOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkRedSandCoalOre;
+    public static ForgeConfigSpec.IntValue minHeightRedSandCoalOre;
+    public static ForgeConfigSpec.IntValue maxHeightRedSandCoalOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistRedSandCoalOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistRedSandCoalOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandCoalOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandCoalOre;
+
     public static ForgeConfigSpec.BooleanValue enableGravelCoalOre;
     public static ForgeConfigSpec.IntValue veinSizeGravelCoalOre;
     public static ForgeConfigSpec.IntValue veinsPerChunkGravelCoalOre;
@@ -225,6 +235,17 @@ public class Coal {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftSlateCoalOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftSlateCoalOre;
 
+    // Danny's Stone Variants
+    public static ForgeConfigSpec.BooleanValue enableHardenedStoneCoalOre;
+    public static ForgeConfigSpec.IntValue veinSizeHardenedStoneCoalOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkHardenedStoneCoalOre;
+    public static ForgeConfigSpec.IntValue minHeightHardenedStoneCoalOre;
+    public static ForgeConfigSpec.IntValue maxHeightHardenedStoneCoalOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistHardenedStoneCoalOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistHardenedStoneCoalOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistHardenedStoneCoalOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistHardenedStoneCoalOre;
+
     static {
         // = BUILDER.comment("").define("", false);
 
@@ -319,6 +340,19 @@ public class Coal {
         temperatureBlacklistSandCoalOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistSandCoalOre", new ArrayList<String>());
         isBiomeWhitelistSandCoalOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistSandCoalOre", false);
         biomeBlacklistSandCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandCoalOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Red Sand Coal Ore").push("red_sand_coal_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableRedSandCoalOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableRedSandCoalOre", true);
+        veinSizeRedSandCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandCoalOre", 8, 0, 65536);
+        veinsPerChunkRedSandCoalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkRedSandCoalOre", 10, 0, 65536);
+        minHeightRedSandCoalOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightRedSandCoalOre", 0, 0, 256);
+        maxHeightRedSandCoalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightRedSandCoalOre", 128, 0, 256);
+        isTempWhitelistRedSandCoalOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistRedSandCoalOre", false);
+        temperatureBlacklistRedSandCoalOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandCoalOre", new ArrayList<String>());
+        isBiomeWhitelistRedSandCoalOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandCoalOre", false);
+        biomeBlacklistRedSandCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandCoalOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Coal Ore").push("gravel_coal_ore");
@@ -505,6 +539,21 @@ public class Coal {
         temperatureBlacklistEmbellishcraftSlateCoalOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEmbellishcraftSlateCoalOre", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftSlateCoalOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEmbellishcraftSlateCoalOre", false);
         biomeBlacklistEmbellishcraftSlateCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEmbellishcraftSlateCoalOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+
+        // Danny's Stone Variants
+        BUILDER.comment("Hardened Stone Coal Ore").push("hardened_stone_coal_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableHardenedStoneCoalOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneCoalOre", true);
+        veinSizeHardenedStoneCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneCoalOre", 9, 0, 65536);
+        veinsPerChunkHardenedStoneCoalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneCoalOre", 20, 0, 65536);
+        minHeightHardenedStoneCoalOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneCoalOre", 40, 0, 256);
+        maxHeightHardenedStoneCoalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneCoalOre", 128, 0, 256);
+        isTempWhitelistHardenedStoneCoalOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneCoalOre", false);
+        temperatureBlacklistHardenedStoneCoalOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneCoalOre", new ArrayList<String>());
+        isBiomeWhitelistHardenedStoneCoalOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneCoalOre", false);
+        biomeBlacklistHardenedStoneCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistHardenedStoneCoalOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

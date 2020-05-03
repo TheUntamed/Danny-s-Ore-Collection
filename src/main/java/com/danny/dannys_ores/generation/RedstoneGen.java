@@ -1,8 +1,7 @@
 package com.danny.dannys_ores.generation;
 
 import com.danny.dannys_ores.Main;
-import com.danny.dannys_ores.configs.General;
-import com.danny.dannys_ores.configs.Redstone;
+import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.configs.Redstone;
 import com.danny.dannys_ores.configs.Redstone;
 import com.danny.dannys_ores.init.BlockInit;
@@ -64,6 +63,12 @@ public class RedstoneGen {
                 if ((Redstone.isTempWhitelistSandRedstoneOre.get() && Redstone.temperatureBlacklistSandRedstoneOre.get().contains(biomeTS)) || (!Redstone.isTempWhitelistSandRedstoneOre.get() && !Redstone.temperatureBlacklistSandRedstoneOre.get().contains(biomeTS))) {
                     if ((Redstone.isBiomeWhitelistSandRedstoneOre.get() && Redstone.biomeBlacklistSandRedstoneOre.get().contains(biomeRNS)) || (!Redstone.isBiomeWhitelistSandRedstoneOre.get() && !Redstone.biomeBlacklistSandRedstoneOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("sand", null, new BlockMatcher(Blocks.SAND)), BlockInit.SAND_REDSTONE_ORE.get().getDefaultState(), Redstone.veinSizeSandRedstoneOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Redstone.veinsPerChunkSandRedstoneOre.get(), Redstone.minHeightSandRedstoneOre.get(), 0, Redstone.maxHeightSandRedstoneOre.get()))));
+                    } } } }
+        if (!General.disableRedSandOreGeneration.get()) {
+            if (Redstone.enableRedSandRedstoneOre.get()) {
+                if ((Redstone.isTempWhitelistRedSandRedstoneOre.get() && Redstone.temperatureBlacklistRedSandRedstoneOre.get().contains(biomeTS)) || (!Redstone.isTempWhitelistRedSandRedstoneOre.get() && !Redstone.temperatureBlacklistRedSandRedstoneOre.get().contains(biomeTS))) {
+                    if ((Redstone.isBiomeWhitelistRedSandRedstoneOre.get() && Redstone.biomeBlacklistRedSandRedstoneOre.get().contains(biomeRNS)) || (!Redstone.isBiomeWhitelistRedSandRedstoneOre.get() && !Redstone.biomeBlacklistRedSandRedstoneOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sand", null, new BlockMatcher(Blocks.RED_SAND)), BlockInit.RED_SAND_REDSTONE_ORE.get().getDefaultState(), Redstone.veinSizeRedSandRedstoneOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Redstone.veinsPerChunkRedSandRedstoneOre.get(), Redstone.minHeightRedSandRedstoneOre.get(), 0, Redstone.maxHeightRedSandRedstoneOre.get()))));
                     } } } }
         if (!General.disableGravelOreGeneration.get()) {
             if (Redstone.enableGravelRedstoneOre.get()) {
@@ -150,6 +155,13 @@ public class RedstoneGen {
                 if ((Redstone.isTempWhitelistEmbellishcraftSlateRedstoneOre.get() && Redstone.temperatureBlacklistEmbellishcraftSlateRedstoneOre.get().contains(biomeTS)) || (!Redstone.isTempWhitelistEmbellishcraftSlateRedstoneOre.get() && !Redstone.temperatureBlacklistEmbellishcraftSlateRedstoneOre.get().contains(biomeTS))) {
                     if ((Redstone.isBiomeWhitelistEmbellishcraftSlateRedstoneOre.get() && Redstone.biomeBlacklistEmbellishcraftSlateRedstoneOre.get().contains(biomeRNS)) || (!Redstone.isBiomeWhitelistEmbellishcraftSlateRedstoneOre.get() && !Redstone.biomeBlacklistEmbellishcraftSlateRedstoneOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_slate", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_SLATE != null ? BlockInit.EMBELLISHCRAFT_SLATE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_SLATE_REDSTONE_ORE.get().getDefaultState(), Redstone.veinSizeEmbellishcraftSlateRedstoneOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Redstone.veinsPerChunkEmbellishcraftSlateRedstoneOre.get(), Redstone.minHeightEmbellishcraftSlateRedstoneOre.get(), 0, Redstone.maxHeightEmbellishcraftSlateRedstoneOre.get()))));
+                    } } } }
+        // Danny's Ores
+        if (!General.disableHardenedStoneOreGeneration.get()) {
+            if (Redstone.enableHardenedStoneRedstoneOre.get()) {
+                if ((Redstone.isTempWhitelistHardenedStoneRedstoneOre.get() && Redstone.temperatureBlacklistHardenedStoneRedstoneOre.get().contains(biomeTS)) || (!Redstone.isTempWhitelistHardenedStoneRedstoneOre.get() && !Redstone.temperatureBlacklistHardenedStoneRedstoneOre.get().contains(biomeTS))) {
+                    if ((Redstone.isBiomeWhitelistHardenedStoneRedstoneOre.get() && Redstone.biomeBlacklistHardenedStoneRedstoneOre.get().contains(biomeRNS)) || (!Redstone.isBiomeWhitelistHardenedStoneRedstoneOre.get() && !Redstone.biomeBlacklistHardenedStoneRedstoneOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("hardened_stone", null, new BlockMatcher(BlockInit.HARDENED_STONE.get())), BlockInit.RED_SAND_REDSTONE_ORE.get().getDefaultState(), Redstone.veinSizeHardenedStoneRedstoneOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Redstone.veinsPerChunkHardenedStoneRedstoneOre.get(), Redstone.minHeightHardenedStoneRedstoneOre.get(), 0, Redstone.maxHeightHardenedStoneRedstoneOre.get()))));
                     } } } }
     }
 }

@@ -83,6 +83,16 @@ public class Gold {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistSandGoldOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistSandGoldOre;
 
+    public static ForgeConfigSpec.BooleanValue enableRedSandGoldOre;
+    public static ForgeConfigSpec.IntValue veinSizeRedSandGoldOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkRedSandGoldOre;
+    public static ForgeConfigSpec.IntValue minHeightRedSandGoldOre;
+    public static ForgeConfigSpec.IntValue maxHeightRedSandGoldOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistRedSandGoldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistRedSandGoldOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandGoldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandGoldOre;
+
     public static ForgeConfigSpec.BooleanValue enableGravelGoldOre;
     public static ForgeConfigSpec.IntValue veinSizeGravelGoldOre;
     public static ForgeConfigSpec.IntValue veinsPerChunkGravelGoldOre;
@@ -225,6 +235,17 @@ public class Gold {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftSlateGoldOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftSlateGoldOre;
 
+    // Danny's Stone Variants
+    public static ForgeConfigSpec.BooleanValue enableHardenedStoneGoldOre;
+    public static ForgeConfigSpec.IntValue veinSizeHardenedStoneGoldOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkHardenedStoneGoldOre;
+    public static ForgeConfigSpec.IntValue minHeightHardenedStoneGoldOre;
+    public static ForgeConfigSpec.IntValue maxHeightHardenedStoneGoldOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistHardenedStoneGoldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistHardenedStoneGoldOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistHardenedStoneGoldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistHardenedStoneGoldOre;
+
     static {
         // = BUILDER.comment("").define("", false);
 
@@ -319,6 +340,19 @@ public class Gold {
         temperatureBlacklistSandGoldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistSandGoldOre", new ArrayList<String>());
         isBiomeWhitelistSandGoldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistSandGoldOre", false);
         biomeBlacklistSandGoldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandGoldOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Red Sand Gold Ore").push("red_sand_gold_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableRedSandGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableRedSandGoldOre", true);
+        veinSizeRedSandGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandGoldOre", 9, 0, 65536);
+        veinsPerChunkRedSandGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkRedSandGoldOre", 2, 0, 65536);
+        minHeightRedSandGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightRedSandGoldOre", 0, 0, 256);
+        maxHeightRedSandGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightRedSandGoldOre", 128, 0, 256);
+        isTempWhitelistRedSandGoldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistRedSandGoldOre", false);
+        temperatureBlacklistRedSandGoldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandGoldOre", new ArrayList<String>());
+        isBiomeWhitelistRedSandGoldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandGoldOre", false);
+        biomeBlacklistRedSandGoldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandGoldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Gold Ore").push("gravel_gold_ore");
@@ -505,6 +539,21 @@ public class Gold {
         temperatureBlacklistEmbellishcraftSlateGoldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEmbellishcraftSlateGoldOre", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftSlateGoldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEmbellishcraftSlateGoldOre", false);
         biomeBlacklistEmbellishcraftSlateGoldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEmbellishcraftSlateGoldOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+
+        // Danny's Stone Variants
+        BUILDER.comment("Hardened Stone Gold Ore").push("hardened_stone_gold_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableHardenedStoneGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneGoldOre", true);
+        veinSizeHardenedStoneGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneGoldOre", 9, 0, 65536);
+        veinsPerChunkHardenedStoneGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneGoldOre", 20, 0, 65536);
+        minHeightHardenedStoneGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneGoldOre", 40, 0, 256);
+        maxHeightHardenedStoneGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneGoldOre", 128, 0, 256);
+        isTempWhitelistHardenedStoneGoldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneGoldOre", false);
+        temperatureBlacklistHardenedStoneGoldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneGoldOre", new ArrayList<String>());
+        isBiomeWhitelistHardenedStoneGoldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneGoldOre", false);
+        biomeBlacklistHardenedStoneGoldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistHardenedStoneGoldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

@@ -18,6 +18,7 @@ public class General {
 
     public static ForgeConfigSpec.BooleanValue enableConfigChecker;
 
+    // Vanilla
     public static ForgeConfigSpec.BooleanValue disableStoneOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableAndesiteOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableDioriteOreGeneration;
@@ -25,18 +26,19 @@ public class General {
     public static ForgeConfigSpec.BooleanValue disableNetherrackOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableEndStoneOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableSandOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableRedSandOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableGravelOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableSandstoneOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableRedSandstoneOreGeneration;
 
-    //Quark
+    // Quark
     public static ForgeConfigSpec.BooleanValue disableQuarkBasaltOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableQuarkLimestoneOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableQuarkJasperOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableQuarkMarbleOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableQuarkSlateOreGeneration;
 
-    //Embellishcraft
+    // Embellishcraft
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftBasaltOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftGneissOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftJadeOreGeneration;
@@ -51,6 +53,9 @@ public class General {
     public static ForgeConfigSpec.BooleanValue removeVanillaOverworldOreGeneration;
     public static ForgeConfigSpec.BooleanValue removeVanillaNetherOreGeneration;
 
+    // Danny's Ores
+    public static ForgeConfigSpec.BooleanValue disableHardenedStoneOreGeneration;
+
     static {
         // = BUILDER.comment("").define("", false);
         BUILDER.comment("General settings").push("general");
@@ -64,6 +69,7 @@ public class General {
                     disableNetherrackOreGeneration = BUILDER.comment("If true, the Netherrack variant of all ores (except vanilla ores) will be disabled.").define("disableNetherrackOreGeneration", false);
                     disableEndStoneOreGeneration = BUILDER.comment("If true, the End Stone variant of all ores will be disabled.").define("disableEndStoneOreGeneration", false);
                     disableSandOreGeneration = BUILDER.comment("If true, the Sand variant of all ores will be disabled.").define("disableSandOreGeneration", false);
+                    disableRedSandOreGeneration = BUILDER.comment("If true, the RedSand variant of all ores will be disabled.").define("disableRedSandOreGeneration", false);
                     disableGravelOreGeneration = BUILDER.comment("If true, the Gravel variant of all ores will be disabled.").define("disableGravelOreGeneration", false);
                     disableSandstoneOreGeneration = BUILDER.comment("If true, the Sandstone variant of all ores will be disabled.").define("disableSandstoneOreGeneration", false);
                     disableRedSandstoneOreGeneration = BUILDER.comment("If true, the RedSandstone variant of all ores will be disabled.").define("disableRedSandstoneOreGeneration", false);
@@ -82,6 +88,9 @@ public class General {
                     disableEmbellishcraftLarvikiteOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Larvikite variant of all ores will be disabled.").define("disableEmbellishcraftLarvikiteOreGeneration", false);
                     disableEmbellishcraftMarbleOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Marble variant of all ores will be disabled.").define("disableEmbellishcraftMarbleOreGeneration", false);
                     disableEmbellishcraftSlateOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Slate variant of all ores will be disabled.").define("disableEmbellishcraftSlateOreGeneration", false);
+                BUILDER.pop();
+                BUILDER.comment("Stone variants added by this mod.").push("dannys_ores");
+                    disableHardenedStoneOreGeneration = BUILDER.comment("If true, the Hardened Stone variant of all ores (except vanilla ores) will be disabled.").define("disableStoneOreGeneration", false);
                 BUILDER.pop();
             BUILDER.pop();
             BUILDER.comment("Manipulate vanilla and other mods ore generation.").push("vanilla_and_other_mods");

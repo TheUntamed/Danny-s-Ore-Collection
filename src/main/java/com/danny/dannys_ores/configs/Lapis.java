@@ -83,6 +83,16 @@ public class Lapis {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistSandLapisOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistSandLapisOre;
 
+    public static ForgeConfigSpec.BooleanValue enableRedSandLapisOre;
+    public static ForgeConfigSpec.IntValue veinSizeRedSandLapisOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkRedSandLapisOre;
+    public static ForgeConfigSpec.IntValue minHeightRedSandLapisOre;
+    public static ForgeConfigSpec.IntValue maxHeightRedSandLapisOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistRedSandLapisOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistRedSandLapisOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandLapisOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandLapisOre;
+
     public static ForgeConfigSpec.BooleanValue enableGravelLapisOre;
     public static ForgeConfigSpec.IntValue veinSizeGravelLapisOre;
     public static ForgeConfigSpec.IntValue veinsPerChunkGravelLapisOre;
@@ -225,6 +235,17 @@ public class Lapis {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftSlateLapisOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftSlateLapisOre;
 
+    // Danny's Stone Variants
+    public static ForgeConfigSpec.BooleanValue enableHardenedStoneLapisOre;
+    public static ForgeConfigSpec.IntValue veinSizeHardenedStoneLapisOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkHardenedStoneLapisOre;
+    public static ForgeConfigSpec.IntValue minHeightHardenedStoneLapisOre;
+    public static ForgeConfigSpec.IntValue maxHeightHardenedStoneLapisOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistHardenedStoneLapisOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistHardenedStoneLapisOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistHardenedStoneLapisOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistHardenedStoneLapisOre;
+
     static {
         // = BUILDER.comment("").define("", false);
 
@@ -319,6 +340,19 @@ public class Lapis {
         temperatureBlacklistSandLapisOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistSandLapisOre", new ArrayList<String>());
         isBiomeWhitelistSandLapisOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistSandLapisOre", false);
         biomeBlacklistSandLapisOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandLapisOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Red Sand Lapis Ore").push("red_sand_lapis_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableRedSandLapisOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableRedSandLapisOre", true);
+        veinSizeRedSandLapisOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandLapisOre", 7, 0, 65536);
+        veinsPerChunkRedSandLapisOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkRedSandLapisOre", 1, 0, 65536);
+        minHeightRedSandLapisOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightRedSandLapisOre", 0, 0, 256);
+        maxHeightRedSandLapisOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightRedSandLapisOre", 128, 0, 256);
+        isTempWhitelistRedSandLapisOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistRedSandLapisOre", false);
+        temperatureBlacklistRedSandLapisOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandLapisOre", new ArrayList<String>());
+        isBiomeWhitelistRedSandLapisOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandLapisOre", false);
+        biomeBlacklistRedSandLapisOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandLapisOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Lapis Ore").push("gravel_lapis_ore");
@@ -505,6 +539,21 @@ public class Lapis {
         temperatureBlacklistEmbellishcraftSlateLapisOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEmbellishcraftSlateLapisOre", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftSlateLapisOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEmbellishcraftSlateLapisOre", false);
         biomeBlacklistEmbellishcraftSlateLapisOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEmbellishcraftSlateLapisOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+
+        // Danny's Stone Variants
+        BUILDER.comment("Hardened Stone Lapis Ore").push("hardened_stone_lapis_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableHardenedStoneLapisOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneLapisOre", true);
+        veinSizeHardenedStoneLapisOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneLapisOre", 9, 0, 65536);
+        veinsPerChunkHardenedStoneLapisOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneLapisOre", 20, 0, 65536);
+        minHeightHardenedStoneLapisOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneLapisOre", 40, 0, 256);
+        maxHeightHardenedStoneLapisOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneLapisOre", 128, 0, 256);
+        isTempWhitelistHardenedStoneLapisOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneLapisOre", false);
+        temperatureBlacklistHardenedStoneLapisOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneLapisOre", new ArrayList<String>());
+        isBiomeWhitelistHardenedStoneLapisOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneLapisOre", false);
+        biomeBlacklistHardenedStoneLapisOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistHardenedStoneLapisOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

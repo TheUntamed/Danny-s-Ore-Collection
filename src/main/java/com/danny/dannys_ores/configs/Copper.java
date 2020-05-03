@@ -91,6 +91,16 @@ public class Copper {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistSandCopperOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistSandCopperOre;
 
+    public static ForgeConfigSpec.BooleanValue enableRedSandCopperOre;
+    public static ForgeConfigSpec.IntValue veinSizeRedSandCopperOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkRedSandCopperOre;
+    public static ForgeConfigSpec.IntValue minHeightRedSandCopperOre;
+    public static ForgeConfigSpec.IntValue maxHeightRedSandCopperOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistRedSandCopperOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistRedSandCopperOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandCopperOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandCopperOre;
+
     public static ForgeConfigSpec.BooleanValue enableGravelCopperOre;
     public static ForgeConfigSpec.IntValue veinSizeGravelCopperOre;
     public static ForgeConfigSpec.IntValue veinsPerChunkGravelCopperOre;
@@ -233,6 +243,17 @@ public class Copper {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftSlateCopperOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftSlateCopperOre;
 
+    // Danny's Stone Variants
+    public static ForgeConfigSpec.BooleanValue enableHardenedStoneCopperOre;
+    public static ForgeConfigSpec.IntValue veinSizeHardenedStoneCopperOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkHardenedStoneCopperOre;
+    public static ForgeConfigSpec.IntValue minHeightHardenedStoneCopperOre;
+    public static ForgeConfigSpec.IntValue maxHeightHardenedStoneCopperOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistHardenedStoneCopperOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistHardenedStoneCopperOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistHardenedStoneCopperOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistHardenedStoneCopperOre;
+
     static {
         // = BUILDER.comment("").define("", false);
 
@@ -327,6 +348,19 @@ public class Copper {
                     temperatureBlacklistSandCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistSandCopperOre", new ArrayList<String>());
                     isBiomeWhitelistSandCopperOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistSandCopperOre", false);
                     biomeBlacklistSandCopperOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandCopperOre", new ArrayList<String>());
+                BUILDER.pop();
+            BUILDER.pop();
+            BUILDER.comment("Red Sand Copper Ore").push("red_sand_copper_ore");
+                BUILDER.comment("Generation settings for this ore.").push("generation");
+                    enableRedSandCopperOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableRedSandCopperOre", true);
+                    veinSizeRedSandCopperOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandCopperOre", 9, 0, 65536);
+                    veinsPerChunkRedSandCopperOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkRedSandCopperOre", 20, 0, 65536);
+                    minHeightRedSandCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightRedSandCopperOre", 40, 0, 256);
+                    maxHeightRedSandCopperOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightRedSandCopperOre", 128, 0, 256);
+                    isTempWhitelistRedSandCopperOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistRedSandCopperOre", false);
+                    temperatureBlacklistRedSandCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandCopperOre", new ArrayList<String>());
+                    isBiomeWhitelistRedSandCopperOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandCopperOre", false);
+                    biomeBlacklistRedSandCopperOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandCopperOre", new ArrayList<String>());
                 BUILDER.pop();
             BUILDER.pop();
             BUILDER.comment("Gravel Copper Ore").push("gravel_copper_ore");
@@ -513,6 +547,20 @@ public class Copper {
         temperatureBlacklistEmbellishcraftSlateCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEmbellishcraftSlateCopperOre", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftSlateCopperOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEmbellishcraftSlateCopperOre", false);
         biomeBlacklistEmbellishcraftSlateCopperOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEmbellishcraftSlateCopperOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+        // Danny's Stone Variants
+        BUILDER.comment("Hardened Stone Copper Ore").push("hardened_stone_copper_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableHardenedStoneCopperOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneCopperOre", true);
+        veinSizeHardenedStoneCopperOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneCopperOre", 9, 0, 65536);
+        veinsPerChunkHardenedStoneCopperOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneCopperOre", 20, 0, 65536);
+        minHeightHardenedStoneCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneCopperOre", 40, 0, 256);
+        maxHeightHardenedStoneCopperOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneCopperOre", 128, 0, 256);
+        isTempWhitelistHardenedStoneCopperOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneCopperOre", false);
+        temperatureBlacklistHardenedStoneCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneCopperOre", new ArrayList<String>());
+        isBiomeWhitelistHardenedStoneCopperOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneCopperOre", false);
+        biomeBlacklistHardenedStoneCopperOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistHardenedStoneCopperOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

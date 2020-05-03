@@ -1,8 +1,7 @@
 package com.danny.dannys_ores.generation;
 
 import com.danny.dannys_ores.Main;
-import com.danny.dannys_ores.configs.General;
-import com.danny.dannys_ores.configs.Diamond;
+import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.configs.Diamond;
 import com.danny.dannys_ores.configs.Diamond;
 import com.danny.dannys_ores.init.BlockInit;
@@ -64,6 +63,12 @@ public class DiamondGen {
                 if ((Diamond.isTempWhitelistSandDiamondOre.get() && Diamond.temperatureBlacklistSandDiamondOre.get().contains(biomeTS)) || (!Diamond.isTempWhitelistSandDiamondOre.get() && !Diamond.temperatureBlacklistSandDiamondOre.get().contains(biomeTS))) {
                     if ((Diamond.isBiomeWhitelistSandDiamondOre.get() && Diamond.biomeBlacklistSandDiamondOre.get().contains(biomeRNS)) || (!Diamond.isBiomeWhitelistSandDiamondOre.get() && !Diamond.biomeBlacklistSandDiamondOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("sand", null, new BlockMatcher(Blocks.SAND)), BlockInit.SAND_DIAMOND_ORE.get().getDefaultState(), Diamond.veinSizeSandDiamondOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Diamond.veinsPerChunkSandDiamondOre.get(), Diamond.minHeightSandDiamondOre.get(), 0, Diamond.maxHeightSandDiamondOre.get()))));
+                    } } } }
+        if (!General.disableRedSandOreGeneration.get()) {
+            if (Diamond.enableRedSandDiamondOre.get()) {
+                if ((Diamond.isTempWhitelistRedSandDiamondOre.get() && Diamond.temperatureBlacklistRedSandDiamondOre.get().contains(biomeTS)) || (!Diamond.isTempWhitelistRedSandDiamondOre.get() && !Diamond.temperatureBlacklistRedSandDiamondOre.get().contains(biomeTS))) {
+                    if ((Diamond.isBiomeWhitelistRedSandDiamondOre.get() && Diamond.biomeBlacklistRedSandDiamondOre.get().contains(biomeRNS)) || (!Diamond.isBiomeWhitelistRedSandDiamondOre.get() && !Diamond.biomeBlacklistRedSandDiamondOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sand", null, new BlockMatcher(Blocks.RED_SAND)), BlockInit.RED_SAND_DIAMOND_ORE.get().getDefaultState(), Diamond.veinSizeRedSandDiamondOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Diamond.veinsPerChunkRedSandDiamondOre.get(), Diamond.minHeightRedSandDiamondOre.get(), 0, Diamond.maxHeightRedSandDiamondOre.get()))));
                     } } } }
         if (!General.disableGravelOreGeneration.get()) {
             if (Diamond.enableGravelDiamondOre.get()) {
@@ -150,6 +155,13 @@ public class DiamondGen {
                 if ((Diamond.isTempWhitelistEmbellishcraftSlateDiamondOre.get() && Diamond.temperatureBlacklistEmbellishcraftSlateDiamondOre.get().contains(biomeTS)) || (!Diamond.isTempWhitelistEmbellishcraftSlateDiamondOre.get() && !Diamond.temperatureBlacklistEmbellishcraftSlateDiamondOre.get().contains(biomeTS))) {
                     if ((Diamond.isBiomeWhitelistEmbellishcraftSlateDiamondOre.get() && Diamond.biomeBlacklistEmbellishcraftSlateDiamondOre.get().contains(biomeRNS)) || (!Diamond.isBiomeWhitelistEmbellishcraftSlateDiamondOre.get() && !Diamond.biomeBlacklistEmbellishcraftSlateDiamondOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_slate", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_SLATE != null ? BlockInit.EMBELLISHCRAFT_SLATE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_SLATE_DIAMOND_ORE.get().getDefaultState(), Diamond.veinSizeEmbellishcraftSlateDiamondOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Diamond.veinsPerChunkEmbellishcraftSlateDiamondOre.get(), Diamond.minHeightEmbellishcraftSlateDiamondOre.get(), 0, Diamond.maxHeightEmbellishcraftSlateDiamondOre.get()))));
+                    } } } }
+        // Danny's Ores
+        if (!General.disableHardenedStoneOreGeneration.get()) {
+            if (Diamond.enableHardenedStoneDiamondOre.get()) {
+                if ((Diamond.isTempWhitelistHardenedStoneDiamondOre.get() && Diamond.temperatureBlacklistHardenedStoneDiamondOre.get().contains(biomeTS)) || (!Diamond.isTempWhitelistHardenedStoneDiamondOre.get() && !Diamond.temperatureBlacklistHardenedStoneDiamondOre.get().contains(biomeTS))) {
+                    if ((Diamond.isBiomeWhitelistHardenedStoneDiamondOre.get() && Diamond.biomeBlacklistHardenedStoneDiamondOre.get().contains(biomeRNS)) || (!Diamond.isBiomeWhitelistHardenedStoneDiamondOre.get() && !Diamond.biomeBlacklistHardenedStoneDiamondOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("hardened_stone", null, new BlockMatcher(BlockInit.HARDENED_STONE.get())), BlockInit.RED_SAND_DIAMOND_ORE.get().getDefaultState(), Diamond.veinSizeHardenedStoneDiamondOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Diamond.veinsPerChunkHardenedStoneDiamondOre.get(), Diamond.minHeightHardenedStoneDiamondOre.get(), 0, Diamond.maxHeightHardenedStoneDiamondOre.get()))));
                     } } } }
     }
 }

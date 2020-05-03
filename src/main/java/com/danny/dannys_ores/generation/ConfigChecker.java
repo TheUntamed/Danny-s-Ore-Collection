@@ -43,6 +43,7 @@ public class ConfigChecker {
         for (String name : Iron.biomeBlacklistGravelIronOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/iron.toml in biomeBlacklistGravelIronOre, please check the entries!"); } }
         for (String name : Iron.biomeBlacklistSandstoneIronOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/iron.toml in biomeBlacklistSandstoneIronOre, please check the entries!"); } }
         for (String name : Iron.biomeBlacklistRedSandstoneIronOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/iron.toml in biomeBlacklistRedSandstoneIronOre, please check the entries!"); } }
+        for (String name : Iron.biomeBlacklistRedSandIronOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/iron.toml in biomeBlacklistRedSandIronOre, please check the entries!"); } }
 
         // Quark Biome Blacklist
         for (String name : Iron.biomeBlacklistQuarkBasaltIronOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/iron.toml in biomeBlacklistQuarkBasaltIronOre, please check the entries!"); } }
@@ -59,6 +60,9 @@ public class ConfigChecker {
         for (String name : Iron.biomeBlacklistEmbellishcraftMarbleIronOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/iron.toml in biomeBlacklistEmbellishcraftMarbleIronOre, please check the entries!"); } }
         for (String name : Iron.biomeBlacklistEmbellishcraftSlateIronOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/iron.toml in biomeBlacklistEmbellishcraftSlateIronOre, please check the entries!"); } }
 
+        // Danny's Ores Biome Blacklist
+        for (String name : Iron.biomeBlacklistHardenedStoneIronOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/iron.toml in biomeBlacklistHardenedStoneIronOre, please check the entries!"); } }
+
         // Vanilla Temperature Blacklist
         for (String temp : Iron.temperatureBlacklistVanillaIronOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/iron.toml in temperatureBlacklistStoneIronOre, please check the entries!"); } }
         for (String temp : Iron.temperatureBlacklistAndesiteIronOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/iron.toml in temperatureBlacklistAndesiteIronOre, please check the entries!"); } }
@@ -70,6 +74,7 @@ public class ConfigChecker {
         for (String temp : Iron.temperatureBlacklistGravelIronOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/iron.toml in temperatureBlacklistGravelIronOre, please check the entries!"); } }
         for (String temp : Iron.temperatureBlacklistSandstoneIronOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/iron.toml in temperatureBlacklistSandstoneIronOre, please check the entries!"); } }
         for (String temp : Iron.temperatureBlacklistRedSandstoneIronOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/iron.toml in temperatureBlacklistRedSandstoneIronOre, please check the entries!"); } }
+        for (String temp : Iron.temperatureBlacklistSandIronOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/iron.toml in temperatureBlacklistSandIronOre, please check the entries!"); } }
 
         // Quark Temperature Blacklist
         for (String name : Iron.temperatureBlacklistQuarkBasaltIronOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/iron.toml in temperatureBlacklistQuarkBasaltIronOre, please check the entries!"); } }
@@ -85,6 +90,9 @@ public class ConfigChecker {
         for (String name : Iron.temperatureBlacklistEmbellishcraftLarvikiteIronOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/iron.toml in temperatureBlacklistEmbellishcraftLarvikiteIronOre, please check the entries!"); } }
         for (String name : Iron.temperatureBlacklistEmbellishcraftMarbleIronOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/iron.toml in temperatureBlacklistEmbellishcraftMarbleIronOre, please check the entries!"); } }
         for (String name : Iron.temperatureBlacklistEmbellishcraftSlateIronOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/iron.toml in temperatureBlacklistEmbellishcraftSlateIronOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Iron.temperatureBlacklistSandIronOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/iron.toml in temperatureBlacklistSandIronOre, please check the entries!"); } }
     }
 
     private static void checkDiamond(ArrayList biomeVerify, ArrayList tempVerify) {
@@ -99,6 +107,7 @@ public class ConfigChecker {
         for (String name : Diamond.biomeBlacklistGravelDiamondOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/diamond.toml in biomeBlacklistGravelDiamondOre, please check the entries!"); } }
         for (String name : Diamond.biomeBlacklistSandstoneDiamondOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/diamond.toml in biomeBlacklistSandstoneDiamondOre, please check the entries!"); } }
         for (String name : Diamond.biomeBlacklistRedSandstoneDiamondOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/diamond.toml in biomeBlacklistRedSandstoneDiamondOre, please check the entries!"); } }
+        for (String name : Diamond.biomeBlacklistRedSandDiamondOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/diamond.toml in biomeBlacklistRedSandDiamondOre, please check the entries!"); } }
 
         // Quark Biome Blacklist
         for (String name : Diamond.biomeBlacklistQuarkBasaltDiamondOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/diamond.toml in biomeBlacklistQuarkBasaltDiamondOre, please check the entries!"); } }
@@ -115,6 +124,9 @@ public class ConfigChecker {
         for (String name : Diamond.biomeBlacklistEmbellishcraftMarbleDiamondOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/diamond.toml in biomeBlacklistEmbellishcraftMarbleDiamondOre, please check the entries!"); } }
         for (String name : Diamond.biomeBlacklistEmbellishcraftSlateDiamondOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/diamond.toml in biomeBlacklistEmbellishcraftSlateDiamondOre, please check the entries!"); } }
 
+        // Danny's Ores Biome Blacklist
+        for (String name : Diamond.biomeBlacklistHardenedStoneDiamondOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/diamond.toml in biomeBlacklistHardenedStoneDiamondOre, please check the entries!"); } }
+
         // Vanilla Temperature Blacklist
         for (String temp : Diamond.temperatureBlacklistVanillaDiamondOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/diamond.toml in temperatureBlacklistStoneDiamondOre, please check the entries!"); } }
         for (String temp : Diamond.temperatureBlacklistAndesiteDiamondOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/diamond.toml in temperatureBlacklistAndesiteDiamondOre, please check the entries!"); } }
@@ -126,6 +138,7 @@ public class ConfigChecker {
         for (String temp : Diamond.temperatureBlacklistGravelDiamondOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/diamond.toml in temperatureBlacklistGravelDiamondOre, please check the entries!"); } }
         for (String temp : Diamond.temperatureBlacklistSandstoneDiamondOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/diamond.toml in temperatureBlacklistSandstoneDiamondOre, please check the entries!"); } }
         for (String temp : Diamond.temperatureBlacklistRedSandstoneDiamondOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/diamond.toml in temperatureBlacklistRedSandstoneDiamondOre, please check the entries!"); } }
+        for (String temp : Diamond.temperatureBlacklistSandDiamondOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/diamond.toml in temperatureBlacklistSandDiamondOre, please check the entries!"); } }
 
         // Quark Temperature Blacklist
         for (String name : Diamond.temperatureBlacklistQuarkBasaltDiamondOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/diamond.toml in temperatureBlacklistQuarkBasaltDiamondOre, please check the entries!"); } }
@@ -141,6 +154,9 @@ public class ConfigChecker {
         for (String name : Diamond.temperatureBlacklistEmbellishcraftLarvikiteDiamondOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/diamond.toml in temperatureBlacklistEmbellishcraftLarvikiteDiamondOre, please check the entries!"); } }
         for (String name : Diamond.temperatureBlacklistEmbellishcraftMarbleDiamondOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/diamond.toml in temperatureBlacklistEmbellishcraftMarbleDiamondOre, please check the entries!"); } }
         for (String name : Diamond.temperatureBlacklistEmbellishcraftSlateDiamondOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/diamond.toml in temperatureBlacklistEmbellishcraftSlateDiamondOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Diamond.temperatureBlacklistSandDiamondOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/diamond.toml in temperatureBlacklistSandDiamondOre, please check the entries!"); } }
     }
 
     private static void checkCoal(ArrayList biomeVerify, ArrayList tempVerify) {
@@ -155,6 +171,7 @@ public class ConfigChecker {
         for (String name : Coal.biomeBlacklistGravelCoalOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/coal.toml in biomeBlacklistGravelCoalOre, please check the entries!"); } }
         for (String name : Coal.biomeBlacklistSandstoneCoalOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/coal.toml in biomeBlacklistSandstoneCoalOre, please check the entries!"); } }
         for (String name : Coal.biomeBlacklistRedSandstoneCoalOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/coal.toml in biomeBlacklistRedSandstoneCoalOre, please check the entries!"); } }
+        for (String name : Coal.biomeBlacklistRedSandCoalOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/coal.toml in biomeBlacklistRedSandCoalOre, please check the entries!"); } }
 
         // Quark Biome Blacklist
         for (String name : Coal.biomeBlacklistQuarkBasaltCoalOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/coal.toml in biomeBlacklistQuarkBasaltCoalOre, please check the entries!"); } }
@@ -171,6 +188,9 @@ public class ConfigChecker {
         for (String name : Coal.biomeBlacklistEmbellishcraftMarbleCoalOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/coal.toml in biomeBlacklistEmbellishcraftMarbleCoalOre, please check the entries!"); } }
         for (String name : Coal.biomeBlacklistEmbellishcraftSlateCoalOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/coal.toml in biomeBlacklistEmbellishcraftSlateCoalOre, please check the entries!"); } }
 
+        // Danny's Ores Biome Blacklist
+        for (String name : Coal.biomeBlacklistHardenedStoneCoalOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/coal.toml in biomeBlacklistHardenedStoneCoalOre, please check the entries!"); } }
+
         // Vanilla Temperature Blacklist
         for (String temp : Coal.temperatureBlacklistVanillaCoalOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/coal.toml in temperatureBlacklistStoneCoalOre, please check the entries!"); } }
         for (String temp : Coal.temperatureBlacklistAndesiteCoalOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/coal.toml in temperatureBlacklistAndesiteCoalOre, please check the entries!"); } }
@@ -182,6 +202,7 @@ public class ConfigChecker {
         for (String temp : Coal.temperatureBlacklistGravelCoalOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/coal.toml in temperatureBlacklistGravelCoalOre, please check the entries!"); } }
         for (String temp : Coal.temperatureBlacklistSandstoneCoalOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/coal.toml in temperatureBlacklistSandstoneCoalOre, please check the entries!"); } }
         for (String temp : Coal.temperatureBlacklistRedSandstoneCoalOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/coal.toml in temperatureBlacklistRedSandstoneCoalOre, please check the entries!"); } }
+        for (String temp : Coal.temperatureBlacklistSandCoalOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/coal.toml in temperatureBlacklistSandCoalOre, please check the entries!"); } }
 
         // Quark Temperature Blacklist
         for (String name : Coal.temperatureBlacklistQuarkBasaltCoalOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/coal.toml in temperatureBlacklistQuarkBasaltCoalOre, please check the entries!"); } }
@@ -197,6 +218,9 @@ public class ConfigChecker {
         for (String name : Coal.temperatureBlacklistEmbellishcraftLarvikiteCoalOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/coal.toml in temperatureBlacklistEmbellishcraftLarvikiteCoalOre, please check the entries!"); } }
         for (String name : Coal.temperatureBlacklistEmbellishcraftMarbleCoalOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/coal.toml in temperatureBlacklistEmbellishcraftMarbleCoalOre, please check the entries!"); } }
         for (String name : Coal.temperatureBlacklistEmbellishcraftSlateCoalOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/coal.toml in temperatureBlacklistEmbellishcraftSlateCoalOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Coal.temperatureBlacklistSandCoalOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/coal.toml in temperatureBlacklistSandCoalOre, please check the entries!"); } }
     }
 
     private static void checkEmerald(ArrayList biomeVerify, ArrayList tempVerify) {
@@ -211,6 +235,7 @@ public class ConfigChecker {
         for (String name : Emerald.biomeBlacklistGravelEmeraldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/emerald.toml in biomeBlacklistGravelEmeraldOre, please check the entries!"); } }
         for (String name : Emerald.biomeBlacklistSandstoneEmeraldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/emerald.toml in biomeBlacklistSandstoneEmeraldOre, please check the entries!"); } }
         for (String name : Emerald.biomeBlacklistRedSandstoneEmeraldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/emerald.toml in biomeBlacklistRedSandstoneEmeraldOre, please check the entries!"); } }
+        for (String name : Emerald.biomeBlacklistRedSandEmeraldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/emerald.toml in biomeBlacklistRedSandEmeraldOre, please check the entries!"); } }
 
         // Quark Biome Blacklist
         for (String name : Emerald.biomeBlacklistQuarkBasaltEmeraldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/emerald.toml in biomeBlacklistQuarkBasaltEmeraldOre, please check the entries!"); } }
@@ -227,6 +252,9 @@ public class ConfigChecker {
         for (String name : Emerald.biomeBlacklistEmbellishcraftMarbleEmeraldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/emerald.toml in biomeBlacklistEmbellishcraftMarbleEmeraldOre, please check the entries!"); } }
         for (String name : Emerald.biomeBlacklistEmbellishcraftSlateEmeraldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/emerald.toml in biomeBlacklistEmbellishcraftSlateEmeraldOre, please check the entries!"); } }
 
+        // Danny's Ores Biome Blacklist
+        for (String name : Emerald.biomeBlacklistHardenedStoneEmeraldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/emerald.toml in biomeBlacklistHardenedStoneEmeraldOre, please check the entries!"); } }
+
         // Vanilla Temperature Blacklist
         for (String temp : Emerald.temperatureBlacklistVanillaEmeraldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/emerald.toml in temperatureBlacklistStoneEmeraldOre, please check the entries!"); } }
         for (String temp : Emerald.temperatureBlacklistAndesiteEmeraldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/emerald.toml in temperatureBlacklistAndesiteEmeraldOre, please check the entries!"); } }
@@ -238,6 +266,7 @@ public class ConfigChecker {
         for (String temp : Emerald.temperatureBlacklistGravelEmeraldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/emerald.toml in temperatureBlacklistGravelEmeraldOre, please check the entries!"); } }
         for (String temp : Emerald.temperatureBlacklistSandstoneEmeraldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/emerald.toml in temperatureBlacklistSandstoneEmeraldOre, please check the entries!"); } }
         for (String temp : Emerald.temperatureBlacklistRedSandstoneEmeraldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/emerald.toml in temperatureBlacklistRedSandstoneEmeraldOre, please check the entries!"); } }
+        for (String temp : Emerald.temperatureBlacklistSandEmeraldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/emerald.toml in temperatureBlacklistSandEmeraldOre, please check the entries!"); } }
 
         // Quark Temperature Blacklist
         for (String name : Emerald.temperatureBlacklistQuarkBasaltEmeraldOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/emerald.toml in temperatureBlacklistQuarkBasaltEmeraldOre, please check the entries!"); } }
@@ -253,6 +282,9 @@ public class ConfigChecker {
         for (String name : Emerald.temperatureBlacklistEmbellishcraftLarvikiteEmeraldOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/emerald.toml in temperatureBlacklistEmbellishcraftLarvikiteEmeraldOre, please check the entries!"); } }
         for (String name : Emerald.temperatureBlacklistEmbellishcraftMarbleEmeraldOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/emerald.toml in temperatureBlacklistEmbellishcraftMarbleEmeraldOre, please check the entries!"); } }
         for (String name : Emerald.temperatureBlacklistEmbellishcraftSlateEmeraldOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/emerald.toml in temperatureBlacklistEmbellishcraftSlateEmeraldOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Emerald.temperatureBlacklistSandEmeraldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/emerald.toml in temperatureBlacklistSandEmeraldOre, please check the entries!"); } }
     }
 
     private static void checkGold(ArrayList biomeVerify, ArrayList tempVerify) {
@@ -267,6 +299,7 @@ public class ConfigChecker {
         for (String name : Gold.biomeBlacklistGravelGoldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/gold.toml in biomeBlacklistGravelGoldOre, please check the entries!"); } }
         for (String name : Gold.biomeBlacklistSandstoneGoldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/gold.toml in biomeBlacklistSandstoneGoldOre, please check the entries!"); } }
         for (String name : Gold.biomeBlacklistRedSandstoneGoldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/gold.toml in biomeBlacklistRedSandstoneGoldOre, please check the entries!"); } }
+        for (String name : Gold.biomeBlacklistRedSandGoldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/gold.toml in biomeBlacklistRedSandGoldOre, please check the entries!"); } }
 
         // Quark Biome Blacklist
         for (String name : Gold.biomeBlacklistQuarkBasaltGoldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/gold.toml in biomeBlacklistQuarkBasaltGoldOre, please check the entries!"); } }
@@ -283,6 +316,9 @@ public class ConfigChecker {
         for (String name : Gold.biomeBlacklistEmbellishcraftMarbleGoldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/gold.toml in biomeBlacklistEmbellishcraftMarbleGoldOre, please check the entries!"); } }
         for (String name : Gold.biomeBlacklistEmbellishcraftSlateGoldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/gold.toml in biomeBlacklistEmbellishcraftSlateGoldOre, please check the entries!"); } }
 
+        // Danny's Ores Biome Blacklist
+        for (String name : Gold.biomeBlacklistHardenedStoneGoldOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/gold.toml in biomeBlacklistHardenedStoneGoldOre, please check the entries!"); } }
+
         // Vanilla Temperature Blacklist
         for (String temp : Gold.temperatureBlacklistVanillaGoldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/gold.toml in temperatureBlacklistStoneGoldOre, please check the entries!"); } }
         for (String temp : Gold.temperatureBlacklistAndesiteGoldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/gold.toml in temperatureBlacklistAndesiteGoldOre, please check the entries!"); } }
@@ -294,6 +330,7 @@ public class ConfigChecker {
         for (String temp : Gold.temperatureBlacklistGravelGoldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/gold.toml in temperatureBlacklistGravelGoldOre, please check the entries!"); } }
         for (String temp : Gold.temperatureBlacklistSandstoneGoldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/gold.toml in temperatureBlacklistSandstoneGoldOre, please check the entries!"); } }
         for (String temp : Gold.temperatureBlacklistRedSandstoneGoldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/gold.toml in temperatureBlacklistRedSandstoneGoldOre, please check the entries!"); } }
+        for (String temp : Gold.temperatureBlacklistSandGoldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/gold.toml in temperatureBlacklistSandGoldOre, please check the entries!"); } }
 
         // Quark Temperature Blacklist
         for (String name : Gold.temperatureBlacklistQuarkBasaltGoldOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/gold.toml in temperatureBlacklistQuarkBasaltGoldOre, please check the entries!"); } }
@@ -309,6 +346,9 @@ public class ConfigChecker {
         for (String name : Gold.temperatureBlacklistEmbellishcraftLarvikiteGoldOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/gold.toml in temperatureBlacklistEmbellishcraftLarvikiteGoldOre, please check the entries!"); } }
         for (String name : Gold.temperatureBlacklistEmbellishcraftMarbleGoldOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/gold.toml in temperatureBlacklistEmbellishcraftMarbleGoldOre, please check the entries!"); } }
         for (String name : Gold.temperatureBlacklistEmbellishcraftSlateGoldOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/gold.toml in temperatureBlacklistEmbellishcraftSlateGoldOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Gold.temperatureBlacklistSandGoldOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/gold.toml in temperatureBlacklistSandGoldOre, please check the entries!"); } }
     }
 
     private static void checkLapis(ArrayList biomeVerify, ArrayList tempVerify) {
@@ -323,6 +363,7 @@ public class ConfigChecker {
         for (String name : Lapis.biomeBlacklistGravelLapisOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/lapis.toml in biomeBlacklistGravelLapisOre, please check the entries!"); } }
         for (String name : Lapis.biomeBlacklistSandstoneLapisOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/lapis.toml in biomeBlacklistSandstoneLapisOre, please check the entries!"); } }
         for (String name : Lapis.biomeBlacklistRedSandstoneLapisOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/lapis.toml in biomeBlacklistRedSandstoneLapisOre, please check the entries!"); } }
+        for (String name : Lapis.biomeBlacklistRedSandLapisOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/lapis.toml in biomeBlacklistRedSandLapisOre, please check the entries!"); } }
 
         // Quark Biome Blacklist
         for (String name : Lapis.biomeBlacklistQuarkBasaltLapisOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/lapis.toml in biomeBlacklistQuarkBasaltLapisOre, please check the entries!"); } }
@@ -339,6 +380,9 @@ public class ConfigChecker {
         for (String name : Lapis.biomeBlacklistEmbellishcraftMarbleLapisOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/lapis.toml in biomeBlacklistEmbellishcraftMarbleLapisOre, please check the entries!"); } }
         for (String name : Lapis.biomeBlacklistEmbellishcraftSlateLapisOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/lapis.toml in biomeBlacklistEmbellishcraftSlateLapisOre, please check the entries!"); } }
 
+        // Danny's Ores Biome Blacklist
+        for (String name : Lapis.biomeBlacklistHardenedStoneLapisOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/lapis.toml in biomeBlacklistHardenedStoneLapisOre, please check the entries!"); } }
+
         // Vanilla Temperature Blacklist
         for (String temp : Lapis.temperatureBlacklistVanillaLapisOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/lapis.toml in temperatureBlacklistStoneLapisOre, please check the entries!"); } }
         for (String temp : Lapis.temperatureBlacklistAndesiteLapisOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/lapis.toml in temperatureBlacklistAndesiteLapisOre, please check the entries!"); } }
@@ -350,6 +394,7 @@ public class ConfigChecker {
         for (String temp : Lapis.temperatureBlacklistGravelLapisOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/lapis.toml in temperatureBlacklistGravelLapisOre, please check the entries!"); } }
         for (String temp : Lapis.temperatureBlacklistSandstoneLapisOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/lapis.toml in temperatureBlacklistSandstoneLapisOre, please check the entries!"); } }
         for (String temp : Lapis.temperatureBlacklistRedSandstoneLapisOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/lapis.toml in temperatureBlacklistRedSandstoneLapisOre, please check the entries!"); } }
+        for (String temp : Lapis.temperatureBlacklistSandLapisOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/lapis.toml in temperatureBlacklistSandLapisOre, please check the entries!"); } }
 
         // Quark Temperature Blacklist
         for (String name : Lapis.temperatureBlacklistQuarkBasaltLapisOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/lapis.toml in temperatureBlacklistQuarkBasaltLapisOre, please check the entries!"); } }
@@ -365,6 +410,9 @@ public class ConfigChecker {
         for (String name : Lapis.temperatureBlacklistEmbellishcraftLarvikiteLapisOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/lapis.toml in temperatureBlacklistEmbellishcraftLarvikiteLapisOre, please check the entries!"); } }
         for (String name : Lapis.temperatureBlacklistEmbellishcraftMarbleLapisOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/lapis.toml in temperatureBlacklistEmbellishcraftMarbleLapisOre, please check the entries!"); } }
         for (String name : Lapis.temperatureBlacklistEmbellishcraftSlateLapisOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/lapis.toml in temperatureBlacklistEmbellishcraftSlateLapisOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Lapis.temperatureBlacklistSandLapisOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/lapis.toml in temperatureBlacklistSandLapisOre, please check the entries!"); } }
     }
 
     private static void checkQuartz(ArrayList biomeVerify, ArrayList tempVerify) {
@@ -379,6 +427,7 @@ public class ConfigChecker {
         for (String name : Quartz.biomeBlacklistGravelQuartzOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/quartz.toml in biomeBlacklistGravelQuartzOre, please check the entries!"); } }
         for (String name : Quartz.biomeBlacklistSandstoneQuartzOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/quartz.toml in biomeBlacklistSandstoneQuartzOre, please check the entries!"); } }
         for (String name : Quartz.biomeBlacklistRedSandstoneQuartzOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/quartz.toml in biomeBlacklistRedSandstoneQuartzOre, please check the entries!"); } }
+        for (String name : Quartz.biomeBlacklistRedSandQuartzOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/quartz.toml in biomeBlacklistRedSandQuartzOre, please check the entries!"); } }
 
         // Quark Biome Blacklist
         for (String name : Quartz.biomeBlacklistQuarkBasaltQuartzOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/quartz.toml in biomeBlacklistQuarkBasaltQuartzOre, please check the entries!"); } }
@@ -395,6 +444,9 @@ public class ConfigChecker {
         for (String name : Quartz.biomeBlacklistEmbellishcraftMarbleQuartzOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/quartz.toml in biomeBlacklistEmbellishcraftMarbleQuartzOre, please check the entries!"); } }
         for (String name : Quartz.biomeBlacklistEmbellishcraftSlateQuartzOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/quartz.toml in biomeBlacklistEmbellishcraftSlateQuartzOre, please check the entries!"); } }
 
+        // Danny's Ores Biome Blacklist
+        for (String name : Quartz.biomeBlacklistHardenedStoneQuartzOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/quartz.toml in biomeBlacklistHardenedStoneQuartzOre, please check the entries!"); } }
+
         // Vanilla Temperature Blacklist
         for (String temp : Quartz.temperatureBlacklistStoneQuartzOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/quartz.toml in temperatureBlacklistStoneQuartzOre, please check the entries!"); } }
         for (String temp : Quartz.temperatureBlacklistAndesiteQuartzOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/quartz.toml in temperatureBlacklistAndesiteQuartzOre, please check the entries!"); } }
@@ -406,6 +458,7 @@ public class ConfigChecker {
         for (String temp : Quartz.temperatureBlacklistGravelQuartzOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/quartz.toml in temperatureBlacklistGravelQuartzOre, please check the entries!"); } }
         for (String temp : Quartz.temperatureBlacklistSandstoneQuartzOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/quartz.toml in temperatureBlacklistSandstoneQuartzOre, please check the entries!"); } }
         for (String temp : Quartz.temperatureBlacklistRedSandstoneQuartzOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/quartz.toml in temperatureBlacklistRedSandstoneQuartzOre, please check the entries!"); } }
+        for (String temp : Quartz.temperatureBlacklistSandQuartzOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/quartz.toml in temperatureBlacklistSandQuartzOre, please check the entries!"); } }
 
         // Quark Temperature Blacklist
         for (String name : Quartz.temperatureBlacklistQuarkBasaltQuartzOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/quartz.toml in temperatureBlacklistQuarkBasaltQuartzOre, please check the entries!"); } }
@@ -421,6 +474,9 @@ public class ConfigChecker {
         for (String name : Quartz.temperatureBlacklistEmbellishcraftLarvikiteQuartzOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/quartz.toml in temperatureBlacklistEmbellishcraftLarvikiteQuartzOre, please check the entries!"); } }
         for (String name : Quartz.temperatureBlacklistEmbellishcraftMarbleQuartzOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/quartz.toml in temperatureBlacklistEmbellishcraftMarbleQuartzOre, please check the entries!"); } }
         for (String name : Quartz.temperatureBlacklistEmbellishcraftSlateQuartzOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/quartz.toml in temperatureBlacklistEmbellishcraftSlateQuartzOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Quartz.temperatureBlacklistSandQuartzOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/quartz.toml in temperatureBlacklistSandQuartzOre, please check the entries!"); } }
     }
 
     private static void checkRedstone(ArrayList biomeVerify, ArrayList tempVerify) {
@@ -435,6 +491,7 @@ public class ConfigChecker {
         for (String name : Redstone.biomeBlacklistGravelRedstoneOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/redstone.toml in biomeBlacklistGravelRedstoneOre, please check the entries!"); } }
         for (String name : Redstone.biomeBlacklistSandstoneRedstoneOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/redstone.toml in biomeBlacklistSandstoneRedstoneOre, please check the entries!"); } }
         for (String name : Redstone.biomeBlacklistRedSandstoneRedstoneOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/redstone.toml in biomeBlacklistRedSandstoneRedstoneOre, please check the entries!"); } }
+        for (String name : Redstone.biomeBlacklistRedSandRedstoneOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/redstone.toml in biomeBlacklistRedSandRedstoneOre, please check the entries!"); } }
 
         // Quark Biome Blacklist
         for (String name : Redstone.biomeBlacklistQuarkBasaltRedstoneOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/redstone.toml in biomeBlacklistQuarkBasaltRedstoneOre, please check the entries!"); } }
@@ -451,6 +508,9 @@ public class ConfigChecker {
         for (String name : Redstone.biomeBlacklistEmbellishcraftMarbleRedstoneOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/redstone.toml in biomeBlacklistEmbellishcraftMarbleRedstoneOre, please check the entries!"); } }
         for (String name : Redstone.biomeBlacklistEmbellishcraftSlateRedstoneOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/redstone.toml in biomeBlacklistEmbellishcraftSlateRedstoneOre, please check the entries!"); } }
 
+        // Danny's Ores Biome Blacklist
+        for (String name : Redstone.biomeBlacklistHardenedStoneRedstoneOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/redstone.toml in biomeBlacklistHardenedStoneRedstoneOre, please check the entries!"); } }
+
         // Vanilla Temperature Blacklist
         for (String temp : Redstone.temperatureBlacklistVanillaRedstoneOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/redstone.toml in temperatureBlacklistStoneRedstoneOre, please check the entries!"); } }
         for (String temp : Redstone.temperatureBlacklistAndesiteRedstoneOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/redstone.toml in temperatureBlacklistAndesiteRedstoneOre, please check the entries!"); } }
@@ -462,6 +522,7 @@ public class ConfigChecker {
         for (String temp : Redstone.temperatureBlacklistGravelRedstoneOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/redstone.toml in temperatureBlacklistGravelRedstoneOre, please check the entries!"); } }
         for (String temp : Redstone.temperatureBlacklistSandstoneRedstoneOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/redstone.toml in temperatureBlacklistSandstoneRedstoneOre, please check the entries!"); } }
         for (String temp : Redstone.temperatureBlacklistRedSandstoneRedstoneOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/redstone.toml in temperatureBlacklistRedSandstoneRedstoneOre, please check the entries!"); } }
+        for (String temp : Redstone.temperatureBlacklistSandRedstoneOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/redstone.toml in temperatureBlacklistSandRedstoneOre, please check the entries!"); } }
 
         // Quark Temperature Blacklist
         for (String name : Redstone.temperatureBlacklistQuarkBasaltRedstoneOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/redstone.toml in temperatureBlacklistQuarkBasaltRedstoneOre, please check the entries!"); } }
@@ -477,6 +538,9 @@ public class ConfigChecker {
         for (String name : Redstone.temperatureBlacklistEmbellishcraftLarvikiteRedstoneOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/redstone.toml in temperatureBlacklistEmbellishcraftLarvikiteRedstoneOre, please check the entries!"); } }
         for (String name : Redstone.temperatureBlacklistEmbellishcraftMarbleRedstoneOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/redstone.toml in temperatureBlacklistEmbellishcraftMarbleRedstoneOre, please check the entries!"); } }
         for (String name : Redstone.temperatureBlacklistEmbellishcraftSlateRedstoneOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/redstone.toml in temperatureBlacklistEmbellishcraftSlateRedstoneOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Redstone.temperatureBlacklistSandRedstoneOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/redstone.toml in temperatureBlacklistSandRedstoneOre, please check the entries!"); } }
     }
 
     private static void checkCopper(ArrayList biomeVerify, ArrayList tempVerify) {
@@ -491,6 +555,7 @@ public class ConfigChecker {
         for (String name : Copper.biomeBlacklistGravelCopperOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/copper.toml in biomeBlacklistGravelCopperOre, please check the entries!"); } }
         for (String name : Copper.biomeBlacklistSandstoneCopperOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/copper.toml in biomeBlacklistSandstoneCopperOre, please check the entries!"); } }
         for (String name : Copper.biomeBlacklistRedSandstoneCopperOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/copper.toml in biomeBlacklistRedSandstoneCopperOre, please check the entries!"); } }
+        for (String name : Copper.biomeBlacklistRedSandCopperOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/copper.toml in biomeBlacklistRedSandCopperOre, please check the entries!"); } }
 
         // Quark Biome Blacklist
         for (String name : Copper.biomeBlacklistQuarkBasaltCopperOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/copper.toml in biomeBlacklistQuarkBasaltCopperOre, please check the entries!"); } }
@@ -507,6 +572,9 @@ public class ConfigChecker {
         for (String name : Copper.biomeBlacklistEmbellishcraftMarbleCopperOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/copper.toml in biomeBlacklistEmbellishcraftMarbleCopperOre, please check the entries!"); } }
         for (String name : Copper.biomeBlacklistEmbellishcraftSlateCopperOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/copper.toml in biomeBlacklistEmbellishcraftSlateCopperOre, please check the entries!"); } }
 
+        // Danny's Ores Biome Blacklist
+        for (String name : Copper.biomeBlacklistHardenedStoneCopperOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/copper.toml in biomeBlacklistHardenedStoneCopperOre, please check the entries!"); } }
+
         // Vanilla Temperature Blacklist
         for (String temp : Copper.temperatureBlacklistStoneCopperOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/copper.toml in temperatureBlacklistStoneCopperOre, please check the entries!"); } }
         for (String temp : Copper.temperatureBlacklistAndesiteCopperOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/copper.toml in temperatureBlacklistAndesiteCopperOre, please check the entries!"); } }
@@ -518,6 +586,7 @@ public class ConfigChecker {
         for (String temp : Copper.temperatureBlacklistGravelCopperOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/copper.toml in temperatureBlacklistGravelCopperOre, please check the entries!"); } }
         for (String temp : Copper.temperatureBlacklistSandstoneCopperOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/copper.toml in temperatureBlacklistSandstoneCopperOre, please check the entries!"); } }
         for (String temp : Copper.temperatureBlacklistRedSandstoneCopperOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/copper.toml in temperatureBlacklistRedSandstoneCopperOre, please check the entries!"); } }
+        for (String temp : Copper.temperatureBlacklistSandCopperOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/copper.toml in temperatureBlacklistSandCopperOre, please check the entries!"); } }
 
         // Quark Temperature Blacklist
         for (String name : Copper.temperatureBlacklistQuarkBasaltCopperOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/copper.toml in temperatureBlacklistQuarkBasaltCopperOre, please check the entries!"); } }
@@ -533,6 +602,9 @@ public class ConfigChecker {
         for (String name : Copper.temperatureBlacklistEmbellishcraftLarvikiteCopperOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/copper.toml in temperatureBlacklistEmbellishcraftLarvikiteCopperOre, please check the entries!"); } }
         for (String name : Copper.temperatureBlacklistEmbellishcraftMarbleCopperOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/copper.toml in temperatureBlacklistEmbellishcraftMarbleCopperOre, please check the entries!"); } }
         for (String name : Copper.temperatureBlacklistEmbellishcraftSlateCopperOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/copper.toml in temperatureBlacklistEmbellishcraftSlateCopperOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Copper.temperatureBlacklistSandCopperOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/copper.toml in temperatureBlacklistSandCopperOre, please check the entries!"); } }
     }
 
     private static void checkXp(ArrayList biomeVerify, ArrayList tempVerify) {
@@ -547,6 +619,7 @@ public class ConfigChecker {
         for (String name : Xp.biomeBlacklistGravelXpOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/xp.toml in biomeBlacklistGravelXpOre, please check the entries!"); } }
         for (String name : Xp.biomeBlacklistSandstoneXpOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/xp.toml in biomeBlacklistSandstoneXpOre, please check the entries!"); } }
         for (String name : Xp.biomeBlacklistRedSandstoneXpOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/xp.toml in biomeBlacklistRedSandstoneXpOre, please check the entries!"); } }
+        for (String name : Xp.biomeBlacklistRedSandXpOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/xp.toml in biomeBlacklistRedSandXpOre, please check the entries!"); } }
 
         // Quark Biome Blacklist
         for (String name : Xp.biomeBlacklistQuarkBasaltXpOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/xp.toml in biomeBlacklistQuarkBasaltXpOre, please check the entries!"); } }
@@ -563,6 +636,9 @@ public class ConfigChecker {
         for (String name : Xp.biomeBlacklistEmbellishcraftMarbleXpOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/xp.toml in biomeBlacklistEmbellishcraftMarbleXpOre, please check the entries!"); } }
         for (String name : Xp.biomeBlacklistEmbellishcraftSlateXpOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/xp.toml in biomeBlacklistEmbellishcraftSlateXpOre, please check the entries!"); } }
 
+        // Danny's Ores Biome Blacklist
+        for (String name : Xp.biomeBlacklistHardenedStoneXpOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/xp.toml in biomeBlacklistHardenedStoneXpOre, please check the entries!"); } }
+
         // Vanilla Temperature Blacklist
         for (String temp : Xp.temperatureBlacklistStoneXpOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/xp.toml in temperatureBlacklistStoneXpOre, please check the entries!"); } }
         for (String temp : Xp.temperatureBlacklistAndesiteXpOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/xp.toml in temperatureBlacklistAndesiteXpOre, please check the entries!"); } }
@@ -574,6 +650,7 @@ public class ConfigChecker {
         for (String temp : Xp.temperatureBlacklistGravelXpOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/xp.toml in temperatureBlacklistGravelXpOre, please check the entries!"); } }
         for (String temp : Xp.temperatureBlacklistSandstoneXpOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/xp.toml in temperatureBlacklistSandstoneXpOre, please check the entries!"); } }
         for (String temp : Xp.temperatureBlacklistRedSandstoneXpOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/xp.toml in temperatureBlacklistRedSandstoneXpOre, please check the entries!"); } }
+        for (String temp : Xp.temperatureBlacklistSandXpOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/xp.toml in temperatureBlacklistSandXpOre, please check the entries!"); } }
 
         // Quark Temperature Blacklist
         for (String name : Xp.temperatureBlacklistQuarkBasaltXpOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/xp.toml in temperatureBlacklistQuarkBasaltXpOre, please check the entries!"); } }
@@ -589,5 +666,8 @@ public class ConfigChecker {
         for (String name : Xp.temperatureBlacklistEmbellishcraftLarvikiteXpOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/xp.toml in temperatureBlacklistEmbellishcraftLarvikiteXpOre, please check the entries!"); } }
         for (String name : Xp.temperatureBlacklistEmbellishcraftMarbleXpOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/xp.toml in temperatureBlacklistEmbellishcraftMarbleXpOre, please check the entries!"); } }
         for (String name : Xp.temperatureBlacklistEmbellishcraftSlateXpOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/xp.toml in temperatureBlacklistEmbellishcraftSlateXpOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Xp.temperatureBlacklistSandXpOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/xp.toml in temperatureBlacklistSandXpOre, please check the entries!"); } }
     }
 }

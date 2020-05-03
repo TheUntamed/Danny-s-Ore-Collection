@@ -1,8 +1,7 @@
 package com.danny.dannys_ores.generation;
 
 import com.danny.dannys_ores.Main;
-import com.danny.dannys_ores.configs.General;
-import com.danny.dannys_ores.configs.Gold;
+import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.configs.Gold;
 import com.danny.dannys_ores.configs.Gold;
 import com.danny.dannys_ores.init.BlockInit;
@@ -64,6 +63,12 @@ public class GoldGen {
                 if ((Gold.isTempWhitelistSandGoldOre.get() && Gold.temperatureBlacklistSandGoldOre.get().contains(biomeTS)) || (!Gold.isTempWhitelistSandGoldOre.get() && !Gold.temperatureBlacklistSandGoldOre.get().contains(biomeTS))) {
                     if ((Gold.isBiomeWhitelistSandGoldOre.get() && Gold.biomeBlacklistSandGoldOre.get().contains(biomeRNS)) || (!Gold.isBiomeWhitelistSandGoldOre.get() && !Gold.biomeBlacklistSandGoldOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("sand", null, new BlockMatcher(Blocks.SAND)), BlockInit.SAND_GOLD_ORE.get().getDefaultState(), Gold.veinSizeSandGoldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Gold.veinsPerChunkSandGoldOre.get(), Gold.minHeightSandGoldOre.get(), 0, Gold.maxHeightSandGoldOre.get()))));
+                    } } } }
+        if (!General.disableRedSandOreGeneration.get()) {
+            if (Gold.enableRedSandGoldOre.get()) {
+                if ((Gold.isTempWhitelistRedSandGoldOre.get() && Gold.temperatureBlacklistRedSandGoldOre.get().contains(biomeTS)) || (!Gold.isTempWhitelistRedSandGoldOre.get() && !Gold.temperatureBlacklistRedSandGoldOre.get().contains(biomeTS))) {
+                    if ((Gold.isBiomeWhitelistRedSandGoldOre.get() && Gold.biomeBlacklistRedSandGoldOre.get().contains(biomeRNS)) || (!Gold.isBiomeWhitelistRedSandGoldOre.get() && !Gold.biomeBlacklistRedSandGoldOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sand", null, new BlockMatcher(Blocks.RED_SAND)), BlockInit.RED_SAND_GOLD_ORE.get().getDefaultState(), Gold.veinSizeRedSandGoldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Gold.veinsPerChunkRedSandGoldOre.get(), Gold.minHeightRedSandGoldOre.get(), 0, Gold.maxHeightRedSandGoldOre.get()))));
                     } } } }
         if (!General.disableGravelOreGeneration.get()) {
             if (Gold.enableGravelGoldOre.get()) {
@@ -150,6 +155,13 @@ public class GoldGen {
                 if ((Gold.isTempWhitelistEmbellishcraftSlateGoldOre.get() && Gold.temperatureBlacklistEmbellishcraftSlateGoldOre.get().contains(biomeTS)) || (!Gold.isTempWhitelistEmbellishcraftSlateGoldOre.get() && !Gold.temperatureBlacklistEmbellishcraftSlateGoldOre.get().contains(biomeTS))) {
                     if ((Gold.isBiomeWhitelistEmbellishcraftSlateGoldOre.get() && Gold.biomeBlacklistEmbellishcraftSlateGoldOre.get().contains(biomeRNS)) || (!Gold.isBiomeWhitelistEmbellishcraftSlateGoldOre.get() && !Gold.biomeBlacklistEmbellishcraftSlateGoldOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_slate", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_SLATE != null ? BlockInit.EMBELLISHCRAFT_SLATE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_SLATE_GOLD_ORE.get().getDefaultState(), Gold.veinSizeEmbellishcraftSlateGoldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Gold.veinsPerChunkEmbellishcraftSlateGoldOre.get(), Gold.minHeightEmbellishcraftSlateGoldOre.get(), 0, Gold.maxHeightEmbellishcraftSlateGoldOre.get()))));
+                    } } } }
+        // Danny's Ores
+        if (!General.disableHardenedStoneOreGeneration.get()) {
+            if (Gold.enableHardenedStoneGoldOre.get()) {
+                if ((Gold.isTempWhitelistHardenedStoneGoldOre.get() && Gold.temperatureBlacklistHardenedStoneGoldOre.get().contains(biomeTS)) || (!Gold.isTempWhitelistHardenedStoneGoldOre.get() && !Gold.temperatureBlacklistHardenedStoneGoldOre.get().contains(biomeTS))) {
+                    if ((Gold.isBiomeWhitelistHardenedStoneGoldOre.get() && Gold.biomeBlacklistHardenedStoneGoldOre.get().contains(biomeRNS)) || (!Gold.isBiomeWhitelistHardenedStoneGoldOre.get() && !Gold.biomeBlacklistHardenedStoneGoldOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("hardened_stone", null, new BlockMatcher(BlockInit.HARDENED_STONE.get())), BlockInit.RED_SAND_GOLD_ORE.get().getDefaultState(), Gold.veinSizeHardenedStoneGoldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Gold.veinsPerChunkHardenedStoneGoldOre.get(), Gold.minHeightHardenedStoneGoldOre.get(), 0, Gold.maxHeightHardenedStoneGoldOre.get()))));
                     } } } }
     }
 }

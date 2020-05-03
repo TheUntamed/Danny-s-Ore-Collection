@@ -51,7 +51,7 @@ public class OreGen {
                     biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
                 }
             }
-            if (StoneVariants.enableStoneVariants.get()) { StoneVariantsGen.addStoneVariantsGen(biome, biomeRNS, biomeTS); }
+            //if (StoneVariants.enableStoneVariants.get()) { StoneVariantsGen.addStoneVariantsGen(biome, biomeRNS, biomeTS); }
             if (Iron.enableIronOres.get()) { IronGen.addIronGen(biome, biomeRNS, biomeTS); }
             if (Gold.enableGoldOres.get()) { GoldGen.addGoldGen(biome, biomeRNS, biomeTS); }
             if (Coal.enableCoalOres.get()) { CoalGen.addCoalGen(biome, biomeRNS, biomeTS); }

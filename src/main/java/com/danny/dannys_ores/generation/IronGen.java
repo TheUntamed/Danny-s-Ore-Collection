@@ -3,6 +3,7 @@ package com.danny.dannys_ores.generation;
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.Iron;
 import com.danny.dannys_ores.configs.General;
+import com.danny.dannys_ores.configs.Iron;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
@@ -62,6 +63,12 @@ public class IronGen {
                 if ((Iron.isTempWhitelistSandIronOre.get() && Iron.temperatureBlacklistSandIronOre.get().contains(biomeTS)) || (!Iron.isTempWhitelistSandIronOre.get() && !Iron.temperatureBlacklistSandIronOre.get().contains(biomeTS))) {
                     if ((Iron.isBiomeWhitelistSandIronOre.get() && Iron.biomeBlacklistSandIronOre.get().contains(biomeRNS)) || (!Iron.isBiomeWhitelistSandIronOre.get() && !Iron.biomeBlacklistSandIronOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("sand", null, new BlockMatcher(Blocks.SAND)), BlockInit.SAND_IRON_ORE.get().getDefaultState(), Iron.veinSizeSandIronOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Iron.veinsPerChunkSandIronOre.get(), Iron.minHeightSandIronOre.get(), 0, Iron.maxHeightSandIronOre.get()))));
+                    } } } }
+        if (!General.disableRedSandOreGeneration.get()) {
+            if (Iron.enableRedSandIronOre.get()) {
+                if ((Iron.isTempWhitelistRedSandIronOre.get() && Iron.temperatureBlacklistRedSandIronOre.get().contains(biomeTS)) || (!Iron.isTempWhitelistRedSandIronOre.get() && !Iron.temperatureBlacklistRedSandIronOre.get().contains(biomeTS))) {
+                    if ((Iron.isBiomeWhitelistRedSandIronOre.get() && Iron.biomeBlacklistRedSandIronOre.get().contains(biomeRNS)) || (!Iron.isBiomeWhitelistRedSandIronOre.get() && !Iron.biomeBlacklistRedSandIronOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sand", null, new BlockMatcher(Blocks.RED_SAND)), BlockInit.RED_SAND_IRON_ORE.get().getDefaultState(), Iron.veinSizeRedSandIronOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Iron.veinsPerChunkRedSandIronOre.get(), Iron.minHeightRedSandIronOre.get(), 0, Iron.maxHeightRedSandIronOre.get()))));
                     } } } }
         if (!General.disableGravelOreGeneration.get()) {
             if (Iron.enableGravelIronOre.get()) {
@@ -148,6 +155,13 @@ public class IronGen {
                 if ((Iron.isTempWhitelistEmbellishcraftSlateIronOre.get() && Iron.temperatureBlacklistEmbellishcraftSlateIronOre.get().contains(biomeTS)) || (!Iron.isTempWhitelistEmbellishcraftSlateIronOre.get() && !Iron.temperatureBlacklistEmbellishcraftSlateIronOre.get().contains(biomeTS))) {
                     if ((Iron.isBiomeWhitelistEmbellishcraftSlateIronOre.get() && Iron.biomeBlacklistEmbellishcraftSlateIronOre.get().contains(biomeRNS)) || (!Iron.isBiomeWhitelistEmbellishcraftSlateIronOre.get() && !Iron.biomeBlacklistEmbellishcraftSlateIronOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_slate", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_SLATE != null ? BlockInit.EMBELLISHCRAFT_SLATE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_SLATE_IRON_ORE.get().getDefaultState(), Iron.veinSizeEmbellishcraftSlateIronOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Iron.veinsPerChunkEmbellishcraftSlateIronOre.get(), Iron.minHeightEmbellishcraftSlateIronOre.get(), 0, Iron.maxHeightEmbellishcraftSlateIronOre.get()))));
+                    } } } }
+        // Danny's Ores
+        if (!General.disableHardenedStoneOreGeneration.get()) {
+            if (Iron.enableHardenedStoneIronOre.get()) {
+                if ((Iron.isTempWhitelistHardenedStoneIronOre.get() && Iron.temperatureBlacklistHardenedStoneIronOre.get().contains(biomeTS)) || (!Iron.isTempWhitelistHardenedStoneIronOre.get() && !Iron.temperatureBlacklistHardenedStoneIronOre.get().contains(biomeTS))) {
+                    if ((Iron.isBiomeWhitelistHardenedStoneIronOre.get() && Iron.biomeBlacklistHardenedStoneIronOre.get().contains(biomeRNS)) || (!Iron.isBiomeWhitelistHardenedStoneIronOre.get() && !Iron.biomeBlacklistHardenedStoneIronOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("hardened_stone", null, new BlockMatcher(BlockInit.HARDENED_STONE.get())), BlockInit.RED_SAND_IRON_ORE.get().getDefaultState(), Iron.veinSizeHardenedStoneIronOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Iron.veinsPerChunkHardenedStoneIronOre.get(), Iron.minHeightHardenedStoneIronOre.get(), 0, Iron.maxHeightHardenedStoneIronOre.get()))));
                     } } } }
     }
 }

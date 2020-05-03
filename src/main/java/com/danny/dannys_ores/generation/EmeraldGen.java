@@ -1,8 +1,7 @@
 package com.danny.dannys_ores.generation;
 
 import com.danny.dannys_ores.Main;
-import com.danny.dannys_ores.configs.General;
-import com.danny.dannys_ores.configs.Emerald;
+import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.configs.Emerald;
 import com.danny.dannys_ores.configs.Emerald;
 import com.danny.dannys_ores.init.BlockInit;
@@ -64,6 +63,12 @@ public class EmeraldGen {
                 if ((Emerald.isTempWhitelistSandEmeraldOre.get() && Emerald.temperatureBlacklistSandEmeraldOre.get().contains(biomeTS)) || (!Emerald.isTempWhitelistSandEmeraldOre.get() && !Emerald.temperatureBlacklistSandEmeraldOre.get().contains(biomeTS))) {
                     if ((Emerald.isBiomeWhitelistSandEmeraldOre.get() && Emerald.biomeBlacklistSandEmeraldOre.get().contains(biomeRNS)) || (!Emerald.isBiomeWhitelistSandEmeraldOre.get() && !Emerald.biomeBlacklistSandEmeraldOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("sand", null, new BlockMatcher(Blocks.SAND)), BlockInit.SAND_EMERALD_ORE.get().getDefaultState(), Emerald.veinSizeSandEmeraldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Emerald.veinsPerChunkSandEmeraldOre.get(), Emerald.minHeightSandEmeraldOre.get(), 0, Emerald.maxHeightSandEmeraldOre.get()))));
+                    } } } }
+        if (!General.disableRedSandOreGeneration.get()) {
+            if (Emerald.enableRedSandEmeraldOre.get()) {
+                if ((Emerald.isTempWhitelistRedSandEmeraldOre.get() && Emerald.temperatureBlacklistRedSandEmeraldOre.get().contains(biomeTS)) || (!Emerald.isTempWhitelistRedSandEmeraldOre.get() && !Emerald.temperatureBlacklistRedSandEmeraldOre.get().contains(biomeTS))) {
+                    if ((Emerald.isBiomeWhitelistRedSandEmeraldOre.get() && Emerald.biomeBlacklistRedSandEmeraldOre.get().contains(biomeRNS)) || (!Emerald.isBiomeWhitelistRedSandEmeraldOre.get() && !Emerald.biomeBlacklistRedSandEmeraldOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sand", null, new BlockMatcher(Blocks.RED_SAND)), BlockInit.RED_SAND_EMERALD_ORE.get().getDefaultState(), Emerald.veinSizeRedSandEmeraldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Emerald.veinsPerChunkRedSandEmeraldOre.get(), Emerald.minHeightRedSandEmeraldOre.get(), 0, Emerald.maxHeightRedSandEmeraldOre.get()))));
                     } } } }
         if (!General.disableGravelOreGeneration.get()) {
             if (Emerald.enableGravelEmeraldOre.get()) {
@@ -150,6 +155,13 @@ public class EmeraldGen {
                 if ((Emerald.isTempWhitelistEmbellishcraftSlateEmeraldOre.get() && Emerald.temperatureBlacklistEmbellishcraftSlateEmeraldOre.get().contains(biomeTS)) || (!Emerald.isTempWhitelistEmbellishcraftSlateEmeraldOre.get() && !Emerald.temperatureBlacklistEmbellishcraftSlateEmeraldOre.get().contains(biomeTS))) {
                     if ((Emerald.isBiomeWhitelistEmbellishcraftSlateEmeraldOre.get() && Emerald.biomeBlacklistEmbellishcraftSlateEmeraldOre.get().contains(biomeRNS)) || (!Emerald.isBiomeWhitelistEmbellishcraftSlateEmeraldOre.get() && !Emerald.biomeBlacklistEmbellishcraftSlateEmeraldOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_slate", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_SLATE != null ? BlockInit.EMBELLISHCRAFT_SLATE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_SLATE_EMERALD_ORE.get().getDefaultState(), Emerald.veinSizeEmbellishcraftSlateEmeraldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Emerald.veinsPerChunkEmbellishcraftSlateEmeraldOre.get(), Emerald.minHeightEmbellishcraftSlateEmeraldOre.get(), 0, Emerald.maxHeightEmbellishcraftSlateEmeraldOre.get()))));
+                    } } } }
+        // Danny's Ores
+        if (!General.disableHardenedStoneOreGeneration.get()) {
+            if (Emerald.enableHardenedStoneEmeraldOre.get()) {
+                if ((Emerald.isTempWhitelistHardenedStoneEmeraldOre.get() && Emerald.temperatureBlacklistHardenedStoneEmeraldOre.get().contains(biomeTS)) || (!Emerald.isTempWhitelistHardenedStoneEmeraldOre.get() && !Emerald.temperatureBlacklistHardenedStoneEmeraldOre.get().contains(biomeTS))) {
+                    if ((Emerald.isBiomeWhitelistHardenedStoneEmeraldOre.get() && Emerald.biomeBlacklistHardenedStoneEmeraldOre.get().contains(biomeRNS)) || (!Emerald.isBiomeWhitelistHardenedStoneEmeraldOre.get() && !Emerald.biomeBlacklistHardenedStoneEmeraldOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("hardened_stone", null, new BlockMatcher(BlockInit.HARDENED_STONE.get())), BlockInit.RED_SAND_EMERALD_ORE.get().getDefaultState(), Emerald.veinSizeHardenedStoneEmeraldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Emerald.veinsPerChunkHardenedStoneEmeraldOre.get(), Emerald.minHeightHardenedStoneEmeraldOre.get(), 0, Emerald.maxHeightHardenedStoneEmeraldOre.get()))));
                     } } } }
     }
 }

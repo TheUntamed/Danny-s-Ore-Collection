@@ -83,6 +83,16 @@ public class Emerald {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistSandEmeraldOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistSandEmeraldOre;
 
+    public static ForgeConfigSpec.BooleanValue enableRedSandEmeraldOre;
+    public static ForgeConfigSpec.IntValue veinSizeRedSandEmeraldOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkRedSandEmeraldOre;
+    public static ForgeConfigSpec.IntValue minHeightRedSandEmeraldOre;
+    public static ForgeConfigSpec.IntValue maxHeightRedSandEmeraldOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistRedSandEmeraldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistRedSandEmeraldOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandEmeraldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandEmeraldOre;
+
     public static ForgeConfigSpec.BooleanValue enableGravelEmeraldOre;
     public static ForgeConfigSpec.IntValue veinSizeGravelEmeraldOre;
     public static ForgeConfigSpec.IntValue veinsPerChunkGravelEmeraldOre;
@@ -225,6 +235,17 @@ public class Emerald {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftSlateEmeraldOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftSlateEmeraldOre;
 
+    // Danny's Stone Variants
+    public static ForgeConfigSpec.BooleanValue enableHardenedStoneEmeraldOre;
+    public static ForgeConfigSpec.IntValue veinSizeHardenedStoneEmeraldOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkHardenedStoneEmeraldOre;
+    public static ForgeConfigSpec.IntValue minHeightHardenedStoneEmeraldOre;
+    public static ForgeConfigSpec.IntValue maxHeightHardenedStoneEmeraldOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistHardenedStoneEmeraldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistHardenedStoneEmeraldOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistHardenedStoneEmeraldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistHardenedStoneEmeraldOre;
+
     static {
         // = BUILDER.comment("").define("", false);
 
@@ -319,6 +340,19 @@ public class Emerald {
         temperatureBlacklistSandEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistSandEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistSandEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistSandEmeraldOre", false);
         biomeBlacklistSandEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandEmeraldOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Red Sand Emerald Ore").push("red_sand_emerald_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableRedSandEmeraldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableRedSandEmeraldOre", true);
+        veinSizeRedSandEmeraldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandEmeraldOre", 1, 0, 65536);
+        veinsPerChunkRedSandEmeraldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkRedSandEmeraldOre", 11, 0, 65536);
+        minHeightRedSandEmeraldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightRedSandEmeraldOre", 0, 0, 256);
+        maxHeightRedSandEmeraldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightRedSandEmeraldOre", 128, 0, 256);
+        isTempWhitelistRedSandEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistRedSandEmeraldOre", false);
+        temperatureBlacklistRedSandEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandEmeraldOre", new ArrayList<String>());
+        isBiomeWhitelistRedSandEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandEmeraldOre", false);
+        biomeBlacklistRedSandEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Emerald Ore").push("gravel_emerald_ore");
@@ -505,6 +539,21 @@ public class Emerald {
         temperatureBlacklistEmbellishcraftSlateEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEmbellishcraftSlateEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftSlateEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEmbellishcraftSlateEmeraldOre", false);
         biomeBlacklistEmbellishcraftSlateEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEmbellishcraftSlateEmeraldOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+
+        // Danny's Stone Variants
+        BUILDER.comment("Hardened Stone Emerald Ore").push("hardened_stone_emerald_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableHardenedStoneEmeraldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneEmeraldOre", true);
+        veinSizeHardenedStoneEmeraldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneEmeraldOre", 9, 0, 65536);
+        veinsPerChunkHardenedStoneEmeraldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneEmeraldOre", 20, 0, 65536);
+        minHeightHardenedStoneEmeraldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneEmeraldOre", 40, 0, 256);
+        maxHeightHardenedStoneEmeraldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneEmeraldOre", 128, 0, 256);
+        isTempWhitelistHardenedStoneEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneEmeraldOre", false);
+        temperatureBlacklistHardenedStoneEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneEmeraldOre", new ArrayList<String>());
+        isBiomeWhitelistHardenedStoneEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneEmeraldOre", false);
+        biomeBlacklistHardenedStoneEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistHardenedStoneEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

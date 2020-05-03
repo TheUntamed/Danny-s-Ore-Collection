@@ -1,8 +1,7 @@
 package com.danny.dannys_ores.generation;
 
 import com.danny.dannys_ores.Main;
-import com.danny.dannys_ores.configs.General;
-import com.danny.dannys_ores.configs.Quartz;
+import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.configs.Quartz;
 import com.danny.dannys_ores.configs.Quartz;
 import com.danny.dannys_ores.init.BlockInit;
@@ -64,6 +63,12 @@ public class QuartzGen {
                 if ((Quartz.isTempWhitelistSandQuartzOre.get() && Quartz.temperatureBlacklistSandQuartzOre.get().contains(biomeTS)) || (!Quartz.isTempWhitelistSandQuartzOre.get() && !Quartz.temperatureBlacklistSandQuartzOre.get().contains(biomeTS))) {
                     if ((Quartz.isBiomeWhitelistSandQuartzOre.get() && Quartz.biomeBlacklistSandQuartzOre.get().contains(biomeRNS)) || (!Quartz.isBiomeWhitelistSandQuartzOre.get() && !Quartz.biomeBlacklistSandQuartzOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("sand", null, new BlockMatcher(Blocks.SAND)), BlockInit.SAND_QUARTZ_ORE.get().getDefaultState(), Quartz.veinSizeSandQuartzOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Quartz.veinsPerChunkSandQuartzOre.get(), Quartz.minHeightSandQuartzOre.get(), 0, Quartz.maxHeightSandQuartzOre.get()))));
+                    } } } }
+        if (!General.disableRedSandOreGeneration.get()) {
+            if (Quartz.enableRedSandQuartzOre.get()) {
+                if ((Quartz.isTempWhitelistRedSandQuartzOre.get() && Quartz.temperatureBlacklistRedSandQuartzOre.get().contains(biomeTS)) || (!Quartz.isTempWhitelistRedSandQuartzOre.get() && !Quartz.temperatureBlacklistRedSandQuartzOre.get().contains(biomeTS))) {
+                    if ((Quartz.isBiomeWhitelistRedSandQuartzOre.get() && Quartz.biomeBlacklistRedSandQuartzOre.get().contains(biomeRNS)) || (!Quartz.isBiomeWhitelistRedSandQuartzOre.get() && !Quartz.biomeBlacklistRedSandQuartzOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sand", null, new BlockMatcher(Blocks.RED_SAND)), BlockInit.RED_SAND_QUARTZ_ORE.get().getDefaultState(), Quartz.veinSizeRedSandQuartzOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Quartz.veinsPerChunkRedSandQuartzOre.get(), Quartz.minHeightRedSandQuartzOre.get(), 0, Quartz.maxHeightRedSandQuartzOre.get()))));
                     } } } }
         if (!General.disableGravelOreGeneration.get()) {
             if (Quartz.enableGravelQuartzOre.get()) {
@@ -150,6 +155,13 @@ public class QuartzGen {
                 if ((Quartz.isTempWhitelistEmbellishcraftSlateQuartzOre.get() && Quartz.temperatureBlacklistEmbellishcraftSlateQuartzOre.get().contains(biomeTS)) || (!Quartz.isTempWhitelistEmbellishcraftSlateQuartzOre.get() && !Quartz.temperatureBlacklistEmbellishcraftSlateQuartzOre.get().contains(biomeTS))) {
                     if ((Quartz.isBiomeWhitelistEmbellishcraftSlateQuartzOre.get() && Quartz.biomeBlacklistEmbellishcraftSlateQuartzOre.get().contains(biomeRNS)) || (!Quartz.isBiomeWhitelistEmbellishcraftSlateQuartzOre.get() && !Quartz.biomeBlacklistEmbellishcraftSlateQuartzOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_slate", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_SLATE != null ? BlockInit.EMBELLISHCRAFT_SLATE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_SLATE_QUARTZ_ORE.get().getDefaultState(), Quartz.veinSizeEmbellishcraftSlateQuartzOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Quartz.veinsPerChunkEmbellishcraftSlateQuartzOre.get(), Quartz.minHeightEmbellishcraftSlateQuartzOre.get(), 0, Quartz.maxHeightEmbellishcraftSlateQuartzOre.get()))));
+                    } } } }
+        // Danny's Ores
+        if (!General.disableHardenedStoneOreGeneration.get()) {
+            if (Quartz.enableHardenedStoneQuartzOre.get()) {
+                if ((Quartz.isTempWhitelistHardenedStoneQuartzOre.get() && Quartz.temperatureBlacklistHardenedStoneQuartzOre.get().contains(biomeTS)) || (!Quartz.isTempWhitelistHardenedStoneQuartzOre.get() && !Quartz.temperatureBlacklistHardenedStoneQuartzOre.get().contains(biomeTS))) {
+                    if ((Quartz.isBiomeWhitelistHardenedStoneQuartzOre.get() && Quartz.biomeBlacklistHardenedStoneQuartzOre.get().contains(biomeRNS)) || (!Quartz.isBiomeWhitelistHardenedStoneQuartzOre.get() && !Quartz.biomeBlacklistHardenedStoneQuartzOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("hardened_stone", null, new BlockMatcher(BlockInit.HARDENED_STONE.get())), BlockInit.RED_SAND_QUARTZ_ORE.get().getDefaultState(), Quartz.veinSizeHardenedStoneQuartzOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Quartz.veinsPerChunkHardenedStoneQuartzOre.get(), Quartz.minHeightHardenedStoneQuartzOre.get(), 0, Quartz.maxHeightHardenedStoneQuartzOre.get()))));
                     } } } }
     }
 }

@@ -4,6 +4,7 @@ import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.configs.Lapis;
 import com.danny.dannys_ores.configs.Lapis;
+import com.danny.dannys_ores.configs.Lapis;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
@@ -63,6 +64,12 @@ public class LapisGen {
                 if ((Lapis.isTempWhitelistSandLapisOre.get() && Lapis.temperatureBlacklistSandLapisOre.get().contains(biomeTS)) || (!Lapis.isTempWhitelistSandLapisOre.get() && !Lapis.temperatureBlacklistSandLapisOre.get().contains(biomeTS))) {
                     if ((Lapis.isBiomeWhitelistSandLapisOre.get() && Lapis.biomeBlacklistSandLapisOre.get().contains(biomeRNS)) || (!Lapis.isBiomeWhitelistSandLapisOre.get() && !Lapis.biomeBlacklistSandLapisOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("sand", null, new BlockMatcher(Blocks.SAND)), BlockInit.SAND_LAPIS_ORE.get().getDefaultState(), Lapis.veinSizeSandLapisOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Lapis.veinsPerChunkSandLapisOre.get(), Lapis.minHeightSandLapisOre.get(), 0, Lapis.maxHeightSandLapisOre.get()))));
+                    } } } }
+        if (!General.disableRedSandOreGeneration.get()) {
+            if (Lapis.enableRedSandLapisOre.get()) {
+                if ((Lapis.isTempWhitelistRedSandLapisOre.get() && Lapis.temperatureBlacklistRedSandLapisOre.get().contains(biomeTS)) || (!Lapis.isTempWhitelistRedSandLapisOre.get() && !Lapis.temperatureBlacklistRedSandLapisOre.get().contains(biomeTS))) {
+                    if ((Lapis.isBiomeWhitelistRedSandLapisOre.get() && Lapis.biomeBlacklistRedSandLapisOre.get().contains(biomeRNS)) || (!Lapis.isBiomeWhitelistRedSandLapisOre.get() && !Lapis.biomeBlacklistRedSandLapisOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sand", null, new BlockMatcher(Blocks.RED_SAND)), BlockInit.RED_SAND_LAPIS_ORE.get().getDefaultState(), Lapis.veinSizeRedSandLapisOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Lapis.veinsPerChunkRedSandLapisOre.get(), Lapis.minHeightRedSandLapisOre.get(), 0, Lapis.maxHeightRedSandLapisOre.get()))));
                     } } } }
         if (!General.disableGravelOreGeneration.get()) {
             if (Lapis.enableGravelLapisOre.get()) {
@@ -149,6 +156,13 @@ public class LapisGen {
                 if ((Lapis.isTempWhitelistEmbellishcraftSlateLapisOre.get() && Lapis.temperatureBlacklistEmbellishcraftSlateLapisOre.get().contains(biomeTS)) || (!Lapis.isTempWhitelistEmbellishcraftSlateLapisOre.get() && !Lapis.temperatureBlacklistEmbellishcraftSlateLapisOre.get().contains(biomeTS))) {
                     if ((Lapis.isBiomeWhitelistEmbellishcraftSlateLapisOre.get() && Lapis.biomeBlacklistEmbellishcraftSlateLapisOre.get().contains(biomeRNS)) || (!Lapis.isBiomeWhitelistEmbellishcraftSlateLapisOre.get() && !Lapis.biomeBlacklistEmbellishcraftSlateLapisOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("embellishcraft_slate", null, new BlockMatcher(BlockInit.EMBELLISHCRAFT_SLATE != null ? BlockInit.EMBELLISHCRAFT_SLATE : Blocks.BARRIER)), BlockInit.EMBELLISHCRAFT_SLATE_LAPIS_ORE.get().getDefaultState(), Lapis.veinSizeEmbellishcraftSlateLapisOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Lapis.veinsPerChunkEmbellishcraftSlateLapisOre.get(), Lapis.minHeightEmbellishcraftSlateLapisOre.get(), 0, Lapis.maxHeightEmbellishcraftSlateLapisOre.get()))));
+                    } } } }
+        // Danny's Ores
+        if (!General.disableHardenedStoneOreGeneration.get()) {
+            if (Lapis.enableHardenedStoneLapisOre.get()) {
+                if ((Lapis.isTempWhitelistHardenedStoneLapisOre.get() && Lapis.temperatureBlacklistHardenedStoneLapisOre.get().contains(biomeTS)) || (!Lapis.isTempWhitelistHardenedStoneLapisOre.get() && !Lapis.temperatureBlacklistHardenedStoneLapisOre.get().contains(biomeTS))) {
+                    if ((Lapis.isBiomeWhitelistHardenedStoneLapisOre.get() && Lapis.biomeBlacklistHardenedStoneLapisOre.get().contains(biomeRNS)) || (!Lapis.isBiomeWhitelistHardenedStoneLapisOre.get() && !Lapis.biomeBlacklistHardenedStoneLapisOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("hardened_stone", null, new BlockMatcher(BlockInit.HARDENED_STONE.get())), BlockInit.RED_SAND_LAPIS_ORE.get().getDefaultState(), Lapis.veinSizeHardenedStoneLapisOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Lapis.veinsPerChunkHardenedStoneLapisOre.get(), Lapis.minHeightHardenedStoneLapisOre.get(), 0, Lapis.maxHeightHardenedStoneLapisOre.get()))));
                     } } } }
     }
 }
