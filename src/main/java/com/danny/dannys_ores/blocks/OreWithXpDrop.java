@@ -1,5 +1,6 @@
 package com.danny.dannys_ores.blocks;
 
+import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.Xp;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Block;
@@ -7,9 +8,11 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraftforge.fml.common.Mod;
 
 import java.util.Random;
 
+@Mod(Main.MOD_ID)
 public class OreWithXpDrop extends Block {
     public OreWithXpDrop(Block.Properties properties) {
         super(properties);
