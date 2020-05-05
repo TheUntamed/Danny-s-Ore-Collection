@@ -123,6 +123,17 @@ public class Redstone {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandstoneRedstoneOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandstoneRedstoneOre;
 
+    public static ForgeConfigSpec.BooleanValue enableBedrockRedstoneOre;
+    public static ForgeConfigSpec.IntValue veinSizeBedrockRedstoneOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkBedrockRedstoneOre;
+    public static ForgeConfigSpec.IntValue minHeightBedrockRedstoneOre;
+    public static ForgeConfigSpec.IntValue maxHeightBedrockRedstoneOre;
+    public static ForgeConfigSpec.DoubleValue resistanceBedrockRedstoneOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistBedrockRedstoneOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBedrockRedstoneOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBedrockRedstoneOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBedrockRedstoneOre;
+
     // Quark
     public static ForgeConfigSpec.BooleanValue enableQuarkBasaltRedstoneOre;
     public static ForgeConfigSpec.IntValue veinSizeQuarkBasaltRedstoneOre;
@@ -394,6 +405,22 @@ public class Redstone {
         biomeBlacklistRedSandstoneRedstoneOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandstoneRedstoneOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
+        BUILDER.comment("Bedrock Redstone Ore").push("bedrock_redstone_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableBedrockRedstoneOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableBedrockRedstoneOre", true);
+        veinSizeBedrockRedstoneOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeBedrockRedstoneOre", 1, 0, 65536);
+        veinsPerChunkBedrockRedstoneOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkBedrockRedstoneOre", 1, 0, 65536);
+        minHeightBedrockRedstoneOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBedrockRedstoneOre", 0, 0, 256);
+        maxHeightBedrockRedstoneOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBedrockRedstoneOre", 256, 0, 256);
+        isTempWhitelistBedrockRedstoneOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBedrockRedstoneOre", false);
+        temperatureBlacklistBedrockRedstoneOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBedrockRedstoneOre", new ArrayList<String>());
+        isBiomeWhitelistBedrockRedstoneOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistBedrockRedstoneOre", false);
+        biomeBlacklistBedrockRedstoneOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistBedrockRedstoneOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block properties").push("properties");
+        resistanceBedrockRedstoneOre = BUILDER.comment("A higher value means a stronger explosion is needed to destroy this ore. Stone has 6.0 and Obsidian 1200.0").defineInRange("resistanceBedrockRedstoneOre", 9.0, 0.0, 3600000.0);
+        BUILDER.pop();
+        BUILDER.pop();
 
         //Quark
         BUILDER.comment("Basalt Redstone Ore (Quark)").push("quark_basalt_redstone_ore");
@@ -546,10 +573,10 @@ public class Redstone {
         BUILDER.comment("Hardened Stone Redstone Ore").push("hardened_stone_redstone_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableHardenedStoneRedstoneOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneRedstoneOre", true);
-        veinSizeHardenedStoneRedstoneOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneRedstoneOre", 9, 0, 65536);
-        veinsPerChunkHardenedStoneRedstoneOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneRedstoneOre", 20, 0, 65536);
-        minHeightHardenedStoneRedstoneOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneRedstoneOre", 40, 0, 256);
-        maxHeightHardenedStoneRedstoneOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneRedstoneOre", 128, 0, 256);
+        veinSizeHardenedStoneRedstoneOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneRedstoneOre", 8, 0, 65536);
+        veinsPerChunkHardenedStoneRedstoneOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneRedstoneOre", 8, 0, 65536);
+        minHeightHardenedStoneRedstoneOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneRedstoneOre", 0, 0, 256);
+        maxHeightHardenedStoneRedstoneOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneRedstoneOre", 16, 0, 256);
         isTempWhitelistHardenedStoneRedstoneOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneRedstoneOre", false);
         temperatureBlacklistHardenedStoneRedstoneOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneRedstoneOre", new ArrayList<String>());
         isBiomeWhitelistHardenedStoneRedstoneOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneRedstoneOre", false);

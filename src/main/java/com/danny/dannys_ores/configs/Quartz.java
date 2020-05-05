@@ -123,6 +123,17 @@ public class Quartz {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandstoneQuartzOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandstoneQuartzOre;
 
+    public static ForgeConfigSpec.BooleanValue enableBedrockQuartzOre;
+    public static ForgeConfigSpec.IntValue veinSizeBedrockQuartzOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkBedrockQuartzOre;
+    public static ForgeConfigSpec.IntValue minHeightBedrockQuartzOre;
+    public static ForgeConfigSpec.IntValue maxHeightBedrockQuartzOre;
+    public static ForgeConfigSpec.DoubleValue resistanceBedrockQuartzOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistBedrockQuartzOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBedrockQuartzOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBedrockQuartzOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBedrockQuartzOre;
+
     // Quark
     public static ForgeConfigSpec.BooleanValue enableQuarkBasaltQuartzOre;
     public static ForgeConfigSpec.IntValue veinSizeQuarkBasaltQuartzOre;
@@ -394,6 +405,22 @@ public class Quartz {
         biomeBlacklistRedSandstoneQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistRedSandstoneQuartzOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
+        BUILDER.comment("Bedrock Quartz Ore").push("bedrock_quartz_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableBedrockQuartzOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableBedrockQuartzOre", true);
+        veinSizeBedrockQuartzOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeBedrockQuartzOre", 1, 0, 65536);
+        veinsPerChunkBedrockQuartzOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkBedrockQuartzOre", 1, 0, 65536);
+        minHeightBedrockQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBedrockQuartzOre", 0, 0, 256);
+        maxHeightBedrockQuartzOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBedrockQuartzOre", 256, 0, 256);
+        isTempWhitelistBedrockQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBedrockQuartzOre", false);
+        temperatureBlacklistBedrockQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBedrockQuartzOre", new ArrayList<String>());
+        isBiomeWhitelistBedrockQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistBedrockQuartzOre", false);
+        biomeBlacklistBedrockQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistBedrockQuartzOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block properties").push("properties");
+        resistanceBedrockQuartzOre = BUILDER.comment("A higher value means a stronger explosion is needed to destroy this ore. Stone has 6.0 and Obsidian 1200.0").defineInRange("resistanceBedrockQuartzOre", 9.0, 0.0, 3600000.0);
+        BUILDER.pop();
+        BUILDER.pop();
 
         //Quark
         BUILDER.comment("Basalt Quartz Ore (Quark)").push("quark_basalt_quartz_ore");
@@ -547,9 +574,9 @@ public class Quartz {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableHardenedStoneQuartzOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneQuartzOre", true);
         veinSizeHardenedStoneQuartzOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneQuartzOre", 9, 0, 65536);
-        veinsPerChunkHardenedStoneQuartzOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneQuartzOre", 20, 0, 65536);
-        minHeightHardenedStoneQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneQuartzOre", 40, 0, 256);
-        maxHeightHardenedStoneQuartzOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneQuartzOre", 128, 0, 256);
+        veinsPerChunkHardenedStoneQuartzOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneQuartzOre", 2, 0, 65536);
+        minHeightHardenedStoneQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneQuartzOre", 4, 0, 256);
+        maxHeightHardenedStoneQuartzOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneQuartzOre", 32, 0, 256);
         isTempWhitelistHardenedStoneQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneQuartzOre", false);
         temperatureBlacklistHardenedStoneQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneQuartzOre", new ArrayList<String>());
         isBiomeWhitelistHardenedStoneQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneQuartzOre", false);

@@ -148,6 +148,19 @@ public class Xp {
     public static ForgeConfigSpec.IntValue minXpRedSandstoneXpOre;
     public static ForgeConfigSpec.IntValue maxXpRedSandstoneXpOre;
 
+    public static ForgeConfigSpec.BooleanValue enableBedrockXpOre;
+    public static ForgeConfigSpec.IntValue veinSizeBedrockXpOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkBedrockXpOre;
+    public static ForgeConfigSpec.IntValue minHeightBedrockXpOre;
+    public static ForgeConfigSpec.IntValue maxHeightBedrockXpOre;
+    public static ForgeConfigSpec.DoubleValue resistanceBedrockXpOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistBedrockXpOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBedrockXpOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBedrockXpOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBedrockXpOre;
+    public static ForgeConfigSpec.IntValue minXpBedrockXpOre;
+    public static ForgeConfigSpec.IntValue maxXpBedrockXpOre;
+
     // Quark
     public static ForgeConfigSpec.BooleanValue enableQuarkBasaltXpOre;
     public static ForgeConfigSpec.IntValue veinSizeQuarkBasaltXpOre;
@@ -485,6 +498,26 @@ public class Xp {
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
         minXpRedSandstoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpRedSandstoneXpOre", 0, 0, 1000000);
         maxXpRedSandstoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpRedSandstoneXpOre", 0, 0, 1000000);
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Bedrock Xp Ore").push("bedrock_xp_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableBedrockXpOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableBedrockXpOre", true);
+        veinSizeBedrockXpOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeBedrockXpOre", 1, 0, 65536);
+        veinsPerChunkBedrockXpOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkBedrockXpOre", 1, 0, 65536);
+        minHeightBedrockXpOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBedrockXpOre", 0, 0, 256);
+        maxHeightBedrockXpOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBedrockXpOre", 256, 0, 256);
+        isTempWhitelistBedrockXpOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBedrockXpOre", false);
+        temperatureBlacklistBedrockXpOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBedrockXpOre", new ArrayList<String>());
+        isBiomeWhitelistBedrockXpOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistBedrockXpOre", false);
+        biomeBlacklistBedrockXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistBedrockXpOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block properties").push("properties");
+        resistanceBedrockXpOre = BUILDER.comment("A higher value means a stronger explosion is needed to destroy this ore. Stone has 6.0 and Obsidian 1200.0").defineInRange("resistanceBedrockXpOre", 9.0, 0.0, 3600000.0);
+        BUILDER.pop();
+        BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
+        minXpBedrockXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpBedrockXpOre", 0, 0, 1000000);
+        maxXpBedrockXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpBedrockXpOre", 0, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
 

@@ -46,15 +46,15 @@ public class General {
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftMarbleOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftSlateOreGeneration;
 
+    // Danny's Ores
+    public static ForgeConfigSpec.BooleanValue disableHardenedStoneOreGeneration;
+
     public static ForgeConfigSpec.BooleanValue enableCustomVanillaOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableOtherOverworldOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableOtherNetherOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableOtherEndOreGeneration;
     public static ForgeConfigSpec.BooleanValue removeVanillaOverworldOreGeneration;
     public static ForgeConfigSpec.BooleanValue removeVanillaNetherOreGeneration;
-
-    // Danny's Ores
-    public static ForgeConfigSpec.BooleanValue disableHardenedStoneOreGeneration;
 
     static {
         // = BUILDER.comment("").define("", false);

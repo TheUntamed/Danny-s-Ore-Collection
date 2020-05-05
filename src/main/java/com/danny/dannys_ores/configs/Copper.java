@@ -131,6 +131,17 @@ public class Copper {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandstoneCopperOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandstoneCopperOre;
 
+    public static ForgeConfigSpec.BooleanValue enableBedrockCopperOre;
+    public static ForgeConfigSpec.IntValue veinSizeBedrockCopperOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkBedrockCopperOre;
+    public static ForgeConfigSpec.IntValue minHeightBedrockCopperOre;
+    public static ForgeConfigSpec.IntValue maxHeightBedrockCopperOre;
+    public static ForgeConfigSpec.DoubleValue resistanceBedrockCopperOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistBedrockCopperOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBedrockCopperOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBedrockCopperOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBedrockCopperOre;
+
     // Quark
     public static ForgeConfigSpec.BooleanValue enableQuarkBasaltCopperOre;
     public static ForgeConfigSpec.IntValue veinSizeQuarkBasaltCopperOre;
@@ -400,6 +411,22 @@ public class Copper {
                     temperatureBlacklistRedSandstoneCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandstoneCopperOre", new ArrayList<String>());
                     isBiomeWhitelistRedSandstoneCopperOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandstoneCopperOre", false);
                     biomeBlacklistRedSandstoneCopperOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandstoneCopperOre", new ArrayList<String>());
+                BUILDER.pop();
+            BUILDER.pop();
+            BUILDER.comment("Bedrock Copper Ore").push("stone_copper_ore");
+                BUILDER.comment("Generation settings for this ore.").push("generation");
+                    enableBedrockCopperOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableBedrockCopperOre", true);
+                    veinSizeBedrockCopperOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeBedrockCopperOre", 1, 0, 65536);
+                    veinsPerChunkBedrockCopperOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkBedrockCopperOre", 1, 0, 65536);
+                    minHeightBedrockCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBedrockCopperOre", 0, 0, 256);
+                    maxHeightBedrockCopperOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBedrockCopperOre", 256, 0, 256);
+                    isTempWhitelistBedrockCopperOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBedrockCopperOre", false);
+                    temperatureBlacklistBedrockCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBedrockCopperOre", new ArrayList<String>());
+                    isBiomeWhitelistBedrockCopperOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistBedrockCopperOre", false);
+                    biomeBlacklistBedrockCopperOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistBedrockCopperOre", new ArrayList<String>());
+                BUILDER.pop();
+                BUILDER.comment("Block properties").push("properties");
+                    resistanceBedrockCopperOre = BUILDER.comment("A higher value means a stronger explosion is needed to destroy this ore. Stone has 6.0 and Obsidian 1200.0").defineInRange("resistanceBedrockCopperOre", 9.0, 0.0, 3600000.0);
                 BUILDER.pop();
             BUILDER.pop();
 

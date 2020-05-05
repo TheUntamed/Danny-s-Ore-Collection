@@ -127,6 +127,17 @@ public class Iron {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandstoneIronOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandstoneIronOre;
 
+    public static ForgeConfigSpec.BooleanValue enableBedrockIronOre;
+    public static ForgeConfigSpec.IntValue veinSizeBedrockIronOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkBedrockIronOre;
+    public static ForgeConfigSpec.IntValue minHeightBedrockIronOre;
+    public static ForgeConfigSpec.IntValue maxHeightBedrockIronOre;
+    public static ForgeConfigSpec.DoubleValue resistanceBedrockIronOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistBedrockIronOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBedrockIronOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBedrockIronOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBedrockIronOre;
+
     // Quark
     public static ForgeConfigSpec.BooleanValue enableQuarkBasaltIronOre;
     public static ForgeConfigSpec.IntValue veinSizeQuarkBasaltIronOre;
@@ -398,6 +409,22 @@ public class Iron {
         biomeBlacklistRedSandstoneIronOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistRedSandstoneIronOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
+        BUILDER.comment("Bedrock Iron Ore").push("bedrock_iron_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableBedrockIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableBedrockIronOre", true);
+        veinSizeBedrockIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeBedrockIronOre", 1, 0, 65536);
+        veinsPerChunkBedrockIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkBedrockIronOre", 1, 0, 65536);
+        minHeightBedrockIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBedrockIronOre", 0, 0, 256);
+        maxHeightBedrockIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBedrockIronOre", 256, 0, 256);
+        isTempWhitelistBedrockIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBedrockIronOre", false);
+        temperatureBlacklistBedrockIronOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBedrockIronOre", new ArrayList<String>());
+        isBiomeWhitelistBedrockIronOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistBedrockIronOre", false);
+        biomeBlacklistBedrockIronOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistBedrockIronOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block properties").push("properties");
+        resistanceBedrockIronOre = BUILDER.comment("A higher value means a stronger explosion is needed to destroy this ore. Stone has 6.0 and Obsidian 1200.0").defineInRange("resistanceBedrockIronOre", 9.0, 0.0, 3600000.0);
+        BUILDER.pop();
+        BUILDER.pop();
 
         //Quark
         BUILDER.comment("Basalt Iron Ore (Quark)").push("quark_basalt_iron_ore");
@@ -552,8 +579,8 @@ public class Iron {
         enableHardenedStoneIronOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneIronOre", true);
         veinSizeHardenedStoneIronOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneIronOre", 9, 0, 65536);
         veinsPerChunkHardenedStoneIronOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneIronOre", 20, 0, 65536);
-        minHeightHardenedStoneIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneIronOre", 40, 0, 256);
-        maxHeightHardenedStoneIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneIronOre", 128, 0, 256);
+        minHeightHardenedStoneIronOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneIronOre", 0, 0, 256);
+        maxHeightHardenedStoneIronOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneIronOre", 64, 0, 256);
         isTempWhitelistHardenedStoneIronOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneIronOre", false);
         temperatureBlacklistHardenedStoneIronOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneIronOre", new ArrayList<String>());
         isBiomeWhitelistHardenedStoneIronOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneIronOre", false);

@@ -123,6 +123,17 @@ public class Gold {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandstoneGoldOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandstoneGoldOre;
 
+    public static ForgeConfigSpec.BooleanValue enableBedrockGoldOre;
+    public static ForgeConfigSpec.IntValue veinSizeBedrockGoldOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkBedrockGoldOre;
+    public static ForgeConfigSpec.IntValue minHeightBedrockGoldOre;
+    public static ForgeConfigSpec.IntValue maxHeightBedrockGoldOre;
+    public static ForgeConfigSpec.DoubleValue resistanceBedrockGoldOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistBedrockGoldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBedrockGoldOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBedrockGoldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBedrockGoldOre;
+
     // Quark
     public static ForgeConfigSpec.BooleanValue enableQuarkBasaltGoldOre;
     public static ForgeConfigSpec.IntValue veinSizeQuarkBasaltGoldOre;
@@ -394,6 +405,22 @@ public class Gold {
         biomeBlacklistRedSandstoneGoldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandstoneGoldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
+        BUILDER.comment("Bedrock Gold Ore").push("bedrock_gold_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableBedrockGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableBedrockGoldOre", true);
+        veinSizeBedrockGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeBedrockGoldOre", 1, 0, 65536);
+        veinsPerChunkBedrockGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkBedrockGoldOre", 1, 0, 65536);
+        minHeightBedrockGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBedrockGoldOre", 0, 0, 256);
+        maxHeightBedrockGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBedrockGoldOre", 256, 0, 256);
+        isTempWhitelistBedrockGoldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBedrockGoldOre", false);
+        temperatureBlacklistBedrockGoldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBedrockGoldOre", new ArrayList<String>());
+        isBiomeWhitelistBedrockGoldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistBedrockGoldOre", false);
+        biomeBlacklistBedrockGoldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistBedrockGoldOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block properties").push("properties");
+        resistanceBedrockGoldOre = BUILDER.comment("A higher value means a stronger explosion is needed to destroy this ore. Stone has 6.0 and Obsidian 1200.0").defineInRange("resistanceBedrockGoldOre", 9.0, 0.0, 3600000.0);
+        BUILDER.pop();
+        BUILDER.pop();
 
         //Quark
         BUILDER.comment("Basalt Gold Ore (Quark)").push("quark_basalt_gold_ore");
@@ -547,9 +574,9 @@ public class Gold {
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableHardenedStoneGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneGoldOre", true);
         veinSizeHardenedStoneGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneGoldOre", 9, 0, 65536);
-        veinsPerChunkHardenedStoneGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneGoldOre", 20, 0, 65536);
-        minHeightHardenedStoneGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneGoldOre", 40, 0, 256);
-        maxHeightHardenedStoneGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneGoldOre", 128, 0, 256);
+        veinsPerChunkHardenedStoneGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneGoldOre", 2, 0, 65536);
+        minHeightHardenedStoneGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneGoldOre", 0, 0, 256);
+        maxHeightHardenedStoneGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneGoldOre", 32, 0, 256);
         isTempWhitelistHardenedStoneGoldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneGoldOre", false);
         temperatureBlacklistHardenedStoneGoldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneGoldOre", new ArrayList<String>());
         isBiomeWhitelistHardenedStoneGoldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneGoldOre", false);

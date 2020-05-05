@@ -123,6 +123,17 @@ public class Lapis {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandstoneLapisOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandstoneLapisOre;
 
+    public static ForgeConfigSpec.BooleanValue enableBedrockLapisOre;
+    public static ForgeConfigSpec.IntValue veinSizeBedrockLapisOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkBedrockLapisOre;
+    public static ForgeConfigSpec.IntValue minHeightBedrockLapisOre;
+    public static ForgeConfigSpec.IntValue maxHeightBedrockLapisOre;
+    public static ForgeConfigSpec.DoubleValue resistanceBedrockLapisOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistBedrockLapisOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBedrockLapisOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBedrockLapisOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBedrockLapisOre;
+
     // Quark
     public static ForgeConfigSpec.BooleanValue enableQuarkBasaltLapisOre;
     public static ForgeConfigSpec.IntValue veinSizeQuarkBasaltLapisOre;
@@ -394,6 +405,22 @@ public class Lapis {
         biomeBlacklistRedSandstoneLapisOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandstoneLapisOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
+        BUILDER.comment("Bedrock Lapis Ore").push("bedrock_lapis_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableBedrockLapisOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableBedrockLapisOre", true);
+        veinSizeBedrockLapisOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeBedrockLapisOre", 1, 0, 65536);
+        veinsPerChunkBedrockLapisOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkBedrockLapisOre", 1, 0, 65536);
+        minHeightBedrockLapisOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBedrockLapisOre", 0, 0, 256);
+        maxHeightBedrockLapisOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBedrockLapisOre", 256, 0, 256);
+        isTempWhitelistBedrockLapisOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBedrockLapisOre", false);
+        temperatureBlacklistBedrockLapisOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBedrockLapisOre", new ArrayList<String>());
+        isBiomeWhitelistBedrockLapisOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistBedrockLapisOre", false);
+        biomeBlacklistBedrockLapisOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistBedrockLapisOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block properties").push("properties");
+        resistanceBedrockLapisOre = BUILDER.comment("A higher value means a stronger explosion is needed to destroy this ore. Stone has 6.0 and Obsidian 1200.0").defineInRange("resistanceBedrockLapisOre", 9.0, 0.0, 3600000.0);
+        BUILDER.pop();
+        BUILDER.pop();
 
         //Quark
         BUILDER.comment("Basalt Lapis Ore (Quark)").push("quark_basalt_lapis_ore");
@@ -546,10 +573,10 @@ public class Lapis {
         BUILDER.comment("Hardened Stone Lapis Ore").push("hardened_stone_lapis_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableHardenedStoneLapisOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneLapisOre", true);
-        veinSizeHardenedStoneLapisOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneLapisOre", 9, 0, 65536);
-        veinsPerChunkHardenedStoneLapisOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneLapisOre", 20, 0, 65536);
-        minHeightHardenedStoneLapisOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneLapisOre", 40, 0, 256);
-        maxHeightHardenedStoneLapisOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneLapisOre", 128, 0, 256);
+        veinSizeHardenedStoneLapisOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneLapisOre", 7, 0, 65536);
+        veinsPerChunkHardenedStoneLapisOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneLapisOre", 1, 0, 65536);
+        minHeightHardenedStoneLapisOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneLapisOre", 0, 0, 256);
+        maxHeightHardenedStoneLapisOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneLapisOre", 32, 0, 256);
         isTempWhitelistHardenedStoneLapisOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneLapisOre", false);
         temperatureBlacklistHardenedStoneLapisOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneLapisOre", new ArrayList<String>());
         isBiomeWhitelistHardenedStoneLapisOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneLapisOre", false);

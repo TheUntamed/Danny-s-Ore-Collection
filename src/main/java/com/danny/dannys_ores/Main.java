@@ -13,7 +13,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
@@ -37,21 +36,19 @@ public class Main {
     public static boolean  embellishcraft;
 
     public Main() {
-        instance = this;
-
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
-        MinecraftForge.EVENT_BUS.register(this);
         quark = ModList.get().isLoaded("quark");
         embellishcraft = ModList.get().isLoaded("embellishcraft");
         BlockInit.BLOCKS.register(modEventBus);
         General.loadConfig();
+
+        instance = this;
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        // DeferredWorkQueue.runLater(StoneGen::generateStone);
-        // StoneGen.generateStone();
     }
 
     @SubscribeEvent
@@ -59,7 +56,7 @@ public class Main {
         final IForgeRegistry<Item> registry = event.getRegistry();
 
         BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            final Item.Properties properties = new Item.Properties().group(Main.TAB);
+            final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
             final BlockItem blockItem = new BlockItem(block, properties);
             blockItem.setRegistryName(block.getRegistryName());
             registry.register(blockItem);
@@ -69,18 +66,7 @@ public class Main {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-//        for(Block block : ) {
-//            RenderTypeLookup.setRenderLayer(block, RenderType.translucent);
-//        }
     }
-
-    public static final ItemGroup TAB = new ItemGroup("dannys_ores_tab") {
-
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(Blocks.BEDROCK);
-        }
-    };
 
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
@@ -90,5 +76,26 @@ public class Main {
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
         StoneGen.generateStone();
         OreGen.generateOre();
+    }
+
+//    public static final ItemGroup TAB = new ItemGroup("dannys_ores_tab") {
+//
+//        @Override
+//        public ItemStack createIcon() {
+//            return new ItemStack(BlockInit.RED_SAND_GOLD_ORE.get());
+//        }
+//    };
+
+    public static class MyItemGroup extends ItemGroup {
+        public static final ItemGroup instance = new MyItemGroup(ItemGroup.GROUPS.length, "dannys_ores_tab");
+
+        private MyItemGroup(int index, String label) {
+            super(index, label);
+        }
+
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(BlockInit.RED_SAND_GOLD_ORE.get());
+        }
     }
 }
