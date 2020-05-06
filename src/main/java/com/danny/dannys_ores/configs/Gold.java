@@ -123,6 +123,28 @@ public class Gold {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandstoneGoldOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandstoneGoldOre;
 
+    public static ForgeConfigSpec.BooleanValue enableBlueIceGoldOre;
+    public static ForgeConfigSpec.IntValue veinSizeBlueIceGoldOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceGoldOre;
+    public static ForgeConfigSpec.IntValue minHeightBlueIceGoldOre;
+    public static ForgeConfigSpec.IntValue maxHeightBlueIceGoldOre;
+    public static ForgeConfigSpec.DoubleValue resistanceBlueIceGoldOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceGoldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceGoldOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceGoldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBlueIceGoldOre;
+
+    public static ForgeConfigSpec.BooleanValue enablePackedIceGoldOre;
+    public static ForgeConfigSpec.IntValue veinSizePackedIceGoldOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceGoldOre;
+    public static ForgeConfigSpec.IntValue minHeightPackedIceGoldOre;
+    public static ForgeConfigSpec.IntValue maxHeightPackedIceGoldOre;
+    public static ForgeConfigSpec.DoubleValue resistancePackedIceGoldOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceGoldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceGoldOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceGoldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistPackedIceGoldOre;
+
     public static ForgeConfigSpec.BooleanValue enableBedrockGoldOre;
     public static ForgeConfigSpec.IntValue veinSizeBedrockGoldOre;
     public static ForgeConfigSpec.IntValue veinsPerChunkBedrockGoldOre;
@@ -317,7 +339,7 @@ public class Gold {
         BUILDER.comment("Netherrack Gold Ore").push("netherrack_gold_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableNetherrackGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableNetherrackGoldOre", true);
-        veinSizeNetherrackGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeNetherrackGoldOre", 9, 0, 65536);
+        veinSizeNetherrackGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeNetherrackGoldOre", 5, 0, 65536);
         veinsPerChunkNetherrackGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkNetherrackGoldOre", 2, 0, 65536);
         minHeightNetherrackGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightNetherrackGoldOre", 64, 0, 256);
         maxHeightNetherrackGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightNetherrackGoldOre", 128, 0, 256);
@@ -330,7 +352,7 @@ public class Gold {
         BUILDER.comment("End Stone Gold Ore").push("end_stone_gold_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableEndStoneGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableEndStoneGoldOre", true);
-        veinSizeEndStoneGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEndStoneGoldOre", 4, 0, 65536);
+        veinSizeEndStoneGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEndStoneGoldOre", 5, 0, 65536);
         veinsPerChunkEndStoneGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEndStoneGoldOre", 2, 0, 65536);
         minHeightEndStoneGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEndStoneGoldOre", 0, 0, 256);
         maxHeightEndStoneGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEndStoneGoldOre", 64, 0, 256);
@@ -343,7 +365,7 @@ public class Gold {
         BUILDER.comment("Sand Gold Ore").push("sand_gold_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableSandGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableSandGoldOre", true);
-        veinSizeSandGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeSandGoldOre", 9, 0, 65536);
+        veinSizeSandGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeSandGoldOre", 5, 0, 65536);
         veinsPerChunkSandGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkSandGoldOre", 2, 0, 65536);
         minHeightSandGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightSandGoldOre", 0, 0, 256);
         maxHeightSandGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightSandGoldOre", 128, 0, 256);
@@ -356,7 +378,7 @@ public class Gold {
         BUILDER.comment("Red Sand Gold Ore").push("red_sand_gold_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableRedSandGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableRedSandGoldOre", true);
-        veinSizeRedSandGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandGoldOre", 9, 0, 65536);
+        veinSizeRedSandGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandGoldOre", 5, 0, 65536);
         veinsPerChunkRedSandGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkRedSandGoldOre", 2, 0, 65536);
         minHeightRedSandGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightRedSandGoldOre", 0, 0, 256);
         maxHeightRedSandGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightRedSandGoldOre", 128, 0, 256);
@@ -382,7 +404,7 @@ public class Gold {
         BUILDER.comment("Sandstone Gold Ore").push("sandstone_gold_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableSandstoneGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableSandstoneGoldOre", true);
-        veinSizeSandstoneGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeSandstoneGoldOre", 9, 0, 65536);
+        veinSizeSandstoneGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeSandstoneGoldOre", 5, 0, 65536);
         veinsPerChunkSandstoneGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkSandstoneGoldOre", 2, 0, 65536);
         minHeightSandstoneGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightSandstoneGoldOre", 0, 0, 256);
         maxHeightSandstoneGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightSandstoneGoldOre", 128, 0, 256);
@@ -395,7 +417,7 @@ public class Gold {
         BUILDER.comment("Red Sandstone Gold Ore").push("red_sandstone_gold_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableRedSandstoneGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableRedSandstoneGoldOre", true);
-        veinSizeRedSandstoneGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandstoneGoldOre", 9, 0, 65536);
+        veinSizeRedSandstoneGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandstoneGoldOre", 5, 0, 65536);
         veinsPerChunkRedSandstoneGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkRedSandstoneGoldOre", 2, 0, 65536);
         minHeightRedSandstoneGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightRedSandstoneGoldOre", 0, 0, 256);
         maxHeightRedSandstoneGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightRedSandstoneGoldOre", 128, 0, 256);
@@ -403,6 +425,32 @@ public class Gold {
         temperatureBlacklistRedSandstoneGoldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandstoneGoldOre", new ArrayList<String>());
         isBiomeWhitelistRedSandstoneGoldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandstoneGoldOre", false);
         biomeBlacklistRedSandstoneGoldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandstoneGoldOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Blue Ice Gold Ore").push("blue_ice_gold_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableBlueIceGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableBlueIceGoldOre", true);
+        veinSizeBlueIceGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeBlueIceGoldOre", 5, 0, 65536);
+        veinsPerChunkBlueIceGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkBlueIceGoldOre", 2, 0, 65536);
+        minHeightBlueIceGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBlueIceGoldOre", 0, 0, 256);
+        maxHeightBlueIceGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBlueIceGoldOre", 128, 0, 256);
+        isTempWhitelistBlueIceGoldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBlueIceGoldOre", false);
+        temperatureBlacklistBlueIceGoldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBlueIceGoldOre", new ArrayList<String>());
+        isBiomeWhitelistBlueIceGoldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistBlueIceGoldOre", false);
+        biomeBlacklistBlueIceGoldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistBlueIceGoldOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Packed Ice Gold Ore").push("packed_ice_gold_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enablePackedIceGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enablePackedIceGoldOre", true);
+        veinSizePackedIceGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizePackedIceGoldOre", 5, 0, 65536);
+        veinsPerChunkPackedIceGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkPackedIceGoldOre", 2, 0, 65536);
+        minHeightPackedIceGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightPackedIceGoldOre", 0, 0, 256);
+        maxHeightPackedIceGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightPackedIceGoldOre", 128, 0, 256);
+        isTempWhitelistPackedIceGoldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistPackedIceGoldOre", false);
+        temperatureBlacklistPackedIceGoldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistPackedIceGoldOre", new ArrayList<String>());
+        isBiomeWhitelistPackedIceGoldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistPackedIceGoldOre", false);
+        biomeBlacklistPackedIceGoldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistPackedIceGoldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Bedrock Gold Ore").push("bedrock_gold_ore");
@@ -426,7 +474,7 @@ public class Gold {
         BUILDER.comment("Basalt Gold Ore (Quark)").push("quark_basalt_gold_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableQuarkBasaltGoldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableQuarkBasaltGoldOre", true);
-        veinSizeQuarkBasaltGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkBasaltGoldOre", 9, 0, 65536);
+        veinSizeQuarkBasaltGoldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkBasaltGoldOre", 5, 0, 65536);
         veinsPerChunkQuarkBasaltGoldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkBasaltGoldOre", 2, 0, 65536);
         minHeightQuarkBasaltGoldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkBasaltGoldOre", 64, 0, 256);
         maxHeightQuarkBasaltGoldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkBasaltGoldOre", 128, 0, 256);

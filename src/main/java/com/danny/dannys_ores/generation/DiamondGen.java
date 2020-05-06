@@ -88,6 +88,24 @@ public class DiamondGen {
                     if ((Diamond.isBiomeWhitelistRedSandstoneDiamondOre.get() && Diamond.biomeBlacklistRedSandstoneDiamondOre.get().contains(biomeRNS)) || (!Diamond.isBiomeWhitelistRedSandstoneDiamondOre.get() && !Diamond.biomeBlacklistRedSandstoneDiamondOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sandstone", null, new BlockMatcher(Blocks.RED_SANDSTONE)), BlockInit.RED_SANDSTONE_DIAMOND_ORE.get().getDefaultState(), Diamond.veinSizeRedSandstoneDiamondOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Diamond.veinsPerChunkRedSandstoneDiamondOre.get(), Diamond.minHeightRedSandstoneDiamondOre.get(), 0, Diamond.maxHeightRedSandstoneDiamondOre.get()))));
                     } } } }
+        if (!General.disableBlueIceOreGeneration.get()) {
+            if (Diamond.enableBlueIceDiamondOre.get()) {
+                if ((Diamond.isTempWhitelistBlueIceDiamondOre.get() && Diamond.temperatureBlacklistBlueIceDiamondOre.get().contains(biomeTS)) || (!Diamond.isTempWhitelistBlueIceDiamondOre.get() && !Diamond.temperatureBlacklistBlueIceDiamondOre.get().contains(biomeTS))) {
+                    if ((Diamond.isBiomeWhitelistBlueIceDiamondOre.get() && Diamond.biomeBlacklistBlueIceDiamondOre.get().contains(biomeRNS)) || (!Diamond.isBiomeWhitelistBlueIceDiamondOre.get() && !Diamond.biomeBlacklistBlueIceDiamondOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("blue_ice", null, new BlockMatcher(Blocks.BLUE_ICE)), BlockInit.BLUE_ICE_DIAMOND_ORE.get().getDefaultState(), Diamond.veinSizeBlueIceDiamondOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Diamond.veinsPerChunkBlueIceDiamondOre.get(), Diamond.minHeightBlueIceDiamondOre.get(), 0, Diamond.maxHeightBlueIceDiamondOre.get()))));
+                    } } } }
+        if (!General.disablePackedIceOreGeneration.get()) {
+            if (Diamond.enablePackedIceDiamondOre.get()) {
+                if ((Diamond.isTempWhitelistPackedIceDiamondOre.get() && Diamond.temperatureBlacklistPackedIceDiamondOre.get().contains(biomeTS)) || (!Diamond.isTempWhitelistPackedIceDiamondOre.get() && !Diamond.temperatureBlacklistPackedIceDiamondOre.get().contains(biomeTS))) {
+                    if ((Diamond.isBiomeWhitelistPackedIceDiamondOre.get() && Diamond.biomeBlacklistPackedIceDiamondOre.get().contains(biomeRNS)) || (!Diamond.isBiomeWhitelistPackedIceDiamondOre.get() && !Diamond.biomeBlacklistPackedIceDiamondOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("packed_ice", null, new BlockMatcher(Blocks.PACKED_ICE)), BlockInit.PACKED_ICE_DIAMOND_ORE.get().getDefaultState(), Diamond.veinSizePackedIceDiamondOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Diamond.veinsPerChunkPackedIceDiamondOre.get(), Diamond.minHeightPackedIceDiamondOre.get(), 0, Diamond.maxHeightPackedIceDiamondOre.get()))));
+                    } } } }
+        if (!General.disableBedrockOreGeneration.get()) {
+            if (Diamond.enableBedrockDiamondOre.get()) {
+                if ((Diamond.isTempWhitelistBedrockDiamondOre.get() && Diamond.temperatureBlacklistBedrockDiamondOre.get().contains(biomeTS)) || (!Diamond.isTempWhitelistBedrockDiamondOre.get() && !Diamond.temperatureBlacklistBedrockDiamondOre.get().contains(biomeTS))) {
+                    if ((Diamond.isBiomeWhitelistBedrockDiamondOre.get() && Diamond.biomeBlacklistBedrockDiamondOre.get().contains(biomeRNS)) || (!Diamond.isBiomeWhitelistBedrockDiamondOre.get() && !Diamond.biomeBlacklistBedrockDiamondOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("bedrock", null, new BlockMatcher(Blocks.BEDROCK)), BlockInit.BEDROCK_DIAMOND_ORE.get().getDefaultState(), Diamond.veinSizeBedrockDiamondOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Diamond.veinsPerChunkBedrockDiamondOre.get(), Diamond.minHeightBedrockDiamondOre.get(), 0, Diamond.maxHeightBedrockDiamondOre.get()))));
+                    } } } }
         // Quark
         if (!General.disableQuarkBasaltOreGeneration.get() && Main.quark) {
             if (Diamond.enableQuarkBasaltDiamondOre.get()) {

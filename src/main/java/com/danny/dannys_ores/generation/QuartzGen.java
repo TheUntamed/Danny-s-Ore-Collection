@@ -88,6 +88,24 @@ public class QuartzGen {
                     if ((Quartz.isBiomeWhitelistRedSandstoneQuartzOre.get() && Quartz.biomeBlacklistRedSandstoneQuartzOre.get().contains(biomeRNS)) || (!Quartz.isBiomeWhitelistRedSandstoneQuartzOre.get() && !Quartz.biomeBlacklistRedSandstoneQuartzOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sandstone", null, new BlockMatcher(Blocks.RED_SANDSTONE)), BlockInit.RED_SANDSTONE_QUARTZ_ORE.get().getDefaultState(), Quartz.veinSizeRedSandstoneQuartzOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Quartz.veinsPerChunkRedSandstoneQuartzOre.get(), Quartz.minHeightRedSandstoneQuartzOre.get(), 0, Quartz.maxHeightRedSandstoneQuartzOre.get()))));
                     } } } }
+        if (!General.disableBlueIceOreGeneration.get()) {
+            if (Quartz.enableBlueIceQuartzOre.get()) {
+                if ((Quartz.isTempWhitelistBlueIceQuartzOre.get() && Quartz.temperatureBlacklistBlueIceQuartzOre.get().contains(biomeTS)) || (!Quartz.isTempWhitelistBlueIceQuartzOre.get() && !Quartz.temperatureBlacklistBlueIceQuartzOre.get().contains(biomeTS))) {
+                    if ((Quartz.isBiomeWhitelistBlueIceQuartzOre.get() && Quartz.biomeBlacklistBlueIceQuartzOre.get().contains(biomeRNS)) || (!Quartz.isBiomeWhitelistBlueIceQuartzOre.get() && !Quartz.biomeBlacklistBlueIceQuartzOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("blue_ice", null, new BlockMatcher(Blocks.BLUE_ICE)), BlockInit.BLUE_ICE_QUARTZ_ORE.get().getDefaultState(), Quartz.veinSizeBlueIceQuartzOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Quartz.veinsPerChunkBlueIceQuartzOre.get(), Quartz.minHeightBlueIceQuartzOre.get(), 0, Quartz.maxHeightBlueIceQuartzOre.get()))));
+                    } } } }
+        if (!General.disablePackedIceOreGeneration.get()) {
+            if (Quartz.enablePackedIceQuartzOre.get()) {
+                if ((Quartz.isTempWhitelistPackedIceQuartzOre.get() && Quartz.temperatureBlacklistPackedIceQuartzOre.get().contains(biomeTS)) || (!Quartz.isTempWhitelistPackedIceQuartzOre.get() && !Quartz.temperatureBlacklistPackedIceQuartzOre.get().contains(biomeTS))) {
+                    if ((Quartz.isBiomeWhitelistPackedIceQuartzOre.get() && Quartz.biomeBlacklistPackedIceQuartzOre.get().contains(biomeRNS)) || (!Quartz.isBiomeWhitelistPackedIceQuartzOre.get() && !Quartz.biomeBlacklistPackedIceQuartzOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("packed_ice", null, new BlockMatcher(Blocks.PACKED_ICE)), BlockInit.PACKED_ICE_QUARTZ_ORE.get().getDefaultState(), Quartz.veinSizePackedIceQuartzOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Quartz.veinsPerChunkPackedIceQuartzOre.get(), Quartz.minHeightPackedIceQuartzOre.get(), 0, Quartz.maxHeightPackedIceQuartzOre.get()))));
+                    } } } }
+        if (!General.disableBedrockOreGeneration.get()) {
+            if (Quartz.enableBedrockQuartzOre.get()) {
+                if ((Quartz.isTempWhitelistBedrockQuartzOre.get() && Quartz.temperatureBlacklistBedrockQuartzOre.get().contains(biomeTS)) || (!Quartz.isTempWhitelistBedrockQuartzOre.get() && !Quartz.temperatureBlacklistBedrockQuartzOre.get().contains(biomeTS))) {
+                    if ((Quartz.isBiomeWhitelistBedrockQuartzOre.get() && Quartz.biomeBlacklistBedrockQuartzOre.get().contains(biomeRNS)) || (!Quartz.isBiomeWhitelistBedrockQuartzOre.get() && !Quartz.biomeBlacklistBedrockQuartzOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("bedrock", null, new BlockMatcher(Blocks.BEDROCK)), BlockInit.BEDROCK_QUARTZ_ORE.get().getDefaultState(), Quartz.veinSizeBedrockQuartzOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Quartz.veinsPerChunkBedrockQuartzOre.get(), Quartz.minHeightBedrockQuartzOre.get(), 0, Quartz.maxHeightBedrockQuartzOre.get()))));
+                    } } } }
         // Quark
         if (!General.disableQuarkBasaltOreGeneration.get() && Main.quark) {
             if (Quartz.enableQuarkBasaltQuartzOre.get()) {

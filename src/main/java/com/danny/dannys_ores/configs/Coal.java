@@ -123,6 +123,28 @@ public class Coal {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandstoneCoalOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandstoneCoalOre;
 
+    public static ForgeConfigSpec.BooleanValue enableBlueIceCoalOre;
+    public static ForgeConfigSpec.IntValue veinSizeBlueIceCoalOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceCoalOre;
+    public static ForgeConfigSpec.IntValue minHeightBlueIceCoalOre;
+    public static ForgeConfigSpec.IntValue maxHeightBlueIceCoalOre;
+    public static ForgeConfigSpec.DoubleValue resistanceBlueIceCoalOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceCoalOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceCoalOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceCoalOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBlueIceCoalOre;
+
+    public static ForgeConfigSpec.BooleanValue enablePackedIceCoalOre;
+    public static ForgeConfigSpec.IntValue veinSizePackedIceCoalOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceCoalOre;
+    public static ForgeConfigSpec.IntValue minHeightPackedIceCoalOre;
+    public static ForgeConfigSpec.IntValue maxHeightPackedIceCoalOre;
+    public static ForgeConfigSpec.DoubleValue resistancePackedIceCoalOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceCoalOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceCoalOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceCoalOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistPackedIceCoalOre;
+
     public static ForgeConfigSpec.BooleanValue enableBedrockCoalOre;
     public static ForgeConfigSpec.IntValue veinSizeBedrockCoalOre;
     public static ForgeConfigSpec.IntValue veinsPerChunkBedrockCoalOre;
@@ -317,8 +339,8 @@ public class Coal {
         BUILDER.comment("Netherrack Coal Ore").push("netherrack_coal_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableNetherrackCoalOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableNetherrackCoalOre", true);
-        veinSizeNetherrackCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeNetherrackCoalOre", 17, 0, 65536);
-        veinsPerChunkNetherrackCoalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkNetherrackCoalOre", 20, 0, 65536);
+        veinSizeNetherrackCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeNetherrackCoalOre", 9, 0, 65536);
+        veinsPerChunkNetherrackCoalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkNetherrackCoalOre", 10, 0, 65536);
         minHeightNetherrackCoalOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightNetherrackCoalOre", 10, 0, 256);
         maxHeightNetherrackCoalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightNetherrackCoalOre", 128, 0, 256);
         isTempWhitelistNetherrackCoalOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistNetherrackCoalOre", false);
@@ -330,7 +352,7 @@ public class Coal {
         BUILDER.comment("End Stone Coal Ore").push("end_stone_coal_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableEndStoneCoalOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableEndStoneCoalOre", true);
-        veinSizeEndStoneCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEndStoneCoalOre", 8, 0, 65536);
+        veinSizeEndStoneCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEndStoneCoalOre", 9, 0, 65536);
         veinsPerChunkEndStoneCoalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEndStoneCoalOre", 10, 0, 65536);
         minHeightEndStoneCoalOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEndStoneCoalOre", 10, 0, 256);
         maxHeightEndStoneCoalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEndStoneCoalOre", 128, 0, 256);
@@ -343,7 +365,7 @@ public class Coal {
         BUILDER.comment("Sand Coal Ore").push("sand_coal_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableSandCoalOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableSandCoalOre", true);
-        veinSizeSandCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeSandCoalOre", 8, 0, 65536);
+        veinSizeSandCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeSandCoalOre", 9, 0, 65536);
         veinsPerChunkSandCoalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkSandCoalOre", 10, 0, 65536);
         minHeightSandCoalOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightSandCoalOre", 0, 0, 256);
         maxHeightSandCoalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightSandCoalOre", 128, 0, 256);
@@ -356,7 +378,7 @@ public class Coal {
         BUILDER.comment("Red Sand Coal Ore").push("red_sand_coal_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableRedSandCoalOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableRedSandCoalOre", true);
-        veinSizeRedSandCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandCoalOre", 8, 0, 65536);
+        veinSizeRedSandCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandCoalOre", 9, 0, 65536);
         veinsPerChunkRedSandCoalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkRedSandCoalOre", 10, 0, 65536);
         minHeightRedSandCoalOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightRedSandCoalOre", 0, 0, 256);
         maxHeightRedSandCoalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightRedSandCoalOre", 128, 0, 256);
@@ -369,7 +391,7 @@ public class Coal {
         BUILDER.comment("Gravel Coal Ore").push("gravel_coal_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableGravelCoalOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableGravelCoalOre", true);
-        veinSizeGravelCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeGravelCoalOre", 8, 0, 65536);
+        veinSizeGravelCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeGravelCoalOre", 9, 0, 65536);
         veinsPerChunkGravelCoalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkGravelCoalOre", 10, 0, 65536);
         minHeightGravelCoalOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightGravelCoalOre", 0, 0, 256);
         maxHeightGravelCoalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightGravelCoalOre", 128, 0, 256);
@@ -382,7 +404,7 @@ public class Coal {
         BUILDER.comment("Sandstone Coal Ore").push("sandstone_coal_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableSandstoneCoalOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableSandstoneCoalOre", true);
-        veinSizeSandstoneCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeSandstoneCoalOre", 8, 0, 65536);
+        veinSizeSandstoneCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeSandstoneCoalOre", 9, 0, 65536);
         veinsPerChunkSandstoneCoalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkSandstoneCoalOre", 10, 0, 65536);
         minHeightSandstoneCoalOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightSandstoneCoalOre", 0, 0, 256);
         maxHeightSandstoneCoalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightSandstoneCoalOre", 128, 0, 256);
@@ -395,7 +417,7 @@ public class Coal {
         BUILDER.comment("Red Sandstone Coal Ore").push("red_sandstone_coal_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
         enableRedSandstoneCoalOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableRedSandstoneCoalOre", true);
-        veinSizeRedSandstoneCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandstoneCoalOre", 8, 0, 65536);
+        veinSizeRedSandstoneCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeRedSandstoneCoalOre", 9, 0, 65536);
         veinsPerChunkRedSandstoneCoalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkRedSandstoneCoalOre", 10, 0, 65536);
         minHeightRedSandstoneCoalOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightRedSandstoneCoalOre", 0, 0, 256);
         maxHeightRedSandstoneCoalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightRedSandstoneCoalOre", 128, 0, 256);
@@ -403,6 +425,32 @@ public class Coal {
         temperatureBlacklistRedSandstoneCoalOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandstoneCoalOre", new ArrayList<String>());
         isBiomeWhitelistRedSandstoneCoalOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandstoneCoalOre", false);
         biomeBlacklistRedSandstoneCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandstoneCoalOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Blue Ice Coal Ore").push("blue_ice_coal_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableBlueIceCoalOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableBlueIceCoalOre", true);
+        veinSizeBlueIceCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeBlueIceCoalOre", 9, 0, 65536);
+        veinsPerChunkBlueIceCoalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkBlueIceCoalOre", 10, 0, 65536);
+        minHeightBlueIceCoalOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBlueIceCoalOre", 0, 0, 256);
+        maxHeightBlueIceCoalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBlueIceCoalOre", 128, 0, 256);
+        isTempWhitelistBlueIceCoalOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBlueIceCoalOre", false);
+        temperatureBlacklistBlueIceCoalOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBlueIceCoalOre", new ArrayList<String>());
+        isBiomeWhitelistBlueIceCoalOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistBlueIceCoalOre", false);
+        biomeBlacklistBlueIceCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistBlueIceCoalOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Packed Ice Coal Ore").push("packed_ice_coal_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enablePackedIceCoalOre = BUILDER.comment("If false, this ore variant will not generate.").define("enablePackedIceCoalOre", true);
+        veinSizePackedIceCoalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizePackedIceCoalOre", 9, 0, 65536);
+        veinsPerChunkPackedIceCoalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkPackedIceCoalOre", 10, 0, 65536);
+        minHeightPackedIceCoalOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightPackedIceCoalOre", 0, 0, 256);
+        maxHeightPackedIceCoalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightPackedIceCoalOre", 128, 0, 256);
+        isTempWhitelistPackedIceCoalOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistPackedIceCoalOre", false);
+        temperatureBlacklistPackedIceCoalOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistPackedIceCoalOre", new ArrayList<String>());
+        isBiomeWhitelistPackedIceCoalOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistPackedIceCoalOre", false);
+        biomeBlacklistPackedIceCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistPackedIceCoalOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Bedrock Coal Ore").push("bedrock_coal_ore");

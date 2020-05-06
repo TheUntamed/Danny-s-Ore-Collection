@@ -88,6 +88,24 @@ public class EmeraldGen {
                     if ((Emerald.isBiomeWhitelistRedSandstoneEmeraldOre.get() && Emerald.biomeBlacklistRedSandstoneEmeraldOre.get().contains(biomeRNS)) || (!Emerald.isBiomeWhitelistRedSandstoneEmeraldOre.get() && !Emerald.biomeBlacklistRedSandstoneEmeraldOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sandstone", null, new BlockMatcher(Blocks.RED_SANDSTONE)), BlockInit.RED_SANDSTONE_EMERALD_ORE.get().getDefaultState(), Emerald.veinSizeRedSandstoneEmeraldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Emerald.veinsPerChunkRedSandstoneEmeraldOre.get(), Emerald.minHeightRedSandstoneEmeraldOre.get(), 0, Emerald.maxHeightRedSandstoneEmeraldOre.get()))));
                     } } } }
+        if (!General.disableBlueIceOreGeneration.get()) {
+            if (Emerald.enableBlueIceEmeraldOre.get()) {
+                if ((Emerald.isTempWhitelistBlueIceEmeraldOre.get() && Emerald.temperatureBlacklistBlueIceEmeraldOre.get().contains(biomeTS)) || (!Emerald.isTempWhitelistBlueIceEmeraldOre.get() && !Emerald.temperatureBlacklistBlueIceEmeraldOre.get().contains(biomeTS))) {
+                    if ((Emerald.isBiomeWhitelistBlueIceEmeraldOre.get() && Emerald.biomeBlacklistBlueIceEmeraldOre.get().contains(biomeRNS)) || (!Emerald.isBiomeWhitelistBlueIceEmeraldOre.get() && !Emerald.biomeBlacklistBlueIceEmeraldOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("blue_ice", null, new BlockMatcher(Blocks.BLUE_ICE)), BlockInit.BLUE_ICE_EMERALD_ORE.get().getDefaultState(), Emerald.veinSizeBlueIceEmeraldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Emerald.veinsPerChunkBlueIceEmeraldOre.get(), Emerald.minHeightBlueIceEmeraldOre.get(), 0, Emerald.maxHeightBlueIceEmeraldOre.get()))));
+                    } } } }
+        if (!General.disablePackedIceOreGeneration.get()) {
+            if (Emerald.enablePackedIceEmeraldOre.get()) {
+                if ((Emerald.isTempWhitelistPackedIceEmeraldOre.get() && Emerald.temperatureBlacklistPackedIceEmeraldOre.get().contains(biomeTS)) || (!Emerald.isTempWhitelistPackedIceEmeraldOre.get() && !Emerald.temperatureBlacklistPackedIceEmeraldOre.get().contains(biomeTS))) {
+                    if ((Emerald.isBiomeWhitelistPackedIceEmeraldOre.get() && Emerald.biomeBlacklistPackedIceEmeraldOre.get().contains(biomeRNS)) || (!Emerald.isBiomeWhitelistPackedIceEmeraldOre.get() && !Emerald.biomeBlacklistPackedIceEmeraldOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("packed_ice", null, new BlockMatcher(Blocks.PACKED_ICE)), BlockInit.PACKED_ICE_EMERALD_ORE.get().getDefaultState(), Emerald.veinSizePackedIceEmeraldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Emerald.veinsPerChunkPackedIceEmeraldOre.get(), Emerald.minHeightPackedIceEmeraldOre.get(), 0, Emerald.maxHeightPackedIceEmeraldOre.get()))));
+                    } } } }
+        if (!General.disableBedrockOreGeneration.get()) {
+            if (Emerald.enableBedrockEmeraldOre.get()) {
+                if ((Emerald.isTempWhitelistBedrockEmeraldOre.get() && Emerald.temperatureBlacklistBedrockEmeraldOre.get().contains(biomeTS)) || (!Emerald.isTempWhitelistBedrockEmeraldOre.get() && !Emerald.temperatureBlacklistBedrockEmeraldOre.get().contains(biomeTS))) {
+                    if ((Emerald.isBiomeWhitelistBedrockEmeraldOre.get() && Emerald.biomeBlacklistBedrockEmeraldOre.get().contains(biomeRNS)) || (!Emerald.isBiomeWhitelistBedrockEmeraldOre.get() && !Emerald.biomeBlacklistBedrockEmeraldOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("bedrock", null, new BlockMatcher(Blocks.BEDROCK)), BlockInit.BEDROCK_EMERALD_ORE.get().getDefaultState(), Emerald.veinSizeBedrockEmeraldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Emerald.veinsPerChunkBedrockEmeraldOre.get(), Emerald.minHeightBedrockEmeraldOre.get(), 0, Emerald.maxHeightBedrockEmeraldOre.get()))));
+                    } } } }
         // Quark
         if (!General.disableQuarkBasaltOreGeneration.get() && Main.quark) {
             if (Emerald.enableQuarkBasaltEmeraldOre.get()) {

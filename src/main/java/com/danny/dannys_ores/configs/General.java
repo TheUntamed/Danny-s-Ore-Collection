@@ -30,6 +30,9 @@ public class General {
     public static ForgeConfigSpec.BooleanValue disableGravelOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableSandstoneOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableRedSandstoneOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableBlueIceOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disablePackedIceOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableBedrockOreGeneration;
 
     // Quark
     public static ForgeConfigSpec.BooleanValue disableQuarkBasaltOreGeneration;
@@ -73,7 +76,10 @@ public class General {
                     disableGravelOreGeneration = BUILDER.comment("If true, the Gravel variant of all ores will be disabled.").define("disableGravelOreGeneration", false);
                     disableSandstoneOreGeneration = BUILDER.comment("If true, the Sandstone variant of all ores will be disabled.").define("disableSandstoneOreGeneration", false);
                     disableRedSandstoneOreGeneration = BUILDER.comment("If true, the RedSandstone variant of all ores will be disabled.").define("disableRedSandstoneOreGeneration", false);
-                BUILDER.pop();
+                    disableBlueIceOreGeneration = BUILDER.comment("If true, the Blue Ice variant of all ores (except vanilla ores) will be disabled.").define("disableBlueIceOreGeneration", false);
+                    disablePackedIceOreGeneration = BUILDER.comment("If true, the Packed Ice variant of all ores (except vanilla ores) will be disabled.").define("disablePackedIceOreGeneration", false);
+                    disableBedrockOreGeneration = BUILDER.comment("If true, the Bedrock variant of all ores (except vanilla ores) will be disabled.").define("disableBedrockOreGeneration", false);
+        BUILDER.pop();
                 BUILDER.comment("Quark stone variants. Quark has to be installed for the ores to generate at all.").push("quark");
                     disableQuarkBasaltOreGeneration = BUILDER.comment("If true, the (Quark) Basalt variant of all ores will be disabled.").define("disableQuarkBasaltOreGeneration", false);
                     disableQuarkLimestoneOreGeneration = BUILDER.comment("If true, the (Quark) Limestone variant of all ores will be disabled.").define("disableQuarkLimestoneOreGeneration", false);
@@ -136,5 +142,13 @@ public class General {
         Quartz.loadConfig();
         Copper.loadConfig();
         Xp.loadConfig();
+        Aluminum.loadConfig();
+        Iridium.loadConfig();
+        Lead.loadConfig();
+        Platinum.loadConfig();
+        Silver.loadConfig();
+        Tin.loadConfig();
+        Uranium.loadConfig();
+
     }
 }

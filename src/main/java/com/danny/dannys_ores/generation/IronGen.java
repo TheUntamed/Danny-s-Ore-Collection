@@ -2,6 +2,7 @@ package com.danny.dannys_ores.generation;
 
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.Iron;
+import com.danny.dannys_ores.configs.Iron;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.configs.Iron;
 import com.danny.dannys_ores.init.BlockInit;
@@ -87,6 +88,24 @@ public class IronGen {
                 if ((Iron.isTempWhitelistRedSandstoneIronOre.get() && Iron.temperatureBlacklistRedSandstoneIronOre.get().contains(biomeTS)) || (!Iron.isTempWhitelistRedSandstoneIronOre.get() && !Iron.temperatureBlacklistRedSandstoneIronOre.get().contains(biomeTS))) {
                     if ((Iron.isBiomeWhitelistRedSandstoneIronOre.get() && Iron.biomeBlacklistRedSandstoneIronOre.get().contains(biomeRNS)) || (!Iron.isBiomeWhitelistRedSandstoneIronOre.get() && !Iron.biomeBlacklistRedSandstoneIronOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sandstone", null, new BlockMatcher(Blocks.RED_SANDSTONE)), BlockInit.RED_SANDSTONE_IRON_ORE.get().getDefaultState(), Iron.veinSizeRedSandstoneIronOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Iron.veinsPerChunkRedSandstoneIronOre.get(), Iron.minHeightRedSandstoneIronOre.get(), 0, Iron.maxHeightRedSandstoneIronOre.get()))));
+                    } } } }
+        if (!General.disableBlueIceOreGeneration.get()) {
+            if (Iron.enableBlueIceIronOre.get()) {
+                if ((Iron.isTempWhitelistBlueIceIronOre.get() && Iron.temperatureBlacklistBlueIceIronOre.get().contains(biomeTS)) || (!Iron.isTempWhitelistBlueIceIronOre.get() && !Iron.temperatureBlacklistBlueIceIronOre.get().contains(biomeTS))) {
+                    if ((Iron.isBiomeWhitelistBlueIceIronOre.get() && Iron.biomeBlacklistBlueIceIronOre.get().contains(biomeRNS)) || (!Iron.isBiomeWhitelistBlueIceIronOre.get() && !Iron.biomeBlacklistBlueIceIronOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("blue_ice", null, new BlockMatcher(Blocks.BLUE_ICE)), BlockInit.BLUE_ICE_IRON_ORE.get().getDefaultState(), Iron.veinSizeBlueIceIronOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Iron.veinsPerChunkBlueIceIronOre.get(), Iron.minHeightBlueIceIronOre.get(), 0, Iron.maxHeightBlueIceIronOre.get()))));
+                    } } } }
+        if (!General.disablePackedIceOreGeneration.get()) {
+            if (Iron.enablePackedIceIronOre.get()) {
+                if ((Iron.isTempWhitelistPackedIceIronOre.get() && Iron.temperatureBlacklistPackedIceIronOre.get().contains(biomeTS)) || (!Iron.isTempWhitelistPackedIceIronOre.get() && !Iron.temperatureBlacklistPackedIceIronOre.get().contains(biomeTS))) {
+                    if ((Iron.isBiomeWhitelistPackedIceIronOre.get() && Iron.biomeBlacklistPackedIceIronOre.get().contains(biomeRNS)) || (!Iron.isBiomeWhitelistPackedIceIronOre.get() && !Iron.biomeBlacklistPackedIceIronOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("packed_ice", null, new BlockMatcher(Blocks.PACKED_ICE)), BlockInit.PACKED_ICE_IRON_ORE.get().getDefaultState(), Iron.veinSizePackedIceIronOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Iron.veinsPerChunkPackedIceIronOre.get(), Iron.minHeightPackedIceIronOre.get(), 0, Iron.maxHeightPackedIceIronOre.get()))));
+                    } } } }
+        if (!General.disableBedrockOreGeneration.get()) {
+            if (Iron.enableBedrockIronOre.get()) {
+                if ((Iron.isTempWhitelistBedrockIronOre.get() && Iron.temperatureBlacklistBedrockIronOre.get().contains(biomeTS)) || (!Iron.isTempWhitelistBedrockIronOre.get() && !Iron.temperatureBlacklistBedrockIronOre.get().contains(biomeTS))) {
+                    if ((Iron.isBiomeWhitelistBedrockIronOre.get() && Iron.biomeBlacklistBedrockIronOre.get().contains(biomeRNS)) || (!Iron.isBiomeWhitelistBedrockIronOre.get() && !Iron.biomeBlacklistBedrockIronOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("bedrock", null, new BlockMatcher(Blocks.BEDROCK)), BlockInit.BEDROCK_IRON_ORE.get().getDefaultState(), Iron.veinSizeBedrockIronOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Iron.veinsPerChunkBedrockIronOre.get(), Iron.minHeightBedrockIronOre.get(), 0, Iron.maxHeightBedrockIronOre.get()))));
                     } } } }
         // Quark
         if (!General.disableQuarkBasaltOreGeneration.get() && Main.quark) {

@@ -88,6 +88,24 @@ public class RedstoneGen {
                     if ((Redstone.isBiomeWhitelistRedSandstoneRedstoneOre.get() && Redstone.biomeBlacklistRedSandstoneRedstoneOre.get().contains(biomeRNS)) || (!Redstone.isBiomeWhitelistRedSandstoneRedstoneOre.get() && !Redstone.biomeBlacklistRedSandstoneRedstoneOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sandstone", null, new BlockMatcher(Blocks.RED_SANDSTONE)), BlockInit.RED_SANDSTONE_REDSTONE_ORE.get().getDefaultState(), Redstone.veinSizeRedSandstoneRedstoneOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Redstone.veinsPerChunkRedSandstoneRedstoneOre.get(), Redstone.minHeightRedSandstoneRedstoneOre.get(), 0, Redstone.maxHeightRedSandstoneRedstoneOre.get()))));
                     } } } }
+        if (!General.disableBlueIceOreGeneration.get()) {
+            if (Redstone.enableBlueIceRedstoneOre.get()) {
+                if ((Redstone.isTempWhitelistBlueIceRedstoneOre.get() && Redstone.temperatureBlacklistBlueIceRedstoneOre.get().contains(biomeTS)) || (!Redstone.isTempWhitelistBlueIceRedstoneOre.get() && !Redstone.temperatureBlacklistBlueIceRedstoneOre.get().contains(biomeTS))) {
+                    if ((Redstone.isBiomeWhitelistBlueIceRedstoneOre.get() && Redstone.biomeBlacklistBlueIceRedstoneOre.get().contains(biomeRNS)) || (!Redstone.isBiomeWhitelistBlueIceRedstoneOre.get() && !Redstone.biomeBlacklistBlueIceRedstoneOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("blue_ice", null, new BlockMatcher(Blocks.BLUE_ICE)), BlockInit.BLUE_ICE_REDSTONE_ORE.get().getDefaultState(), Redstone.veinSizeBlueIceRedstoneOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Redstone.veinsPerChunkBlueIceRedstoneOre.get(), Redstone.minHeightBlueIceRedstoneOre.get(), 0, Redstone.maxHeightBlueIceRedstoneOre.get()))));
+                    } } } }
+        if (!General.disablePackedIceOreGeneration.get()) {
+            if (Redstone.enablePackedIceRedstoneOre.get()) {
+                if ((Redstone.isTempWhitelistPackedIceRedstoneOre.get() && Redstone.temperatureBlacklistPackedIceRedstoneOre.get().contains(biomeTS)) || (!Redstone.isTempWhitelistPackedIceRedstoneOre.get() && !Redstone.temperatureBlacklistPackedIceRedstoneOre.get().contains(biomeTS))) {
+                    if ((Redstone.isBiomeWhitelistPackedIceRedstoneOre.get() && Redstone.biomeBlacklistPackedIceRedstoneOre.get().contains(biomeRNS)) || (!Redstone.isBiomeWhitelistPackedIceRedstoneOre.get() && !Redstone.biomeBlacklistPackedIceRedstoneOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("packed_ice", null, new BlockMatcher(Blocks.PACKED_ICE)), BlockInit.PACKED_ICE_REDSTONE_ORE.get().getDefaultState(), Redstone.veinSizePackedIceRedstoneOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Redstone.veinsPerChunkPackedIceRedstoneOre.get(), Redstone.minHeightPackedIceRedstoneOre.get(), 0, Redstone.maxHeightPackedIceRedstoneOre.get()))));
+                    } } } }
+        if (!General.disableBedrockOreGeneration.get()) {
+            if (Redstone.enableBedrockRedstoneOre.get()) {
+                if ((Redstone.isTempWhitelistBedrockRedstoneOre.get() && Redstone.temperatureBlacklistBedrockRedstoneOre.get().contains(biomeTS)) || (!Redstone.isTempWhitelistBedrockRedstoneOre.get() && !Redstone.temperatureBlacklistBedrockRedstoneOre.get().contains(biomeTS))) {
+                    if ((Redstone.isBiomeWhitelistBedrockRedstoneOre.get() && Redstone.biomeBlacklistBedrockRedstoneOre.get().contains(biomeRNS)) || (!Redstone.isBiomeWhitelistBedrockRedstoneOre.get() && !Redstone.biomeBlacklistBedrockRedstoneOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("bedrock", null, new BlockMatcher(Blocks.BEDROCK)), BlockInit.BEDROCK_REDSTONE_ORE.get().getDefaultState(), Redstone.veinSizeBedrockRedstoneOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Redstone.veinsPerChunkBedrockRedstoneOre.get(), Redstone.minHeightBedrockRedstoneOre.get(), 0, Redstone.maxHeightBedrockRedstoneOre.get()))));
+                    } } } }
         // Quark
         if (!General.disableQuarkBasaltOreGeneration.get() && Main.quark) {
             if (Redstone.enableQuarkBasaltRedstoneOre.get()) {

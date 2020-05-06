@@ -123,6 +123,28 @@ public class Emerald {
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandstoneEmeraldOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandstoneEmeraldOre;
 
+    public static ForgeConfigSpec.BooleanValue enableBlueIceEmeraldOre;
+    public static ForgeConfigSpec.IntValue veinSizeBlueIceEmeraldOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceEmeraldOre;
+    public static ForgeConfigSpec.IntValue minHeightBlueIceEmeraldOre;
+    public static ForgeConfigSpec.IntValue maxHeightBlueIceEmeraldOre;
+    public static ForgeConfigSpec.DoubleValue resistanceBlueIceEmeraldOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceEmeraldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceEmeraldOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceEmeraldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBlueIceEmeraldOre;
+
+    public static ForgeConfigSpec.BooleanValue enablePackedIceEmeraldOre;
+    public static ForgeConfigSpec.IntValue veinSizePackedIceEmeraldOre;
+    public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceEmeraldOre;
+    public static ForgeConfigSpec.IntValue minHeightPackedIceEmeraldOre;
+    public static ForgeConfigSpec.IntValue maxHeightPackedIceEmeraldOre;
+    public static ForgeConfigSpec.DoubleValue resistancePackedIceEmeraldOre;
+    public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceEmeraldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceEmeraldOre;
+    public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceEmeraldOre;
+    public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistPackedIceEmeraldOre;
+
     public static ForgeConfigSpec.BooleanValue enableBedrockEmeraldOre;
     public static ForgeConfigSpec.IntValue veinSizeBedrockEmeraldOre;
     public static ForgeConfigSpec.IntValue veinsPerChunkBedrockEmeraldOre;
@@ -272,7 +294,7 @@ public class Emerald {
         isTempWhitelistVanillaEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistVanillaEmeraldOre", false);
         temperatureBlacklistVanillaEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistVanillaEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistVanillaEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistVanillaEmeraldOre", false);
-        biomeBlacklistVanillaEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistVanillaEmeraldOre", new ArrayList<String>());
+        biomeBlacklistVanillaEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistVanillaEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Andesite Emerald Ore").push("andesite_emerald_ore");
@@ -285,7 +307,7 @@ public class Emerald {
         isTempWhitelistAndesiteEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistAndesiteEmeraldOre", false);
         temperatureBlacklistAndesiteEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistAndesiteEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistAndesiteEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistAndesiteEmeraldOre", false);
-        biomeBlacklistAndesiteEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistAndesiteEmeraldOre", new ArrayList<String>());
+        biomeBlacklistAndesiteEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistAndesiteEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Diorite Emerald Ore").push("diorite_emerald_ore");
@@ -298,7 +320,7 @@ public class Emerald {
         isTempWhitelistDioriteEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistDioriteEmeraldOre", false);
         temperatureBlacklistDioriteEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistDioriteEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistDioriteEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistDioriteEmeraldOre", false);
-        biomeBlacklistDioriteEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistDioriteEmeraldOre", new ArrayList<String>());
+        biomeBlacklistDioriteEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistDioriteEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Granite Emerald Ore").push("granite_emerald_ore");
@@ -311,7 +333,7 @@ public class Emerald {
         isTempWhitelistGraniteEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistGraniteEmeraldOre", false);
         temperatureBlacklistGraniteEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistGraniteEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistGraniteEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistGraniteEmeraldOre", false);
-        biomeBlacklistGraniteEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistGraniteEmeraldOre", new ArrayList<String>());
+        biomeBlacklistGraniteEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistGraniteEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Netherrack Emerald Ore").push("netherrack_emerald_ore");
@@ -324,7 +346,7 @@ public class Emerald {
         isTempWhitelistNetherrackEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistNetherrackEmeraldOre", false);
         temperatureBlacklistNetherrackEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistNetherrackEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistNetherrackEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistNetherrackEmeraldOre", false);
-        biomeBlacklistNetherrackEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistNetherrackEmeraldOre", new ArrayList<String>());
+        biomeBlacklistNetherrackEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistNetherrackEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("End Stone Emerald Ore").push("end_stone_emerald_ore");
@@ -337,7 +359,7 @@ public class Emerald {
         isTempWhitelistEndStoneEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEndStoneEmeraldOre", false);
         temperatureBlacklistEndStoneEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEndStoneEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistEndStoneEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEndStoneEmeraldOre", false);
-        biomeBlacklistEndStoneEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistEndStoneEmeraldOre", new ArrayList<String>());
+        biomeBlacklistEndStoneEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEndStoneEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sand Emerald Ore").push("sand_emerald_ore");
@@ -350,7 +372,7 @@ public class Emerald {
         isTempWhitelistSandEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistSandEmeraldOre", false);
         temperatureBlacklistSandEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistSandEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistSandEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistSandEmeraldOre", false);
-        biomeBlacklistSandEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandEmeraldOre", new ArrayList<String>());
+        biomeBlacklistSandEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistSandEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Red Sand Emerald Ore").push("red_sand_emerald_ore");
@@ -363,7 +385,7 @@ public class Emerald {
         isTempWhitelistRedSandEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistRedSandEmeraldOre", false);
         temperatureBlacklistRedSandEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistRedSandEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandEmeraldOre", false);
-        biomeBlacklistRedSandEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandEmeraldOre", new ArrayList<String>());
+        biomeBlacklistRedSandEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistRedSandEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Emerald Ore").push("gravel_emerald_ore");
@@ -376,7 +398,7 @@ public class Emerald {
         isTempWhitelistGravelEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistGravelEmeraldOre", false);
         temperatureBlacklistGravelEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistGravelEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistGravelEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistGravelEmeraldOre", false);
-        biomeBlacklistGravelEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistGravelEmeraldOre", new ArrayList<String>());
+        biomeBlacklistGravelEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistGravelEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sandstone Emerald Ore").push("sandstone_emerald_ore");
@@ -389,7 +411,7 @@ public class Emerald {
         isTempWhitelistSandstoneEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistSandstoneEmeraldOre", false);
         temperatureBlacklistSandstoneEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistSandstoneEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistSandstoneEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistSandstoneEmeraldOre", false);
-        biomeBlacklistSandstoneEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandstoneEmeraldOre", new ArrayList<String>());
+        biomeBlacklistSandstoneEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistSandstoneEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Red Sandstone Emerald Ore").push("red_sandstone_emerald_ore");
@@ -402,7 +424,33 @@ public class Emerald {
         isTempWhitelistRedSandstoneEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistRedSandstoneEmeraldOre", false);
         temperatureBlacklistRedSandstoneEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistRedSandstoneEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistRedSandstoneEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistRedSandstoneEmeraldOre", false);
-        biomeBlacklistRedSandstoneEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandstoneEmeraldOre", new ArrayList<String>());
+        biomeBlacklistRedSandstoneEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistRedSandstoneEmeraldOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Blue Ice Emerald Ore").push("blue_ice_emerald_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enableBlueIceEmeraldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableBlueIceEmeraldOre", true);
+        veinSizeBlueIceEmeraldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeBlueIceEmeraldOre", 1, 0, 65536);
+        veinsPerChunkBlueIceEmeraldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkBlueIceEmeraldOre", 11, 0, 65536);
+        minHeightBlueIceEmeraldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBlueIceEmeraldOre", 0, 0, 256);
+        maxHeightBlueIceEmeraldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBlueIceEmeraldOre", 128, 0, 256);
+        isTempWhitelistBlueIceEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBlueIceEmeraldOre", false);
+        temperatureBlacklistBlueIceEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBlueIceEmeraldOre", new ArrayList<String>());
+        isBiomeWhitelistBlueIceEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistBlueIceEmeraldOre", false);
+        biomeBlacklistBlueIceEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistBlueIceEmeraldOre", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.pop();
+        BUILDER.comment("Packed Ice Emerald Ore").push("packed_ice_emerald_ore");
+        BUILDER.comment("Generation settings for this ore.").push("generation");
+        enablePackedIceEmeraldOre = BUILDER.comment("If false, this ore variant will not generate.").define("enablePackedIceEmeraldOre", true);
+        veinSizePackedIceEmeraldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizePackedIceEmeraldOre", 1, 0, 65536);
+        veinsPerChunkPackedIceEmeraldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkPackedIceEmeraldOre", 11, 0, 65536);
+        minHeightPackedIceEmeraldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightPackedIceEmeraldOre", 0, 0, 256);
+        maxHeightPackedIceEmeraldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightPackedIceEmeraldOre", 128, 0, 256);
+        isTempWhitelistPackedIceEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistPackedIceEmeraldOre", false);
+        temperatureBlacklistPackedIceEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistPackedIceEmeraldOre", new ArrayList<String>());
+        isBiomeWhitelistPackedIceEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistPackedIceEmeraldOre", false);
+        biomeBlacklistPackedIceEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistPackedIceEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Bedrock Emerald Ore").push("bedrock_emerald_ore");
@@ -415,7 +463,7 @@ public class Emerald {
         isTempWhitelistBedrockEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBedrockEmeraldOre", false);
         temperatureBlacklistBedrockEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBedrockEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistBedrockEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistBedrockEmeraldOre", false);
-        biomeBlacklistBedrockEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistBedrockEmeraldOre", new ArrayList<String>());
+        biomeBlacklistBedrockEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistBedrockEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Block properties").push("properties");
         resistanceBedrockEmeraldOre = BUILDER.comment("A higher value means a stronger explosion is needed to destroy this ore. Stone has 6.0 and Obsidian 1200.0").defineInRange("resistanceBedrockEmeraldOre", 9.0, 0.0, 3600000.0);
@@ -580,7 +628,7 @@ public class Emerald {
         isTempWhitelistHardenedStoneEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneEmeraldOre", false);
         temperatureBlacklistHardenedStoneEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneEmeraldOre", new ArrayList<String>());
         isBiomeWhitelistHardenedStoneEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneEmeraldOre", false);
-        biomeBlacklistHardenedStoneEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistHardenedStoneEmeraldOre", new ArrayList<String>());
+        biomeBlacklistHardenedStoneEmeraldOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistHardenedStoneEmeraldOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

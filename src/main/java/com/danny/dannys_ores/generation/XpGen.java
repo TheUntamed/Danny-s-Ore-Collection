@@ -1,10 +1,9 @@
 package com.danny.dannys_ores.generation;
 
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.configs.Xp;
 import com.danny.dannys_ores.configs.Xp;
-import com.danny.dannys_ores.configs.Xp;
-import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
@@ -88,6 +87,24 @@ public class XpGen {
                 if ((Xp.isTempWhitelistRedSandstoneXpOre.get() && Xp.temperatureBlacklistRedSandstoneXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistRedSandstoneXpOre.get() && !Xp.temperatureBlacklistRedSandstoneXpOre.get().contains(biomeTS))) {
                     if ((Xp.isBiomeWhitelistRedSandstoneXpOre.get() && Xp.biomeBlacklistRedSandstoneXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistRedSandstoneXpOre.get() && !Xp.biomeBlacklistRedSandstoneXpOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sandstone", null, new BlockMatcher(Blocks.RED_SANDSTONE)), BlockInit.RED_SANDSTONE_XP_ORE.get().getDefaultState(), Xp.veinSizeRedSandstoneXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkRedSandstoneXpOre.get(), Xp.minHeightRedSandstoneXpOre.get(), 0, Xp.maxHeightRedSandstoneXpOre.get()))));
+                    } } } }
+        if (!General.disableBlueIceOreGeneration.get()) {
+            if (Xp.enableBlueIceXpOre.get()) {
+                if ((Xp.isTempWhitelistBlueIceXpOre.get() && Xp.temperatureBlacklistBlueIceXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistBlueIceXpOre.get() && !Xp.temperatureBlacklistBlueIceXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistBlueIceXpOre.get() && Xp.biomeBlacklistBlueIceXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistBlueIceXpOre.get() && !Xp.biomeBlacklistBlueIceXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("blue_ice", null, new BlockMatcher(Blocks.BLUE_ICE)), BlockInit.BLUE_ICE_XP_ORE.get().getDefaultState(), Xp.veinSizeBlueIceXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkBlueIceXpOre.get(), Xp.minHeightBlueIceXpOre.get(), 0, Xp.maxHeightBlueIceXpOre.get()))));
+                    } } } }
+        if (!General.disablePackedIceOreGeneration.get()) {
+            if (Xp.enablePackedIceXpOre.get()) {
+                if ((Xp.isTempWhitelistPackedIceXpOre.get() && Xp.temperatureBlacklistPackedIceXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistPackedIceXpOre.get() && !Xp.temperatureBlacklistPackedIceXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistPackedIceXpOre.get() && Xp.biomeBlacklistPackedIceXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistPackedIceXpOre.get() && !Xp.biomeBlacklistPackedIceXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("packed_ice", null, new BlockMatcher(Blocks.PACKED_ICE)), BlockInit.PACKED_ICE_XP_ORE.get().getDefaultState(), Xp.veinSizePackedIceXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkPackedIceXpOre.get(), Xp.minHeightPackedIceXpOre.get(), 0, Xp.maxHeightPackedIceXpOre.get()))));
+                    } } } }
+        if (!General.disableBedrockOreGeneration.get()) {
+            if (Xp.enableBedrockXpOre.get()) {
+                if ((Xp.isTempWhitelistBedrockXpOre.get() && Xp.temperatureBlacklistBedrockXpOre.get().contains(biomeTS)) || (!Xp.isTempWhitelistBedrockXpOre.get() && !Xp.temperatureBlacklistBedrockXpOre.get().contains(biomeTS))) {
+                    if ((Xp.isBiomeWhitelistBedrockXpOre.get() && Xp.biomeBlacklistBedrockXpOre.get().contains(biomeRNS)) || (!Xp.isBiomeWhitelistBedrockXpOre.get() && !Xp.biomeBlacklistBedrockXpOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("bedrock", null, new BlockMatcher(Blocks.BEDROCK)), BlockInit.BEDROCK_XP_ORE.get().getDefaultState(), Xp.veinSizeBedrockXpOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Xp.veinsPerChunkBedrockXpOre.get(), Xp.minHeightBedrockXpOre.get(), 0, Xp.maxHeightBedrockXpOre.get()))));
                     } } } }
         // Quark
         if (!General.disableQuarkBasaltOreGeneration.get() && Main.quark) {

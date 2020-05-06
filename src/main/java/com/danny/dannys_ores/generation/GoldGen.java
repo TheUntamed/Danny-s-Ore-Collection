@@ -88,6 +88,24 @@ public class GoldGen {
                     if ((Gold.isBiomeWhitelistRedSandstoneGoldOre.get() && Gold.biomeBlacklistRedSandstoneGoldOre.get().contains(biomeRNS)) || (!Gold.isBiomeWhitelistRedSandstoneGoldOre.get() && !Gold.biomeBlacklistRedSandstoneGoldOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sandstone", null, new BlockMatcher(Blocks.RED_SANDSTONE)), BlockInit.RED_SANDSTONE_GOLD_ORE.get().getDefaultState(), Gold.veinSizeRedSandstoneGoldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Gold.veinsPerChunkRedSandstoneGoldOre.get(), Gold.minHeightRedSandstoneGoldOre.get(), 0, Gold.maxHeightRedSandstoneGoldOre.get()))));
                     } } } }
+        if (!General.disableBlueIceOreGeneration.get()) {
+            if (Gold.enableBlueIceGoldOre.get()) {
+                if ((Gold.isTempWhitelistBlueIceGoldOre.get() && Gold.temperatureBlacklistBlueIceGoldOre.get().contains(biomeTS)) || (!Gold.isTempWhitelistBlueIceGoldOre.get() && !Gold.temperatureBlacklistBlueIceGoldOre.get().contains(biomeTS))) {
+                    if ((Gold.isBiomeWhitelistBlueIceGoldOre.get() && Gold.biomeBlacklistBlueIceGoldOre.get().contains(biomeRNS)) || (!Gold.isBiomeWhitelistBlueIceGoldOre.get() && !Gold.biomeBlacklistBlueIceGoldOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("blue_ice", null, new BlockMatcher(Blocks.BLUE_ICE)), BlockInit.BLUE_ICE_GOLD_ORE.get().getDefaultState(), Gold.veinSizeBlueIceGoldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Gold.veinsPerChunkBlueIceGoldOre.get(), Gold.minHeightBlueIceGoldOre.get(), 0, Gold.maxHeightBlueIceGoldOre.get()))));
+                    } } } }
+        if (!General.disablePackedIceOreGeneration.get()) {
+            if (Gold.enablePackedIceGoldOre.get()) {
+                if ((Gold.isTempWhitelistPackedIceGoldOre.get() && Gold.temperatureBlacklistPackedIceGoldOre.get().contains(biomeTS)) || (!Gold.isTempWhitelistPackedIceGoldOre.get() && !Gold.temperatureBlacklistPackedIceGoldOre.get().contains(biomeTS))) {
+                    if ((Gold.isBiomeWhitelistPackedIceGoldOre.get() && Gold.biomeBlacklistPackedIceGoldOre.get().contains(biomeRNS)) || (!Gold.isBiomeWhitelistPackedIceGoldOre.get() && !Gold.biomeBlacklistPackedIceGoldOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("packed_ice", null, new BlockMatcher(Blocks.PACKED_ICE)), BlockInit.PACKED_ICE_GOLD_ORE.get().getDefaultState(), Gold.veinSizePackedIceGoldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Gold.veinsPerChunkPackedIceGoldOre.get(), Gold.minHeightPackedIceGoldOre.get(), 0, Gold.maxHeightPackedIceGoldOre.get()))));
+                    } } } }
+        if (!General.disableBedrockOreGeneration.get()) {
+            if (Gold.enableBedrockGoldOre.get()) {
+                if ((Gold.isTempWhitelistBedrockGoldOre.get() && Gold.temperatureBlacklistBedrockGoldOre.get().contains(biomeTS)) || (!Gold.isTempWhitelistBedrockGoldOre.get() && !Gold.temperatureBlacklistBedrockGoldOre.get().contains(biomeTS))) {
+                    if ((Gold.isBiomeWhitelistBedrockGoldOre.get() && Gold.biomeBlacklistBedrockGoldOre.get().contains(biomeRNS)) || (!Gold.isBiomeWhitelistBedrockGoldOre.get() && !Gold.biomeBlacklistBedrockGoldOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("bedrock", null, new BlockMatcher(Blocks.BEDROCK)), BlockInit.BEDROCK_GOLD_ORE.get().getDefaultState(), Gold.veinSizeBedrockGoldOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Gold.veinsPerChunkBedrockGoldOre.get(), Gold.minHeightBedrockGoldOre.get(), 0, Gold.maxHeightBedrockGoldOre.get()))));
+                    } } } }
         // Quark
         if (!General.disableQuarkBasaltOreGeneration.get() && Main.quark) {
             if (Gold.enableQuarkBasaltGoldOre.get()) {

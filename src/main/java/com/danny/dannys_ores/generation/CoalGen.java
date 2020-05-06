@@ -89,6 +89,24 @@ public class CoalGen {
                     if ((Coal.isBiomeWhitelistRedSandstoneCoalOre.get() && Coal.biomeBlacklistRedSandstoneCoalOre.get().contains(biomeRNS)) || (!Coal.isBiomeWhitelistRedSandstoneCoalOre.get() && !Coal.biomeBlacklistRedSandstoneCoalOre.get().contains(biomeRNS))) {
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("red_sandstone", null, new BlockMatcher(Blocks.RED_SANDSTONE)), BlockInit.RED_SANDSTONE_COAL_ORE.get().getDefaultState(), Coal.veinSizeRedSandstoneCoalOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Coal.veinsPerChunkRedSandstoneCoalOre.get(), Coal.minHeightRedSandstoneCoalOre.get(), 0, Coal.maxHeightRedSandstoneCoalOre.get()))));
                     } } } }
+        if (!General.disableBlueIceOreGeneration.get()) {
+            if (Coal.enableBlueIceCoalOre.get()) {
+                if ((Coal.isTempWhitelistBlueIceCoalOre.get() && Coal.temperatureBlacklistBlueIceCoalOre.get().contains(biomeTS)) || (!Coal.isTempWhitelistBlueIceCoalOre.get() && !Coal.temperatureBlacklistBlueIceCoalOre.get().contains(biomeTS))) {
+                    if ((Coal.isBiomeWhitelistBlueIceCoalOre.get() && Coal.biomeBlacklistBlueIceCoalOre.get().contains(biomeRNS)) || (!Coal.isBiomeWhitelistBlueIceCoalOre.get() && !Coal.biomeBlacklistBlueIceCoalOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("blue_ice", null, new BlockMatcher(Blocks.BLUE_ICE)), BlockInit.BLUE_ICE_COAL_ORE.get().getDefaultState(), Coal.veinSizeBlueIceCoalOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Coal.veinsPerChunkBlueIceCoalOre.get(), Coal.minHeightBlueIceCoalOre.get(), 0, Coal.maxHeightBlueIceCoalOre.get()))));
+                    } } } }
+        if (!General.disablePackedIceOreGeneration.get()) {
+            if (Coal.enablePackedIceCoalOre.get()) {
+                if ((Coal.isTempWhitelistPackedIceCoalOre.get() && Coal.temperatureBlacklistPackedIceCoalOre.get().contains(biomeTS)) || (!Coal.isTempWhitelistPackedIceCoalOre.get() && !Coal.temperatureBlacklistPackedIceCoalOre.get().contains(biomeTS))) {
+                    if ((Coal.isBiomeWhitelistPackedIceCoalOre.get() && Coal.biomeBlacklistPackedIceCoalOre.get().contains(biomeRNS)) || (!Coal.isBiomeWhitelistPackedIceCoalOre.get() && !Coal.biomeBlacklistPackedIceCoalOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("packed_ice", null, new BlockMatcher(Blocks.PACKED_ICE)), BlockInit.PACKED_ICE_COAL_ORE.get().getDefaultState(), Coal.veinSizePackedIceCoalOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Coal.veinsPerChunkPackedIceCoalOre.get(), Coal.minHeightPackedIceCoalOre.get(), 0, Coal.maxHeightPackedIceCoalOre.get()))));
+                    } } } }
+        if (!General.disableBedrockOreGeneration.get()) {
+            if (Coal.enableBedrockCoalOre.get()) {
+                if ((Coal.isTempWhitelistBedrockCoalOre.get() && Coal.temperatureBlacklistBedrockCoalOre.get().contains(biomeTS)) || (!Coal.isTempWhitelistBedrockCoalOre.get() && !Coal.temperatureBlacklistBedrockCoalOre.get().contains(biomeTS))) {
+                    if ((Coal.isBiomeWhitelistBedrockCoalOre.get() && Coal.biomeBlacklistBedrockCoalOre.get().contains(biomeRNS)) || (!Coal.isBiomeWhitelistBedrockCoalOre.get() && !Coal.biomeBlacklistBedrockCoalOre.get().contains(biomeRNS))) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("bedrock", null, new BlockMatcher(Blocks.BEDROCK)), BlockInit.BEDROCK_COAL_ORE.get().getDefaultState(), Coal.veinSizeBedrockCoalOre.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(Coal.veinsPerChunkBedrockCoalOre.get(), Coal.minHeightBedrockCoalOre.get(), 0, Coal.maxHeightBedrockCoalOre.get()))));
+                    } } } }
         // Quark
         if (!General.disableQuarkBasaltOreGeneration.get() && Main.quark) {
             if (Coal.enableQuarkBasaltCoalOre.get()) {
