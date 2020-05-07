@@ -1,13 +1,16 @@
-The Hardened Stone texture comes from the mod Sonar Core by sonar_sonic
+The Hardened Stone texture comes from the mod 'Sonar Core' (by sonar_sonic)
 https://www.curseforge.com/minecraft/mc-mods/sonar-core
 
 The ores for Quark's (by Vazkii) stone variants are based on the corresponding stone textures of that mod
 https://www.curseforge.com/minecraft/mc-mods/quark
 
-The ores for Quark's (by Mapper) stone variants are based on the corresponding stone textures of that mod
+The ores for Embellishcraft (by Mapper) stone variants are based on the corresponding stone textures of that mod
 https://www.curseforge.com/minecraft/mc-mods/embellishcraft
+
+The Ore Overlay for the Silver, Lead, Nickel, Zinc, Bauxite and Uranium Ore were part of the corresponding ore textures from 'Silent's Mechanisms' (by SilentChaos512)
+https://www.curseforge.com/minecraft/mc-mods/silents-mechanisms
 
 The Ore Overlay for the Platinum and Iridium Ore were part of the corresponding ore textures from 'I need them Ores' (by CAS_ual_TY)
 https://www.curseforge.com/minecraft/mc-mods/i-need-them-ores
 
-The Ore Overlay for the Osmium Ore were part of the corresponding ore textures from 'Mekanism' (by bradyaidanc)
+The Ore Overlay for the Tin and Osmium Ore were part of the corresponding ore textures from 'Mekanism' (by bradyaidanc)

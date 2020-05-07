@@ -290,7 +290,7 @@ public class Aluminum {
         veinSizeStoneAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeStoneAluminumOre", 4, 0, 65536);
         veinsPerChunkStoneAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkStoneAluminumOre", 4, 0, 65536);
         minHeightStoneAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightStoneAluminumOre", 20, 0, 256);
-        maxHeightStoneAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightStoneAluminumOre", 50, 0, 256);
+        maxHeightStoneAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightStoneAluminumOre", 48, 0, 256);
         isTempWhitelistStoneAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistStoneAluminumOre", false);
         temperatureBlacklistStoneAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistStoneAluminumOre", new ArrayList<String>());
         isBiomeWhitelistStoneAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistStoneAluminumOre", false);
@@ -303,7 +303,7 @@ public class Aluminum {
         veinSizeAndesiteAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeAndesiteAluminumOre", 4, 0, 65536);
         veinsPerChunkAndesiteAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkAndesiteAluminumOre", 4, 0, 65536);
         minHeightAndesiteAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightAndesiteAluminumOre", 20, 0, 256);
-        maxHeightAndesiteAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightAndesiteAluminumOre", 50, 0, 256);
+        maxHeightAndesiteAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightAndesiteAluminumOre", 48, 0, 256);
         isTempWhitelistAndesiteAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistAndesiteAluminumOre", false);
         temperatureBlacklistAndesiteAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistAndesiteAluminumOre", new ArrayList<String>());
         isBiomeWhitelistAndesiteAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistAndesiteAluminumOre", false);
@@ -316,7 +316,7 @@ public class Aluminum {
         veinSizeDioriteAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeDioriteAluminumOre", 4, 0, 65536);
         veinsPerChunkDioriteAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkDioriteAluminumOre", 4, 0, 65536);
         minHeightDioriteAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightDioriteAluminumOre", 20, 0, 256);
-        maxHeightDioriteAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightDioriteAluminumOre", 50, 0, 256);
+        maxHeightDioriteAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightDioriteAluminumOre", 48, 0, 256);
         isTempWhitelistDioriteAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistDioriteAluminumOre", false);
         temperatureBlacklistDioriteAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistDioriteAluminumOre", new ArrayList<String>());
         isBiomeWhitelistDioriteAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistDioriteAluminumOre", false);
@@ -329,7 +329,7 @@ public class Aluminum {
         veinSizeGraniteAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeGraniteAluminumOre", 4, 0, 65536);
         veinsPerChunkGraniteAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkGraniteAluminumOre", 4, 0, 65536);
         minHeightGraniteAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightGraniteAluminumOre", 20, 0, 256);
-        maxHeightGraniteAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightGraniteAluminumOre", 50, 0, 256);
+        maxHeightGraniteAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightGraniteAluminumOre", 48, 0, 256);
         isTempWhitelistGraniteAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistGraniteAluminumOre", false);
         temperatureBlacklistGraniteAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistGraniteAluminumOre", new ArrayList<String>());
         isBiomeWhitelistGraniteAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistGraniteAluminumOre", false);
@@ -458,7 +458,7 @@ public class Aluminum {
         enableBedrockAluminumOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableBedrockAluminumOre", true);
         veinSizeBedrockAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeBedrockAluminumOre", 1, 0, 65536);
         veinsPerChunkBedrockAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkBedrockAluminumOre", 1, 0, 65536);
-        minHeightBedrockAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBedrockAluminumOre", 20, 0, 256);
+        minHeightBedrockAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBedrockAluminumOre", 0, 0, 256);
         maxHeightBedrockAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBedrockAluminumOre", 256, 0, 256);
         isTempWhitelistBedrockAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBedrockAluminumOre", false);
         temperatureBlacklistBedrockAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBedrockAluminumOre", new ArrayList<String>());
@@ -490,7 +490,7 @@ public class Aluminum {
         veinSizeQuarkLimestoneAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkLimestoneAluminumOre", 4, 0, 65536);
         veinsPerChunkQuarkLimestoneAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkLimestoneAluminumOre", 4, 0, 65536);
         minHeightQuarkLimestoneAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkLimestoneAluminumOre", 20, 0, 256);
-        maxHeightQuarkLimestoneAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkLimestoneAluminumOre", 50, 0, 256);
+        maxHeightQuarkLimestoneAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkLimestoneAluminumOre", 48, 0, 256);
         isTempWhitelistQuarkLimestoneAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkLimestoneAluminumOre", false);
         temperatureBlacklistQuarkLimestoneAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistQuarkLimestoneAluminumOre", new ArrayList<String>());
         isBiomeWhitelistQuarkLimestoneAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistQuarkLimestoneAluminumOre", false);
@@ -503,7 +503,7 @@ public class Aluminum {
         veinSizeQuarkJasperAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkJasperAluminumOre", 4, 0, 65536);
         veinsPerChunkQuarkJasperAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkJasperAluminumOre", 4, 0, 65536);
         minHeightQuarkJasperAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkJasperAluminumOre", 20, 0, 256);
-        maxHeightQuarkJasperAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkJasperAluminumOre", 50, 0, 256);
+        maxHeightQuarkJasperAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkJasperAluminumOre", 48, 0, 256);
         isTempWhitelistQuarkJasperAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkJasperAluminumOre", false);
         temperatureBlacklistQuarkJasperAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistQuarkJasperAluminumOre", new ArrayList<String>());
         isBiomeWhitelistQuarkJasperAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistQuarkJasperAluminumOre", false);
@@ -516,7 +516,7 @@ public class Aluminum {
         veinSizeQuarkMarbleAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkMarbleAluminumOre", 4, 0, 65536);
         veinsPerChunkQuarkMarbleAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkMarbleAluminumOre", 4, 0, 65536);
         minHeightQuarkMarbleAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkMarbleAluminumOre", 20, 0, 256);
-        maxHeightQuarkMarbleAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkMarbleAluminumOre", 50, 0, 256);
+        maxHeightQuarkMarbleAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkMarbleAluminumOre", 48, 0, 256);
         isTempWhitelistQuarkMarbleAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkMarbleAluminumOre", false);
         temperatureBlacklistQuarkMarbleAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistQuarkMarbleAluminumOre", new ArrayList<String>());
         isBiomeWhitelistQuarkMarbleAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistQuarkMarbleAluminumOre", false);
@@ -529,7 +529,7 @@ public class Aluminum {
         veinSizeQuarkSlateAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeQuarkSlateAluminumOre", 4, 0, 65536);
         veinsPerChunkQuarkSlateAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkQuarkSlateAluminumOre", 4, 0, 65536);
         minHeightQuarkSlateAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightQuarkSlateAluminumOre", 20, 0, 256);
-        maxHeightQuarkSlateAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkSlateAluminumOre", 50, 0, 256);
+        maxHeightQuarkSlateAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightQuarkSlateAluminumOre", 48, 0, 256);
         isTempWhitelistQuarkSlateAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistQuarkSlateAluminumOre", false);
         temperatureBlacklistQuarkSlateAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistQuarkSlateAluminumOre", new ArrayList<String>());
         isBiomeWhitelistQuarkSlateAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistQuarkSlateAluminumOre", false);
@@ -544,7 +544,7 @@ public class Aluminum {
         veinSizeEmbellishcraftBasaltAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEmbellishcraftBasaltAluminumOre", 4, 0, 65536);
         veinsPerChunkEmbellishcraftBasaltAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftBasaltAluminumOre", 4, 0, 65536);
         minHeightEmbellishcraftBasaltAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEmbellishcraftBasaltAluminumOre", 20, 0, 256);
-        maxHeightEmbellishcraftBasaltAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftBasaltAluminumOre", 50, 0, 256);
+        maxHeightEmbellishcraftBasaltAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftBasaltAluminumOre", 48, 0, 256);
         isTempWhitelistEmbellishcraftBasaltAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEmbellishcraftBasaltAluminumOre", false);
         temperatureBlacklistEmbellishcraftBasaltAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEmbellishcraftBasaltAluminumOre", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftBasaltAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEmbellishcraftBasaltAluminumOre", false);
@@ -557,7 +557,7 @@ public class Aluminum {
         veinSizeEmbellishcraftGneissAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEmbellishcraftGneissAluminumOre", 4, 0, 65536);
         veinsPerChunkEmbellishcraftGneissAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftGneissAluminumOre", 4, 0, 65536);
         minHeightEmbellishcraftGneissAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEmbellishcraftGneissAluminumOre", 20, 0, 256);
-        maxHeightEmbellishcraftGneissAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftGneissAluminumOre", 50, 0, 256);
+        maxHeightEmbellishcraftGneissAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftGneissAluminumOre", 48, 0, 256);
         isTempWhitelistEmbellishcraftGneissAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEmbellishcraftGneissAluminumOre", false);
         temperatureBlacklistEmbellishcraftGneissAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEmbellishcraftGneissAluminumOre", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftGneissAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEmbellishcraftGneissAluminumOre", false);
@@ -570,7 +570,7 @@ public class Aluminum {
         veinSizeEmbellishcraftJadeAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEmbellishcraftJadeAluminumOre", 4, 0, 65536);
         veinsPerChunkEmbellishcraftJadeAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftJadeAluminumOre", 4, 0, 65536);
         minHeightEmbellishcraftJadeAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEmbellishcraftJadeAluminumOre", 20, 0, 256);
-        maxHeightEmbellishcraftJadeAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftJadeAluminumOre", 50, 0, 256);
+        maxHeightEmbellishcraftJadeAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftJadeAluminumOre", 48, 0, 256);
         isTempWhitelistEmbellishcraftJadeAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEmbellishcraftJadeAluminumOre", false);
         temperatureBlacklistEmbellishcraftJadeAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEmbellishcraftJadeAluminumOre", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftJadeAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEmbellishcraftJadeAluminumOre", false);
@@ -583,7 +583,7 @@ public class Aluminum {
         veinSizeEmbellishcraftLarvikiteAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEmbellishcraftLarvikiteAluminumOre", 4, 0, 65536);
         veinsPerChunkEmbellishcraftLarvikiteAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftLarvikiteAluminumOre", 4, 0, 65536);
         minHeightEmbellishcraftLarvikiteAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEmbellishcraftLarvikiteAluminumOre", 20, 0, 256);
-        maxHeightEmbellishcraftLarvikiteAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftLarvikiteAluminumOre", 50, 0, 256);
+        maxHeightEmbellishcraftLarvikiteAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftLarvikiteAluminumOre", 48, 0, 256);
         isTempWhitelistEmbellishcraftLarvikiteAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEmbellishcraftLarvikiteAluminumOre", false);
         temperatureBlacklistEmbellishcraftLarvikiteAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEmbellishcraftLarvikiteAluminumOre", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftLarvikiteAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEmbellishcraftLarvikiteAluminumOre", false);
@@ -596,7 +596,7 @@ public class Aluminum {
         veinSizeEmbellishcraftMarbleAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEmbellishcraftMarbleAluminumOre", 4, 0, 65536);
         veinsPerChunkEmbellishcraftMarbleAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftMarbleAluminumOre", 4, 0, 65536);
         minHeightEmbellishcraftMarbleAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEmbellishcraftMarbleAluminumOre", 20, 0, 256);
-        maxHeightEmbellishcraftMarbleAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftMarbleAluminumOre", 50, 0, 256);
+        maxHeightEmbellishcraftMarbleAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftMarbleAluminumOre", 48, 0, 256);
         isTempWhitelistEmbellishcraftMarbleAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEmbellishcraftMarbleAluminumOre", false);
         temperatureBlacklistEmbellishcraftMarbleAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEmbellishcraftMarbleAluminumOre", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftMarbleAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEmbellishcraftMarbleAluminumOre", false);
@@ -609,7 +609,7 @@ public class Aluminum {
         veinSizeEmbellishcraftSlateAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeEmbellishcraftSlateAluminumOre", 4, 0, 65536);
         veinsPerChunkEmbellishcraftSlateAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkEmbellishcraftSlateAluminumOre", 4, 0, 65536);
         minHeightEmbellishcraftSlateAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightEmbellishcraftSlateAluminumOre", 20, 0, 256);
-        maxHeightEmbellishcraftSlateAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftSlateAluminumOre", 50, 0, 256);
+        maxHeightEmbellishcraftSlateAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightEmbellishcraftSlateAluminumOre", 48, 0, 256);
         isTempWhitelistEmbellishcraftSlateAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistEmbellishcraftSlateAluminumOre", false);
         temperatureBlacklistEmbellishcraftSlateAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistEmbellishcraftSlateAluminumOre", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftSlateAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistEmbellishcraftSlateAluminumOre", false);
@@ -623,7 +623,7 @@ public class Aluminum {
         veinSizeHardenedStoneAluminumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneAluminumOre", 4, 0, 65536);
         veinsPerChunkHardenedStoneAluminumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneAluminumOre", 4, 0, 65536);
         minHeightHardenedStoneAluminumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneAluminumOre", 20, 0, 256);
-        maxHeightHardenedStoneAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneAluminumOre", 50, 0, 256);
+        maxHeightHardenedStoneAluminumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneAluminumOre", 48, 0, 256);
         isTempWhitelistHardenedStoneAluminumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneAluminumOre", false);
         temperatureBlacklistHardenedStoneAluminumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneAluminumOre", new ArrayList<String>());
         isBiomeWhitelistHardenedStoneAluminumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistHardenedStoneAluminumOre", false);

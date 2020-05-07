@@ -11,7 +11,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "minecraft:iron_ore"
+          "name": "dannys_ores:bedrock_iron_ore"
         }
       ],
       "conditions": [

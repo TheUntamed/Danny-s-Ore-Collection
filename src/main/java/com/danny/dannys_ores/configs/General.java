@@ -58,6 +58,7 @@ public class General {
     public static ForgeConfigSpec.BooleanValue disableOtherEndOreGeneration;
     public static ForgeConfigSpec.BooleanValue removeVanillaOverworldOreGeneration;
     public static ForgeConfigSpec.BooleanValue removeVanillaNetherOreGeneration;
+    public static ForgeConfigSpec.BooleanValue replaceBedrockOreWithBedrockOnExplosion;
 
     static {
         // = BUILDER.comment("").define("", false);
@@ -107,6 +108,9 @@ public class General {
                 disableOtherNetherOreGeneration = BUILDER.comment("If true, the generation of nether ores added by other mods and vanilla minecraft will be disabled.").define("disableOtherNetherOreGeneration", false);
                 disableOtherEndOreGeneration = BUILDER.comment("If true, the generation of end ores added by other mods will be disabled.").define("disableOtherEndOreGeneration", false);
             BUILDER.pop();
+            BUILDER.comment("Other general settings").push("others");
+                replaceBedrockOreWithBedrockOnExplosion = BUILDER.comment("If true, Bedrock ores will be replaced with Bedrock when blown up. If Bedrock ores drop itself this might be a way to reproduce bedrock. If false, people could break out of the world.").define("replaceBedrockOreWithBedrockOnExplosion", true);
+            BUILDER.pop();
         BUILDER.pop();
         spec = BUILDER.build();
         //BUILDER.comment("").push("");
@@ -148,6 +152,9 @@ public class General {
         Platinum.loadConfig();
         Silver.loadConfig();
         Tin.loadConfig();
+        Nickel.loadConfig();
+        Zinc.loadConfig();
+        Osmium.loadConfig();
         Uranium.loadConfig();
 
     }

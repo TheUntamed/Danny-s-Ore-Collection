@@ -16,7 +16,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "minecraft:coal"
+          "name": "dannys_ores:bedrock_coal_ore"
         }
       ],
       "conditions": [

@@ -51,7 +51,7 @@ public class OreGen {
                     biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
                 }
             }
-            //if (StoneVariants.enableStoneVariants.get()) { StoneVariantsGen.addStoneVariantsGen(biome, biomeRNS, biomeTS); }
+
             if (Iron.enableIronOres.get()) { IronGen.addIronGen(biome, biomeRNS, biomeTS); }
             if (Gold.enableGoldOres.get()) { GoldGen.addGoldGen(biome, biomeRNS, biomeTS); }
             if (Coal.enableCoalOres.get()) { CoalGen.addCoalGen(biome, biomeRNS, biomeTS); }
@@ -61,6 +61,16 @@ public class OreGen {
             if (Diamond.enableDiamondOres.get()) { DiamondGen.addDiamondGen(biome, biomeRNS, biomeTS); }
             if (Quartz.enableQuartzOres.get()) { QuartzGen.addQuartzGen(biome, biomeRNS, biomeTS); }
             if (Copper.enableCopperOres.get()) { CopperGen.addCopperGen(biome, biomeRNS, biomeTS); }
+            if (Aluminum.enableAluminumOres.get()) { AluminumGen.addAluminumGen(biome, biomeRNS, biomeTS); }
+            if (Tin.enableTinOres.get()) { TinGen.addTinGen(biome, biomeRNS, biomeTS); }
+            if (Silver.enableSilverOres.get()) { SilverGen.addSilverGen(biome, biomeRNS, biomeTS); }
+            if (Lead.enableLeadOres.get()) { LeadGen.addLeadGen(biome, biomeRNS, biomeTS); }
+            if (Uranium.enableUraniumOres.get()) { UraniumGen.addUraniumGen(biome, biomeRNS, biomeTS); }
+            if (Nickel.enableNickelOres.get()) { NickelGen.addNickelGen(biome, biomeRNS, biomeTS); }
+            if (Zinc.enableZincOres.get()) { ZincGen.addZincGen(biome, biomeRNS, biomeTS); }
+            if (Platinum.enablePlatinumOres.get()) { PlatinumGen.addPlatinumGen(biome, biomeRNS, biomeTS); }
+            if (Iridium.enableIridiumOres.get()) { IridiumGen.addIridiumGen(biome, biomeRNS, biomeTS); }
+            if (Osmium.enableOsmiumOres.get()) { OsmiumGen.addOsmiumGen(biome, biomeRNS, biomeTS); }
             if (Xp.enableXpOres.get()) { XpGen.addXpGen(biome, biomeRNS, biomeTS); }
         }
     }

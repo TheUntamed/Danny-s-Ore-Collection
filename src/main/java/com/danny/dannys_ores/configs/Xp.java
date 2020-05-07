@@ -353,7 +353,7 @@ public class Xp {
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
         minXpStoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpStoneXpOre", 20, 0, 1000000);
-        maxXpStoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpStoneXpOre", 20, 0, 1000000);
+        maxXpStoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpStoneXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Andesite Xp Ore").push("andesite_xp_ore");
@@ -369,8 +369,8 @@ public class Xp {
         biomeBlacklistAndesiteXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistAndesiteXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpAndesiteXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpAndesiteXpOre", 0, 0, 1000000);
-        maxXpAndesiteXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpAndesiteXpOre", 0, 0, 1000000);
+        minXpAndesiteXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpAndesiteXpOre", 20, 0, 1000000);
+        maxXpAndesiteXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpAndesiteXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Diorite Xp Ore").push("diorite_xp_ore");
@@ -386,8 +386,8 @@ public class Xp {
         biomeBlacklistDioriteXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistDioriteXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpDioriteXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDioriteXpOre", 0, 0, 1000000);
-        maxXpDioriteXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDioriteXpOre", 0, 0, 1000000);
+        minXpDioriteXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDioriteXpOre", 20, 0, 1000000);
+        maxXpDioriteXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDioriteXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Granite Xp Ore").push("granite_xp_ore");
@@ -403,8 +403,8 @@ public class Xp {
         biomeBlacklistGraniteXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistGraniteXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpGraniteXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpGraniteXpOre", 0, 0, 1000000);
-        maxXpGraniteXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpGraniteXpOre", 0, 0, 1000000);
+        minXpGraniteXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpGraniteXpOre", 20, 0, 1000000);
+        maxXpGraniteXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpGraniteXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Netherrack Xp Ore").push("netherrack_xp_ore");
@@ -420,8 +420,8 @@ public class Xp {
         biomeBlacklistNetherrackXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistNetherrackXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpNetherrackXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpNetherrackXpOre", 0, 0, 1000000);
-        maxXpNetherrackXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpNetherrackXpOre", 0, 0, 1000000);
+        minXpNetherrackXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpNetherrackXpOre", 20, 0, 1000000);
+        maxXpNetherrackXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpNetherrackXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("End Stone Xp Ore").push("end_stone_xp_ore");
@@ -437,8 +437,8 @@ public class Xp {
         biomeBlacklistEndStoneXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistEndStoneXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpEndStoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEndStoneXpOre", 0, 0, 1000000);
-        maxXpEndStoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEndStoneXpOre", 0, 0, 1000000);
+        minXpEndStoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEndStoneXpOre", 20, 0, 1000000);
+        maxXpEndStoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEndStoneXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sand Xp Ore").push("sand_xp_ore");
@@ -454,8 +454,8 @@ public class Xp {
         biomeBlacklistSandXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpSandXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpSandXpOre", 0, 0, 1000000);
-        maxXpSandXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpSandXpOre", 0, 0, 1000000);
+        minXpSandXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpSandXpOre", 20, 0, 1000000);
+        maxXpSandXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpSandXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Red Sand Xp Ore").push("red_sand_xp_ore");
@@ -471,8 +471,8 @@ public class Xp {
         biomeBlacklistRedSandXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpRedSandXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpRedSandXpOre", 0, 0, 1000000);
-        maxXpRedSandXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpRedSandXpOre", 0, 0, 1000000);
+        minXpRedSandXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpRedSandXpOre", 20, 0, 1000000);
+        maxXpRedSandXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpRedSandXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Xp Ore").push("gravel_xp_ore");
@@ -488,8 +488,8 @@ public class Xp {
         biomeBlacklistGravelXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistGravelXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpGravelXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpGravelXpOre", 0, 0, 1000000);
-        maxXpGravelXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpGravelXpOre", 0, 0, 1000000);
+        minXpGravelXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpGravelXpOre", 20, 0, 1000000);
+        maxXpGravelXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpGravelXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sandstone Xp Ore").push("sandstone_xp_ore");
@@ -505,8 +505,8 @@ public class Xp {
         biomeBlacklistSandstoneXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistSandstoneXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpSandstoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpSandstoneXpOre", 0, 0, 1000000);
-        maxXpSandstoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpSandstoneXpOre", 0, 0, 1000000);
+        minXpSandstoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpSandstoneXpOre", 20, 0, 1000000);
+        maxXpSandstoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpSandstoneXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Red Sandstone Xp Ore").push("red_sandstone_xp_ore");
@@ -522,8 +522,8 @@ public class Xp {
         biomeBlacklistRedSandstoneXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistRedSandstoneXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpRedSandstoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpRedSandstoneXpOre", 0, 0, 1000000);
-        maxXpRedSandstoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpRedSandstoneXpOre", 0, 0, 1000000);
+        minXpRedSandstoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpRedSandstoneXpOre", 20, 0, 1000000);
+        maxXpRedSandstoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpRedSandstoneXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Blue Ice Xp Ore").push("blue_ice_xp_ore");
@@ -539,8 +539,8 @@ public class Xp {
         biomeBlacklistBlueIceXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistBlueIceXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpBlueIceXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpBlueIceXpOre", 0, 0, 1000000);
-        maxXpBlueIceXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpBlueIceXpOre", 0, 0, 1000000);
+        minXpBlueIceXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpBlueIceXpOre", 20, 0, 1000000);
+        maxXpBlueIceXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpBlueIceXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Packed Ice Xp Ore").push("packed_ice_xp_ore");
@@ -556,8 +556,8 @@ public class Xp {
         biomeBlacklistPackedIceXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistPackedIceXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpPackedIceXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpPackedIceXpOre", 0, 0, 1000000);
-        maxXpPackedIceXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpPackedIceXpOre", 0, 0, 1000000);
+        minXpPackedIceXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpPackedIceXpOre", 20, 0, 1000000);
+        maxXpPackedIceXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpPackedIceXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Bedrock Xp Ore").push("bedrock_xp_ore");
@@ -565,8 +565,8 @@ public class Xp {
         enableBedrockXpOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableBedrockXpOre", true);
         veinSizeBedrockXpOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeBedrockXpOre", 1, 0, 65536);
         veinsPerChunkBedrockXpOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkBedrockXpOre", 1, 0, 65536);
-        minHeightBedrockXpOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBedrockXpOre", 0, 0, 256);
-        maxHeightBedrockXpOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBedrockXpOre", 256, 0, 256);
+        minHeightBedrockXpOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightBedrockXpOre", 20, 0, 256);
+        maxHeightBedrockXpOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightBedrockXpOre", 556, 0, 256);
         isTempWhitelistBedrockXpOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistBedrockXpOre", false);
         temperatureBlacklistBedrockXpOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistBedrockXpOre", new ArrayList<String>());
         isBiomeWhitelistBedrockXpOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelistBedrockXpOre", false);
@@ -576,8 +576,8 @@ public class Xp {
         resistanceBedrockXpOre = BUILDER.comment("A higher value means a stronger explosion is needed to destroy this ore. Stone has 6.0 and Obsidian 1200.0").defineInRange("resistanceBedrockXpOre", 9.0, 0.0, 3600000.0);
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpBedrockXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpBedrockXpOre", 0, 0, 1000000);
-        maxXpBedrockXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpBedrockXpOre", 0, 0, 1000000);
+        minXpBedrockXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpBedrockXpOre", 20, 0, 1000000);
+        maxXpBedrockXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpBedrockXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
 
@@ -595,8 +595,8 @@ public class Xp {
         biomeBlacklistQuarkBasaltXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistQuarkBasaltXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpQuarkBasaltXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpQuarkBasaltXpOre", 0, 0, 1000000);
-        maxXpQuarkBasaltXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpQuarkBasaltXpOre", 0, 0, 1000000);
+        minXpQuarkBasaltXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpQuarkBasaltXpOre", 20, 0, 1000000);
+        maxXpQuarkBasaltXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpQuarkBasaltXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Limestone Xp Ore (Quark)").push("quark_limestone_xp_ore");
@@ -612,8 +612,8 @@ public class Xp {
         biomeBlacklistQuarkLimestoneXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistQuarkLimestoneXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpQuarkLimestoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpQuarkLimestoneXpOre", 0, 0, 1000000);
-        maxXpQuarkLimestoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpQuarkLimestoneXpOre", 0, 0, 1000000);
+        minXpQuarkLimestoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpQuarkLimestoneXpOre", 20, 0, 1000000);
+        maxXpQuarkLimestoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpQuarkLimestoneXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Jasper Xp Ore (Quark)").push("quark_jasper_xp_ore");
@@ -629,8 +629,8 @@ public class Xp {
         biomeBlacklistQuarkJasperXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistQuarkJasperXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpQuarkJasperXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpQuarkJasperXpOre", 0, 0, 1000000);
-        maxXpQuarkJasperXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpQuarkJasperXpOre", 0, 0, 1000000);
+        minXpQuarkJasperXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpQuarkJasperXpOre", 20, 0, 1000000);
+        maxXpQuarkJasperXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpQuarkJasperXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Marble Xp Ore (Quark)").push("quark_marble_xp_ore");
@@ -646,8 +646,8 @@ public class Xp {
         biomeBlacklistQuarkMarbleXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistQuarkMarbleXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpQuarkMarbleXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpQuarkMarbleXpOre", 0, 0, 1000000);
-        maxXpQuarkMarbleXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpQuarkMarbleXpOre", 0, 0, 1000000);
+        minXpQuarkMarbleXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpQuarkMarbleXpOre", 20, 0, 1000000);
+        maxXpQuarkMarbleXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpQuarkMarbleXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Slate Xp Ore (Quark)").push("quark_slate_xp_ore");
@@ -663,8 +663,8 @@ public class Xp {
         biomeBlacklistQuarkSlateXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistQuarkSlateXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpQuarkSlateXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpQuarkSlateXpOre", 0, 0, 1000000);
-        maxXpQuarkSlateXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpQuarkSlateXpOre", 0, 0, 1000000);
+        minXpQuarkSlateXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpQuarkSlateXpOre", 20, 0, 1000000);
+        maxXpQuarkSlateXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpQuarkSlateXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
 
@@ -682,8 +682,8 @@ public class Xp {
         biomeBlacklistEmbellishcraftBasaltXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEmbellishcraftBasaltXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpEmbellishcraftBasaltXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftBasaltXpOre", 0, 0, 1000000);
-        maxXpEmbellishcraftBasaltXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftBasaltXpOre", 0, 0, 1000000);
+        minXpEmbellishcraftBasaltXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftBasaltXpOre", 20, 0, 1000000);
+        maxXpEmbellishcraftBasaltXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftBasaltXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gneiss Xp Ore (Embellishcraft)").push("embellishcraft_gneiss_xp_ore");
@@ -699,8 +699,8 @@ public class Xp {
         biomeBlacklistEmbellishcraftGneissXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEmbellishcraftGneissXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpEmbellishcraftGneissXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftGneissXpOre", 0, 0, 1000000);
-        maxXpEmbellishcraftGneissXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftGneissXpOre", 0, 0, 1000000);
+        minXpEmbellishcraftGneissXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftGneissXpOre", 20, 0, 1000000);
+        maxXpEmbellishcraftGneissXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftGneissXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Jade Xp Ore (Embellishcraft)").push("embellishcraft_jade_xp_ore");
@@ -716,8 +716,8 @@ public class Xp {
         biomeBlacklistEmbellishcraftJadeXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEmbellishcraftJadeXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpEmbellishcraftJadeXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftJadeXpOre", 0, 0, 1000000);
-        maxXpEmbellishcraftJadeXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftJadeXpOre", 0, 0, 1000000);
+        minXpEmbellishcraftJadeXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftJadeXpOre", 20, 0, 1000000);
+        maxXpEmbellishcraftJadeXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftJadeXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Larvikite Xp Ore (Embellishcraft)").push("embellishcraft_larvikite_xp_ore");
@@ -733,8 +733,8 @@ public class Xp {
         biomeBlacklistEmbellishcraftLarvikiteXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEmbellishcraftLarvikiteXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpEmbellishcraftLarvikiteXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftLarvikiteXpOre", 0, 0, 1000000);
-        maxXpEmbellishcraftLarvikiteXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftLarvikiteXpOre", 0, 0, 1000000);
+        minXpEmbellishcraftLarvikiteXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftLarvikiteXpOre", 20, 0, 1000000);
+        maxXpEmbellishcraftLarvikiteXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftLarvikiteXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Marble Xp Ore (Embellishcraft)").push("embellishcraft_marble_xp_ore");
@@ -750,8 +750,8 @@ public class Xp {
         biomeBlacklistEmbellishcraftMarbleXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEmbellishcraftMarbleXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpEmbellishcraftMarbleXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftMarbleXpOre", 0, 0, 1000000);
-        maxXpEmbellishcraftMarbleXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftMarbleXpOre", 0, 0, 1000000);
+        minXpEmbellishcraftMarbleXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftMarbleXpOre", 20, 0, 1000000);
+        maxXpEmbellishcraftMarbleXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftMarbleXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Slate Xp Ore (Embellishcraft)").push("embellishcraft_slate_xp_ore");
@@ -767,8 +767,8 @@ public class Xp {
         biomeBlacklistEmbellishcraftSlateXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklistEmbellishcraftSlateXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpEmbellishcraftSlateXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftSlateXpOre", 0, 0, 1000000);
-        maxXpEmbellishcraftSlateXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftSlateXpOre", 0, 0, 1000000);
+        minXpEmbellishcraftSlateXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpEmbellishcraftSlateXpOre", 20, 0, 1000000);
+        maxXpEmbellishcraftSlateXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpEmbellishcraftSlateXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
 
@@ -786,8 +786,8 @@ public class Xp {
         biomeBlacklistHardenedStoneXpOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define("biomeBlacklistHardenedStoneXpOre", new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push("xp_drop");
-        minXpHardenedStoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpHardenedStoneXpOre", 0, 0, 1000000);
-        maxXpHardenedStoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpHardenedStoneXpOre", 0, 0, 1000000);
+        minXpHardenedStoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpHardenedStoneXpOre", 20, 0, 1000000);
+        maxXpHardenedStoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpHardenedStoneXpOre", 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

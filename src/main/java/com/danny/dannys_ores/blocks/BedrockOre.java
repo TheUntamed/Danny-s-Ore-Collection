@@ -21,8 +21,10 @@ public class BedrockOre extends Block {
  */
     @Override
     public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
-        worldIn.setBlockState(pos, Blocks.BEDROCK.getDefaultState(), 3);
-        worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.BLOCKS, 2.0f, 1.5f);
+        if (General.replaceBedrockOreWithBedrockOnExplosion.get()) {
+            worldIn.setBlockState(pos, Blocks.BEDROCK.getDefaultState(), 3);
+        }
+        worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 2.0f, 1.5f);
     }
 
     @SuppressWarnings("deprecation")

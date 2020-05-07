@@ -29,6 +29,9 @@ public class ConfigChecker {
         checkPlatinum(biomeVerify, tempVerify);
         checkSilver(biomeVerify, tempVerify);
         checkTin(biomeVerify, tempVerify);
+        checkZinc(biomeVerify, tempVerify);
+        checkNickel(biomeVerify, tempVerify);
+        checkOsmium(biomeVerify, tempVerify);
         checkUranium(biomeVerify, tempVerify);
     }
 
@@ -36,6 +39,216 @@ public class ConfigChecker {
         for (String name : StoneVariants.biomeBlacklistHardenedStone.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/stone_variants.toml in biomeBlacklistHardenedStone, please check the entries!"); } }
 
         for (String temp : StoneVariants.temperatureBlacklistHardenedStone.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/stone_variants.toml in temperatureBlacklistHardenedStone, please check the entries!"); } }
+    }
+
+    private static void checkZinc(ArrayList biomeVerify, ArrayList tempVerify) {
+        // Vanilla Biome Blacklist
+        for (String name : Zinc.biomeBlacklistStoneZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistStoneZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistAndesiteZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistAndesiteZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistDioriteZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistDioriteZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistGraniteZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistGraniteZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistNetherrackZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistNetherrackZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistEndStoneZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistEndStoneZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistSandZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistSandZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistGravelZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistGravelZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistSandstoneZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistSandstoneZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistRedSandstoneZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistRedSandstoneZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistRedSandZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistRedSandZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistBlueIceZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistBlueIceZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistPackedIceZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistPackedIceZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistBedrockZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistBedrockZincOre, please check the entries!"); } }
+
+        // Quark Biome Blacklist
+        for (String name : Zinc.biomeBlacklistQuarkBasaltZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistQuarkBasaltZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistQuarkLimestoneZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistQuarkLimestoneZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistQuarkJasperZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistQuarkJasperZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistQuarkMarbleZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistQuarkMarbleZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistQuarkSlateZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistQuarkSlateZincOre, please check the entries!"); } }
+
+        // Embellishcraft Biome Blacklist
+        for (String name : Zinc.biomeBlacklistEmbellishcraftBasaltZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistEmbellishcraftBasaltZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistEmbellishcraftGneissZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistEmbellishcraftGneissZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistEmbellishcraftJadeZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistEmbellishcraftJadeZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistEmbellishcraftLarvikiteZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistEmbellishcraftLarvikiteZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistEmbellishcraftMarbleZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistEmbellishcraftMarbleZincOre, please check the entries!"); } }
+        for (String name : Zinc.biomeBlacklistEmbellishcraftSlateZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistEmbellishcraftSlateZincOre, please check the entries!"); } }
+
+        // Danny's Ores Biome Blacklist
+        for (String name : Zinc.biomeBlacklistHardenedStoneZincOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/zinc.toml in biomeBlacklistHardenedStoneZincOre, please check the entries!"); } }
+
+        // Vanilla Temperature Blacklist
+        for (String temp : Zinc.temperatureBlacklistStoneZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistStoneZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistAndesiteZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistAndesiteZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistDioriteZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistDioriteZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistGraniteZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistGraniteZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistNetherrackZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistNetherrackZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistEndStoneZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistEndStoneZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistSandZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistSandZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistGravelZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistGravelZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistSandstoneZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistSandstoneZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistRedSandstoneZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistRedSandstoneZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistRedSandZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistRedSandZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistBlueIceZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistBlueIceZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistPackedIceZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistPackedIceZincOre, please check the entries!"); } }
+        for (String temp : Zinc.temperatureBlacklistBedrockZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistBedrockZincOre, please check the entries!"); } }
+
+        // Quark Temperature Blacklist
+        for (String name : Zinc.temperatureBlacklistQuarkBasaltZincOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/zinc.toml in temperatureBlacklistQuarkBasaltZincOre, please check the entries!"); } }
+        for (String name : Zinc.temperatureBlacklistQuarkLimestoneZincOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/zinc.toml in temperatureBlacklistQuarkLimestoneZincOre, please check the entries!"); } }
+        for (String name : Zinc.temperatureBlacklistQuarkJasperZincOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/zinc.toml in temperatureBlacklistQuarkJasperZincOre, please check the entries!"); } }
+        for (String name : Zinc.temperatureBlacklistQuarkMarbleZincOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/zinc.toml in temperatureBlacklistQuarkMarbleZincOre, please check the entries!"); } }
+        for (String name : Zinc.temperatureBlacklistQuarkSlateZincOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/zinc.toml in temperatureBlacklistQuarkSlateZincOre, please check the entries!"); } }
+
+        // Embellishcraft Temperature Blacklist
+        for (String name : Zinc.temperatureBlacklistEmbellishcraftBasaltZincOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/zinc.toml in temperatureBlacklistEmbellishcraftBasaltZincOre, please check the entries!"); } }
+        for (String name : Zinc.temperatureBlacklistEmbellishcraftGneissZincOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/zinc.toml in temperatureBlacklistEmbellishcraftGneissZincOre, please check the entries!"); } }
+        for (String name : Zinc.temperatureBlacklistEmbellishcraftJadeZincOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/zinc.toml in temperatureBlacklistEmbellishcraftJadeZincOre, please check the entries!"); } }
+        for (String name : Zinc.temperatureBlacklistEmbellishcraftLarvikiteZincOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/zinc.toml in temperatureBlacklistEmbellishcraftLarvikiteZincOre, please check the entries!"); } }
+        for (String name : Zinc.temperatureBlacklistEmbellishcraftMarbleZincOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/zinc.toml in temperatureBlacklistEmbellishcraftMarbleZincOre, please check the entries!"); } }
+        for (String name : Zinc.temperatureBlacklistEmbellishcraftSlateZincOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/zinc.toml in temperatureBlacklistEmbellishcraftSlateZincOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Zinc.temperatureBlacklistSandZincOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/zinc.toml in temperatureBlacklistSandZincOre, please check the entries!"); } }
+    }
+
+    private static void checkNickel(ArrayList biomeVerify, ArrayList tempVerify) {
+        // Vanilla Biome Blacklist
+        for (String name : Nickel.biomeBlacklistStoneNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistStoneNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistAndesiteNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistAndesiteNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistDioriteNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistDioriteNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistGraniteNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistGraniteNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistNetherrackNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistNetherrackNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistEndStoneNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistEndStoneNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistSandNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistSandNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistGravelNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistGravelNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistSandstoneNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistSandstoneNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistRedSandstoneNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistRedSandstoneNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistRedSandNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistRedSandNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistBlueIceNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistBlueIceNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistPackedIceNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistPackedIceNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistBedrockNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistBedrockNickelOre, please check the entries!"); } }
+
+        // Quark Biome Blacklist
+        for (String name : Nickel.biomeBlacklistQuarkBasaltNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistQuarkBasaltNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistQuarkLimestoneNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistQuarkLimestoneNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistQuarkJasperNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistQuarkJasperNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistQuarkMarbleNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistQuarkMarbleNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistQuarkSlateNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistQuarkSlateNickelOre, please check the entries!"); } }
+
+        // Embellishcraft Biome Blacklist
+        for (String name : Nickel.biomeBlacklistEmbellishcraftBasaltNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistEmbellishcraftBasaltNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistEmbellishcraftGneissNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistEmbellishcraftGneissNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistEmbellishcraftJadeNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistEmbellishcraftJadeNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistEmbellishcraftLarvikiteNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistEmbellishcraftLarvikiteNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistEmbellishcraftMarbleNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistEmbellishcraftMarbleNickelOre, please check the entries!"); } }
+        for (String name : Nickel.biomeBlacklistEmbellishcraftSlateNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistEmbellishcraftSlateNickelOre, please check the entries!"); } }
+
+        // Danny's Ores Biome Blacklist
+        for (String name : Nickel.biomeBlacklistHardenedStoneNickelOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/nickel.toml in biomeBlacklistHardenedStoneNickelOre, please check the entries!"); } }
+
+        // Vanilla Temperature Blacklist
+        for (String temp : Nickel.temperatureBlacklistStoneNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistStoneNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistAndesiteNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistAndesiteNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistDioriteNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistDioriteNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistGraniteNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistGraniteNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistNetherrackNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistNetherrackNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistEndStoneNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistEndStoneNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistSandNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistSandNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistGravelNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistGravelNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistSandstoneNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistSandstoneNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistRedSandstoneNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistRedSandstoneNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistRedSandNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistRedSandNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistBlueIceNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistBlueIceNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistPackedIceNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistPackedIceNickelOre, please check the entries!"); } }
+        for (String temp : Nickel.temperatureBlacklistBedrockNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistBedrockNickelOre, please check the entries!"); } }
+
+        // Quark Temperature Blacklist
+        for (String name : Nickel.temperatureBlacklistQuarkBasaltNickelOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/nickel.toml in temperatureBlacklistQuarkBasaltNickelOre, please check the entries!"); } }
+        for (String name : Nickel.temperatureBlacklistQuarkLimestoneNickelOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/nickel.toml in temperatureBlacklistQuarkLimestoneNickelOre, please check the entries!"); } }
+        for (String name : Nickel.temperatureBlacklistQuarkJasperNickelOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/nickel.toml in temperatureBlacklistQuarkJasperNickelOre, please check the entries!"); } }
+        for (String name : Nickel.temperatureBlacklistQuarkMarbleNickelOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/nickel.toml in temperatureBlacklistQuarkMarbleNickelOre, please check the entries!"); } }
+        for (String name : Nickel.temperatureBlacklistQuarkSlateNickelOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/nickel.toml in temperatureBlacklistQuarkSlateNickelOre, please check the entries!"); } }
+
+        // Embellishcraft Temperature Blacklist
+        for (String name : Nickel.temperatureBlacklistEmbellishcraftBasaltNickelOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/nickel.toml in temperatureBlacklistEmbellishcraftBasaltNickelOre, please check the entries!"); } }
+        for (String name : Nickel.temperatureBlacklistEmbellishcraftGneissNickelOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/nickel.toml in temperatureBlacklistEmbellishcraftGneissNickelOre, please check the entries!"); } }
+        for (String name : Nickel.temperatureBlacklistEmbellishcraftJadeNickelOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/nickel.toml in temperatureBlacklistEmbellishcraftJadeNickelOre, please check the entries!"); } }
+        for (String name : Nickel.temperatureBlacklistEmbellishcraftLarvikiteNickelOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/nickel.toml in temperatureBlacklistEmbellishcraftLarvikiteNickelOre, please check the entries!"); } }
+        for (String name : Nickel.temperatureBlacklistEmbellishcraftMarbleNickelOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/nickel.toml in temperatureBlacklistEmbellishcraftMarbleNickelOre, please check the entries!"); } }
+        for (String name : Nickel.temperatureBlacklistEmbellishcraftSlateNickelOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/nickel.toml in temperatureBlacklistEmbellishcraftSlateNickelOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Nickel.temperatureBlacklistSandNickelOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/nickel.toml in temperatureBlacklistSandNickelOre, please check the entries!"); } }
+    }
+
+    private static void checkOsmium(ArrayList biomeVerify, ArrayList tempVerify) {
+        // Vanilla Biome Blacklist
+        for (String name : Osmium.biomeBlacklistStoneOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistStoneOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistAndesiteOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistAndesiteOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistDioriteOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistDioriteOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistGraniteOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistGraniteOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistNetherrackOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistNetherrackOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistEndStoneOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistEndStoneOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistSandOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistSandOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistGravelOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistGravelOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistSandstoneOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistSandstoneOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistRedSandstoneOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistRedSandstoneOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistRedSandOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistRedSandOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistBlueIceOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistBlueIceOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistPackedIceOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistPackedIceOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistBedrockOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistBedrockOsmiumOre, please check the entries!"); } }
+
+        // Quark Biome Blacklist
+        for (String name : Osmium.biomeBlacklistQuarkBasaltOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistQuarkBasaltOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistQuarkLimestoneOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistQuarkLimestoneOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistQuarkJasperOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistQuarkJasperOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistQuarkMarbleOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistQuarkMarbleOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistQuarkSlateOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistQuarkSlateOsmiumOre, please check the entries!"); } }
+
+        // Embellishcraft Biome Blacklist
+        for (String name : Osmium.biomeBlacklistEmbellishcraftBasaltOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistEmbellishcraftBasaltOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistEmbellishcraftGneissOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistEmbellishcraftGneissOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistEmbellishcraftJadeOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistEmbellishcraftJadeOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistEmbellishcraftLarvikiteOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistEmbellishcraftLarvikiteOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistEmbellishcraftMarbleOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistEmbellishcraftMarbleOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.biomeBlacklistEmbellishcraftSlateOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistEmbellishcraftSlateOsmiumOre, please check the entries!"); } }
+
+        // Danny's Ores Biome Blacklist
+        for (String name : Osmium.biomeBlacklistHardenedStoneOsmiumOre.get()) { if (!biomeVerify.contains(name)) { Main.LOGGER.warn("Invalid biome '" + name + "' in config/dannys_ores/osmium.toml in biomeBlacklistHardenedStoneOsmiumOre, please check the entries!"); } }
+
+        // Vanilla Temperature Blacklist
+        for (String temp : Osmium.temperatureBlacklistStoneOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistStoneOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistAndesiteOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistAndesiteOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistDioriteOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistDioriteOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistGraniteOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistGraniteOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistNetherrackOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistNetherrackOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistEndStoneOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistEndStoneOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistSandOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistSandOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistGravelOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistGravelOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistSandstoneOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistSandstoneOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistRedSandstoneOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistRedSandstoneOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistRedSandOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistRedSandOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistBlueIceOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistBlueIceOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistPackedIceOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistPackedIceOsmiumOre, please check the entries!"); } }
+        for (String temp : Osmium.temperatureBlacklistBedrockOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistBedrockOsmiumOre, please check the entries!"); } }
+
+        // Quark Temperature Blacklist
+        for (String name : Osmium.temperatureBlacklistQuarkBasaltOsmiumOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/osmium.toml in temperatureBlacklistQuarkBasaltOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.temperatureBlacklistQuarkLimestoneOsmiumOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/osmium.toml in temperatureBlacklistQuarkLimestoneOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.temperatureBlacklistQuarkJasperOsmiumOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/osmium.toml in temperatureBlacklistQuarkJasperOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.temperatureBlacklistQuarkMarbleOsmiumOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/osmium.toml in temperatureBlacklistQuarkMarbleOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.temperatureBlacklistQuarkSlateOsmiumOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/osmium.toml in temperatureBlacklistQuarkSlateOsmiumOre, please check the entries!"); } }
+
+        // Embellishcraft Temperature Blacklist
+        for (String name : Osmium.temperatureBlacklistEmbellishcraftBasaltOsmiumOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/osmium.toml in temperatureBlacklistEmbellishcraftBasaltOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.temperatureBlacklistEmbellishcraftGneissOsmiumOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/osmium.toml in temperatureBlacklistEmbellishcraftGneissOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.temperatureBlacklistEmbellishcraftJadeOsmiumOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/osmium.toml in temperatureBlacklistEmbellishcraftJadeOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.temperatureBlacklistEmbellishcraftLarvikiteOsmiumOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/osmium.toml in temperatureBlacklistEmbellishcraftLarvikiteOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.temperatureBlacklistEmbellishcraftMarbleOsmiumOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/osmium.toml in temperatureBlacklistEmbellishcraftMarbleOsmiumOre, please check the entries!"); } }
+        for (String name : Osmium.temperatureBlacklistEmbellishcraftSlateOsmiumOre.get()) { if (!tempVerify.contains(name)) { Main.LOGGER.warn("Invalid temperature '" + name + "' in config/dannys_ores/osmium.toml in temperatureBlacklistEmbellishcraftSlateOsmiumOre, please check the entries!"); } }
+
+        // Danny's Ores Temperature Blacklist
+        for (String temp : Osmium.temperatureBlacklistSandOsmiumOre.get()) { if (!tempVerify.contains(temp)) { Main.LOGGER.warn("Invalid temperature '" + temp + "' in config/dannys_ores/osmium.toml in temperatureBlacklistSandOsmiumOre, please check the entries!"); } }
     }
 
     private static void checkAluminum(ArrayList biomeVerify, ArrayList tempVerify) {
