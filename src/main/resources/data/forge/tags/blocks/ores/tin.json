@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:stone_tin_ore",
+    "dannys_ores:andesite_tin_ore",
+    "dannys_ores:diorite_tin_ore",
+    "dannys_ores:granite_tin_ore",
+    "dannys_ores:sand_tin_ore",
+    "dannys_ores:red_sand_tin_ore",
+    "dannys_ores:sandstone_tin_ore",
+    "dannys_ores:red_sandstone_tin_ore",
+    "dannys_ores:gravel_tin_ore",
+    "dannys_ores:netherrack_tin_ore",
+    "dannys_ores:end_stone_tin_ore",
+    "dannys_ores:blue_ice_tin_ore",
+    "dannys_ores:packed_ice_tin_ore",
+    "dannys_ores:bedrock_tin_ore",
+    "dannys_ores:hardened_stone_tin_ore",
+    "dannys_ores:quark_basalt_tin_ore",
+    "dannys_ores:quark_jasper_tin_ore",
+    "dannys_ores:quark_limestone_tin_ore",
+    "dannys_ores:quark_marble_tin_ore",
+    "dannys_ores:quark_slate_tin_ore",
+    "dannys_ores:embellishcraft_basalt_tin_ore",
+    "dannys_ores:embellishcraft_jade_tin_ore",
+    "dannys_ores:embellishcraft_larvikite_tin_ore",
+    "dannys_ores:embellishcraft_marble_tin_ore",
+    "dannys_ores:embellishcraft_slate_tin_ore",
+    "dannys_ores:embellishcraft_gneiss_tin_ore"
+  ]
+}

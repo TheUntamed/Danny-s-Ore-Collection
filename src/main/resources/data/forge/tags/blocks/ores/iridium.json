@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:stone__ore",
+    "dannys_ores:andesite_iridium_ore",
+    "dannys_ores:diorite_iridium_ore",
+    "dannys_ores:granite_iridium_ore",
+    "dannys_ores:sand_iridium_ore",
+    "dannys_ores:red_sand_iridium_ore",
+    "dannys_ores:sandstone_iridium_ore",
+    "dannys_ores:red_sandstone_iridium_ore",
+    "dannys_ores:gravel_iridium_ore",
+    "dannys_ores:netherrack_iridium_ore",
+    "dannys_ores:end_stone_iridium_ore",
+    "dannys_ores:blue_ice_iridium_ore",
+    "dannys_ores:packed_ice_iridium_ore",
+    "dannys_ores:bedrock_iridium_ore",
+    "dannys_ores:hardened_stone_iridium_ore",
+    "dannys_ores:quark_basalt_iridium_ore",
+    "dannys_ores:quark_jasper_iridium_ore",
+    "dannys_ores:quark_limestone_iridium_ore",
+    "dannys_ores:quark_marble_iridium_ore",
+    "dannys_ores:quark_slate_iridium_ore",
+    "dannys_ores:embellishcraft_basalt_iridium_ore",
+    "dannys_ores:embellishcraft_jade_iridium_ore",
+    "dannys_ores:embellishcraft_larvikite_iridium_ore",
+    "dannys_ores:embellishcraft_marble_iridium_ore",
+    "dannys_ores:embellishcraft_slate_iridium_ore",
+    "dannys_ores:embellishcraft_gneiss_iridium_ore"
+  ]
+}
