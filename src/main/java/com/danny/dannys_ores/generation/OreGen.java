@@ -72,6 +72,14 @@ public class OreGen {
             if (Iridium.enableIridiumOres.get()) { IridiumGen.addIridiumGen(biome, biomeRNS, biomeTS); }
             if (Osmium.enableOsmiumOres.get()) { OsmiumGen.addOsmiumGen(biome, biomeRNS, biomeTS); }
             if (Xp.enableXpOres.get()) { XpGen.addXpGen(biome, biomeRNS, biomeTS); }
+            if (Adamantium.enableAdamantiumOres.get()) { AdamantiumGen.addAdamantiumGen(biome, biomeRNS, biomeTS); }
+            if (Amethyst.enableAmethystOres.get()) { AmethystGen.addAmethystGen(biome, biomeRNS, biomeTS); }
+            if (Bismuth.enableBismuthOres.get()) { BismuthGen.addBismuthGen(biome, biomeRNS, biomeTS); }
+            if (BlackOpal.enableBlackOpalOres.get()) { BlackOpalGen.addBlackOpalGen(biome, biomeRNS, biomeTS); }
+            if (Lucky.enableLuckyOres.get()) { LuckyGen.addLuckyGen(biome, biomeRNS, biomeTS); }
+            if (Mithril.enableMithrilOres.get()) { MithrilGen.addMithrilGen(biome, biomeRNS, biomeTS); }
+            if (Runite.enableRuniteOres.get()) { RuniteGen.addRuniteGen(biome, biomeRNS, biomeTS); }
+            if (WhiteOpal.enableWhiteOpalOres.get()) { WhiteOpalGen.addWhiteOpalGen(biome, biomeRNS, biomeTS); }
         }
     }
 

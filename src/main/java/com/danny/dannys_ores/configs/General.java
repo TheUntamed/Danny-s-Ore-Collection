@@ -156,6 +156,14 @@ public class General {
         Zinc.loadConfig();
         Osmium.loadConfig();
         Uranium.loadConfig();
+        Adamantium.loadConfig();
+        Amethyst.loadConfig();
+        Bismuth.loadConfig();
+        BlackOpal.loadConfig();
+        Lucky.loadConfig();
+        Mithril.loadConfig();
+        Runite.loadConfig();
+        WhiteOpal.loadConfig();
 
     }
 }

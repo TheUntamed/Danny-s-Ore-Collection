@@ -54,6 +54,12 @@ public class BedrockOreWithXpDrop extends Block {
             return MathHelper.nextInt(random, 2, 5);
         } else if (this == BlockInit.BEDROCK_QUARTZ_ORE.get()) {
             return MathHelper.nextInt(random, 2, 5);
+        } else if (this == BlockInit.BEDROCK_AMETHYST_ORE.get()) {
+            return MathHelper.nextInt(random, 3, 7);
+        } else if (this == BlockInit.BEDROCK_BLACK_OPAL_ORE.get()) {
+            return MathHelper.nextInt(random, 5, 10);
+        } else if (this == BlockInit.BEDROCK_WHITE_OPAL_ORE.get()) {
+            return MathHelper.nextInt(random, 5, 10);
         } else if (this == BlockInit.BEDROCK_XP_ORE.get()) {
             return MathHelper.nextInt(random, Xp.minXpBedrockXpOre.get(), Xp.maxXpBedrockXpOre.get());
         } else {
