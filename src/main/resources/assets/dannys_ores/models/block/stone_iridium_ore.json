@@ -1,7 +1,0 @@
-{
-  "_comment": "Generated using MiningMark48's JSON Generator.",
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "dannys_ores:blocks/stone_iridium_ore"
-  }
-}

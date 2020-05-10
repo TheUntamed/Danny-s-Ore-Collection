@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "dannys_ores:blocks/xp/red_sandstone_xp_ore"
-  }
-}
