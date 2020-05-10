@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dannys_ores:block/packed_ice_black_opal_ore"
+  }
+}

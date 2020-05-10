@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:stone_bismuth_ore",
+    "dannys_ores:andesite_bismuth_ore",
+    "dannys_ores:diorite_bismuth_ore",
+    "dannys_ores:granite_bismuth_ore",
+    "dannys_ores:netherrack_bismuth_ore",
+    "dannys_ores:end_stone_bismuth_ore",
+    "dannys_ores:sand_bismuth_ore",
+    "dannys_ores:red_sand_bismuth_ore",
+    "dannys_ores:gravel_bismuth_ore",
+    "dannys_ores:sandstone_bismuth_ore",
+    "dannys_ores:red_sandstone_bismuth_ore",
+    "dannys_ores:blue_ice_bismuth_ore",
+    "dannys_ores:packed_ice_bismuth_ore",
+    "dannys_ores:bedrock_bismuth_ore",
+    "dannys_ores:quark_basalt_bismuth_ore",
+    "dannys_ores:quark_jasper_bismuth_ore",
+    "dannys_ores:quark_limestone_bismuth_ore",
+    "dannys_ores:quark_marble_bismuth_ore",
+    "dannys_ores:quark_slate_bismuth_ore",
+    "dannys_ores:embellishcraft_basalt_bismuth_ore",
+    "dannys_ores:embellishcraft_jade_bismuth_ore",
+    "dannys_ores:embellishcraft_gneiss_bismuth_ore",
+    "dannys_ores:embellishcraft_marble_bismuth_ore",
+    "dannys_ores:embellishcraft_larvikite_bismuth_ore",
+    "dannys_ores:embellishcraft_slate_bismuth_ore",
+    "dannys_ores:hardened_stone_bismuth_ore"
+  ]
+}

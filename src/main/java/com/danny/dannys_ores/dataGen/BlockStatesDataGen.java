@@ -4,8 +4,10 @@ import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
+import net.minecraftforge.fml.RegistryObject;
 
 public class BlockStatesDataGen extends BlockStateProvider {
 
@@ -16,7 +18,13 @@ public class BlockStatesDataGen extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        singleTextureBlock(BlockInit.ANDESITE_COAL_ORE.get(), "andesite_coal_ore", "block/andesite_coal_ore");
+        for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
+            ResourceLocation resLoc = block.get().getRegistryName();
+            if (resLoc != null) {
+                String blockName = resLoc.toString().split(":")[1];
+                singleTextureBlock(block.get(), blockName, "block/" + blockName);
+            }
+        }
     }
 
     public void singleTextureBlock(Block block, String model, String textureName) {
@@ -25,8 +33,7 @@ public class BlockStatesDataGen extends BlockStateProvider {
     }
 
     @Override
-    public String getName()
-    {
+    public String getName() {
         return "Danny's Ores - Blockstates";
     }
 }

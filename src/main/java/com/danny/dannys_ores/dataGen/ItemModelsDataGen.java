@@ -4,9 +4,11 @@ import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.fml.RegistryObject;
 
 public class ItemModelsDataGen extends ItemModelProvider {
 
@@ -16,7 +18,14 @@ public class ItemModelsDataGen extends ItemModelProvider {
 
         @Override
         protected void registerModels() {
-                blockParented(BlockInit.ANDESITE_COAL_ORE.get(), "block/andesite_coal_ore");
+                Main.LOGGER.debug("registerModels");
+                for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
+                        ResourceLocation resLoc = block.get().getRegistryName();
+                        if (resLoc != null) {
+                                String blockName = block.get().getRegistryName().toString().split(":")[1];
+                                blockParented(block.get(), "block/" + blockName);
+                        }
+                }
         }
 
         public void blockParented(Block block, String model) {

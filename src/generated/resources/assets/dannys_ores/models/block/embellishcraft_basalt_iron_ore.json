@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dannys_ores:block/embellishcraft_basalt_iron_ore"
+  }
+}

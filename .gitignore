@@ -5,7 +5,7 @@ bin
 .metadata
 .classpath
 .project
-
+/src/generated/resources/data/minecraft/
 # idea
 out
 *.ipr

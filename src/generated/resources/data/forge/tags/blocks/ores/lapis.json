@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:andesite_lapis_ore",
+    "dannys_ores:diorite_lapis_ore",
+    "dannys_ores:granite_lapis_ore",
+    "dannys_ores:netherrack_lapis_ore",
+    "dannys_ores:end_stone_lapis_ore",
+    "dannys_ores:sand_lapis_ore",
+    "dannys_ores:red_sand_lapis_ore",
+    "dannys_ores:gravel_lapis_ore",
+    "dannys_ores:sandstone_lapis_ore",
+    "dannys_ores:red_sandstone_lapis_ore",
+    "dannys_ores:blue_ice_lapis_ore",
+    "dannys_ores:packed_ice_lapis_ore",
+    "dannys_ores:bedrock_lapis_ore",
+    "dannys_ores:quark_basalt_lapis_ore",
+    "dannys_ores:quark_jasper_lapis_ore",
+    "dannys_ores:quark_limestone_lapis_ore",
+    "dannys_ores:quark_marble_lapis_ore",
+    "dannys_ores:quark_slate_lapis_ore",
+    "dannys_ores:embellishcraft_basalt_lapis_ore",
+    "dannys_ores:embellishcraft_jade_lapis_ore",
+    "dannys_ores:embellishcraft_gneiss_lapis_ore",
+    "dannys_ores:embellishcraft_marble_lapis_ore",
+    "dannys_ores:embellishcraft_larvikite_lapis_ore",
+    "dannys_ores:embellishcraft_slate_lapis_ore",
+    "dannys_ores:hardened_stone_lapis_ore"
+  ]
+}

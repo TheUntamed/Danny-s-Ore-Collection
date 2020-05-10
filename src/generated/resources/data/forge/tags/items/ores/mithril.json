@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:stone_mithril_ore",
+    "dannys_ores:andesite_mithril_ore",
+    "dannys_ores:diorite_mithril_ore",
+    "dannys_ores:granite_mithril_ore",
+    "dannys_ores:netherrack_mithril_ore",
+    "dannys_ores:end_stone_mithril_ore",
+    "dannys_ores:sand_mithril_ore",
+    "dannys_ores:red_sand_mithril_ore",
+    "dannys_ores:gravel_mithril_ore",
+    "dannys_ores:sandstone_mithril_ore",
+    "dannys_ores:red_sandstone_mithril_ore",
+    "dannys_ores:blue_ice_mithril_ore",
+    "dannys_ores:packed_ice_mithril_ore",
+    "dannys_ores:bedrock_mithril_ore",
+    "dannys_ores:quark_basalt_mithril_ore",
+    "dannys_ores:quark_jasper_mithril_ore",
+    "dannys_ores:quark_limestone_mithril_ore",
+    "dannys_ores:quark_marble_mithril_ore",
+    "dannys_ores:quark_slate_mithril_ore",
+    "dannys_ores:embellishcraft_basalt_mithril_ore",
+    "dannys_ores:embellishcraft_jade_mithril_ore",
+    "dannys_ores:embellishcraft_gneiss_mithril_ore",
+    "dannys_ores:embellishcraft_marble_mithril_ore",
+    "dannys_ores:embellishcraft_larvikite_mithril_ore",
+    "dannys_ores:embellishcraft_slate_mithril_ore",
+    "dannys_ores:hardened_stone_mithril_ore"
+  ]
+}

@@ -18,6 +18,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 //@Mod(Main.MOD_ID)
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
 public class BlockInit {
