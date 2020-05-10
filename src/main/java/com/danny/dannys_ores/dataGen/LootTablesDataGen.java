@@ -19,16 +19,30 @@ public class LootTablesDataGen extends LootTablesBaseProvider {
             ResourceLocation resLoc = block.get().getRegistryName();
             if (resLoc != null) {
                 String blockName = resLoc.toString().split(":")[1];
-                if (blockName.contains("bedrock")) {
-                    if (blockName.contains("_coal_ore") || blockName.contains("_lapis_ore") || blockName.contains("_redstone_ore") || blockName.contains("_quartz_ore") || blockName.contains("_diamond_ore") || blockName.contains("_emerald_ore")) {
-                        lootTables.put(block.get(), gemsTable(blockName, block.get(), Items.DIAMOND));
-                    } else {
-                        //lootTables.put(block.get(), bedrockTable(blockName, block.get()));
-                    }
-                } else if (blockName.contains("packed_ice") || blockName.contains("blue_ice") || blockName.contains("_xp_ore") || blockName.contains("_lucky_ore")) {
-                    lootTables.put(block.get(), justSilktouchTable(blockName, block.get()));
+//                if (blockName.contains("bedrock")) {
+//                    if (blockName.contains("_coal_ore") || blockName.contains("_lapis_ore") || blockName.contains("_redstone_ore") || blockName.contains("_quartz_ore") || blockName.contains("_diamond_ore") || blockName.contains("_emerald_ore")) {
+//
+//                    } else {
+//                        //lootTables.put(block.get(), bedrockTable(blockName, block.get()));
+//                    }
+                if (blockName.contains("packed_ice") || blockName.contains("blue_ice") || (blockName.contains("_xp_ore") && !blockName.contains("bedrock")) || (blockName.contains("_lucky_ore") && !blockName.contains("bedrock"))) {
+                        lootTables.put(block.get(), justSilktouchTable(blockName, block.get()));
                 } else {
-                    lootTables.put(block.get(), basicOreTable(blockName, block.get()));
+                    if (blockName.contains("_coal_ore")) {
+                        lootTables.put(block.get(), gemsTable(blockName, block.get(), Items.COAL));
+                    } else if (blockName.contains("_emerald_ore")) {
+                        lootTables.put(block.get(), gemsTable(blockName, block.get(), Items.EMERALD));
+                    } else if (blockName.contains("_diamond_ore")) {
+                        lootTables.put(block.get(), gemsTable(blockName, block.get(), Items.DIAMOND));
+                    } else if (blockName.contains("_quartz_ore")) {
+                        lootTables.put(block.get(), gemsTable(blockName, block.get(), Items.QUARTZ));
+                    } else if (blockName.contains("_lapis_ore")) {
+                        lootTables.put(block.get(), gemsTable(blockName, block.get(), Items.LAPIS_LAZULI));
+                    } else if (blockName.contains("_redstone_ore")) {
+                        lootTables.put(block.get(), gemsTable(blockName, block.get(), Items.REDSTONE));
+                    } else {
+                        lootTables.put(block.get(), basicOreTable(block.get()));
+                    }
                 }
             }
         }

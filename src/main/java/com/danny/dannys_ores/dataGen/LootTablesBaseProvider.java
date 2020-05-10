@@ -60,10 +60,8 @@ public abstract class LootTablesBaseProvider extends LootTableProvider {
 //        return LootTable.builder().addLootPool(builder);
 //    }
 
-    protected LootTable.Builder basicOreTable(String name, Block block) {
-        LootPool.Builder builder = LootPool.builder().name(name).rolls(ConstantRange.of(1))
-                .addEntry(ItemLootEntry.builder(block)).acceptCondition(SurvivesExplosion.builder());
-        return LootTable.builder().addLootPool(builder);
+    protected LootTable.Builder basicOreTable(Block block) {
+        return MyBlockLootTables.dropSelf(block);
     }
 
     protected LootTable.Builder justSilktouchTable(String name, Block block) {
@@ -75,48 +73,13 @@ public abstract class LootTablesBaseProvider extends LootTableProvider {
     }
 
     protected LootTable.Builder gemsTable(String name, Block block, Item item) {
-
-        return MyBlockLootTables.dropItemWithFortune(block, item);
-        //return droppingWithSilkTouch(block, withExplosionDecay(block, ItemLootEntry.builder(item).acceptFunction(ApplyBonus.oreDrops(Enchantments.FORTUNE))));
-//        LootPool.Builder builder = LootPool.builder().name(name)
-//                .acceptCondition(MatchTool.builder(ItemPredicate.Builder.create().enchantment(
-//                        new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.IntBound.atLeast(1)))))
-//                .rolls(ConstantRange.of(1)).addEntry(ItemLootEntry.builder(block));
-//        return LootTable.builder().addLootPool(builder);
-
-//        return LootTable.builder().addLootPool(LootPool.builder().name(name)
-//                .rolls(ConstantRange.of(1)).addEntry(((StandaloneLootEntry.Builder)ItemLootEntry.builder(block).acceptCondition(MatchTool.builder(ItemPredicate.Builder.create().enchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.IntBound.atLeast(1))))))
-//                .alternatively((T)(!IMMUNE_TO_EXPLOSIONS.contains(block.asItem()) ? ItemLootEntry.builder(Items.DIAMOND).acceptFunction(ApplyBonus.oreDrops(Enchantments.FORTUNE)).acceptFunction(ExplosionDecay.builder()) : ItemLootEntry.builder(Items.DIAMOND).acceptFunction(ApplyBonus.oreDrops(Enchantments.FORTUNE)).cast()))));
-
-    }
-
-//    protected static LootTable.Builder droppingWithSilkTouch(Block block, LootEntry.Builder<?> lootEntry) {
-//        return dropping(block, SILK_TOUCH, lootEntry);
-//    }
-//
-//    protected static <T> T withExplosionDecay(IItemProvider p_218552_0_, ILootFunctionConsumer<T> p_218552_1_) {
-//        return (T)(!IMMUNE_TO_EXPLOSIONS.contains(p_218552_0_.asItem()) ? p_218552_1_.acceptFunction(ExplosionDecay.builder()) : p_218552_1_.cast());
-//    }
-//
-//    protected static LootTable.Builder dropping(Block block, ILootCondition.IBuilder lootCond, LootEntry.Builder<?> lootEntry) {
-//        return LootTable.builder().addLootPool(LootPool.builder().rolls(ConstantRange.of(1)).addEntry(((StandaloneLootEntry.Builder)ItemLootEntry.builder(block).acceptCondition(lootCond)).alternatively(lootEntry)));
-//    }
-
-//    protected LootTable.Builder bedrockTable(String name, Block block) {
-//        LootPool.Builder builder = LootPool.builder().name(name).rolls(ConstantRange.of(1))
-//                .addEntry();
-//        return LootTable.builder().addLootPool(builder);
-//    }
-
-    protected LootTable.Builder createStandardTable(String name, Item item) {
-        LootPool.Builder builder = LootPool.builder().name(name).rolls(ConstantRange.of(1))
-                .addEntry(ItemLootEntry.builder(item).acceptFunction(CopyName.builder(CopyName.Source.BLOCK_ENTITY))
-                        .acceptFunction(CopyNbt.builder(CopyNbt.Source.BLOCK_ENTITY).addOperation("inv",
-                                "BlockEntityTag.inv", CopyNbt.Action.REPLACE)
-//                                .addOperation("energy", "BlockEntityTag.energy", CopyNbt.Action.REPLACE)
-                        ).acceptFunction(SetContents.func_215920_b().func_216075_a(
-                                DynamicLootEntry.func_216162_a(new ResourceLocation("minecraft", "contents")))));
-        return LootTable.builder().addLootPool(builder);
+        if (name.contains("_redstone_ore")) {
+            return MyBlockLootTables.redstone(block, item);
+        } else if (name.contains("_lapis_ore")) {
+            return MyBlockLootTables.lapis(block, item);
+        } else {
+            return MyBlockLootTables.dropItemWithFortune(block, item);
+        }
     }
 
     @Override

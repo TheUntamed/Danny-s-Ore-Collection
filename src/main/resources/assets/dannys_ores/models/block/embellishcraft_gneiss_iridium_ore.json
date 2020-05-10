@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dannys_ores:block/embellishcraft_gneiss_iridium_ore"
+  }
+}

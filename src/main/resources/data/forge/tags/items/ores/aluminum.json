@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:stone_aluminum_ore",
+    "dannys_ores:andesite_aluminum_ore",
+    "dannys_ores:diorite_aluminum_ore",
+    "dannys_ores:granite_aluminum_ore",
+    "dannys_ores:netherrack_aluminum_ore",
+    "dannys_ores:end_stone_aluminum_ore",
+    "dannys_ores:sand_aluminum_ore",
+    "dannys_ores:red_sand_aluminum_ore",
+    "dannys_ores:gravel_aluminum_ore",
+    "dannys_ores:sandstone_aluminum_ore",
+    "dannys_ores:red_sandstone_aluminum_ore",
+    "dannys_ores:blue_ice_aluminum_ore",
+    "dannys_ores:packed_ice_aluminum_ore",
+    "dannys_ores:bedrock_aluminum_ore",
+    "dannys_ores:quark_basalt_aluminum_ore",
+    "dannys_ores:quark_jasper_aluminum_ore",
+    "dannys_ores:quark_limestone_aluminum_ore",
+    "dannys_ores:quark_marble_aluminum_ore",
+    "dannys_ores:quark_slate_aluminum_ore",
+    "dannys_ores:embellishcraft_basalt_aluminum_ore",
+    "dannys_ores:embellishcraft_jade_aluminum_ore",
+    "dannys_ores:embellishcraft_gneiss_aluminum_ore",
+    "dannys_ores:embellishcraft_marble_aluminum_ore",
+    "dannys_ores:embellishcraft_larvikite_aluminum_ore",
+    "dannys_ores:embellishcraft_slate_aluminum_ore",
+    "dannys_ores:hardened_stone_aluminum_ore"
+  ]
+}

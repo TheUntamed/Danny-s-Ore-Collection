@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:andesite_iron_ore",
+    "dannys_ores:diorite_iron_ore",
+    "dannys_ores:granite_iron_ore",
+    "dannys_ores:netherrack_iron_ore",
+    "dannys_ores:end_stone_iron_ore",
+    "dannys_ores:sand_iron_ore",
+    "dannys_ores:red_sand_iron_ore",
+    "dannys_ores:gravel_iron_ore",
+    "dannys_ores:sandstone_iron_ore",
+    "dannys_ores:red_sandstone_iron_ore",
+    "dannys_ores:blue_ice_iron_ore",
+    "dannys_ores:packed_ice_iron_ore",
+    "dannys_ores:bedrock_iron_ore",
+    "dannys_ores:quark_basalt_iron_ore",
+    "dannys_ores:quark_jasper_iron_ore",
+    "dannys_ores:quark_limestone_iron_ore",
+    "dannys_ores:quark_marble_iron_ore",
+    "dannys_ores:quark_slate_iron_ore",
+    "dannys_ores:embellishcraft_basalt_iron_ore",
+    "dannys_ores:embellishcraft_jade_iron_ore",
+    "dannys_ores:embellishcraft_gneiss_iron_ore",
+    "dannys_ores:embellishcraft_marble_iron_ore",
+    "dannys_ores:embellishcraft_larvikite_iron_ore",
+    "dannys_ores:embellishcraft_slate_iron_ore",
+    "dannys_ores:hardened_stone_iron_ore"
+  ]
+}
