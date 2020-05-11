@@ -29,6 +29,7 @@ import net.minecraft.world.storage.loot.functions.*;
 
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;

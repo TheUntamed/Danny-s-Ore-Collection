@@ -4,6 +4,7 @@ import com.danny.dannys_ores.configs.Xp;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 
@@ -15,47 +16,21 @@ public class OreWithXpDrop extends Block {
     }
 
     private int setValues(Random random) {
-        if (this == BlockInit.ANDESITE_COAL_ORE.get() || this == BlockInit.DIORITE_COAL_ORE.get() || this == BlockInit.GRANITE_COAL_ORE.get() || this == BlockInit.NETHERRACK_COAL_ORE.get() || this == BlockInit.END_STONE_COAL_ORE.get() || this == BlockInit.SAND_COAL_ORE.get() || this == BlockInit.GRAVEL_COAL_ORE.get() || this == BlockInit.SANDSTONE_COAL_ORE.get() || this == BlockInit.RED_SANDSTONE_COAL_ORE.get() || this == BlockInit.RED_SAND_COAL_ORE.get()
-                || this == BlockInit.QUARK_BASALT_COAL_ORE.get() || this == BlockInit.QUARK_LIMESTONE_COAL_ORE.get() || this == BlockInit.QUARK_JASPER_COAL_ORE.get() || this == BlockInit.QUARK_MARBLE_COAL_ORE.get() || this == BlockInit.QUARK_SLATE_COAL_ORE.get()
-                || this == BlockInit.EMBELLISHCRAFT_BASALT_COAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_GNEISS_COAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_JADE_COAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_LARVIKITE_COAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_MARBLE_COAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_SLATE_COAL_ORE.get()
-                || this == BlockInit.HARDENED_STONE_COAL_ORE.get()) {
-            return MathHelper.nextInt(random, 0, 2);
-        } else if (this == BlockInit.ANDESITE_DIAMOND_ORE.get() || this == BlockInit.DIORITE_DIAMOND_ORE.get() || this == BlockInit.GRANITE_DIAMOND_ORE.get() || this == BlockInit.NETHERRACK_DIAMOND_ORE.get() || this == BlockInit.END_STONE_DIAMOND_ORE.get() || this == BlockInit.SAND_DIAMOND_ORE.get() || this == BlockInit.GRAVEL_DIAMOND_ORE.get() || this == BlockInit.SANDSTONE_DIAMOND_ORE.get() || this == BlockInit.RED_SANDSTONE_DIAMOND_ORE.get() || this == BlockInit.RED_SAND_DIAMOND_ORE.get()
-                || this == BlockInit.QUARK_BASALT_DIAMOND_ORE.get() || this == BlockInit.QUARK_LIMESTONE_DIAMOND_ORE.get() || this == BlockInit.QUARK_JASPER_DIAMOND_ORE.get() || this == BlockInit.QUARK_MARBLE_DIAMOND_ORE.get() || this == BlockInit.QUARK_SLATE_DIAMOND_ORE.get()
-                || this == BlockInit.EMBELLISHCRAFT_BASALT_DIAMOND_ORE.get() || this == BlockInit.EMBELLISHCRAFT_GNEISS_DIAMOND_ORE.get() || this == BlockInit.EMBELLISHCRAFT_JADE_DIAMOND_ORE.get() || this == BlockInit.EMBELLISHCRAFT_LARVIKITE_DIAMOND_ORE.get() || this == BlockInit.EMBELLISHCRAFT_MARBLE_DIAMOND_ORE.get() || this == BlockInit.EMBELLISHCRAFT_SLATE_DIAMOND_ORE.get()
-                || this == BlockInit.HARDENED_STONE_DIAMOND_ORE.get()) {
-            return MathHelper.nextInt(random, 3, 7);
-        } else if (this == BlockInit.ANDESITE_EMERALD_ORE.get() || this == BlockInit.DIORITE_EMERALD_ORE.get() || this == BlockInit.GRANITE_EMERALD_ORE.get() || this == BlockInit.NETHERRACK_EMERALD_ORE.get() || this == BlockInit.END_STONE_EMERALD_ORE.get() || this == BlockInit.SAND_EMERALD_ORE.get() || this == BlockInit.GRAVEL_EMERALD_ORE.get() || this == BlockInit.SANDSTONE_EMERALD_ORE.get() || this == BlockInit.RED_SANDSTONE_EMERALD_ORE.get() || this == BlockInit.RED_SAND_EMERALD_ORE.get()
-                || this == BlockInit.QUARK_BASALT_EMERALD_ORE.get() || this == BlockInit.QUARK_LIMESTONE_EMERALD_ORE.get() || this == BlockInit.QUARK_JASPER_EMERALD_ORE.get() || this == BlockInit.QUARK_MARBLE_EMERALD_ORE.get() || this == BlockInit.QUARK_SLATE_EMERALD_ORE.get()
-                || this == BlockInit.EMBELLISHCRAFT_BASALT_EMERALD_ORE.get() || this == BlockInit.EMBELLISHCRAFT_GNEISS_EMERALD_ORE.get() || this == BlockInit.EMBELLISHCRAFT_JADE_EMERALD_ORE.get() || this == BlockInit.EMBELLISHCRAFT_LARVIKITE_EMERALD_ORE.get() || this == BlockInit.EMBELLISHCRAFT_MARBLE_EMERALD_ORE.get() || this == BlockInit.EMBELLISHCRAFT_SLATE_EMERALD_ORE.get()
-                || this == BlockInit.HARDENED_STONE_EMERALD_ORE.get()) {
-            return MathHelper.nextInt(random, 3, 7);
-        } else if (this == BlockInit.ANDESITE_LAPIS_ORE.get() || this == BlockInit.DIORITE_LAPIS_ORE.get() || this == BlockInit.GRANITE_LAPIS_ORE.get() || this == BlockInit.NETHERRACK_LAPIS_ORE.get() || this == BlockInit.END_STONE_LAPIS_ORE.get() || this == BlockInit.SAND_LAPIS_ORE.get() || this == BlockInit.GRAVEL_LAPIS_ORE.get() || this == BlockInit.SANDSTONE_LAPIS_ORE.get() || this == BlockInit.RED_SANDSTONE_LAPIS_ORE.get() || this == BlockInit.RED_SAND_LAPIS_ORE.get()
-                || this == BlockInit.QUARK_BASALT_LAPIS_ORE.get() || this == BlockInit.QUARK_LIMESTONE_LAPIS_ORE.get() || this == BlockInit.QUARK_JASPER_LAPIS_ORE.get() || this == BlockInit.QUARK_MARBLE_LAPIS_ORE.get() || this == BlockInit.QUARK_SLATE_LAPIS_ORE.get()
-                || this == BlockInit.EMBELLISHCRAFT_BASALT_LAPIS_ORE.get() || this == BlockInit.EMBELLISHCRAFT_GNEISS_LAPIS_ORE.get() || this == BlockInit.EMBELLISHCRAFT_JADE_LAPIS_ORE.get() || this == BlockInit.EMBELLISHCRAFT_LARVIKITE_LAPIS_ORE.get() || this == BlockInit.EMBELLISHCRAFT_MARBLE_LAPIS_ORE.get() || this == BlockInit.EMBELLISHCRAFT_SLATE_LAPIS_ORE.get()
-                || this == BlockInit.HARDENED_STONE_LAPIS_ORE.get()) {
-            return MathHelper.nextInt(random, 2, 5);
-        } else if (this == BlockInit.STONE_QUARTZ_ORE.get() || this == BlockInit.ANDESITE_QUARTZ_ORE.get() || this == BlockInit.DIORITE_QUARTZ_ORE.get() || this == BlockInit.GRANITE_QUARTZ_ORE.get() || this == BlockInit.END_STONE_QUARTZ_ORE.get() || this == BlockInit.SAND_QUARTZ_ORE.get() || this == BlockInit.GRAVEL_QUARTZ_ORE.get() || this == BlockInit.SANDSTONE_QUARTZ_ORE.get() || this == BlockInit.RED_SANDSTONE_QUARTZ_ORE.get() || this == BlockInit.RED_SAND_QUARTZ_ORE.get()
-                || this == BlockInit.QUARK_BASALT_QUARTZ_ORE.get() || this == BlockInit.QUARK_LIMESTONE_QUARTZ_ORE.get() || this == BlockInit.QUARK_JASPER_QUARTZ_ORE.get() || this == BlockInit.QUARK_MARBLE_QUARTZ_ORE.get() || this == BlockInit.QUARK_SLATE_QUARTZ_ORE.get()
-                || this == BlockInit.EMBELLISHCRAFT_BASALT_QUARTZ_ORE.get() || this == BlockInit.EMBELLISHCRAFT_GNEISS_QUARTZ_ORE.get() || this == BlockInit.EMBELLISHCRAFT_JADE_QUARTZ_ORE.get() || this == BlockInit.EMBELLISHCRAFT_LARVIKITE_QUARTZ_ORE.get() || this == BlockInit.EMBELLISHCRAFT_MARBLE_QUARTZ_ORE.get() || this == BlockInit.EMBELLISHCRAFT_SLATE_QUARTZ_ORE.get()
-                || this == BlockInit.HARDENED_STONE_QUARTZ_ORE.get()){
-            return MathHelper.nextInt(random, 2, 5);
-        } else if (this == BlockInit.ANDESITE_AMETHYST_ORE.get() || this == BlockInit.DIORITE_AMETHYST_ORE.get() || this == BlockInit.GRANITE_AMETHYST_ORE.get() || this == BlockInit.NETHERRACK_AMETHYST_ORE.get() || this == BlockInit.END_STONE_AMETHYST_ORE.get() || this == BlockInit.SAND_AMETHYST_ORE.get() || this == BlockInit.GRAVEL_AMETHYST_ORE.get() || this == BlockInit.SANDSTONE_AMETHYST_ORE.get() || this == BlockInit.RED_SANDSTONE_AMETHYST_ORE.get() || this == BlockInit.RED_SAND_AMETHYST_ORE.get()
-                || this == BlockInit.QUARK_BASALT_AMETHYST_ORE.get() || this == BlockInit.QUARK_LIMESTONE_AMETHYST_ORE.get() || this == BlockInit.QUARK_JASPER_AMETHYST_ORE.get() || this == BlockInit.QUARK_MARBLE_AMETHYST_ORE.get() || this == BlockInit.QUARK_SLATE_AMETHYST_ORE.get()
-                || this == BlockInit.EMBELLISHCRAFT_BASALT_AMETHYST_ORE.get() || this == BlockInit.EMBELLISHCRAFT_GNEISS_AMETHYST_ORE.get() || this == BlockInit.EMBELLISHCRAFT_JADE_AMETHYST_ORE.get() || this == BlockInit.EMBELLISHCRAFT_LARVIKITE_AMETHYST_ORE.get() || this == BlockInit.EMBELLISHCRAFT_MARBLE_AMETHYST_ORE.get() || this == BlockInit.EMBELLISHCRAFT_SLATE_AMETHYST_ORE.get()
-                || this == BlockInit.HARDENED_STONE_AMETHYST_ORE.get()) {
-            return MathHelper.nextInt(random, 3, 7);
-        } else if (this == BlockInit.ANDESITE_BLACK_OPAL_ORE.get() || this == BlockInit.DIORITE_BLACK_OPAL_ORE.get() || this == BlockInit.GRANITE_BLACK_OPAL_ORE.get() || this == BlockInit.NETHERRACK_BLACK_OPAL_ORE.get() || this == BlockInit.END_STONE_BLACK_OPAL_ORE.get() || this == BlockInit.SAND_BLACK_OPAL_ORE.get() || this == BlockInit.GRAVEL_BLACK_OPAL_ORE.get() || this == BlockInit.SANDSTONE_BLACK_OPAL_ORE.get() || this == BlockInit.RED_SANDSTONE_BLACK_OPAL_ORE.get() || this == BlockInit.RED_SAND_BLACK_OPAL_ORE.get()
-                || this == BlockInit.QUARK_BASALT_BLACK_OPAL_ORE.get() || this == BlockInit.QUARK_LIMESTONE_BLACK_OPAL_ORE.get() || this == BlockInit.QUARK_JASPER_BLACK_OPAL_ORE.get() || this == BlockInit.QUARK_MARBLE_BLACK_OPAL_ORE.get() || this == BlockInit.QUARK_SLATE_BLACK_OPAL_ORE.get()
-                || this == BlockInit.EMBELLISHCRAFT_BASALT_BLACK_OPAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_GNEISS_BLACK_OPAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_JADE_BLACK_OPAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_LARVIKITE_BLACK_OPAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_MARBLE_BLACK_OPAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_SLATE_BLACK_OPAL_ORE.get()
-                || this == BlockInit.HARDENED_STONE_BLACK_OPAL_ORE.get()) {
-            return MathHelper.nextInt(random, 5, 10);
-        } else if (this == BlockInit.ANDESITE_WHITE_OPAL_ORE.get() || this == BlockInit.DIORITE_WHITE_OPAL_ORE.get() || this == BlockInit.GRANITE_WHITE_OPAL_ORE.get() || this == BlockInit.NETHERRACK_WHITE_OPAL_ORE.get() || this == BlockInit.END_STONE_WHITE_OPAL_ORE.get() || this == BlockInit.SAND_WHITE_OPAL_ORE.get() || this == BlockInit.GRAVEL_WHITE_OPAL_ORE.get() || this == BlockInit.SANDSTONE_WHITE_OPAL_ORE.get() || this == BlockInit.RED_SANDSTONE_WHITE_OPAL_ORE.get() || this == BlockInit.RED_SAND_WHITE_OPAL_ORE.get()
-                || this == BlockInit.QUARK_BASALT_WHITE_OPAL_ORE.get() || this == BlockInit.QUARK_LIMESTONE_WHITE_OPAL_ORE.get() || this == BlockInit.QUARK_JASPER_WHITE_OPAL_ORE.get() || this == BlockInit.QUARK_MARBLE_WHITE_OPAL_ORE.get() || this == BlockInit.QUARK_SLATE_WHITE_OPAL_ORE.get()
-                || this == BlockInit.EMBELLISHCRAFT_BASALT_WHITE_OPAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_GNEISS_WHITE_OPAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_JADE_WHITE_OPAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_LARVIKITE_WHITE_OPAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_MARBLE_WHITE_OPAL_ORE.get() || this == BlockInit.EMBELLISHCRAFT_SLATE_WHITE_OPAL_ORE.get()
-                || this == BlockInit.HARDENED_STONE_WHITE_OPAL_ORE.get()) {
-            return MathHelper.nextInt(random, 5, 10);
-        } else if (this == BlockInit.STONE_XP_ORE.get()) {
+        ResourceLocation resLoc = this.getRegistryName();
+        if (resLoc != null) {
+            String regName = resLoc.toString();
+            if (regName.contains("_coal_ore")) { return MathHelper.nextInt(random, 0, 2); }
+            else if (regName.contains("_diamond_ore")) { return MathHelper.nextInt(random, 3, 7); }
+            else if (regName.contains("_emerald_ore")) { return MathHelper.nextInt(random, 3, 7); }
+            else if (regName.contains("_lapis_ore")) { return MathHelper.nextInt(random, 2, 5); }
+            else if (regName.contains("_redstone_ore")) { return MathHelper.nextInt(random, 2, 5); }
+            else if (regName.contains("_quartz_ore")) { return MathHelper.nextInt(random, 3, 7); }
+            else if (regName.contains("_amethyst_ore")) { return MathHelper.nextInt(random, 3, 7); }
+            else if (regName.contains("_black_opal_ore")) { return MathHelper.nextInt(random, 5, 10); }
+            else if (regName.contains("_white_opal_ore")) { return MathHelper.nextInt(random, 5, 10); }
+            else if (regName.contains("_lucky_ore")) { return MathHelper.nextInt(random, 0, 7); }
+        }
+        if (this == BlockInit.STONE_XP_ORE.get()) {
             return MathHelper.nextInt(random, Xp.minXpStoneXpOre.get(), Xp.maxXpStoneXpOre.get());
         } else if (this == BlockInit.ANDESITE_XP_ORE.get()) {
             return MathHelper.nextInt(random, Xp.minXpAndesiteXpOre.get(), Xp.maxXpAndesiteXpOre.get());
