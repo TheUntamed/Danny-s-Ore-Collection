@@ -3,6 +3,7 @@ package com.danny.dannys_ores.generation;
 import com.danny.dannys_ores.configs.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.*;
@@ -20,16 +21,26 @@ public class OreGen {
         //Check if config is correct
         ArrayList<String> biomeVerify = new ArrayList<>();
         ArrayList<String> tempVerify = new ArrayList<>();
+        String biomeRNS = "";
         if (General.enableConfigChecker.get()) {
             for (Biome biome : ForgeRegistries.BIOMES) {
-                biomeVerify.add(biome.getRegistryName().toString());
-                tempVerify.add(biome.getTempCategory().toString());
+                ResourceLocation biomeResLoc = biome.getRegistryName();
+                ResourceLocation tempResLoc = biome.getRegistryName();
+                if (biomeResLoc != null) {
+                    biomeVerify.add(biomeResLoc.toString());
+                }
+                if (tempResLoc != null) {
+                    tempVerify.add(tempResLoc.toString());
+                }
             }
             ConfigChecker.checkConfig(biomeVerify, tempVerify);
         }
 
         for (Biome biome : ForgeRegistries.BIOMES) {
-            String biomeRNS = biome.getRegistryName().toString();
+            ResourceLocation biomeResLoc = biome.getRegistryName();
+            if (biomeResLoc != null) {
+                biomeRNS = biomeResLoc.toString();
+            }
             String biomeTS = biome.getTempCategory().toString();
 
             if (biome.getCategory() != Biome.Category.NETHER && biome.getCategory() != Biome.Category.THEEND) {
@@ -80,6 +91,14 @@ public class OreGen {
             if (Mithril.enableMithrilOres.get()) { MithrilGen.addMithrilGen(biome, biomeRNS, biomeTS); }
             if (Runite.enableRuniteOres.get()) { RuniteGen.addRuniteGen(biome, biomeRNS, biomeTS); }
             if (WhiteOpal.enableWhiteOpalOres.get()) { WhiteOpalGen.addWhiteOpalGen(biome, biomeRNS, biomeTS); }
+            if (Ardite.enableArditeOres.get()) { ArditeGen.addArditeGen(biome, biomeRNS, biomeTS); }
+            if (BlackQuartz.enableBlackQuartzOres.get()) { BlackQuartzGen.addBlackQuartzGen(biome, biomeRNS, biomeTS); }
+            if (Chrome.enableChromeOres.get()) { ChromeGen.addChromeGen(biome, biomeRNS, biomeTS); }
+            if (Cobalt.enableCobaltOres.get()) { CobaltGen.addCobaltGen(biome, biomeRNS, biomeTS); }
+            if (Draconium.enableDraconiumOres.get()) { DraconiumGen.addDraconiumGen(biome, biomeRNS, biomeTS); }
+            if (ManaInfused.enableManaInfusedOres.get()) { ManaInfusedGen.addManaInfusedGen(biome, biomeRNS, biomeTS); }
+            if (Niter.enableNiterOres.get()) { NiterGen.addNiterGen(biome, biomeRNS, biomeTS); }
+            if (Sulfur.enableSulfurOres.get()) { SulfurGen.addSulfurGen(biome, biomeRNS, biomeTS); }
         }
     }
 

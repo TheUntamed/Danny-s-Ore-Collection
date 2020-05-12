@@ -128,7 +128,6 @@ public class Iridium {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceIridiumOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceIridiumOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceIridiumOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceIridiumOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceIridiumOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceIridiumOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceIridiumOre;
@@ -139,7 +138,6 @@ public class Iridium {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceIridiumOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceIridiumOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceIridiumOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceIridiumOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceIridiumOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceIridiumOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceIridiumOre;

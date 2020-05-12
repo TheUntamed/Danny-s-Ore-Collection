@@ -128,7 +128,6 @@ public class Platinum {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIcePlatinumOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIcePlatinumOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIcePlatinumOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIcePlatinumOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIcePlatinumOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIcePlatinumOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIcePlatinumOre;
@@ -139,7 +138,6 @@ public class Platinum {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIcePlatinumOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIcePlatinumOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIcePlatinumOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIcePlatinumOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIcePlatinumOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIcePlatinumOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIcePlatinumOre;

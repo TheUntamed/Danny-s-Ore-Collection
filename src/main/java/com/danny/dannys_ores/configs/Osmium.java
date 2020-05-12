@@ -129,7 +129,6 @@ public class Osmium {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceOsmiumOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceOsmiumOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceOsmiumOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceOsmiumOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceOsmiumOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceOsmiumOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceOsmiumOre;
@@ -140,7 +139,6 @@ public class Osmium {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceOsmiumOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceOsmiumOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceOsmiumOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceOsmiumOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceOsmiumOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceOsmiumOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceOsmiumOre;

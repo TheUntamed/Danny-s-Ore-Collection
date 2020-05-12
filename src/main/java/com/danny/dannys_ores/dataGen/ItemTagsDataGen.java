@@ -42,6 +42,14 @@ public class ItemTagsDataGen extends ItemTagsProvider {
     private ArrayList<Item> white_opal = new ArrayList<>();
     private ArrayList<Item> xp = new ArrayList<>();
     private ArrayList<Item> zinc = new ArrayList<>();
+    private ArrayList<Item> ardite = new ArrayList<>();
+    private ArrayList<Item> black_quartz = new ArrayList<>();
+    private ArrayList<Item> chrome = new ArrayList<>();
+    private ArrayList<Item> cobalt = new ArrayList<>();
+    private ArrayList<Item> draconium = new ArrayList<>();
+    private ArrayList<Item> mana_infused = new ArrayList<>();
+    private ArrayList<Item> niter = new ArrayList<>();
+    private ArrayList<Item> sulfur = new ArrayList<>();
 
     public ItemTagsDataGen(DataGenerator generator)
     {
@@ -83,6 +91,14 @@ public class ItemTagsDataGen extends ItemTagsProvider {
                 if (blockName.contains("white_opal")) { white_opal.add(block.get().asItem()); }
                 if (blockName.contains("xp")) { xp.add(block.get().asItem()); }
                 if (blockName.contains("zinc")) { zinc.add(block.get().asItem()); }
+                if (blockName.contains("ardite")) { ardite.add(block.get().asItem()); }
+                if (blockName.contains("black_quartz")) { black_quartz.add(block.get().asItem()); }
+                if (blockName.contains("chrome")) { chrome.add(block.get().asItem()); }
+                if (blockName.contains("draconium")) { draconium.add(block.get().asItem()); }
+                if (blockName.contains("mana_infused")) { mana_infused.add(block.get().asItem()); }
+                if (blockName.contains("niter")) { niter.add(block.get().asItem()); }
+                if (blockName.contains("cobalt")) { cobalt.add(block.get().asItem()); }
+                if (blockName.contains("sulfur")) { sulfur.add(block.get().asItem()); }
             }
         }
         addForgeTag("ores", ores);
@@ -114,6 +130,14 @@ public class ItemTagsDataGen extends ItemTagsProvider {
         addForgeTag("ores/white_opal", white_opal);
         addForgeTag("ores/xp", xp);
         addForgeTag("ores/zinc", zinc);
+        addForgeTag("ores/ardite", ardite);
+        addForgeTag("ores/black_quartz", black_quartz);
+        addForgeTag("ores/chrome", chrome);
+        addForgeTag("ores/cobalt", cobalt);
+        addForgeTag("ores/draconium", draconium);
+        addForgeTag("ores/mana_infused", mana_infused);
+        addForgeTag("ores/niter", niter);
+        addForgeTag("ores/sulfur", sulfur);
     }
 
     private void addForgeTag(String name, ArrayList<Item> itemsIn) {

@@ -132,7 +132,6 @@ public class Iron {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceIronOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceIronOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceIronOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceIronOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceIronOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceIronOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceIronOre;
@@ -143,7 +142,6 @@ public class Iron {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceIronOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceIronOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceIronOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceIronOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceIronOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceIronOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceIronOre;

@@ -128,7 +128,6 @@ public class Quartz {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceQuartzOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceQuartzOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceQuartzOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceQuartzOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceQuartzOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceQuartzOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceQuartzOre;
@@ -139,7 +138,6 @@ public class Quartz {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceQuartzOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceQuartzOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceQuartzOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceQuartzOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceQuartzOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceQuartzOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceQuartzOre;
@@ -623,7 +621,7 @@ public class Quartz {
         enableHardenedStoneQuartzOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableHardenedStoneQuartzOre", true);
         veinSizeHardenedStoneQuartzOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSizeHardenedStoneQuartzOre", 9, 0, 65536);
         veinsPerChunkHardenedStoneQuartzOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunkHardenedStoneQuartzOre", 2, 0, 65536);
-        minHeightHardenedStoneQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneQuartzOre", 4, 0, 256);
+        minHeightHardenedStoneQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeightHardenedStoneQuartzOre", 0, 0, 256);
         maxHeightHardenedStoneQuartzOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeightHardenedStoneQuartzOre", 32, 0, 256);
         isTempWhitelistHardenedStoneQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelistHardenedStoneQuartzOre", false);
         temperatureBlacklistHardenedStoneQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklistHardenedStoneQuartzOre", new ArrayList<String>());
