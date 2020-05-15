@@ -4,7 +4,6 @@ import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.ConfigHandler;
-import com.danny.dannys_ores.util.FillerBlock;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -21,14 +20,14 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.ArrayList;
 import java.util.List;
-/*
-This file was inspired by the code of the mod almost-all-the-ores by waylanderou.
-https://github.com/waylanderou/almost-all-the-ores
- */
-public class OreGen {
+
+public class GenerationHandler {
 
     /**
      * Called by Main class to process all ore generation.
+     *
+     * The config checker and disable features were inspired by the code of the mod almost-all-the-ores by waylanderou.
+     * https://github.com/waylanderou/almost-all-the-ores
      */
     public static void generateOre() {
         String biomeName = "";
@@ -95,7 +94,6 @@ public class OreGen {
                             }
                         } else {
                             if (getStoneGenerationStatus(config, blockName, biomeName, tempName)) {
-                                System.err.println("Add " + blockName + " to the feature list!");
                                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, block.getDefaultState(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.clusterSize")).get())).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.clustersPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
                             }
                         }

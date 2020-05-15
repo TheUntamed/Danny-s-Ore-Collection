@@ -2,10 +2,9 @@ package com.danny.dannys_ores;
 
 import com.danny.dannys_ores.configs.Coal;
 import com.danny.dannys_ores.configs.General;
-import com.danny.dannys_ores.generation.OreGen;
+import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -33,8 +32,13 @@ public class Main {
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "dannys_ores";
     public static Main instance;
+
+    // True if the mod 'Quark' by Vazkii is in the mod list.
     public static boolean quark;
+
+    // True if the mod 'Embellishcraft' by Mapper is in the mod list.
     public static boolean  embellishcraft;
+
 
     public Main() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -55,6 +59,10 @@ public class Main {
     private void setup(final FMLCommonSetupEvent event) {
     }
 
+    /**
+     * Registers the BlockItems for all blocks of this mod.
+     * @param event The event for item registry.
+     */
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         final IForgeRegistry<Item> registry = event.getRegistry();
@@ -78,8 +86,7 @@ public class Main {
 
     @SubscribeEvent
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
-        //StoneGen.generateStone();
-        OreGen.generateOre();
+        GenerationHandler.generateOre();
     }
 
 //    public static final ItemGroup TAB = new ItemGroup("dannys_ores_tab") {
@@ -90,6 +97,9 @@ public class Main {
 //        }
 //    };
 
+    /**
+     * Creates a custom item group (creative tab) for the blocks of this mod.
+     */
     public static class MyItemGroup extends ItemGroup {
         public static final ItemGroup instance = new MyItemGroup(ItemGroup.GROUPS.length, "dannys_ores_tab");
 
@@ -99,7 +109,7 @@ public class Main {
 
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(BlockInit.RED_SAND_GOLD_ORE.get());
+            return new ItemStack(BlockInit.BEDROCK_LUCKY_ORE.get());
         }
     }
 }

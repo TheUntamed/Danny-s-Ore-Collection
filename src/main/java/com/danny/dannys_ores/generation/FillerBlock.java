@@ -1,4 +1,4 @@
-package com.danny.dannys_ores.util;
+package com.danny.dannys_ores.generation;
 
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.init.BlockInit;

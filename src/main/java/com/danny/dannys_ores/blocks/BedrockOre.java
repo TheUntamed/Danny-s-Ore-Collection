@@ -15,10 +15,14 @@ public class BedrockOre extends Block {
         super(properties);
     }
 
-    /*
-    This method was inspired by the Carbonado mod (by InsaneGames_)
-    https://www.curseforge.com/minecraft/mc-mods/carbonado
-    */
+    /**
+     * This method was inspired by the Carbonado mod (by InsaneGames_)
+     * https://www.curseforge.com/minecraft/mc-mods/carbonado
+     *
+     * @param worldIn A World instance
+     * @param pos The position of the destroyed block.
+     * @param explosionIn A Explosion
+     */
     @Override
     public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
         if (General.replaceBedrockOreWithBedrockOnExplosion.get()) {
@@ -27,6 +31,12 @@ public class BedrockOre extends Block {
         worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 2.0f, 1.5f);
     }
 
+    /**
+     *  The resistance for bedrock ores can be defined via config.
+     *  This method can be called on a bedrock ore block to return the corresponding resistance.
+     *
+     * @return The resistance of the block.
+     */
     @SuppressWarnings("deprecation")
     @Override
     public float getExplosionResistance() {
