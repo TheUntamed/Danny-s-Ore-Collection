@@ -1,9 +1,10 @@
 package com.danny.dannys_ores;
 
+import com.danny.dannys_ores.configs.Coal;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.generation.OreGen;
-import com.danny.dannys_ores.generation.StoneGen;
 import com.danny.dannys_ores.init.BlockInit;
+import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -46,6 +47,9 @@ public class Main {
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
+
+        UnmodifiableConfig s = Coal.spec.getValues();
+        System.err.println("Unmodifiable Configs!: " + s);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -74,7 +78,7 @@ public class Main {
 
     @SubscribeEvent
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
-        StoneGen.generateStone();
+        //StoneGen.generateStone();
         OreGen.generateOre();
     }
 

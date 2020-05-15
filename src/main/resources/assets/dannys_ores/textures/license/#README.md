@@ -37,3 +37,13 @@ https://www.curseforge.com/minecraft/mc-mods/tinkers-construct
 
 The Ore Overlay for the Chrome Ore were part of the corresponding ore textures from 'Substratum' (by exter7)
 https://www.curseforge.com/minecraft/mc-mods/substratum
+
+The Ore Overlay for the Ruby, Sapphire and Peridot Ore are modified versions of the corresponding ore textures from 'Project Red' (by MrTJP)
+https://www.curseforge.com/minecraft/mc-mods/project-red-world
+
+The Ore Overlay for the Inferium Ore were part of the corresponding ore textures from 'Mystical Agriculture' (by BlakeBr0)
+The Ore Overly of the Prudentium, Tertium, Imperium and Supremium Ore were inspired by the corresponding essence textures.
+https://www.curseforge.com/minecraft/mc-mods/mystical-agriculture
+
+The Ore Overly of the Insanium Ore were inspired by the corresponding essence textures from 'Mystical Agradditions' (by BlakeBr0)
+https://www.curseforge.com/minecraft/mc-mods/mystical-agradditions

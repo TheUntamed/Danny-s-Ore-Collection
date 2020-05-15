@@ -18,7 +18,7 @@ public class BedrockOre extends Block {
     /*
     This method was inspired by the Carbonado mod (by InsaneGames_)
     https://www.curseforge.com/minecraft/mc-mods/carbonado
- */
+    */
     @Override
     public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
         if (General.replaceBedrockOreWithBedrockOnExplosion.get()) {
@@ -30,6 +30,7 @@ public class BedrockOre extends Block {
     @SuppressWarnings("deprecation")
     @Override
     public float getExplosionResistance() {
+
         if (this == BlockInit.BEDROCK_ALUMINUM_ORE.get()) { return Aluminum.resistanceBedrockAluminumOre.get().floatValue(); }
         else if (this == BlockInit.BEDROCK_COAL_ORE.get()) { return Coal.resistanceBedrockCoalOre.get().floatValue(); }
         else if (this == BlockInit.BEDROCK_COPPER_ORE.get()) { return Copper.resistanceBedrockCopperOre.get().floatValue(); }

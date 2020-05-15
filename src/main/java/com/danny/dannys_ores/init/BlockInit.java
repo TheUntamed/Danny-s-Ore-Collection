@@ -6,7 +6,6 @@ import com.danny.dannys_ores.blocks.BedrockOreWithXpDrop;
 import com.danny.dannys_ores.blocks.OreWithXpDrop;
 import com.danny.dannys_ores.materials.MyMaterials;
 import net.minecraft.block.Block;
-import net.minecraft.block.IceBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -18,10 +17,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
-//@Mod(Main.MOD_ID)
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
 public class BlockInit {
 
