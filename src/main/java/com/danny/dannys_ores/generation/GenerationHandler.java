@@ -89,14 +89,13 @@ public class GenerationHandler {
                     if (!blockName.contains("quark") && !blockName.contains("embellishcraft") || blockName.contains("quark") && Main.quark || blockName.contains("embellishcraft") && Main.embellishcraft) {
                         UnmodifiableConfig config = ConfigHandler.getConfig(blockName);
                         if (blockName.contains("_ore")) {
-                            //Block fillerBlock = Blocks.BARRIER;
-//                            if (block instanceof BaseBlock) {
-//                                if (block.getRegistryName().toString().contains("bedrock")) {
-//                                    System.err.println("Inside Bedrock Check!");
-//                                }
-//                                fillerBlock = ((BaseBlock) block).getBlockBase();
-//                            }
-                            Block fillerBlock = FillerBlock.getFillerBlock(block);
+                            Block fillerBlock = Blocks.BARRIER;
+                            if (block instanceof BaseBlock) {
+                                if (block.getRegistryName().toString().contains("bedrock")) {
+                                    System.err.println("Inside Bedrock Check!");
+                                }
+                                fillerBlock = ((BaseBlock) block).getBlockBase();
+                            }
                             if (getOreGenerationStatus(config, regName, biomeName, tempName)) {
                                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinSize")).get())).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinsPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
                             }

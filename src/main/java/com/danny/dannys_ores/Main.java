@@ -109,7 +109,7 @@ public class Main {
 
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(BlockInit.BEDROCK_LUCKY_ORE.get());
+            return new ItemStack(BlockInit.HARDENED_STONE_DIAMOND_ORE.get());
         }
     }
 }
