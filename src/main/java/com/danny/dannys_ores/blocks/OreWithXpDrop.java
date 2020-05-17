@@ -13,10 +13,10 @@ import net.minecraftforge.common.ToolType;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class OreWithXpDrop extends Block {
+public class OreWithXpDrop extends BaseBlock {
 
-    public OreWithXpDrop(Block.Properties properties) {
-        super(properties);
+    public OreWithXpDrop(Block.Properties properties, Block blockBase) {
+        super(properties, blockBase);
     }
 
     private int setValues(Random random) {

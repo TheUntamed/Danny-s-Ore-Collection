@@ -1,6 +1,7 @@
 package com.danny.dannys_ores.generation;
 
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.blocks.BaseBlock;
 import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.ConfigHandler;
@@ -88,6 +89,13 @@ public class GenerationHandler {
                     if (!blockName.contains("quark") && !blockName.contains("embellishcraft") || blockName.contains("quark") && Main.quark || blockName.contains("embellishcraft") && Main.embellishcraft) {
                         UnmodifiableConfig config = ConfigHandler.getConfig(blockName);
                         if (blockName.contains("_ore")) {
+                            //Block fillerBlock = Blocks.BARRIER;
+//                            if (block instanceof BaseBlock) {
+//                                if (block.getRegistryName().toString().contains("bedrock")) {
+//                                    System.err.println("Inside Bedrock Check!");
+//                                }
+//                                fillerBlock = ((BaseBlock) block).getBlockBase();
+//                            }
                             Block fillerBlock = FillerBlock.getFillerBlock(block);
                             if (getOreGenerationStatus(config, regName, biomeName, tempName)) {
                                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinSize")).get())).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinsPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
@@ -100,43 +108,6 @@ public class GenerationHandler {
                     }
                 }
             }
-
-//            if (Iron.enableIronOres.get()) { IronGen.addIronGen(biome, biomeName, tempName); }
-//            if (Gold.enableGoldOres.get()) { GoldGen.addGoldGen(biome, biomeName, tempName); }
-//            if (Coal.enableCoalOres.get()) { CoalGen.addCoalGen(biome, biomeName, tempName); }
-//            if (Lapis.enableLapisOres.get()) { LapisGen.addLapisGen(biome, biomeName, tempName); }
-//            if (Redstone.enableRedstoneOres.get()) { RedstoneGen.addRedstoneGen(biome, biomeName, tempName); }
-//            if (Emerald.enableEmeraldOres.get()) { EmeraldGen.addEmeraldGen(biome, biomeName, tempName); }
-//            if (Diamond.enableDiamondOres.get()) { DiamondGen.addDiamondGen(biome, biomeName, tempName); }
-//            if (Quartz.enableQuartzOres.get()) { QuartzGen.addQuartzGen(biome, biomeName, tempName); }
-//            if (Copper.enableCopperOres.get()) { CopperGen.addCopperGen(biome, biomeName, tempName); }
-//            if (Aluminum.enableAluminumOres.get()) { AluminumGen.addAluminumGen(biome, biomeName, tempName); }
-//            if (Tin.enableTinOres.get()) { TinGen.addTinGen(biome, biomeName, tempName); }
-//            if (Silver.enableSilverOres.get()) { SilverGen.addSilverGen(biome, biomeName, tempName); }
-//            if (Lead.enableLeadOres.get()) { LeadGen.addLeadGen(biome, biomeName, tempName); }
-//            if (Uranium.enableUraniumOres.get()) { UraniumGen.addUraniumGen(biome, biomeName, tempName); }
-//            if (Nickel.enableNickelOres.get()) { NickelGen.addNickelGen(biome, biomeName, tempName); }
-//            if (Zinc.enableZincOres.get()) { ZincGen.addZincGen(biome, biomeName, tempName); }
-//            if (Platinum.enablePlatinumOres.get()) { PlatinumGen.addPlatinumGen(biome, biomeName, tempName); }
-//            if (Iridium.enableIridiumOres.get()) { IridiumGen.addIridiumGen(biome, biomeName, tempName); }
-//            if (Osmium.enableOsmiumOres.get()) { OsmiumGen.addOsmiumGen(biome, biomeName, tempName); }
-//            if (Xp.enableXpOres.get()) { XpGen.addXpGen(biome, biomeName, tempName); }
-//            if (Adamantium.enableAdamantiumOres.get()) { AdamantiumGen.addAdamantiumGen(biome, biomeName, tempName); }
-//            if (Amethyst.enableAmethystOres.get()) { AmethystGen.addAmethystGen(biome, biomeName, tempName); }
-//            if (Bismuth.enableBismuthOres.get()) { BismuthGen.addBismuthGen(biome, biomeName, tempName); }
-//            if (BlackOpal.enableBlackOpalOres.get()) { BlackOpalGen.addBlackOpalGen(biome, biomeName, tempName); }
-//            if (Lucky.enableLuckyOres.get()) { LuckyGen.addLuckyGen(biome, biomeName, tempName); }
-//            if (Mithril.enableMithrilOres.get()) { MithrilGen.addMithrilGen(biome, biomeName, tempName); }
-//            if (Runite.enableRuniteOres.get()) { RuniteGen.addRuniteGen(biome, biomeName, tempName); }
-//            if (WhiteOpal.enableWhiteOpalOres.get()) { WhiteOpalGen.addWhiteOpalGen(biome, biomeName, tempName); }
-//            if (Ardite.enableArditeOres.get()) { ArditeGen.addArditeGen(biome, biomeName, tempName); }
-//            if (BlackQuartz.enableBlackQuartzOres.get()) { BlackQuartzGen.addBlackQuartzGen(biome, biomeName, tempName); }
-//            if (Chrome.enableChromeOres.get()) { ChromeGen.addChromeGen(biome, biomeName, tempName); }
-//            if (Cobalt.enableCobaltOres.get()) { CobaltGen.addCobaltGen(biome, biomeName, tempName); }
-//            if (Draconium.enableDraconiumOres.get()) { DraconiumGen.addDraconiumGen(biome, biomeName, tempName); }
-//            if (ManaInfused.enableManaInfusedOres.get()) { ManaInfusedGen.addManaInfusedGen(biome, biomeName, tempName); }
-//            if (Niter.enableNiterOres.get()) { NiterGen.addNiterGen(biome, biomeName, tempName); }
-//            if (Sulfur.enableSulfurOres.get()) { SulfurGen.addSulfurGen(biome, biomeName, tempName); }
         }
     }
 

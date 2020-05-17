@@ -16,22 +16,22 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BedrockOreWithXpDrop extends Block {
-    public BedrockOreWithXpDrop(Block.Properties properties) {
-        super(properties);
+public class BedrockOreWithXpDrop extends BedrockOre {
+    public BedrockOreWithXpDrop(Block.Properties properties, Block blockBase) {
+        super(properties, blockBase);
     }
 
     /*
     This method was inspired by the Carbonado mod (by InsaneGames_)
     https://www.curseforge.com/minecraft/mc-mods/carbonado
  */
-    @Override
-    public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
-        if (General.replaceBedrockOreWithBedrockOnExplosion.get()) {
-            worldIn.setBlockState(pos, Blocks.BEDROCK.getDefaultState(), 3);
-        }
-        worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 2.0f, 1.5f);
-    }
+//    @Override
+//    public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
+//        if (General.replaceBedrockOreWithBedrockOnExplosion.get()) {
+//            worldIn.setBlockState(pos, Blocks.BEDROCK.getDefaultState(), 3);
+//        }
+//        worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 2.0f, 1.5f);
+//    }
 
     @SuppressWarnings("deprecation")
     @Override

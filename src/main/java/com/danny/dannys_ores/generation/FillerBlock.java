@@ -1,6 +1,7 @@
 package com.danny.dannys_ores.generation;
 
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.blocks.BaseBlock;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;

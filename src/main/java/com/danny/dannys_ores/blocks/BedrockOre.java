@@ -10,9 +10,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
-public class BedrockOre extends Block {
-    public BedrockOre(Block.Properties properties) {
-        super(properties);
+public class BedrockOre extends BaseBlock {
+
+    public BedrockOre(Block.Properties properties, Block blockBase) {
+        super(properties, blockBase);
     }
 
     /**
