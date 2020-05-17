@@ -48,6 +48,7 @@ public class ConfigHandler {
             } else {
                 return Quartz.spec.getValues(); }
         }
+
         if (blockName.contains("_redstone_")) { return Redstone.spec.getValues(); }
         if (blockName.contains("_runite_")) { return Runite.spec.getValues(); }
         if (blockName.contains("_silver_")) { return Silver.spec.getValues(); }
@@ -63,7 +64,20 @@ public class ConfigHandler {
         if (blockName.contains("_niter_")) { return Niter.spec.getValues(); }
         if (blockName.contains("_cobalt_")) { return Cobalt.spec.getValues(); }
         if (blockName.contains("_sulfur_")) { return Sulfur.spec.getValues(); }
-        else { return StoneVariants.spec.getValues(); }
+        if (blockName.contains("_electronite_")) { return Electronite.spec.getValues(); }
+        if (blockName.contains("_imperium_")) { return Imperium.spec.getValues(); }
+        if (blockName.contains("_inferium_")) { return Inferium.spec.getValues(); }
+        if (blockName.contains("_insanium_")) { return Insanium.spec.getValues(); }
+        if (blockName.contains("_peridot_")) { return Peridot.spec.getValues(); }
+        if (blockName.contains("_prosperity_")) { return Prosperity.spec.getValues(); }
+        if (blockName.contains("_prudentium_")) { return Prudentium.spec.getValues(); }
+        if (blockName.contains("_ruby_")) { return Ruby.spec.getValues(); }
+        if (blockName.contains("_sapphire_")) { return Sapphire.spec.getValues(); }
+        if (blockName.contains("_soulium_")) { return Soulium.spec.getValues(); }
+        if (blockName.contains("_supremium_")) { return Supremium.spec.getValues(); }
+        if (blockName.contains("_tertium_")) { return Tertium.spec.getValues(); }
+        if (blockName.contains("_zanite_")) { return Zanite.spec.getValues(); }
+        return StoneVariants.spec.getValues();
     }
 
     /**

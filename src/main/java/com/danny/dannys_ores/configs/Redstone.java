@@ -128,7 +128,6 @@ public class Redstone {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceRedstoneOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceRedstoneOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceRedstoneOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceRedstoneOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceRedstoneOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceRedstoneOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceRedstoneOre;
@@ -139,7 +138,6 @@ public class Redstone {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceRedstoneOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceRedstoneOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceRedstoneOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceRedstoneOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceRedstoneOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceRedstoneOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceRedstoneOre;

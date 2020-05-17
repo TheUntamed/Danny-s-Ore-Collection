@@ -127,7 +127,7 @@ public class General {
         }
         catch (FileAlreadyExistsException e)
         {
-            // Do nothing
+            // Nothing to do
         }
         catch (IOException e) {
             Main.LOGGER.error("Failed to create config directory for Danny's Ores mod.", e);
@@ -136,35 +136,48 @@ public class General {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, General.spec, Main.MOD_ID + "/#general.toml");
 
         StoneVariants.loadConfig();
-        Iron.loadConfig();
-        Gold.loadConfig();
-        Lapis.loadConfig();
-        Redstone.loadConfig();
-        Emerald.loadConfig();
-        Coal.loadConfig();
-        Diamond.loadConfig();
-        Quartz.loadConfig();
-        Copper.loadConfig();
-        Xp.loadConfig();
-        Aluminum.loadConfig();
-        Iridium.loadConfig();
-        Lead.loadConfig();
-        Platinum.loadConfig();
-        Silver.loadConfig();
-        Tin.loadConfig();
-        Nickel.loadConfig();
-        Zinc.loadConfig();
-        Osmium.loadConfig();
-        Uranium.loadConfig();
         Adamantium.loadConfig();
+        Aluminum.loadConfig();
         Amethyst.loadConfig();
+        Ardite.loadConfig();
         Bismuth.loadConfig();
         BlackOpal.loadConfig();
+        Coal.loadConfig();
+        Copper.loadConfig();
+        Diamond.loadConfig();
+        Electronite.loadConfig();
+        Emerald.loadConfig();
+        Gold.loadConfig();
+        Imperium.loadConfig();
+        Inferium.loadConfig();
+        Insanium.loadConfig();
+        Iridium.loadConfig();
+        Iron.loadConfig();
+        Lapis.loadConfig();
+        Lead.loadConfig();
         Lucky.loadConfig();
         Mithril.loadConfig();
+        Nickel.loadConfig();
+        Osmium.loadConfig();
+        Peridot.loadConfig();
+        Platinum.loadConfig();
+        Prosperity.loadConfig();
+        Prudentium.loadConfig();
+        Quartz.loadConfig();
+        Redstone.loadConfig();
+        Ruby.loadConfig();
         Runite.loadConfig();
+        Sapphire.loadConfig();
+        Silver.loadConfig();
+        Soulium.loadConfig();
+        Supremium.loadConfig();
+        Tertium.loadConfig();
+        Tin.loadConfig();
+        Uranium.loadConfig();
         WhiteOpal.loadConfig();
-        Ardite.loadConfig();
+        Xp.loadConfig();
+        Zanite.loadConfig();
+        Zinc.loadConfig();
 
     }
 }

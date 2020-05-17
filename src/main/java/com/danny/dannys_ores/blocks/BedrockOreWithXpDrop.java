@@ -3,6 +3,8 @@ package com.danny.dannys_ores.blocks;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.configs.Xp;
 import com.danny.dannys_ores.init.BlockInit;
+import com.danny.dannys_ores.init.BlockInitVanilla;
+import com.danny.dannys_ores.init.BlockInitXpDrop;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -21,22 +23,10 @@ public class BedrockOreWithXpDrop extends BedrockOre {
         super(properties, blockBase);
     }
 
-    /*
-    This method was inspired by the Carbonado mod (by InsaneGames_)
-    https://www.curseforge.com/minecraft/mc-mods/carbonado
- */
-//    @Override
-//    public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
-//        if (General.replaceBedrockOreWithBedrockOnExplosion.get()) {
-//            worldIn.setBlockState(pos, Blocks.BEDROCK.getDefaultState(), 3);
-//        }
-//        worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 2.0f, 1.5f);
-//    }
-
     @SuppressWarnings("deprecation")
     @Override
     public float getExplosionResistance() {
-        if (this == BlockInit.BEDROCK_XP_ORE.get()) {
+        if (this == BlockInitXpDrop.BEDROCK_XP_ORE.get()) {
             return Xp.resistanceBedrockXpOre.get().floatValue();
         } else {
             return this.blockResistance;
@@ -44,23 +34,23 @@ public class BedrockOreWithXpDrop extends BedrockOre {
     }
 
     private int setValues(Random random) {
-        if (this == BlockInit.BEDROCK_COAL_ORE.get()) {
+        if (this == BlockInitVanilla.BEDROCK_COAL_ORE.get()) {
             return MathHelper.nextInt(random, 0, 2);
-        } else if (this == BlockInit.BEDROCK_DIAMOND_ORE.get()) {
+        } else if (this == BlockInitVanilla.BEDROCK_DIAMOND_ORE.get()) {
             return MathHelper.nextInt(random, 3, 7);
-        } else if (this == BlockInit.BEDROCK_EMERALD_ORE.get()) {
+        } else if (this == BlockInitVanilla.BEDROCK_EMERALD_ORE.get()) {
             return MathHelper.nextInt(random, 3, 7);
-        } else if (this == BlockInit.BEDROCK_LAPIS_ORE.get()) {
+        } else if (this == BlockInitVanilla.BEDROCK_LAPIS_ORE.get()) {
             return MathHelper.nextInt(random, 2, 5);
-        } else if (this == BlockInit.BEDROCK_QUARTZ_ORE.get()) {
+        } else if (this == BlockInitVanilla.BEDROCK_QUARTZ_ORE.get()) {
             return MathHelper.nextInt(random, 2, 5);
-        } else if (this == BlockInit.BEDROCK_AMETHYST_ORE.get()) {
+        } else if (this == BlockInitXpDrop.BEDROCK_AMETHYST_ORE.get()) {
             return MathHelper.nextInt(random, 3, 7);
-        } else if (this == BlockInit.BEDROCK_BLACK_OPAL_ORE.get()) {
+        } else if (this == BlockInitXpDrop.BEDROCK_BLACK_OPAL_ORE.get()) {
             return MathHelper.nextInt(random, 5, 10);
-        } else if (this == BlockInit.BEDROCK_WHITE_OPAL_ORE.get()) {
+        } else if (this == BlockInitXpDrop.BEDROCK_WHITE_OPAL_ORE.get()) {
             return MathHelper.nextInt(random, 5, 10);
-        } else if (this == BlockInit.BEDROCK_XP_ORE.get()) {
+        } else if (this == BlockInitXpDrop.BEDROCK_XP_ORE.get()) {
             return MathHelper.nextInt(random, Xp.minXpBedrockXpOre.get(), Xp.maxXpBedrockXpOre.get());
         } else {
             return 0;

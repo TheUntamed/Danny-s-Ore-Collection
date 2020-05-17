@@ -128,7 +128,6 @@ public class Uranium {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceUraniumOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceUraniumOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceUraniumOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceUraniumOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceUraniumOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceUraniumOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceUraniumOre;
@@ -139,7 +138,6 @@ public class Uranium {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceUraniumOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceUraniumOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceUraniumOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceUraniumOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceUraniumOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceUraniumOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceUraniumOre;

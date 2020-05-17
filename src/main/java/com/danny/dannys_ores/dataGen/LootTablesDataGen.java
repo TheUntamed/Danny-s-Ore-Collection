@@ -22,12 +22,6 @@ public class LootTablesDataGen extends LootTablesBaseProvider {
             ResourceLocation resLoc = block.get().getRegistryName();
             if (resLoc != null) {
                 String blockName = resLoc.toString().split(":")[1];
-//                if (blockName.contains("bedrock")) {
-//                    if (blockName.contains("_coal_ore") || blockName.contains("_lapis_ore") || blockName.contains("_redstone_ore") || blockName.contains("_quartz_ore") || blockName.contains("_diamond_ore") || blockName.contains("_emerald_ore")) {
-//
-//                    } else {
-//                        //lootTables.put(block.get(), bedrockTable(blockName, block.get()));
-//                    }
                 if (blockName.contains("packed_ice") || blockName.contains("blue_ice") || (blockName.contains("_xp_ore") && !blockName.contains("bedrock"))) {
                         lootTables.put(block.get(), justSilktouchTable(blockName, block.get()));
                 } else {
@@ -51,7 +45,6 @@ public class LootTablesDataGen extends LootTablesBaseProvider {
                 }
             }
         }
-        //lootTables.put(BlockInit.ANDESITE_COPPER_ORE.get(), basicOreTable("andesite_copper_ore", BlockInit.ANDESITE_COPPER_ORE.get()));
     }
 
     @Override

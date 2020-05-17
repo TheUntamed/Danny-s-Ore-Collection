@@ -47,3 +47,15 @@ https://www.curseforge.com/minecraft/mc-mods/mystical-agriculture
 
 The Ore Overly of the Insanium Ore were inspired by the corresponding essence textures from 'Mystical Agradditions' (by BlakeBr0)
 https://www.curseforge.com/minecraft/mc-mods/mystical-agradditions
+
+The Ore Overlay for the Tungsten, Pyrite and Galena Ore were part of the corresponding ore textures from 'Tech Reborn' (by modmuss50)
+https://www.curseforge.com/minecraft/mc-mods/techreborn
+
+The Ore Overlay for the Apatite Ore were part of the corresponding ore textures from 'Forestry' (by _ForgeUser7678633)
+https://www.curseforge.com/minecraft/mc-mods/forestry
+
+The Ore Overlay for the Yellorite, Anglesite and Benitoite Ore were part of the corresponding ore textures from 'Extreme Reactors' (by ZeroNoRyouki)
+https://www.curseforge.com/minecraft/mc-mods/extreme-reactors
+
+The Ore Overlay for the Resonating Ore were part of the corresponding ore textures from 'Deep Resonance' (by McJty)
+https://www.curseforge.com/minecraft/mc-mods/deep-resonance

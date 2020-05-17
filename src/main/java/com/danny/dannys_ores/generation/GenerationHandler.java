@@ -85,18 +85,16 @@ public class GenerationHandler {
                 ResourceLocation resLoc = block.getRegistryName();
                 if (resLoc != null) {
                     String regName = resLoc.toString();
-                    String blockName = regName.split(":")[1];
+                    String[] blockNameSplit = regName.split(":");
+                    String blockName = blockNameSplit[1];
                     if (!blockName.contains("quark") && !blockName.contains("embellishcraft") || blockName.contains("quark") && Main.quark || blockName.contains("embellishcraft") && Main.embellishcraft) {
                         UnmodifiableConfig config = ConfigHandler.getConfig(blockName);
                         if (blockName.contains("_ore")) {
                             Block fillerBlock = Blocks.BARRIER;
                             if (block instanceof BaseBlock) {
-                                if (block.getRegistryName().toString().contains("bedrock")) {
-                                    System.err.println("Inside Bedrock Check!");
-                                }
                                 fillerBlock = ((BaseBlock) block).getBlockBase();
                             }
-                            if (getOreGenerationStatus(config, regName, biomeName, tempName)) {
+                            if (getOreGenerationStatus(config, fillerBlock, blockNameSplit, biomeName, tempName)) {
                                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinSize")).get())).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinsPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
                             }
                         } else {
@@ -115,16 +113,16 @@ public class GenerationHandler {
      * The given block should be an ore of this mod.
      *
      * @param config The config of the block.
-     * @param regName The name of the block.
+     * @param fillerBlock The filler block of the block. Used to determine the variant of the block.
+     * @param blockNameSplit The registry name of the block split into modid and block name.
      * @param biomeName the current biome.
      * @param tempName The temperature of the given biome.
      * @return True if the given block should generate. False if it shouldn't.
      */
-    private static boolean getOreGenerationStatus(UnmodifiableConfig config , String regName, String biomeName, String tempName) {
-        String[] sub = regName.split(":");
-        String blockOwner = sub[0];
-        String blockName = sub[1];
-        String variant = getVariantWithModOwner(blockName);
+    private static boolean getOreGenerationStatus(UnmodifiableConfig config , Block fillerBlock, String[] blockNameSplit, String biomeName, String tempName) {
+        String blockOwner = blockNameSplit[0];
+        String blockName = blockNameSplit[1];
+        String variant = getVariantWithModOwner(fillerBlock);
         UnmodifiableConfig generalConfig = General.spec.getValues();
         boolean variantIsDisabled;
         if (blockOwner.equals("minecraft")) {
@@ -176,45 +174,17 @@ public class GenerationHandler {
      * but due to the syntax of a block name hard to get with string splitting.
      * This is the alternative.
      *
-     * @param blockName The name of the block for which the variant should be determined.
+     * @param fillerBlock The filler block is also always the variant of the replacer block (for which the variant should be determined).
      * @return The stone variant and its modid as concatenated String ('modid.variant') of the given block.
      */
-    private static String getVariantWithModOwner(String blockName) {
-        if (blockName.contains("andesite")) { return "minecraft.andesite"; }
-        else if (blockName.contains("bedrock")) { return "minecraft.bedrock"; }
-        else if (blockName.contains("blue_ice")) { return "minecraft.blue_ice"; }
-        else if (blockName.contains("diorite")) { return "minecraft.diorite"; }
-        else if (blockName.contains("embellishcraft_basalt")) { return "embellishcraft.embellishcraft_basalt"; }
-        else if (blockName.contains("embellishcraft_gneiss")) { return "embellishcraft.embellishcraft_gneiss"; }
-        else if (blockName.contains("embellishcraft_jade")) { return "embellishcraft.embellishcraft_jade"; }
-        else if (blockName.contains("embellishcraft_larvikite")) { return "embellishcraft.embellishcraft_larvikite"; }
-        else if (blockName.contains("embellishcraft_marble")) { return "embellishcraft.embellishcraft_marble"; }
-        else if (blockName.contains("embellishcraft_slate")) { return "embellishcraft.embellishcraft_slate"; }
-        else if (blockName.contains("end_stone")) { return "minecraft.end_stone"; }
-        else if (blockName.contains("granite")) { return "minecraft.granite"; }
-        else if (blockName.contains("gravel")) { return "minecraft.gravel"; }
-        else if (blockName.contains("hardened_stone")) { return "dannys_ores.hardened_stone"; }
-        else if (blockName.contains("netherrack")) { return "minecraft.netherrack"; }
-        else if (blockName.contains("packed_ice")) { return "minecraft.packed_ice"; }
-        else if (blockName.contains("quark_basalt")) { return "quark.quark_basalt"; }
-        else if (blockName.contains("quark_jasper")) { return "quark.quark_jasper"; }
-        else if (blockName.contains("quark_limestone")) { return "quark.quark_limestone"; }
-        else if (blockName.contains("quark_marble")) { return "quark.quark_marble"; }
-        else if (blockName.contains("quark_slate")) { return "quark.quark_slate"; }
-        else if (blockName.contains("sand")) {
-            if (blockName.contains("red_sand")) {
-                return "minecraft.red_sand";
-            } else {
-                return "minecraft.sand";
-            }
-        } else if (blockName.contains("sandstone")) {
-            if (blockName.contains("red_sandstone")) {
-                return "minecraft.red_sandstone";
-            } else {
-                return "minecraft.sandstone";
-            }
+    private static String getVariantWithModOwner(Block fillerBlock) {
+        String ownerAndVariant;
+        ResourceLocation resLoc = fillerBlock.getRegistryName();
+        if (resLoc != null) {
+            return ownerAndVariant = resLoc.toString().replace(":", ".");
+        } else {
+            throw new NullPointerException("Block '" + fillerBlock + "' has no registry name!");
         }
-        return "minecraft.stone";
     }
 
     /**

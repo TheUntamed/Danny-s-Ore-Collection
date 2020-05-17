@@ -13,43 +13,56 @@ import net.minecraftforge.fml.RegistryObject;
 import java.util.ArrayList;
 
 public class ItemTagsDataGen extends ItemTagsProvider {
-    private ArrayList<Item> ores = new ArrayList<>();
     private ArrayList<Item> adamantium = new ArrayList<>();
     private ArrayList<Item> aluminum = new ArrayList<>();
     private ArrayList<Item> amethyst = new ArrayList<>();
+    private ArrayList<Item> ardite = new ArrayList<>();
     private ArrayList<Item> bismuth = new ArrayList<>();
     private ArrayList<Item> black_opal = new ArrayList<>();
+    private ArrayList<Item> black_quartz = new ArrayList<>();
+    private ArrayList<Item> chrome = new ArrayList<>();
     private ArrayList<Item> coal = new ArrayList<>();
+    private ArrayList<Item> cobalt = new ArrayList<>();
     private ArrayList<Item> copper = new ArrayList<>();
     private ArrayList<Item> diamond = new ArrayList<>();
+    private ArrayList<Item> draconium = new ArrayList<>();
+    private ArrayList<Item> electronite = new ArrayList<>();
     private ArrayList<Item> emerald = new ArrayList<>();
     private ArrayList<Item> gold = new ArrayList<>();
+    private ArrayList<Item> imperium = new ArrayList<>();
+    private ArrayList<Item> inferium = new ArrayList<>();
+    private ArrayList<Item> insanium = new ArrayList<>();
     private ArrayList<Item> iridium = new ArrayList<>();
     private ArrayList<Item> iron = new ArrayList<>();
     private ArrayList<Item> lapis = new ArrayList<>();
     private ArrayList<Item> lead = new ArrayList<>();
     private ArrayList<Item> lucky = new ArrayList<>();
+    private ArrayList<Item> mana_infused = new ArrayList<>();
     private ArrayList<Item> mithril = new ArrayList<>();
     private ArrayList<Item> nickel = new ArrayList<>();
+    private ArrayList<Item> niter = new ArrayList<>();
+    private ArrayList<Item> ores = new ArrayList<>();
     private ArrayList<Item> osmium = new ArrayList<>();
+    private ArrayList<Item> peridot = new ArrayList<>();
     private ArrayList<Item> platinum = new ArrayList<>();
+    private ArrayList<Item> prosperity = new ArrayList<>();
+    private ArrayList<Item> prudentium = new ArrayList<>();
     private ArrayList<Item> quartz = new ArrayList<>();
     private ArrayList<Item> redstone = new ArrayList<>();
+    private ArrayList<Item> ruby = new ArrayList<>();
     private ArrayList<Item> runite = new ArrayList<>();
+    private ArrayList<Item> sapphire = new ArrayList<>();
     private ArrayList<Item> silver = new ArrayList<>();
+    private ArrayList<Item> soulium = new ArrayList<>();
+    private ArrayList<Item> sulfur = new ArrayList<>();
+    private ArrayList<Item> supremium = new ArrayList<>();
+    private ArrayList<Item> tertium = new ArrayList<>();
     private ArrayList<Item> tin = new ArrayList<>();
     private ArrayList<Item> uranium = new ArrayList<>();
     private ArrayList<Item> white_opal = new ArrayList<>();
     private ArrayList<Item> xp = new ArrayList<>();
+    private ArrayList<Item> zanite = new ArrayList<>();
     private ArrayList<Item> zinc = new ArrayList<>();
-    private ArrayList<Item> ardite = new ArrayList<>();
-    private ArrayList<Item> black_quartz = new ArrayList<>();
-    private ArrayList<Item> chrome = new ArrayList<>();
-    private ArrayList<Item> cobalt = new ArrayList<>();
-    private ArrayList<Item> draconium = new ArrayList<>();
-    private ArrayList<Item> mana_infused = new ArrayList<>();
-    private ArrayList<Item> niter = new ArrayList<>();
-    private ArrayList<Item> sulfur = new ArrayList<>();
 
     public ItemTagsDataGen(DataGenerator generator)
     {
@@ -62,43 +75,57 @@ public class ItemTagsDataGen extends ItemTagsProvider {
             ResourceLocation resLoc = block.get().getRegistryName();
             if (resLoc != null) {
                 String blockName = block.get().getRegistryName().toString().split(":")[1];
-                if (blockName.contains("ore")) { ores.add(block.get().asItem()); }
-                if (blockName.contains("adamantium")) { adamantium.add(block.get().asItem()); }
-                if (blockName.contains("aluminum")) { aluminum.add(block.get().asItem()); }
-                if (blockName.contains("amethyst")) { amethyst.add(block.get().asItem()); }
-                if (blockName.contains("bismuth")) { bismuth.add(block.get().asItem()); }
-                if (blockName.contains("black_opal")) { black_opal.add(block.get().asItem()); }
-                if (blockName.contains("coal")) { coal.add(block.get().asItem()); }
-                if (blockName.contains("copper")) { copper.add(block.get().asItem()); }
-                if (blockName.contains("diamond")) { diamond.add(block.get().asItem()); }
-                if (blockName.contains("emerald")) { emerald.add(block.get().asItem()); }
-                if (blockName.contains("gold")) { gold.add(block.get().asItem()); }
-                if (blockName.contains("iridium")) { iridium.add(block.get().asItem()); }
-                if (blockName.contains("iron")) { iron.add(block.get().asItem()); }
-                if (blockName.contains("lapis")) { lapis.add(block.get().asItem()); }
-                if (blockName.contains("lead")) { lead.add(block.get().asItem()); }
-                if (blockName.contains("lucky")) { lucky.add(block.get().asItem()); }
-                if (blockName.contains("mithril")) { mithril.add(block.get().asItem()); }
-                if (blockName.contains("nickel")) { nickel.add(block.get().asItem()); }
-                if (blockName.contains("osmium")) { osmium.add(block.get().asItem()); }
-                if (blockName.contains("platinum")) { platinum.add(block.get().asItem()); }
-                if (blockName.contains("quartz")) { quartz.add(block.get().asItem()); }
-                if (blockName.contains("redstone")) { redstone.add(block.get().asItem()); }
-                if (blockName.contains("runite")) { runite.add(block.get().asItem()); }
-                if (blockName.contains("silver")) { silver.add(block.get().asItem()); }
-                if (blockName.contains("tin")) { tin.add(block.get().asItem()); }
-                if (blockName.contains("uranium")) { uranium.add(block.get().asItem()); }
-                if (blockName.contains("white_opal")) { white_opal.add(block.get().asItem()); }
-                if (blockName.contains("xp")) { xp.add(block.get().asItem()); }
-                if (blockName.contains("zinc")) { zinc.add(block.get().asItem()); }
-                if (blockName.contains("ardite")) { ardite.add(block.get().asItem()); }
-                if (blockName.contains("black_quartz")) { black_quartz.add(block.get().asItem()); }
-                if (blockName.contains("chrome")) { chrome.add(block.get().asItem()); }
-                if (blockName.contains("draconium")) { draconium.add(block.get().asItem()); }
-                if (blockName.contains("mana_infused")) { mana_infused.add(block.get().asItem()); }
-                if (blockName.contains("niter")) { niter.add(block.get().asItem()); }
-                if (blockName.contains("cobalt")) { cobalt.add(block.get().asItem()); }
-                if (blockName.contains("sulfur")) { sulfur.add(block.get().asItem()); }
+                Item itemBlock = block.get().asItem();
+                if (blockName.contains("_adamantium_")) { adamantium.add(itemBlock); }
+                if (blockName.contains("_aluminum_")) { aluminum.add(itemBlock); }
+                if (blockName.contains("_amethyst_")) { amethyst.add(itemBlock); }
+                if (blockName.contains("_ardite_")) { ardite.add(itemBlock); }
+                if (blockName.contains("_bismuth_")) { bismuth.add(itemBlock); }
+                if (blockName.contains("_black_opal_")) { black_opal.add(itemBlock); }
+                if (blockName.contains("_black_quartz_")) { black_quartz.add(itemBlock); }
+                if (blockName.contains("_chrome_")) { chrome.add(itemBlock); }
+                if (blockName.contains("_coal_")) { coal.add(itemBlock); }
+                if (blockName.contains("_cobalt_")) { cobalt.add(itemBlock); }
+                if (blockName.contains("_copper_")) { copper.add(itemBlock); }
+                if (blockName.contains("_diamond_")) { diamond.add(itemBlock); }
+                if (blockName.contains("_draconium_")) { draconium.add(itemBlock); }
+                if (blockName.contains("_electronite_")) { electronite.add(itemBlock); }
+                if (blockName.contains("_emerald_")) { emerald.add(itemBlock); }
+                if (blockName.contains("_gold_")) { gold.add(itemBlock); }
+                if (blockName.contains("_imperium_")) { imperium.add(itemBlock); }
+                if (blockName.contains("_inferium_")) { inferium.add(itemBlock); }
+                if (blockName.contains("_insanium_")) { insanium.add(itemBlock); }
+                if (blockName.contains("_iridium_")) { iridium.add(itemBlock); }
+                if (blockName.contains("_iron_")) { iron.add(itemBlock); }
+                if (blockName.contains("_lapis_")) { lapis.add(itemBlock); }
+                if (blockName.contains("_lead_")) { lead.add(itemBlock); }
+                if (blockName.contains("_lucky_")) { lucky.add(itemBlock); }
+                if (blockName.contains("_mana_infused_")) { mana_infused.add(itemBlock); }
+                if (blockName.contains("_mithril_")) { mithril.add(itemBlock); }
+                if (blockName.contains("_nickel_")) { nickel.add(itemBlock); }
+                if (blockName.contains("_niter_")) { niter.add(itemBlock); }
+                if (blockName.contains("_ore")) { ores.add(itemBlock); }
+                if (blockName.contains("_osmium_")) { osmium.add(itemBlock); }
+                if (blockName.contains("_peridot_")) { peridot.add(itemBlock); }
+                if (blockName.contains("_platinum_")) { platinum.add(itemBlock); }
+                if (blockName.contains("_prosperity_")) { prosperity.add(itemBlock); }
+                if (blockName.contains("_prudentium_")) { prudentium.add(itemBlock); }
+                if (blockName.contains("_quartz_")) { quartz.add(itemBlock); }
+                if (blockName.contains("_redstone_")) { redstone.add(itemBlock); }
+                if (blockName.contains("_ruby_")) { ruby.add(itemBlock); }
+                if (blockName.contains("_runite_")) { runite.add(itemBlock); }
+                if (blockName.contains("_sapphire_")) { sapphire.add(itemBlock); }
+                if (blockName.contains("_silver_")) { silver.add(itemBlock); }
+                if (blockName.contains("_soulium_")) { soulium.add(itemBlock); }
+                if (blockName.contains("_sulfur_")) { sulfur.add(itemBlock); }
+                if (blockName.contains("_supremium_")) { supremium.add(itemBlock); }
+                if (blockName.contains("_tertium_")) { tertium.add(itemBlock); }
+                if (blockName.contains("_tin_")) { tin.add(itemBlock); }
+                if (blockName.contains("_uranium_")) { uranium.add(itemBlock); }
+                if (blockName.contains("_white_opal_")) { white_opal.add(itemBlock); }
+                if (blockName.contains("_xp_")) { xp.add(itemBlock); }
+                if (blockName.contains("_zanite_")) { zanite.add(itemBlock); }
+                if (blockName.contains("_zinc_")) { zinc.add(itemBlock); }
             }
         }
         addForgeTag("ores", ores);
@@ -138,6 +165,19 @@ public class ItemTagsDataGen extends ItemTagsProvider {
         addForgeTag("ores/mana_infused", mana_infused);
         addForgeTag("ores/niter", niter);
         addForgeTag("ores/sulfur", sulfur);
+        addForgeTag("ores/electronite", electronite);
+        addForgeTag("ores/imperium", imperium);
+        addForgeTag("ores/inferium", inferium);
+        addForgeTag("ores/insanium", insanium);
+        addForgeTag("ores/peridot", peridot);
+        addForgeTag("ores/prosperity", prosperity);
+        addForgeTag("ores/prudentium", prudentium);
+        addForgeTag("ores/ruby", ruby);
+        addForgeTag("ores/sapphire", sapphire);
+        addForgeTag("ores/soulium", soulium);
+        addForgeTag("ores/supremium", supremium);
+        addForgeTag("ores/tertium", tertium);
+        addForgeTag("ores/zanite", zanite);
     }
 
     private void addForgeTag(String name, ArrayList<Item> itemsIn) {
