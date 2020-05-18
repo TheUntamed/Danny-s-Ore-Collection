@@ -1,6 +1,6 @@
 package com.danny.dannys_ores;
 
-import com.danny.dannys_ores.configs.Coal;
+import com.danny.dannys_ores.configs.ores.vanilla.Coal;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;

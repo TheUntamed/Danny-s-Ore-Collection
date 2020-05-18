@@ -1,6 +1,9 @@
 package com.danny.dannys_ores.configs;
 
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.configs.ores.*;
+import com.danny.dannys_ores.configs.ores.vanilla.*;
+import com.danny.dannys_ores.configs.ores.with_xp_ore.*;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
