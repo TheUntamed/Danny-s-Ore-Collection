@@ -1,15 +1,18 @@
 package com.danny.dannys_ores;
 
+import com.danny.dannys_ores.blocks.ResonatingBlockItem;
 import com.danny.dannys_ores.configs.ores.vanilla.Coal;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.init.BlockInitVanilla;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
+import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,6 +27,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.IForgeRegistry;
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -68,14 +72,42 @@ public class Main {
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         final IForgeRegistry<Item> registry = event.getRegistry();
 
-        BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+        BlockInit.BLOCKS.getEntries().stream().filter(block -> !(exclude(block.get()))).map(RegistryObject::get).forEach(block -> {
             final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
             final BlockItem blockItem = new BlockItem(block, properties);
             blockItem.setRegistryName(block.getRegistryName());
             registry.register(blockItem);
         });
 
+        BlockInit.BLOCKS.getEntries().stream().filter(block -> (exclude(block.get()))).map(RegistryObject::get).forEach(block -> {
+            final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
+            final ResonatingBlockItem blockItem = new ResonatingBlockItem(block, properties);
+            blockItem.setRegistryName(block.getRegistryName());
+            registry.register(blockItem);
+        });
+
         LOGGER.debug("Registered BlockItems!");
+    }
+
+    /**
+     * ItemBlocks with a custom class have to be registered separately.
+     * This method will be called by the filter.
+     *
+     * @param block The block.
+     * @return True, if the block should be excluded from the general BlockItems registration.
+     */
+    private static boolean exclude(Block block) {
+        ResourceLocation resLoc = block.getRegistryName();
+        if (resLoc != null) {
+            String regName = resLoc.toString();
+            if (regName.contains("_resonating_")) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            throw new NullPointerException("");
+        }
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -89,14 +121,6 @@ public class Main {
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
         GenerationHandler.generateOre();
     }
-
-//    public static final ItemGroup TAB = new ItemGroup("dannys_ores_tab") {
-//
-//        @Override
-//        public ItemStack createIcon() {
-//            return new ItemStack(BlockInit.RED_SAND_GOLD_ORE.get());
-//        }
-//    };
 
     /**
      * Creates a custom item group (creative tab) for the blocks of this mod.

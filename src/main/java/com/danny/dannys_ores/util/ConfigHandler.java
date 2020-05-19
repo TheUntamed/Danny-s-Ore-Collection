@@ -80,6 +80,14 @@ public class ConfigHandler {
         if (blockName.contains("_supremium_")) { return Supremium.spec.getValues(); }
         if (blockName.contains("_tertium_")) { return Tertium.spec.getValues(); }
         if (blockName.contains("_zanite_")) { return Zanite.spec.getValues(); }
+        if (blockName.contains("_anglesite_")) { return Anglesite.spec.getValues(); }
+        if (blockName.contains("_apatite_")) { return Apatite.spec.getValues(); }
+        if (blockName.contains("_benitoite_")) { return Benitoite.spec.getValues(); }
+        if (blockName.contains("_galena_")) { return Galena.spec.getValues(); }
+        if (blockName.contains("_pyrite_")) { return Pyrite.spec.getValues(); }
+        if (blockName.contains("_resonating_")) { return Resonating.spec.getValues(); }
+        if (blockName.contains("_tungsten_")) { return Tungsten.spec.getValues(); }
+        if (blockName.contains("_yellorite_")) { return Yellorite.spec.getValues(); }
         return StoneVariants.spec.getValues();
     }
 

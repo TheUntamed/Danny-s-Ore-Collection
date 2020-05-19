@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:stone_apatite_ore",
+    "dannys_ores:andesite_apatite_ore",
+    "dannys_ores:diorite_apatite_ore",
+    "dannys_ores:granite_apatite_ore",
+    "dannys_ores:netherrack_apatite_ore",
+    "dannys_ores:end_stone_apatite_ore",
+    "dannys_ores:sand_apatite_ore",
+    "dannys_ores:red_sand_apatite_ore",
+    "dannys_ores:gravel_apatite_ore",
+    "dannys_ores:sandstone_apatite_ore",
+    "dannys_ores:red_sandstone_apatite_ore",
+    "dannys_ores:blue_ice_apatite_ore",
+    "dannys_ores:packed_ice_apatite_ore",
+    "dannys_ores:bedrock_apatite_ore",
+    "dannys_ores:quark_basalt_apatite_ore",
+    "dannys_ores:quark_jasper_apatite_ore",
+    "dannys_ores:quark_limestone_apatite_ore",
+    "dannys_ores:quark_marble_apatite_ore",
+    "dannys_ores:quark_slate_apatite_ore",
+    "dannys_ores:embellishcraft_basalt_apatite_ore",
+    "dannys_ores:embellishcraft_jade_apatite_ore",
+    "dannys_ores:embellishcraft_gneiss_apatite_ore",
+    "dannys_ores:embellishcraft_marble_apatite_ore",
+    "dannys_ores:embellishcraft_larvikite_apatite_ore",
+    "dannys_ores:embellishcraft_slate_apatite_ore",
+    "dannys_ores:hardened_stone_apatite_ore"
+  ]
+}

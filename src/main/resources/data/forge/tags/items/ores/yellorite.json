@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:stone_yellorite_ore",
+    "dannys_ores:andesite_yellorite_ore",
+    "dannys_ores:diorite_yellorite_ore",
+    "dannys_ores:granite_yellorite_ore",
+    "dannys_ores:netherrack_yellorite_ore",
+    "dannys_ores:end_stone_yellorite_ore",
+    "dannys_ores:sand_yellorite_ore",
+    "dannys_ores:red_sand_yellorite_ore",
+    "dannys_ores:gravel_yellorite_ore",
+    "dannys_ores:sandstone_yellorite_ore",
+    "dannys_ores:red_sandstone_yellorite_ore",
+    "dannys_ores:blue_ice_yellorite_ore",
+    "dannys_ores:packed_ice_yellorite_ore",
+    "dannys_ores:bedrock_yellorite_ore",
+    "dannys_ores:quark_basalt_yellorite_ore",
+    "dannys_ores:quark_jasper_yellorite_ore",
+    "dannys_ores:quark_limestone_yellorite_ore",
+    "dannys_ores:quark_marble_yellorite_ore",
+    "dannys_ores:quark_slate_yellorite_ore",
+    "dannys_ores:embellishcraft_basalt_yellorite_ore",
+    "dannys_ores:embellishcraft_jade_yellorite_ore",
+    "dannys_ores:embellishcraft_gneiss_yellorite_ore",
+    "dannys_ores:embellishcraft_marble_yellorite_ore",
+    "dannys_ores:embellishcraft_larvikite_yellorite_ore",
+    "dannys_ores:embellishcraft_slate_yellorite_ore",
+    "dannys_ores:hardened_stone_yellorite_ore"
+  ]
+}

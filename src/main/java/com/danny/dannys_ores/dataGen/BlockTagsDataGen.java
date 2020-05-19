@@ -63,6 +63,14 @@ public class BlockTagsDataGen extends BlockTagsProvider {
     private ArrayList<Block> xp = new ArrayList<>();
     private ArrayList<Block> zanite = new ArrayList<>();
     private ArrayList<Block> zinc = new ArrayList<>();
+    private ArrayList<Block> anglesite = new ArrayList<>();
+    private ArrayList<Block> apatite = new ArrayList<>();
+    private ArrayList<Block> benitoite = new ArrayList<>();
+    private ArrayList<Block> galena = new ArrayList<>();
+    private ArrayList<Block> pyrite = new ArrayList<>();
+    private ArrayList<Block> resonating = new ArrayList<>();
+    private ArrayList<Block> tungsten = new ArrayList<>();
+    private ArrayList<Block> yellorite = new ArrayList<>();
 
 
     public BlockTagsDataGen(DataGenerator generator) {
@@ -71,60 +79,69 @@ public class BlockTagsDataGen extends BlockTagsProvider {
 
     @Override
     protected void registerTags() {
-        for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
-            ResourceLocation resLoc = block.get().getRegistryName();
+        for (RegistryObject<Block> regObj : BlockInit.BLOCKS.getEntries()) {
+            Block block = regObj.get();
+            ResourceLocation resLoc = block.getRegistryName();
             if (resLoc != null) {
-                String blockName = block.get().getRegistryName().toString().split(":")[1];
-                if (blockName.contains("_adamantium_")) { adamantium.add(block.get()); }
-                if (blockName.contains("_aluminum_")) { aluminum.add(block.get()); }
-                if (blockName.contains("_amethyst_")) { amethyst.add(block.get()); }
-                if (blockName.contains("_ardite_")) { ardite.add(block.get()); }
-                if (blockName.contains("_bismuth_")) { bismuth.add(block.get()); }
-                if (blockName.contains("_black_opal_")) { black_opal.add(block.get()); }
-                if (blockName.contains("_black_quartz_")) { black_quartz.add(block.get()); }
-                if (blockName.contains("_chrome_")) { chrome.add(block.get()); }
-                if (blockName.contains("_coal_")) { coal.add(block.get()); }
-                if (blockName.contains("_cobalt_")) { cobalt.add(block.get()); }
-                if (blockName.contains("_copper_")) { copper.add(block.get()); }
-                if (blockName.contains("_diamond_")) { diamond.add(block.get()); }
-                if (blockName.contains("_draconium_")) { draconium.add(block.get()); }
-                if (blockName.contains("_electronite_")) { electronite.add(block.get()); }
-                if (blockName.contains("_emerald_")) { emerald.add(block.get()); }
-                if (blockName.contains("_gold_")) { gold.add(block.get()); }
-                if (blockName.contains("_imperium_")) { imperium.add(block.get()); }
-                if (blockName.contains("_inferium_")) { inferium.add(block.get()); }
-                if (blockName.contains("_insanium_")) { insanium.add(block.get()); }
-                if (blockName.contains("_iridium_")) { iridium.add(block.get()); }
-                if (blockName.contains("_iron_")) { iron.add(block.get()); }
-                if (blockName.contains("_lapis_")) { lapis.add(block.get()); }
-                if (blockName.contains("_lead_")) { lead.add(block.get()); }
-                if (blockName.contains("_lucky_")) { lucky.add(block.get()); }
-                if (blockName.contains("_mana_infused_")) { mana_infused.add(block.get()); }
-                if (blockName.contains("_mithril_")) { mithril.add(block.get()); }
-                if (blockName.contains("_nickel_")) { nickel.add(block.get()); }
-                if (blockName.contains("_niter_")) { niter.add(block.get()); }
-                if (blockName.contains("_ore")) { ores.add(block.get()); }
-                if (blockName.contains("_osmium_")) { osmium.add(block.get()); }
-                if (blockName.contains("_peridot_")) { peridot.add(block.get()); }
-                if (blockName.contains("_platinum_")) { platinum.add(block.get()); }
-                if (blockName.contains("_prosperity_")) { prosperity.add(block.get()); }
-                if (blockName.contains("_prudentium_")) { prudentium.add(block.get()); }
-                if (blockName.contains("_quartz_")) { quartz.add(block.get()); }
-                if (blockName.contains("_redstone_")) { redstone.add(block.get()); }
-                if (blockName.contains("_ruby_")) { ruby.add(block.get()); }
-                if (blockName.contains("_runite_")) { runite.add(block.get()); }
-                if (blockName.contains("_sapphire_")) { sapphire.add(block.get()); }
-                if (blockName.contains("_silver_")) { silver.add(block.get()); }
-                if (blockName.contains("_soulium_")) { soulium.add(block.get()); }
-                if (blockName.contains("_sulfur_")) { sulfur.add(block.get()); }
-                if (blockName.contains("_supremium_")) { supremium.add(block.get()); }
-                if (blockName.contains("_tertium_")) { tertium.add(block.get()); }
-                if (blockName.contains("_tin_")) { tin.add(block.get()); }
-                if (blockName.contains("_uranium_")) { uranium.add(block.get()); }
-                if (blockName.contains("_white_opal_")) { white_opal.add(block.get()); }
-                if (blockName.contains("_xp_")) { xp.add(block.get()); }
-                if (blockName.contains("_zanite_")) { zanite.add(block.get()); }
-                if (blockName.contains("_zinc_")) { zinc.add(block.get()); }
+                String blockName = resLoc.toString().split(":")[1];
+                if (blockName.contains("_adamantium_")) { adamantium.add(block); }
+                if (blockName.contains("_aluminum_")) { aluminum.add(block); }
+                if (blockName.contains("_amethyst_")) { amethyst.add(block); }
+                if (blockName.contains("_ardite_")) { ardite.add(block); }
+                if (blockName.contains("_bismuth_")) { bismuth.add(block); }
+                if (blockName.contains("_black_opal_")) { black_opal.add(block); }
+                if (blockName.contains("_black_quartz_")) { black_quartz.add(block); }
+                if (blockName.contains("_chrome_")) { chrome.add(block); }
+                if (blockName.contains("_coal_")) { coal.add(block); }
+                if (blockName.contains("_cobalt_")) { cobalt.add(block); }
+                if (blockName.contains("_copper_")) { copper.add(block); }
+                if (blockName.contains("_diamond_")) { diamond.add(block); }
+                if (blockName.contains("_draconium_")) { draconium.add(block); }
+                if (blockName.contains("_electronite_")) { electronite.add(block); }
+                if (blockName.contains("_emerald_")) { emerald.add(block); }
+                if (blockName.contains("_gold_")) { gold.add(block); }
+                if (blockName.contains("_imperium_")) { imperium.add(block); }
+                if (blockName.contains("_inferium_")) { inferium.add(block); }
+                if (blockName.contains("_insanium_")) { insanium.add(block); }
+                if (blockName.contains("_iridium_")) { iridium.add(block); }
+                if (blockName.contains("_iron_")) { iron.add(block); }
+                if (blockName.contains("_lapis_")) { lapis.add(block); }
+                if (blockName.contains("_lead_")) { lead.add(block); }
+                if (blockName.contains("_lucky_")) { lucky.add(block); }
+                if (blockName.contains("_mana_infused_")) { mana_infused.add(block); }
+                if (blockName.contains("_mithril_")) { mithril.add(block); }
+                if (blockName.contains("_nickel_")) { nickel.add(block); }
+                if (blockName.contains("_niter_")) { niter.add(block); }
+                if (blockName.contains("_ore")) { ores.add(block); }
+                if (blockName.contains("_osmium_")) { osmium.add(block); }
+                if (blockName.contains("_peridot_")) { peridot.add(block); }
+                if (blockName.contains("_platinum_")) { platinum.add(block); }
+                if (blockName.contains("_prosperity_")) { prosperity.add(block); }
+                if (blockName.contains("_prudentium_")) { prudentium.add(block); }
+                if (blockName.contains("_quartz_")) { quartz.add(block); }
+                if (blockName.contains("_redstone_")) { redstone.add(block); }
+                if (blockName.contains("_ruby_")) { ruby.add(block); }
+                if (blockName.contains("_runite_")) { runite.add(block); }
+                if (blockName.contains("_sapphire_")) { sapphire.add(block); }
+                if (blockName.contains("_silver_")) { silver.add(block); }
+                if (blockName.contains("_soulium_")) { soulium.add(block); }
+                if (blockName.contains("_sulfur_")) { sulfur.add(block); }
+                if (blockName.contains("_supremium_")) { supremium.add(block); }
+                if (blockName.contains("_tertium_")) { tertium.add(block); }
+                if (blockName.contains("_tin_")) { tin.add(block); }
+                if (blockName.contains("_uranium_")) { uranium.add(block); }
+                if (blockName.contains("_white_opal_")) { white_opal.add(block); }
+                if (blockName.contains("_xp_")) { xp.add(block); }
+                if (blockName.contains("_zanite_")) { zanite.add(block); }
+                if (blockName.contains("_zinc_")) { zinc.add(block); }
+                if (blockName.contains("_anglesite_")) { anglesite.add(block); }
+                if (blockName.contains("_apatite_")) { apatite.add(block); }
+                if (blockName.contains("_benitoite_")) { benitoite.add(block); }
+                if (blockName.contains("_galena_")) { galena.add(block); }
+                if (blockName.contains("_pyrite_")) { pyrite.add(block); }
+                if (blockName.contains("_resonating_")) { resonating.add(block); }
+                if (blockName.contains("_tungsten_")) { tungsten.add(block); }
+                if (blockName.contains("_yellorite_")) { yellorite.add(block); }
             }
         }
         addForgeTag("ores", ores);
@@ -177,6 +194,15 @@ public class BlockTagsDataGen extends BlockTagsProvider {
         addForgeTag("ores/supremium", supremium);
         addForgeTag("ores/tertium", tertium);
         addForgeTag("ores/zanite", zanite);
+        addForgeTag("ores/anglesite", anglesite);
+        addForgeTag("ores/apatite", apatite);
+        addForgeTag("ores/benitoite", benitoite);
+        addForgeTag("ores/galena", galena);
+        addForgeTag("ores/pyrite", pyrite);
+        addForgeTag("ores/resonating", resonating);
+        addForgeTag("ores/tungsten", tungsten);
+        addForgeTag("ores/yellorite", yellorite);
+
     }
 
     private void addForgeTag(String name, ArrayList<Block> blocksIn) {

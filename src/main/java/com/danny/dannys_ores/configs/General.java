@@ -4,6 +4,7 @@ import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.ores.*;
 import com.danny.dannys_ores.configs.ores.vanilla.*;
 import com.danny.dannys_ores.configs.ores.with_xp_ore.*;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
@@ -141,12 +142,16 @@ public class General {
         StoneVariants.loadConfig();
         Adamantium.loadConfig();
         Aluminum.loadConfig();
+        Anglesite.loadConfig();
         Amethyst.loadConfig();
+        Apatite.loadConfig();
         Ardite.loadConfig();
+        Benitoite.loadConfig();
         Bismuth.loadConfig();
         BlackOpal.loadConfig();
         Coal.loadConfig();
         Copper.loadConfig();
+        Galena.loadConfig();
         Diamond.loadConfig();
         Electronite.loadConfig();
         Emerald.loadConfig();
@@ -164,6 +169,8 @@ public class General {
         Osmium.loadConfig();
         Peridot.loadConfig();
         Platinum.loadConfig();
+        Pyrite.loadConfig();
+        Resonating.loadConfig();
         Prosperity.loadConfig();
         Prudentium.loadConfig();
         Quartz.loadConfig();
@@ -176,10 +183,12 @@ public class General {
         Supremium.loadConfig();
         Tertium.loadConfig();
         Tin.loadConfig();
+        Tungsten.loadConfig();
         Uranium.loadConfig();
         WhiteOpal.loadConfig();
         Xp.loadConfig();
         Zanite.loadConfig();
+        Yellorite.loadConfig();
         Zinc.loadConfig();
 
     }

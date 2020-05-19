@@ -25,11 +25,19 @@ public class LanguagesDataGen extends LanguageProvider {
                 StringBuilder displayName = new StringBuilder();
                 for (String s : parts) {
                     s = s.substring(0, 1).toUpperCase() + s.substring(1);
-                    displayName.append(s + " ");
+                    displayName.append(s).append(" ");
                 }
                 add(block.get(), displayName.toString().trim());
             }
         }
+        add("block.minecraft.coal_ore", "Stone Coal Ore");
+        add("block.minecraft.iron_ore", "Stone Iron Ore");
+        add("block.minecraft.gold_ore", "Stone Gold Ore");
+        add("block.minecraft.diamond_ore", "Stone Diamond Ore");
+        add("block.minecraft.emerald_ore", "Stone Emerald Ore");
+        add("block.minecraft.lapis_ore", "Stone Lapis Ore");
+        add("block.minecraft.redstone_ore", "Stone Redstone Ore");
+        add("block.minecraft.nether_quartz_ore", "Netherrack Quartz Ore");
         add("itemGroup.dannys_ores_tab", "Danny's Ores");
     }
 

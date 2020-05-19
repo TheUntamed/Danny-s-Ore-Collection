@@ -63,6 +63,14 @@ public class ItemTagsDataGen extends ItemTagsProvider {
     private ArrayList<Item> xp = new ArrayList<>();
     private ArrayList<Item> zanite = new ArrayList<>();
     private ArrayList<Item> zinc = new ArrayList<>();
+    private ArrayList<Item> anglesite = new ArrayList<>();
+    private ArrayList<Item> apatite = new ArrayList<>();
+    private ArrayList<Item> benitoite = new ArrayList<>();
+    private ArrayList<Item> galena = new ArrayList<>();
+    private ArrayList<Item> pyrite = new ArrayList<>();
+    private ArrayList<Item> resonating = new ArrayList<>();
+    private ArrayList<Item> tungsten = new ArrayList<>();
+    private ArrayList<Item> yellorite = new ArrayList<>();
 
     public ItemTagsDataGen(DataGenerator generator)
     {
@@ -71,11 +79,12 @@ public class ItemTagsDataGen extends ItemTagsProvider {
 
     @Override
     protected void registerTags() {
-        for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
-            ResourceLocation resLoc = block.get().getRegistryName();
+        for (RegistryObject<Block> regObj : BlockInit.BLOCKS.getEntries()) {
+            Block block = regObj.get();
+            ResourceLocation resLoc = block.getRegistryName();
             if (resLoc != null) {
-                String blockName = block.get().getRegistryName().toString().split(":")[1];
-                Item itemBlock = block.get().asItem();
+                String blockName = resLoc.toString().split(":")[1];
+                Item itemBlock = block.asItem();
                 if (blockName.contains("_adamantium_")) { adamantium.add(itemBlock); }
                 if (blockName.contains("_aluminum_")) { aluminum.add(itemBlock); }
                 if (blockName.contains("_amethyst_")) { amethyst.add(itemBlock); }
@@ -126,6 +135,14 @@ public class ItemTagsDataGen extends ItemTagsProvider {
                 if (blockName.contains("_xp_")) { xp.add(itemBlock); }
                 if (blockName.contains("_zanite_")) { zanite.add(itemBlock); }
                 if (blockName.contains("_zinc_")) { zinc.add(itemBlock); }
+                if (blockName.contains("_anglesite_")) { anglesite.add(itemBlock); }
+                if (blockName.contains("_apatite_")) { apatite.add(itemBlock); }
+                if (blockName.contains("_benitoite_")) { benitoite.add(itemBlock); }
+                if (blockName.contains("_galena_")) { galena.add(itemBlock); }
+                if (blockName.contains("_pyrite_")) { pyrite.add(itemBlock); }
+                if (blockName.contains("_resonating_")) { resonating.add(itemBlock); }
+                if (blockName.contains("_tungsten_")) { tungsten.add(itemBlock); }
+                if (blockName.contains("_yellorite_")) { yellorite.add(itemBlock); }
             }
         }
         addForgeTag("ores", ores);
@@ -178,6 +195,14 @@ public class ItemTagsDataGen extends ItemTagsProvider {
         addForgeTag("ores/supremium", supremium);
         addForgeTag("ores/tertium", tertium);
         addForgeTag("ores/zanite", zanite);
+        addForgeTag("ores/anglesite", anglesite);
+        addForgeTag("ores/apatite", apatite);
+        addForgeTag("ores/benitoite", benitoite);
+        addForgeTag("ores/galena", galena);
+        addForgeTag("ores/pyrite", pyrite);
+        addForgeTag("ores/resonating", resonating);
+        addForgeTag("ores/tungsten", tungsten);
+        addForgeTag("ores/yellorite", yellorite);
     }
 
     private void addForgeTag(String name, ArrayList<Item> itemsIn) {

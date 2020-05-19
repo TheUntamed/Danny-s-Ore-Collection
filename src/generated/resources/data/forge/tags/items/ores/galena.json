@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:stone_galena_ore",
+    "dannys_ores:andesite_galena_ore",
+    "dannys_ores:diorite_galena_ore",
+    "dannys_ores:granite_galena_ore",
+    "dannys_ores:netherrack_galena_ore",
+    "dannys_ores:end_stone_galena_ore",
+    "dannys_ores:sand_galena_ore",
+    "dannys_ores:red_sand_galena_ore",
+    "dannys_ores:gravel_galena_ore",
+    "dannys_ores:sandstone_galena_ore",
+    "dannys_ores:red_sandstone_galena_ore",
+    "dannys_ores:blue_ice_galena_ore",
+    "dannys_ores:packed_ice_galena_ore",
+    "dannys_ores:bedrock_galena_ore",
+    "dannys_ores:quark_basalt_galena_ore",
+    "dannys_ores:quark_jasper_galena_ore",
+    "dannys_ores:quark_limestone_galena_ore",
+    "dannys_ores:quark_marble_galena_ore",
+    "dannys_ores:quark_slate_galena_ore",
+    "dannys_ores:embellishcraft_basalt_galena_ore",
+    "dannys_ores:embellishcraft_jade_galena_ore",
+    "dannys_ores:embellishcraft_gneiss_galena_ore",
+    "dannys_ores:embellishcraft_marble_galena_ore",
+    "dannys_ores:embellishcraft_larvikite_galena_ore",
+    "dannys_ores:embellishcraft_slate_galena_ore",
+    "dannys_ores:hardened_stone_galena_ore"
+  ]
+}

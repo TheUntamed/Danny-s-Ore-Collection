@@ -22,6 +22,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistStoneResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistStoneResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistStoneResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedStoneResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableAndesiteResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeAndesiteResonatingOre;
@@ -32,6 +33,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistAndesiteResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistAndesiteResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistAndesiteResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedAndesiteResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableDioriteResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeDioriteResonatingOre;
@@ -42,6 +44,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistDioriteResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistDioriteResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistDioriteResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedDioriteResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableGraniteResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeGraniteResonatingOre;
@@ -52,6 +55,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistGraniteResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistGraniteResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistGraniteResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedGraniteResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableNetherrackResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeNetherrackResonatingOre;
@@ -62,6 +66,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistNetherrackResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistNetherrackResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistNetherrackResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedNetherrackResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableEndStoneResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeEndStoneResonatingOre;
@@ -72,6 +77,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEndStoneResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEndStoneResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEndStoneResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedEndStoneResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableSandResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeSandResonatingOre;
@@ -82,6 +88,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistSandResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistSandResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistSandResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedSandResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableRedSandResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeRedSandResonatingOre;
@@ -92,6 +99,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistRedSandResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedRedSandResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableGravelResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeGravelResonatingOre;
@@ -102,6 +110,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistGravelResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistGravelResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistGravelResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedGravelResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableSandstoneResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeSandstoneResonatingOre;
@@ -112,6 +121,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistSandstoneResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistSandstoneResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistSandstoneResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedSandstoneResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableRedSandstoneResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeRedSandstoneResonatingOre;
@@ -122,6 +132,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistRedSandstoneResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandstoneResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandstoneResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedRedSandstoneResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableBlueIceResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeBlueIceResonatingOre;
@@ -132,6 +143,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBlueIceResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedBlueIceResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enablePackedIceResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizePackedIceResonatingOre;
@@ -142,6 +154,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistPackedIceResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedPackedIceResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableBedrockResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeBedrockResonatingOre;
@@ -153,6 +166,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBedrockResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBedrockResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBedrockResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedBedrockResonatingOre;
 
     // Quark
     public static ForgeConfigSpec.BooleanValue enableQuarkBasaltResonatingOre;
@@ -164,6 +178,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistQuarkBasaltResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistQuarkBasaltResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistQuarkBasaltResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedQuarkBasaltResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableQuarkLimestoneResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeQuarkLimestoneResonatingOre;
@@ -174,6 +189,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistQuarkLimestoneResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistQuarkLimestoneResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistQuarkLimestoneResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedQuarkLimestoneResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableQuarkJasperResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeQuarkJasperResonatingOre;
@@ -184,6 +200,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistQuarkJasperResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistQuarkJasperResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistQuarkJasperResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedQuarkJasperResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableQuarkMarbleResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeQuarkMarbleResonatingOre;
@@ -194,6 +211,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistQuarkMarbleResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistQuarkMarbleResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistQuarkMarbleResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedQuarkMarbleResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableQuarkSlateResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeQuarkSlateResonatingOre;
@@ -204,6 +222,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistQuarkSlateResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistQuarkSlateResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistQuarkSlateResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedQuarkSlateResonatingOre;
 
     // Embellishcraft
     public static ForgeConfigSpec.BooleanValue enableEmbellishcraftBasaltResonatingOre;
@@ -215,6 +234,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEmbellishcraftBasaltResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftBasaltResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftBasaltResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedEmbellishcraftBasaltResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableEmbellishcraftGneissResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeEmbellishcraftGneissResonatingOre;
@@ -225,6 +245,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEmbellishcraftGneissResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftGneissResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftGneissResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedEmbellishcraftGneissResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableEmbellishcraftJadeResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeEmbellishcraftJadeResonatingOre;
@@ -235,6 +256,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEmbellishcraftJadeResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftJadeResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftJadeResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedEmbellishcraftJadeResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableEmbellishcraftMarbleResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeEmbellishcraftMarbleResonatingOre;
@@ -245,6 +267,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEmbellishcraftMarbleResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftMarbleResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftMarbleResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedEmbellishcraftMarbleResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableEmbellishcraftLarvikiteResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeEmbellishcraftLarvikiteResonatingOre;
@@ -255,6 +278,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEmbellishcraftLarvikiteResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftLarvikiteResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftLarvikiteResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedEmbellishcraftLarvikiteResonatingOre;
 
     public static ForgeConfigSpec.BooleanValue enableEmbellishcraftSlateResonatingOre;
     public static ForgeConfigSpec.IntValue veinSizeEmbellishcraftSlateResonatingOre;
@@ -265,6 +289,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEmbellishcraftSlateResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftSlateResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftSlateResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedEmbellishcraftSlateResonatingOre;
 
     // Danny's Stone Variants
     public static ForgeConfigSpec.BooleanValue enableHardenedStoneResonatingOre;
@@ -276,6 +301,7 @@ public class Resonating {
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistHardenedStoneResonatingOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistHardenedStoneResonatingOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistHardenedStoneResonatingOre;
+    public static ForgeConfigSpec.BooleanValue onlyWhileSelectedHardenedStoneResonatingOre;
 
     static {
         // = BUILDER.comment("").define("", false);
@@ -294,6 +320,9 @@ public class Resonating {
         isBiomeWhitelistStoneResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistStoneResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedStoneResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Andesite Resonating Ore").push("andesite_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -306,6 +335,9 @@ public class Resonating {
         temperatureBlacklistAndesiteResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistAndesiteResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistAndesiteResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedAndesiteResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Diorite Resonating Ore").push("diorite_resonating_ore");
@@ -320,6 +352,9 @@ public class Resonating {
         isBiomeWhitelistDioriteResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistDioriteResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedDioriteResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Granite Resonating Ore").push("granite_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -332,6 +367,9 @@ public class Resonating {
         temperatureBlacklistGraniteResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistGraniteResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistGraniteResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedGraniteResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Netherrack Resonating Ore").push("netherrack_resonating_ore");
@@ -346,6 +384,9 @@ public class Resonating {
         isBiomeWhitelistNetherrackResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistNetherrackResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedNetherrackResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("End Stone Resonating Ore").push("end_stone_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -358,6 +399,9 @@ public class Resonating {
         temperatureBlacklistEndStoneResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistEndStoneResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistEndStoneResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedEndStoneResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sand Resonating Ore").push("sand_resonating_ore");
@@ -372,6 +416,9 @@ public class Resonating {
         isBiomeWhitelistSandResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistSandResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedSandResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Red Sand Resonating Ore").push("red_sand_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -384,6 +431,9 @@ public class Resonating {
         temperatureBlacklistRedSandResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistRedSandResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistRedSandResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedRedSandResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Resonating Ore").push("gravel_resonating_ore");
@@ -398,6 +448,9 @@ public class Resonating {
         isBiomeWhitelistGravelResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistGravelResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedGravelResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sandstone Resonating Ore").push("sandstone_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -410,6 +463,9 @@ public class Resonating {
         temperatureBlacklistSandstoneResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistSandstoneResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistSandstoneResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedSandstoneResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Red Sandstone Resonating Ore").push("red_sandstone_resonating_ore");
@@ -424,6 +480,9 @@ public class Resonating {
         isBiomeWhitelistRedSandstoneResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistRedSandstoneResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedRedSandstoneResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Blue Ice Resonating Ore").push("blue_ice_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -436,6 +495,9 @@ public class Resonating {
         temperatureBlacklistBlueIceResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistBlueIceResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistBlueIceResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedBlueIceResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Packed Ice Resonating Ore").push("packed_ice_resonating_ore");
@@ -450,6 +512,9 @@ public class Resonating {
         isBiomeWhitelistPackedIceResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistPackedIceResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedPackedIceResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Bedrock Resonating Ore").push("bedrock_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -463,7 +528,8 @@ public class Resonating {
         isBiomeWhitelistBedrockResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistBedrockResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
-        BUILDER.comment("Block properties").push("properties");
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedBedrockResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         resistanceBedrockResonatingOre = BUILDER.comment("A higher value means a stronger explosion is needed to destroy this ore. Stone has 6.0 and Obsidian 1200.0").defineInRange("resistance", 9.0, 0.0, 3600000.0);
         BUILDER.pop();
         BUILDER.pop();
@@ -481,6 +547,9 @@ public class Resonating {
         isBiomeWhitelistQuarkBasaltResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistQuarkBasaltResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedQuarkBasaltResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Limestone Resonating Ore (Quark)").push("quark_limestone_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -493,6 +562,9 @@ public class Resonating {
         temperatureBlacklistQuarkLimestoneResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistQuarkLimestoneResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistQuarkLimestoneResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedQuarkLimestoneResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Jasper Resonating Ore (Quark)").push("quark_jasper_resonating_ore");
@@ -507,6 +579,9 @@ public class Resonating {
         isBiomeWhitelistQuarkJasperResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistQuarkJasperResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedQuarkJasperResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Marble Resonating Ore (Quark)").push("quark_marble_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -520,6 +595,9 @@ public class Resonating {
         isBiomeWhitelistQuarkMarbleResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistQuarkMarbleResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedQuarkMarbleResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Slate Resonating Ore (Quark)").push("quark_slate_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -532,6 +610,9 @@ public class Resonating {
         temperatureBlacklistQuarkSlateResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistQuarkSlateResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistQuarkSlateResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedQuarkSlateResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         BUILDER.pop();
         BUILDER.pop();
 
@@ -548,6 +629,9 @@ public class Resonating {
         isBiomeWhitelistEmbellishcraftBasaltResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistEmbellishcraftBasaltResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedEmbellishcraftBasaltResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gneiss Resonating Ore (Embellishcraft)").push("embellishcraft_gneiss_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -560,6 +644,9 @@ public class Resonating {
         temperatureBlacklistEmbellishcraftGneissResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftGneissResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistEmbellishcraftGneissResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedEmbellishcraftGneissResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Jade Resonating Ore (Embellishcraft)").push("embellishcraft_jade_resonating_ore");
@@ -574,6 +661,9 @@ public class Resonating {
         isBiomeWhitelistEmbellishcraftJadeResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistEmbellishcraftJadeResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedEmbellishcraftJadeResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Larvikite Resonating Ore (Embellishcraft)").push("embellishcraft_larvikite_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -586,6 +676,9 @@ public class Resonating {
         temperatureBlacklistEmbellishcraftLarvikiteResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistEmbellishcraftLarvikiteResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistEmbellishcraftLarvikiteResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedEmbellishcraftLarvikiteResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Marble Resonating Ore (Embellishcraft)").push("embellishcraft_marble_resonating_ore");
@@ -600,6 +693,9 @@ public class Resonating {
         isBiomeWhitelistEmbellishcraftMarbleResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistEmbellishcraftMarbleResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedEmbellishcraftMarbleResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
+        BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Slate Resonating Ore (Embellishcraft)").push("embellishcraft_slate_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -613,7 +709,11 @@ public class Resonating {
         isBiomeWhitelistEmbellishcraftSlateResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistEmbellishcraftSlateResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
         BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedEmbellishcraftSlateResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         BUILDER.pop();
+        BUILDER.pop();
+
         // Danny's Stone Variants
         BUILDER.comment("Hardened Stone Resonating Ore").push("hardened_stone_resonating_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");
@@ -626,6 +726,9 @@ public class Resonating {
         temperatureBlacklistHardenedStoneResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistHardenedStoneResonatingOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
         biomeBlacklistHardenedStoneResonatingOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:alps\"])").define("biomeBlacklist", new ArrayList<String>());
+        BUILDER.pop();
+        BUILDER.comment("Block and Item properties").push("properties");
+        onlyWhileSelectedHardenedStoneResonatingOre = BUILDER.comment("If true, a player will only be set on fire while holding this ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:stone_resonating_ore",
+    "dannys_ores:andesite_resonating_ore",
+    "dannys_ores:diorite_resonating_ore",
+    "dannys_ores:granite_resonating_ore",
+    "dannys_ores:netherrack_resonating_ore",
+    "dannys_ores:end_stone_resonating_ore",
+    "dannys_ores:sand_resonating_ore",
+    "dannys_ores:red_sand_resonating_ore",
+    "dannys_ores:gravel_resonating_ore",
+    "dannys_ores:sandstone_resonating_ore",
+    "dannys_ores:red_sandstone_resonating_ore",
+    "dannys_ores:blue_ice_resonating_ore",
+    "dannys_ores:packed_ice_resonating_ore",
+    "dannys_ores:bedrock_resonating_ore",
+    "dannys_ores:quark_basalt_resonating_ore",
+    "dannys_ores:quark_jasper_resonating_ore",
+    "dannys_ores:quark_limestone_resonating_ore",
+    "dannys_ores:quark_marble_resonating_ore",
+    "dannys_ores:quark_slate_resonating_ore",
+    "dannys_ores:embellishcraft_basalt_resonating_ore",
+    "dannys_ores:embellishcraft_jade_resonating_ore",
+    "dannys_ores:embellishcraft_gneiss_resonating_ore",
+    "dannys_ores:embellishcraft_marble_resonating_ore",
+    "dannys_ores:embellishcraft_larvikite_resonating_ore",
+    "dannys_ores:embellishcraft_slate_resonating_ore",
+    "dannys_ores:hardened_stone_resonating_ore"
+  ]
+}
