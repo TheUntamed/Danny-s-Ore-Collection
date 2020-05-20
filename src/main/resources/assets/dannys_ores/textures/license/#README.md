@@ -59,3 +59,12 @@ https://www.curseforge.com/minecraft/mc-mods/extreme-reactors
 
 The Ore Overlay for the Resonating Ore were part of the corresponding ore textures from 'Deep Resonance' (by McJty)
 https://www.curseforge.com/minecraft/mc-mods/deep-resonance
+
+The Ore Overlay for the Certus Quartz and Charged Certus Quartz Ore were part of the corresponding ore textures from 'Applied Energistics 2' (by AlgorithmX2)
+https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2
+
+The Ore Overlay for the Lava Crystal Ore were part of the corresponding ore textures from 'Armor Plus' (by sokratis12GR)
+https://www.curseforge.com/minecraft/mc-mods/armorplus
+
+The Ore Overlay for the Dimensional Shard Ore were part of the corresponding ore textures from 'RF Tools Base' (by McJty)
+https://www.curseforge.com/minecraft/mc-mods/rftools-base

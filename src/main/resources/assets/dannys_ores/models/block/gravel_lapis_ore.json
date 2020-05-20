@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "all": "dannys_ores:block/gravel_lapis_ore"
+    "base": "dannys_ores:block/gravel",
+    "overlay": "dannys_ores:block/lapis_ore"
   }
 }

@@ -21,6 +21,12 @@ public class LanguagesDataGen extends LanguageProvider {
             ResourceLocation resLoc = block.get().getRegistryName();
             if (resLoc != null) {
                 String blockName = block.get().getRegistryName().toString().split(":")[1];
+                System.err.println("the blockName: " + blockName);
+                if (blockName.contains("aluminum")) {
+                    blockName.replace("aluminum", "bauxite");
+                } else if (blockName.contains("electronite")) {
+                    blockName.replace("electronite", "electrotine");
+                }
                 String[] parts = blockName.split("_");
                 StringBuilder displayName = new StringBuilder();
                 for (String s : parts) {

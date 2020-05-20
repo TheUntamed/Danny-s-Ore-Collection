@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "all": "dannys_ores:block/hardened_stone_apatite_ore"
+    "base": "dannys_ores:block/hardened_stone",
+    "overlay": "dannys_ores:block/apatite_ore"
   }
 }

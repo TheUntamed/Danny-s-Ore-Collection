@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "all": "dannys_ores:block/netherrack_mana_infused_ore"
+    "base": "dannys_ores:block/netherrack",
+    "overlay": "dannys_ores:block/mana_infused_ore"
   }
 }

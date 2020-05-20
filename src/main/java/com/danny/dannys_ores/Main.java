@@ -8,6 +8,8 @@ import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.init.BlockInitVanilla;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -27,9 +29,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.IForgeRegistry;
-import org.apache.commons.lang3.ObjectUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 
 @Mod(Main.MOD_ID)
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
@@ -111,6 +113,9 @@ public class Main {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+        for(RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
+            RenderTypeLookup.setRenderLayer(block.get(), RenderType.getTranslucent());
+        }
     }
 
     @SubscribeEvent

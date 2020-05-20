@@ -18,7 +18,7 @@ public class ItemModelsDataGen extends ItemModelProvider {
 
         @Override
         protected void registerModels() {
-                Main.LOGGER.debug("registerModels");
+                Main.LOGGER.debug("registerItemModels");
                 for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
                         ResourceLocation resLoc = block.get().getRegistryName();
                         if (resLoc != null) {

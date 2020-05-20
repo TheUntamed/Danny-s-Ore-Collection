@@ -1,4 +1,4 @@
 # TODOs
 
-* Add Resonating Ore flame effects
-* Add new ores to data gen
+* Fix Electrotine name
+* Change aluminum to bauxite

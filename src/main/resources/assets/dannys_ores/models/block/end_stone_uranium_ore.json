@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "all": "dannys_ores:block/end_stone_uranium_ore"
+    "base": "dannys_ores:block/end_stone",
+    "overlay": "dannys_ores:block/uranium_ore"
   }
 }

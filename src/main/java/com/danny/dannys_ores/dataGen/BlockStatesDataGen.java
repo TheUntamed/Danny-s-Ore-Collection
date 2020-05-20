@@ -5,8 +5,7 @@ import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ExistingFileHelper;
+import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.fml.RegistryObject;
 
 public class BlockStatesDataGen extends BlockStateProvider {
@@ -28,6 +27,7 @@ public class BlockStatesDataGen extends BlockStateProvider {
     }
 
     public void singleTextureBlock(Block block, String model, String textureName) {
+
         simpleBlock(block);
         Main.LOGGER.debug("Creating block states model for :" + block.getRegistryName());
     }

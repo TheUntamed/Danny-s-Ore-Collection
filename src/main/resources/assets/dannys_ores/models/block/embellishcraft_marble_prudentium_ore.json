@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "all": "dannys_ores:block/embellishcraft_marble_prudentium_ore"
+    "base": "dannys_ores:block/embellishcraft_marble",
+    "overlay": "dannys_ores:block/prudentium_ore"
   }
 }

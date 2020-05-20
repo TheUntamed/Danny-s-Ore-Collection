@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "all": "dannys_ores:block/gravel_yellorite_ore"
+    "base": "dannys_ores:block/gravel_array_06",
+    "overlay": "dannys_ores:block/yellorite_ore"
   }
 }

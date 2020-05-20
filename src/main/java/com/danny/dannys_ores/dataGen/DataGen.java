@@ -25,6 +25,7 @@ public class DataGen {
         if (event.includeClient()) {
             Main.LOGGER.debug("Starting client side data generators");
             generator.addProvider(new BlockStatesDataGen(generator, Main.MOD_ID, event.getExistingFileHelper()));
+            generator.addProvider(new BlockModelsDataGen(generator, Main.MOD_ID, event.getExistingFileHelper()));
             generator.addProvider(new ItemModelsDataGen(generator, Main.MOD_ID, event.getExistingFileHelper()));
             generator.addProvider(new LanguagesDataGen(generator, "en_us"));
         }

@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "all": "dannys_ores:block/quark_basalt_white_opal_ore"
+    "base": "dannys_ores:block/quark_basalt",
+    "overlay": "dannys_ores:block/white_opal_ore"
   }
 }

@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "all": "dannys_ores:block/packed_ice_nickel_ore"
+    "base": "dannys_ores:block/packed_ice",
+    "overlay": "dannys_ores:block/nickel_ore"
   }
 }

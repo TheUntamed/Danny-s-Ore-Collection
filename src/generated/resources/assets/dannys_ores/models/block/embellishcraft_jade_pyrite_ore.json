@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "all": "dannys_ores:block/embellishcraft_jade_pyrite_ore"
+    "base": "dannys_ores:block/embellishcraft_jade",
+    "overlay": "dannys_ores:block/pyrite_ore"
   }
 }
