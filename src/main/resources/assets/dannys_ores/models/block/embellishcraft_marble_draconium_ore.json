@@ -1,7 +1,7 @@
 {
   "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "base": "dannys_ores:block/embellishcraft_marble_array_10",
+    "base": "dannys_ores:block/embellishcraft_marble",
     "overlay": "dannys_ores:block/draconium_ore"
   }
 }

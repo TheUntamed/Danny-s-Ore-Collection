@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class BlockTagsDataGen extends BlockTagsProvider {
     private ArrayList<Block> adamantium = new ArrayList<>();
-    private ArrayList<Block> aluminum = new ArrayList<>();
+    private ArrayList<Block> bauxite = new ArrayList<>();
     private ArrayList<Block> amethyst = new ArrayList<>();
     private ArrayList<Block> ardite = new ArrayList<>();
     private ArrayList<Block> bismuth = new ArrayList<>();
@@ -26,7 +26,7 @@ public class BlockTagsDataGen extends BlockTagsProvider {
     private ArrayList<Block> copper = new ArrayList<>();
     private ArrayList<Block> diamond = new ArrayList<>();
     private ArrayList<Block> draconium = new ArrayList<>();
-    private ArrayList<Block> electronite = new ArrayList<>();
+    private ArrayList<Block> electrotine = new ArrayList<>();
     private ArrayList<Block> emerald = new ArrayList<>();
     private ArrayList<Block> gold = new ArrayList<>();
     private ArrayList<Block> imperium = new ArrayList<>();
@@ -85,7 +85,7 @@ public class BlockTagsDataGen extends BlockTagsProvider {
             if (resLoc != null) {
                 String blockName = resLoc.toString().split(":")[1];
                 if (blockName.contains("_adamantium_")) { adamantium.add(block); }
-                if (blockName.contains("_aluminum_")) { aluminum.add(block); }
+                if (blockName.contains("_bauxite_")) { bauxite.add(block); }
                 if (blockName.contains("_amethyst_")) { amethyst.add(block); }
                 if (blockName.contains("_ardite_")) { ardite.add(block); }
                 if (blockName.contains("_bismuth_")) { bismuth.add(block); }
@@ -97,7 +97,7 @@ public class BlockTagsDataGen extends BlockTagsProvider {
                 if (blockName.contains("_copper_")) { copper.add(block); }
                 if (blockName.contains("_diamond_")) { diamond.add(block); }
                 if (blockName.contains("_draconium_")) { draconium.add(block); }
-                if (blockName.contains("_electronite_")) { electronite.add(block); }
+                if (blockName.contains("_electrotine_")) { electrotine.add(block); }
                 if (blockName.contains("_emerald_")) { emerald.add(block); }
                 if (blockName.contains("_gold_")) { gold.add(block); }
                 if (blockName.contains("_imperium_")) { imperium.add(block); }
@@ -146,7 +146,7 @@ public class BlockTagsDataGen extends BlockTagsProvider {
         }
         addForgeTag("ores", ores);
         addForgeTag("ores/adamantium", adamantium);
-        addForgeTag("ores/aluminum", aluminum);
+        addForgeTag("ores/bauxite", bauxite);
         addForgeTag("ores/amethyst", amethyst);
         addForgeTag("ores/bismuth", bismuth);
         addForgeTag("ores/black_opal", black_opal);
@@ -181,7 +181,7 @@ public class BlockTagsDataGen extends BlockTagsProvider {
         addForgeTag("ores/mana_infused", mana_infused);
         addForgeTag("ores/niter", niter);
         addForgeTag("ores/sulfur", sulfur);
-        addForgeTag("ores/electronite", electronite);
+        addForgeTag("ores/electrotine", electrotine);
         addForgeTag("ores/imperium", imperium);
         addForgeTag("ores/inferium", inferium);
         addForgeTag("ores/insanium", insanium);

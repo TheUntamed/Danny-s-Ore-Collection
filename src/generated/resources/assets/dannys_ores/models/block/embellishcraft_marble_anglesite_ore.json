@@ -1,7 +1,0 @@
-{
-  "parent": "dannys_ores:block/cube_overlayed",
-  "textures": {
-    "base": "dannys_ores:block/embellishcraft_marble_array_10",
-    "overlay": "dannys_ores:block/anglesite_ore"
-  }
-}

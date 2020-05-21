@@ -141,7 +141,7 @@ public class General {
 
         StoneVariants.loadConfig();
         Adamantium.loadConfig();
-        Aluminum.loadConfig();
+        Bauxite.loadConfig();
         Anglesite.loadConfig();
         Amethyst.loadConfig();
         Apatite.loadConfig();
@@ -153,7 +153,7 @@ public class General {
         Copper.loadConfig();
         Galena.loadConfig();
         Diamond.loadConfig();
-        Electronite.loadConfig();
+        Electrotine.loadConfig();
         Emerald.loadConfig();
         Gold.loadConfig();
         Imperium.loadConfig();

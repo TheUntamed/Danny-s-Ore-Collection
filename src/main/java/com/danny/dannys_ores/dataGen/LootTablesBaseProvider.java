@@ -50,17 +50,6 @@ public abstract class LootTablesBaseProvider extends LootTableProvider {
 
     protected abstract void addTables();
 
-//    protected LootTable.Builder createStandardTable(String name, Block block) {
-//        LootPool.Builder builder = LootPool.builder().name(name).rolls(ConstantRange.of(1))
-//                .addEntry(ItemLootEntry.builder(block).acceptFunction(CopyName.builder(CopyName.Source.BLOCK_ENTITY))
-//                        .acceptFunction(CopyNbt.builder(CopyNbt.Source.BLOCK_ENTITY).addOperation("inv",
-//                                "BlockEntityTag.inv", CopyNbt.Action.REPLACE)
-////								.addOperation("energy", "BlockEntityTag.energy", CopyNbt.Action.REPLACE)
-//                        ).acceptFunction(SetContents.func_215920_b().func_216075_a(
-//                                DynamicLootEntry.func_216162_a(new ResourceLocation("minecraft", "contents")))));
-//        return LootTable.builder().addLootPool(builder);
-//    }
-
     protected LootTable.Builder basicOreTable(Block block) {
         return MyBlockLootTables.dropSelf(block);
     }

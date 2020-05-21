@@ -1,13 +1,15 @@
-Most textures are based on the textures of other mods! Below all those mods are listed and linked.
+Some of the background textures are from other mods or vanilla minecraft
+and most of the overlay textures are based on the textures of other mods!
+Below all those mods are listed and linked.
 You will also find the license of the mods in the corresponding .md files in this folder!
 
 The Hardened Stone texture comes from the mod 'Sonar Core' (by sonar_sonic)
 https://www.curseforge.com/minecraft/mc-mods/sonar-core
 
-The ores for Quark's (by Vazkii) stone variants are based on the corresponding stone textures of that mod
+The five stone textures named quark_basalt, _jasper, _limestone, _marble, _slate are from the mod 'Quark' (by Vazkii)
 https://www.curseforge.com/minecraft/mc-mods/quark
 
-The ores for Embellishcraft (by Mapper) stone variants are based on the corresponding stone textures of that mod
+The six stone textures named embellishcraft_basalt, _jade, _gneiss, _larvikite, _marble, _slate are from the mod Embellishcraft (by Mapper)
 https://www.curseforge.com/minecraft/mc-mods/embellishcraft
 
 The Ore Overlay for the Silver, Lead, Nickel, Zinc, Bauxite and Uranium Ore were part of the corresponding ore textures from 'Silent's Mechanisms' (by SilentChaos512)

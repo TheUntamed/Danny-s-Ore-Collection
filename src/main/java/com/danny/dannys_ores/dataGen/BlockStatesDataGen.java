@@ -21,15 +21,19 @@ public class BlockStatesDataGen extends BlockStateProvider {
             ResourceLocation resLoc = block.get().getRegistryName();
             if (resLoc != null) {
                 String blockName = resLoc.toString().split(":")[1];
-                singleTextureBlock(block.get(), blockName, "block/" + blockName);
+                singleTextureBlock(block.get(), blockName);
             }
         }
     }
 
-    public void singleTextureBlock(Block block, String model, String textureName) {
-
-        simpleBlock(block);
+    public void singleTextureBlock(Block block, String modelName) {
+        System.err.println("modelName: " + modelName);
+        simpleBlock(block, getModelFile(modelName));
         Main.LOGGER.debug("Creating block states model for :" + block.getRegistryName());
+    }
+
+    private ModelFile getModelFile(String modelName) {
+        return new ModelFile.UncheckedModelFile(modLoc("block/" + modelName));
     }
 
     @Override

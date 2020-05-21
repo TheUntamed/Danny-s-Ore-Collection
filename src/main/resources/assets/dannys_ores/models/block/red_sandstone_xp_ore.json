@@ -1,7 +1,7 @@
 {
   "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "base": "dannys_ores:block/red_sandstone_array_02",
+    "base": "dannys_ores:block/red_sandstone",
     "overlay": "dannys_ores:block/xp_ore"
   }
 }

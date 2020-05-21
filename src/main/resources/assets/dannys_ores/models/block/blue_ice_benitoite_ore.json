@@ -1,7 +1,7 @@
 {
   "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "base": "dannys_ores:block/blue_ice_array_10",
+    "base": "dannys_ores:block/blue_ice",
     "overlay": "dannys_ores:block/benitoite_ore"
   }
 }

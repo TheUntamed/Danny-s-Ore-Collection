@@ -1,7 +1,0 @@
-{
-  "parent": "dannys_ores:block/cube_overlayed",
-  "textures": {
-    "base": "dannys_ores:block/embellishcraft_larvikite_array_02",
-    "overlay": "dannys_ores:block/xp_ore"
-  }
-}

@@ -65,13 +65,6 @@ public class BlockModelsDataGen extends BlockModelProvider {
                         fillerBlockName = resLoc.toString().split(":")[1];
                     }
                     String typeName = blockName.replace(fillerBlockName + "_", "");
-                    if (blockName.contains("_anglesite_") || blockName.contains("_benitoite_") || blockName.contains("_draconium_")) {
-                        fillerBlockName += "_array_10";
-                    } else if (blockName.contains("_yellorite_")) {
-                        fillerBlockName += "_array_06";
-                    } else if (blockName.contains("_xp_")) {
-                        fillerBlockName += "_array_02";
-                    }
                     doubleTextureBlock(block, "block/" + fillerBlockName, "block/" + typeName);
             }
         }
@@ -79,9 +72,13 @@ public class BlockModelsDataGen extends BlockModelProvider {
     }
 
     public void doubleTextureBlock(Block block, String textureBackground, String textureOverlay) {
-        getBuilder(block.getRegistryName().getPath()).parent(new ModelFile.UncheckedModelFile(modLoc("block/cube_overlayed"))).texture("base", textureBackground).texture("overlay", textureOverlay);
+        getBuilder(block.getRegistryName().getPath()).parent(getModelFile()).texture("base", textureBackground).texture("overlay", textureOverlay);
 
         Main.LOGGER.debug("Creating block models model for " + block.getRegistryName());
+    }
+
+    private ModelFile getModelFile() {
+        return new ModelFile.UncheckedModelFile(modLoc("block/cube_overlayed"));
     }
 
     @Override

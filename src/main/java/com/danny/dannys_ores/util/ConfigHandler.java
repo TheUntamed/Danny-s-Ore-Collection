@@ -27,7 +27,7 @@ public class ConfigHandler {
     public static UnmodifiableConfig getConfig(String blockName) {
 
         if (blockName.contains("_adamantium_")) { return Adamantium.spec.getValues(); }
-        if (blockName.contains("_aluminum_")) { return Aluminum.spec.getValues(); }
+        if (blockName.contains("_bauxite_")) { return Bauxite.spec.getValues(); }
         if (blockName.contains("_amethyst_")) { return Amethyst.spec.getValues(); }
         if (blockName.contains("_bismuth_")) { return Bismuth.spec.getValues(); }
         if (blockName.contains("_black_opal_")) { return BlackOpal.spec.getValues(); }
@@ -67,7 +67,7 @@ public class ConfigHandler {
         if (blockName.contains("_niter_")) { return Niter.spec.getValues(); }
         if (blockName.contains("_cobalt_")) { return Cobalt.spec.getValues(); }
         if (blockName.contains("_sulfur_")) { return Sulfur.spec.getValues(); }
-        if (blockName.contains("_electronite_")) { return Electronite.spec.getValues(); }
+        if (blockName.contains("_electrotine_")) { return Electrotine.spec.getValues(); }
         if (blockName.contains("_imperium_")) { return Imperium.spec.getValues(); }
         if (blockName.contains("_inferium_")) { return Inferium.spec.getValues(); }
         if (blockName.contains("_insanium_")) { return Insanium.spec.getValues(); }
