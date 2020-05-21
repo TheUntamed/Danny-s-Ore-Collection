@@ -128,7 +128,6 @@ public class Emerald {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceEmeraldOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceEmeraldOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceEmeraldOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceEmeraldOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceEmeraldOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceEmeraldOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceEmeraldOre;
@@ -139,7 +138,6 @@ public class Emerald {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceEmeraldOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceEmeraldOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceEmeraldOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceEmeraldOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceEmeraldOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceEmeraldOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceEmeraldOre;

@@ -128,7 +128,6 @@ public class Gold {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceGoldOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceGoldOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceGoldOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceGoldOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceGoldOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceGoldOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceGoldOre;
@@ -139,7 +138,6 @@ public class Gold {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceGoldOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceGoldOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceGoldOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceGoldOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceGoldOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceGoldOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceGoldOre;

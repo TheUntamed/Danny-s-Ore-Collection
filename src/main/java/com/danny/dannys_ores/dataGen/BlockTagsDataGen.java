@@ -71,6 +71,12 @@ public class BlockTagsDataGen extends BlockTagsProvider {
     private ArrayList<Block> resonating = new ArrayList<>();
     private ArrayList<Block> tungsten = new ArrayList<>();
     private ArrayList<Block> yellorite = new ArrayList<>();
+    private ArrayList<Block> steel = new ArrayList<>();
+    private ArrayList<Block> sticky = new ArrayList<>();
+    private ArrayList<Block> certus_quartz = new ArrayList<>();
+    private ArrayList<Block> charged_certus_quartz = new ArrayList<>();
+    private ArrayList<Block> lava_crystal = new ArrayList<>();
+    private ArrayList<Block> dimensional_shard = new ArrayList<>();
 
 
     public BlockTagsDataGen(DataGenerator generator) {
@@ -142,6 +148,12 @@ public class BlockTagsDataGen extends BlockTagsProvider {
                 if (blockName.contains("_resonating_")) { resonating.add(block); }
                 if (blockName.contains("_tungsten_")) { tungsten.add(block); }
                 if (blockName.contains("_yellorite_")) { yellorite.add(block); }
+                if (blockName.contains("_steel_")) { steel.add(block); }
+                if (blockName.contains("_sticky_")) { sticky.add(block); }
+                if (blockName.contains("_certus_quartz_")) { certus_quartz.add(block); }
+                if (blockName.contains("_charged_certus_quartz_")) { charged_certus_quartz.add(block); }
+                if (blockName.contains("_lava_crystal_")) { lava_crystal.add(block); }
+                if (blockName.contains("_dimensional_shard_")) { dimensional_shard.add(block); }
             }
         }
         addForgeTag("ores", ores);
@@ -202,6 +214,12 @@ public class BlockTagsDataGen extends BlockTagsProvider {
         addForgeTag("ores/resonating", resonating);
         addForgeTag("ores/tungsten", tungsten);
         addForgeTag("ores/yellorite", yellorite);
+        addForgeTag("ores/steel", steel);
+        addForgeTag("ores/sticky", sticky);
+        addForgeTag("ores/certus_quartz", certus_quartz);
+        addForgeTag("ores/charged_certus_quartz", charged_certus_quartz);
+        addForgeTag("ores/lava_crystal", lava_crystal);
+        addForgeTag("ores/dimensional_shard", dimensional_shard);
 
     }
 

@@ -71,6 +71,12 @@ public class ItemTagsDataGen extends ItemTagsProvider {
     private ArrayList<Item> resonating = new ArrayList<>();
     private ArrayList<Item> tungsten = new ArrayList<>();
     private ArrayList<Item> yellorite = new ArrayList<>();
+    private ArrayList<Item> steel = new ArrayList<>();
+    private ArrayList<Item> sticky = new ArrayList<>();
+    private ArrayList<Item> certus_quartz = new ArrayList<>();
+    private ArrayList<Item> charged_certus_quartz = new ArrayList<>();
+    private ArrayList<Item> lava_crystal = new ArrayList<>();
+    private ArrayList<Item> dimensional_shard = new ArrayList<>();
 
     public ItemTagsDataGen(DataGenerator generator)
     {
@@ -143,6 +149,12 @@ public class ItemTagsDataGen extends ItemTagsProvider {
                 if (blockName.contains("_resonating_")) { resonating.add(itemBlock); }
                 if (blockName.contains("_tungsten_")) { tungsten.add(itemBlock); }
                 if (blockName.contains("_yellorite_")) { yellorite.add(itemBlock); }
+                if (blockName.contains("_steel_")) { steel.add(itemBlock); }
+                if (blockName.contains("_sticky_")) { sticky.add(itemBlock); }
+                if (blockName.contains("_certus_quartz_")) { certus_quartz.add(itemBlock); }
+                if (blockName.contains("_charged_certus_quartz_")) { charged_certus_quartz.add(itemBlock); }
+                if (blockName.contains("_lava_crystal_")) { lava_crystal.add(itemBlock); }
+                if (blockName.contains("_dimensional_shard_")) { dimensional_shard.add(itemBlock); }
             }
         }
         addForgeTag("ores", ores);
@@ -203,6 +215,12 @@ public class ItemTagsDataGen extends ItemTagsProvider {
         addForgeTag("ores/resonating", resonating);
         addForgeTag("ores/tungsten", tungsten);
         addForgeTag("ores/yellorite", yellorite);
+        addForgeTag("ores/steel", steel);
+        addForgeTag("ores/sticky", sticky);
+        addForgeTag("ores/certus_quartz", certus_quartz);
+        addForgeTag("ores/charged_certus_quartz", charged_certus_quartz);
+        addForgeTag("ores/lava_crystal", lava_crystal);
+        addForgeTag("ores/dimensional_shard", dimensional_shard);
     }
 
     private void addForgeTag(String name, ArrayList<Item> itemsIn) {

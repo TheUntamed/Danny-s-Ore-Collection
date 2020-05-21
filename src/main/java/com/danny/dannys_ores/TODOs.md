@@ -1,4 +1,3 @@
 # TODOs
 
-* Fix Electrotine name
-* Change aluminum to bauxite
+* Fix Nether and End min/max values

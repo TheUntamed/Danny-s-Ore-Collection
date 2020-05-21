@@ -190,6 +190,12 @@ public class General {
         Zanite.loadConfig();
         Yellorite.loadConfig();
         Zinc.loadConfig();
+        CertusQuartz.loadConfig();
+        ChargedCertusQuartz.loadConfig();
+        DimensionalShard.loadConfig();
+        LavaCrystal.loadConfig();
+        Sticky.loadConfig();
+        Steel.loadConfig();
 
     }
 }

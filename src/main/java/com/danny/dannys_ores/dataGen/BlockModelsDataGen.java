@@ -7,38 +7,11 @@ import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.registries.ObjectHolder;
-
-import java.util.Objects;
 
 public class BlockModelsDataGen extends BlockModelProvider {
-
-    @ObjectHolder("quark:basalt")
-    public static final Block QUARK_BASALT = null;
-    @ObjectHolder("quark:limestone")
-    public static final Block QUARK_LIMESTONE = null;
-    @ObjectHolder("quark:jasper")
-    public static final Block QUARK_JASPER = null;
-    @ObjectHolder("quark:marble")
-    public static final Block QUARK_MARBLE = null;
-    @ObjectHolder("quark:slate")
-    public static final Block QUARK_SLATE = null;
-    @ObjectHolder("embellishcraft:basalt")
-    public static final Block EMBELLISHCRAFT_BASALT = null;
-    @ObjectHolder("embellishcraft:gneiss")
-    public static final Block EMBELLISHCRAFT_GNEISS = null;
-    @ObjectHolder("embellishcraft:jade")
-    public static final Block EMBELLISHCRAFT_JADE = null;
-    @ObjectHolder("embellishcraft:larvikite")
-    public static final Block EMBELLISHCRAFT_LARVIKITE = null;
-    @ObjectHolder("embellishcraft:marble")
-    public static final Block EMBELLISHCRAFT_MARBLE = null;
-    @ObjectHolder("embellishcraft:slate")
-    public static final Block EMBELLISHCRAFT_SLATE = null;
 
     public BlockModelsDataGen(DataGenerator generator, String modid, ExistingFileHelper existingFileHelper) {
         super(generator, modid, existingFileHelper);

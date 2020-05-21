@@ -128,7 +128,6 @@ public class Copper {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceCopperOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceCopperOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceCopperOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceCopperOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceCopperOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceCopperOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceCopperOre;
@@ -139,7 +138,6 @@ public class Copper {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceCopperOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceCopperOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceCopperOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceCopperOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceCopperOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceCopperOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceCopperOre;

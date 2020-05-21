@@ -88,6 +88,12 @@ public class ConfigHandler {
         if (blockName.contains("_resonating_")) { return Resonating.spec.getValues(); }
         if (blockName.contains("_tungsten_")) { return Tungsten.spec.getValues(); }
         if (blockName.contains("_yellorite_")) { return Yellorite.spec.getValues(); }
+        if (blockName.contains("_steel_")) { return Steel.spec.getValues(); }
+        if (blockName.contains("_sticky_")) { return Sticky.spec.getValues(); }
+        if (blockName.contains("_certus_quartz_")) { return CertusQuartz.spec.getValues(); }
+        if (blockName.contains("_charged_certus_quartz_")) { return ChargedCertusQuartz.spec.getValues(); }
+        if (blockName.contains("_lava_crystal_")) { return LavaCrystal.spec.getValues(); }
+        if (blockName.contains("_dimensional_shard_")) { return DimensionalShard.spec.getValues(); }
         return StoneVariants.spec.getValues();
     }
 

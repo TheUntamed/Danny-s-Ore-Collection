@@ -6,8 +6,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 
-/*
-Credits to Affehund for his easy to understand explanations and examples about Data Generation.
+/**
+ * This class is an EventBusSubscriber and calls the classes for all the different data gen types.
+ *
+ * Credits to Affehund for his easy to understand explanations and examples about Data Generation.
  */
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGen {
