@@ -1,6 +1,7 @@
 package com.danny.dannys_ores;
 
-import com.danny.dannys_ores.blocks.ResonatingBlockItem;
+import com.danny.dannys_ores.blocks.HotBlockItem;
+import com.danny.dannys_ores.blocks.ToxicBlockItem;
 import com.danny.dannys_ores.configs.ores.vanilla.Coal;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.generation.GenerationHandler;
@@ -74,42 +75,30 @@ public class Main {
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         final IForgeRegistry<Item> registry = event.getRegistry();
 
-        BlockInit.BLOCKS.getEntries().stream().filter(block -> !(exclude(block.get()))).map(RegistryObject::get).forEach(block -> {
+        BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
             final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
-            final BlockItem blockItem = new BlockItem(block, properties);
-            blockItem.setRegistryName(block.getRegistryName());
-            registry.register(blockItem);
-        });
-
-        BlockInit.BLOCKS.getEntries().stream().filter(block -> (exclude(block.get()))).map(RegistryObject::get).forEach(block -> {
-            final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
-            final ResonatingBlockItem blockItem = new ResonatingBlockItem(block, properties);
-            blockItem.setRegistryName(block.getRegistryName());
-            registry.register(blockItem);
+            ResourceLocation resLoc = block.getRegistryName();
+            if (resLoc != null) {
+                String regName = resLoc.toString();
+                if(regName.contains("_vulcanite_")) {
+                    final HotBlockItem blockItem = new HotBlockItem(block, properties);
+                    blockItem.setRegistryName(resLoc);
+                    registry.register(blockItem);
+                } else if (regName.contains("_uranium_")) {
+                    final ToxicBlockItem blockItem = new ToxicBlockItem(block, properties);
+                    blockItem.setRegistryName(resLoc);
+                    registry.register(blockItem);
+                } else {
+                    final BlockItem blockItem = new BlockItem(block, properties);
+                    blockItem.setRegistryName(resLoc);
+                    registry.register(blockItem);
+                }
+            } else {
+                throw new NullPointerException("block '" + block + "' has no registry name!");
+            }
         });
 
         LOGGER.debug("Registered BlockItems!");
-    }
-
-    /**
-     * ItemBlocks with a custom class have to be registered separately.
-     * This method will be called by the filter.
-     *
-     * @param block The block.
-     * @return True, if the block should be excluded from the general BlockItems registration.
-     */
-    private static boolean exclude(Block block) {
-        ResourceLocation resLoc = block.getRegistryName();
-        if (resLoc != null) {
-            String regName = resLoc.toString();
-            if (regName.contains("_resonating_")) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            throw new NullPointerException("");
-        }
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

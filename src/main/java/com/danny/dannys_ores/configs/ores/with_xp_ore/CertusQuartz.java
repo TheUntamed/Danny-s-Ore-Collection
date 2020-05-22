@@ -280,7 +280,7 @@ public class CertusQuartz {
     static {
         // = BUILDER.comment("").define("", false);
 
-        BUILDER.comment("CertusQuartz Ores").push("general");
+        BUILDER.comment("Certus Quartz Ores").push("general");
         disableCertusQuartzOres = BUILDER.comment("If false, all certus_quartz ore variants will be disabled.").define("disableAllVariants", false);
         BUILDER.comment("Stone Certus Quartz Ore").push("stone_certus_quartz_ore");
         BUILDER.comment("Generation settings for this ore.").push("generation");

@@ -1,10 +1,9 @@
 package com.danny.dannys_ores.configs;
 
 import com.danny.dannys_ores.Main;
-import com.danny.dannys_ores.configs.ores.*;
+import com.danny.dannys_ores.configs.ores.other.*;
 import com.danny.dannys_ores.configs.ores.vanilla.*;
 import com.danny.dannys_ores.configs.ores.with_xp_ore.*;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
@@ -170,7 +169,7 @@ public class General {
         Peridot.loadConfig();
         Platinum.loadConfig();
         Pyrite.loadConfig();
-        Resonating.loadConfig();
+        Vulcanite.loadConfig();
         Prosperity.loadConfig();
         Prudentium.loadConfig();
         Quartz.loadConfig();

@@ -37,6 +37,8 @@ public class LootTablesDataGen extends LootTablesBaseProvider {
                         lootTables.put(block.get(), gemsTable(blockName, block.get(), Items.LAPIS_LAZULI));
                     } else if (blockName.contains("_redstone_ore")) {
                         lootTables.put(block.get(), gemsTable(blockName, block.get(), Items.REDSTONE));
+                    } else if (blockName.contains("_sticky_ore")) {
+                        lootTables.put(block.get(), gemsTable(blockName, block.get(), Items.SLIME_BALL));
                     } else if (blockName.contains("_lucky_ore")) {
                         // Do Nothing. Table created manually.
                     } else {

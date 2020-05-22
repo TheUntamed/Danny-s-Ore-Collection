@@ -68,7 +68,7 @@ public class ItemTagsDataGen extends ItemTagsProvider {
     private ArrayList<Item> benitoite = new ArrayList<>();
     private ArrayList<Item> galena = new ArrayList<>();
     private ArrayList<Item> pyrite = new ArrayList<>();
-    private ArrayList<Item> resonating = new ArrayList<>();
+    private ArrayList<Item> vulcanite = new ArrayList<>();
     private ArrayList<Item> tungsten = new ArrayList<>();
     private ArrayList<Item> yellorite = new ArrayList<>();
     private ArrayList<Item> steel = new ArrayList<>();
@@ -146,7 +146,7 @@ public class ItemTagsDataGen extends ItemTagsProvider {
                 if (blockName.contains("_benitoite_")) { benitoite.add(itemBlock); }
                 if (blockName.contains("_galena_")) { galena.add(itemBlock); }
                 if (blockName.contains("_pyrite_")) { pyrite.add(itemBlock); }
-                if (blockName.contains("_resonating_")) { resonating.add(itemBlock); }
+                if (blockName.contains("_vulcanite_")) { vulcanite.add(itemBlock); }
                 if (blockName.contains("_tungsten_")) { tungsten.add(itemBlock); }
                 if (blockName.contains("_yellorite_")) { yellorite.add(itemBlock); }
                 if (blockName.contains("_steel_")) { steel.add(itemBlock); }
@@ -212,7 +212,7 @@ public class ItemTagsDataGen extends ItemTagsProvider {
         addForgeTag("ores/benitoite", benitoite);
         addForgeTag("ores/galena", galena);
         addForgeTag("ores/pyrite", pyrite);
-        addForgeTag("ores/resonating", resonating);
+        addForgeTag("ores/vulcanite", vulcanite);
         addForgeTag("ores/tungsten", tungsten);
         addForgeTag("ores/yellorite", yellorite);
         addForgeTag("ores/steel", steel);

@@ -2,7 +2,7 @@ package com.danny.dannys_ores.util;
 
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.*;
-import com.danny.dannys_ores.configs.ores.*;
+import com.danny.dannys_ores.configs.ores.other.*;
 import com.danny.dannys_ores.configs.ores.vanilla.*;
 import com.danny.dannys_ores.configs.ores.with_xp_ore.*;
 import com.danny.dannys_ores.init.BlockInit;
@@ -46,12 +46,18 @@ public class ConfigHandler {
         if (blockName.contains("_osmium_")) { return Osmium.spec.getValues(); }
         if (blockName.contains("_platinum_")) { return Platinum.spec.getValues(); }
         if (blockName.contains("_quartz_")) {
-            if (blockName.contains("_black_quartz_")) {
-                return BlackQuartz.spec.getValues();
+            if (blockName.contains("_black_quartz_")) { return BlackQuartz.spec.getValues();
+            } else if (blockName.contains("_certus_quartz_")) {
+                if (blockName.contains("_charged_certus_quartz_")) { return ChargedCertusQuartz.spec.getValues();
+                } else { return CertusQuartz.spec.getValues(); }
             } else {
-                return Quartz.spec.getValues(); }
+                return Quartz.spec.getValues();
+            }
         }
-
+        if (blockName.contains("_certus_quartz_")) {
+            if (blockName.contains("_charged_certus_quartz_")) { return ChargedCertusQuartz.spec.getValues();
+            } else { return CertusQuartz.spec.getValues(); }
+        }
         if (blockName.contains("_redstone_")) { return Redstone.spec.getValues(); }
         if (blockName.contains("_runite_")) { return Runite.spec.getValues(); }
         if (blockName.contains("_silver_")) { return Silver.spec.getValues(); }
@@ -85,13 +91,11 @@ public class ConfigHandler {
         if (blockName.contains("_benitoite_")) { return Benitoite.spec.getValues(); }
         if (blockName.contains("_galena_")) { return Galena.spec.getValues(); }
         if (blockName.contains("_pyrite_")) { return Pyrite.spec.getValues(); }
-        if (blockName.contains("_resonating_")) { return Resonating.spec.getValues(); }
+        if (blockName.contains("_vulcanite_")) { return Vulcanite.spec.getValues(); }
         if (blockName.contains("_tungsten_")) { return Tungsten.spec.getValues(); }
         if (blockName.contains("_yellorite_")) { return Yellorite.spec.getValues(); }
         if (blockName.contains("_steel_")) { return Steel.spec.getValues(); }
         if (blockName.contains("_sticky_")) { return Sticky.spec.getValues(); }
-        if (blockName.contains("_certus_quartz_")) { return CertusQuartz.spec.getValues(); }
-        if (blockName.contains("_charged_certus_quartz_")) { return ChargedCertusQuartz.spec.getValues(); }
         if (blockName.contains("_lava_crystal_")) { return LavaCrystal.spec.getValues(); }
         if (blockName.contains("_dimensional_shard_")) { return DimensionalShard.spec.getValues(); }
         return StoneVariants.spec.getValues();

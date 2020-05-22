@@ -59,9 +59,6 @@ https://www.curseforge.com/minecraft/mc-mods/forestry
 The Ore Overlay for the Yellorite, Anglesite and Benitoite Ore were part of the corresponding ore textures from 'Extreme Reactors' (by ZeroNoRyouki)
 https://www.curseforge.com/minecraft/mc-mods/extreme-reactors
 
-The Ore Overlay for the Resonating Ore were part of the corresponding ore textures from 'Deep Resonance' (by McJty)
-https://www.curseforge.com/minecraft/mc-mods/deep-resonance
-
 The Ore Overlay for the Certus Quartz and Charged Certus Quartz Ore were part of the corresponding ore textures from 'Applied Energistics 2' (by AlgorithmX2)
 https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2
 

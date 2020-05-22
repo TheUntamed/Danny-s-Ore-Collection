@@ -129,7 +129,6 @@ public class GenerationHandler {
         } else {
             variantIsDisabled = ((ForgeConfigSpec.BooleanValue) generalConfig.get("general.stone_variants." + variant)).get();
         }
-
         boolean disableAll = ((ForgeConfigSpec.BooleanValue) config.get("general.disableAllVariants")).get();
         boolean stoneVariant = ((ForgeConfigSpec.BooleanValue) config.get("general." + blockName + ".generation.enableVariant")).get();
         boolean isTempWhite = ((ForgeConfigSpec.BooleanValue) config.get("general." + blockName + ".generation.isTempWhitelist")).get();
