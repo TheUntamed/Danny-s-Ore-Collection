@@ -128,7 +128,6 @@ public class Lapis {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceLapisOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceLapisOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceLapisOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceLapisOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceLapisOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceLapisOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceLapisOre;
@@ -139,7 +138,6 @@ public class Lapis {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceLapisOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceLapisOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceLapisOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceLapisOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceLapisOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceLapisOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceLapisOre;
@@ -355,7 +353,7 @@ public class Lapis {
         veinSizeEndStoneLapisOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 7, 0, 65536);
         veinsPerChunkEndStoneLapisOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 1, 0, 65536);
         minHeightEndStoneLapisOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
-        maxHeightEndStoneLapisOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 64, 0, 256);
+        maxHeightEndStoneLapisOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 56, 0, 256);
         isTempWhitelistEndStoneLapisOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneLapisOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistEndStoneLapisOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);

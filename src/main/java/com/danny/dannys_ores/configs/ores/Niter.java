@@ -128,7 +128,6 @@ public class Niter {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceNiterOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceNiterOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceNiterOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceNiterOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceNiterOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceNiterOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceNiterOre;
@@ -139,7 +138,6 @@ public class Niter {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceNiterOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceNiterOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceNiterOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceNiterOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceNiterOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceNiterOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceNiterOre;
@@ -341,7 +339,7 @@ public class Niter {
         enableNetherrackNiterOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackNiterOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 2, 0, 65536);
         veinsPerChunkNetherrackNiterOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 4, 0, 65536);
-        minHeightNetherrackNiterOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackNiterOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackNiterOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistNetherrackNiterOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackNiterOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -354,7 +352,7 @@ public class Niter {
         enableEndStoneNiterOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeEndStoneNiterOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 2, 0, 65536);
         veinsPerChunkEndStoneNiterOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 4, 0, 65536);
-        minHeightEndStoneNiterOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 60, 0, 256);
+        minHeightEndStoneNiterOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 32, 0, 256);
         maxHeightEndStoneNiterOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistEndStoneNiterOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneNiterOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -476,7 +474,7 @@ public class Niter {
         enableQuarkBasaltNiterOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltNiterOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 2, 0, 65536);
         veinsPerChunkQuarkBasaltNiterOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 4, 0, 65536);
-        minHeightQuarkBasaltNiterOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltNiterOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltNiterOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistQuarkBasaltNiterOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltNiterOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

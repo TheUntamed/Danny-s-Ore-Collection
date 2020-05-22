@@ -340,7 +340,7 @@ public class Tungsten {
         enableNetherrackTungstenOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackTungstenOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 3, 0, 65536);
         veinsPerChunkNetherrackTungstenOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 3, 0, 65536);
-        minHeightNetherrackTungstenOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackTungstenOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackTungstenOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistNetherrackTungstenOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackTungstenOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -475,7 +475,7 @@ public class Tungsten {
         enableQuarkBasaltTungstenOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltTungstenOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 3, 0, 65536);
         veinsPerChunkQuarkBasaltTungstenOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 3, 0, 65536);
-        minHeightQuarkBasaltTungstenOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltTungstenOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltTungstenOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistQuarkBasaltTungstenOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltTungstenOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

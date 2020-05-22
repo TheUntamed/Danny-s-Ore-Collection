@@ -339,7 +339,7 @@ public class Draconium {
         enableNetherrackDraconiumOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackDraconiumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 1, 0, 65536);
         veinsPerChunkNetherrackDraconiumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk",1, 0, 65536);
-        minHeightNetherrackDraconiumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackDraconiumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackDraconiumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistNetherrackDraconiumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackDraconiumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -474,7 +474,7 @@ public class Draconium {
         enableQuarkBasaltDraconiumOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltDraconiumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 1, 0, 65536);
         veinsPerChunkQuarkBasaltDraconiumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk",1, 0, 65536);
-        minHeightQuarkBasaltDraconiumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltDraconiumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltDraconiumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistQuarkBasaltDraconiumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltDraconiumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

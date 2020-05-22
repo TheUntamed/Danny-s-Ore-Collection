@@ -339,7 +339,7 @@ public class Lead {
         enableNetherrackLeadOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackLeadOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 4, 0, 65536);
         veinsPerChunkNetherrackLeadOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 4, 0, 65536);
-        minHeightNetherrackLeadOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackLeadOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackLeadOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistNetherrackLeadOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackLeadOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -474,7 +474,7 @@ public class Lead {
         enableQuarkBasaltLeadOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltLeadOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 4, 0, 65536);
         veinsPerChunkQuarkBasaltLeadOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 4, 0, 65536);
-        minHeightQuarkBasaltLeadOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltLeadOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltLeadOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistQuarkBasaltLeadOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltLeadOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

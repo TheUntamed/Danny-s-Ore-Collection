@@ -128,7 +128,6 @@ public class Tin {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceTinOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceTinOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceTinOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceTinOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceTinOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceTinOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceTinOre;
@@ -139,7 +138,6 @@ public class Tin {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceTinOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceTinOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceTinOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceTinOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceTinOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceTinOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceTinOre;
@@ -341,7 +339,7 @@ public class Tin {
         enableNetherrackTinOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackTinOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 5, 0, 65536);
         veinsPerChunkNetherrackTinOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 10, 0, 65536);
-        minHeightNetherrackTinOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackTinOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackTinOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistNetherrackTinOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackTinOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -354,7 +352,7 @@ public class Tin {
         enableEndStoneTinOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeEndStoneTinOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 5, 0, 65536);
         veinsPerChunkEndStoneTinOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 10, 0, 65536);
-        minHeightEndStoneTinOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 60, 0, 256);
+        minHeightEndStoneTinOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 32, 0, 256);
         maxHeightEndStoneTinOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistEndStoneTinOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneTinOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -476,7 +474,7 @@ public class Tin {
         enableQuarkBasaltTinOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltTinOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 5, 0, 65536);
         veinsPerChunkQuarkBasaltTinOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 10, 0, 65536);
-        minHeightQuarkBasaltTinOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltTinOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltTinOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistQuarkBasaltTinOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltTinOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

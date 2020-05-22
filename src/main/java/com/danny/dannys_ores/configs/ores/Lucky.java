@@ -128,7 +128,6 @@ public class Lucky {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceLuckyOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceLuckyOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceLuckyOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceLuckyOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceLuckyOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceLuckyOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceLuckyOre;
@@ -139,7 +138,6 @@ public class Lucky {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceLuckyOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceLuckyOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceLuckyOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceLuckyOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceLuckyOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceLuckyOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceLuckyOre;
@@ -355,7 +353,7 @@ public class Lucky {
         veinSizeEndStoneLuckyOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 1, 0, 65536);
         veinsPerChunkEndStoneLuckyOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 11, 0, 65536);
         minHeightEndStoneLuckyOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
-        maxHeightEndStoneLuckyOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 64, 0, 256);
+        maxHeightEndStoneLuckyOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistEndStoneLuckyOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneLuckyOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistEndStoneLuckyOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);

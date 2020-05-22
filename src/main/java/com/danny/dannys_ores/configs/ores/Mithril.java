@@ -128,7 +128,6 @@ public class Mithril {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceMithrilOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceMithrilOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceMithrilOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceMithrilOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceMithrilOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceMithrilOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceMithrilOre;
@@ -139,7 +138,6 @@ public class Mithril {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceMithrilOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceMithrilOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceMithrilOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceMithrilOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceMithrilOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceMithrilOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceMithrilOre;
@@ -355,7 +353,7 @@ public class Mithril {
         veinSizeEndStoneMithrilOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 7, 0, 65536);
         veinsPerChunkEndStoneMithrilOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 1, 0, 65536);
         minHeightEndStoneMithrilOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 16, 0, 256);
-        maxHeightEndStoneMithrilOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 80, 0, 256);
+        maxHeightEndStoneMithrilOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 58, 0, 256);
         isTempWhitelistEndStoneMithrilOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneMithrilOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistEndStoneMithrilOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);

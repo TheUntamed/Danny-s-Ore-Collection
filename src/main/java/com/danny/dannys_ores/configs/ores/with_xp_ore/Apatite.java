@@ -339,7 +339,7 @@ public class Apatite {
         enableNetherrackApatiteOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackApatiteOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 9, 0, 65536);
         veinsPerChunkNetherrackApatiteOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 10, 0, 65536);
-        minHeightNetherrackApatiteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackApatiteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackApatiteOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 64, 0, 256);
         isTempWhitelistNetherrackApatiteOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackApatiteOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -474,7 +474,7 @@ public class Apatite {
         enableQuarkBasaltApatiteOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltApatiteOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 17, 0, 65536);
         veinsPerChunkQuarkBasaltApatiteOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 20, 0, 65536);
-        minHeightQuarkBasaltApatiteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltApatiteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltApatiteOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 64, 0, 256);
         isTempWhitelistQuarkBasaltApatiteOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltApatiteOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

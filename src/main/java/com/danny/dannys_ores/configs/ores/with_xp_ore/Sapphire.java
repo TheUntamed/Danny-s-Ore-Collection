@@ -340,7 +340,7 @@ public class Sapphire {
         enableNetherrackSapphireOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackSapphireOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 3, 0, 65536);
         veinsPerChunkNetherrackSapphireOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 3, 0, 65536);
-        minHeightNetherrackSapphireOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackSapphireOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackSapphireOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistNetherrackSapphireOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackSapphireOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -475,7 +475,7 @@ public class Sapphire {
         enableQuarkBasaltSapphireOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltSapphireOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 3, 0, 65536);
         veinsPerChunkQuarkBasaltSapphireOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 3, 0, 65536);
-        minHeightQuarkBasaltSapphireOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltSapphireOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltSapphireOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistQuarkBasaltSapphireOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltSapphireOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

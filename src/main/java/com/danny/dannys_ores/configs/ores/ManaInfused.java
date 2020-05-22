@@ -128,7 +128,6 @@ public class ManaInfused {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceManaInfusedOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceManaInfusedOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceManaInfusedOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceManaInfusedOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceManaInfusedOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceManaInfusedOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceManaInfusedOre;
@@ -139,7 +138,6 @@ public class ManaInfused {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceManaInfusedOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceManaInfusedOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceManaInfusedOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceManaInfusedOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceManaInfusedOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceManaInfusedOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceManaInfusedOre;
@@ -355,7 +353,7 @@ public class ManaInfused {
         veinSizeEndStoneManaInfusedOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 3, 0, 65536);
         veinsPerChunkEndStoneManaInfusedOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 3, 0, 65536);
         minHeightEndStoneManaInfusedOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 16, 0, 256);
-        maxHeightEndStoneManaInfusedOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 80, 0, 256);
+        maxHeightEndStoneManaInfusedOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 58, 0, 256);
         isTempWhitelistEndStoneManaInfusedOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneManaInfusedOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistEndStoneManaInfusedOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);

@@ -128,7 +128,6 @@ public class Sulfur {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceSulfurOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceSulfurOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceSulfurOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceSulfurOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceSulfurOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceSulfurOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceSulfurOre;
@@ -139,7 +138,6 @@ public class Sulfur {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceSulfurOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceSulfurOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceSulfurOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceSulfurOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceSulfurOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceSulfurOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceSulfurOre;
@@ -342,7 +340,7 @@ public class Sulfur {
         veinSizeNetherrackSulfurOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 7, 0, 65536);
         veinsPerChunkNetherrackSulfurOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 8, 0, 65536);
         minHeightNetherrackSulfurOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
-        maxHeightNetherrackSulfurOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 24, 0, 256);
+        maxHeightNetherrackSulfurOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 32, 0, 256);
         isTempWhitelistNetherrackSulfurOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackSulfurOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistNetherrackSulfurOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
@@ -355,7 +353,7 @@ public class Sulfur {
         veinSizeEndStoneSulfurOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 3, 0, 65536);
         veinsPerChunkEndStoneSulfurOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 2, 0, 65536);
         minHeightEndStoneSulfurOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
-        maxHeightEndStoneSulfurOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 64, 0, 256);
+        maxHeightEndStoneSulfurOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 32, 0, 256);
         isTempWhitelistEndStoneSulfurOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneSulfurOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistEndStoneSulfurOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
@@ -477,7 +475,7 @@ public class Sulfur {
         veinSizeQuarkBasaltSulfurOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 7, 0, 65536);
         veinsPerChunkQuarkBasaltSulfurOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 8, 0, 65536);
         minHeightQuarkBasaltSulfurOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
-        maxHeightQuarkBasaltSulfurOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 24, 0, 256);
+        maxHeightQuarkBasaltSulfurOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 32, 0, 256);
         isTempWhitelistQuarkBasaltSulfurOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltSulfurOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistQuarkBasaltSulfurOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);

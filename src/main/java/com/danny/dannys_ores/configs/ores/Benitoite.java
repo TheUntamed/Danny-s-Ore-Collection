@@ -339,7 +339,7 @@ public class Benitoite {
         enableNetherrackBenitoiteOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackBenitoiteOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 2, 0, 65536);
         veinsPerChunkNetherrackBenitoiteOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 2, 0, 65536);
-        minHeightNetherrackBenitoiteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackBenitoiteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackBenitoiteOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistNetherrackBenitoiteOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackBenitoiteOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -474,7 +474,7 @@ public class Benitoite {
         enableQuarkBasaltBenitoiteOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltBenitoiteOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 2, 0, 65536);
         veinsPerChunkQuarkBasaltBenitoiteOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 2, 0, 65536);
-        minHeightQuarkBasaltBenitoiteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltBenitoiteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltBenitoiteOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistQuarkBasaltBenitoiteOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltBenitoiteOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

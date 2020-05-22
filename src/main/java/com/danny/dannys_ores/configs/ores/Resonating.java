@@ -377,7 +377,7 @@ public class Resonating {
         enableNetherrackResonatingOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackResonatingOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 4, 0, 65536);
         veinsPerChunkNetherrackResonatingOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 5, 0, 65536);
-        minHeightNetherrackResonatingOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackResonatingOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackResonatingOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistNetherrackResonatingOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -540,7 +540,7 @@ public class Resonating {
         enableQuarkBasaltResonatingOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltResonatingOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 4, 0, 65536);
         veinsPerChunkQuarkBasaltResonatingOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 5, 0, 65536);
-        minHeightQuarkBasaltResonatingOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltResonatingOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltResonatingOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistQuarkBasaltResonatingOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltResonatingOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

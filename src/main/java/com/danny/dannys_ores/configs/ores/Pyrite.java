@@ -340,7 +340,7 @@ public class Pyrite {
         enableNetherrackPyriteOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackPyriteOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 3, 0, 65536);
         veinsPerChunkNetherrackPyriteOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 3, 0, 65536);
-        minHeightNetherrackPyriteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackPyriteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackPyriteOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistNetherrackPyriteOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackPyriteOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -353,7 +353,7 @@ public class Pyrite {
         enableEndStonePyriteOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeEndStonePyriteOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 3, 0, 65536);
         veinsPerChunkEndStonePyriteOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 3, 0, 65536);
-        minHeightEndStonePyriteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 16, 0, 256);
+        minHeightEndStonePyriteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightEndStonePyriteOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistEndStonePyriteOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStonePyriteOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -475,7 +475,7 @@ public class Pyrite {
         enableQuarkBasaltPyriteOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltPyriteOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 3, 0, 65536);
         veinsPerChunkQuarkBasaltPyriteOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 3, 0, 65536);
-        minHeightQuarkBasaltPyriteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltPyriteOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltPyriteOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistQuarkBasaltPyriteOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltPyriteOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

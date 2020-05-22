@@ -339,7 +339,7 @@ public class Sticky {
         enableNetherrackStickyOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackStickyOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 1, 0, 65536);
         veinsPerChunkNetherrackStickyOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 11, 0, 65536);
-        minHeightNetherrackStickyOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackStickyOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackStickyOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistNetherrackStickyOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackStickyOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -474,7 +474,7 @@ public class Sticky {
         enableQuarkBasaltStickyOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltStickyOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 1, 0, 65536);
         veinsPerChunkQuarkBasaltStickyOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 11, 0, 65536);
-        minHeightQuarkBasaltStickyOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltStickyOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltStickyOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 64, 0, 256);
         isTempWhitelistQuarkBasaltStickyOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltStickyOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

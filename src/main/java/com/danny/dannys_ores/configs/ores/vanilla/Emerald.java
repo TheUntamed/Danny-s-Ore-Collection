@@ -353,7 +353,7 @@ public class Emerald {
         veinSizeEndStoneEmeraldOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 1, 0, 65536);
         veinsPerChunkEndStoneEmeraldOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 11, 0, 65536);
         minHeightEndStoneEmeraldOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
-        maxHeightEndStoneEmeraldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 64, 0, 256);
+        maxHeightEndStoneEmeraldOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 58, 0, 256);
         isTempWhitelistEndStoneEmeraldOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneEmeraldOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistEndStoneEmeraldOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);

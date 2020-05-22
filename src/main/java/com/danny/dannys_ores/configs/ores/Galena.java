@@ -339,7 +339,7 @@ public class Galena {
         enableNetherrackGalenaOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackGalenaOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 4, 0, 65536);
         veinsPerChunkNetherrackGalenaOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 4, 0, 65536);
-        minHeightNetherrackGalenaOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackGalenaOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackGalenaOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistNetherrackGalenaOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackGalenaOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -352,7 +352,7 @@ public class Galena {
         enableEndStoneGalenaOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeEndStoneGalenaOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 4, 0, 65536);
         veinsPerChunkEndStoneGalenaOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 4, 0, 65536);
-        minHeightEndStoneGalenaOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 60, 0, 256);
+        minHeightEndStoneGalenaOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightEndStoneGalenaOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistEndStoneGalenaOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneGalenaOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -474,7 +474,7 @@ public class Galena {
         enableQuarkBasaltGalenaOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltGalenaOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 4, 0, 65536);
         veinsPerChunkQuarkBasaltGalenaOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 4, 0, 65536);
-        minHeightQuarkBasaltGalenaOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltGalenaOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltGalenaOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistQuarkBasaltGalenaOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltGalenaOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

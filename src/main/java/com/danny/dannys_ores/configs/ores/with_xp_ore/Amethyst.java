@@ -128,7 +128,6 @@ public class Amethyst {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceAmethystOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceAmethystOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceAmethystOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceAmethystOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceAmethystOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceAmethystOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceAmethystOre;
@@ -139,7 +138,6 @@ public class Amethyst {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceAmethystOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceAmethystOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceAmethystOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceAmethystOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceAmethystOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceAmethystOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceAmethystOre;

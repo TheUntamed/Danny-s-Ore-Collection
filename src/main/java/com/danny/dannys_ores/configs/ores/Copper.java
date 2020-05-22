@@ -339,7 +339,7 @@ public class Copper {
         enableNetherrackCopperOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackCopperOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 5, 0, 65536);
         veinsPerChunkNetherrackCopperOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 10, 0, 65536);
-        minHeightNetherrackCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackCopperOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistNetherrackCopperOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -352,7 +352,7 @@ public class Copper {
         enableEndStoneCopperOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeEndStoneCopperOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 5, 0, 65536);
         veinsPerChunkEndStoneCopperOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 10, 0, 65536);
-        minHeightEndStoneCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 60, 0, 256);
+        minHeightEndStoneCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 32, 0, 256);
         maxHeightEndStoneCopperOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistEndStoneCopperOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -474,7 +474,7 @@ public class Copper {
         enableQuarkBasaltCopperOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltCopperOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 5, 0, 65536);
         veinsPerChunkQuarkBasaltCopperOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 10, 0, 65536);
-        minHeightQuarkBasaltCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltCopperOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltCopperOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistQuarkBasaltCopperOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltCopperOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

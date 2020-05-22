@@ -128,7 +128,6 @@ public class WhiteOpal {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceWhiteOpalOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceWhiteOpalOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceWhiteOpalOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceWhiteOpalOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceWhiteOpalOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceWhiteOpalOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceWhiteOpalOre;
@@ -139,7 +138,6 @@ public class WhiteOpal {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceWhiteOpalOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceWhiteOpalOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceWhiteOpalOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceWhiteOpalOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceWhiteOpalOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceWhiteOpalOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceWhiteOpalOre;
@@ -355,7 +353,7 @@ public class WhiteOpal {
         veinSizeEndStoneWhiteOpalOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 1, 0, 65536);
         veinsPerChunkEndStoneWhiteOpalOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk",1, 0, 65536);
         minHeightEndStoneWhiteOpalOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
-        maxHeightEndStoneWhiteOpalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 64, 0, 256);
+        maxHeightEndStoneWhiteOpalOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 32, 0, 256);
         isTempWhitelistEndStoneWhiteOpalOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneWhiteOpalOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistEndStoneWhiteOpalOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);

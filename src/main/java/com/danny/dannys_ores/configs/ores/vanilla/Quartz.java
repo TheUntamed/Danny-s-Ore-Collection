@@ -339,7 +339,7 @@ public class Quartz {
         enableVanillaNetherQuartzOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeVanillaNetherQuartzOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 14, 0, 65536);
         veinsPerChunkVanillaNetherQuartzOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 16, 0, 65536);
-        minHeightVanillaNetherQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightVanillaNetherQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightVanillaNetherQuartzOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistVanillaNetherQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistVanillaNetherQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -353,7 +353,7 @@ public class Quartz {
         veinSizeEndStoneQuartzOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 9, 0, 65536);
         veinsPerChunkEndStoneQuartzOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 2, 0, 65536);
         minHeightEndStoneQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
-        maxHeightEndStoneQuartzOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 64, 0, 256);
+        maxHeightEndStoneQuartzOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistEndStoneQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistEndStoneQuartzOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);
@@ -474,7 +474,7 @@ public class Quartz {
         enableQuarkBasaltQuartzOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltQuartzOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 14, 0, 65536);
         veinsPerChunkQuarkBasaltQuartzOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 16, 0, 65536);
-        minHeightQuarkBasaltQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltQuartzOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistQuarkBasaltQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

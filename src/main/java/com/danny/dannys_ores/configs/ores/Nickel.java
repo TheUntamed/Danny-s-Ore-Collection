@@ -129,7 +129,6 @@ public class Nickel {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceNickelOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceNickelOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceNickelOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceNickelOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceNickelOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceNickelOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceNickelOre;
@@ -140,7 +139,6 @@ public class Nickel {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceNickelOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceNickelOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceNickelOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceNickelOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceNickelOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceNickelOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceNickelOre;
@@ -342,7 +340,7 @@ public class Nickel {
         enableNetherrackNickelOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackNickelOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 6, 0, 65536);
         veinsPerChunkNetherrackNickelOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 1, 0, 65536);
-        minHeightNetherrackNickelOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackNickelOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackNickelOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistNetherrackNickelOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackNickelOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -477,7 +475,7 @@ public class Nickel {
         enableQuarkBasaltNickelOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltNickelOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 6, 0, 65536);
         veinsPerChunkQuarkBasaltNickelOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 1, 0, 65536);
-        minHeightQuarkBasaltNickelOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltNickelOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltNickelOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistQuarkBasaltNickelOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltNickelOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

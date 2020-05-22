@@ -353,7 +353,7 @@ public class Iridium {
         veinSizeEndStoneIridiumOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 1, 0, 65536);
         veinsPerChunkEndStoneIridiumOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk",1, 0, 65536);
         minHeightEndStoneIridiumOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
-        maxHeightEndStoneIridiumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 64, 0, 256);
+        maxHeightEndStoneIridiumOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 24, 0, 256);
         isTempWhitelistEndStoneIridiumOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistEndStoneIridiumOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
         isBiomeWhitelistEndStoneIridiumOre = BUILDER.comment("If true, the biome blacklist is a whitelist.").define("isBiomeWhitelist", false);

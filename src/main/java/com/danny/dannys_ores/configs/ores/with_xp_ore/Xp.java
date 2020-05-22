@@ -150,7 +150,6 @@ public class Xp {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceXpOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceXpOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceXpOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceXpOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceXpOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceXpOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceXpOre;
@@ -163,7 +162,6 @@ public class Xp {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceXpOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceXpOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceXpOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceXpOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceXpOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceXpOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceXpOre;
@@ -409,7 +407,7 @@ public class Xp {
         enableNetherrackXpOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackXpOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 1, 0, 65536);
         veinsPerChunkNetherrackXpOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 11, 0, 65536);
-        minHeightNetherrackXpOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackXpOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackXpOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistNetherrackXpOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackXpOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -584,7 +582,7 @@ public class Xp {
         enableQuarkBasaltXpOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltXpOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 1, 0, 65536);
         veinsPerChunkQuarkBasaltXpOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 11, 0, 65536);
-        minHeightQuarkBasaltXpOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltXpOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltXpOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 96, 0, 256);
         isTempWhitelistQuarkBasaltXpOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltXpOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

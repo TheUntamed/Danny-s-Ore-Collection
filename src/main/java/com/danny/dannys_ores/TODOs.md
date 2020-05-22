@@ -1,3 +1,3 @@
 # TODOs
 
-* Fix Nether and End min/max values
+* Resonating Ore Texture and Name change

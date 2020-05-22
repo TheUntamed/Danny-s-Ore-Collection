@@ -128,7 +128,6 @@ public class BlackQuartz {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceBlackQuartzOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceBlackQuartzOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceBlackQuartzOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceBlackQuartzOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceBlackQuartzOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceBlackQuartzOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceBlackQuartzOre;
@@ -139,7 +138,6 @@ public class BlackQuartz {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceBlackQuartzOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceBlackQuartzOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceBlackQuartzOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceBlackQuartzOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceBlackQuartzOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceBlackQuartzOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceBlackQuartzOre;
@@ -341,7 +339,7 @@ public class BlackQuartz {
         enableNetherrackBlackQuartzOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeNetherrackBlackQuartzOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 7, 0, 65536);
         veinsPerChunkNetherrackBlackQuartzOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 8, 0, 65536);
-        minHeightNetherrackBlackQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightNetherrackBlackQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightNetherrackBlackQuartzOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistNetherrackBlackQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistNetherrackBlackQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());
@@ -476,7 +474,7 @@ public class BlackQuartz {
         enableQuarkBasaltBlackQuartzOre = BUILDER.comment("If false, this ore variant will not generate.").define("enableVariant", true);
         veinSizeQuarkBasaltBlackQuartzOre = BUILDER.comment("The amount of ores in one vein.").defineInRange("veinSize", 7, 0, 65536);
         veinsPerChunkQuarkBasaltBlackQuartzOre = BUILDER.comment("How many veins per chunk.").defineInRange("veinsPerChunk", 8, 0, 65536);
-        minHeightQuarkBasaltBlackQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 10, 0, 256);
+        minHeightQuarkBasaltBlackQuartzOre = BUILDER.comment("The min y-level the ore will generate.").defineInRange("minHeight", 0, 0, 256);
         maxHeightQuarkBasaltBlackQuartzOre = BUILDER.comment("The max y-level the ore will generate.").defineInRange("maxHeight", 128, 0, 256);
         isTempWhitelistQuarkBasaltBlackQuartzOre = BUILDER.comment("If true, the biome temperature blacklist is a whitelist.").define("isTempWhitelist", false);
         temperatureBlacklistQuarkBasaltBlackQuartzOre = BUILDER.comment("Possible Entries: \"MEDIUM\", \"WARM\", \"COLD\", \"OCEAN\"").define("temperatureBlacklist", new ArrayList<String>());

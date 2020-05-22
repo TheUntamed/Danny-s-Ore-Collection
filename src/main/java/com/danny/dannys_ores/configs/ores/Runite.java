@@ -128,7 +128,6 @@ public class Runite {
     public static ForgeConfigSpec.IntValue veinsPerChunkBlueIceRuniteOre;
     public static ForgeConfigSpec.IntValue minHeightBlueIceRuniteOre;
     public static ForgeConfigSpec.IntValue maxHeightBlueIceRuniteOre;
-    public static ForgeConfigSpec.DoubleValue resistanceBlueIceRuniteOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistBlueIceRuniteOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceRuniteOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceRuniteOre;
@@ -139,7 +138,6 @@ public class Runite {
     public static ForgeConfigSpec.IntValue veinsPerChunkPackedIceRuniteOre;
     public static ForgeConfigSpec.IntValue minHeightPackedIceRuniteOre;
     public static ForgeConfigSpec.IntValue maxHeightPackedIceRuniteOre;
-    public static ForgeConfigSpec.DoubleValue resistancePackedIceRuniteOre;
     public static ForgeConfigSpec.BooleanValue isTempWhitelistPackedIceRuniteOre;
     public static ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceRuniteOre;
     public static ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceRuniteOre;
