@@ -1,4 +1,4 @@
-package com.danny.dannys_ores.blocks;
+package com.danny.dannys_ores.blockItems;
 
 import com.danny.dannys_ores.util.ConfigHandler;
 import com.danny.dannys_ores.util.PathHandler;

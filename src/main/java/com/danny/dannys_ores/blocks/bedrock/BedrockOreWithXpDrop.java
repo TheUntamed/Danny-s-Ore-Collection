@@ -1,24 +1,30 @@
-package com.danny.dannys_ores.blocks;
+package com.danny.dannys_ores.blocks.bedrock;
 
-import com.danny.dannys_ores.configs.*;
-import com.danny.dannys_ores.init.BlockInit;
-import com.danny.dannys_ores.init.BlockInitVanilla;
+import com.danny.dannys_ores.blocks.OreWithXpDrop;
+import com.danny.dannys_ores.blocks.bedrock.BedrockOre;
+import com.danny.dannys_ores.configs.General;
+import com.danny.dannys_ores.configs.ores.with_xp_ore.Xp;
+import com.danny.dannys_ores.init.BlockInitXpDrop;
 import com.danny.dannys_ores.util.ConfigHandler;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.Explosion;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
-import sun.security.krb5.Config;
 
-public class BedrockOre extends BaseBlock {
+import java.util.Random;
 
-    public BedrockOre(Block.Properties properties, Block blockBase) {
-        super(properties, blockBase);
+public class BedrockOreWithXpDrop extends OreWithXpDrop {
+
+    public BedrockOreWithXpDrop(Block.Properties properties, Block blockBase, int minXp, int maxXp) {
+        super(properties, blockBase, minXp, maxXp);
     }
 
     /**

@@ -1,7 +1,7 @@
 package com.danny.dannys_ores;
 
-import com.danny.dannys_ores.blocks.HotBlockItem;
-import com.danny.dannys_ores.blocks.ToxicBlockItem;
+import com.danny.dannys_ores.blockItems.HotBlockItem;
+import com.danny.dannys_ores.blockItems.ToxicBlockItem;
 import com.danny.dannys_ores.configs.ores.vanilla.Coal;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.generation.GenerationHandler;

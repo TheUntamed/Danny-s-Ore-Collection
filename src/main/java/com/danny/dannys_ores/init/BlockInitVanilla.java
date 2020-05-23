@@ -2,8 +2,8 @@ package com.danny.dannys_ores.init;
 
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blocks.BaseBlock;
-import com.danny.dannys_ores.blocks.BedrockOre;
-import com.danny.dannys_ores.blocks.BedrockOreWithXpDrop;
+import com.danny.dannys_ores.blocks.bedrock.BedrockOre;
+import com.danny.dannys_ores.blocks.bedrock.BedrockOreWithXpDrop;
 import com.danny.dannys_ores.blocks.OreWithXpDrop;
 import com.danny.dannys_ores.materials.MyMaterials;
 import net.minecraft.block.Block;
