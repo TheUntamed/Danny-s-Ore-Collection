@@ -1,9 +1,14 @@
 package com.danny.dannys_ores.configs;
 
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.util.PathHandler;
+import com.danny.dannys_ores.util.CommentHandler;
 import com.danny.dannys_ores.configs.ores.other.*;
 import com.danny.dannys_ores.configs.ores.vanilla.*;
 import com.danny.dannys_ores.configs.ores.with_xp_ore.*;
+import com.danny.dannys_ores.util.CommentHandler;
+import com.danny.dannys_ores.util.PathHandler;
+import com.danny.dannys_ores.util.CommentHandler;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
@@ -65,7 +70,7 @@ public class General {
 
     static {
         // = BUILDER.comment("").define("", false);
-        BUILDER.comment("General settings").push("general");
+        BUILDER.comment(CommentHandler.getGeneralComment()).push(PathHandler.getGeneralPath());
             enableConfigChecker = BUILDER.comment("Checks your blacklists and whitelists for correct syntax. If something is wrong it will be printed to the log.").define("enableConfigChecker", false);
             BUILDER.comment("Disable all Ores of a certain stone variant (only affects ores of this mod).").push("stone_variants");
                 BUILDER.comment("Vanilla stone variants").push("minecraft");
@@ -124,77 +129,98 @@ public class General {
     public static void loadConfig() {
         Path configPath = FMLPaths.CONFIGDIR.get();
         Path myConfigPath = Paths.get(configPath.toAbsolutePath().toString(), Main.MOD_ID);
-        try
-        {
-            Files.createDirectory(myConfigPath);
-        }
-        catch (FileAlreadyExistsException e)
-        {
-            // Nothing to do
-        }
-        catch (IOException e) {
-            Main.LOGGER.error("Failed to create config directory for Danny's Ores mod.", e);
-        }
+        try { Files.createDirectory(myConfigPath); }
+        catch (FileAlreadyExistsException e) {}
+        catch (IOException e) { Main.LOGGER.error("Failed to create config directory '" + myConfigPath + "' for Danny's Ores mod.", e); }
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, General.spec, Main.MOD_ID + "/#general.toml");
+        Path configPathOres = Paths.get(myConfigPath.toString(),"/ores");
+        try { Files.createDirectory(configPathOres); }
+        catch (FileAlreadyExistsException e) {}
+        catch (IOException e) { Main.LOGGER.error("Failed to create config directory '" + configPathOres + "' for Danny's Ores mod.", e); }
 
-        StoneVariants.loadConfig();
-        Adamantium.loadConfig();
-        Bauxite.loadConfig();
-        Anglesite.loadConfig();
-        Amethyst.loadConfig();
-        Apatite.loadConfig();
-        Ardite.loadConfig();
-        Benitoite.loadConfig();
-        Bismuth.loadConfig();
-        BlackOpal.loadConfig();
-        Coal.loadConfig();
-        Copper.loadConfig();
-        Galena.loadConfig();
-        Diamond.loadConfig();
-        Electrotine.loadConfig();
-        Emerald.loadConfig();
-        Gold.loadConfig();
-        Imperium.loadConfig();
-        Inferium.loadConfig();
-        Insanium.loadConfig();
-        Iridium.loadConfig();
-        Iron.loadConfig();
-        Lapis.loadConfig();
-        Lead.loadConfig();
-        Lucky.loadConfig();
-        Mithril.loadConfig();
-        Nickel.loadConfig();
-        Osmium.loadConfig();
-        Peridot.loadConfig();
-        Platinum.loadConfig();
-        Pyrite.loadConfig();
-        Vulcanite.loadConfig();
-        Prosperity.loadConfig();
-        Prudentium.loadConfig();
-        Quartz.loadConfig();
-        Redstone.loadConfig();
-        Ruby.loadConfig();
-        Runite.loadConfig();
-        Sapphire.loadConfig();
-        Silver.loadConfig();
-        Soulium.loadConfig();
-        Supremium.loadConfig();
-        Tertium.loadConfig();
-        Tin.loadConfig();
-        Tungsten.loadConfig();
-        Uranium.loadConfig();
-        WhiteOpal.loadConfig();
-        Xp.loadConfig();
-        Zanite.loadConfig();
-        Yellorite.loadConfig();
-        Zinc.loadConfig();
-        CertusQuartz.loadConfig();
-        ChargedCertusQuartz.loadConfig();
-        DimensionalShard.loadConfig();
-        LavaCrystal.loadConfig();
-        Sticky.loadConfig();
-        Steel.loadConfig();
+        Path configPathNormalOres = Paths.get(configPathOres.toString(),"/normal");
+        try { Files.createDirectory(configPathNormalOres); }
+        catch (FileAlreadyExistsException e) {}
+        catch (IOException e) { Main.LOGGER.error("Failed to create config directory '" + configPathNormalOres + "' for Danny's Ores mod.", e); }
+
+        Path configPathDenseOres = Paths.get(configPathOres.toString(),"/dense");
+        try { Files.createDirectory(configPathDenseOres); }
+        catch (FileAlreadyExistsException e) {}
+        catch (IOException e) { Main.LOGGER.error("Failed to create config directory '" + configPathDenseOres + "' for Danny's Ores mod.", e); }
+
+        Path configPathPoorOres = Paths.get(configPathOres.toString(),"/poor");
+        try { Files.createDirectory(configPathPoorOres); }
+        catch (FileAlreadyExistsException e) {}
+        catch (IOException e) { Main.LOGGER.error("Failed to create config directory '" + configPathPoorOres + "' for Danny's Ores mod.", e); }
+
+        String generalPath = myConfigPath.toString();
+        String normalPath = configPathNormalOres.toString();
+        String densePath = configPathDenseOres.toString();
+        String poorPath = configPathPoorOres.toString();
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, General.spec, generalPath + "/#general.toml");
+
+        StoneVariants.loadConfig(generalPath);
+        Adamantium.loadConfig(normalPath);
+        Bauxite.loadConfig(normalPath);
+        Anglesite.loadConfig(normalPath);
+        Amethyst.loadConfig(normalPath);
+        Apatite.loadConfig(normalPath);
+        Ardite.loadConfig(normalPath);
+        Benitoite.loadConfig(normalPath);
+        Bismuth.loadConfig(normalPath);
+        BlackOpal.loadConfig(normalPath);
+        Coal.loadConfig(normalPath);
+        Copper.loadConfig(normalPath);
+        Galena.loadConfig(normalPath);
+        Diamond.loadConfig(normalPath);
+        Electrotine.loadConfig(normalPath);
+        Emerald.loadConfig(normalPath);
+        Gold.loadConfig(normalPath);
+        Imperium.loadConfig(normalPath);
+        Inferium.loadConfig(normalPath);
+        Insanium.loadConfig(normalPath);
+        Iridium.loadConfig(normalPath);
+        Iron.loadConfig(normalPath);
+        Lapis.loadConfig(normalPath);
+        Lead.loadConfig(normalPath);
+        Lucky.loadConfig(normalPath);
+        Mithril.loadConfig(normalPath);
+        Nickel.loadConfig(normalPath);
+        Osmium.loadConfig(normalPath);
+        Peridot.loadConfig(normalPath);
+        Platinum.loadConfig(normalPath);
+        Pyrite.loadConfig(normalPath);
+        Vulcanite.loadConfig(normalPath);
+        Prosperity.loadConfig(normalPath);
+        Prudentium.loadConfig(normalPath);
+        Quartz.loadConfig(normalPath);
+        Redstone.loadConfig(normalPath);
+        Ruby.loadConfig(normalPath);
+        Runite.loadConfig(normalPath);
+        Sapphire.loadConfig(normalPath);
+        Silver.loadConfig(normalPath);
+        Soulium.loadConfig(normalPath);
+        Supremium.loadConfig(normalPath);
+        Tertium.loadConfig(normalPath);
+        Tin.loadConfig(normalPath);
+        Tungsten.loadConfig(normalPath);
+        Uranium.loadConfig(normalPath);
+        WhiteOpal.loadConfig(normalPath);
+        Xp.loadConfig(normalPath);
+        Zanite.loadConfig(normalPath);
+        Yellorite.loadConfig(normalPath);
+        Zinc.loadConfig(normalPath);
+        CertusQuartz.loadConfig(normalPath);
+        ChargedCertusQuartz.loadConfig(normalPath);
+        DimensionalShard.loadConfig(normalPath);
+        LavaCrystal.loadConfig(normalPath);
+        Sticky.loadConfig(normalPath);
+        Steel.loadConfig(normalPath);
+        Boron.loadConfig(normalPath);
+        Magnesium.loadConfig(normalPath);
+        Lithium.loadConfig(normalPath);
+        Thorium.loadConfig(normalPath);
 
     }
 }

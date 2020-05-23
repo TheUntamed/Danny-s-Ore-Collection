@@ -1,6 +1,7 @@
 package com.danny.dannys_ores.blocks;
 
 import com.danny.dannys_ores.util.ConfigHandler;
+import com.danny.dannys_ores.util.PathHandler;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -20,11 +21,11 @@ public class HotBlockItem extends BlockItem {
 
     @Override
     public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
-        if (!((ForgeConfigSpec.BooleanValue) config.get("general.disableBurnEffect")).get()) {
+        if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".disableBurnEffect")).get()) {
             if (entityIn instanceof PlayerEntity) {
-                boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get("general.onlyWhileSelected")).get();
+                boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".onlyWhileSelected")).get();
                 if (!onlyIfSelected || isSelected) {
-                    int duration = ((ForgeConfigSpec.IntValue) config.get("general.duration")).get();
+                    int duration = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + ".duration")).get();
                     entityIn.setFire(duration);
                 }
             }

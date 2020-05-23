@@ -1,6 +1,7 @@
 package com.danny.dannys_ores.blocks;
 
 import com.danny.dannys_ores.util.ConfigHandler;
+import com.danny.dannys_ores.util.PathHandler;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -23,12 +24,12 @@ public class ToxicBlockItem extends BlockItem {
 
     @Override
     public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
-        if (!((ForgeConfigSpec.BooleanValue) config.get("general.disablePoisonEffect")).get()) {
+        if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".disablePoisonEffect")).get()) {
             if (entityIn instanceof PlayerEntity) {
-                boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get("general.onlyWhileSelected")).get();
+                boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".onlyWhileSelected")).get();
                 if (!onlyIfSelected || isSelected) {
-                    int effectLevel = ((ForgeConfigSpec.IntValue) config.get("general.effectLevel")).get();
-                    int duration = ((ForgeConfigSpec.IntValue) config.get("general.duration")).get();
+                    int effectLevel = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + ".effectLevel")).get();
+                    int duration = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + ".duration")).get();
                     ((PlayerEntity) entityIn).addPotionEffect(new EffectInstance(Effect.get(19), duration, (effectLevel - 1)));
                 }
             }

@@ -5,6 +5,7 @@ import com.danny.dannys_ores.blocks.BaseBlock;
 import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.ConfigHandler;
+import com.danny.dannys_ores.util.PathHandler;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -125,17 +126,17 @@ public class GenerationHandler {
         UnmodifiableConfig generalConfig = General.spec.getValues();
         boolean variantIsDisabled;
         if (blockOwner.equals("minecraft")) {
-            variantIsDisabled = !((ForgeConfigSpec.BooleanValue) generalConfig.get("general.vanilla_and_other_mods.enableCustomVanillaOreGeneration")).get();
+            variantIsDisabled = !((ForgeConfigSpec.BooleanValue) generalConfig.get(PathHandler.getGeneralPath() + ".vanilla_and_other_mods.enableCustomVanillaOreGeneration")).get();
         } else {
-            variantIsDisabled = ((ForgeConfigSpec.BooleanValue) generalConfig.get("general.stone_variants." + variant)).get();
+            variantIsDisabled = ((ForgeConfigSpec.BooleanValue) generalConfig.get(PathHandler.getGeneralPath() + ".stone_variants." + variant)).get();
         }
-        boolean disableAll = ((ForgeConfigSpec.BooleanValue) config.get("general.disableAllVariants")).get();
-        boolean stoneVariant = ((ForgeConfigSpec.BooleanValue) config.get("general." + blockName + ".generation.enableVariant")).get();
-        boolean isTempWhite = ((ForgeConfigSpec.BooleanValue) config.get("general." + blockName + ".generation.isTempWhitelist")).get();
-        boolean isBiomeWhite = ((ForgeConfigSpec.BooleanValue) config.get("general." + blockName + ".generation.isBiomeWhitelist")).get();
-        ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get("general." + blockName + ".generation.biomeBlacklist");
+        boolean disableAll = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getDisableAllVariantsPath())).get();
+        boolean stoneVariant = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getEnableVariantPath())).get();
+        boolean isTempWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getIsTempWhitelistPath())).get();
+        boolean isBiomeWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getIsBiomeWhitelistPath())).get();
+        ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getBiomeBlacklistPath());
         List<String> biomeList = inBiomeFCS.get();
-        ForgeConfigSpec.ConfigValue<List<String>> inTempFCS = config.get("general." + blockName + ".generation.temperatureBlacklist");
+        ForgeConfigSpec.ConfigValue<List<String>> inTempFCS = config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getTemperatureBlacklistPath());
         List<String> tempList = inTempFCS.get();
         boolean biomeAllowed = (isBiomeWhite && biomeList.contains(biomeName)) || (!isBiomeWhite && !biomeList.contains(biomeName));
         boolean tempAllowed = (isTempWhite && tempList.contains(tempName)) || (!isTempWhite && !tempList.contains(tempName));
@@ -154,14 +155,14 @@ public class GenerationHandler {
      * @return True if the given block should generate. False if it shouldn't.
      */
     private static boolean getStoneGenerationStatus(UnmodifiableConfig config , String blockName, String biomeName, String tempName) {
-        boolean disableAll = ((ForgeConfigSpec.BooleanValue) config.get("general.disableAllVariants")).get();
+        boolean disableAll = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".disableAllVariants")).get();
 
-        boolean stoneVariant = ((ForgeConfigSpec.BooleanValue) config.get("general." + blockName + ".generation.enableVariant")).get();
-        boolean isTempWhite = ((ForgeConfigSpec.BooleanValue) config.get("general." + blockName + ".generation.isTempWhitelist")).get();
-        boolean isBiomeWhite = ((ForgeConfigSpec.BooleanValue) config.get("general." + blockName + ".generation.isBiomeWhitelist")).get();
-        ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get("general." + blockName + ".generation.biomeBlacklist");
+        boolean stoneVariant = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getEnableVariantPath())).get();
+        boolean isTempWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getIsTempWhitelistPath())).get();
+        boolean isBiomeWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getIsBiomeWhitelistPath())).get();
+        ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getBiomeBlacklistPath());
         List<String> biomeList = inBiomeFCS.get();
-        ForgeConfigSpec.ConfigValue<List<String>> inTempFCS = config.get("general." + blockName + ".generation.temperatureBlacklist");
+        ForgeConfigSpec.ConfigValue<List<String>> inTempFCS = config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getTemperatureBlacklistPath());
         List<String> tempList = inTempFCS.get();
         boolean biomeAllowed = (isBiomeWhite && biomeList.contains(biomeName)) || (!isBiomeWhite && !biomeList.contains(biomeName));
         boolean tempAllowed = (isTempWhite && tempList.contains(tempName)) || (!isTempWhite && !tempList.contains(tempName));

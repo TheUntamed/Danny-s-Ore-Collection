@@ -67,3 +67,6 @@ https://www.curseforge.com/minecraft/mc-mods/armorplus
 
 The Ore Overlay for the Dimensional Shard Ore were part of the corresponding ore textures from 'RF Tools Base' (by McJty)
 https://www.curseforge.com/minecraft/mc-mods/rftools-base
+
+The Ore Overlay for the Boron, Magnesium, Lithium and Thorium Ore were part of the corresponding ore textures from 'Nuclearcraft' (by tomdodd4598)
+https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-mod

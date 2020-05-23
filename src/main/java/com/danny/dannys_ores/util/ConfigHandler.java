@@ -98,6 +98,10 @@ public class ConfigHandler {
         if (blockName.contains("_sticky_")) { return Sticky.spec.getValues(); }
         if (blockName.contains("_lava_crystal_")) { return LavaCrystal.spec.getValues(); }
         if (blockName.contains("_dimensional_shard_")) { return DimensionalShard.spec.getValues(); }
+        if (blockName.contains("_boron_")) { return Boron.spec.getValues(); }
+        if (blockName.contains("_magnesium_")) { return Magnesium.spec.getValues(); }
+        if (blockName.contains("_lithium_")) { return Lithium.spec.getValues(); }
+        if (blockName.contains("_thorium_")) { return Thorium.spec.getValues(); }
         return StoneVariants.spec.getValues();
     }
 

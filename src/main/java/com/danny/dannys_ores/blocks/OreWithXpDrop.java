@@ -26,7 +26,7 @@ public class OreWithXpDrop extends BaseBlock {
             String blockName = resLoc.toString().split(":")[1];
             if (blockName.contains("xp_ore")) {
                 UnmodifiableConfig config = Xp.spec.getValues();
-                return MathHelper.nextInt(random, config.get("general." + blockName + ".xp_drop.minXp"), config.get("general." + blockName + ".xp_drop.maxXp"));
+                return MathHelper.nextInt(random, config.get("general." + blockName + ".properties.minXpDrop"), config.get("general." + blockName + ".properties.maxXpDrop"));
             } else {
                 return MathHelper.nextInt(RANDOM, minXp, maxXp);
             }

@@ -88,6 +88,10 @@ public class Main {
                     final ToxicBlockItem blockItem = new ToxicBlockItem(block, properties);
                     blockItem.setRegistryName(resLoc);
                     registry.register(blockItem);
+                } else if (regName.contains("_yellorite_")) {
+                    final ToxicBlockItem blockItem = new ToxicBlockItem(block, properties);
+                    blockItem.setRegistryName(resLoc);
+                    registry.register(blockItem);
                 } else {
                     final BlockItem blockItem = new BlockItem(block, properties);
                     blockItem.setRegistryName(resLoc);
