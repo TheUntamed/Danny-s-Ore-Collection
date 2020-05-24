@@ -1,14 +1,11 @@
 package com.danny.dannys_ores.configs;
 
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.configs.ores.gems.*;
 import com.danny.dannys_ores.util.PathHandler;
 import com.danny.dannys_ores.util.CommentHandler;
 import com.danny.dannys_ores.configs.ores.other.*;
 import com.danny.dannys_ores.configs.ores.vanilla.*;
-import com.danny.dannys_ores.configs.ores.with_xp_ore.*;
-import com.danny.dannys_ores.util.CommentHandler;
-import com.danny.dannys_ores.util.PathHandler;
-import com.danny.dannys_ores.util.CommentHandler;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;

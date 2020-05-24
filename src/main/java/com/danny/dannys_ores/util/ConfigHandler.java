@@ -2,9 +2,9 @@ package com.danny.dannys_ores.util;
 
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.*;
+import com.danny.dannys_ores.configs.ores.gems.*;
 import com.danny.dannys_ores.configs.ores.other.*;
 import com.danny.dannys_ores.configs.ores.vanilla.*;
-import com.danny.dannys_ores.configs.ores.with_xp_ore.*;
 import com.danny.dannys_ores.init.BlockInit;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;

@@ -6,7 +6,7 @@ import com.danny.dannys_ores.configs.ores.vanilla.Coal;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
-import com.danny.dannys_ores.init.BlockInitVanilla;
+import com.danny.dannys_ores.init.OreInitVanilla;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
@@ -132,7 +132,7 @@ public class Main {
 
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(BlockInitVanilla.HARDENED_STONE_DIAMOND_ORE.get());
+            return new ItemStack(OreInitVanilla.HARDENED_STONE_DIAMOND_ORE.get());
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.danny.dannys_ores.blocks;
 
+import com.danny.dannys_ores.util.OreTypes;
 import net.minecraft.block.Block;
 
 public class BaseBlock extends Block {

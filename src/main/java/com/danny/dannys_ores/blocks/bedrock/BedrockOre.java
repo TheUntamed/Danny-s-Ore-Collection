@@ -1,15 +1,12 @@
 package com.danny.dannys_ores.blocks.bedrock;
 
-import com.danny.dannys_ores.blocks.BaseBlock;
 import com.danny.dannys_ores.blocks.BaseOre;
 import com.danny.dannys_ores.configs.*;
-import com.danny.dannys_ores.init.BlockInit;
-import com.danny.dannys_ores.init.BlockInitVanilla;
 import com.danny.dannys_ores.util.ConfigHandler;
+import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.PathHandler;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.particles.BasicParticleType;
 import net.minecraft.util.ResourceLocation;
@@ -18,17 +15,12 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import sun.security.krb5.Config;
-
-import java.util.Random;
 
 public class BedrockOre extends BaseOre {
     private BasicParticleType bpt;
 
-    public BedrockOre(Block.Properties properties, Block blockBase, int minXp, int maxXp) {
-        super(properties, blockBase, minXp, maxXp);
+    public BedrockOre(Block.Properties properties, Block blockBase, OreTypes type, int minXp, int maxXp) {
+        super(properties, blockBase, type, minXp, maxXp);
         this.bpt = bpt;
     }
 
