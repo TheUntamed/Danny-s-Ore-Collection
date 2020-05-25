@@ -81,8 +81,4 @@ public class PathHandler {
         return "general";
     }
 
-    public static String getVariantPath(OreTypes type) {
-        System.err.println("PathHandler OreType: " + type);
-        return type.toString().toLowerCase() + "_ore" ;
-    }
 }
