@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_lead_ore",
     "dannys_ores:andesite_lead_ore",
     "dannys_ores:diorite_lead_ore",
     "dannys_ores:granite_lead_ore",

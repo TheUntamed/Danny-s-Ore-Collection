@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_steel_ore",
     "dannys_ores:andesite_steel_ore",
     "dannys_ores:diorite_steel_ore",
     "dannys_ores:granite_steel_ore",

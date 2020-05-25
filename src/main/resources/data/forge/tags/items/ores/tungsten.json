@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_tungsten_ore",
     "dannys_ores:andesite_tungsten_ore",
     "dannys_ores:diorite_tungsten_ore",
     "dannys_ores:granite_tungsten_ore",

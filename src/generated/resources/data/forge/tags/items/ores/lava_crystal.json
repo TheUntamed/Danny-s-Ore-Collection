@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_lava_crystal_ore",
     "dannys_ores:andesite_lava_crystal_ore",
     "dannys_ores:diorite_lava_crystal_ore",
     "dannys_ores:granite_lava_crystal_ore",

@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_uranium_ore",
     "dannys_ores:andesite_uranium_ore",
     "dannys_ores:diorite_uranium_ore",
     "dannys_ores:granite_uranium_ore",

@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_chrome_ore",
     "dannys_ores:andesite_chrome_ore",
     "dannys_ores:diorite_chrome_ore",
     "dannys_ores:granite_chrome_ore",

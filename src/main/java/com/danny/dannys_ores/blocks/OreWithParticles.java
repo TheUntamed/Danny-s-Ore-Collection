@@ -22,10 +22,11 @@ public class OreWithParticles extends BaseOre {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-        worldIn.addParticle(bpt, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 0.0D,0.1D,0.0D);
-        //worldIn.addParticle(bpt, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 0.0D,0.1D,0.0D);
-        //worldIn.addParticle(bpt, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 0.0D,0.1D,0.0D);
-        //worldIn.addParticle(bpt, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 0.0D,0.1D,0.0D);
+        //Not used right now.
+        //worldIn.addParticle(bpt, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 1, 0.0D,0.0D,0.0D);
+        //worldIn.addParticle(bpt, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ(), 0.0D,0.0D,0.0D);
+        //worldIn.addParticle(bpt, pos.getX(), pos.getY() + 0.5, pos.getZ() + 0.5, 0.0D,0.0D,0.0D);
+        //worldIn.addParticle(bpt, pos.getX() + 1, pos.getY() + 0.5, pos.getZ() + 0.5, 0.0D,0.0D,0.0D);
     }
 
     public BasicParticleType getParticleType() {

@@ -29,11 +29,11 @@ public class BlockTagsDataGen extends BlockTagsProvider {
         OreTypes type = null;
         for (RegistryObject<Block> regObj : BlockInit.BLOCKS.getEntries()) {
             Block block = regObj.get();
-            System.err.println("Current Block: " + block);
             if (block instanceof BaseOre) {
-                System.err.println("Part of BaseOre");
+                System.err.println("The OreType: " + type);
                 // Because the ores are grouped by type in the BlockInit classes
                 // all ores of one type will always come after each other.
+                ores.add(block);
                 if (type == null) {
                     type = ((BaseOre) block).getOreType();
                     oreType.add(block);
@@ -41,10 +41,10 @@ public class BlockTagsDataGen extends BlockTagsProvider {
                     addForgeTag("ores/" + type.toString().toLowerCase(), oreType);
                     oreType.clear();
                     type = ((BaseOre) block).getOreType();
+                    oreType.add(block);
                 } else {
                     oreType.add(block);
                 }
-                ores.add(block);
 
             }
         }

@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_draconium_ore",
     "dannys_ores:andesite_draconium_ore",
     "dannys_ores:diorite_draconium_ore",
     "dannys_ores:granite_draconium_ore",

@@ -53,7 +53,7 @@ public class BedrockOre extends BaseOre {
         ResourceLocation resLoc = this.getRegistryName();
         if (resLoc != null) {
             String blockName = resLoc.toString();
-            UnmodifiableConfig config = ConfigHandler.getConfig(blockName);
+            UnmodifiableConfig config = ConfigHandler.getConfig(this);
             return config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getPropertiesPath() + "." + PathHandler.getResistancePath());
         } else {
             return this.blockResistance;

@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:andesite_diamond_ore",
     "dannys_ores:diorite_diamond_ore",
     "dannys_ores:granite_diamond_ore",
     "dannys_ores:netherrack_diamond_ore",

@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_inferium_ore",
     "dannys_ores:andesite_inferium_ore",
     "dannys_ores:diorite_inferium_ore",
     "dannys_ores:granite_inferium_ore",

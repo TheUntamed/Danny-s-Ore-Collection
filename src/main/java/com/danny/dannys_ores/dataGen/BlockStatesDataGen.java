@@ -27,7 +27,6 @@ public class BlockStatesDataGen extends BlockStateProvider {
     }
 
     public void singleTextureBlock(Block block, String modelName) {
-        System.err.println("modelName: " + modelName);
         simpleBlock(block, getModelFile(modelName));
         Main.LOGGER.debug("Creating block states model for :" + block.getRegistryName());
     }

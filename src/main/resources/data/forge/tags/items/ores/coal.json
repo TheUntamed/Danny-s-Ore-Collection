@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:andesite_coal_ore",
     "dannys_ores:diorite_coal_ore",
     "dannys_ores:granite_coal_ore",
     "dannys_ores:netherrack_coal_ore",

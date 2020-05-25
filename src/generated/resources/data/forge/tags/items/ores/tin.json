@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_tin_ore",
     "dannys_ores:andesite_tin_ore",
     "dannys_ores:diorite_tin_ore",
     "dannys_ores:granite_tin_ore",

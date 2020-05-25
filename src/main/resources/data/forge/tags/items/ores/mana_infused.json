@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_mana_infused_ore",
     "dannys_ores:andesite_mana_infused_ore",
     "dannys_ores:diorite_mana_infused_ore",
     "dannys_ores:granite_mana_infused_ore",

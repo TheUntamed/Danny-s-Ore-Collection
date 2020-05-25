@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:andesite_lapis_ore",
     "dannys_ores:diorite_lapis_ore",
     "dannys_ores:granite_lapis_ore",
     "dannys_ores:netherrack_lapis_ore",

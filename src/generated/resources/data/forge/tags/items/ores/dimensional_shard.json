@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_dimensional_shard_ore",
     "dannys_ores:andesite_dimensional_shard_ore",
     "dannys_ores:diorite_dimensional_shard_ore",
     "dannys_ores:granite_dimensional_shard_ore",

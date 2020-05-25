@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_tertium_ore",
     "dannys_ores:andesite_tertium_ore",
     "dannys_ores:diorite_tertium_ore",
     "dannys_ores:granite_tertium_ore",

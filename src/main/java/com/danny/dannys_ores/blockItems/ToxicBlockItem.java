@@ -19,7 +19,7 @@ public class ToxicBlockItem extends BlockItem {
 
     public ToxicBlockItem(Block block, Item.Properties properties) {
         super(block, properties);
-        this.config = ConfigHandler.getConfig(block.getRegistryName().toString().split(":")[1]);
+        this.config = ConfigHandler.getConfig(block);
     }
 
     @Override

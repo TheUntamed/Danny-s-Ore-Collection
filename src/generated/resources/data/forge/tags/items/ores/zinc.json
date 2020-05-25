@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_zinc_ore",
     "dannys_ores:andesite_zinc_ore",
     "dannys_ores:diorite_zinc_ore",
     "dannys_ores:granite_zinc_ore",

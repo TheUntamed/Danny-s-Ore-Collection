@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_runite_ore",
     "dannys_ores:andesite_runite_ore",
     "dannys_ores:diorite_runite_ore",
     "dannys_ores:granite_runite_ore",

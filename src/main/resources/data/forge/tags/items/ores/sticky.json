@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_sticky_ore",
     "dannys_ores:andesite_sticky_ore",
     "dannys_ores:diorite_sticky_ore",
     "dannys_ores:granite_sticky_ore",

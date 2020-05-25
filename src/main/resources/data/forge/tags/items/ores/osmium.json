@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_osmium_ore",
     "dannys_ores:andesite_osmium_ore",
     "dannys_ores:diorite_osmium_ore",
     "dannys_ores:granite_osmium_ore",

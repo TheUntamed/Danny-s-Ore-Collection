@@ -16,7 +16,7 @@ public class HotBlockItem extends BlockItem {
 
     public HotBlockItem(Block block, Properties properties) {
         super(block, properties);
-        this.config = ConfigHandler.getConfig(block.getRegistryName().toString().split(":")[1]);
+        this.config = ConfigHandler.getConfig(block);
     }
 
     @Override

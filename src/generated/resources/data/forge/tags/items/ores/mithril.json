@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dannys_ores:stone_mithril_ore",
     "dannys_ores:andesite_mithril_ore",
     "dannys_ores:diorite_mithril_ore",
     "dannys_ores:granite_mithril_ore",
