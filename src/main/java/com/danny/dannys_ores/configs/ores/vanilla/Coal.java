@@ -294,7 +294,7 @@ public class Coal {
         isTempWhitelistVanillaCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistVanillaCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistVanillaCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistVanillaCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistVanillaCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Andesite Coal Ore").push("andesite_coal_ore");
@@ -307,7 +307,7 @@ public class Coal {
         isTempWhitelistAndesiteCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistAndesiteCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistAndesiteCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistAndesiteCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistAndesiteCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Diorite Coal Ore").push("diorite_coal_ore");
@@ -320,7 +320,7 @@ public class Coal {
         isTempWhitelistDioriteCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistDioriteCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistDioriteCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistDioriteCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistDioriteCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Granite Coal Ore").push("granite_coal_ore");
@@ -333,7 +333,7 @@ public class Coal {
         isTempWhitelistGraniteCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistGraniteCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistGraniteCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistGraniteCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistGraniteCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Netherrack Coal Ore").push("netherrack_coal_ore");
@@ -346,7 +346,7 @@ public class Coal {
         isTempWhitelistNetherrackCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistNetherrackCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistNetherrackCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistNetherrackCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistNetherrackCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("End Stone Coal Ore").push("end_stone_coal_ore");
@@ -359,7 +359,7 @@ public class Coal {
         isTempWhitelistEndStoneCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistEndStoneCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistEndStoneCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistEndStoneCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistEndStoneCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sand Coal Ore").push("sand_coal_ore");
@@ -372,7 +372,7 @@ public class Coal {
         isTempWhitelistSandCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistSandCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistSandCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistSandCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistSandCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Red Sand Coal Ore").push("red_sand_coal_ore");
@@ -385,7 +385,7 @@ public class Coal {
         isTempWhitelistRedSandCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistRedSandCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistRedSandCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistRedSandCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistRedSandCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Coal Ore").push("gravel_coal_ore");
@@ -398,7 +398,7 @@ public class Coal {
         isTempWhitelistGravelCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistGravelCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistGravelCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistGravelCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistGravelCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sandstone Coal Ore").push("sandstone_coal_ore");
@@ -411,7 +411,7 @@ public class Coal {
         isTempWhitelistSandstoneCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistSandstoneCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistSandstoneCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistSandstoneCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistSandstoneCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Red Sandstone Coal Ore").push("red_sandstone_coal_ore");
@@ -424,7 +424,7 @@ public class Coal {
         isTempWhitelistRedSandstoneCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistRedSandstoneCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistRedSandstoneCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistRedSandstoneCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistRedSandstoneCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Blue Ice Coal Ore").push("blue_ice_coal_ore");
@@ -437,7 +437,7 @@ public class Coal {
         isTempWhitelistBlueIceCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistBlueIceCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistBlueIceCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistBlueIceCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistBlueIceCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Packed Ice Coal Ore").push("packed_ice_coal_ore");
@@ -450,7 +450,7 @@ public class Coal {
         isTempWhitelistPackedIceCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistPackedIceCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistPackedIceCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistPackedIceCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistPackedIceCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Bedrock Coal Ore").push("bedrock_coal_ore");
@@ -463,7 +463,7 @@ public class Coal {
         isTempWhitelistBedrockCoalOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistBedrockCoalOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistBedrockCoalOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistBedrockCoalOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistBedrockCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
         resistanceBedrockCoalOre = BUILDER.comment(CommentHandler.getResistanceComment()).defineInRange(PathHandler.getResistancePath(), 9.0, 0.0, 3600000.0);

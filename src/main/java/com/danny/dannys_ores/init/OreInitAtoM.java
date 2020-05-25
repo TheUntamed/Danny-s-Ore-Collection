@@ -15,7 +15,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class OreInitAbisM extends BlockInit {
+public class OreInitAtoM extends BlockInit {
 
     public static final RegistryObject<Block> STONE_ADAMANTIUM_ORE = BLOCKS.register("stone_adamantium_ore", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE), Blocks.STONE, OreTypes.ADAMANTIUM, 0, 0));
     public static final RegistryObject<Block> ANDESITE_ADAMANTIUM_ORE = BLOCKS.register("andesite_adamantium_ore", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE), Blocks.ANDESITE, OreTypes.ADAMANTIUM, 0, 0));

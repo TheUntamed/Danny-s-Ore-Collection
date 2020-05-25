@@ -32,8 +32,8 @@ public class StoneVariants {
             BUILDER.comment("Hardened Stone generation settings.").push("hardened_stone");
                 BUILDER.comment("Hardened Stone generation settings.").push(PathHandler.getGenerationPath());
                     enableHardenedStoneGeneration = BUILDER.comment("Enable or disable Hardened Stone.").define(PathHandler.getEnableVariantPath(), true);
-                    clusterSizeHardenedStone = BUILDER.comment("The size of a cluster").defineInRange(PathHandler.getClusterSizePath(), 33, 0, 65536);
-                    clustersPerChunkHardenedStone = BUILDER.comment("How many clusters per chunk.").defineInRange(PathHandler.getClustersPerChunkPath(), 10, 0, 65536);
+                    clusterSizeHardenedStone = BUILDER.comment(CommentHandler.getClusterSizeComment()).defineInRange(PathHandler.getClusterSizePath(), 33, 0, 65536);
+                    clustersPerChunkHardenedStone = BUILDER.comment(CommentHandler.getClustersPerChunkComment()).defineInRange(PathHandler.getClustersPerChunkPath(), 10, 0, 65536);
                     minHeightHardenedStone = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), 0, 0, 256);
                     maxHeightHardenedStone = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 30, 0, 256);
                     isTempWhitelistHardenedStone = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);

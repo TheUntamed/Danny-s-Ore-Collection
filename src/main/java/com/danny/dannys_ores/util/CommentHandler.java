@@ -80,8 +80,4 @@ public class CommentHandler {
         return "Settings affecting all variants";
     }
 
-    public static String getVariantComment(OreTypes type) {
-        return type.toString() ;
-    }
-
 }

@@ -15,7 +15,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class OreInitNbisZ extends BlockInit {
+public class OreInitNtoZ extends BlockInit {
 
     public static final RegistryObject<Block> STONE_NICKEL_ORE = BLOCKS.register("stone_nickel_ore", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), Blocks.STONE, OreTypes.NICKEL, 0, 0));
     public static final RegistryObject<Block> ANDESITE_NICKEL_ORE = BLOCKS.register("andesite_nickel_ore", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), Blocks.ANDESITE, OreTypes.NICKEL, 0, 0));

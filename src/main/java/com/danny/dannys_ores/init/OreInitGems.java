@@ -2,9 +2,7 @@ package com.danny.dannys_ores.init;
 
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blocks.BaseOre;
-import com.danny.dannys_ores.blocks.OreWithParticles;
 import com.danny.dannys_ores.blocks.bedrock.BedrockOre;
-import com.danny.dannys_ores.blocks.bedrock.BedrockOreWithParticles;
 import com.danny.dannys_ores.materials.MyMaterials;
 import com.danny.dannys_ores.util.OreTypes;
 import net.minecraft.block.Block;
@@ -12,7 +10,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
-import net.minecraft.particles.ParticleTypes;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
