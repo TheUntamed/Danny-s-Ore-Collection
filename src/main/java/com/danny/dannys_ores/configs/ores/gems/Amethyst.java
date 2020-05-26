@@ -436,7 +436,7 @@ public class Amethyst {
         isTempWhitelistBlueIceAmethystOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistBlueIceAmethystOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistBlueIceAmethystOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistBlueIceAmethystOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistBlueIceAmethystOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Packed Ice Amethyst Ore").push("packed_ice_amethyst_ore");
@@ -449,7 +449,7 @@ public class Amethyst {
         isTempWhitelistPackedIceAmethystOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistPackedIceAmethystOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistPackedIceAmethystOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistPackedIceAmethystOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistPackedIceAmethystOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Bedrock Amethyst Ore").push("bedrock_amethyst_ore");
@@ -462,7 +462,7 @@ public class Amethyst {
         isTempWhitelistBedrockAmethystOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistBedrockAmethystOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistBedrockAmethystOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistBedrockAmethystOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistBedrockAmethystOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
         resistanceBedrockAmethystOre = BUILDER.comment(CommentHandler.getResistanceComment()).defineInRange(PathHandler.getResistancePath(), 9.0, 0.0, 3600000.0);
@@ -627,7 +627,7 @@ public class Amethyst {
         isTempWhitelistHardenedStoneAmethystOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistHardenedStoneAmethystOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistHardenedStoneAmethystOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistHardenedStoneAmethystOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistHardenedStoneAmethystOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

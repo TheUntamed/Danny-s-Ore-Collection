@@ -29,6 +29,7 @@ public class ConfigHandler {
 
         if (block instanceof BaseOre) {
             OreTypes type = ((BaseOre) block).getOreType();
+
             if (type == OreTypes.ADAMANTIUM) { return Adamantium.spec.getValues(); }
             else if (type == OreTypes.BAUXITE) { return Bauxite.spec.getValues(); }
             else if (type == OreTypes.AMETHYST) { return Amethyst.spec.getValues(); }

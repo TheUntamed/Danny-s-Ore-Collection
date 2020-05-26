@@ -436,7 +436,7 @@ public class Quartz {
         isTempWhitelistBlueIceQuartzOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistBlueIceQuartzOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistBlueIceQuartzOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistBlueIceQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistBlueIceQuartzOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Packed Ice Quartz Ore").push("packed_ice_quartz_ore");
@@ -449,7 +449,7 @@ public class Quartz {
         isTempWhitelistPackedIceQuartzOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistPackedIceQuartzOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistPackedIceQuartzOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistPackedIceQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistPackedIceQuartzOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Bedrock Quartz Ore").push("bedrock_quartz_ore");
@@ -462,7 +462,7 @@ public class Quartz {
         isTempWhitelistBedrockQuartzOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistBedrockQuartzOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistBedrockQuartzOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistBedrockQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistBedrockQuartzOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
         resistanceBedrockQuartzOre = BUILDER.comment(CommentHandler.getResistanceComment()).defineInRange(PathHandler.getResistancePath(), 9.0, 0.0, 3600000.0);
@@ -627,7 +627,7 @@ public class Quartz {
         isTempWhitelistHardenedStoneQuartzOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistHardenedStoneQuartzOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistHardenedStoneQuartzOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistHardenedStoneQuartzOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistHardenedStoneQuartzOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

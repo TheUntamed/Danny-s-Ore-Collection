@@ -14,7 +14,7 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+//@Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DenseOreInitAtoM extends BlockInit {
 
     public static final RegistryObject<Block> STONE_DENSE_ADAMANTIUM_ORE = BLOCKS.register("stone_dense_adamantium_ore", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE), Blocks.STONE, OreTypes.ADAMANTIUM, 0, 0));

@@ -437,7 +437,7 @@ public class Prosperity {
         isTempWhitelistBlueIceProsperityOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistBlueIceProsperityOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistBlueIceProsperityOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistBlueIceProsperityOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistBlueIceProsperityOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Packed Ice Prosperity Ore").push("packed_ice_prosperity_ore");
@@ -450,7 +450,7 @@ public class Prosperity {
         isTempWhitelistPackedIceProsperityOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistPackedIceProsperityOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistPackedIceProsperityOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistPackedIceProsperityOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistPackedIceProsperityOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Bedrock Prosperity Ore").push("bedrock_prosperity_ore");
@@ -463,7 +463,7 @@ public class Prosperity {
         isTempWhitelistBedrockProsperityOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistBedrockProsperityOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistBedrockProsperityOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistBedrockProsperityOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistBedrockProsperityOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
         resistanceBedrockProsperityOre = BUILDER.comment(CommentHandler.getResistanceComment()).defineInRange(PathHandler.getResistancePath(), 9.0, 0.0, 3600000.0);
@@ -628,7 +628,7 @@ public class Prosperity {
         isTempWhitelistHardenedStoneProsperityOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistHardenedStoneProsperityOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistHardenedStoneProsperityOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistHardenedStoneProsperityOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistHardenedStoneProsperityOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

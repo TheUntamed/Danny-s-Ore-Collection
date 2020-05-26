@@ -437,7 +437,7 @@ public class Tertium {
         isTempWhitelistBlueIceTertiumOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistBlueIceTertiumOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistBlueIceTertiumOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistBlueIceTertiumOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistBlueIceTertiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Packed Ice Tertium Ore").push("packed_ice_tertium_ore");
@@ -450,7 +450,7 @@ public class Tertium {
         isTempWhitelistPackedIceTertiumOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistPackedIceTertiumOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistPackedIceTertiumOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistPackedIceTertiumOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistPackedIceTertiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Bedrock Tertium Ore").push("bedrock_tertium_ore");
@@ -463,7 +463,7 @@ public class Tertium {
         isTempWhitelistBedrockTertiumOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistBedrockTertiumOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistBedrockTertiumOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistBedrockTertiumOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistBedrockTertiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
         resistanceBedrockTertiumOre = BUILDER.comment(CommentHandler.getResistanceComment()).defineInRange(PathHandler.getResistancePath(), 9.0, 0.0, 3600000.0);
@@ -628,7 +628,7 @@ public class Tertium {
         isTempWhitelistHardenedStoneTertiumOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
         temperatureBlacklistHardenedStoneTertiumOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
         isBiomeWhitelistHardenedStoneTertiumOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-        biomeBlacklistHardenedStoneTertiumOre = BUILDER.comment("Syntax: \"modid:biome\". E.g.: [\"minecraft:plains\", \"biomesoplenty:meadow\"])").define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+        biomeBlacklistHardenedStoneTertiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();

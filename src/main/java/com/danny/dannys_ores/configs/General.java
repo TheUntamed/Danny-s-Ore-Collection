@@ -4,6 +4,12 @@ import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.configs.ores.gems.*;
 import com.danny.dannys_ores.configs.ores.other.*;
 import com.danny.dannys_ores.configs.ores.vanilla.*;
+import com.danny.dannys_ores.configs.dense_ores.other.*;
+import com.danny.dannys_ores.configs.dense_ores.gems.*;
+import com.danny.dannys_ores.configs.dense_ores.vanilla.*;
+import com.danny.dannys_ores.configs.poor_ores.other.*;
+import com.danny.dannys_ores.configs.poor_ores.gems.*;
+import com.danny.dannys_ores.configs.poor_ores.vanilla.*;
 import com.danny.dannys_ores.util.PathHandler;
 import com.danny.dannys_ores.util.CommentHandler;
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -157,6 +163,7 @@ public class General {
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, General.spec, generalPath + "/#general.toml");
 
+
         StoneVariants.loadConfig(generalPath);
         Adamantium.loadConfig(normalPath);
         Bauxite.loadConfig(normalPath);
@@ -221,7 +228,7 @@ public class General {
 
         DenseAdamantium.loadConfig(densePath);
         DenseBauxite.loadConfig(densePath);
-        DenseAnglesite.loadConfig(densePath);
+        DenseBauxite.loadConfig(densePath);
         DenseAmethyst.loadConfig(densePath);
         DenseApatite.loadConfig(densePath);
         DenseArdite.loadConfig(densePath);

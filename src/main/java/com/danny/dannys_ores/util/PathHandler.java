@@ -80,5 +80,4 @@ public class PathHandler {
     public static String getGeneralPath() {
         return "general";
     }
-
 }

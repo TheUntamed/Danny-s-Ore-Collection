@@ -56,7 +56,6 @@ public class Main {
         embellishcraft = ModList.get().isLoaded("embellishcraft");
         BlockInit.BLOCKS.register(modEventBus);
         General.loadConfig();
-
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
 

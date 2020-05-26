@@ -14,7 +14,7 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+//@Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DenseOreInitNtoZ extends BlockInit {
 
     public static final RegistryObject<Block> STONE_DENSE_NICKEL_ORE = BLOCKS.register("stone_dense_nickel_ore", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), Blocks.STONE, OreTypes.NICKEL, 0, 0));

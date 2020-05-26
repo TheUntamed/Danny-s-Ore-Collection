@@ -14,7 +14,7 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+//@Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PoorOreInitVanilla extends BlockInit {
 
     public static final RegistryObject<Block> ANDESITE_POOR_COAL_ORE = BLOCKS.register("andesite_poor_coal_ore", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F).harvestLevel(0).harvestTool(ToolType.PICKAXE), Blocks.ANDESITE, OreTypes.COAL, 0, 2));

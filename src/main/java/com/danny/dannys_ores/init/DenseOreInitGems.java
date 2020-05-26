@@ -14,7 +14,7 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+//@Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DenseOreInitGems extends BlockInit {
     public static final RegistryObject<Block> STONE_DENSE_ELECTROTINE_ORE = BLOCKS.register("stone_dense_electrotine_ore", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), Blocks.STONE, OreTypes.ELECTROTINE, 1, 5));
     public static final RegistryObject<Block> ANDESITE_DENSE_ELECTROTINE_ORE = BLOCKS.register("andesite_dense_electrotine_ore", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), Blocks.ANDESITE, OreTypes.ELECTROTINE, 1, 5));
