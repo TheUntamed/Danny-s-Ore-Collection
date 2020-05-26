@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:andesite_dense_tertium_ore",
+    "dannys_ores:diorite_dense_tertium_ore",
+    "dannys_ores:granite_dense_tertium_ore",
+    "dannys_ores:netherrack_dense_tertium_ore",
+    "dannys_ores:end_stone_dense_tertium_ore",
+    "dannys_ores:sand_dense_tertium_ore",
+    "dannys_ores:red_sand_dense_tertium_ore",
+    "dannys_ores:gravel_dense_tertium_ore",
+    "dannys_ores:sandstone_dense_tertium_ore",
+    "dannys_ores:red_sandstone_dense_tertium_ore",
+    "dannys_ores:blue_ice_dense_tertium_ore",
+    "dannys_ores:packed_ice_dense_tertium_ore",
+    "dannys_ores:bedrock_dense_tertium_ore",
+    "dannys_ores:quark_basalt_dense_tertium_ore",
+    "dannys_ores:quark_jasper_dense_tertium_ore",
+    "dannys_ores:quark_limestone_dense_tertium_ore",
+    "dannys_ores:quark_marble_dense_tertium_ore",
+    "dannys_ores:quark_slate_dense_tertium_ore",
+    "dannys_ores:embellishcraft_basalt_dense_tertium_ore",
+    "dannys_ores:embellishcraft_jade_dense_tertium_ore",
+    "dannys_ores:embellishcraft_gneiss_dense_tertium_ore",
+    "dannys_ores:embellishcraft_marble_dense_tertium_ore",
+    "dannys_ores:embellishcraft_larvikite_dense_tertium_ore",
+    "dannys_ores:embellishcraft_slate_dense_tertium_ore",
+    "dannys_ores:hardened_stone_dense_tertium_ore"
+  ]
+}

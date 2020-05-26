@@ -37,7 +37,7 @@ public class BlockModelsDataGen extends BlockModelProvider {
                         ResourceLocation resLoc = fillerBlock.getRegistryName();
                         fillerBlockName = resLoc.toString().split(":")[1];
                     }
-                    String typeName = blockName.replace(fillerBlockName + "_", "");
+                    String typeName = blockName.replace(fillerBlockName + "_", "").replace("redore", "redstone_ore");
                     doubleTextureBlock(block, "block/" + fillerBlockName, "block/" + typeName);
             }
         }
@@ -45,6 +45,7 @@ public class BlockModelsDataGen extends BlockModelProvider {
     }
 
     public void doubleTextureBlock(Block block, String textureBackground, String textureOverlay) {
+        System.err.println("block: " + block + " " + textureBackground + " " + textureOverlay);
         getBuilder(block.getRegistryName().getPath()).parent(getModelFile()).texture("base", textureBackground).texture("overlay", textureOverlay);
 
         Main.LOGGER.debug("Creating block models model for " + block.getRegistryName());

@@ -21,7 +21,7 @@ public class LanguagesDataGen extends LanguageProvider {
             ResourceLocation resLoc = block.get().getRegistryName();
             if (resLoc != null) {
                 String blockName = block.get().getRegistryName().toString().split(":")[1];
-                String[] parts = blockName.split("_");
+                String[] parts = blockName.replace("quark_", "").replace("embellishcraft_", "").split("_");
                 StringBuilder displayName = new StringBuilder();
                 for (String s : parts) {
                     s = s.substring(0, 1).toUpperCase() + s.substring(1);

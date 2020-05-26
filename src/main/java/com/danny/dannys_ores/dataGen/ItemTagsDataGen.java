@@ -28,9 +28,7 @@ public class ItemTagsDataGen extends ItemTagsProvider {
         OreTypes type = null;
         for (RegistryObject<Block> regObj : BlockInit.BLOCKS.getEntries()) {
             Block block = regObj.get();
-            System.err.println("Current Block: " + block);
             if (block instanceof BaseOre) {
-                System.err.println("Part of BaseOre");
                 // Because the ores are grouped by type in the BlockInit classes
                 // all ores of one type will always come after each other.
                 if (type == null) {

@@ -1,7 +1,0 @@
-{
-  "parent": "dannys_ores:block/cube_overlayed",
-  "textures": {
-    "base": "dannys_ores:block/sandstone",
-    "overlay": "dannys_ores:block/magnesium_ore"
-  }
-}

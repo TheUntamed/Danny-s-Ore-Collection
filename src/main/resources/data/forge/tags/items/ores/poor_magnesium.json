@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:andesite_poor_magnesium_ore",
+    "dannys_ores:diorite_poor_magnesium_ore",
+    "dannys_ores:granite_poor_magnesium_ore",
+    "dannys_ores:netherrack_poor_magnesium_ore",
+    "dannys_ores:end_stone_poor_magnesium_ore",
+    "dannys_ores:sand_poor_magnesium_ore",
+    "dannys_ores:red_sand_poor_magnesium_ore",
+    "dannys_ores:gravel_poor_magnesium_ore",
+    "dannys_ores:sandstone_poor_magnesium_ore",
+    "dannys_ores:red_sandstone_poor_magnesium_ore",
+    "dannys_ores:blue_ice_poor_magnesium_ore",
+    "dannys_ores:packed_ice_poor_magnesium_ore",
+    "dannys_ores:bedrock_poor_magnesium_ore",
+    "dannys_ores:quark_basalt_poor_magnesium_ore",
+    "dannys_ores:quark_jasper_poor_magnesium_ore",
+    "dannys_ores:quark_limestone_poor_magnesium_ore",
+    "dannys_ores:quark_marble_poor_magnesium_ore",
+    "dannys_ores:quark_slate_poor_magnesium_ore",
+    "dannys_ores:embellishcraft_basalt_poor_magnesium_ore",
+    "dannys_ores:embellishcraft_jade_poor_magnesium_ore",
+    "dannys_ores:embellishcraft_gneiss_poor_magnesium_ore",
+    "dannys_ores:embellishcraft_marble_poor_magnesium_ore",
+    "dannys_ores:embellishcraft_larvikite_poor_magnesium_ore",
+    "dannys_ores:embellishcraft_slate_poor_magnesium_ore",
+    "dannys_ores:hardened_stone_poor_magnesium_ore"
+  ]
+}
