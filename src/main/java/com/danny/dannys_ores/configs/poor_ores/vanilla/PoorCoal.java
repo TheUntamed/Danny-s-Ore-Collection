@@ -284,7 +284,7 @@ public class PoorCoal {
 
         BUILDER.comment("Poor Coal Ores").push(PathHandler.getGeneralPath());
         disablePoorCoalOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
-        BUILDER.comment("Stone Poor Coal Ore").push("Stone_stone_poor_coal_ore");
+        BUILDER.comment("Stone Poor Coal Ore").push("stone_poor_coal_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStonePoorCoalOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeStonePoorCoalOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 17, 0, 65536);
@@ -414,7 +414,7 @@ public class PoorCoal {
         biomeBlacklistSandstonePoorCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Poor Coal Ore").push("red__sandstone_poor_coal_ore");
+        BUILDER.comment("Red Sandstone Poor Coal Ore").push("red_sandstone_poor_coal_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstonePoorCoalOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstonePoorCoalOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 9, 0, 65536);

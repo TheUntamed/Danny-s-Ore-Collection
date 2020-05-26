@@ -288,8 +288,8 @@ public class DenseUranium {
         BUILDER.comment("Dense Uranium Ores").push(PathHandler.getGeneralPath());
         disableDenseUraniumOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disableDensePoisonEffectUraniumOres = BUILDER.comment("If true, uranium ores will not poison players while in thair inventory/hand.").define("disableDensePoisonEffect", false);
-        onlyWhileSelectedUraniumOres = BUILDER.comment("If true, a player will only be poisoned while holding the ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
-        durationPoisonEffectUraniumOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange("duration", 25, 25, 1000000);
+        onlyWhileSelectedUraniumOres = BUILDER.comment("If true, a player will only be poisoned while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
+        durationPoisonEffectUraniumOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 25, 25, 1000000);
         effectLevelUraniumOres = BUILDER.comment("The strength of the effect.").defineInRange("effectLevel", 1, 1, 2);
         BUILDER.comment("Stone Dense Uranium Ore").push("stone_dense_uranium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -421,7 +421,7 @@ public class DenseUranium {
         biomeBlacklistSandstoneDenseUraniumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Dense Uranium Ore").push("red__sandstone_dense_uranium_ore");
+        BUILDER.comment("Red Sandstone Dense Uranium Ore").push("red_sandstone_dense_uranium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstoneDenseUraniumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstoneDenseUraniumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 5, 0, 65536);

@@ -413,7 +413,7 @@ public class DenseLead {
         biomeBlacklistSandstoneDenseLeadOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Dense Lead Ore").push("red__sandstone_dense_lead_ore");
+        BUILDER.comment("Red Sandstone Dense Lead Ore").push("red_sandstone_dense_lead_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstoneDenseLeadOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstoneDenseLeadOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 4, 0, 65536);

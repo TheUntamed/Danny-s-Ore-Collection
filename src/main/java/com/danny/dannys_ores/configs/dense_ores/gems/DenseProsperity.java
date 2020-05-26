@@ -414,7 +414,7 @@ public class DenseProsperity {
         biomeBlacklistSandstoneDenseProsperityOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Dense Prosperity Ore").push("red__sandstone_dense_prosperity_ore");
+        BUILDER.comment("Red Sandstone Dense Prosperity Ore").push("red_sandstone_dense_prosperity_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstoneDenseProsperityOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstoneDenseProsperityOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 4, 0, 65536);

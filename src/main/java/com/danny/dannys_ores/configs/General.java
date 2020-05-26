@@ -228,7 +228,7 @@ public class General {
 
         DenseAdamantium.loadConfig(densePath);
         DenseBauxite.loadConfig(densePath);
-        DenseBauxite.loadConfig(densePath);
+        DenseAnglesite.loadConfig(densePath);
         DenseAmethyst.loadConfig(densePath);
         DenseApatite.loadConfig(densePath);
         DenseArdite.loadConfig(densePath);

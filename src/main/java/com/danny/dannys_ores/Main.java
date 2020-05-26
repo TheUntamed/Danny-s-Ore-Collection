@@ -52,15 +52,16 @@ public class Main {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
+
         quark = ModList.get().isLoaded("quark");
         embellishcraft = ModList.get().isLoaded("embellishcraft");
+
         BlockInit.BLOCKS.register(modEventBus);
+
         General.loadConfig();
+        System.err.println("Finished config loading!");
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
-
-        UnmodifiableConfig s = Coal.spec.getValues();
-        System.err.println("Unmodifiable Configs!: " + s);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -116,6 +117,7 @@ public class Main {
 
     @SubscribeEvent
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
+        System.err.println("Start generation!");
         GenerationHandler.generateOre();
     }
 

@@ -413,7 +413,7 @@ public class PoorSulfur {
         biomeBlacklistSandstonePoorSulfurOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Poor Sulfur Ore").push("red__sandstone_poor_sulfur_ore");
+        BUILDER.comment("Red Sandstone Poor Sulfur Ore").push("red_sandstone_poor_sulfur_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstonePoorSulfurOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstonePoorSulfurOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 3, 0, 65536);

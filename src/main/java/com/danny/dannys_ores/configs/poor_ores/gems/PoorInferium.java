@@ -414,7 +414,7 @@ public class PoorInferium {
         biomeBlacklistSandstonePoorInferiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Poor Inferium Ore").push("red__sandstone_poor_inferium_ore");
+        BUILDER.comment("Red Sandstone Poor Inferium Ore").push("red_sandstone_poor_inferium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstonePoorInferiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstonePoorInferiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 4, 0, 65536);

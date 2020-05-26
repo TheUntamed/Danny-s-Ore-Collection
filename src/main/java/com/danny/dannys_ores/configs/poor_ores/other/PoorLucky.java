@@ -413,7 +413,7 @@ public class PoorLucky {
         biomeBlacklistSandstonePoorLuckyOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Poor Lucky Ore").push("red__sandstone_poor_lucky_ore");
+        BUILDER.comment("Red Sandstone Poor Lucky Ore").push("red_sandstone_poor_lucky_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstonePoorLuckyOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstonePoorLuckyOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);

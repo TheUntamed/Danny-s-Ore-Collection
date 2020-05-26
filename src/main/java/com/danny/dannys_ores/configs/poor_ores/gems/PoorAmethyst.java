@@ -413,7 +413,7 @@ public class PoorAmethyst {
         biomeBlacklistSandstonePoorAmethystOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Poor Amethyst Ore").push("red__sandstone_poor_amethyst_ore");
+        BUILDER.comment("Red Sandstone Poor Amethyst Ore").push("red_sandstone_poor_amethyst_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstonePoorAmethystOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstonePoorAmethystOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 8, 0, 65536);

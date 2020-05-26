@@ -413,7 +413,7 @@ public class DenseAmethyst {
         biomeBlacklistSandstoneDenseAmethystOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Dense Amethyst Ore").push("red__sandstone_dense_amethyst_ore");
+        BUILDER.comment("Red Sandstone Dense Amethyst Ore").push("red_sandstone_dense_amethyst_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstoneDenseAmethystOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstoneDenseAmethystOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 8, 0, 65536);

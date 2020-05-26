@@ -413,7 +413,7 @@ public class PoorLapis {
         biomeBlacklistSandstonePoorLapisOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Poor Lapis Ore").push("red__sandstone_poor_lapis_ore");
+        BUILDER.comment("Red Sandstone Poor Lapis Ore").push("red_sandstone_poor_lapis_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstonePoorLapisOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstonePoorLapisOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 7, 0, 65536);

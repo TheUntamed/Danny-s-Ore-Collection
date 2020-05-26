@@ -413,7 +413,7 @@ public class DenseLavaCrystal {
         biomeBlacklistSandstoneDenseLavaCrystalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Dense Lava Crystal Ore").push("red__sandstone_dense_lava_crystal_ore");
+        BUILDER.comment("Red Sandstone Dense Lava Crystal Ore").push("red_sandstone_dense_lava_crystal_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstoneDenseLavaCrystalOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstoneDenseLavaCrystalOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 2, 0, 65536);

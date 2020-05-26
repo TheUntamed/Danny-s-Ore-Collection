@@ -80,4 +80,12 @@ public class PathHandler {
     public static String getGeneralPath() {
         return "general";
     }
+
+    public static String getDurationPath() {
+        return "duration";
+    }
+
+    public static String getSelectedPath() {
+        return "onlyWhileSelected";
+    }
 }

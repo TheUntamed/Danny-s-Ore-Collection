@@ -23,9 +23,9 @@ public class HotBlockItem extends BlockItem {
     public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
         if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".disableBurnEffect")).get()) {
             if (entityIn instanceof PlayerEntity) {
-                boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".onlyWhileSelected")).get();
+                boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getSelectedPath())).get();
                 if (!onlyIfSelected || isSelected) {
-                    int duration = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + ".duration")).get();
+                    int duration = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getDurationPath())).get();
                     entityIn.setFire(duration);
                 }
             }

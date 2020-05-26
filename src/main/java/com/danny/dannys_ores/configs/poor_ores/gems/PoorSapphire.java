@@ -414,7 +414,7 @@ public class PoorSapphire {
         biomeBlacklistSandstonePoorSapphireOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Poor Sapphire Ore").push("red__sandstone_poor_sapphire_ore");
+        BUILDER.comment("Red Sandstone Poor Sapphire Ore").push("red_sandstone_poor_sapphire_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstonePoorSapphireOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstonePoorSapphireOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 3, 0, 65536);

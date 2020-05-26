@@ -284,7 +284,7 @@ public class DenseCoal {
 
         BUILDER.comment("Dense Coal Ores").push(PathHandler.getGeneralPath());
         disableDenseCoalOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
-        BUILDER.comment("Stone Dense Coal Ore").push("Stone_stone_dense_coal_ore");
+        BUILDER.comment("Stone Dense Coal Ore").push("stone_dense_coal_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStoneDenseCoalOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeStoneDenseCoalOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 17, 0, 65536);
@@ -414,7 +414,7 @@ public class DenseCoal {
         biomeBlacklistSandstoneDenseCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Dense Coal Ore").push("red__sandstone_dense_coal_ore");
+        BUILDER.comment("Red Sandstone Dense Coal Ore").push("red_sandstone_dense_coal_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstoneDenseCoalOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstoneDenseCoalOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 9, 0, 65536);

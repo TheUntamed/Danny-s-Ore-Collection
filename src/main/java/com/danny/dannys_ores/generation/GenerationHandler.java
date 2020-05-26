@@ -122,6 +122,8 @@ public class GenerationHandler {
     private static boolean getOreGenerationStatus(UnmodifiableConfig config , Block fillerBlock, String[] blockNameSplit, String biomeName, String tempName) {
         String blockOwner = blockNameSplit[0];
         String blockName = blockNameSplit[1];
+        System.err.println("Generate block: " + blockName);
+        System.err.println("The config: " + config);
         String variant = getVariantWithModOwner(fillerBlock);
         UnmodifiableConfig generalConfig = General.spec.getValues();
         boolean variantIsDisabled;
@@ -155,8 +157,9 @@ public class GenerationHandler {
      * @return True if the given block should generate. False if it shouldn't.
      */
     private static boolean getStoneGenerationStatus(UnmodifiableConfig config, String blockName, String biomeName, String tempName) {
-
-        boolean disableAll = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".disableAllVariants")).get();
+        System.err.println("Generate block: " + blockName);
+        System.err.println("The config: " + config);
+        boolean disableAll = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getDisableAllVariantsPath())).get();
         boolean stoneVariant = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getEnableVariantPath())).get();
         boolean isTempWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getIsTempWhitelistPath())).get();
         boolean isBiomeWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getIsBiomeWhitelistPath())).get();

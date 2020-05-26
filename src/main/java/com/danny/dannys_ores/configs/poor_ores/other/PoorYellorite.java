@@ -288,8 +288,8 @@ public class PoorYellorite {
         BUILDER.comment("Poor Yellorite Ores").push(PathHandler.getGeneralPath());
         disablePoorYelloriteOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disablePoorPoisonEffectYelloriteOres = BUILDER.comment("If true, uranium ores will not poison players while in thair inventory/hand.").define("disablePoorPoisonEffect", false);
-        onlyWhileSelectedYelloriteOres = BUILDER.comment("If true, a player will only be poisoned while holding the ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
-        durationPoisonEffectYelloriteOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange("duration", 25, 25, 1000000);
+        onlyWhileSelectedYelloriteOres = BUILDER.comment("If true, a player will only be poisoned while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
+        durationPoisonEffectYelloriteOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 25, 25, 1000000);
         effectLevelYelloriteOres = BUILDER.comment("The strength of the effect.").defineInRange("effectLevel", 1, 1, 2);
         BUILDER.comment("Stone Poor Yellorite Ore").push("stone_poor_yellorite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -421,7 +421,7 @@ public class PoorYellorite {
         biomeBlacklistSandstonePoorYelloriteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Poor Yellorite Ore").push("red__sandstone_poor_yellorite_ore");
+        BUILDER.comment("Red Sandstone Poor Yellorite Ore").push("red_sandstone_poor_yellorite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstonePoorYelloriteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstonePoorYelloriteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 5, 0, 65536);

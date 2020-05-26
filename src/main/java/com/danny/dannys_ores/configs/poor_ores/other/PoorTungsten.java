@@ -414,7 +414,7 @@ public class PoorTungsten {
         biomeBlacklistSandstonePoorTungstenOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Poor Tungsten Ore").push("red__sandstone_poor_tungsten_ore");
+        BUILDER.comment("Red Sandstone Poor Tungsten Ore").push("red_sandstone_poor_tungsten_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstonePoorTungstenOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstonePoorTungstenOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 3, 0, 65536);

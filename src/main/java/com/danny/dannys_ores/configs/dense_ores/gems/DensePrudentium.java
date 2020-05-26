@@ -414,7 +414,7 @@ public class DensePrudentium {
         biomeBlacklistSandstoneDensePrudentiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Dense Prudentium Ore").push("red__sandstone_dense_prudentium_ore");
+        BUILDER.comment("Red Sandstone Dense Prudentium Ore").push("red_sandstone_dense_prudentium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstoneDensePrudentiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstoneDensePrudentiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 2, 0, 65536);

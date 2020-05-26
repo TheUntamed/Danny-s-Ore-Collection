@@ -287,8 +287,8 @@ public class DenseVulcanite {
         BUILDER.comment("Dense Vulcanite Ores").push(PathHandler.getGeneralPath());
         disableDenseVulcaniteOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disableDenseBurnEffectVulcaniteOres = BUILDER.comment("If true, vulcanite ores will not set players on fire while in their inventory/hand.").define("disableDenseBurnEffect", false);
-        onlyWhileSelectedVulcaniteOres = BUILDER.comment("If true, a player will only be set on fire while holding the ore in a hand. If false, it just has to be in the inventory.").define("onlyWhileSelected", false);
-        durationBurnEffectVulcaniteOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange("duration", 1, 1, 1000000);
+        onlyWhileSelectedVulcaniteOres = BUILDER.comment("If true, a player will only be set on fire while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
+        durationBurnEffectVulcaniteOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
         BUILDER.comment("Stone Dense Vulcanite Ore").push("stone_dense_vulcanite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStoneDenseVulcaniteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
@@ -419,7 +419,7 @@ public class DenseVulcanite {
         biomeBlacklistSandstoneDenseVulcaniteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Dense Vulcanite Ore").push("red__sandstone_dense_vulcanite_ore");
+        BUILDER.comment("Red Sandstone Dense Vulcanite Ore").push("red_sandstone_dense_vulcanite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstoneDenseVulcaniteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstoneDenseVulcaniteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 2, 0, 65536);

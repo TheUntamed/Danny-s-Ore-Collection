@@ -413,7 +413,7 @@ public class PoorLavaCrystal {
         biomeBlacklistSandstonePoorLavaCrystalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Poor Lava Crystal Ore").push("red__sandstone_poor_lava_crystal_ore");
+        BUILDER.comment("Red Sandstone Poor Lava Crystal Ore").push("red_sandstone_poor_lava_crystal_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstonePoorLavaCrystalOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstonePoorLavaCrystalOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 2, 0, 65536);

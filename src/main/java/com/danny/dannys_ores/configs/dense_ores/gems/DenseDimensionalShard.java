@@ -413,7 +413,7 @@ public class DenseDimensionalShard {
         biomeBlacklistSandstoneDenseDimensionalShardOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Red Sandstone Dense Dimensional Shard Ore").push("red__sandstone_dense_dimensional_shard_ore");
+        BUILDER.comment("Red Sandstone Dense Dimensional Shard Ore").push("red_sandstone_dense_dimensional_shard_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableRedSandstoneDenseDimensionalShardOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeRedSandstoneDenseDimensionalShardOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 4, 0, 65536);

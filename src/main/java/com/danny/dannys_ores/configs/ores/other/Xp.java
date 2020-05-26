@@ -348,8 +348,8 @@ public class Xp {
         biomeBlacklistStoneXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpStoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpStoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpStoneXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpStoneXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Andesite Xp Ore").push("andesite_xp_ore");
@@ -365,8 +365,8 @@ public class Xp {
         biomeBlacklistAndesiteXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpAndesiteXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpAndesiteXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpAndesiteXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpAndesiteXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Diorite Xp Ore").push("diorite_xp_ore");
@@ -382,8 +382,8 @@ public class Xp {
         biomeBlacklistDioriteXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpDioriteXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpDioriteXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpDioriteXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpDioriteXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Granite Xp Ore").push("granite_xp_ore");
@@ -399,8 +399,8 @@ public class Xp {
         biomeBlacklistGraniteXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpGraniteXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpGraniteXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpGraniteXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpGraniteXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Netherrack Xp Ore").push("netherrack_xp_ore");
@@ -416,8 +416,8 @@ public class Xp {
         biomeBlacklistNetherrackXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpNetherrackXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpNetherrackXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpNetherrackXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpNetherrackXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("End Stone Xp Ore").push("end_stone_xp_ore");
@@ -433,8 +433,8 @@ public class Xp {
         biomeBlacklistEndStoneXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpEndStoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpEndStoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpEndStoneXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpEndStoneXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sand Xp Ore").push("sand_xp_ore");
@@ -450,8 +450,8 @@ public class Xp {
         biomeBlacklistSandXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpSandXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpSandXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpSandXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpSandXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Red Sand Xp Ore").push("red_sand_xp_ore");
@@ -467,8 +467,8 @@ public class Xp {
         biomeBlacklistRedSandXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpRedSandXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpRedSandXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpRedSandXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpRedSandXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gravel Xp Ore").push("gravel_xp_ore");
@@ -484,8 +484,8 @@ public class Xp {
         biomeBlacklistGravelXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpGravelXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpGravelXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpGravelXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpGravelXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Sandstone Xp Ore").push("sandstone_xp_ore");
@@ -501,8 +501,8 @@ public class Xp {
         biomeBlacklistSandstoneXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpSandstoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpSandstoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpSandstoneXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpSandstoneXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Red Sandstone Xp Ore").push("red_sandstone_xp_ore");
@@ -518,8 +518,8 @@ public class Xp {
         biomeBlacklistRedSandstoneXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpRedSandstoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpRedSandstoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpRedSandstoneXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpRedSandstoneXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Blue Ice Xp Ore").push("blue_ice_xp_ore");
@@ -535,8 +535,8 @@ public class Xp {
         biomeBlacklistBlueIceXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpBlueIceXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpBlueIceXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpBlueIceXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpBlueIceXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Packed Ice Xp Ore").push("packed_ice_xp_ore");
@@ -552,8 +552,8 @@ public class Xp {
         biomeBlacklistPackedIceXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpPackedIceXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpPackedIceXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpPackedIceXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpPackedIceXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Bedrock Xp Ore").push("bedrock_xp_ore");
@@ -572,8 +572,8 @@ public class Xp {
         resistanceBedrockXpOre = BUILDER.comment(CommentHandler.getResistanceComment()).defineInRange(PathHandler.getResistancePath(), 9.0, 0.0, 3600000.0);
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpBedrockXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpBedrockXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpBedrockXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpBedrockXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
 
@@ -591,8 +591,8 @@ public class Xp {
         biomeBlacklistQuarkBasaltXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpQuarkBasaltXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpQuarkBasaltXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpQuarkBasaltXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpQuarkBasaltXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Limestone Xp Ore (Quark)").push("quark_limestone_xp_ore");
@@ -608,8 +608,8 @@ public class Xp {
         biomeBlacklistQuarkLimestoneXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpQuarkLimestoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpQuarkLimestoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpQuarkLimestoneXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpQuarkLimestoneXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Jasper Xp Ore (Quark)").push("quark_jasper_xp_ore");
@@ -625,8 +625,8 @@ public class Xp {
         biomeBlacklistQuarkJasperXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpQuarkJasperXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpQuarkJasperXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpQuarkJasperXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpQuarkJasperXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Marble Xp Ore (Quark)").push("quark_marble_xp_ore");
@@ -642,8 +642,8 @@ public class Xp {
         biomeBlacklistQuarkMarbleXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpQuarkMarbleXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpQuarkMarbleXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpQuarkMarbleXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpQuarkMarbleXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Slate Xp Ore (Quark)").push("quark_slate_xp_ore");
@@ -659,8 +659,8 @@ public class Xp {
         biomeBlacklistQuarkSlateXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpQuarkSlateXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpQuarkSlateXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpQuarkSlateXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpQuarkSlateXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
 
@@ -678,8 +678,8 @@ public class Xp {
         biomeBlacklistEmbellishcraftBasaltXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpEmbellishcraftBasaltXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpEmbellishcraftBasaltXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpEmbellishcraftBasaltXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpEmbellishcraftBasaltXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Gneiss Xp Ore (Embellishcraft)").push("embellishcraft_gneiss_xp_ore");
@@ -695,8 +695,8 @@ public class Xp {
         biomeBlacklistEmbellishcraftGneissXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpEmbellishcraftGneissXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpEmbellishcraftGneissXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpEmbellishcraftGneissXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpEmbellishcraftGneissXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Jade Xp Ore (Embellishcraft)").push("embellishcraft_jade_xp_ore");
@@ -712,8 +712,8 @@ public class Xp {
         biomeBlacklistEmbellishcraftJadeXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpEmbellishcraftJadeXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpEmbellishcraftJadeXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpEmbellishcraftJadeXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpEmbellishcraftJadeXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Larvikite Xp Ore (Embellishcraft)").push("embellishcraft_larvikite_xp_ore");
@@ -729,8 +729,8 @@ public class Xp {
         biomeBlacklistEmbellishcraftLarvikiteXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpEmbellishcraftLarvikiteXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpEmbellishcraftLarvikiteXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpEmbellishcraftLarvikiteXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpEmbellishcraftLarvikiteXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Marble Xp Ore (Embellishcraft)").push("embellishcraft_marble_xp_ore");
@@ -746,8 +746,8 @@ public class Xp {
         biomeBlacklistEmbellishcraftMarbleXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpEmbellishcraftMarbleXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpEmbellishcraftMarbleXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpEmbellishcraftMarbleXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpEmbellishcraftMarbleXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.comment("Slate Xp Ore (Embellishcraft)").push("embellishcraft_slate_xp_ore");
@@ -763,8 +763,8 @@ public class Xp {
         biomeBlacklistEmbellishcraftSlateXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpEmbellishcraftSlateXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpEmbellishcraftSlateXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpEmbellishcraftSlateXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpEmbellishcraftSlateXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
 
@@ -782,8 +782,8 @@ public class Xp {
         biomeBlacklistHardenedStoneXpOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.comment("Define how much xp this ore should drop.").push(PathHandler.getPropertiesPath());
-        minXpHardenedStoneXpOre = BUILDER.comment("The minimum amount of xp this ore drops.").defineInRange("minXpDrop", 20, 0, 1000000);
-        maxXpHardenedStoneXpOre = BUILDER.comment("The maximum amount of xp this ore drops.").defineInRange("maxXpDrop", 50, 0, 1000000);
+        minXpHardenedStoneXpOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+        maxXpHardenedStoneXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
         BUILDER.pop();
