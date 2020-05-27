@@ -2,6 +2,7 @@ package com.danny.dannys_ores.generation;
 
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blocks.BaseBlock;
+import com.danny.dannys_ores.blocks.BaseOre;
 import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.ConfigHandler;
@@ -87,20 +88,22 @@ public class GenerationHandler {
                     String regName = resLoc.toString();
                     String[] blockNameSplit = regName.split(":");
                     String blockName = blockNameSplit[1];
-                    if (!blockName.contains("quark") && !blockName.contains("embellishcraft") || blockName.contains("quark") && Main.quark || blockName.contains("embellishcraft") && Main.embellishcraft) {
+                    if (block instanceof BaseOre) {
+                        if (!blockName.contains("quark") && !blockName.contains("embellishcraft") || blockName.contains("quark") && Main.quark || blockName.contains("embellishcraft") && Main.embellishcraft) {
+                            Block fillerBlock = ((BaseBlock) block).getBlockBase();
+                            String blockOwner = blockNameSplit[0];
+                            UnmodifiableConfig generalConfig = General.spec.getValues();
+                            if (!isRichnessLevelDisabled(generalConfig, blockName) && !isVariantDisabled(generalConfig, fillerBlock, blockOwner)) {
+                                UnmodifiableConfig config = ConfigHandler.getConfig(block);
+                                if (getOreGenerationStatus(config, blockName, biomeName, tempName)) {
+                                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinSize")).get())).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinsPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
+                                }
+                            }
+                        }
+                    } else {
                         UnmodifiableConfig config = ConfigHandler.getConfig(block);
-                        if (blockName.contains("_ore")) {
-                            Block fillerBlock = Blocks.BARRIER;
-                            if (block instanceof BaseBlock) {
-                                fillerBlock = ((BaseBlock) block).getBlockBase();
-                            }
-                            if (getOreGenerationStatus(config, fillerBlock, blockNameSplit, biomeName, tempName)) {
-                                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinSize")).get())).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinsPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
-                            }
-                        } else {
-                            if (getStoneGenerationStatus(config, blockName, biomeName, tempName)) {
-                                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, block.getDefaultState(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.clusterSize")).get())).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.clustersPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
-                            }
+                        if (getStoneGenerationStatus(config, blockName, biomeName, tempName)) {
+                            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, block.getDefaultState(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.clusterSize")).get())).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.clustersPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
                         }
                     }
                 }
@@ -109,27 +112,16 @@ public class GenerationHandler {
     }
 
     /**
-     * Checks the configs if a block is allowed to generate.
-     * The given block should be an ore of this mod.
+     * Checks the specific configs of an ore if it is allowed to generate.
      *
      * @param config The config of the block.
-     * @param fillerBlock The filler block of the block. Used to determine the variant of the block.
-     * @param blockNameSplit The registry name of the block split into modid and block name.
+     * @param blockName The name of the given ore.
      * @param biomeName the current biome.
      * @param tempName The temperature of the given biome.
      * @return True if the given block should generate. False if it shouldn't.
      */
-    private static boolean getOreGenerationStatus(UnmodifiableConfig config , Block fillerBlock, String[] blockNameSplit, String biomeName, String tempName) {
-        String blockOwner = blockNameSplit[0];
-        String blockName = blockNameSplit[1];
-        String variant = getVariantWithModOwner(fillerBlock);
-        UnmodifiableConfig generalConfig = General.spec.getValues();
-        boolean variantIsDisabled;
-        if (blockOwner.equals("minecraft")) {
-            variantIsDisabled = !((ForgeConfigSpec.BooleanValue) generalConfig.get(PathHandler.getGeneralPath() + ".vanilla_and_other_mods.enableCustomVanillaOreGeneration")).get();
-        } else {
-            variantIsDisabled = ((ForgeConfigSpec.BooleanValue) generalConfig.get(PathHandler.getGeneralPath() + ".stone_variants." + variant)).get();
-        }
+    private static boolean getOreGenerationStatus(UnmodifiableConfig config, String blockName, String biomeName, String tempName) {
+
         boolean disableAll = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getDisableAllVariantsPath())).get();
         boolean stoneVariant = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getEnableVariantPath())).get();
         boolean isTempWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getIsTempWhitelistPath())).get();
@@ -141,11 +133,38 @@ public class GenerationHandler {
         boolean biomeAllowed = (isBiomeWhite && biomeList.contains(biomeName)) || (!isBiomeWhite && !biomeList.contains(biomeName));
         boolean tempAllowed = (isTempWhite && tempList.contains(tempName)) || (!isTempWhite && !tempList.contains(tempName));
 
-        return !variantIsDisabled && !disableAll && stoneVariant && biomeAllowed && tempAllowed;
+        return !disableAll && stoneVariant && biomeAllowed && tempAllowed;
     }
 
     /**
-     * Checks the configs if a block is allowed to generate.
+     * Checks if the stone variant (represented by a given filler block) is disabled.
+     *
+     * @param fillerBlock The block to check.
+     * @param blockOwner The modid of the block.
+     * @return true if the ore variant is disabled.
+     */
+    private static boolean isVariantDisabled(UnmodifiableConfig config, Block fillerBlock, String blockOwner) {
+        String variant = getVariantWithModOwner(fillerBlock);
+        if (blockOwner.equals("minecraft")) {
+            return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".vanilla_and_other_mods.enableCustomVanillaOreGeneration")).get();
+        } else {
+            return ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".stone_variants." + variant)).get();
+        }
+    }
+
+    private static boolean isRichnessLevelDisabled(UnmodifiableConfig config, String blockName) {
+        if (blockName.contains("_dense_")) {
+            return ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".richness.dense")).get();
+        } else if (blockName.contains("_poor_")) {
+            return ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".richness.poor")).get();
+
+        } else {
+            return ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".richness.normal")).get();
+        }
+    }
+
+    /**
+     * Checks the StoneVariants config if a block is allowed to generate.
      * The given block should be a stone variant of this mod.
      *
      * @param config The config of the block.

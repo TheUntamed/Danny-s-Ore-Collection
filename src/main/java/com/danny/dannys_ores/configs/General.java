@@ -63,6 +63,10 @@ public class General {
     // Danny's Ores
     public static ForgeConfigSpec.BooleanValue disableHardenedStoneOreGeneration;
 
+    public static ForgeConfigSpec.BooleanValue disableNormalOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableDenseOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disablePoorOreGeneration;
+
     public static ForgeConfigSpec.BooleanValue enableCustomVanillaOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableOtherOverworldOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableOtherNetherOreGeneration;
@@ -110,6 +114,11 @@ public class General {
                 BUILDER.comment("Stone variants added by this mod.").push("dannys_ores");
                     disableHardenedStoneOreGeneration = BUILDER.comment("If true, the Hardened Stone variant of all ores (except vanilla ores) will be disabled.").define("hardened_stone", false);
                 BUILDER.pop();
+            BUILDER.pop();
+            BUILDER.comment("Disable all Poor, Normal or Dense Ores").push("richness");
+                disableNormalOreGeneration = BUILDER.comment("If true, all Normal Ores will be disabled.").define("normal", false);
+                disableDenseOreGeneration = BUILDER.comment("If true, all Dense Ores will be disabled.").define("dense", false);
+                disablePoorOreGeneration = BUILDER.comment("If true, all Poor Ores will be disabled.").define("poor", false);
             BUILDER.pop();
             BUILDER.comment("Manipulate vanilla and other mods ore generation.").push("vanilla_and_other_mods");
                 enableCustomVanillaOreGeneration = BUILDER.comment("If true, this mod will generate vanilla ores based on the configs of this mod. Works even if the corresponding stone variant is disabled.").define("enableCustomVanillaOreGeneration", true);
