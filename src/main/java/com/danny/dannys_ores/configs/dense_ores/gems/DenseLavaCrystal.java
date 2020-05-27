@@ -483,7 +483,7 @@ public class DenseLavaCrystal {
         biomeBlacklistQuarkBasaltDenseLavaCrystalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense LavaCrystal Ore (Quark)").push("quark_limestone_lava_crystal_ore");
+        BUILDER.comment("Lime Stone Dense LavaCrystal Ore (Quark)").push("quark_limestone_dense_lava_crystal_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseLavaCrystalOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseLavaCrystalOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 2, 0, 65536);

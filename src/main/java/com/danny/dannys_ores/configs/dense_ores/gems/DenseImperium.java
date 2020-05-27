@@ -484,7 +484,7 @@ public class DenseImperium {
         biomeBlacklistQuarkBasaltDenseImperiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Imperium Ore (Quark)").push("quark_limestone_imperium_ore");
+        BUILDER.comment("Lime Stone Dense Imperium Ore (Quark)").push("quark_limestone_dense_imperium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseImperiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseImperiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);

@@ -595,7 +595,7 @@ public class DenseXp {
         maxXpQuarkBasaltDenseXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Xp Ore (Quark)").push("quark_limestone_xp_ore");
+        BUILDER.comment("Lime Stone Dense Xp Ore (Quark)").push("quark_limestone_dense_xp_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseXpOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseXpOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);

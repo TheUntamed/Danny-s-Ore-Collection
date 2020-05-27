@@ -484,7 +484,7 @@ public class PoorSupremium {
         biomeBlacklistQuarkBasaltPoorSupremiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Supremium Ore (Quark)").push("quark_limestone_supremium_ore");
+        BUILDER.comment("Lime Stone Poor Supremium Ore (Quark)").push("quark_limestone_poor_supremium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorSupremiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorSupremiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);

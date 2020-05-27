@@ -483,7 +483,7 @@ public class PoorTin {
         biomeBlacklistQuarkBasaltPoorTinOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Tin Ore (Quark)").push("quark_limestone_tin_ore");
+        BUILDER.comment("Lime Stone Poor Tin Ore (Quark)").push("quark_limestone_poor_tin_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorTinOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorTinOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 9, 0, 65536);

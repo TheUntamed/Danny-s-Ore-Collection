@@ -483,7 +483,7 @@ public class PoorNiter {
         biomeBlacklistQuarkBasaltPoorNiterOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Niter Ore (Quark)").push("quark_limestone_niter_ore");
+        BUILDER.comment("Lime Stone Poor Niter Ore (Quark)").push("quark_limestone_poor_niter_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorNiterOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorNiterOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 2, 0, 65536);

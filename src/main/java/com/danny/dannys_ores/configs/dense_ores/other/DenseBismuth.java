@@ -483,7 +483,7 @@ public class DenseBismuth {
         biomeBlacklistQuarkBasaltDenseBismuthOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Bismuth Ore (Quark)").push("quark_limestone_bismuth_ore");
+        BUILDER.comment("Lime Stone Dense Bismuth Ore (Quark)").push("quark_limestone_dense_bismuth_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseBismuthOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseBismuthOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 4, 0, 65536);

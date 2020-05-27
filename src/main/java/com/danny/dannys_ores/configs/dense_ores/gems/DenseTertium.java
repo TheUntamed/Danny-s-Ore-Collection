@@ -484,7 +484,7 @@ public class DenseTertium {
         biomeBlacklistQuarkBasaltDenseTertiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Tertium Ore (Quark)").push("quark_limestone_tertium_ore");
+        BUILDER.comment("Lime Stone Dense Tertium Ore (Quark)").push("quark_limestone_dense_tertium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseTertiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseTertiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 2, 0, 65536);

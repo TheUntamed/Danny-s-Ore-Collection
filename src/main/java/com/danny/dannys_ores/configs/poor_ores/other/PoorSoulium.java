@@ -483,7 +483,7 @@ public class PoorSoulium {
         biomeBlacklistQuarkBasaltPoorSouliumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Soulium Ore (Quark)").push("quark_limestone_soulium_ore");
+        BUILDER.comment("Lime Stone Poor Soulium Ore (Quark)").push("quark_limestone_poor_soulium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorSouliumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorSouliumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 6, 0, 65536);

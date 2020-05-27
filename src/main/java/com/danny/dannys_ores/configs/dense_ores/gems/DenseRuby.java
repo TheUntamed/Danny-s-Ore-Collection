@@ -484,7 +484,7 @@ public class DenseRuby {
         biomeBlacklistQuarkBasaltDenseRubyOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Ruby Ore (Quark)").push("quark_limestone_ruby_ore");
+        BUILDER.comment("Lime Stone Dense Ruby Ore (Quark)").push("quark_limestone_dense_ruby_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseRubyOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseRubyOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 6, 0, 65536);

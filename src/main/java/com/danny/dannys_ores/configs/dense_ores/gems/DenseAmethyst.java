@@ -483,7 +483,7 @@ public class DenseAmethyst {
         biomeBlacklistQuarkBasaltDenseAmethystOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Amethyst Ore (Quark)").push("quark_limestone_amethyst_ore");
+        BUILDER.comment("Lime Stone Dense Amethyst Ore (Quark)").push("quark_limestone_dense_amethyst_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseAmethystOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseAmethystOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 8, 0, 65536);

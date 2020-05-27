@@ -491,7 +491,7 @@ public class DenseYellorite {
         biomeBlacklistQuarkBasaltDenseYelloriteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Yellorite Ore (Quark)").push("quark_limestone_yellorite_ore");
+        BUILDER.comment("Lime Stone Dense Yellorite Ore (Quark)").push("quark_limestone_dense_yellorite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseYelloriteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseYelloriteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 9, 0, 65536);

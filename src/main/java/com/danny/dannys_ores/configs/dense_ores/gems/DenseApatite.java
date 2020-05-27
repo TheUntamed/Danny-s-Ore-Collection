@@ -483,7 +483,7 @@ public class DenseApatite {
         biomeBlacklistQuarkBasaltDenseApatiteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Apatite Ore (Quark)").push("quark_limestone_apatite_ore");
+        BUILDER.comment("Lime Stone Dense Apatite Ore (Quark)").push("quark_limestone_dense_apatite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseApatiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseApatiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 17, 0, 65536);

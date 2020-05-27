@@ -489,7 +489,7 @@ public class DenseVulcanite {
         biomeBlacklistQuarkBasaltDenseVulcaniteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Vulcanite Ore (Quark)").push("quark_limestone_vulcanite_ore");
+        BUILDER.comment("Lime Stone Dense Vulcanite Ore (Quark)").push("quark_limestone_dense_vulcanite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseVulcaniteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseVulcaniteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 4, 0, 65536);

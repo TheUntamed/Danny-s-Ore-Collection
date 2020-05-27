@@ -484,7 +484,7 @@ public class PoorTungsten {
         biomeBlacklistQuarkBasaltPoorTungstenOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Tungsten Ore (Quark)").push("quark_limestone_tungsten_ore");
+        BUILDER.comment("Lime Stone Poor Tungsten Ore (Quark)").push("quark_limestone_poor_tungsten_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorTungstenOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorTungstenOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 6, 0, 65536);

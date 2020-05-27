@@ -484,7 +484,7 @@ public class DenseChrome {
         biomeBlacklistQuarkBasaltDenseChromeOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Chrome Ore (Quark)").push("quark_limestone_chrome_ore");
+        BUILDER.comment("Lime Stone Dense Chrome Ore (Quark)").push("quark_limestone_dense_chrome_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseChromeOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseChromeOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 6, 0, 65536);

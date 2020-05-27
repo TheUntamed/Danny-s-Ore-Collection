@@ -483,7 +483,7 @@ public class DenseDiamond {
         biomeBlacklistQuarkBasaltDenseDiamondOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Diamond Ore (Quark)").push("quark_limestone_diamond_ore");
+        BUILDER.comment("Lime Stone Dense Diamond Ore (Quark)").push("quark_limestone_dense_diamond_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseDiamondOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseDiamondOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 8, 0, 65536);

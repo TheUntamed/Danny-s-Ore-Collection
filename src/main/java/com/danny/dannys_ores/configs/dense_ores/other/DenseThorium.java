@@ -483,7 +483,7 @@ public class DenseThorium {
         biomeBlacklistQuarkBasaltDenseThoriumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Thorium Ore (Quark)").push("quark_limestone_thorium_ore");
+        BUILDER.comment("Lime Stone Dense Thorium Ore (Quark)").push("quark_limestone_dense_thorium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseThoriumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseThoriumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 3, 0, 65536);

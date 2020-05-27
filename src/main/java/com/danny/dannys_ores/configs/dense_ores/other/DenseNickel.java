@@ -484,7 +484,7 @@ public class DenseNickel {
         biomeBlacklistQuarkBasaltDenseNickelOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Nickel Ore (Quark)").push("quark_limestone_nickel_ore");
+        BUILDER.comment("Lime Stone Dense Nickel Ore (Quark)").push("quark_limestone_dense_nickel_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseNickelOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseNickelOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 6, 0, 65536);

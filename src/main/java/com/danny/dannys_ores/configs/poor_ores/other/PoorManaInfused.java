@@ -483,7 +483,7 @@ public class PoorManaInfused {
         biomeBlacklistQuarkBasaltPoorManaInfusedOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Mana Infused Ore (Quark)").push("quark_limestone_mana_infused_ore");
+        BUILDER.comment("Lime Stone Poor Mana Infused Ore (Quark)").push("quark_limestone_poor_mana_infused_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorManaInfusedOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorManaInfusedOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 3, 0, 65536);

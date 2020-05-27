@@ -484,7 +484,7 @@ public class DenseSapphire {
         biomeBlacklistQuarkBasaltDenseSapphireOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Sapphire Ore (Quark)").push("quark_limestone_sapphire_ore");
+        BUILDER.comment("Lime Stone Dense Sapphire Ore (Quark)").push("quark_limestone_dense_sapphire_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseSapphireOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseSapphireOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 6, 0, 65536);

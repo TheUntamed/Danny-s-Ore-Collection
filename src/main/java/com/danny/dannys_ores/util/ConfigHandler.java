@@ -257,6 +257,7 @@ public class ConfigHandler {
     public static void checkConfig(ArrayList<String> biomeVerify, ArrayList<String> tempVerify) {
         for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
             Block block = blockRO.get();
+            System.err.println("Config Checker current block: " + block);
             ResourceLocation resLoc = block.getRegistryName();
             if (resLoc != null) {
                 String blockName = resLoc.toString().split(":")[1];

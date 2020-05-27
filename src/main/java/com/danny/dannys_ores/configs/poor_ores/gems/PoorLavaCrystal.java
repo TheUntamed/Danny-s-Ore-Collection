@@ -483,7 +483,7 @@ public class PoorLavaCrystal {
         biomeBlacklistQuarkBasaltPoorLavaCrystalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor LavaCrystal Ore (Quark)").push("quark_limestone_lava_crystal_ore");
+        BUILDER.comment("Lime Stone Poor LavaCrystal Ore (Quark)").push("quark_limestone_poor_lava_crystal_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorLavaCrystalOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorLavaCrystalOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 2, 0, 65536);

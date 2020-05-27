@@ -483,7 +483,7 @@ public class PoorChargedCertusQuartz {
         biomeBlacklistQuarkBasaltPoorChargedCertusQuartzOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor ChargedCertusQuartz Ore (Quark)").push("quark_limestone_charged_certus_quartz_ore");
+        BUILDER.comment("Lime Stone Poor ChargedCertusQuartz Ore (Quark)").push("quark_limestone_poor_charged_certus_quartz_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorChargedCertusQuartzOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorChargedCertusQuartzOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 2, 0, 65536);

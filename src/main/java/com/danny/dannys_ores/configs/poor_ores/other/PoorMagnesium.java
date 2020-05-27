@@ -483,7 +483,7 @@ public class PoorMagnesium {
         biomeBlacklistQuarkBasaltPoorMagnesiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Magnesium Ore (Quark)").push("quark_limestone_magnesium_ore");
+        BUILDER.comment("Lime Stone Poor Magnesium Ore (Quark)").push("quark_limestone_poor_magnesium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorMagnesiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorMagnesiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 5, 0, 65536);

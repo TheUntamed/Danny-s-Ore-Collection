@@ -484,7 +484,7 @@ public class PoorInferium {
         biomeBlacklistQuarkBasaltPoorInferiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Inferium Ore (Quark)").push("quark_limestone_inferium_ore");
+        BUILDER.comment("Lime Stone Poor Inferium Ore (Quark)").push("quark_limestone_poor_inferium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorInferiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorInferiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 8, 0, 65536);

@@ -484,7 +484,7 @@ public class DensePrudentium {
         biomeBlacklistQuarkBasaltDensePrudentiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Prudentium Ore (Quark)").push("quark_limestone_prudentium_ore");
+        BUILDER.comment("Lime Stone Dense Prudentium Ore (Quark)").push("quark_limestone_dense_prudentium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDensePrudentiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDensePrudentiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 4, 0, 65536);

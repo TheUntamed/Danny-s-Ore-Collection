@@ -483,7 +483,7 @@ public class PoorThorium {
         biomeBlacklistQuarkBasaltPoorThoriumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Thorium Ore (Quark)").push("quark_limestone_thorium_ore");
+        BUILDER.comment("Lime Stone Poor Thorium Ore (Quark)").push("quark_limestone_poor_thorium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorThoriumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorThoriumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 3, 0, 65536);

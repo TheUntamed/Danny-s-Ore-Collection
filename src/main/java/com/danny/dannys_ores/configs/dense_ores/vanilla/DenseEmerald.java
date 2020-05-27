@@ -483,7 +483,7 @@ public class DenseEmerald {
         biomeBlacklistQuarkBasaltDenseEmeraldOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Emerald Ore (Quark)").push("quark_limestone_emerald_ore");
+        BUILDER.comment("Lime Stone Dense Emerald Ore (Quark)").push("quark_limestone_dense_emerald_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseEmeraldOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseEmeraldOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);

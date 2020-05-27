@@ -484,7 +484,7 @@ public class PoorZinc {
         biomeBlacklistQuarkBasaltPoorZincOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Zinc Ore (Quark)").push("quark_limestone_zinc_ore");
+        BUILDER.comment("Lime Stone Poor Zinc Ore (Quark)").push("quark_limestone_poor_zinc_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorZincOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorZincOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 4, 0, 65536);

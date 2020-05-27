@@ -484,7 +484,7 @@ public class DenseSteel {
         biomeBlacklistQuarkBasaltDenseSteelOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Steel Ore (Quark)").push("quark_limestone_steel_ore");
+        BUILDER.comment("Lime Stone Dense Steel Ore (Quark)").push("quark_limestone_dense_steel_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseSteelOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseSteelOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 5, 0, 65536);

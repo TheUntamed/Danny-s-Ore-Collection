@@ -483,7 +483,7 @@ public class PoorLapis {
         biomeBlacklistQuarkBasaltPoorLapisOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Lapis Ore (Quark)").push("quark_limestone_lapis_ore");
+        BUILDER.comment("Lime Stone Poor Lapis Ore (Quark)").push("quark_limestone_poor_lapis_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorLapisOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorLapisOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 7, 0, 65536);

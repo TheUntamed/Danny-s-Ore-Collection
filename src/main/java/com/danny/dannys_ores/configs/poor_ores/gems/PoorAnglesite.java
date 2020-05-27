@@ -483,7 +483,7 @@ public class PoorAnglesite {
         biomeBlacklistQuarkBasaltPoorAnglesiteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Anglesite Ore (Quark)").push("quark_limestone_anglesite_ore");
+        BUILDER.comment("Lime Stone Poor Anglesite Ore (Quark)").push("quark_limestone_poor_anglesite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorAnglesiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorAnglesiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 3, 0, 65536);

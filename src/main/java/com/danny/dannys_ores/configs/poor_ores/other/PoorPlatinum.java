@@ -483,7 +483,7 @@ public class PoorPlatinum {
         biomeBlacklistQuarkBasaltPoorPlatinumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Platinum Ore (Quark)").push("quark_limestone_platinum_ore");
+        BUILDER.comment("Lime Stone Poor Platinum Ore (Quark)").push("quark_limestone_poor_platinum_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorPlatinumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorPlatinumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 8, 0, 65536);

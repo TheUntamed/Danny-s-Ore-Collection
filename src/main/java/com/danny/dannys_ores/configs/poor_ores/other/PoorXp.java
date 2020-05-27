@@ -595,7 +595,7 @@ public class PoorXp {
         maxXpQuarkBasaltPoorXpOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Xp Ore (Quark)").push("quark_limestone_xp_ore");
+        BUILDER.comment("Lime Stone Poor Xp Ore (Quark)").push("quark_limestone_poor_xp_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorXpOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorXpOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);

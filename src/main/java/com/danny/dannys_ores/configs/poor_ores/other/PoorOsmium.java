@@ -484,7 +484,7 @@ public class PoorOsmium {
         biomeBlacklistQuarkBasaltPoorOsmiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Osmium Ore (Quark)").push("quark_limestone_osmium_ore");
+        BUILDER.comment("Lime Stone Poor Osmium Ore (Quark)").push("quark_limestone_poor_osmium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorOsmiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorOsmiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 8, 0, 65536);

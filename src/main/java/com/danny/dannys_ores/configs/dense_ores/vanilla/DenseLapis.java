@@ -483,7 +483,7 @@ public class DenseLapis {
         biomeBlacklistQuarkBasaltDenseLapisOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Lapis Ore (Quark)").push("quark_limestone_lapis_ore");
+        BUILDER.comment("Lime Stone Dense Lapis Ore (Quark)").push("quark_limestone_dense_lapis_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseLapisOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseLapisOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 7, 0, 65536);

@@ -483,7 +483,7 @@ public class PoorSulfur {
         biomeBlacklistQuarkBasaltPoorSulfurOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Sulfur Ore (Quark)").push("quark_limestone_sulfur_ore");
+        BUILDER.comment("Lime Stone Poor Sulfur Ore (Quark)").push("quark_limestone_poor_sulfur_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorSulfurOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorSulfurOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 3, 0, 65536);

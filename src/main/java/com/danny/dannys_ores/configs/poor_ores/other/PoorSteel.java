@@ -484,7 +484,7 @@ public class PoorSteel {
         biomeBlacklistQuarkBasaltPoorSteelOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Steel Ore (Quark)").push("quark_limestone_steel_ore");
+        BUILDER.comment("Lime Stone Poor Steel Ore (Quark)").push("quark_limestone_poor_steel_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorSteelOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorSteelOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 5, 0, 65536);

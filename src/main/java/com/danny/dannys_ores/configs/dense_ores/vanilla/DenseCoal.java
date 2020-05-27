@@ -484,7 +484,7 @@ public class DenseCoal {
         biomeBlacklistQuarkBasaltDenseCoalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Coal Ore (Quark)").push("quark_limestone_coal_ore");
+        BUILDER.comment("Lime Stone Dense Coal Ore (Quark)").push("quark_limestone_dense_coal_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseCoalOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseCoalOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 17, 0, 65536);

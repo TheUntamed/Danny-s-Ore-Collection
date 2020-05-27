@@ -484,7 +484,7 @@ public class PoorPeridot {
         biomeBlacklistQuarkBasaltPoorPeridotOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Peridot Ore (Quark)").push("quark_limestone_peridot_ore");
+        BUILDER.comment("Lime Stone Poor Peridot Ore (Quark)").push("quark_limestone_poor_peridot_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorPeridotOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorPeridotOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 6, 0, 65536);

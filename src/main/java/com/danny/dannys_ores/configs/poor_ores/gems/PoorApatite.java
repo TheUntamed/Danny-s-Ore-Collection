@@ -483,7 +483,7 @@ public class PoorApatite {
         biomeBlacklistQuarkBasaltPoorApatiteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Apatite Ore (Quark)").push("quark_limestone_apatite_ore");
+        BUILDER.comment("Lime Stone Poor Apatite Ore (Quark)").push("quark_limestone_poor_apatite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorApatiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorApatiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 17, 0, 65536);

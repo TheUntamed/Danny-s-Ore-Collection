@@ -93,9 +93,9 @@ public class GenerationHandler {
                             Block fillerBlock = ((BaseBlock) block).getBlockBase();
                             String blockOwner = blockNameSplit[0];
                             UnmodifiableConfig generalConfig = General.spec.getValues();
-                            if (!isRichnessLevelDisabled(generalConfig, blockName) && !isVariantDisabled(generalConfig, fillerBlock, blockOwner)) {
+                            if (getGeneralOreGenerationStatus(generalConfig, fillerBlock, blockName, blockOwner)) {
                                 UnmodifiableConfig config = ConfigHandler.getConfig(block);
-                                if (getOreGenerationStatus(config, blockName, biomeName, tempName)) {
+                                if (getSpecificOreGenerationStatus(config, blockName, biomeName, tempName)) {
                                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinSize")).get())).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinsPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
                                 }
                             }
@@ -120,7 +120,7 @@ public class GenerationHandler {
      * @param tempName The temperature of the given biome.
      * @return True if the given block should generate. False if it shouldn't.
      */
-    private static boolean getOreGenerationStatus(UnmodifiableConfig config, String blockName, String biomeName, String tempName) {
+    private static boolean getSpecificOreGenerationStatus(UnmodifiableConfig config, String blockName, String biomeName, String tempName) {
 
         boolean disableAll = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getDisableAllVariantsPath())).get();
         boolean stoneVariant = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getEnableVariantPath())).get();
@@ -137,29 +137,36 @@ public class GenerationHandler {
     }
 
     /**
-     * Checks if the stone variant (represented by a given filler block) is disabled.
+     * Checks the general configs if an ore is allowed to generate.
      *
-     * @param fillerBlock The block to check.
-     * @param blockOwner The modid of the block.
-     * @return true if the ore variant is disabled.
+     * @param config The config to check.
+     * @param fillerBlock The filler block of the block the generation is checked for.
+     * @param blockName The name of the block the generation is checked for.
+     * @param blockOwner The mod id of the block the generation is checked for.
+     * @return True if the block should generate.
      */
-    private static boolean isVariantDisabled(UnmodifiableConfig config, Block fillerBlock, String blockOwner) {
-        String variant = getVariantWithModOwner(fillerBlock);
-        if (blockOwner.equals("minecraft")) {
-            return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".vanilla_and_other_mods.enableCustomVanillaOreGeneration")).get();
-        } else {
-            return ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".stone_variants." + variant)).get();
-        }
-    }
-
-    private static boolean isRichnessLevelDisabled(UnmodifiableConfig config, String blockName) {
+    private static boolean getGeneralOreGenerationStatus(UnmodifiableConfig config, Block fillerBlock, String blockName, String blockOwner) {
+        String variantWithOwner = getVariantWithModOwner(fillerBlock);
         if (blockName.contains("_dense_")) {
-            return ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".richness.dense")).get();
+            if (((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".dense.allVariants")).get()) {
+                return false;
+            } else {
+                return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".dense.stone_variants." + variantWithOwner)).get();
+            }
         } else if (blockName.contains("_poor_")) {
-            return ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".richness.poor")).get();
-
+            if (((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".poor.allVariants")).get()) {
+                return false;
+            } else {
+                return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".poor.stone_variants." + variantWithOwner)).get();
+            }
         } else {
-            return ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".richness.normal")).get();
+            if (blockOwner.equals("minecraft")) {
+                return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".vanilla_and_other_mods.enableCustomVanillaOreGeneration")).get();
+            } else if (((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".normal.allVariants")).get()) {
+                return false;
+            } else {
+                return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".normal.stone_variants." + variantWithOwner)).get();
+            }
         }
     }
 

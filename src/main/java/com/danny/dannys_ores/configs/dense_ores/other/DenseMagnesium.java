@@ -483,7 +483,7 @@ public class DenseMagnesium {
         biomeBlacklistQuarkBasaltDenseMagnesiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Magnesium Ore (Quark)").push("quark_limestone_magnesium_ore");
+        BUILDER.comment("Lime Stone Dense Magnesium Ore (Quark)").push("quark_limestone_dense_magnesium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseMagnesiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseMagnesiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 5, 0, 65536);

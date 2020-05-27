@@ -483,7 +483,7 @@ public class DenseSoulium {
         biomeBlacklistQuarkBasaltDenseSouliumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Soulium Ore (Quark)").push("quark_limestone_soulium_ore");
+        BUILDER.comment("Lime Stone Dense Soulium Ore (Quark)").push("quark_limestone_dense_soulium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseSouliumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseSouliumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 6, 0, 65536);

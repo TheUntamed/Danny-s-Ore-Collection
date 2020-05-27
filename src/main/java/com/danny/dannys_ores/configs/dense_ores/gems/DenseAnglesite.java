@@ -483,7 +483,7 @@ public class DenseAnglesite {
         biomeBlacklistQuarkBasaltDenseAnglesiteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Anglesite Ore (Quark)").push("quark_limestone_anglesite_ore");
+        BUILDER.comment("Lime Stone Dense Anglesite Ore (Quark)").push("quark_limestone_dense_anglesite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseAnglesiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseAnglesiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 3, 0, 65536);

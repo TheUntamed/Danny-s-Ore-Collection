@@ -483,7 +483,7 @@ public class PoorDraconium {
         biomeBlacklistQuarkBasaltPoorDraconiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Draconium Ore (Quark)").push("quark_limestone_draconium_ore");
+        BUILDER.comment("Lime Stone Poor Draconium Ore (Quark)").push("quark_limestone_poor_draconium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorDraconiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorDraconiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);

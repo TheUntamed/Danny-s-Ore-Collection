@@ -483,7 +483,7 @@ public class DenseSulfur {
         biomeBlacklistQuarkBasaltDenseSulfurOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Sulfur Ore (Quark)").push("quark_limestone_sulfur_ore");
+        BUILDER.comment("Lime Stone Dense Sulfur Ore (Quark)").push("quark_limestone_dense_sulfur_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseSulfurOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseSulfurOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 3, 0, 65536);

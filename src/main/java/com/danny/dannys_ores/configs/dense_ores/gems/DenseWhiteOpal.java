@@ -483,7 +483,7 @@ public class DenseWhiteOpal {
         biomeBlacklistQuarkBasaltDenseWhiteOpalOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense WhiteOpal Ore (Quark)").push("quark_limestone_white_opal_ore");
+        BUILDER.comment("Lime Stone Dense WhiteOpal Ore (Quark)").push("quark_limestone_dense_white_opal_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseWhiteOpalOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseWhiteOpalOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);

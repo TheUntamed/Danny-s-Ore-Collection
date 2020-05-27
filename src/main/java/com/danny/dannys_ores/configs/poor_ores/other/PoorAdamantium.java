@@ -484,7 +484,7 @@ public class PoorAdamantium {
         biomeBlacklistQuarkBasaltPoorAdamantiumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Adamantium Ore (Quark)").push("quark_limestone_adamantium_ore");
+        BUILDER.comment("Lime Stone Poor Adamantium Ore (Quark)").push("quark_limestone_poor_adamantium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorAdamantiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorAdamantiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 2, 0, 65536);

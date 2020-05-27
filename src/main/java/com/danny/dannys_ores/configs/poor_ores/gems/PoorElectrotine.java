@@ -483,7 +483,7 @@ public class PoorElectrotine {
         biomeBlacklistQuarkBasaltPoorElectrotineOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Electrotine Ore (Quark)").push("quark_limestone_electrotine_ore");
+        BUILDER.comment("Lime Stone Poor Electrotine Ore (Quark)").push("quark_limestone_poor_electrotine_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorElectrotineOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorElectrotineOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 6, 0, 65536);

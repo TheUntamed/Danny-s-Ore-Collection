@@ -483,7 +483,7 @@ public class PoorSticky {
         biomeBlacklistQuarkBasaltPoorStickyOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Sticky Ore (Quark)").push("quark_limestone_sticky_ore");
+        BUILDER.comment("Lime Stone Poor Sticky Ore (Quark)").push("quark_limestone_poor_sticky_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorStickyOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorStickyOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);

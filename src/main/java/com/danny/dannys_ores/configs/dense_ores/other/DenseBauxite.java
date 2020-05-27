@@ -483,7 +483,7 @@ public class DenseBauxite {
         biomeBlacklistQuarkBasaltDenseBauxiteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Bauxite Ore (Quark)").push("quark_limestone_bauxite_ore");
+        BUILDER.comment("Lime Stone Dense Bauxite Ore (Quark)").push("quark_limestone_dense_bauxite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseBauxiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseBauxiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 4, 0, 65536);

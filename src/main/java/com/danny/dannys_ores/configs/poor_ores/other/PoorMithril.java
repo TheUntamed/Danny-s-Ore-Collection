@@ -483,7 +483,7 @@ public class PoorMithril {
         biomeBlacklistQuarkBasaltPoorMithrilOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Mithril Ore (Quark)").push("quark_limestone_mithril_ore");
+        BUILDER.comment("Lime Stone Poor Mithril Ore (Quark)").push("quark_limestone_poor_mithril_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorMithrilOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorMithrilOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 7, 0, 65536);

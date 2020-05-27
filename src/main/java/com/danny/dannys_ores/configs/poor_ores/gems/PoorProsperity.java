@@ -484,7 +484,7 @@ public class PoorProsperity {
         biomeBlacklistQuarkBasaltPoorProsperityOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Prosperity Ore (Quark)").push("quark_limestone_prosperity_ore");
+        BUILDER.comment("Lime Stone Poor Prosperity Ore (Quark)").push("quark_limestone_poor_prosperity_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorProsperityOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorProsperityOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 8, 0, 65536);

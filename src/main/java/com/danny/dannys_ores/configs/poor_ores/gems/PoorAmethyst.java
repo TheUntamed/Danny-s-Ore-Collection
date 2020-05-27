@@ -483,7 +483,7 @@ public class PoorAmethyst {
         biomeBlacklistQuarkBasaltPoorAmethystOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Amethyst Ore (Quark)").push("quark_limestone_amethyst_ore");
+        BUILDER.comment("Lime Stone Poor Amethyst Ore (Quark)").push("quark_limestone_poor_amethyst_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorAmethystOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorAmethystOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 8, 0, 65536);

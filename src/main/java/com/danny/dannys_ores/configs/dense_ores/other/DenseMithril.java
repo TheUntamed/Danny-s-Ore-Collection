@@ -483,7 +483,7 @@ public class DenseMithril {
         biomeBlacklistQuarkBasaltDenseMithrilOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Mithril Ore (Quark)").push("quark_limestone_mithril_ore");
+        BUILDER.comment("Lime Stone Dense Mithril Ore (Quark)").push("quark_limestone_dense_mithril_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseMithrilOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseMithrilOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 7, 0, 65536);

@@ -491,7 +491,7 @@ public class PoorUranium {
         biomeBlacklistQuarkBasaltPoorUraniumOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Uranium Ore (Quark)").push("quark_limestone_uranium_ore");
+        BUILDER.comment("Lime Stone Poor Uranium Ore (Quark)").push("quark_limestone_poor_uranium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorUraniumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorUraniumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 9, 0, 65536);

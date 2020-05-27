@@ -483,7 +483,7 @@ public class PoorBauxite {
         biomeBlacklistQuarkBasaltPoorBauxiteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Poor Bauxite Ore (Quark)").push("quark_limestone_bauxite_ore");
+        BUILDER.comment("Lime Stone Poor Bauxite Ore (Quark)").push("quark_limestone_poor_bauxite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestonePoorBauxiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestonePoorBauxiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 4, 0, 65536);

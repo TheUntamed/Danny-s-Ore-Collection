@@ -483,7 +483,7 @@ public class DenseManaInfused {
         biomeBlacklistQuarkBasaltDenseManaInfusedOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Lime Stone Dense Mana Infused Ore (Quark)").push("quark_limestone_mana_infused_ore");
+        BUILDER.comment("Lime Stone Dense Mana Infused Ore (Quark)").push("quark_limestone_dense_mana_infused_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableQuarkLimestoneDenseManaInfusedOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeQuarkLimestoneDenseManaInfusedOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 3, 0, 65536);
