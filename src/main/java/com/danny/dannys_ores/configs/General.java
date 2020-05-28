@@ -269,8 +269,8 @@ public class General {
             BUILDER.pop();
             BUILDER.comment("Manipulate vanilla and other mods ore generation.").push("vanilla_and_other_mods");
                 enableCustomVanillaOreGeneration = BUILDER.comment("If true, this mod will generate vanilla ores based on the configs of this mod. Works even if the corresponding stone variant is disabled.").define("enableCustomVanillaOreGeneration", true);
-                removeVanillaOverworldOreGeneration = BUILDER.comment("If true, vanilla overworld ores will be removed and removed.").define("removeVanillaOverworldOreGeneration", true);
-                removeVanillaNetherOreGeneration = BUILDER.comment("If true, vanilla nether ores will be removed and removed.").define("removeVanillaNetherOreGeneration", true);
+                removeVanillaOverworldOreGeneration = BUILDER.comment("If true, vanilla overworld ores will be removed.").define("removeVanillaOverworldOreGeneration", true);
+                removeVanillaNetherOreGeneration = BUILDER.comment("If true, vanilla nether ores will be removed.").define("removeVanillaNetherOreGeneration", true);
                 disableOtherOverworldOreGeneration = BUILDER.comment("If true, the generation of overworld ores added by other mods and vanilla minecraft will be disabled.").define("disableOtherOverworldOreGeneration", false);
                 disableOtherNetherOreGeneration = BUILDER.comment("If true, the generation of nether ores added by other mods and vanilla minecraft will be disabled.").define("disableOtherNetherOreGeneration", false);
                 disableOtherEndOreGeneration = BUILDER.comment("If true, the generation of end ores added by other mods will be disabled.").define("disableOtherEndOreGeneration", false);

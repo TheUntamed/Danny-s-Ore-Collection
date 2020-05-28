@@ -335,7 +335,7 @@ public class Quartz {
         biomeBlacklistGraniteQuartzOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
         BUILDER.pop();
         BUILDER.pop();
-        BUILDER.comment("Vanilla (Netherrack) Quartz Ore").push("netherrack_quartz_ore");
+        BUILDER.comment("Vanilla (Netherrack) Quartz Ore").push("vanilla_netherrack_quartz_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableVanillaNetherQuartzOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeVanillaNetherQuartzOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 14, 0, 65536);
