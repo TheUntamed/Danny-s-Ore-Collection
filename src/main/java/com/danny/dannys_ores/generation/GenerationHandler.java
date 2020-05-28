@@ -7,6 +7,7 @@ import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.ConfigHandler;
 import com.danny.dannys_ores.util.PathHandler;
+import com.danny.dannys_ores.util.RichnessTypes;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -23,6 +24,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.danny.dannys_ores.util.RichnessTypes.DENSE;
+import static com.danny.dannys_ores.util.RichnessTypes.POOR;
 
 public class GenerationHandler {
 
@@ -93,7 +97,7 @@ public class GenerationHandler {
                             Block fillerBlock = ((BaseBlock) block).getBlockBase();
                             String blockOwner = blockNameSplit[0];
                             UnmodifiableConfig generalConfig = General.spec.getValues();
-                            if (getGeneralOreGenerationStatus(generalConfig, fillerBlock, blockName, blockOwner)) {
+                            if (getGeneralOreGenerationStatus(generalConfig, (BaseOre) block, fillerBlock, blockOwner)) {
                                 UnmodifiableConfig config = ConfigHandler.getConfig(block);
                                 if (getSpecificOreGenerationStatus(config, blockName, biomeName, tempName)) {
                                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinSize")).get())).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinsPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
@@ -140,33 +144,21 @@ public class GenerationHandler {
      * Checks the general configs if an ore is allowed to generate.
      *
      * @param config The config to check.
-     * @param fillerBlock The filler block of the block the generation is checked for.
-     * @param blockName The name of the block the generation is checked for.
-     * @param blockOwner The mod id of the block the generation is checked for.
+     * @param ore The ore to check the general generation for.
+     * @param fillerBlock The filler block of the ore the generation is checked for.
+     * @param blockOwner The mod id of the ore the generation is checked for.
      * @return True if the block should generate.
      */
-    private static boolean getGeneralOreGenerationStatus(UnmodifiableConfig config, Block fillerBlock, String blockName, String blockOwner) {
+    private static boolean getGeneralOreGenerationStatus(UnmodifiableConfig config, BaseOre ore, Block fillerBlock, String blockOwner) {
         String variantWithOwner = getVariantWithModOwner(fillerBlock);
-        if (blockName.contains("_dense_")) {
-            if (((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".dense.allVariants")).get()) {
-                return false;
-            } else {
-                return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".dense.stone_variants." + variantWithOwner)).get();
-            }
-        } else if (blockName.contains("_poor_")) {
-            if (((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".poor.allVariants")).get()) {
-                return false;
-            } else {
-                return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".poor.stone_variants." + variantWithOwner)).get();
-            }
+        RichnessTypes rType = ore.getRichnessType();
+        String rT = rType.toString().toLowerCase();
+        if (blockOwner.equals("minecraft")) {
+            return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".vanilla_and_other_mods.enableCustomVanillaOreGeneration")).get();
+        } else if (((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + rT + ".allVariants")).get()) {
+            return false;
         } else {
-            if (blockOwner.equals("minecraft")) {
-                return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".vanilla_and_other_mods.enableCustomVanillaOreGeneration")).get();
-            } else if (((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".normal.allVariants")).get()) {
-                return false;
-            } else {
-                return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".normal.stone_variants." + variantWithOwner)).get();
-            }
+            return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + rT + ".stone_variants." + variantWithOwner)).get();
         }
     }
 

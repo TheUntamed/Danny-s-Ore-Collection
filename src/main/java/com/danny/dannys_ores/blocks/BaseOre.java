@@ -3,6 +3,7 @@ package com.danny.dannys_ores.blocks;
 import com.danny.dannys_ores.configs.ores.other.Xp;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.PathHandler;
+import com.danny.dannys_ores.util.RichnessTypes;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -15,17 +16,23 @@ import java.util.Random;
 public class BaseOre extends BaseBlock {
     private int minXp;
     private int maxXp;
-    private OreTypes type;
+    private OreTypes oType;
+    private RichnessTypes rType;
 
-    public BaseOre(Block.Properties properties, Block blockBase, OreTypes type, int minXp, int maxXp) {
+    public BaseOre(Block.Properties properties, Block blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
         super(properties, blockBase);
         this.minXp = minXp;
         this.maxXp = maxXp;
-        this.type = type;
+        this.rType = rType;
+        this.oType = oType;
+    }
+
+    public RichnessTypes getRichnessType() {
+        return rType;
     }
 
     public OreTypes getOreType() {
-        return type;
+        return oType;
     }
 
     private int setValues(Random random) {

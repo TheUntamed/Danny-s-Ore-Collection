@@ -5,6 +5,7 @@ import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.util.ConfigHandler;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.PathHandler;
+import com.danny.dannys_ores.util.RichnessTypes;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -19,8 +20,8 @@ import net.minecraft.world.World;
 public class BedrockOre extends BaseOre {
     private BasicParticleType bpt;
 
-    public BedrockOre(Block.Properties properties, Block blockBase, OreTypes type, int minXp, int maxXp) {
-        super(properties, blockBase, type, minXp, maxXp);
+    public BedrockOre(Block.Properties properties, Block blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
+        super(properties, blockBase, rType, oType, minXp, maxXp);
         this.bpt = bpt;
     }
 
