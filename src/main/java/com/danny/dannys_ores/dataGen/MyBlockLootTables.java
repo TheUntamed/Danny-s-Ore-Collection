@@ -17,7 +17,6 @@ import net.minecraft.world.storage.loot.functions.SetCount;
 import java.util.ArrayList;
 
 public class MyBlockLootTables extends BlockLootTables {
-    private static final ILootCondition.IBuilder SILK_TOUCH = MatchTool.builder(ItemPredicate.Builder.create().enchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.IntBound.atLeast(1))));
 
     public static LootTable.Builder dropItemWithFortune(Block block, Item item) {
         return droppingItemWithFortune(block, item);

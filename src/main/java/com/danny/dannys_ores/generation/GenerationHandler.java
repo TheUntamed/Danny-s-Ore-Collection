@@ -6,6 +6,7 @@ import com.danny.dannys_ores.blocks.BaseOre;
 import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.ConfigHandler;
+import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.PathHandler;
 import com.danny.dannys_ores.util.RichnessTypes;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
@@ -100,7 +101,7 @@ public class GenerationHandler {
                             if (getGeneralOreGenerationStatus(generalConfig, (BaseOre) block, fillerBlock, blockOwner)) {
                                 UnmodifiableConfig config = ConfigHandler.getConfig(block);
                                 if (getSpecificOreGenerationStatus(config, blockName, biomeName, tempName)) {
-                                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinSize")).get())).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinsPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
+                                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinSize")).get())).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinsPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
                                 }
                             }
                         }
