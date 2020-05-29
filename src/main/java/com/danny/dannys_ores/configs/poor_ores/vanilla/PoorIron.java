@@ -457,7 +457,7 @@ public class PoorIron {
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableBedrockPoorIronOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeBedrockPoorIronOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);
-        veinsPerChunkBedrockPoorIronOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 1, 0, 65536);
+        veinsPerChunkBedrockPoorIronOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 4, 0, 65536);
         minHeightBedrockPoorIronOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), 0, 0, 256);
         maxHeightBedrockPoorIronOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 256, 0, 256);
         isTempWhitelistBedrockPoorIronOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);

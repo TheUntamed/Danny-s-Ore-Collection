@@ -456,7 +456,7 @@ public class PoorApatite {
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableBedrockPoorApatiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeBedrockPoorApatiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);
-        veinsPerChunkBedrockPoorApatiteOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 1, 0, 65536);
+        veinsPerChunkBedrockPoorApatiteOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 4, 0, 65536);
         minHeightBedrockPoorApatiteOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), 48, 0, 256);
         maxHeightBedrockPoorApatiteOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 256, 0, 256);
         isTempWhitelistBedrockPoorApatiteOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);

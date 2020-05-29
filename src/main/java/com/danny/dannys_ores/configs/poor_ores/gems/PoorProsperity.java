@@ -457,7 +457,7 @@ public class PoorProsperity {
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableBedrockPoorProsperityOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeBedrockPoorProsperityOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);
-        veinsPerChunkBedrockPoorProsperityOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 1, 0, 65536);
+        veinsPerChunkBedrockPoorProsperityOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 4, 0, 65536);
         minHeightBedrockPoorProsperityOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), 0, 0, 256);
         maxHeightBedrockPoorProsperityOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 256, 0, 256);
         isTempWhitelistBedrockPoorProsperityOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);

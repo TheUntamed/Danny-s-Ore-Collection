@@ -456,7 +456,7 @@ public class DenseLithium {
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableBedrockDenseLithiumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeBedrockDenseLithiumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);
-        veinsPerChunkBedrockDenseLithiumOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 1, 0, 65536);
+        veinsPerChunkBedrockDenseLithiumOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 4, 0, 65536);
         minHeightBedrockDenseLithiumOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), 0, 0, 256);
         maxHeightBedrockDenseLithiumOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 256, 0, 256);
         isTempWhitelistBedrockDenseLithiumOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);

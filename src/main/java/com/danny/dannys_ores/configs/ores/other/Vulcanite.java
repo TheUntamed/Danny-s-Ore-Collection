@@ -288,7 +288,7 @@ public class Vulcanite {
         disableVulcaniteOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disableBurnEffectVulcaniteOres = BUILDER.comment("If true, vulcanite ores will not set players on fire while in their inventory/hand.").define("disableBurnEffect", false);
         onlyWhileSelectedVulcaniteOres = BUILDER.comment("If true, a player will only be set on fire while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationBurnEffectVulcaniteOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
+        durationBurnEffectVulcaniteOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
         BUILDER.comment("Stone Vulcanite Ore").push("stone_vulcanite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStoneVulcaniteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
@@ -462,7 +462,7 @@ public class Vulcanite {
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableBedrockVulcaniteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeBedrockVulcaniteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);
-        veinsPerChunkBedrockVulcaniteOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 1, 0, 65536);
+        veinsPerChunkBedrockVulcaniteOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 4, 0, 65536);
         minHeightBedrockVulcaniteOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), 0, 0, 256);
         maxHeightBedrockVulcaniteOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 256, 0, 256);
         isTempWhitelistBedrockVulcaniteOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);

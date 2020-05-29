@@ -88,4 +88,12 @@ public class PathHandler {
     public static String getSelectedPath() {
         return "onlyWhileSelected";
     }
+
+    public static String getEffectLevelPath() { return "effectLevel"; }
+
+    public static String getExplosionChancePath() { return "explosionChance"; }
+
+    public static String getExplosionRangePath() { return "explosionRange"; }
+
+    public static String getExplosionBreaksBlocksPath() { return "explosionBreaksBlocks"; }
 }

@@ -3,6 +3,7 @@ package com.danny.dannys_ores.util;
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blocks.BaseOre;
 import com.danny.dannys_ores.configs.*;
+import com.danny.dannys_ores.configs.ores.elementary.*;
 import com.danny.dannys_ores.configs.ores.gems.*;
 import com.danny.dannys_ores.configs.ores.other.*;
 import com.danny.dannys_ores.configs.ores.vanilla.*;
@@ -249,6 +250,12 @@ public class ConfigHandler {
                         case MAGNESIUM: return Magnesium.spec.getValues();
                         case LITHIUM: return Lithium.spec.getValues();
                         case THORIUM: return Thorium.spec.getValues();
+                        case FIRE: return Fire.spec.getValues();
+                        case EARTH: return Earth.spec.getValues();
+                        case WATER: return Water.spec.getValues();
+                        case AIR: return Air.spec.getValues();
+                        case ORDER: return Order.spec.getValues();
+                        case ENTROPY: return Entropy.spec.getValues();
                         default: throw new IllegalArgumentException("The ore type of '" + block + "' has no Ore Type no config could be returned!");
                     }
                 default:

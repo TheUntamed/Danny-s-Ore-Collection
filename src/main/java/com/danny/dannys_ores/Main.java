@@ -1,13 +1,12 @@
 package com.danny.dannys_ores;
 
-import com.danny.dannys_ores.blockItems.HotBlockItem;
-import com.danny.dannys_ores.blockItems.ToxicBlockItem;
-import com.danny.dannys_ores.configs.ores.vanilla.Coal;
+import com.danny.dannys_ores.blockItems.*;
+import com.danny.dannys_ores.blocks.BaseOre;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.init.OreInitVanilla;
-import com.electronwill.nightconfig.core.UnmodifiableConfig;
+import com.danny.dannys_ores.util.OreTypes;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -45,7 +44,7 @@ public class Main {
     public static boolean quark;
 
     // True if the mod 'Embellishcraft' by Mapper is in the mod list.
-    public static boolean  embellishcraft;
+    public static boolean embellishcraft;
 
 
     public Main() {
@@ -69,6 +68,7 @@ public class Main {
 
     /**
      * Registers the BlockItems for all blocks of this mod.
+     *
      * @param event The event for item registry.
      */
     @SubscribeEvent
@@ -79,19 +79,30 @@ public class Main {
             final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
             ResourceLocation resLoc = block.getRegistryName();
             if (resLoc != null) {
-                String regName = resLoc.toString();
-                if(regName.contains("_vulcanite_")) {
-                    final HotBlockItem blockItem = new HotBlockItem(block, properties);
-                    blockItem.setRegistryName(resLoc);
-                    registry.register(blockItem);
-                } else if (regName.contains("_uranium_")) {
-                    final ToxicBlockItem blockItem = new ToxicBlockItem(block, properties);
-                    blockItem.setRegistryName(resLoc);
-                    registry.register(blockItem);
-                } else if (regName.contains("_yellorite_")) {
-                    final ToxicBlockItem blockItem = new ToxicBlockItem(block, properties);
-                    blockItem.setRegistryName(resLoc);
-                    registry.register(blockItem);
+                if (block instanceof BaseOre) {
+                    BaseOre oreBlock = (BaseOre) block;
+                    OreTypes oType = oreBlock.getOreType();
+                    if (oType.equals(OreTypes.VULCANITE) || oType.equals(OreTypes.FIRE)) {
+                        final HotBlockItem blockItem = new HotBlockItem(block, properties);
+                        blockItem.setRegistryName(resLoc);
+                        registry.register(blockItem);
+                    } else if (oType.equals(OreTypes.URANIUM)) {
+                        final ToxicBlockItem blockItem = new ToxicBlockItem(block, properties);
+                        blockItem.setRegistryName(resLoc);
+                        registry.register(blockItem);
+                    } else if (oType.equals(OreTypes.YELLORITE)) {
+                        final ToxicBlockItem blockItem = new ToxicBlockItem(block, properties);
+                        blockItem.setRegistryName(resLoc);
+                        registry.register(blockItem);
+                    } else if (oType.equals(OreTypes.AIR)) {
+                        final LightBlockItem blockItem = new LightBlockItem(block, properties);
+                        blockItem.setRegistryName(resLoc);
+                        registry.register(blockItem);
+                    } else {
+                        final BlockItem blockItem = new BlockItem(block, properties);
+                        blockItem.setRegistryName(resLoc);
+                        registry.register(blockItem);
+                    }
                 } else {
                     final BlockItem blockItem = new BlockItem(block, properties);
                     blockItem.setRegistryName(resLoc);
@@ -106,7 +117,7 @@ public class Main {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        for(RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
+        for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
             RenderTypeLookup.setRenderLayer(block.get(), RenderType.getTranslucent());
         }
     }

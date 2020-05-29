@@ -4,6 +4,7 @@ import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blocks.BaseOre;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.OreTypes;
+import com.danny.dannys_ores.util.RichnessTypes;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
@@ -25,23 +26,33 @@ public class ItemTagsDataGen extends ItemTagsProvider {
 
     @Override
     protected void registerTags() {
-        OreTypes type = null;
+        OreTypes oType = null;
+        RichnessTypes rType = null;
         for (RegistryObject<Block> regObj : BlockInit.BLOCKS.getEntries()) {
             Block block = regObj.get();
             if (block instanceof BaseOre) {
+                BaseOre oreBlock = (BaseOre) block;
+                System.err.println("The OreType: " + oType);
                 // Because the ores are grouped by type in the BlockInit classes
                 // all ores of one type will always come after each other.
-                if (type == null) {
-                    type = ((BaseOre) block).getOreType();
-                    oreType.add(block.asItem());
-                } else if (type != ((BaseOre) block).getOreType()) {
-                    addForgeTag("ores/" + type.toString().toLowerCase(), oreType);
+                ores.add(oreBlock.asItem());
+                if (oType == null) {
+                    oType = oreBlock.getOreType();
+                    rType = oreBlock.getRichnessType();
+                    oreType.add(oreBlock.asItem());
+                } else if (oType != oreBlock.getOreType()) {
+                    if (rType.equals(RichnessTypes.NORMAL)) {
+                        addForgeTag("ores/" + oType.toString().toLowerCase(), oreType);
+                    } else {
+                        addForgeTag("ores/" + rType.toString().toLowerCase() + "_" + oType.toString().toLowerCase(), oreType);
+                    }
                     oreType.clear();
-                    type = ((BaseOre) block).getOreType();
+                    oType = oreBlock.getOreType();
+                    rType = oreBlock.getRichnessType();
+                    oreType.add(oreBlock.asItem());
                 } else {
-                    oreType.add(block.asItem());
+                    oreType.add(oreBlock.asItem());
                 }
-                ores.add(block.asItem());
 
             }
         }

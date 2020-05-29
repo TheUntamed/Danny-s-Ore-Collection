@@ -80,4 +80,12 @@ public class CommentHandler {
         return "Settings affecting all variants";
     }
 
+    public static String getEffectLevelComment() { return "The strength of the effect."; }
+
+    public static String getExplosionChanceComment() { return "The chance (in %) an ore of this type will explode when mined"; }
+
+    public static String getExplosionRangeComment() { return "The range of the explosion (in blocks)"; }
+
+    public static String getExplosionBreaksBlocksComment() { return "If true, explosions caused by this ore type will break blocks. If false, it only damages entities"; }
+
 }

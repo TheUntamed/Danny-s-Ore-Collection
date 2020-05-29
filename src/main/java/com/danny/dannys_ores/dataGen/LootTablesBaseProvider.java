@@ -1,6 +1,7 @@
 package com.danny.dannys_ores.dataGen;
 
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.util.OreTypes;
 import com.google.common.collect.ImmutableSet;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -47,23 +48,56 @@ public abstract class LootTablesBaseProvider extends LootTableProvider {
 
     protected abstract void addTables();
 
-    protected LootTable.Builder basicOreTable(Block block) {
+    /**
+     * Creates the most basic loottable. A block dropping itself.
+     *
+     * @param block The block to create a loottable for.
+     * @return The loottable.
+     */
+    protected LootTable.Builder basicBlockTable(Block block) {
         return MyBlockLootTables.dropSelf(block);
     }
 
-    protected LootTable.Builder justSilktouchTable(String name, Block block) {
-        LootPool.Builder builder = LootPool.builder().name(name)
+    /**
+     * Creates a loottable for blocks that should only drop itself if silktouch is used.
+     * Otherwise nothing is dropped.
+     *
+     * @param block The block to create a loottable for.
+     * @return The lotttable.
+     */
+    protected LootTable.Builder justSilktouchTable(Block block) {
+        LootPool.Builder builder = LootPool.builder()
                 .acceptCondition(MatchTool.builder(ItemPredicate.Builder.create().enchantment(
                         new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.IntBound.atLeast(1)))))
                 .rolls(ConstantRange.of(1)).addEntry(ItemLootEntry.builder(block));
         return LootTable.builder().addLootPool(builder);
     }
 
-    protected LootTable.Builder gemsTable(String name, Block block, Item item) {
-        if (name.contains("_redstone_ore")) {
+    protected LootTable.Builder gemsTable(OreTypes oType, Block block, Item item) {
+        if (oType.equals(OreTypes.REDSTONE)) {
             return MyBlockLootTables.redstone(block, item);
-        } else if (name.contains("_lapis_ore")) {
+        } else if (oType.equals(OreTypes.LAPIS)) {
             return MyBlockLootTables.lapis(block, item);
+        } else {
+            return MyBlockLootTables.dropItemWithFortune(block, item);
+        }
+    }
+
+    protected LootTable.Builder denseGemsTable(OreTypes oType, Block block, Item item) {
+        if (oType.equals(OreTypes.REDSTONE)) {
+            return MyBlockLootTables.denseRedstone(block, item);
+        } else if (oType.equals(OreTypes.LAPIS)) {
+            return MyBlockLootTables.denseLapis(block, item);
+        } else {
+            return MyBlockLootTables.dropItemWithFortune(block, item);
+        }
+    }
+
+    protected LootTable.Builder poorGemsTable(OreTypes oType, Block block, Item item) {
+        if (oType.equals(OreTypes.REDSTONE)) {
+            return MyBlockLootTables.poorRedstone(block, item);
+        } else if (oType.equals(OreTypes.LAPIS)) {
+            return MyBlockLootTables.poorLapis(block, item);
         } else {
             return MyBlockLootTables.dropItemWithFortune(block, item);
         }

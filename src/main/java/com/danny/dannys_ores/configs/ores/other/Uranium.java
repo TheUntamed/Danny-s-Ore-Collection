@@ -289,8 +289,8 @@ public class Uranium {
         disableUraniumOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disablePoisonEffectUraniumOres = BUILDER.comment("If true, uranium ores will not poison players while in thair inventory/hand.").define("disablePoisonEffect", false);
         onlyWhileSelectedUraniumOres = BUILDER.comment("If true, a player will only be poisoned while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationPoisonEffectUraniumOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 25, 25, 1000000);
-        effectLevelUraniumOres = BUILDER.comment("The strength of the effect.").defineInRange("effectLevel", 1, 1, 2);
+        durationPoisonEffectUraniumOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 25, 25, 1000000);
+        effectLevelUraniumOres = BUILDER.comment(CommentHandler.getEffectLevelComment()).defineInRange(PathHandler.getEffectLevelPath(), 1, 1, 2);
         BUILDER.comment("Stone Uranium Ore").push("stone_uranium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStoneUraniumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
@@ -464,7 +464,7 @@ public class Uranium {
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableBedrockUraniumOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
         veinSizeBedrockUraniumOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);
-        veinsPerChunkBedrockUraniumOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 1, 0, 65536);
+        veinsPerChunkBedrockUraniumOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 4, 0, 65536);
         minHeightBedrockUraniumOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), 0, 0, 256);
         maxHeightBedrockUraniumOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 256, 0, 256);
         isTempWhitelistBedrockUraniumOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);

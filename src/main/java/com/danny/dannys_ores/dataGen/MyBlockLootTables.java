@@ -34,4 +34,20 @@ public class MyBlockLootTables extends BlockLootTables {
         return droppingWithSilkTouch(block, withExplosionDecay(block, ItemLootEntry.builder(item).acceptFunction(SetCount.builder(RandomValueRange.of(4.0F, 9.0F))).acceptFunction(ApplyBonus.oreDrops(Enchantments.FORTUNE))));
     }
 
+    public static LootTable.Builder denseRedstone(Block block, Item item) {
+        return droppingWithSilkTouch(block, withExplosionDecay(block, ItemLootEntry.builder(item).acceptFunction(SetCount.builder(RandomValueRange.of(6.0F, 8.0F))).acceptFunction(ApplyBonus.uniformBonusCount(Enchantments.FORTUNE))));
+    }
+
+    public static LootTable.Builder denseLapis(Block block, Item item) {
+        return droppingWithSilkTouch(block, withExplosionDecay(block, ItemLootEntry.builder(item).acceptFunction(SetCount.builder(RandomValueRange.of(6.0F, 14.0F))).acceptFunction(ApplyBonus.oreDrops(Enchantments.FORTUNE))));
+    }
+
+    public static LootTable.Builder poorRedstone(Block block, Item item) {
+        return droppingWithSilkTouch(block, withExplosionDecay(block, ItemLootEntry.builder(item).acceptFunction(SetCount.builder(RandomValueRange.of(2.0F, 3.0F))).acceptFunction(ApplyBonus.uniformBonusCount(Enchantments.FORTUNE))));
+    }
+
+    public static LootTable.Builder poorLapis(Block block, Item item) {
+        return droppingWithSilkTouch(block, withExplosionDecay(block, ItemLootEntry.builder(item).acceptFunction(SetCount.builder(RandomValueRange.of(2.0F, 5.0F))).acceptFunction(ApplyBonus.oreDrops(Enchantments.FORTUNE))));
+    }
+
 }

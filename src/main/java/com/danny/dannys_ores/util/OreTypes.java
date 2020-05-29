@@ -73,5 +73,11 @@ public enum OreTypes {
     VULCANITE,
     XP,
     YELLORITE,
-    ZINC
+    ZINC,
+    EARTH,
+    FIRE,
+    AIR,
+    WATER,
+    ORDER,
+    ENTROPY
 }
