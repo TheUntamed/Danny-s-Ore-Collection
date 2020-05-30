@@ -13,9 +13,9 @@ public class Air {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static ForgeConfigSpec spec;
     public static ForgeConfigSpec.BooleanValue disableAirOres;
-    public static ForgeConfigSpec.BooleanValue disableLevitationEffectAirOres;
+    public static ForgeConfigSpec.BooleanValue disableEffectAirOres;
     public static ForgeConfigSpec.BooleanValue onlyWhileSelectedAirOres;
-    public static ForgeConfigSpec.IntValue durationLevitationEffectAirOres;
+    public static ForgeConfigSpec.IntValue effectDurationAirOres;
     public static ForgeConfigSpec.IntValue effectLevelAirOres;
 
     public static ForgeConfigSpec.BooleanValue enableStoneAirOre;
@@ -287,10 +287,10 @@ public class Air {
 
         BUILDER.comment("Air Ores").push(PathHandler.getGeneralPath());
         disableAirOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
-        disableLevitationEffectAirOres = BUILDER.comment("If true, air ores will not make players levitate while in their inventory/hand.").define("disableLevitationEffect", false);
+        disableEffectAirOres = BUILDER.comment("If true, air ores will not make players levitate while in their inventory/hand.").define("disableLevitationEffect", false);
         onlyWhileSelectedAirOres = BUILDER.comment("If true, a player will only be levitate while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationLevitationEffectAirOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
-        effectLevelAirOres = BUILDER.comment(CommentHandler.getEffectLevelComment()).defineInRange(PathHandler.getEffectLevelPath(), 1000000, 1, 1000000);
+        effectDurationAirOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
+        effectLevelAirOres = BUILDER.comment(CommentHandler.getEffectLevelComment()).defineInRange(PathHandler.getEffectLevelPath(), 1, 1, 128);
         BUILDER.comment("Stone Air Ore").push("stone_air_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStoneAirOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);

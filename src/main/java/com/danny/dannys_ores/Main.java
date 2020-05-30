@@ -8,6 +8,7 @@ import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.init.OreInitVanilla;
 import com.danny.dannys_ores.util.OreTypes;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.BlockItem;
@@ -96,6 +97,14 @@ public class Main {
                         registry.register(blockItem);
                     } else if (oType.equals(OreTypes.AIR)) {
                         final LightBlockItem blockItem = new LightBlockItem(block, properties);
+                        blockItem.setRegistryName(resLoc);
+                        registry.register(blockItem);
+                    } else if (oType.equals(OreTypes.EARTH)) {
+                        final HeavyBlockItem blockItem = new HeavyBlockItem(block, properties);
+                        blockItem.setRegistryName(resLoc);
+                        registry.register(blockItem);
+                    } else if (oType.equals(OreTypes.WATER)) {
+                        final DrowningBlockItem blockItem = new DrowningBlockItem(block, properties);
                         blockItem.setRegistryName(resLoc);
                         registry.register(blockItem);
                     } else {

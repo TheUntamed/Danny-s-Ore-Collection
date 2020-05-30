@@ -13,9 +13,10 @@ public class Earth {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static ForgeConfigSpec spec;
     public static ForgeConfigSpec.BooleanValue disableEarthOres;
-    public static ForgeConfigSpec.BooleanValue disableBurnEffectEarthOres;
+    public static ForgeConfigSpec.BooleanValue disableEffectEarthOres;
     public static ForgeConfigSpec.BooleanValue onlyWhileSelectedEarthOres;
-    public static ForgeConfigSpec.IntValue durationBurnEffectEarthOres;
+    public static ForgeConfigSpec.IntValue durationSlownessEffectEarthOres;
+    public static ForgeConfigSpec.IntValue effectLevelEarthOres;
 
     public static ForgeConfigSpec.BooleanValue enableStoneEarthOre;
     public static ForgeConfigSpec.IntValue veinSizeStoneEarthOre;
@@ -286,9 +287,10 @@ public class Earth {
 
         BUILDER.comment("Earth Ores").push(PathHandler.getGeneralPath());
         disableEarthOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
-        disableBurnEffectEarthOres = BUILDER.comment("If true, earth ores will not set players on earth while in their inventory/hand.").define("disableBurnEffect", false);
-        onlyWhileSelectedEarthOres = BUILDER.comment("If true, a player will only be set on earth while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationBurnEffectEarthOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
+        disableEffectEarthOres = BUILDER.comment("If true, earth ores will not slow players down while in their inventory/hand.").define("disableSlownessEffect", false);
+        onlyWhileSelectedEarthOres = BUILDER.comment("If true, a player will only be slowed down while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
+        durationSlownessEffectEarthOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
+        effectLevelEarthOres = BUILDER.comment(CommentHandler.getEffectLevelComment()).defineInRange(PathHandler.getEffectLevelPath(), 1, 1, 10);
         BUILDER.comment("Stone Earth Ore").push("stone_earth_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStoneEarthOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);

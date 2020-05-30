@@ -16,6 +16,7 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeConfigSpec;
 
 public class ExplosiveBedrockOre extends ExplosiveOre {
 
@@ -33,10 +34,12 @@ public class ExplosiveBedrockOre extends ExplosiveOre {
      */
     @Override
     public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
-        if (General.replaceBedrockOreWithBedrockOnExplosion.get()) {
-            worldIn.setBlockState(pos, Blocks.BEDROCK.getDefaultState(), 3);
+        if(!worldIn.isRemote) {
+            if (General.replaceBedrockOreWithBedrockOnExplosion.get()) {
+                worldIn.setBlockState(pos, Blocks.BEDROCK.getDefaultState(), 3);
+            }
+            worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 2.0f, 1.5f);
         }
-        worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 2.0f, 1.5f);
     }
 
     /**
@@ -51,9 +54,10 @@ public class ExplosiveBedrockOre extends ExplosiveOre {
 
         ResourceLocation resLoc = this.getRegistryName();
         if (resLoc != null) {
-            String blockName = resLoc.toString();
+            String blockName = resLoc.toString().split(":")[1];
             UnmodifiableConfig config = ConfigHandler.getConfig(this);
-            return config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getPropertiesPath() + "." + PathHandler.getResistancePath());
+            double d = ((ForgeConfigSpec.DoubleValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getPropertiesPath() + "." + PathHandler.getResistancePath())).get();
+            return (float) d;
         } else {
             return this.blockResistance;
         }

@@ -13,9 +13,9 @@ public class Vulcanite {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static ForgeConfigSpec spec;
     public static ForgeConfigSpec.BooleanValue disableVulcaniteOres;
-    public static ForgeConfigSpec.BooleanValue disableBurnEffectVulcaniteOres;
+    public static ForgeConfigSpec.BooleanValue disableEffectVulcaniteOres;
     public static ForgeConfigSpec.BooleanValue onlyWhileSelectedVulcaniteOres;
-    public static ForgeConfigSpec.IntValue durationBurnEffectVulcaniteOres;
+    public static ForgeConfigSpec.IntValue effectDurationVulcaniteOres;
 
     public static ForgeConfigSpec.BooleanValue enableStoneVulcaniteOre;
     public static ForgeConfigSpec.IntValue veinSizeStoneVulcaniteOre;
@@ -286,9 +286,9 @@ public class Vulcanite {
 
         BUILDER.comment("Vulcanite Ores").push(PathHandler.getGeneralPath());
         disableVulcaniteOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
-        disableBurnEffectVulcaniteOres = BUILDER.comment("If true, vulcanite ores will not set players on fire while in their inventory/hand.").define("disableBurnEffect", false);
+        disableEffectVulcaniteOres = BUILDER.comment("If true, vulcanite ores will not set players on fire while in their inventory/hand.").define("disableBurnEffect", false);
         onlyWhileSelectedVulcaniteOres = BUILDER.comment("If true, a player will only be set on fire while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationBurnEffectVulcaniteOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
+        effectDurationVulcaniteOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
         BUILDER.comment("Stone Vulcanite Ore").push("stone_vulcanite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStoneVulcaniteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);

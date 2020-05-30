@@ -7,7 +7,6 @@ import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.configs.ores.vanilla.*;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.ConfigHandler;
-import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.PathHandler;
 import com.danny.dannys_ores.util.RichnessTypes;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
@@ -25,11 +24,8 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import static com.danny.dannys_ores.util.RichnessTypes.DENSE;
-import static com.danny.dannys_ores.util.RichnessTypes.POOR;
 import static java.lang.Math.max;
 
 public class GenerationHandler {
@@ -114,10 +110,6 @@ public class GenerationHandler {
                             if (getGeneralOreGenerationStatus(generalConfig, (BaseOre) block, fillerBlock)) {
                                 UnmodifiableConfig config = ConfigHandler.getConfig(block);
                                 if (getSpecificOreGenerationStatus(config, blockName, biomeName, tempName)) {
-//                                    if (fillerBlock.equals(Blocks.BEDROCK)) {
-//                                        System.err.println("The filler block " + fillerBlock + " is Bedrock for: " + block);
-//                                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("BEDROCK", fillerBlock.toString(), new BlockMatcher(fillerBlock)), block.getDefaultState(), max(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinSize")).get(), 3))).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinsPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
-//                                    }
                                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), max(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinSize")).get(), 3))).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.veinsPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
                                 }
                             }

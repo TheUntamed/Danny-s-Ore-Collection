@@ -13,9 +13,9 @@ public class Uranium {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static ForgeConfigSpec spec;
     public static ForgeConfigSpec.BooleanValue disableUraniumOres;
-    public static ForgeConfigSpec.BooleanValue disablePoisonEffectUraniumOres;
+    public static ForgeConfigSpec.BooleanValue disableEffectUraniumOres;
     public static ForgeConfigSpec.BooleanValue onlyWhileSelectedUraniumOres;
-    public static ForgeConfigSpec.IntValue durationPoisonEffectUraniumOres;
+    public static ForgeConfigSpec.IntValue effectDurationUraniumOres;
     public static ForgeConfigSpec.IntValue effectLevelUraniumOres;
 
     public static ForgeConfigSpec.BooleanValue enableStoneUraniumOre;
@@ -287,9 +287,9 @@ public class Uranium {
 
         BUILDER.comment("Uranium Ores").push(PathHandler.getGeneralPath());
         disableUraniumOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
-        disablePoisonEffectUraniumOres = BUILDER.comment("If true, uranium ores will not poison players while in thair inventory/hand.").define("disablePoisonEffect", false);
+        disableEffectUraniumOres = BUILDER.comment("If true, uranium ores will not poison players while in thair inventory/hand.").define("disablePoisonEffect", false);
         onlyWhileSelectedUraniumOres = BUILDER.comment("If true, a player will only be poisoned while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationPoisonEffectUraniumOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 25, 25, 1000000);
+        effectDurationUraniumOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 25, 25, 1000000);
         effectLevelUraniumOres = BUILDER.comment(CommentHandler.getEffectLevelComment()).defineInRange(PathHandler.getEffectLevelPath(), 1, 1, 2);
         BUILDER.comment("Stone Uranium Ore").push("stone_uranium_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());

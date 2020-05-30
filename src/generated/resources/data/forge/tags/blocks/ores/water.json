@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "dannys_ores:stone_water_ore",
+    "dannys_ores:andesite_water_ore",
+    "dannys_ores:diorite_water_ore",
+    "dannys_ores:granite_water_ore",
+    "dannys_ores:netherrack_water_ore",
+    "dannys_ores:end_stone_water_ore",
+    "dannys_ores:sand_water_ore",
+    "dannys_ores:red_sand_water_ore",
+    "dannys_ores:gravel_water_ore",
+    "dannys_ores:sandstone_water_ore",
+    "dannys_ores:red_sandstone_water_ore",
+    "dannys_ores:blue_ice_water_ore",
+    "dannys_ores:packed_ice_water_ore",
+    "dannys_ores:bedrock_water_ore",
+    "dannys_ores:quark_basalt_water_ore",
+    "dannys_ores:quark_jasper_water_ore",
+    "dannys_ores:quark_limestone_water_ore",
+    "dannys_ores:quark_marble_water_ore",
+    "dannys_ores:quark_slate_water_ore",
+    "dannys_ores:embellishcraft_basalt_water_ore",
+    "dannys_ores:embellishcraft_jade_water_ore",
+    "dannys_ores:embellishcraft_gneiss_water_ore",
+    "dannys_ores:embellishcraft_marble_water_ore",
+    "dannys_ores:embellishcraft_larvikite_water_ore",
+    "dannys_ores:embellishcraft_slate_water_ore",
+    "dannys_ores:hardened_stone_water_ore"
+  ]
+}

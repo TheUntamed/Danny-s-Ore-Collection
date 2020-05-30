@@ -13,9 +13,8 @@ public class Water {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static ForgeConfigSpec spec;
     public static ForgeConfigSpec.BooleanValue disableWaterOres;
-    public static ForgeConfigSpec.BooleanValue disableBurnEffectWaterOres;
+    public static ForgeConfigSpec.BooleanValue disableEffectWaterOres;
     public static ForgeConfigSpec.BooleanValue onlyWhileSelectedWaterOres;
-    public static ForgeConfigSpec.IntValue durationBurnEffectWaterOres;
 
     public static ForgeConfigSpec.BooleanValue enableStoneWaterOre;
     public static ForgeConfigSpec.IntValue veinSizeStoneWaterOre;
@@ -286,9 +285,8 @@ public class Water {
 
         BUILDER.comment("Water Ores").push(PathHandler.getGeneralPath());
         disableWaterOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
-        disableBurnEffectWaterOres = BUILDER.comment("If true, water ores will not set players on water while in their inventory/hand.").define("disableBurnEffect", false);
-        onlyWhileSelectedWaterOres = BUILDER.comment("If true, a player will only be set on water while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationBurnEffectWaterOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
+        disableEffectWaterOres = BUILDER.comment("If true, water ores will not reduce the air volume of players while in their inventory/hand.").define("disableDrownEffect", false);
+        onlyWhileSelectedWaterOres = BUILDER.comment("If true, the air volume of a player will only be reduced while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
         BUILDER.comment("Stone Water Ore").push("stone_water_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStoneWaterOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);

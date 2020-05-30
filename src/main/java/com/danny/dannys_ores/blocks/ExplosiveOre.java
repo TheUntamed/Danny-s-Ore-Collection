@@ -30,7 +30,6 @@ public class ExplosiveOre extends BaseOre {
             UnmodifiableConfig config =  ConfigHandler.getConfig(this);
             double chance = ((ForgeConfigSpec.DoubleValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getExplosionChancePath())).get();
             double rand = RANDOM.nextDouble() * 100;
-            System.err.println(rand);
             if (rand < chance) {
                 double explosionRange = ((ForgeConfigSpec.DoubleValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getExplosionRangePath())).get();
                 Explosion.Mode eM = NONE;

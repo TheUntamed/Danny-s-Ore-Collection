@@ -1,5 +1,6 @@
 Some of the background textures are from other mods or vanilla minecraft
 and most of the overlay textures are based on the textures of other mods!
+The dense and poor ore overlays are based on the corresponding normal normal overlay.
 Below all those mods are listed and linked.
 You will also find the license of the mods in the corresponding .md files in this folder!
 
@@ -19,6 +20,7 @@ The Ore Overlay for the Bismuth, Platinum and Iridium Ore were part of the corre
 https://www.curseforge.com/minecraft/mc-mods/i-need-them-ores
 
 The Ore Overlay for the Tin and Osmium Ore were part of the corresponding ore textures from 'Mekanism' (by bradyaidanc)
+And the Overlay for the entropy ore was part of the oil fluid texture.
 https://www.curseforge.com/minecraft/mc-mods/mekanism
 
 The Ore Overlay for the Adamantite, Mithril and Runite Ore were part of the corresponding ore textures from 'Ores and Metals' (by Coliwogg)

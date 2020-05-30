@@ -286,9 +286,9 @@ public class Entropy {
 
         BUILDER.comment("Entropy Ores").push(PathHandler.getGeneralPath());
         disableEntropyOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
-        explosionChanceEntropyOres = BUILDER.comment(CommentHandler.getExplosionChanceComment()).defineInRange(PathHandler.getExplosionChancePath(), 50.0D, 0.0D, 100.0D);
+        explosionChanceEntropyOres = BUILDER.comment(CommentHandler.getExplosionChanceComment()).defineInRange(PathHandler.getExplosionChancePath(), 10.0D, 0.0D, 100.0D);
         explosionRangeEntropyOres = BUILDER.comment(CommentHandler.getExplosionRangeComment()).defineInRange(PathHandler.getExplosionRangePath(), 3.0D, 0.0D, 100.0D);
-        explosionBreaksBlocksEntropyOres = BUILDER.comment(CommentHandler.getExplosionBreaksBlocksComment()).define(PathHandler.getExplosionBreaksBlocksPath(), true);
+        explosionBreaksBlocksEntropyOres = BUILDER.comment(CommentHandler.getExplosionBreaksBlocksComment()).define(PathHandler.getExplosionBreaksBlocksPath(), false);
         BUILDER.comment("Stone Entropy Ore").push("stone_entropy_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStoneEntropyOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
