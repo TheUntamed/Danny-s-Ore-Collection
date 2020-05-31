@@ -8,6 +8,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Effect;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -23,18 +26,19 @@ public class DrowningBlockItem extends BlockItem {
     @Override
     public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
         if (!worldIn.isRemote) {
-            if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".disableDrownEffect")).get()) {
-                if (entityIn instanceof PlayerEntity) {
+            if (entityIn instanceof PlayerEntity) {
+                PlayerEntity pEntity = (PlayerEntity) entityIn;
+                if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".disableDrownEffect")).get()) {
                     boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getSelectedPath())).get();
                     if (!onlyIfSelected || isSelected) {
-                        if (entityIn.isAlive()) {
-                            entityIn.setAir(entityIn.getAir() - 5);
-                            if (entityIn.getAir() <= -25) {
-                                entityIn.setAir(-5);
-                                entityIn.attackEntityFrom(DamageSource.DROWN, 2.0F);
+                        if (pEntity.isAlive() && pEntity.getActivePotionEffect(Effects.WATER_BREATHING) == null) {
+                            pEntity.setAir(entityIn.getAir() - 5);
+                            if (pEntity.getAir() <= -25) {
+                                pEntity.setAir(-5);
+                                pEntity.attackEntityFrom(DamageSource.DROWN, 2.0F);
                             }
                         } else {
-                            entityIn.setAir(300);
+                            pEntity.setAir(300);
                         }
                     }
                 }

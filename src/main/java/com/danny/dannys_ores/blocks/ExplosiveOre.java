@@ -40,6 +40,8 @@ public class ExplosiveOre extends BaseOre {
             } else {
                 worldIn.playEvent(player, 2001, pos, getStateId(state));
             }
+        } else {
+            worldIn.playEvent(player, 2001, pos, getStateId(state));
         }
     }
 }

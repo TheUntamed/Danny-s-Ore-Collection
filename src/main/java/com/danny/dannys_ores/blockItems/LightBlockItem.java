@@ -25,8 +25,8 @@ public class LightBlockItem extends BlockItem {
     @Override
     public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
         if (!worldIn.isRemote) {
-            if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".disableLevitationEffect")).get()) {
-                if (entityIn instanceof PlayerEntity) {
+            if (entityIn instanceof PlayerEntity) {
+                if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".disableLevitationEffect")).get()) {
                     boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getSelectedPath())).get();
                     if (!onlyIfSelected || isSelected) {
                         int effectLevel = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getEffectLevelPath())).get();

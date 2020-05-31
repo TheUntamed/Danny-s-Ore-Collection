@@ -19,8 +19,7 @@ https://www.curseforge.com/minecraft/mc-mods/silents-mechanisms
 The Ore Overlay for the Bismuth, Platinum and Iridium Ore were part of the corresponding ore textures from 'I need them Ores' (by CAS_ual_TY)
 https://www.curseforge.com/minecraft/mc-mods/i-need-them-ores
 
-The Ore Overlay for the Tin and Osmium Ore were part of the corresponding ore textures from 'Mekanism' (by bradyaidanc)
-And the Overlay for the entropy ore was part of the oil fluid texture.
+The Ore Overlay for the Tin and Osmium Ore were part of the corresponding ore textures from 'Mekanism' and 'Mekanism Generators' (by bradyaidanc)
 https://www.curseforge.com/minecraft/mc-mods/mekanism
 
 The Ore Overlay for the Adamantite, Mithril and Runite Ore were part of the corresponding ore textures from 'Ores and Metals' (by Coliwogg)
