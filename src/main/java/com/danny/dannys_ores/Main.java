@@ -59,7 +59,7 @@ public class Main {
         BlockInit.BLOCKS.register(modEventBus);
 
         General.loadConfig();
-        System.err.println("Finished config loading!");
+
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
     }

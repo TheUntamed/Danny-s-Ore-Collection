@@ -96,4 +96,6 @@ public class PathHandler {
     public static String getExplosionRangePath() { return "explosionRange"; }
 
     public static String getExplosionBreaksBlocksPath() { return "explosionBreaksBlocks"; }
+
+    public static String getAsLayerPath() { return "asLayer"; }
 }

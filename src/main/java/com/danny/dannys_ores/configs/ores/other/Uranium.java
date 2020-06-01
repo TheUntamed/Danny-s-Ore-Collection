@@ -287,7 +287,7 @@ public class Uranium {
 
         BUILDER.comment("Uranium Ores").push(PathHandler.getGeneralPath());
         disableUraniumOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
-        disableEffectUraniumOres = BUILDER.comment("If true, uranium ores will not poison players while in thair inventory/hand.").define("disablePoisonEffect", false);
+        disableEffectUraniumOres = BUILDER.comment("If true, uranium ores will not poison players while in their inventory/hand.").define("disablePoisonEffect", false);
         onlyWhileSelectedUraniumOres = BUILDER.comment("If true, a player will only be poisoned while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
         effectDurationUraniumOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 25, 25, 1000000);
         effectLevelUraniumOres = BUILDER.comment(CommentHandler.getEffectLevelComment()).defineInRange(PathHandler.getEffectLevelPath(), 1, 1, 2);

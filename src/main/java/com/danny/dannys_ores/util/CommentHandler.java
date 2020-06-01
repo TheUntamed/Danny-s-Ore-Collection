@@ -88,4 +88,10 @@ public class CommentHandler {
 
     public static String getExplosionBreaksBlocksComment() { return "If true, explosions caused by this ore type will break blocks. If false, it only damages entities"; }
 
+    public static String getAsLayerComment() { return "If true, this stone variant will generate as a layer instead of a cluster."; }
+
+    public static String getEnableStoneVariantComment() {
+        return "If false, this stone variant will not generate.";
+    }
+
 }

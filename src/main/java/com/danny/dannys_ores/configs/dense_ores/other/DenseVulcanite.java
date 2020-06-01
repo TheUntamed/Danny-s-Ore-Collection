@@ -286,7 +286,7 @@ public class DenseVulcanite {
 
         BUILDER.comment("Dense Vulcanite Ores").push(PathHandler.getGeneralPath());
         disableDenseVulcaniteOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
-        disableDenseBurnEffectVulcaniteOres = BUILDER.comment("If true, vulcanite ores will not set players on fire while in their inventory/hand.").define("disableBurnEffect", false);
+        disableDenseBurnEffectVulcaniteOres = BUILDER.comment("If true, dense vulcanite ores will not set players on fire while in their inventory/hand.").define("disableBurnEffect", false);
         onlyWhileSelectedVulcaniteOres = BUILDER.comment("If true, a player will only be set on fire while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
         durationBurnEffectVulcaniteOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
         BUILDER.comment("Stone Dense Vulcanite Ore").push("stone_dense_vulcanite_ore");
