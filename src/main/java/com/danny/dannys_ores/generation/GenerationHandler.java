@@ -143,12 +143,14 @@ public class GenerationHandler {
                     } else {
                         UnmodifiableConfig config = ConfigHandler.getConfig(block);
                         if (getStoneGenerationStatus(config, blockName, biomeName, tempName)) {
-                            if (((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getAsLayerPath())).get()) {
-                                List<BlockState> targets = Lists.newArrayList(Blocks.DIRT.getDefaultState(), Blocks.STONE.getDefaultState(), Blocks.GRANITE.getDefaultState(), Blocks.ANDESITE.getDefaultState(), Blocks.DIORITE.getDefaultState(), Blocks.GRAVEL.getDefaultState());
-                                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.DISK.withConfiguration(new SphereReplaceConfig(block.getDefaultState(), 8, 1, targets)).withPlacement(Placement.COUNT_TOP_SOLID.configure(new FrequencyConfig(1))));
-                            } else {
+//                            if (((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getAsLayerPath())).get()) {
+//                                List<BlockState> targets = Lists.newArrayList(Blocks.DIRT.getDefaultState(), Blocks.STONE.getDefaultState(), Blocks.GRANITE.getDefaultState(), Blocks.ANDESITE.getDefaultState(), Blocks.DIORITE.getDefaultState(), Blocks.GRAVEL.getDefaultState());
+//                                //biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.DISK.withConfiguration(new SphereReplaceConfig(block.getDefaultState(), 8, 1, targets)).withPlacement(Placement.COUNT_TOP_SOLID.configure(new FrequencyConfig(1))));
+//                                System.err.println("Generate: " + block);
+//                                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.DISK.withConfiguration(new SphereReplaceConfig(block.getDefaultState(), 8, 1, targets)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.clustersPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
+//                            } else {
                                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, block.getDefaultState(), max(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.clusterSize")).get(), 3))).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.clustersPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
-                            }
+//                            }
                         }
                     }
                 }
@@ -193,8 +195,6 @@ public class GenerationHandler {
         String variantWithOwner = getVariantWithModOwner(fillerBlock);
         RichnessTypes rType = ore.getRichnessType();
         String rT = rType.toString().toLowerCase();
-        //if (blockOwner.equals("minecraft")) {
-        //    return !((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".vanilla_and_other_mods.enableCustomVanillaOreGeneration")).get();
         if (((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + rT + ".allVariants")).get()) {
             return false;
         } else {
