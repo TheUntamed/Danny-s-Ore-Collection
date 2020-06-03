@@ -1,9 +1,6 @@
 package com.danny.dannys_ores.blocks;
 
-import com.danny.dannys_ores.util.ConfigHandler;
-import com.danny.dannys_ores.util.OreTypes;
-import com.danny.dannys_ores.util.PathHandler;
-import com.danny.dannys_ores.util.RichnessTypes;
+import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -18,7 +15,7 @@ import static net.minecraft.world.Explosion.Mode.NONE;
 
 public class ExplosiveOre extends BaseOre {
 
-    public ExplosiveOre(Block.Properties properties, Block blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
+    public ExplosiveOre(Block.Properties properties, VariantType blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
         super(properties, blockBase, rType, oType, minXp, maxXp);
     }
 

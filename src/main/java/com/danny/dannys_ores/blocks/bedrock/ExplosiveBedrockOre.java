@@ -2,10 +2,7 @@ package com.danny.dannys_ores.blocks.bedrock;
 
 import com.danny.dannys_ores.blocks.ExplosiveOre;
 import com.danny.dannys_ores.configs.General;
-import com.danny.dannys_ores.util.ConfigHandler;
-import com.danny.dannys_ores.util.OreTypes;
-import com.danny.dannys_ores.util.PathHandler;
-import com.danny.dannys_ores.util.RichnessTypes;
+import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -20,7 +17,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
 
 public class ExplosiveBedrockOre extends ExplosiveOre {
 
-    public ExplosiveBedrockOre(Block.Properties properties, Block blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
+    public ExplosiveBedrockOre(Block.Properties properties, VariantType blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
         super(properties, blockBase, rType, oType, minXp, maxXp);
     }
 

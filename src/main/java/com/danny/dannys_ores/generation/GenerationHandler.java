@@ -10,9 +10,7 @@ import com.danny.dannys_ores.util.ConfigHandler;
 import com.danny.dannys_ores.util.PathHandler;
 import com.danny.dannys_ores.util.RichnessTypes;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
-import com.google.common.collect.Lists;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
 import net.minecraft.util.ResourceLocation;
@@ -20,7 +18,6 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placement.CountRangeConfig;
-import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.RegistryObject;
@@ -125,7 +122,6 @@ public class GenerationHandler {
                     if (block instanceof BaseOre) {
                         if (!blockName.contains("quark") && !blockName.contains("embellishcraft") || blockName.contains("quark") && Main.quark || blockName.contains("embellishcraft") && Main.embellishcraft) {
                             Block fillerBlock = ((BaseBlock) block).getBlockBase();
-                            Main.LOGGER.info("The block: " + block);
                             UnmodifiableConfig generalConfig = General.spec.getValues();
                             if (getGeneralOreGenerationStatus(generalConfig, (BaseOre) block, fillerBlock)) {
                                 UnmodifiableConfig config = ConfigHandler.getConfig(block);
@@ -193,7 +189,6 @@ public class GenerationHandler {
      * @return True if the block should generate.
      */
     private static boolean getGeneralOreGenerationStatus(UnmodifiableConfig config, BaseOre ore, Block fillerBlock) {
-        Main.LOGGER.info("fillerBlock: " + fillerBlock);
         String variantWithOwner = getVariantWithModOwner(fillerBlock);
         RichnessTypes rType = ore.getRichnessType();
         String rT = rType.toString().toLowerCase();
@@ -237,12 +232,10 @@ public class GenerationHandler {
      * @return The stone variant and its modid as concatenated String ('modid.variant') of the given block.
      */
     private static String getVariantWithModOwner(Block fillerBlock) {
-        Main.LOGGER.info("fillerBlock: " + fillerBlock);
         String ownerAndVariant;
         ResourceLocation resLoc = fillerBlock.getRegistryName();
         if (resLoc != null) {
             ownerAndVariant = resLoc.toString().replace(":", ".");
-            Main.LOGGER.info("ownerAndVariant: " + ownerAndVariant);
             return ownerAndVariant;
         } else {
             throw new NullPointerException("Block '" + fillerBlock + "' has no registry name!");

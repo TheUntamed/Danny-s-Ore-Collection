@@ -2,10 +2,7 @@ package com.danny.dannys_ores.blocks.bedrock;
 
 import com.danny.dannys_ores.blocks.OreWithParticles;
 import com.danny.dannys_ores.configs.General;
-import com.danny.dannys_ores.util.ConfigHandler;
-import com.danny.dannys_ores.util.OreTypes;
-import com.danny.dannys_ores.util.PathHandler;
-import com.danny.dannys_ores.util.RichnessTypes;
+import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -20,7 +17,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
 
 public class BedrockOreWithParticles extends OreWithParticles {
 
-    public BedrockOreWithParticles(Block.Properties properties, Block blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp, BasicParticleType bpt) {
+    public BedrockOreWithParticles(Block.Properties properties, VariantType blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp, BasicParticleType bpt) {
         super(properties, blockBase, rType, oType, minXp, maxXp, bpt);
     }
 

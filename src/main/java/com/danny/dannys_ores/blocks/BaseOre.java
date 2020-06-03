@@ -4,6 +4,7 @@ import com.danny.dannys_ores.configs.ores.other.Xp;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.PathHandler;
 import com.danny.dannys_ores.util.RichnessTypes;
+import com.danny.dannys_ores.util.VariantType;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -19,7 +20,7 @@ public class BaseOre extends BaseBlock {
     private OreTypes oType;
     private RichnessTypes rType;
 
-    public BaseOre(Block.Properties properties, Block blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
+    public BaseOre(Block.Properties properties, VariantType blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
         super(properties, blockBase);
         this.minXp = minXp;
         this.maxXp = maxXp;

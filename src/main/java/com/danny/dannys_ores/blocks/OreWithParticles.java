@@ -2,6 +2,7 @@ package com.danny.dannys_ores.blocks;
 
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
+import com.danny.dannys_ores.util.VariantType;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.particles.BasicParticleType;
@@ -15,7 +16,7 @@ import java.util.Random;
 public class OreWithParticles extends BaseOre {
     private BasicParticleType bpt;
 
-    public OreWithParticles(Block.Properties properties, Block blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp, BasicParticleType bpt) {
+    public OreWithParticles(Block.Properties properties, VariantType blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp, BasicParticleType bpt) {
         super(properties, blockBase, rType, oType, minXp, maxXp);
         this.bpt = bpt;
     }
