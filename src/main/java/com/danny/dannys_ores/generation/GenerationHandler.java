@@ -125,6 +125,7 @@ public class GenerationHandler {
                     if (block instanceof BaseOre) {
                         if (!blockName.contains("quark") && !blockName.contains("embellishcraft") || blockName.contains("quark") && Main.quark || blockName.contains("embellishcraft") && Main.embellishcraft) {
                             Block fillerBlock = ((BaseBlock) block).getBlockBase();
+                            Main.LOGGER.info("The block: " + block);
                             UnmodifiableConfig generalConfig = General.spec.getValues();
                             if (getGeneralOreGenerationStatus(generalConfig, (BaseOre) block, fillerBlock)) {
                                 UnmodifiableConfig config = ConfigHandler.getConfig(block);
@@ -192,6 +193,7 @@ public class GenerationHandler {
      * @return True if the block should generate.
      */
     private static boolean getGeneralOreGenerationStatus(UnmodifiableConfig config, BaseOre ore, Block fillerBlock) {
+        Main.LOGGER.info("fillerBlock: " + fillerBlock);
         String variantWithOwner = getVariantWithModOwner(fillerBlock);
         RichnessTypes rType = ore.getRichnessType();
         String rT = rType.toString().toLowerCase();
@@ -235,10 +237,13 @@ public class GenerationHandler {
      * @return The stone variant and its modid as concatenated String ('modid.variant') of the given block.
      */
     private static String getVariantWithModOwner(Block fillerBlock) {
+        Main.LOGGER.info("fillerBlock: " + fillerBlock);
         String ownerAndVariant;
         ResourceLocation resLoc = fillerBlock.getRegistryName();
         if (resLoc != null) {
-            return ownerAndVariant = resLoc.toString().replace(":", ".");
+            ownerAndVariant = resLoc.toString().replace(":", ".");
+            Main.LOGGER.info("ownerAndVariant: " + ownerAndVariant);
+            return ownerAndVariant;
         } else {
             throw new NullPointerException("Block '" + fillerBlock + "' has no registry name!");
         }

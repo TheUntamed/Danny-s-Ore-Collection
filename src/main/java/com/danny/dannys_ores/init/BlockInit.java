@@ -2,8 +2,14 @@ package com.danny.dannys_ores.init;
 
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blocks.BaseBlock;
+import com.danny.dannys_ores.blocks.BaseOre;
+import com.danny.dannys_ores.blocks.bedrock.BedrockOre;
+import com.danny.dannys_ores.materials.MyMaterials;
+import com.danny.dannys_ores.util.OreTypes;
+import com.danny.dannys_ores.util.RichnessTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.common.ToolType;
@@ -44,5 +50,4 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
 
     public static final RegistryObject<Block> HARDENED_STONE = BLOCKS.register("hardened_stone", () -> new BaseBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(2.5F, 6.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), Blocks.STONE));
-
 }
