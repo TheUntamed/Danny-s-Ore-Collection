@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class BlockTagsDataGen extends BlockTagsProvider {
     private ArrayList<Block> oreType = new ArrayList<>();
     private ArrayList<Block> ores = new ArrayList<>();
-
+    private ArrayList<Block> stone = new ArrayList<>();
 
     public BlockTagsDataGen(DataGenerator generator) {
         super(generator);
@@ -31,33 +31,38 @@ public class BlockTagsDataGen extends BlockTagsProvider {
         RichnessTypes rType = null;
         for (RegistryObject<Block> regObj : BlockInit.BLOCKS.getEntries()) {
             Block block = regObj.get();
-            if (block instanceof BaseOre) {
-                BaseOre oreBlock = (BaseOre) block;
-                System.err.println("The OreType: " + oType);
-                // Because the ores are grouped by type in the BlockInit classes
-                // all ores of one type will always come after each other.
-                ores.add(oreBlock);
-                if (oType == null) {
-                    oType = oreBlock.getOreType();
-                    rType = oreBlock.getRichnessType();
-                    oreType.add(oreBlock);
-                } else if (oType != oreBlock.getOreType()) {
-                    if (rType.equals(RichnessTypes.NORMAL)) {
-                        addForgeTag("ores/" + oType.toString().toLowerCase(), oreType);
+            if (block instanceof BaseBlock) {
+                if (block instanceof BaseOre) {
+                    BaseOre oreBlock = (BaseOre) block;
+                    // Because the ores are grouped by type in the BlockInit classes
+                    // all ores of one type will always come after each other.
+                    ores.add(oreBlock);
+                    if (oType == null) {
+                        oType = oreBlock.getOreType();
+                        rType = oreBlock.getRichnessType();
+                        oreType.add(oreBlock);
+                    } else if (oType != oreBlock.getOreType()) {
+                        if (rType.equals(RichnessTypes.NORMAL)) {
+                            addForgeTag("ores/" + oType.toString().toLowerCase(), oreType);
+                        } else {
+                            addForgeTag("ores/" + rType.toString().toLowerCase() + "_" + oType.toString().toLowerCase(), oreType);
+                        }
+                        oreType.clear();
+                        oType = oreBlock.getOreType();
+                        rType = oreBlock.getRichnessType();
+                        oreType.add(oreBlock);
                     } else {
-                        addForgeTag("ores/" + rType.toString().toLowerCase() + "_" + oType.toString().toLowerCase(), oreType);
+                        oreType.add(oreBlock);
                     }
-                    oreType.clear();
-                    oType = oreBlock.getOreType();
-                    rType = oreBlock.getRichnessType();
-                    oreType.add(oreBlock);
-                } else {
-                    oreType.add(oreBlock);
-                }
 
+                } else {
+                    BaseBlock baseBlock = (BaseBlock) block;
+                    stone.add(baseBlock);
+                }
             }
         }
         addForgeTag("ores", ores);
+        addForgeTag("stone", stone);
     }
 
     private void addForgeTag(String name, ArrayList<Block> blocksIn) {
@@ -68,8 +73,7 @@ public class BlockTagsDataGen extends BlockTagsProvider {
     }
 
     @Override
-    public String getName()
-    {
+    public String getName() {
         return "Danny's Ores - Block Tags";
     }
 }
