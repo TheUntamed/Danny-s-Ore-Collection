@@ -1,18 +1,9 @@
 package com.danny.dannys_ores.blocks;
 
-import com.danny.dannys_ores.configs.dense_ores.gems.DenseAmethyst;
-import com.danny.dannys_ores.configs.dense_ores.gems.DenseBlackOpal;
-import com.danny.dannys_ores.configs.dense_ores.other.DenseAdamantium;
-import com.danny.dannys_ores.configs.dense_ores.other.DenseBauxite;
-import com.danny.dannys_ores.configs.dense_ores.other.DenseBismuth;
 import com.danny.dannys_ores.init.BlockInit;
-import com.danny.dannys_ores.util.StoneVariant;
 import com.danny.dannys_ores.util.VariantType;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.util.ResourceLocation;
-
-import static com.danny.dannys_ores.util.VariantType.STONE;
 
 public class BaseBlock extends Block {
     private VariantType blockBase;

@@ -2,7 +2,6 @@ package com.danny.dannys_ores.init;
 
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blocks.BaseBlock;
-import com.danny.dannys_ores.blocks.BaseOre;
 import com.danny.dannys_ores.blocks.TestOre;
 import com.danny.dannys_ores.util.*;
 import net.minecraft.block.Block;
@@ -55,17 +54,38 @@ public class BlockInit {
 
     public static void initOres() {
         System.err.println("initOres is called!");
-        Map<StoneVariant, RegistryObject<TestOre>> ORE_BLOCKS = Arrays.stream(StoneVariant.values()).map(
-                type -> Pair.of(type, BLOCKS.register(type.getName() + "_test_ore", () ->
-                        type.equals(StoneVariant.BEDROCK)
-                                ? new TestOre(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(type.getHardness(), type.getResistance()).harvestTool(type.getToolType()).sound(type.getSoundType()).slipperiness(type.getSlipperiness()).harvestLevel(1+type.getIncreasedHarvestLevel()), type, RichnessTypes.POOR, OreTypes.ELECTROTINE, 2*type.getXpMultiplier(), 8*type.getXpMultiplier())
-                                : new TestOre(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(type.getHardness(), type.getResistance()).harvestTool(type.getToolType()).sound(type.getSoundType()).slipperiness(type.getSlipperiness()).harvestLevel(1+type.getIncreasedHarvestLevel()), type, RichnessTypes.DENSE, OreTypes.ELECTROTINE, 2*type.getXpMultiplier(), 8*type.getXpMultiplier())))).collect(
-                Collectors.toMap(Pair::getKey, Pair::getValue));
+        for (RichnessTypes rType : RichnessTypes.values()) {
+            String rTypeName = "_";
+            if (!rType.equals(RichnessTypes.NORMAL)) {
+                rTypeName += rType.toString() + "_";
+            }
+            for (OreTypes oType : OreTypes.values()) {
+                if (oType.isHasParticles()) {
+                    for (StoneVariants variant : StoneVariants.values()) {
+                        BLOCKS.register(variant.getName() + rTypeName + oType.getName() + "_ore", () -> new TestOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).slipperiness(variant.getSlipperiness()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, rType, oType, oType.getMinXp() * variant.getXpMultiplier(), oType.getMaxXp() * variant.getXpMultiplier()));
+                    }
+                } else if (oType.isCanExplode()) {
+                    for (StoneVariants variant : StoneVariants.values()) {
+                        BLOCKS.register(variant.getName() + rTypeName + oType.getName() + "_ore", () -> new TestOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).slipperiness(variant.getSlipperiness()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, rType, oType, oType.getMinXp() * variant.getXpMultiplier(), oType.getMaxXp() * variant.getXpMultiplier()));
+                    }
+                } else {
+                    for (StoneVariants variant : StoneVariants.values()) {
+                        BLOCKS.register(variant.getName() + rTypeName + oType.getName() + "_ore", () -> new TestOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).slipperiness(variant.getSlipperiness()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, rType, oType, oType.getMinXp() * variant.getXpMultiplier(), oType.getMaxXp() * variant.getXpMultiplier()));
+                    }
+                }
+            }
+        }
+//        Map<StoneVariants, RegistryObject<TestOre>> ORE_BLOCKS = Arrays.stream(StoneVariants.values()).map(
+//                type -> Pair.of(type, BLOCKS.register(type.getName() + "_test_ore", () ->
+//                        type.equals(StoneVariants.BEDROCK)
+//                                ? new TestOre(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(type.getHardness(), type.getResistance()).harvestTool(type.getToolType()).sound(type.getSoundType()).slipperiness(type.getSlipperiness()).harvestLevel(1+type.getIncreasedHarvestLevel()), type, RichnessTypes.POOR, OreTypes.ELECTROTINE, 2*type.getXpMultiplier(), 8*type.getXpMultiplier())
+//                                : new TestOre(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(type.getHardness(), type.getResistance()).harvestTool(type.getToolType()).sound(type.getSoundType()).slipperiness(type.getSlipperiness()).harvestLevel(1+type.getIncreasedHarvestLevel()), type, RichnessTypes.DENSE, OreTypes.ELECTROTINE, 2*type.getXpMultiplier(), 8*type.getXpMultiplier())))).collect(
+//                Collectors.toMap(Pair::getKey, Pair::getValue));
     }
 
-//    public static final Map<StoneVariant, RegistryObject<TestOre>> ORE_BLOCKS = Arrays.stream(StoneVariant.values()).map(
+//    public static final Map<StoneVariants, RegistryObject<TestOre>> ORE_BLOCKS = Arrays.stream(StoneVariants.values()).map(
 //            type -> Pair.of(type, BLOCKS.register(type.getName() + "_test_ore", () ->
-//                    type.equals(StoneVariant.BEDROCK)
+//                    type.equals(StoneVariants.BEDROCK)
 //                            ? new TestOre(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(type.getHardness(), type.getResistance()).harvestTool(type.getToolType()).sound(type.getSoundType()).slipperiness(type.getSlipperiness()).harvestLevel(1+type.getIncreasedHarvestLevel()), type, RichnessTypes.POOR, OreTypes.ELECTROTINE, 2*type.getXpMultiplier(), 8*type.getXpMultiplier())
 //                            : new TestOre(Block.Properties.create(Material.ROCK, type.getColor()).hardnessAndResistance(type.getHardness(), type.getResistance()).harvestTool(type.getToolType()).sound(type.getSoundType()).slipperiness(type.getSlipperiness()).harvestLevel(1+type.getIncreasedHarvestLevel()), type, RichnessTypes.DENSE, OreTypes.ELECTROTINE, 2*type.getXpMultiplier(), 8*type.getXpMultiplier())))).collect(
 //            Collectors.toMap(Pair::getKey, Pair::getValue));
