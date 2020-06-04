@@ -59,6 +59,7 @@ public class Main {
         embellishcraft = ModList.get().isLoaded("embellishcraft");
         LOGGER.debug("Hello World!");
         BlockInit.BLOCKS.register(modEventBus);
+        BlockInit.initOres();
         LOGGER.debug("Registered Blocks!");
 
         General.loadConfig();
