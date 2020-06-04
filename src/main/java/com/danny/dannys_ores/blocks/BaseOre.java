@@ -1,10 +1,7 @@
 package com.danny.dannys_ores.blocks;
 
 import com.danny.dannys_ores.configs.ores.other.Xp;
-import com.danny.dannys_ores.util.OreTypes;
-import com.danny.dannys_ores.util.PathHandler;
-import com.danny.dannys_ores.util.RichnessTypes;
-import com.danny.dannys_ores.util.VariantType;
+import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

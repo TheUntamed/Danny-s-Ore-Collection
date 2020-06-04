@@ -6,6 +6,7 @@ import com.danny.dannys_ores.configs.dense_ores.other.DenseAdamantium;
 import com.danny.dannys_ores.configs.dense_ores.other.DenseBauxite;
 import com.danny.dannys_ores.configs.dense_ores.other.DenseBismuth;
 import com.danny.dannys_ores.init.BlockInit;
+import com.danny.dannys_ores.util.StoneVariant;
 import com.danny.dannys_ores.util.VariantType;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -22,7 +23,6 @@ public class BaseBlock extends Block {
     }
 
     public Block getBlockBase() {
-
         switch (blockBase) {
             case STONE: return Blocks.STONE;
             case DIORITE: return Blocks.DIORITE;

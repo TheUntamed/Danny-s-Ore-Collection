@@ -57,10 +57,12 @@ public class Main {
 
         quark = ModList.get().isLoaded("quark");
         embellishcraft = ModList.get().isLoaded("embellishcraft");
-
+        LOGGER.debug("Hello World!");
         BlockInit.BLOCKS.register(modEventBus);
+        LOGGER.debug("Registered Blocks!");
 
         General.loadConfig();
+        LOGGER.debug("Loaded Config!");
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);

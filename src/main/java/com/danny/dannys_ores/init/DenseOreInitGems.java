@@ -17,6 +17,13 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DenseOreInitGems extends BlockInit {
+
+    private static void aMethod() {
+        System.err.println("Inside aMethod!");
+        final RegistryObject<Block> TEST = BLOCKS.register("test", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), VariantType.STONE, RichnessTypes.DENSE, OreTypes.ELECTROTINE, 2, 8));
+
+    }
+
     public static final RegistryObject<Block> STONE_DENSE_ELECTROTINE_ORE = BLOCKS.register("stone_dense_electrotine_ore", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), VariantType.STONE, RichnessTypes.DENSE, OreTypes.ELECTROTINE, 2, 8));
     public static final RegistryObject<Block> ANDESITE_DENSE_ELECTROTINE_ORE = BLOCKS.register("andesite_dense_electrotine_ore", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), VariantType.ANDESITE, RichnessTypes.DENSE, OreTypes.ELECTROTINE, 2, 8));
     public static final RegistryObject<Block> DIORITE_DENSE_ELECTROTINE_ORE = BLOCKS.register("diorite_dense_electrotine_ore", () -> new BaseOre(Block.Properties.create(Material.ROCK, MaterialColor.QUARTZ).hardnessAndResistance(3.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), VariantType.DIORITE, RichnessTypes.DENSE, OreTypes.ELECTROTINE, 2, 8));

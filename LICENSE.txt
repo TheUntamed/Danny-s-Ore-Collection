@@ -1,0 +1,2 @@
+Some assets where taken from other mods and modified by me (if their license allowed it).
+Those are licensed under their original license, which can be found in src\main\resources\assets\dannys_ores\textures\license
