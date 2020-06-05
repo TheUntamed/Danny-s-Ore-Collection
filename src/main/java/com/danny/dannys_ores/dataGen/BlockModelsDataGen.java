@@ -45,7 +45,6 @@ public class BlockModelsDataGen extends BlockModelProvider {
     }
 
     public void doubleTextureBlock(Block block, String textureBackground, String textureOverlay) {
-        System.err.println("block: " + block + " " + textureBackground + " " + textureOverlay);
         getBuilder(block.getRegistryName().getPath()).parent(getModelFile()).texture("base", textureBackground).texture("overlay", textureOverlay);
 
         Main.LOGGER.debug("Creating block models model for " + block.getRegistryName());

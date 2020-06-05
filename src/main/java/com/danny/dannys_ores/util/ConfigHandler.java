@@ -261,7 +261,7 @@ public class ConfigHandler {
                 default:
                     throw new IllegalArgumentException("The richness type of '" + block + "' has no Richness Type. No config could be returned!");
             }
-        } else { return StoneVariants.spec.getValues(); }
+        } else { return Stones.spec.getValues(); }
     }
 
     /**

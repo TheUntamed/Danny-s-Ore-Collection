@@ -17,7 +17,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
 
 public class ExplosiveBedrockOre extends ExplosiveOre {
 
-    public ExplosiveBedrockOre(Block.Properties properties, VariantType blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
+    public ExplosiveBedrockOre(Block.Properties properties, StoneVariants blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
         super(properties, blockBase, rType, oType, minXp, maxXp);
     }
 

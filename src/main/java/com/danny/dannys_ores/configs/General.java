@@ -321,7 +321,7 @@ public class General {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, General.spec, generalPath + "/#general.toml");
 
 
-        StoneVariants.loadConfig(generalPath);
+        Stones.loadConfig(generalPath);
         Air.loadConfig(normalPath);
         Fire.loadConfig(normalPath);
         Earth.loadConfig(normalPath);

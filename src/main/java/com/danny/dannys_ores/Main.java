@@ -5,7 +5,6 @@ import com.danny.dannys_ores.blocks.BaseOre;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
-import com.danny.dannys_ores.init.OreInitVanilla;
 import com.danny.dannys_ores.util.OreTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -32,9 +31,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.Arrays;
-
 
 @Mod(Main.MOD_ID)
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
@@ -158,7 +154,7 @@ public class Main {
 
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(OreInitVanilla.HARDENED_STONE_DIAMOND_ORE.get());
+            return new ItemStack(Blocks.DIAMOND_ORE);
         }
     }
 }

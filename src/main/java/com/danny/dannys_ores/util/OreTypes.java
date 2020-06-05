@@ -1,105 +1,104 @@
 package com.danny.dannys_ores.util;
 
+import net.minecraft.particles.BasicParticleType;
 import net.minecraft.util.IStringSerializable;
 
 public enum OreTypes implements IStringSerializable {
     //Vanilla
-    COAL("coal", 0, 0, 2, false, false),
-    DIAMOND("diamond", 1, 3, 7, false, false),
-    EMERALD("emerald", 1, 3, 7, false, false),
-    GOLD("gold", 1, 0, 0, false, false),
-    IRON("iron", 1, 0, 0, false, false),
-    LAPIS("lapis", 1, 2, 5, false, false),
-    QUARTZ("quartz", 1, 2, 5, false, false),
-    REDSTONE("redstone", 2, 2, 5, false, false),
+    COAL("coal", 0, 0, 2, false,null, true),
+    DIAMOND("diamond", 2, 3, 7, false,null, true),
+    EMERALD("emerald", 2, 3, 7, false,null, true),
+    GOLD("gold", 1, 0, 0, false,null, true),
+    IRON("iron", 1, 0, 0, false,null, true),
+    LAPIS("lapis", 1, 2, 5, false,null, true),
+    QUARTZ("quartz", 1, 2, 5, false,null, true),
+    REDSTONE("redstone", 2, 2, 5, false,null, true),
 
     //Gems
-    AMETHYST("amethyst", 3, 3, 7, false, false),
-    ANGLESITE("anglesite", 1, 0, 0, false, false),
-    APATITE("apatite", 1, 0, 2, false, false),
-    BENITOITE("benitoite", 1, 0, 0, false, false),
-    BLACK_OPAL("black_opal", 4, 5, 10, false, false),
-    BLACK_QUARTZ("black_quartz", 1, 3, 7, false, false),
-    CERTUS_QUARTZ("certus_quartz", 1, 1, 5, false, false),
-    CHARGED_CERTUS_QUARTZ("charged_certus_quartz", 1, 1, 5, false, false),
-    DIMENSIONAL_SHARD("dimensional_shard", 2, 3, 7, false, false),
-    DRACONIUM("draconium", 3, 3, 7, false, false),
-    ELECTROTINE("electrotine", 1, 1, 3, false, false),
-    IMPERIUM("imperium", 3, 5, 8, false, false),
-    INFERIUM("inferium", 1, 2, 5, false, false),
-    INSANIUM("insanium", 4, 7, 10, false, false),
-    LAVA_CRYSTAL("lava_crystal", 3, 0, 0, false, false),
-    NITER("niter", 1, 0, 0, false, false),
-    PERIDOT("peridot", 2, 2, 7, false, false),
-    PROSPERITY("prosperity", 1, 1, 5, false, false),
-    PRUDENTIUM("prudentium", 2, 3, 6, false, false),
-    PYRITE("pyrite", 2, 0, 0, false, false),
-    RUBY("ruby", 2, 2, 7, false, false),
-    SAPPHIRE("sapphire", 2, 2, 7, false, false),
-    STICKY("sticky", 0, 1, 5, false, false),
-    SULFUR("sulfur", 1, 0, 0, false, false),
-    SUPREMIUM("supremium", 3, 6, 9, false, false),
-    TERTIUM("tertium", 2, 4, 7, false, false),
-    WHITE_OPAL("white_opal", 4, 5, 10, false, false),
-    ZANITE("zanite", 2, 2, 7, false, false),
+    AMETHYST("amethyst", 3, 3, 7, false,null, true),
+    ANGLESITE("anglesite", 1, 0, 0, false,null, true),
+    APATITE("apatite", 1, 0, 2, false,null, true),
+    BENITOITE("benitoite", 1, 0, 0, false,null, true),
+    BLACK_OPAL("black_opal", 4, 5, 10, false,null, true),
+    BLACK_QUARTZ("black_quartz", 1, 3, 7, false,null, true),
+    CERTUS_QUARTZ("certus_quartz", 1, 1, 5, false,null, true),
+    CHARGED_CERTUS_QUARTZ("charged_certus_quartz", 1, 1, 5, false,null, true),
+    DIMENSIONAL_SHARD("dimensional_shard", 2, 3, 7, false,null, true),
+    DRACONIUM("draconium", 3, 3, 7, false,null, true),
+    ELECTROTINE("electrotine", 1, 1, 3, false,null, true),
+    IMPERIUM("imperium", 3, 5, 8, false,null, true),
+    INFERIUM("inferium", 1, 2, 5, false,null, true),
+    INSANIUM("insanium", 4, 7, 10, false,null, true),
+    LAVA_CRYSTAL("lava_crystal", 3, 0, 0, false,null, true),
+    NITER("niter", 1, 0, 0, false,null, true),
+    PERIDOT("peridot", 2, 2, 7, false,null, true),
+    PROSPERITY("prosperity", 1, 1, 5, false,null, true),
+    PRUDENTIUM("prudentium", 2, 3, 6, false,null, true),
+    PYRITE("pyrite", 2, 0, 0, false,null, true),
+    RUBY("ruby", 2, 2, 7, false,null, true),
+    SAPPHIRE("sapphire", 2, 2, 7, false,null, true),
+    STICKY("sticky", 0, 1, 5, false,null, true),
+    SULFUR("sulfur", 1, 0, 0, false,null, true),
+    SUPREMIUM("supremium", 3, 6, 9, false,null, true),
+    TERTIUM("tertium", 2, 4, 7, false,null, true),
+    WHITE_OPAL("white_opal", 4, 5, 10, false,null, true),
+    ZANITE("zanite", 2, 2, 7, false,null, true),
 
     //Other
-    ADAMANTIUM("adamantium", 3, 0, 0, false, false),
-    ARDITE("ardite", 1, 3, 0, false, false),
-    BAUXITE("bauxite", 1, 0, 0, false, false),
-    BISMUTH("bismuth", 1, 0, 0, false, false),
-    BORON("boron", 1, 0, 0, false, false),
-    CHROME("chrome", 1, 0, 0, false, false),
-    COBALT("cobalt", 3, 0, 0, false, false),
-    COPPER("copper", 1, 0, 0, false, false),
-    GALENA("galena", 2, 0, 0, false, false),
-    IRIDIUM("iridium", 3, 0, 0, false, false),
-    LEAD("lead", 1, 0, 0, false, false),
-    LITHIUM("lithium", 1, 0, 0, false, false),
-    LUCKY("lucky", 2, 0, 0, false, false),
-    MAGNESIUM("magnesium", 1, 0, 0, false, false),
-    MANA_INFUSED("mana_infused", 2, 0, 0, false, false),
-    MITHRIL("mithril", 2, 0, 0, false, false),
-    NICKEL("nickel", 1, 0, 0, false, false),
-    OSMIUM("osmium", 1, 0, 0, false, false),
-    PLATINUM("platinum", 1, 0, 0, false, false),
-    RUNITE("runite", 3, 0, 0, false, false),
-    SILVER("silver", 1, 0, 0, false, false),
-    SOULIUM("soulium", 0, 0, 0, false, false),
-    STEEL("steel", 2, 0, 0, false, false),
-    THORIUM("thorium", 1, 0, 0, false, false),
-    TIN("tin", 1, 0, 0, false, false),
-    TUNGSTEN("tungsten", 2, 0, 0, false, false),
-    URANIUM("uranium", 1, 0, 0, false, false),
-    VULCANITE("vulcanite", 1, 0, 0, false, false),
-    XP("xp", 1, 0, 0, false, false),
-    YELLORITE("yellorite", 1, 0, 0, false, false),
-    ZINC("zinc", 1, 0, 0, false, false),
-    EARTH("earth", 1, 0, 0, false, false),
-    FIRE("fire", 1, 0, 0, false, false),
-    AIR("air", 1, 0, 0, false, false),
-    WATER("water", 1, 0, 0, false, false),
-    ORDER("order", 1, 0, 0, false, false),
-    ENTROPY("entropy", 1, 0, 0, false, true);
+    ADAMANTIUM("adamantium", 3, 0, 0, false,null, true),
+    ARDITE("ardite", 1, 3, 0, false,null, true),
+    BAUXITE("bauxite", 1, 0, 0, false,null, true),
+    BISMUTH("bismuth", 1, 0, 0, false,null, true),
+    BORON("boron", 1, 0, 0, false,null, true),
+    CHROME("chrome", 1, 0, 0, false,null, true),
+    COBALT("cobalt", 3, 0, 0, false,null, true),
+    COPPER("copper", 1, 0, 0, false,null, true),
+    GALENA("galena", 2, 0, 0, false,null, true),
+    IRIDIUM("iridium", 3, 0, 0, false,null, true),
+    LEAD("lead", 1, 0, 0, false,null, true),
+    LITHIUM("lithium", 1, 0, 0, false,null, true),
+    LUCKY("lucky", 2, 0, 0, false,null, true),
+    MAGNESIUM("magnesium", 1, 0, 0, false,null, true),
+    MANA_INFUSED("mana_infused", 2, 0, 0, false,null, true),
+    MITHRIL("mithril", 2, 0, 0, false,null, true),
+    NICKEL("nickel", 1, 0, 0, false,null, true),
+    OSMIUM("osmium", 1, 0, 0, false,null, true),
+    PLATINUM("platinum", 1, 0, 0, false,null, true),
+    RUNITE("runite", 3, 0, 0, false,null, true),
+    SILVER("silver", 1, 0, 0, false,null, true),
+    SOULIUM("soulium", 0, 0, 0, false,null, true),
+    STEEL("steel", 2, 0, 0, false,null, true),
+    THORIUM("thorium", 1, 0, 0, false,null, true),
+    TIN("tin", 1, 0, 0, false,null, true),
+    TUNGSTEN("tungsten", 2, 0, 0, false,null, true),
+    URANIUM("uranium", 1, 0, 0, false,null, true),
+    VULCANITE("vulcanite", 1, 0, 0, false,null, true),
+    XP("xp", 1, 0, 0, false,null, true),
+    YELLORITE("yellorite", 1, 0, 0, false,null, true),
+    ZINC("zinc", 1, 0, 0, false,null, true),
+    EARTH("earth", 1, 0, 0, false,null, false),
+    FIRE("fire", 1, 0, 0, false,null, false),
+    AIR("air", 1, 0, 0, false,null, false),
+    WATER("water", 1, 0, 0, false,null, false),
+    ORDER("order", 1, 0, 0, false,null, false),
+    ENTROPY("entropy", 1, 0, 0, true,null, false);
 
-    //private static final OreTypes[] TYPES = Arrays.stream(values()).sorted(Comparator.comparingInt(OreTypes::getId)).toArray(OreTypes[]::new);
-
-    //private final int id;
     private final String name;
     private final int harvestLevel;
     private final int minXp;
     private final int maxXp;
-    private final boolean hasParticles;
     private final boolean canExplode;
+    private final BasicParticleType bpt;
+    private final boolean hasRichnessLevels;
 
-    private OreTypes(String name, int harvestLevel, int minXp, int maxXp, boolean hasParticles, boolean canExplode) {
-        //this.id = id;
+    private OreTypes(String name, int harvestLevel, int minXp, int maxXp, boolean canExplode, BasicParticleType bpt, boolean hasRichnessLevels) {
         this.name = name;
         this.harvestLevel = harvestLevel;
         this.minXp = minXp;
         this.maxXp = maxXp;
-        this.hasParticles = hasParticles;
         this.canExplode = canExplode;
+        this.bpt = bpt;
+        this.hasRichnessLevels = hasRichnessLevels;
     }
 
     public String toString() {
@@ -110,24 +109,8 @@ public enum OreTypes implements IStringSerializable {
         return this.name;
     }
 
-//    public int getId() {
-//        return this.id;
-//    }
-//
-//    public static OreTypes byId(int id) {
-//        if(id < 0 || id >= TYPES.length)
-//        {
-//            id = 0;
-//        }
-//        return TYPES[id];
-//    }
-
     public int getHarvestLevel() {
         return harvestLevel;
-    }
-
-    public boolean isHasParticles() {
-        return hasParticles;
     }
 
     public int getMaxXp() {
@@ -140,5 +123,13 @@ public enum OreTypes implements IStringSerializable {
 
     public boolean isCanExplode() {
         return canExplode;
+    }
+
+    public BasicParticleType getParticles() {
+        return bpt;
+    }
+
+    public boolean isHasRichnessLevels() {
+        return hasRichnessLevels;
     }
 }

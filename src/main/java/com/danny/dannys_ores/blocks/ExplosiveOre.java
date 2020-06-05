@@ -15,7 +15,7 @@ import static net.minecraft.world.Explosion.Mode.NONE;
 
 public class ExplosiveOre extends BaseOre {
 
-    public ExplosiveOre(Block.Properties properties, VariantType blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
+    public ExplosiveOre(Block.Properties properties, StoneVariants blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
         super(properties, blockBase, rType, oType, minXp, maxXp);
     }
 

@@ -9,7 +9,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StoneVariants {
+public class Stones {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static ForgeConfigSpec spec;
     public static ForgeConfigSpec.BooleanValue disableAllVariants;
@@ -52,6 +52,6 @@ public class StoneVariants {
     }
 
     public static void loadConfig(String path) {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, StoneVariants.spec, path + "/stone_variants.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Stones.spec, path + "/stone_variants.toml");
     }
 }

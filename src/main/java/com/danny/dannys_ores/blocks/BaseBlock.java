@@ -1,14 +1,14 @@
 package com.danny.dannys_ores.blocks;
 
 import com.danny.dannys_ores.init.BlockInit;
-import com.danny.dannys_ores.util.VariantType;
+import com.danny.dannys_ores.util.StoneVariants;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 
 public class BaseBlock extends Block {
-    private VariantType blockBase;
+    private StoneVariants blockBase;
 
-    public BaseBlock(Block.Properties properties, VariantType blockBase) {
+    public BaseBlock(Block.Properties properties, StoneVariants blockBase) {
         super(properties);
         this.blockBase = blockBase;
     }

@@ -17,7 +17,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
 
 public class BedrockOreWithParticles extends OreWithParticles {
 
-    public BedrockOreWithParticles(Block.Properties properties, VariantType blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp, BasicParticleType bpt) {
+    public BedrockOreWithParticles(Block.Properties properties, StoneVariants blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp, BasicParticleType bpt) {
         super(properties, blockBase, rType, oType, minXp, maxXp, bpt);
     }
 

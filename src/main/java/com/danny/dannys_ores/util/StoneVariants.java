@@ -1,6 +1,8 @@
 package com.danny.dannys_ores.util;
 
+import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.materials.MyMaterials;
+import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -38,9 +40,6 @@ public enum StoneVariants implements IStringSerializable {
     EMBELLISHCRAFT_SLATE("embellishcraft_slate", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
     HARDENED_STONE("hardened_stone", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 4.0F, 6.0F, 0.0F, 1, 1);
 
-    //private static final StoneVariants[] VARIANTS = Arrays.stream(values()).sorted(Comparator.comparingInt(StoneVariants::getId)).toArray(StoneVariants[]::new);
-
-    //private final int id;
     private final String name;
     private final Material material;
     private final ToolType tool;
@@ -53,7 +52,6 @@ public enum StoneVariants implements IStringSerializable {
     private final int xpMultiplier;
 
     private StoneVariants(String name, Material material, MaterialColor color, ToolType tool, SoundType sound, float hardness, float resistance, float slipperiness, int increasedHarvestLevel, int xpMultiplier) {
-        //this.id = id;
         this.name = name;
         this.color = color;
         this.material = material;
@@ -97,18 +95,6 @@ public enum StoneVariants implements IStringSerializable {
     public int getXpMultiplier() {
         return this.xpMultiplier;
     }
-
-//    public int getId() {
-//        return this.id;
-//    }
-//
-//    public static StoneVariants byId(int id) {
-//        if(id < 0 || id >= VARIANTS.length)
-//        {
-//            id = 0;
-//        }
-//        return VARIANTS[id];
-//    }
 
     public int getIncreasedHarvestLevel() {
         return increasedHarvestLevel;
