@@ -49,6 +49,7 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
 
     public static final RegistryObject<Block> HARDENED_STONE = BLOCKS.register("hardened_stone", () -> new BaseBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(2.5F, 6.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), StoneVariants.STONE));
+    public static final RegistryObject<Block> HARDENED_COBBLESTONE = BLOCKS.register("hardened_cobblestone", () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(2.5F, 6.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE)));
 
     public static void initOres() {
         ArrayList<OreTypes> vanilla = new ArrayList<>();

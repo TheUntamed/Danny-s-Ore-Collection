@@ -24,21 +24,21 @@ public class BlockModelsDataGen extends BlockModelProvider {
         for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
             Block block = blockRO.get();
             Block fillerBlock;
-                if (block instanceof BaseBlock) {
-                    fillerBlock = ((BaseBlock) block).getBlockBase();
-                    String fillerBlockName;
-                    String blockName = block.getRegistryName().toString().split(":")[1];
-                    //When the fillerblock is from another mod it is unknown and the name has to be created by stringsplitting
-                    //that's not fancy but it only has to generate the jsons once.
-                    if (fillerBlock == null) {
-                        String[] name = blockName.split("_", 3);
-                        fillerBlockName = name[0] + "_" + name[1];
-                    } else {
-                        ResourceLocation resLoc = fillerBlock.getRegistryName();
-                        fillerBlockName = resLoc.toString().split(":")[1];
-                    }
-                    String typeName = blockName.replace(fillerBlockName + "_", "").replace("redore", "redstone_ore");
-                    doubleTextureBlock(block, "block/" + fillerBlockName, "block/" + typeName);
+            if (block instanceof BaseBlock) {
+                fillerBlock = ((BaseBlock) block).getBlockBase();
+                String fillerBlockName;
+                String blockName = block.getRegistryName().toString().split(":")[1];
+                //When the fillerblock is from another mod it is unknown and the name has to be created by stringsplitting
+                //that's not fancy but it only has to generate the jsons once.
+                if (fillerBlock == null) {
+                    String[] name = blockName.split("_", 3);
+                    fillerBlockName = name[0] + "_" + name[1];
+                } else {
+                    ResourceLocation resLoc = fillerBlock.getRegistryName();
+                    fillerBlockName = resLoc.toString().split(":")[1];
+                }
+                String typeName = blockName.replace(fillerBlockName + "_", "").replace("redore", "redstone_ore");
+                doubleTextureBlock(block, "block/" + fillerBlockName, "block/" + typeName);
             }
         }
 
@@ -55,5 +55,7 @@ public class BlockModelsDataGen extends BlockModelProvider {
     }
 
     @Override
-    public String getName() { return "Danny's Ores - Block Models"; }
+    public String getName() {
+        return "Danny's Ores - Block Models";
+    }
 }
