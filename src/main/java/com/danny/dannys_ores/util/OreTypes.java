@@ -71,7 +71,7 @@ public enum OreTypes implements IStringSerializable {
     THORIUM("thorium", 1, 0, 0, false,null, true),
     TIN("tin", 1, 0, 0, false,null, true),
     TUNGSTEN("tungsten", 2, 0, 0, false,null, true),
-    URANIUM("uranium", 1, 0, 0, false,null, true),
+    URANINITE("uraninite", 1, 0, 0, false,null, true),
     VULCANITE("vulcanite", 1, 0, 0, false,null, true),
     XP("xp", 1, 0, 0, false,null, true),
     YELLORITE("yellorite", 1, 0, 0, false,null, true),

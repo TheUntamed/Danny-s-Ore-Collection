@@ -20,6 +20,7 @@ public class BlockTagsDataGen extends BlockTagsProvider {
     private ArrayList<Block> oreType = new ArrayList<>();
     private ArrayList<Block> ores = new ArrayList<>();
     private ArrayList<Block> stone = new ArrayList<>();
+    private ArrayList<Block> cobblestone = new ArrayList<>();
 
     public BlockTagsDataGen(DataGenerator generator) {
         super(generator);
@@ -59,6 +60,8 @@ public class BlockTagsDataGen extends BlockTagsProvider {
                     BaseBlock baseBlock = (BaseBlock) block;
                     stone.add(baseBlock);
                 }
+            } else {
+                cobblestone.add(block);
             }
         }
         addForgeTag("ores", ores);

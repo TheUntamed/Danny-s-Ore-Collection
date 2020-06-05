@@ -88,7 +88,7 @@ public class Main {
                         final HotBlockItem blockItem = new HotBlockItem(block, properties);
                         blockItem.setRegistryName(resLoc);
                         registry.register(blockItem);
-                    } else if (oType.equals(OreTypes.URANIUM)) {
+                    } else if (oType.equals(OreTypes.URANINITE)) {
                         final ToxicBlockItem blockItem = new ToxicBlockItem(block, properties);
                         blockItem.setRegistryName(resLoc);
                         registry.register(blockItem);

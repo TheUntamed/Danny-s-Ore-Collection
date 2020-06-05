@@ -372,7 +372,7 @@ public class General {
         Tertium.loadConfig(normalPath);
         Tin.loadConfig(normalPath);
         Tungsten.loadConfig(normalPath);
-        Uranium.loadConfig(normalPath);
+        Uraninite.loadConfig(normalPath);
         WhiteOpal.loadConfig(normalPath);
         Xp.loadConfig(normalPath);
         Zanite.loadConfig(normalPath);
@@ -433,7 +433,7 @@ public class General {
         DenseTertium.loadConfig(densePath);
         DenseTin.loadConfig(densePath);
         DenseTungsten.loadConfig(densePath);
-        DenseUranium.loadConfig(densePath);
+        DenseUraninite.loadConfig(densePath);
         DenseWhiteOpal.loadConfig(densePath);
         DenseXp.loadConfig(densePath);
         DenseZanite.loadConfig(densePath);
@@ -494,7 +494,7 @@ public class General {
         PoorTertium.loadConfig(poorPath);
         PoorTin.loadConfig(poorPath);
         PoorTungsten.loadConfig(poorPath);
-        PoorUranium.loadConfig(poorPath);
+        PoorUraninite.loadConfig(poorPath);
         PoorWhiteOpal.loadConfig(poorPath);
         PoorXp.loadConfig(poorPath);
         PoorZanite.loadConfig(poorPath);

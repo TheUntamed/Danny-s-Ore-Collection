@@ -68,7 +68,7 @@ public class ConfigHandler {
                         case RUNITE: return DenseRunite.spec.getValues();
                         case SILVER: return DenseSilver.spec.getValues();
                         case TIN: return DenseTin.spec.getValues();
-                        case URANIUM: return DenseUranium.spec.getValues();
+                        case URANINITE: return DenseUraninite.spec.getValues();
                         case WHITE_OPAL: return DenseWhiteOpal.spec.getValues();
                         case XP: return DenseXp.spec.getValues();
                         case ZINC: return DenseZinc.spec.getValues();
@@ -139,7 +139,7 @@ public class ConfigHandler {
                         case RUNITE: return PoorRunite.spec.getValues();
                         case SILVER: return PoorSilver.spec.getValues();
                         case TIN: return PoorTin.spec.getValues();
-                        case URANIUM: return PoorUranium.spec.getValues();
+                        case URANINITE: return PoorUraninite.spec.getValues();
                         case WHITE_OPAL: return PoorWhiteOpal.spec.getValues();
                         case XP: return PoorXp.spec.getValues();
                         case ZINC: return PoorZinc.spec.getValues();
@@ -210,7 +210,7 @@ public class ConfigHandler {
                         case RUNITE: return Runite.spec.getValues();
                         case SILVER: return Silver.spec.getValues();
                         case TIN: return Tin.spec.getValues();
-                        case URANIUM: return Uranium.spec.getValues();
+                        case URANINITE: return Uraninite.spec.getValues();
                         case WHITE_OPAL: return WhiteOpal.spec.getValues();
                         case XP: return Xp.spec.getValues();
                         case ZINC: return Zinc.spec.getValues();

@@ -13,7 +13,7 @@ https://www.curseforge.com/minecraft/mc-mods/quark
 The six stone textures named embellishcraft_basalt, _jade, _gneiss, _larvikite, _marble, _slate are from the mod Embellishcraft (by Mapper)
 https://www.curseforge.com/minecraft/mc-mods/embellishcraft
 
-The Ore Overlay for the Silver, Lead, Nickel, Zinc, Bauxite and Uranium Ore were part of the corresponding ore textures from 'Silent's Mechanisms' (by SilentChaos512)
+The Ore Overlay for the Silver, Lead, Nickel, Zinc, Bauxite and Uraninite Ore were part of the corresponding ore textures from 'Silent's Mechanisms' (by SilentChaos512)
 https://www.curseforge.com/minecraft/mc-mods/silents-mechanisms
 
 The Ore Overlay for the Bismuth, Platinum and Iridium Ore were part of the corresponding ore textures from 'I need them Ores' (by CAS_ual_TY)
