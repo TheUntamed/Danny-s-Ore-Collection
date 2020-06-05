@@ -1,44 +1,39 @@
 package com.danny.dannys_ores.util;
 
-import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.materials.MyMaterials;
-import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.common.ToolType;
 
-import java.util.Arrays;
-import java.util.Comparator;
-
 public enum StoneVariants implements IStringSerializable {
-    STONE("stone", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    DIORITE("diorite", Material.ROCK, MaterialColor.QUARTZ, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    ANDESITE("andesite", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    GRANITE("granite", Material.ROCK, MaterialColor.DIRT, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    SAND("sand", MyMaterials.SAND_ORE, MaterialColor.SAND, ToolType.SHOVEL, SoundType.SAND, 3.0F, 3.0F, 0.0F, 0, 1),
-    RED_SAND("red_sand", MyMaterials.SAND_ORE, MaterialColor.ADOBE, ToolType.SHOVEL, SoundType.SAND, 3.0F, 3.0F, 0.0F, 0, 1),
-    SANDSTONE("sandstone", Material.ROCK, MaterialColor.SAND, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    RED_SANDSTONE("red_sandstone", Material.ROCK, MaterialColor.ADOBE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    GRAVEL("gravel", MyMaterials.GRAVEL_ORE, MaterialColor.STONE, ToolType.SHOVEL, SoundType.GROUND, 3.0F, 3.0F, 0.0F, 0, 1),
+    STONE("stone", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    DIORITE("diorite", Material.ROCK, MaterialColor.QUARTZ, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    ANDESITE("andesite", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    GRANITE("granite", Material.ROCK, MaterialColor.DIRT, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    SAND("sand", MyMaterials.SAND_ORE, MaterialColor.SAND, ToolType.SHOVEL, SoundType.SAND, 3.0F, 3.0F, 0.6F, 0, 1),
+    RED_SAND("red_sand", MyMaterials.SAND_ORE, MaterialColor.ADOBE, ToolType.SHOVEL, SoundType.SAND, 3.0F, 3.0F, 0.6F, 0, 1),
+    SANDSTONE("sandstone", Material.ROCK, MaterialColor.SAND, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    RED_SANDSTONE("red_sandstone", Material.ROCK, MaterialColor.ADOBE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    GRAVEL("gravel", MyMaterials.GRAVEL_ORE, MaterialColor.STONE, ToolType.SHOVEL, SoundType.GROUND, 3.0F, 3.0F, 0.6F, 0, 1),
     PACKED_ICE("packed_ice", MyMaterials.ICE_ORE, MaterialColor.ICE, ToolType.PICKAXE, SoundType.GLASS, 3.0F, 3.0F, 0.98F, 0, 0),
     BLUE_ICE("blue_ice", MyMaterials.ICE_ORE, MaterialColor.ICE, ToolType.PICKAXE, SoundType.GLASS, 3.0F, 3.0F, 0.989F, 0, 0),
-    BEDROCK("bedrock", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, -1.0F, 9.0F, 0.0F, 0, 1),
-    NETHERRACK("netherrack", Material.ROCK, MaterialColor.NETHERRACK, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    END_STONE("end_stone", Material.ROCK, MaterialColor.SAND, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    QUARK_BASALT("quark_basalt", Material.ROCK, MaterialColor.BLACK, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    QUARK_LIMESTONE("quark_limestone", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    QUARK_JASPER("quark_jasper", Material.ROCK, MaterialColor.DIRT, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    QUARK_MARBLE("quark_marble", Material.ROCK, MaterialColor.QUARTZ, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    QUARK_SLATE("quark_slate", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    EMBELLISHCRAFT_BASALT("embellishcraft_basalt", Material.ROCK, MaterialColor.BLACK, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    EMBELLISHCRAFT_GNEISS("embellishcraft_gneiss", Material.ROCK, MaterialColor.SAND, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    EMBELLISHCRAFT_JADE("embellishcraft_jade", Material.ROCK, MaterialColor.LIME, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    EMBELLISHCRAFT_LARVIKITE("embellishcraft_larvikite", Material.ROCK, MaterialColor.CLAY, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    EMBELLISHCRAFT_MARBLE("embellishcraft_marble", Material.ROCK, MaterialColor.QUARTZ, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    EMBELLISHCRAFT_SLATE("embellishcraft_slate", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.0F, 0, 1),
-    HARDENED_STONE("hardened_stone", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 4.0F, 6.0F, 0.0F, 1, 1);
+    BEDROCK("bedrock", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, -1.0F, 9.0F, 0.6F, 0, 1),
+    NETHERRACK("netherrack", Material.ROCK, MaterialColor.NETHERRACK, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    END_STONE("end_stone", Material.ROCK, MaterialColor.SAND, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    QUARK_BASALT("quark_basalt", Material.ROCK, MaterialColor.BLACK, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    QUARK_LIMESTONE("quark_limestone", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    QUARK_JASPER("quark_jasper", Material.ROCK, MaterialColor.DIRT, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    QUARK_MARBLE("quark_marble", Material.ROCK, MaterialColor.QUARTZ, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    QUARK_SLATE("quark_slate", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    EMBELLISHCRAFT_BASALT("embellishcraft_basalt", Material.ROCK, MaterialColor.BLACK, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    EMBELLISHCRAFT_GNEISS("embellishcraft_gneiss", Material.ROCK, MaterialColor.SAND, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    EMBELLISHCRAFT_JADE("embellishcraft_jade", Material.ROCK, MaterialColor.LIME, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    EMBELLISHCRAFT_LARVIKITE("embellishcraft_larvikite", Material.ROCK, MaterialColor.CLAY, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    EMBELLISHCRAFT_MARBLE("embellishcraft_marble", Material.ROCK, MaterialColor.QUARTZ, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    EMBELLISHCRAFT_SLATE("embellishcraft_slate", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    HARDENED_STONE("hardened_stone", Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 4.0F, 6.0F, 0.6F, 1, 1);
 
     private final String name;
     private final Material material;
