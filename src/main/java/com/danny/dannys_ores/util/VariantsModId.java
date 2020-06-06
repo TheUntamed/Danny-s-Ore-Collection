@@ -4,5 +4,7 @@ public enum VariantsModId {
     MINECRAFT,
     DANNYS_ORES,
     QUARK,
-    EMBELLISHCRAFT;
+    EMBELLISHCRAFT,
+    THE_MIDNIGHT,
+    MYSTICAL_AGRICULTURE;
 }

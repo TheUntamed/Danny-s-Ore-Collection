@@ -42,6 +42,10 @@ public class BlockInit {
     public static final Block EMBELLISHCRAFT_MARBLE = null;
     @ObjectHolder("embellishcraft:slate")
     public static final Block EMBELLISHCRAFT_SLATE = null;
+    @ObjectHolder("midnight:nightstone")
+    public static final Block NIGHTSTONE = null;
+    @ObjectHolder("mysticalagriculture:soulstone")
+    public static final Block SOULSTONE = null;
 
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
 
@@ -68,7 +72,7 @@ public class BlockInit {
                 if (rTypeNormal || oType.isHasRichnessLevels()) {
                     if (oType.getParticles() != null) {
                         for (StoneVariants variant : StoneVariants.values()) {
-                            if (variantsModIdExists(variant.getModid())) {
+                            if (ModHandler.variantsModIdExists(variant.getModid())) {
                                 int minXp = getMinXp(oType, variant, rType);
                                 int maxXp = getMaxXp(oType, variant, rType);
                                 if (variant.equals(StoneVariants.BEDROCK)) {
@@ -80,7 +84,7 @@ public class BlockInit {
                         }
                     } else if (oType.isCanExplode()) {
                         for (StoneVariants variant : StoneVariants.values()) {
-                            if (variantsModIdExists(variant.getModid())) {
+                            if (ModHandler.variantsModIdExists(variant.getModid())) {
                                 int minXp = getMinXp(oType, variant, rType);
                                 int maxXp = getMaxXp(oType, variant, rType);
                                 if (variant.equals(StoneVariants.BEDROCK)) {
@@ -92,7 +96,7 @@ public class BlockInit {
                         }
                     } else {
                         for (StoneVariants variant : StoneVariants.values()) {
-                            if (variantsModIdExists(variant.getModid())) {
+                            if (ModHandler.variantsModIdExists(variant.getModid())) {
                                 int minXp = getMinXp(oType, variant, rType);
                                 int maxXp = getMaxXp(oType, variant, rType);
                                 if (variant.equals(StoneVariants.BEDROCK)) {
@@ -116,17 +120,6 @@ public class BlockInit {
 
     private static int getMaxXp(OreTypes oType, StoneVariants variant, RichnessTypes rType) {
         return Math.round(oType.getMaxXp() * variant.getXpMultiplier() * rType.getXpMultiplier());
-    }
-
-    private static boolean variantsModIdExists(VariantsModId modId) {
-        switch (modId) {
-            case MINECRAFT:
-            case DANNYS_ORES:
-                return true;
-            case QUARK: return Main.quark;
-            case EMBELLISHCRAFT: return Main.embellishcraft;
-            default: return false;
-        }
     }
 
 }

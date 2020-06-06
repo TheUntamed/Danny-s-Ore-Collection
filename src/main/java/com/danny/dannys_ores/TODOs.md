@@ -1,5 +1,10 @@
 # TODOs
 
+* Dense and Poor Ore textures
+* Xp Drop for new ores
+* Configs for new ores
+* Data Gen for new ores
+
 * Add particles to Charged Certus Quartz Ore and maybe some other ores
 * Add some abilities to Order Ore
 * stop effect stacking for water ores

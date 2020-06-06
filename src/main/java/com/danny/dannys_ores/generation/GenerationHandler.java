@@ -6,10 +6,7 @@ import com.danny.dannys_ores.blocks.BaseOre;
 import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.configs.ores.vanilla.*;
 import com.danny.dannys_ores.init.BlockInit;
-import com.danny.dannys_ores.util.ConfigHandler;
-import com.danny.dannys_ores.util.VariantsModId;
-import com.danny.dannys_ores.util.PathHandler;
-import com.danny.dannys_ores.util.RichnessTypes;
+import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -122,8 +119,7 @@ public class GenerationHandler {
                     String blockName = regName.split(":")[1];
                     if (block instanceof BaseOre) {
                         BaseOre ore = (BaseOre) block;
-                        VariantsModId modId = ore.getBlockBaseModId();
-                        if (!modId.equals(VariantsModId.QUARK) && !modId.equals(VariantsModId.EMBELLISHCRAFT) || modId.equals(VariantsModId.QUARK) && Main.quark || modId.equals(VariantsModId.EMBELLISHCRAFT) && Main.embellishcraft) {
+                        if (ModHandler.variantsModIdExists(ore.getBlockBaseModId())) {
                             Block fillerBlock = ore.getBlockBase();
                             UnmodifiableConfig generalConfig = General.spec.getValues();
                             if (getGeneralOreGenerationStatus(generalConfig, (BaseOre) block, fillerBlock)) {

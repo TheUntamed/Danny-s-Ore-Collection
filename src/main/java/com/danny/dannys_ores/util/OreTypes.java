@@ -81,7 +81,16 @@ public enum OreTypes implements IStringSerializable {
     AIR("air", 1, 0, 0, false,null, false),
     WATER("water", 1, 0, 0, false,null, false),
     ORDER("order", 1, 0, 0, false,null, false),
-    ENTROPY("entropy", 1, 0, 0, true,null, false);
+    ENTROPY("entropy", 1, 0, 0, false,null, false),
+    ARCHAIC("archaic", 1, 0, 0, false,null, false),
+    EBONITE("ebonite", 1, 0, 0, false,null, false),
+    FOULITE("foulite", 1, 0, 0, false,null, false),
+    LINIUM("linium", 1, 0, 0, false,null, false),
+    NAGRILITE("nagrilite", 1, 0, 0, false,null, false),
+    NERIDIUM("neridium", 1, 0, 0, false,null, false),
+    PYRIDIUM("pyridium", 1, 0, 0, false,null, false),
+    TENEBRUM("tenebrum", 1, 0, 0, false,null, false),
+    W("w", 1, 0, 0, false,null, false);
 
     private final String name;
     private final int harvestLevel;

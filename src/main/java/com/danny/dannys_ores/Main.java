@@ -45,6 +45,12 @@ public class Main {
     // True if the mod 'Embellishcraft' by Mapper is in the mod list.
     public static boolean embellishcraft;
 
+    // True if the mod 'The Midnight' by cipher_zero_x is in the mod list.
+    public static boolean theMidnight;
+
+    // True if the mod 'Mystical Agriculture' by BlakeBr0 is in the mod list.
+    public static boolean mysticalAgriculture;
+
 
     public Main() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -53,6 +59,8 @@ public class Main {
 
         quark = ModList.get().isLoaded("quark");
         embellishcraft = ModList.get().isLoaded("embellishcraft");
+        theMidnight = ModList.get().isLoaded("midnight");
+        mysticalAgriculture = ModList.get().isLoaded("mysticalagriculture");
 
         BlockInit.BLOCKS.register(modEventBus);
         BlockInit.initOres();
