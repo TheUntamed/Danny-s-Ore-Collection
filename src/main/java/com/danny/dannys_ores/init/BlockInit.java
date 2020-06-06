@@ -52,6 +52,11 @@ public class BlockInit {
     public static final RegistryObject<Block> HARDENED_COBBLESTONE = BLOCKS.register("hardened_cobblestone", () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(2.5F, 6.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE)));
 
     public static void initOres() {
+        if (BlockInit.EMBELLISHCRAFT_SLATE != null) {
+            Main.LOGGER.warn("EMBELLISHCRAFT_SLATE is NOT null during blockinit!");
+        } else {
+            Main.LOGGER.warn("EMBELLISHCRAFT_SLATE is null during blockinit!");
+        }
         ArrayList<OreTypes> vanilla = new ArrayList<>();
         vanilla.add(OreTypes.COAL);
         vanilla.add(OreTypes.IRON);

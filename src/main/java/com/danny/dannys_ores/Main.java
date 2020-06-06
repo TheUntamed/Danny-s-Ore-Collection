@@ -53,13 +53,11 @@ public class Main {
 
         quark = ModList.get().isLoaded("quark");
         embellishcraft = ModList.get().isLoaded("embellishcraft");
-        LOGGER.debug("Hello World!");
+
         BlockInit.BLOCKS.register(modEventBus);
         BlockInit.initOres();
-        LOGGER.debug("Registered Blocks!");
 
         General.loadConfig();
-        LOGGER.debug("Loaded Config!");
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
@@ -138,7 +136,6 @@ public class Main {
 
     @SubscribeEvent
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
-        System.err.println("Start generation!");
         GenerationHandler.generateOre();
     }
 
