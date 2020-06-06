@@ -17,8 +17,8 @@ public class BaseOre extends BaseBlock {
     private OreTypes oType;
     private RichnessTypes rType;
 
-    public BaseOre(Block.Properties properties, StoneVariants blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
-        super(properties, blockBase);
+    public BaseOre(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
+        super(properties, blockBase, blockBaseModId);
         this.minXp = minXp;
         this.maxXp = maxXp;
         this.rType = rType;

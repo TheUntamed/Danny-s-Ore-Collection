@@ -6,7 +6,6 @@ import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.particles.BasicParticleType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
@@ -17,8 +16,8 @@ import net.minecraftforge.common.ForgeConfigSpec;
 
 public class ExplosiveBedrockOre extends ExplosiveOre {
 
-    public ExplosiveBedrockOre(Block.Properties properties, StoneVariants blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
-        super(properties, blockBase, rType, oType, minXp, maxXp);
+    public ExplosiveBedrockOre(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
+        super(properties, blockBase, blockBaseModId, rType, oType, minXp, maxXp);
     }
 
     /**

@@ -1,16 +1,19 @@
 package com.danny.dannys_ores.blocks;
 
 import com.danny.dannys_ores.init.BlockInit;
+import com.danny.dannys_ores.util.VariantsModId;
 import com.danny.dannys_ores.util.StoneVariants;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 
 public class BaseBlock extends Block {
     private StoneVariants blockBase;
+    private VariantsModId blockBaseModId;
 
-    public BaseBlock(Block.Properties properties, StoneVariants blockBase) {
+    public BaseBlock(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId) {
         super(properties);
         this.blockBase = blockBase;
+        this.blockBaseModId = blockBaseModId;
     }
 
     public Block getBlockBase() {
@@ -44,5 +47,9 @@ public class BaseBlock extends Block {
             default:
                 throw new IllegalArgumentException("For the ore '" + this + "' with block base '" + blockBase + "' no block base could be returned!");
         }
+    }
+
+    public VariantsModId getBlockBaseModId() {
+        return blockBaseModId;
     }
 }

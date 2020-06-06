@@ -18,8 +18,8 @@ import net.minecraftforge.common.ForgeConfigSpec;
 public class BedrockOre extends BaseOre {
     private BasicParticleType bpt;
 
-    public BedrockOre(Block.Properties properties, StoneVariants blockBase, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
-        super(properties, blockBase, rType, oType, minXp, maxXp);
+    public BedrockOre(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
+        super(properties, blockBase, blockBaseModId, rType, oType, minXp, maxXp);
         this.bpt = bpt;
     }
 
