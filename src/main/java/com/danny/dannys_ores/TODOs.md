@@ -1,7 +1,5 @@
 # TODOs
 
-* Dense and Poor Ore textures
-* Xp Drop for new ores
 * Configs for new ores
 * Data Gen for new ores
 

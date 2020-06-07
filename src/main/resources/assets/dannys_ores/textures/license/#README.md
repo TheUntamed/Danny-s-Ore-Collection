@@ -13,68 +13,68 @@ https://www.curseforge.com/minecraft/mc-mods/quark
 The six stone textures named embellishcraft_basalt, _jade, _gneiss, _larvikite, _marble, _slate are from the mod Embellishcraft (by Mapper).
 https://www.curseforge.com/minecraft/mc-mods/embellishcraft
 
-The Ore Overlay for the Silver, Lead, Nickel, Zinc, Bauxite and Uraninite Ore were part of the corresponding ore textures from 'Silent's Mechanisms' (by SilentChaos512).
+The Ore Overlays for the Silver, Lead, Nickel, Zinc, Bauxite and Uraninite Ore are modified versions of the corresponding ore textures from 'Silent's Mechanisms' (by SilentChaos512).
 https://www.curseforge.com/minecraft/mc-mods/silents-mechanisms
 
-The Ore Overlay for the Bismuth, Platinum and Iridium Ore were part of the corresponding ore textures from 'I need them Ores' (by CAS_ual_TY).
+The Ore Overlays for the Bismuth, Platinum and Iridium Ore are modified versions of the corresponding ore textures from 'I need them Ores' (by CAS_ual_TY).
 https://www.curseforge.com/minecraft/mc-mods/i-need-them-ores
 
-The Ore Overlay for the Tin and Osmium Ore were part of the corresponding ore textures from 'Mekanism' and 'Mekanism Generators' (by bradyaidanc).
+The Ore Overlays for the Tin and Osmium Ore are modified versions of the corresponding ore textures from 'Mekanism' and 'Mekanism Generators' (by bradyaidanc).
 https://www.curseforge.com/minecraft/mc-mods/mekanism
 
-The Ore Overlay for the Adamantite, Mithril and Runite Ore were part of the corresponding ore textures from 'Ores and Metals' (by Coliwogg).
+The Ore Overlays for the Adamantite, Mithril and Runite Ore are modified versions of the corresponding ore textures from 'Ores and Metals' (by Coliwogg).
 https://www.curseforge.com/minecraft/mc-mods/ores-and-metals
 
-The Ore Overlay for the Amethyst and Black Opal Ore were part of the corresponding ore textures from 'Ores above Diamonds' (by Squidsword).
+The Ore Overlays for the Amethyst and Black Opal Ore are modified versions of the corresponding ore textures from 'Ores above Diamonds' (by Squidsword).
 https://www.curseforge.com/minecraft/mc-mods/ores-above-diamonds
 
-The Ore Overlay for the Draconium Ore were part of the corresponding ore textures from 'Draconic Evolution' (by brandon3055).
+The Ore Overlays for the Draconium Ore are modified versions of the corresponding ore textures from 'Draconic Evolution' (by brandon3055).
 https://www.curseforge.com/minecraft/mc-mods/draconic-evolution
 
-The Ore Overlay for the Mana Infused Ore were part of the corresponding ore textures from 'Thermal Foundation' (by TeamCoFH).
+The Ore Overlays for the Mana Infused Ore are modified versions of the corresponding ore textures from 'Thermal Foundation' (by TeamCoFH).
 https://www.curseforge.com/minecraft/mc-mods/thermal-foundation
 
-The Ore Overlay for the Cobalt and Ardite Ore were part of the corresponding ore textures from 'Tinkers' Construct' (by mDiyo).
+The Ore Overlays for the Cobalt and Ardite Ore are modified versions of the corresponding ore textures from 'Tinkers' Construct' (by mDiyo).
 https://www.curseforge.com/minecraft/mc-mods/tinkers-construct
 
-The Ore Overlay for the Chrome Ore were part of the corresponding ore textures from 'Substratum' (by exter7).
+The Ore Overlays for the Chrome Ore are modified versions of the corresponding ore textures from 'Substratum' (by exter7).
 https://www.curseforge.com/minecraft/mc-mods/substratum
 
-The Ore Overlay for the Ruby, Sapphire and Peridot Ore are modified versions of the corresponding ore textures from 'Project Red' (by MrTJP).
+The Ore Overlays for the Ruby, Sapphire and Peridot Ore are modified versions of the corresponding ore textures from 'Project Red' (by MrTJP).
 https://www.curseforge.com/minecraft/mc-mods/project-red-world
 
 The Soulstone texture comes from the mod 'Mystical Agriculture' (by BlakeBr0).
-The Ore Overlay for the Inferium Ore were part of the corresponding ore textures from 'Mystical Agriculture'.
-The Ore Overly of the Prudentium, Tertium, Imperium and Supremium Ore were inspired by the corresponding essence textures.
+The Ore Overlays for the Inferium Ore are modified versions of the corresponding ore textures from 'Mystical Agriculture'.
+The Ore Overly of the Prudentium, Tertium, Imperium and Supremium Ore were inspired by the corresponding essence textures from 'Mystical Agriculture'.
 https://www.curseforge.com/minecraft/mc-mods/mystical-agriculture
 
 The Ore Overly of the Insanium Ore were inspired by the corresponding essence textures from 'Mystical Agradditions' (by BlakeBr0).
 https://www.curseforge.com/minecraft/mc-mods/mystical-agradditions
 
-The Ore Overlay for the Tungsten, Pyrite and Galena Ore were part of the corresponding ore textures from 'Tech Reborn' (by modmuss50).
+The Ore Overlays for the Tungsten, Pyrite and Galena Ore are modified versions of the corresponding ore textures from 'Tech Reborn' (by modmuss50).
 https://www.curseforge.com/minecraft/mc-mods/techreborn
 
-The Ore Overlay for the Apatite Ore were part of the corresponding ore textures from 'Forestry' (by _ForgeUser7678633).
+The Ore Overlays for the Apatite Ore are modified versions of the corresponding ore textures from 'Forestry' (by _ForgeUser7678633).
 https://www.curseforge.com/minecraft/mc-mods/forestry
 
-The Ore Overlay for the Yellorite, Anglesite and Benitoite Ore were part of the corresponding ore textures from 'Extreme Reactors' (by ZeroNoRyouki).
+The Ore Overlays for the Yellorite, Anglesite and Benitoite Ore are modified versions of the corresponding ore textures from 'Extreme Reactors' (by ZeroNoRyouki).
 https://www.curseforge.com/minecraft/mc-mods/extreme-reactors
 
-The Ore Overlay for the Certus Quartz and Charged Certus Quartz Ore were part of the corresponding ore textures from 'Applied Energistics 2' (by AlgorithmX2).
+The Ore Overlays for the Certus Quartz and Charged Certus Quartz Ore are modified versions of the corresponding ore textures from 'Applied Energistics 2' (by AlgorithmX2).
 https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2
 
-The Ore Overlay for the Lava Crystal Ore were part of the corresponding ore textures from 'Armor Plus' (by sokratis12GR).
+The Ore Overlays for the Lava Crystal Ore are modified versions of the corresponding ore textures from 'Armor Plus' (by sokratis12GR).
 https://www.curseforge.com/minecraft/mc-mods/armorplus
 
-The Ore Overlay for the Dimensional Shard Ore were part of the corresponding ore textures from 'RF Tools Base' (by McJty).
+The Ore Overlays for the Dimensional Shard Ore are modified versions of the corresponding ore textures from 'RF Tools Base' (by McJty).
 https://www.curseforge.com/minecraft/mc-mods/rftools-base
 
-The Ore Overlay for the Boron, Magnesium, Lithium and Thorium Ore were part of the corresponding ore textures from 'Nuclearcraft' (by tomdodd4598).
+The Ore Overlays for the Boron, Magnesium, Lithium and Thorium Ore are modified versions of the corresponding ore textures from 'Nuclearcraft' (by tomdodd4598).
 https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-mod
 
-The Ore Overlay for the Foulite, Neridium, Pyridium, Linium and W-Ore were part of the corresponding ore textures from 'Nethercraft Classic' (by ModdingLegacy).
+The Ore Overlays for the Foulite, Neridium, Pyridium, Linium and W-Ore are modified versions of the corresponding ore textures from 'Nethercraft Classic' (by ModdingLegacy).
 https://www.curseforge.com/minecraft/mc-mods/nethercraft-classic
 
 The Nightstone texture comes from the mod 'The Midnight' (by cipher_zero_x).
-The Ore Overlay for the Archaic, Ebonite, Nagrilite and Tenebrum Ore were part of the corresponding ore textures from 'The Midnight'.
+The Ore Overlays for the Archaic, Ebonite, Nagrilite and Tenebrum Ore are modified versions of the corresponding ore textures from 'The Midnight'.
 https://www.curseforge.com/minecraft/mc-mods/the-midnight
