@@ -44,8 +44,8 @@ public class BaseBlock extends Block {
             case QUARK_JASPER: return BlockInit.QUARK_JASPER;
             case QUARK_MARBLE: return BlockInit.QUARK_MARBLE;
             case QUARK_SLATE: return BlockInit.QUARK_SLATE;
-            case SOULSTONE: return BlockInit.SOULSTONE;
-            case NIGHTSTONE: return BlockInit.NIGHTSTONE;
+            //case SOULSTONE: return BlockInit.SOULSTONE;
+            //case NIGHTSTONE: return BlockInit.NIGHTSTONE;
             default:
                 throw new IllegalArgumentException("For the ore '" + this + "' with block base '" + blockBase + "' no block base could be returned!");
         }

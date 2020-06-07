@@ -33,8 +33,8 @@ public enum StoneVariants implements IStringSerializable {
     EMBELLISHCRAFT_LARVIKITE("embellishcraft_larvikite", VariantsModId.EMBELLISHCRAFT, Material.ROCK, MaterialColor.CLAY, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
     EMBELLISHCRAFT_MARBLE("embellishcraft_marble", VariantsModId.EMBELLISHCRAFT, Material.ROCK, MaterialColor.QUARTZ, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
     EMBELLISHCRAFT_SLATE("embellishcraft_slate", VariantsModId.EMBELLISHCRAFT, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
-    SOULSTONE("soulstone", VariantsModId.MYSTICAL_AGRICULTURE, Material.ROCK, MaterialColor.BROWN, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
-    NIGHTSTONE("nightstone", VariantsModId.THE_MIDNIGHT, Material.ROCK, MaterialColor.PURPLE_TERRACOTTA, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+//    SOULSTONE("soulstone", VariantsModId.MYSTICAL_AGRICULTURE, Material.ROCK, MaterialColor.BROWN, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+//    NIGHTSTONE("nightstone", VariantsModId.THE_MIDNIGHT, Material.ROCK, MaterialColor.PURPLE_TERRACOTTA, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
     HARDENED_STONE("hardened_stone", VariantsModId.DANNYS_ORES, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 4.0F, 6.0F, 0.6F, 1, 1);
 
     private final String name;

@@ -81,16 +81,16 @@ public enum OreTypes implements IStringSerializable {
     AIR("air", 1, 0, 0, false,null, false),
     WATER("water", 1, 0, 0, false,null, false),
     ORDER("order", 1, 0, 0, false,null, false),
-    ENTROPY("entropy", 1, 0, 0, false,null, false),
-    ARCHAIC("archaic", 0, 3, 7, false,null, false),
-    EBONITE("ebonite", 1, 3, 7, false,null, false),
-    FOULITE("foulite", 0, 0, 0, false,null, false),
-    LINIUM("linium", 3, 0, 0, false,null, false),
-    NAGRILITE("nagrilite", 2, 0, 0, false,null, false),
-    NERIDIUM("neridium", 1, 0, 0, false,null, false),
-    PYRIDIUM("pyridium", 2, 0, 0, false,null, false),
-    TENEBRUM("tenebrum", 2, 0, 0, false,null, false),
-    W("w", 3, 0, 0, false,null, false);
+    ENTROPY("entropy", 1, 0, 0, false,null, false);
+//    ARCHAIC("archaic", 0, 3, 7, false,null, false),
+//    EBONITE("ebonite", 1, 3, 7, false,null, false),
+//    FOULITE("foulite", 0, 0, 0, false,null, false),
+//    LINIUM("linium", 3, 0, 0, false,null, false),
+//    NAGRILITE("nagrilite", 2, 0, 0, false,null, false),
+//    NERIDIUM("neridium", 1, 0, 0, false,null, false),
+//    PYRIDIUM("pyridium", 2, 0, 0, false,null, false),
+//    TENEBRUM("tenebrum", 2, 0, 0, false,null, false),
+//    W("w", 3, 0, 0, false,null, false);
 
     private final String name;
     private final int harvestLevel;

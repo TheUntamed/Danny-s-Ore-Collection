@@ -4,6 +4,7 @@ import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blocks.BaseBlock;
 import com.danny.dannys_ores.blocks.BaseOre;
 import com.danny.dannys_ores.configs.*;
+import com.danny.dannys_ores.configs.ores.Test;
 import com.danny.dannys_ores.configs.ores.vanilla.*;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.*;
@@ -108,6 +109,11 @@ public class GenerationHandler {
                 if (Quartz.enableVanillaNetherQuartzOre.get()) {
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("netherrack", null, new BlockMatcher(Blocks.NETHERRACK)), Blocks.NETHER_QUARTZ_ORE.getDefaultState(), max(Quartz.veinSizeVanillaNetherQuartzOre.get(), 3))).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(Quartz.veinsPerChunkVanillaNetherQuartzOre.get(), Quartz.minHeightVanillaNetherQuartzOre.get(), 0, Quartz.maxHeightVanillaNetherQuartzOre.get()))));
                 }
+            }
+
+            for (int i = 0; i < General.c.size(); i++) {
+                ForgeConfigSpec t = General.c.get(i);
+                System.err.println("The values of Test_" + (i+1) +  ": " + t.getValues().get("Test_" + (i+1) + "." + PathHandler.getEffectLevelPath()));
             }
 
             // Add own generation

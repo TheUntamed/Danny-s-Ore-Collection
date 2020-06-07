@@ -1,6 +1,7 @@
 package com.danny.dannys_ores.configs;
 
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.configs.ores.Test;
 import com.danny.dannys_ores.configs.ores.elementary.*;
 import com.danny.dannys_ores.configs.ores.gems.*;
 import com.danny.dannys_ores.configs.ores.other.*;
@@ -11,6 +12,7 @@ import com.danny.dannys_ores.configs.dense_ores.vanilla.*;
 import com.danny.dannys_ores.configs.poor_ores.other.*;
 import com.danny.dannys_ores.configs.poor_ores.gems.*;
 import com.danny.dannys_ores.configs.poor_ores.vanilla.*;
+import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.PathHandler;
 import com.danny.dannys_ores.util.CommentHandler;
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -23,10 +25,14 @@ import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class General {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static ForgeConfigSpec spec;
+    public static ArrayList<ForgeConfigSpec> c = new ArrayList<>();
+    public static HashMap<OreTypes, Test> m = new HashMap<>();
 
     public static ForgeConfigSpec.BooleanValue enableConfigChecker;
 
@@ -320,6 +326,13 @@ public class General {
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, General.spec, generalPath + "/#general.toml");
 
+        //for (OreTypes oType : OreTypes.values()) {
+        for (int i = 1; i < 3; i++) {
+            Test test = new Test();
+            ForgeConfigSpec spec = test.create(generalPath, i);
+            c.add(spec);
+            //m.put(i, test);
+        }
 
         Stones.loadConfig(generalPath);
         Air.loadConfig(normalPath);
