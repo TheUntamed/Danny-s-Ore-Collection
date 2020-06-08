@@ -8,7 +8,7 @@ public enum VariantsModId {
     MIDNIGHT,
     MYSTICALAGRICULTURE;
 
-    public String asString() {
+    public String asLowerCaseString() {
         return this.toString().toLowerCase();
     }
 }

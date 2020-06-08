@@ -1,12 +1,12 @@
 package com.danny.dannys_ores;
 
 import com.danny.dannys_ores.blockItems.*;
-import com.danny.dannys_ores.blocks.BaseOre;
+import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.configs.Config;
-import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.OreTypes;
+import com.danny.dannys_ores.util.PathHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
@@ -16,11 +16,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -83,8 +83,8 @@ public class Main {
             final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
             ResourceLocation resLoc = block.getRegistryName();
             if (resLoc != null) {
-                if (block instanceof BaseOre) {
-                    BaseOre oreBlock = (BaseOre) block;
+                if (block instanceof SimpleOre) {
+                    SimpleOre oreBlock = (SimpleOre) block;
                     OreTypes oType = oreBlock.getOreType();
                     if (oType.equals(OreTypes.VULCANITE) || oType.equals(OreTypes.FIRE)) {
                         final HotBlockItem blockItem = new HotBlockItem(block, properties);

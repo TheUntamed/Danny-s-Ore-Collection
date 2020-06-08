@@ -1,15 +1,14 @@
 package com.danny.dannys_ores.dataGen;
 
 import com.danny.dannys_ores.Main;
-import com.danny.dannys_ores.blocks.BaseBlock;
-import com.danny.dannys_ores.blocks.BaseOre;
+import com.danny.dannys_ores.blocks.SimpleBlock;
+import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
 import net.minecraft.block.Block;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.item.Item;
 import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
@@ -32,9 +31,9 @@ public class BlockTagsDataGen extends BlockTagsProvider {
         RichnessTypes rType = null;
         for (RegistryObject<Block> regObj : BlockInit.BLOCKS.getEntries()) {
             Block block = regObj.get();
-            if (block instanceof BaseBlock) {
-                if (block instanceof BaseOre) {
-                    BaseOre oreBlock = (BaseOre) block;
+            if (block instanceof SimpleBlock) {
+                if (block instanceof SimpleOre) {
+                    SimpleOre oreBlock = (SimpleOre) block;
                     // Because the ores are grouped by type in the BlockInit classes
                     // all ores of one type will always come after each other.
                     ores.add(oreBlock);
@@ -57,8 +56,8 @@ public class BlockTagsDataGen extends BlockTagsProvider {
                     }
 
                 } else {
-                    BaseBlock baseBlock = (BaseBlock) block;
-                    stone.add(baseBlock);
+                    SimpleBlock simpleBlock = (SimpleBlock) block;
+                    stone.add(simpleBlock);
                 }
             } else {
                 cobblestone.add(block);

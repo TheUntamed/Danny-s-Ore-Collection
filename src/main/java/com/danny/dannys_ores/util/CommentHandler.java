@@ -69,7 +69,7 @@ public class CommentHandler {
     }
 
     public static String getGenerationComment() {
-        return "Generation settings for this ore variant.";
+        return "Generation settings for this ore variant";
     }
 
     public static String getPropertiesComment() {
@@ -90,14 +90,19 @@ public class CommentHandler {
 
     public static String getAsLayerComment() { return "If true, this stone variant will generate as a layer instead of a cluster."; }
 
-    public static String getBlockNameComment(String variant, RichnessTypes rType, OreTypes oType) {
+    public static String getBlockNameComment(StoneVariants variant, RichnessTypes rType, OreTypes oType) {
         String oTypeName = oType.getName().substring(0, 1).toUpperCase() + oType.getName().substring(1);
+        String[] variantNameSplit = variant.getBlockName().split("_");
+        StringBuilder variantName = new StringBuilder();
+        for (String part : variantNameSplit) {
+            variantName.append(part.substring(0, 1).toUpperCase()).append(part.substring(1)).append(" ");
+        }
+
         if (rType.equals(RichnessTypes.NORMAL)) {
-            return variant + " " + oTypeName + " Ore";
+            return variantName + oTypeName + " Ore";
         } else {
             String rTypeName = rType.getName().substring(0, 1).toUpperCase() + rType.getName().substring(1);
-            return variant + " " + rTypeName + " " + oTypeName + " Ore";
+            return variantName + rTypeName + " " + oTypeName + " Ore";
         }
     }
-
 }

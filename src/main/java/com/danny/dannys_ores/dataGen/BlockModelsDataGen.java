@@ -1,7 +1,7 @@
 package com.danny.dannys_ores.dataGen;
 
 import com.danny.dannys_ores.Main;
-import com.danny.dannys_ores.blocks.BaseBlock;
+import com.danny.dannys_ores.blocks.SimpleBlock;
 import com.danny.dannys_ores.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
@@ -24,8 +24,8 @@ public class BlockModelsDataGen extends BlockModelProvider {
         for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
             Block block = blockRO.get();
             Block fillerBlock;
-            if (block instanceof BaseBlock) {
-                fillerBlock = ((BaseBlock) block).getBlockBase();
+            if (block instanceof SimpleBlock) {
+                fillerBlock = ((SimpleBlock) block).getBlockBase();
                 String fillerBlockName;
                 String blockName = block.getRegistryName().toString().split(":")[1];
                 //When the fillerblock is from another mod it is unknown and the name has to be created by stringsplitting

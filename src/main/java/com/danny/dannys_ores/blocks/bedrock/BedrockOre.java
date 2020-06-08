@@ -1,6 +1,6 @@
 package com.danny.dannys_ores.blocks.bedrock;
 
-import com.danny.dannys_ores.blocks.BaseOre;
+import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
@@ -15,7 +15,7 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeConfigSpec;
 
-public class BedrockOre extends BaseOre {
+public class BedrockOre extends SimpleOre {
     private BasicParticleType bpt;
 
     public BedrockOre(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {

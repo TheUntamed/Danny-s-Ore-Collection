@@ -1,8 +1,8 @@
 package com.danny.dannys_ores.dataGen;
 
 import com.danny.dannys_ores.Main;
-import com.danny.dannys_ores.blocks.BaseBlock;
-import com.danny.dannys_ores.blocks.BaseOre;
+import com.danny.dannys_ores.blocks.SimpleBlock;
+import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
@@ -32,9 +32,9 @@ public class ItemTagsDataGen extends ItemTagsProvider {
         RichnessTypes rType = null;
         for (RegistryObject<Block> regObj : BlockInit.BLOCKS.getEntries()) {
             Block block = regObj.get();
-            if (block instanceof BaseBlock) {
-                if (block instanceof BaseOre) {
-                    BaseOre oreBlock = (BaseOre) block;
+            if (block instanceof SimpleBlock) {
+                if (block instanceof SimpleOre) {
+                    SimpleOre oreBlock = (SimpleOre) block;
                     // Because the ores are grouped by type in the BlockInit classes
                     // all ores of one type will always come after each other.
                     ores.add(oreBlock.asItem());
@@ -57,8 +57,8 @@ public class ItemTagsDataGen extends ItemTagsProvider {
                     }
 
                 } else {
-                    BaseBlock baseBlock = (BaseBlock) block;
-                    stone.add(baseBlock.asItem());
+                    SimpleBlock simpleBlock = (SimpleBlock) block;
+                    stone.add(simpleBlock.asItem());
                 }
             } else {
                 cobblestone.add(block.asItem());

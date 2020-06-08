@@ -6,11 +6,11 @@ import com.danny.dannys_ores.util.StoneVariants;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 
-public class BaseBlock extends Block {
+public class SimpleBlock extends Block {
     private StoneVariants blockBase;
     private VariantsModId blockBaseModId;
 
-    public BaseBlock(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId) {
+    public SimpleBlock(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId) {
         super(properties);
         this.blockBase = blockBase;
         this.blockBaseModId = blockBaseModId;

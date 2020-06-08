@@ -1,5 +1,7 @@
 package com.danny.dannys_ores.util;
 
+import com.danny.dannys_ores.Main;
+
 /**
  * This class handles the paths of config values.
  * A change to a path in this class will change the corresponding path in all config files
@@ -99,13 +101,19 @@ public class PathHandler {
 
     public static String getAsLayerPath() { return "asLayer"; }
 
-    public static String getBlockNamePath(String variant, RichnessTypes rType, OreTypes oType) {
-        variant = variant.toLowerCase().replace(" ", "_");
+    public static String getBlockNamePath(StoneVariants variant, RichnessTypes rType, OreTypes oType) {
 
         if (rType.equals(RichnessTypes.NORMAL)) {
-            return variant + "_" + oType.getName() + "_ore";
+            //Main.LOGGER.info("getBlockNamePath: " + variant.getBlockName() + "_" + oType.getName() + "_ore");
+            return variant.getBlockName() + "_" + oType.getName() + "_ore";
         } else {
-            return variant + "_" + rType.getName() + "_" + oType.getName() + "_ore";
+            //Main.LOGGER.info("getBlockNamePath: " + variant.getBlockName() + "_" + rType.getName() + "_" + oType.getName() + "_ore");
+            return variant.getBlockName() + "_" + rType.getName() + "_" + oType.getName() + "_ore";
         }
+    }
+
+    public static String getModNamePath(VariantsModId modId) {
+        //Main.LOGGER.info("modId: " + modId.asLowerCaseString());
+        return modId.asLowerCaseString();
     }
 }

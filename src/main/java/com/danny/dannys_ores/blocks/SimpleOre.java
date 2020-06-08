@@ -11,13 +11,13 @@ import net.minecraft.util.math.MathHelper;
 
 import java.util.Random;
 
-public class BaseOre extends BaseBlock {
+public class SimpleOre extends SimpleBlock {
     private int minXp;
     private int maxXp;
     private OreTypes oType;
     private RichnessTypes rType;
 
-    public BaseOre(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
+    public SimpleOre(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {
         super(properties, blockBase, blockBaseModId);
         this.minXp = minXp;
         this.maxXp = maxXp;

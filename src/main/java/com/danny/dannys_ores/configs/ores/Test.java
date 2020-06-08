@@ -299,8 +299,8 @@ public class Test {
 
         BUILDER.comment(CommentHandler.getGeneralComment()).push(PathHandler.getGeneralPath());
             disableOreType = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
-            BUILDER.comment("Vanilla Stone Variants").push("minecraft");
-                BUILDER.comment(CommentHandler.getBlockNameComment("Stone", rType, oType)).push(PathHandler.getBlockNamePath("Stone", rType, oType));
+            BUILDER.comment("Vanilla Stone Variants").push(PathHandler.getModNamePath(VariantsModId.MINECRAFT));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.STONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.STONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableStoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeStoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -313,7 +313,7 @@ public class Test {
                         biomeBlacklistStoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Andesite", rType, oType)).push(PathHandler.getBlockNamePath("Andesite", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.ANDESITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.ANDESITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableAndesiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeAndesiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -326,7 +326,7 @@ public class Test {
                         biomeBlacklistAndesiteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Diorite", rType, oType)).push(PathHandler.getBlockNamePath("Diorite", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.DIORITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.DIORITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableDioriteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeDioriteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -339,7 +339,7 @@ public class Test {
                         biomeBlacklistDioriteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Granite", rType, oType)).push(PathHandler.getBlockNamePath("Granite", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.GRANITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.GRANITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableGraniteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeGraniteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -352,7 +352,7 @@ public class Test {
                         biomeBlacklistGraniteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Netherrack", rType, oType)).push(PathHandler.getBlockNamePath("Netherrack", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.NETHERRACK, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.NETHERRACK, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableNetherrackOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeNetherrackOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -365,7 +365,7 @@ public class Test {
                         biomeBlacklistNetherrackOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("End Stone", rType, oType)).push(PathHandler.getBlockNamePath("End Stone", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.END_STONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.END_STONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableEndStoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeEndStoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -378,7 +378,7 @@ public class Test {
                         biomeBlacklistEndStoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Sand", rType, oType)).push(PathHandler.getBlockNamePath("Sand", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.SAND, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.SAND, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableSandOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeSandOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -391,7 +391,7 @@ public class Test {
                         biomeBlacklistSandOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Red Sand", rType, oType)).push(PathHandler.getBlockNamePath("Red Sand", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.RED_SAND, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.RED_SAND, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                     enableRedSandOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                     veinSizeRedSandOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -404,7 +404,7 @@ public class Test {
                     biomeBlacklistRedSandOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Sandstone", rType, oType)).push(PathHandler.getBlockNamePath("Sandstone", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.SANDSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.SANDSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableSandstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeSandstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -417,7 +417,7 @@ public class Test {
                         biomeBlacklistSandstoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Red Sandstone", rType, oType)).push(PathHandler.getBlockNamePath("Red Sandstone", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.RED_SANDSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.RED_SANDSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableRedSandstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeRedSandstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -430,7 +430,7 @@ public class Test {
                         biomeBlacklistRedSandstoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Gravel", rType, oType)).push(PathHandler.getBlockNamePath("Gravel", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.GRAVEL, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.GRAVEL, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableGravelOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeGravelOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -443,7 +443,7 @@ public class Test {
                         biomeBlacklistGravelOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Blue Ice", rType, oType)).push(PathHandler.getBlockNamePath("Blue Ice", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.BLUE_ICE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.BLUE_ICE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableBlueIceOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeBlueIceOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -456,7 +456,7 @@ public class Test {
                         biomeBlacklistBlueIceOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Packed Ice", rType, oType)).push(PathHandler.getBlockNamePath("Packed Ice", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.PACKED_ICE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.PACKED_ICE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enablePackedIceOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizePackedIceOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -469,7 +469,7 @@ public class Test {
                         biomeBlacklistPackedIceOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Bedrock", rType, oType)).push(PathHandler.getBlockNamePath("Bedrock", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.BEDROCK, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.BEDROCK, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableBedrockOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeBedrockOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);
@@ -486,8 +486,8 @@ public class Test {
                     BUILDER.pop();
                 BUILDER.pop();
             BUILDER.pop();
-            BUILDER.comment("Quark Stone Variants").push("quark");
-                BUILDER.comment(CommentHandler.getBlockNameComment("Basalt", rType, oType)).push(PathHandler.getBlockNamePath("Basalt", rType, oType));
+            BUILDER.comment("Quark Stone Variants").push(PathHandler.getModNamePath(VariantsModId.QUARK));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_BASALT, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_BASALT, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableQuarkBasaltOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeQuarkBasaltOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -500,7 +500,7 @@ public class Test {
                         biomeBlacklistQuarkBasaltOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Limestone", rType, oType)).push(PathHandler.getBlockNamePath("Limestone", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_LIMESTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_LIMESTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableQuarkLimestoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeQuarkLimestoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -513,7 +513,7 @@ public class Test {
                         biomeBlacklistQuarkLimestoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Jasper", rType, oType)).push(PathHandler.getBlockNamePath("Jasper", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_JASPER, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_JASPER, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableQuarkJasperOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeQuarkJasperOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -526,7 +526,7 @@ public class Test {
                         biomeBlacklistQuarkJasperOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Marble", rType, oType)).push(PathHandler.getBlockNamePath("Marble", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_MARBLE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_MARBLE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableQuarkMarbleOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeQuarkMarbleOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -539,7 +539,7 @@ public class Test {
                         biomeBlacklistQuarkMarbleOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Slate", rType, oType)).push(PathHandler.getBlockNamePath("Slate", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_SLATE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_SLATE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableQuarkSlateOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeQuarkSlateOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -553,8 +553,8 @@ public class Test {
                     BUILDER.pop();
                 BUILDER.pop();
             BUILDER.pop();
-            BUILDER.comment("Embellishcraft Stone Variants").push("embellishcraft");
-                BUILDER.comment(CommentHandler.getBlockNameComment("Basalt", rType, oType)).push(PathHandler.getBlockNamePath("Basalt", rType, oType));
+            BUILDER.comment("Embellishcraft Stone Variants").push(PathHandler.getModNamePath(VariantsModId.EMBELLISHCRAFT));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_BASALT, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_BASALT, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableEmbellishcraftBasaltOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeEmbellishcraftBasaltOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -567,7 +567,7 @@ public class Test {
                         biomeBlacklistEmbellishcraftBasaltOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Gneiss", rType, oType)).push(PathHandler.getBlockNamePath("Gneiss", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_GNEISS, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_GNEISS, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableEmbellishcraftGneissOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeEmbellishcraftGneissOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -580,7 +580,7 @@ public class Test {
                         biomeBlacklistEmbellishcraftGneissOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Jade", rType, oType)).push(PathHandler.getBlockNamePath("Jade", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_JADE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_JADE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableEmbellishcraftJadeOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeEmbellishcraftJadeOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -593,7 +593,7 @@ public class Test {
                         biomeBlacklistEmbellishcraftJadeOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Larvikite", rType, oType)).push(PathHandler.getBlockNamePath("Larvikite", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_LARVIKITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_LARVIKITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableEmbellishcraftLarvikiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeEmbellishcraftLarvikiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -606,7 +606,7 @@ public class Test {
                         biomeBlacklistEmbellishcraftLarvikiteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Marble", rType, oType)).push(PathHandler.getBlockNamePath("Marble", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_MARBLE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_MARBLE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableEmbellishcraftMarbleOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeEmbellishcraftMarbleOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -619,7 +619,7 @@ public class Test {
                         biomeBlacklistEmbellishcraftMarbleOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
                 BUILDER.pop();
-                BUILDER.comment(CommentHandler.getBlockNameComment("Slate", rType, oType)).push(PathHandler.getBlockNamePath("Slate", rType, oType));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_SLATE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_SLATE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableEmbellishcraftSlateOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeEmbellishcraftSlateOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -633,8 +633,8 @@ public class Test {
                     BUILDER.pop();
                 BUILDER.pop();
             BUILDER.pop();
-            BUILDER.comment("Mystical Agriculture Stone Variants").push("mysticalagriculture");
-                BUILDER.comment(CommentHandler.getBlockNameComment("Soulstone", rType, oType)).push(PathHandler.getBlockNamePath("Soulstone", rType, oType));
+            BUILDER.comment("Mystical Agriculture Stone Variants").push(PathHandler.getModNamePath(VariantsModId.MYSTICALAGRICULTURE));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.MYSTICALAGRICULTURE_SOULSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.MYSTICALAGRICULTURE_SOULSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableMysticalAgricultureSoulstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeMysticalAgricultureSoulstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -648,8 +648,8 @@ public class Test {
                     BUILDER.pop();
                 BUILDER.pop();
             BUILDER.pop();
-            BUILDER.comment("The Midnight Stone Variants").push("midnight");
-                BUILDER.comment(CommentHandler.getBlockNameComment("Nightstone", rType, oType)).push(PathHandler.getBlockNamePath("Nightstone", rType, oType));
+            BUILDER.comment("The Midnight Stone Variants").push(PathHandler.getModNamePath(VariantsModId.MIDNIGHT));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.MIDNIGHT_NIGHTSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.MIDNIGHT_NIGHTSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableTheMidnightNightstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeTheMidnightNightstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -663,8 +663,8 @@ public class Test {
                     BUILDER.pop();
                 BUILDER.pop();
             BUILDER.pop();
-            BUILDER.comment("Danny's Ores Stone Variants").push("dannys_ores");
-                BUILDER.comment(CommentHandler.getBlockNameComment("Hardened Stone", rType, oType)).push(PathHandler.getBlockNamePath("Hardened Stone", rType, oType));
+            BUILDER.comment("Danny's Ores Stone Variants").push(PathHandler.getModNamePath(VariantsModId.DANNYS_ORES));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.HARDENED_STONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.HARDENED_STONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableHardenedStoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeHardenedStoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
@@ -682,7 +682,7 @@ public class Test {
 
         spec = BUILDER.build();
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, spec, path + "/" + rType.getName() + "_" + oType.getName() + ".toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, spec, path + "/" + oType.getName() + ".toml");
 
         return spec;
     }

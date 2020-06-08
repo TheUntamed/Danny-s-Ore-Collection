@@ -5,8 +5,6 @@ import com.danny.dannys_ores.configs.ores.Test;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
 import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.loading.FMLPaths;
 
 import java.io.IOException;
@@ -21,7 +19,9 @@ public class Config {
     private static Path configPathNormalOres;
     private static Path configPathDenseOres;
     private static Path configPathPoorOres;
-    public static HashMap<OreTypes, ForgeConfigSpec> oneTypeConfigs = new HashMap<>();
+    private static HashMap<OreTypes, ForgeConfigSpec> normalConfigs = new HashMap<>();
+    private static HashMap<OreTypes, ForgeConfigSpec> poorConfigs = new HashMap<>();
+    private static HashMap<OreTypes, ForgeConfigSpec> denseConfigs = new HashMap<>();
     public static HashMap<RichnessTypes, HashMap<OreTypes, ForgeConfigSpec>> allConfigs = new HashMap<>();
 
     public static void loadConfigs() {
@@ -41,17 +41,25 @@ public class Config {
                 ForgeConfigSpec oreSpec;
                 if (rType.equals(RichnessTypes.NORMAL)) {
                     oreSpec = test.create(normalPath, oType, rType);
-                } else if (rType.equals(RichnessTypes.POOR) && oType.isHasRichnessLevels()) {
-                    oreSpec = test.create(poorPath, oType, rType);
-                } else if (rType.equals(RichnessTypes.DENSE) && oType.isHasRichnessLevels()) {
-                    oreSpec = test.create(densePath, oType, rType);
+                    normalConfigs.put(oType, oreSpec);
+                } else if (rType.equals(RichnessTypes.POOR)) {
+                    if(oType.isHasRichnessLevels()) {
+                        oreSpec = test.create(poorPath, oType, rType);
+                        poorConfigs.put(oType, oreSpec);
+                    }
+                } else if (rType.equals(RichnessTypes.DENSE)) {
+                    if(oType.isHasRichnessLevels()) {
+                        oreSpec = test.create(densePath, oType, rType);
+                        denseConfigs.put(oType, oreSpec);
+                    }
                 } else {
                     throw new IllegalArgumentException("Richness Type '" + rType + "' cannot be handled in config creation!");
                 }
-                oneTypeConfigs.put(oType, oreSpec);
             }
-            allConfigs.put(rType, oneTypeConfigs);
         }
+        allConfigs.put(RichnessTypes.NORMAL, normalConfigs);
+        allConfigs.put(RichnessTypes.POOR, poorConfigs);
+        allConfigs.put(RichnessTypes.DENSE, denseConfigs);
     }
 
     private static void createDirectories() {

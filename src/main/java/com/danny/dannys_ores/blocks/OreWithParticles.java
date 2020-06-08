@@ -14,7 +14,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
 
-public class OreWithParticles extends BaseOre {
+public class OreWithParticles extends SimpleOre {
     private BasicParticleType bpt;
 
     public OreWithParticles(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId, RichnessTypes rType, OreTypes oType, int minXp, int maxXp, BasicParticleType bpt) {

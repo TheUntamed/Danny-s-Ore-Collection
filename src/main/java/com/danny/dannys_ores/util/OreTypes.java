@@ -1,9 +1,8 @@
 package com.danny.dannys_ores.util;
 
 import net.minecraft.particles.BasicParticleType;
-import net.minecraft.util.IStringSerializable;
 
-public enum OreTypes implements IStringSerializable {
+public enum OreTypes {
     //Vanilla
     COAL("coal", 0, 0, 2, false,null, true, ConfigTypes.COAL),
     DIAMOND("diamond", 2, 3, 7, false,null, true, ConfigTypes.COAL),
@@ -110,10 +109,6 @@ public enum OreTypes implements IStringSerializable {
         this.bpt = bpt;
         this.hasRichnessLevels = hasRichnessLevels;
         this.cType = cType;
-    }
-
-    public String toString() {
-        return this.name;
     }
 
     public String getName() {

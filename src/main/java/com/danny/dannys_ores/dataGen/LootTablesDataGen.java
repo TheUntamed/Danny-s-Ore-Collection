@@ -1,17 +1,14 @@
 package com.danny.dannys_ores.dataGen;
 
-import com.danny.dannys_ores.blocks.BaseOre;
+import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
-
-import java.util.ArrayList;
 
 public class LootTablesDataGen extends LootTablesBaseProvider {
 
@@ -30,8 +27,8 @@ public class LootTablesDataGen extends LootTablesBaseProvider {
             ResourceLocation resLoc = block.getRegistryName();
             if (resLoc != null) {
                 String blockName = resLoc.toString().split(":")[1];
-                if (block instanceof BaseOre) {
-                    BaseOre oreBlock = ((BaseOre) block);
+                if (block instanceof SimpleOre) {
+                    SimpleOre oreBlock = ((SimpleOre) block);
                     OreTypes oType = oreBlock.getOreType();
                     RichnessTypes rType = oreBlock.getRichnessType();
                     boolean justSilk = blockName.contains("packed_ice") || blockName.contains("blue_ice") || (oType.equals(OreTypes.XP) && !blockName.contains("bedrock"));
