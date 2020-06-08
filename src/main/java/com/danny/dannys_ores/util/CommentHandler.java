@@ -90,8 +90,14 @@ public class CommentHandler {
 
     public static String getAsLayerComment() { return "If true, this stone variant will generate as a layer instead of a cluster."; }
 
-    public static String getEnableStoneVariantComment() {
-        return "If false, this stone variant will not generate.";
+    public static String getBlockNameComment(String variant, RichnessTypes rType, OreTypes oType) {
+        String oTypeName = oType.getName().substring(0, 1).toUpperCase() + oType.getName().substring(1);
+        if (rType.equals(RichnessTypes.NORMAL)) {
+            return variant + " " + oTypeName + " Ore";
+        } else {
+            String rTypeName = rType.getName().substring(0, 1).toUpperCase() + rType.getName().substring(1);
+            return variant + " " + rTypeName + " " + oTypeName + " Ore";
+        }
     }
 
 }

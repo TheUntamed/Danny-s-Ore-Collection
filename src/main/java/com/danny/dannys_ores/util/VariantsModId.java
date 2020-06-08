@@ -5,6 +5,10 @@ public enum VariantsModId {
     DANNYS_ORES,
     QUARK,
     EMBELLISHCRAFT,
-    THE_MIDNIGHT,
-    MYSTICAL_AGRICULTURE;
+    MIDNIGHT,
+    MYSTICALAGRICULTURE;
+
+    public String asString() {
+        return this.toString().toLowerCase();
+    }
 }

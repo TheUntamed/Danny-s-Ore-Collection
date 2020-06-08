@@ -98,4 +98,14 @@ public class PathHandler {
     public static String getExplosionBreaksBlocksPath() { return "explosionBreaksBlocks"; }
 
     public static String getAsLayerPath() { return "asLayer"; }
+
+    public static String getBlockNamePath(String variant, RichnessTypes rType, OreTypes oType) {
+        variant = variant.toLowerCase().replace(" ", "_");
+
+        if (rType.equals(RichnessTypes.NORMAL)) {
+            return variant + "_" + oType.getName() + "_ore";
+        } else {
+            return variant + "_" + rType.getName() + "_" + oType.getName() + "_ore";
+        }
+    }
 }

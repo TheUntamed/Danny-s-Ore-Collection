@@ -2,6 +2,7 @@ package com.danny.dannys_ores;
 
 import com.danny.dannys_ores.blockItems.*;
 import com.danny.dannys_ores.blocks.BaseOre;
+import com.danny.dannys_ores.configs.Config;
 import com.danny.dannys_ores.configs.General;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
@@ -57,15 +58,10 @@ public class Main {
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
 
-        quark = ModList.get().isLoaded("quark");
-        embellishcraft = ModList.get().isLoaded("embellishcraft");
-        theMidnight = ModList.get().isLoaded("midnight");
-        mysticalAgriculture = ModList.get().isLoaded("mysticalagriculture");
-
         BlockInit.BLOCKS.register(modEventBus);
         BlockInit.initOres();
 
-        General.loadConfig();
+        Config.loadConfigs();
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);

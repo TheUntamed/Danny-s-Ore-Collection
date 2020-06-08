@@ -16,6 +16,10 @@ public class BaseBlock extends Block {
         this.blockBaseModId = blockBaseModId;
     }
 
+    public StoneVariants getStoneVariant() {
+        return blockBase;
+    }
+
     public Block getBlockBase() {
         switch (blockBase) {
             case STONE: return Blocks.STONE;
@@ -44,8 +48,8 @@ public class BaseBlock extends Block {
             case QUARK_JASPER: return BlockInit.QUARK_JASPER;
             case QUARK_MARBLE: return BlockInit.QUARK_MARBLE;
             case QUARK_SLATE: return BlockInit.QUARK_SLATE;
-            //case SOULSTONE: return BlockInit.SOULSTONE;
-            //case NIGHTSTONE: return BlockInit.NIGHTSTONE;
+            case MYSTICALAGRICULTURE_SOULSTONE: return BlockInit.SOULSTONE;
+            case MIDNIGHT_NIGHTSTONE: return BlockInit.NIGHTSTONE;
             default:
                 throw new IllegalArgumentException("For the ore '" + this + "' with block base '" + blockBase + "' no block base could be returned!");
         }
