@@ -287,8 +287,8 @@ public class Fire {
         BUILDER.comment("Fire Ores").push(PathHandler.getGeneralPath());
         disableFireOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disableBurnEffectFireOres = BUILDER.comment("If true, fire ores will not set players on fire while in their inventory/hand.").define("disableBurnEffect", false);
-        onlyWhileSelectedFireOres = BUILDER.comment("If true, a player will only be set on fire while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationBurnEffectFireOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
+        onlyWhileSelectedFireOres = BUILDER.comment("If true, a player will only be set on fire while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getOnlyWhileSelectedPath(), false);
+        durationBurnEffectFireOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getEffectDurationPath(), 1, 1, 1000000);
         BUILDER.comment("Stone Fire Ore").push("stone_fire_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStoneFireOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);

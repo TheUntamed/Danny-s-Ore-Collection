@@ -7,6 +7,7 @@ import com.danny.dannys_ores.util.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.client.renderer.model.Variant;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
 public class BlockInit {
@@ -53,6 +55,7 @@ public class BlockInit {
     public static final RegistryObject<Block> HARDENED_COBBLESTONE = BLOCKS.register("hardened_cobblestone", () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(2.5F, 6.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE)));
 
     public static void initOres() {
+        //HashMap<OreTypes, StoneVariants> vanilla = new HashMap<>();
         ArrayList<OreTypes> vanilla = new ArrayList<>();
         vanilla.add(OreTypes.COAL);
         vanilla.add(OreTypes.IRON);
@@ -66,57 +69,52 @@ public class BlockInit {
             String rTypeName = rType.getName();
             boolean rTypeNormal = rType.equals(RichnessTypes.NORMAL);
 
-            // Normal Ores don't have the richness type 'normal' in their name.
-            if (rTypeNormal) {
-                rTypeName = "_";
-            } else {
-                rTypeName = "_" + rTypeName + "_";
-            }
             for (OreTypes oType : OreTypes.values()) {
+                String oTypeName = oType.getName();
                 if (rTypeNormal || oType.isHasRichnessLevels()) {
                     if (oType.getParticles() != null) {
                         for (StoneVariants variant : StoneVariants.values()) {
                             if (ModHandler.variantsModIdExists(variant.getModid())) {
-                                String variantName = variant.getName().replace("minecraft_", "").replace("dannys_ores_", "");
+                                String regName = getRegName(variant, rTypeName, rTypeNormal, oTypeName);
                                 int minXp = getMinXp(oType, variant, rType);
                                 int maxXp = getMaxXp(oType, variant, rType);
                                 if (variant.equals(StoneVariants.BEDROCK)) {
-                                    //Main.LOGGER.info("The BlockInit reg name: " + variantName + rTypeName + oType.getName() + "_ore");
-                                    BLOCKS.register(variantName + rTypeName + oType.getName() + "_ore", () -> new BedrockOreWithParticles(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp, oType.getParticles()));
+                                    //Main.LOGGER.info("The BlockInit reg name: " + variantName + rTypeName + oTypeName + "_ore");
+                                    BLOCKS.register(regName, () -> new BedrockOreWithParticles(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp, oType.getParticles()));
                                 } else {
-                                    //Main.LOGGER.info("The BlockInit reg name: " + variantName + rTypeName + oType.getName() + "_ore");
-                                    BLOCKS.register(variantName + rTypeName + oType.getName() + "_ore", () -> new OreWithParticles(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp, oType.getParticles()));
+                                    //Main.LOGGER.info("The BlockInit reg name: " + regName);
+                                    BLOCKS.register(regName, () -> new OreWithParticles(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp, oType.getParticles()));
                                 }
                             }
                         }
-                    } else if (oType.isCanExplode()) {
+                    } else if (oType.getEffect().equals(Effects.EXPLODE)) {
                         for (StoneVariants variant : StoneVariants.values()) {
                             if (ModHandler.variantsModIdExists(variant.getModid())) {
-                                String variantName = variant.getName().replace("minecraft_", "").replace("dannys_ores_", "");
+                                String regName = getRegName(variant, rTypeName, rTypeNormal, oTypeName);
                                 int minXp = getMinXp(oType, variant, rType);
                                 int maxXp = getMaxXp(oType, variant, rType);
                                 if (variant.equals(StoneVariants.BEDROCK)) {
-                                    //Main.LOGGER.info("The BlockInit reg name: " + variantName + rTypeName + oType.getName() + "_ore");
-                                    BLOCKS.register(variantName + rTypeName + oType.getName() + "_ore", () -> new ExplosiveBedrockOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp));
+                                    //Main.LOGGER.info("The BlockInit reg name: " + regName);
+                                    BLOCKS.register(regName, () -> new ExplosiveBedrockOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp));
                                 } else {
-                                    //Main.LOGGER.info("The BlockInit reg name: " + variantName + rTypeName + oType.getName() + "_ore");
-                                    BLOCKS.register(variantName + rTypeName + oType.getName() + "_ore", () -> new ExplosiveOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp));
+                                    //Main.LOGGER.info("The BlockInit reg name: " + regName);
+                                    BLOCKS.register(regName, () -> new ExplosiveOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp));
                                 }
                             }
                         }
                     } else {
                         for (StoneVariants variant : StoneVariants.values()) {
                             if (ModHandler.variantsModIdExists(variant.getModid())) {
-                                String variantName = variant.getName().replace("minecraft_", "").replace("dannys_ores_", "");
+                                String regName = getRegName(variant, rTypeName, rTypeNormal, oTypeName);
                                 int minXp = getMinXp(oType, variant, rType);
                                 int maxXp = getMaxXp(oType, variant, rType);
                                 if (variant.equals(StoneVariants.BEDROCK)) {
-                                    //Main.LOGGER.info("The BlockInit reg name: " + variantName + rTypeName + oType.getName() + "_ore");
-                                    BLOCKS.register(variantName + rTypeName + oType.getName() + "_ore", () -> new BedrockOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp));
+                                    //Main.LOGGER.info("The BlockInit reg name: " + regName);
+                                    BLOCKS.register(regName, () -> new BedrockOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp));
                                 } else {
                                     if (!rTypeNormal || !(variant.equals(StoneVariants.STONE) && vanilla.contains(oType) || variant.equals(StoneVariants.NETHERRACK) && oType.equals(OreTypes.QUARTZ))) {
-                                        //Main.LOGGER.info("The BlockInit reg name: " + variantName + rTypeName + oType.getName() + "_ore");
-                                        BLOCKS.register(variantName + rTypeName + oType.getName() + "_ore", () -> new SimpleOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp));
+                                        //Main.LOGGER.info("The BlockInit reg name: " + regName);
+                                        BLOCKS.register(regName, () -> new SimpleOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp));
                                     }
                                 }
                             }
@@ -125,6 +123,18 @@ public class BlockInit {
                 }
             }
         }
+    }
+
+    private static String getRegName(StoneVariants variant, String rTypeName, boolean rTypeNormal, String oTypeName) {
+        // Normal Ores don't have the richness type 'normal' in their name.
+        if (rTypeNormal) {
+            rTypeName = "_";
+        } else {
+            rTypeName = "_" + rTypeName + "_";
+        }
+        // Ores with a variant of modid minecraft or dannys_ores don't have the modid in their name.
+        String variantName = variant.getName().replace("minecraft_", "").replace("dannys_ores_", "");
+        return variantName + rTypeName + oTypeName + "_ore";
     }
 
     private static int getMinXp(OreTypes oType, StoneVariants variant, RichnessTypes rType) {

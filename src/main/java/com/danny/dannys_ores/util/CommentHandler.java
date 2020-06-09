@@ -72,15 +72,19 @@ public class CommentHandler {
         return "Generation settings for this ore variant";
     }
 
-    public static String getPropertiesComment() {
-        return "Block properties";
-    }
+    public static String getPropertiesComment() { return "Block properties"; }
 
     public static String getGeneralComment() {
         return "Settings affecting all variants";
     }
 
     public static String getEffectLevelComment() { return "The strength of the effect."; }
+
+    public static String getDisableEffectComment() { return "If true, these ores will not cause effects to players while in their inventory/hand."; }
+
+    public static String getOnlyWhileSelectedComment() { return "If true, a player will only be affected while holding the ore in a hand. If false, it just has to be in the inventory."; }
+
+    public static String getEffectDurationComment() { return "How long the effect will last in ticks (in seconds for burn effect) after removing the ore from the inventory"; }
 
     public static String getExplosionChanceComment() { return "The chance (in %) an ore of this type will explode when mined"; }
 

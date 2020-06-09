@@ -288,8 +288,8 @@ public class Yellorite {
         BUILDER.comment("Yellorite Ores").push(PathHandler.getGeneralPath());
         disableYelloriteOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disablePoisonEffectYelloriteOres = BUILDER.comment("If true, yellorite ores will not poison players while in their inventory/hand.").define("disablePoisonEffect", false);
-        onlyWhileSelectedYelloriteOres = BUILDER.comment("If true, a player will only be poisoned while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationPoisonEffectYelloriteOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 25, 25, 1000000);
+        onlyWhileSelectedYelloriteOres = BUILDER.comment("If true, a player will only be poisoned while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getOnlyWhileSelectedPath(), false);
+        durationPoisonEffectYelloriteOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getEffectDurationPath(), 25, 25, 1000000);
         effectLevelYelloriteOres = BUILDER.comment("The strength of the effect.").defineInRange("effectLevel", 1, 1, 2);
         BUILDER.comment("Stone Yellorite Ore").push("stone_yellorite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());

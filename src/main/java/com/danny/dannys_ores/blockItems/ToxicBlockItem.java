@@ -26,11 +26,11 @@ public class ToxicBlockItem extends BlockItem {
     public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
         if (!worldIn.isRemote) {
             if (entityIn instanceof PlayerEntity) {
-                if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".disablePoisonEffect")).get()) {
-                    boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getSelectedPath())).get();
+                if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getDisableEffectPath())).get()) {
+                    boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getOnlyWhileSelectedPath())).get();
                     if (!onlyIfSelected || isSelected) {
                         int effectLevel = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getEffectLevelPath())).get();
-                        int duration = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getDurationPath())).get();
+                        int duration = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getEffectDurationPath())).get();
                         ((PlayerEntity) entityIn).addPotionEffect(new EffectInstance(Effect.get(19), duration, (effectLevel - 1)));
                     }
                 }

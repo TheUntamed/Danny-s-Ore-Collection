@@ -29,7 +29,7 @@ public class DrowningBlockItem extends BlockItem {
             if (entityIn instanceof PlayerEntity) {
                 PlayerEntity pEntity = (PlayerEntity) entityIn;
                 if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".disableDrownEffect")).get()) {
-                    boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getSelectedPath())).get();
+                    boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getOnlyWhileSelectedPath())).get();
                     if (!onlyIfSelected || isSelected) {
                         if (pEntity.isAlive() && pEntity.getActivePotionEffect(Effects.WATER_BREATHING) == null) {
                             pEntity.setAir(entityIn.getAir() - 5);

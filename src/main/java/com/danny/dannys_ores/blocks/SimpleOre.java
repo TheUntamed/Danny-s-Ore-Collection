@@ -1,13 +1,12 @@
 package com.danny.dannys_ores.blocks;
 
-import com.danny.dannys_ores.configs.ores.other.Xp;
 import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraftforge.common.ForgeConfigSpec;
 
 import java.util.Random;
 
@@ -34,19 +33,15 @@ public class SimpleOre extends SimpleBlock {
     }
 
     private int setValues(Random random) {
-        ResourceLocation resLoc = this.getRegistryName();
-        if (resLoc != null) {
-            String blockName = resLoc.toString().split(":")[1];
-            if (blockName.contains("xp_ore")) {
-                UnmodifiableConfig config = Xp.spec.getValues();
-                return MathHelper.nextInt(random,
-                        config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getPropertiesPath() + "." + PathHandler.getMinXpDropPath()),
-                        config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getPropertiesPath() + "." + PathHandler.getMaxXpDropPath()));
-            } else {
-                return MathHelper.nextInt(RANDOM, minXp, maxXp);
-            }
+        if (this.getOreType().equals(OreTypes.XP)) {
+            UnmodifiableConfig config = ConfigHandler.getConfig(this);
+            StoneVariants variant = this.getStoneVariant();
+            VariantsModId fillerBlockModId = this.getBlockBaseModId();
+            return MathHelper.nextInt(random,
+                    ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getModNamePath(fillerBlockModId) + "." + PathHandler.getBlockNamePath(variant, rType, oType) + "." + PathHandler.getPropertiesPath() + "." + PathHandler.getMinXpDropPath())).get(),
+                    ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getModNamePath(fillerBlockModId) + "." + PathHandler.getBlockNamePath(variant, rType, oType) + "." + PathHandler.getPropertiesPath() + "." + PathHandler.getMaxXpDropPath())).get());
         } else {
-            throw new NullPointerException("Block '" + this + "' has no registry name!");
+            return MathHelper.nextInt(RANDOM, minXp, maxXp);
         }
     }
 

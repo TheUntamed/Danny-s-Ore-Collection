@@ -288,8 +288,8 @@ public class DenseUraninite {
         BUILDER.comment("Dense Uraninite Ores").push(PathHandler.getGeneralPath());
         disableDenseUraniniteOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disableDensePoisonEffectUraniniteOres = BUILDER.comment("If true, dense uraninite ores will not poison players while in their inventory/hand.").define("disablePoisonEffect", false);
-        onlyWhileSelectedUraniniteOres = BUILDER.comment("If true, a player will only be poisoned while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationPoisonEffectUraniniteOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 25, 25, 1000000);
+        onlyWhileSelectedUraniniteOres = BUILDER.comment("If true, a player will only be poisoned while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getOnlyWhileSelectedPath(), false);
+        durationPoisonEffectUraniniteOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getEffectDurationPath(), 25, 25, 1000000);
         effectLevelUraniniteOres = BUILDER.comment("The strength of the effect.").defineInRange("effectLevel", 1, 1, 2);
         BUILDER.comment("Stone Dense Uraninite Ore").push("stone_dense_uraninite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());

@@ -25,12 +25,12 @@ public class HeavyBlockItem extends BlockItem {
     @Override
     public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
         if (!worldIn.isRemote) {
-            if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + ".disableSlownessEffect")).get()) {
+            if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getDisableEffectPath())).get()) {
                 if (entityIn instanceof PlayerEntity) {
-                    boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getSelectedPath())).get();
+                    boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getOnlyWhileSelectedPath())).get();
                     if (!onlyIfSelected || isSelected) {
                         int effectLevel = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getEffectLevelPath())).get();
-                        int duration = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getDurationPath())).get();
+                        int duration = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getEffectDurationPath())).get();
                         ((PlayerEntity) entityIn).addPotionEffect(new EffectInstance(Effect.get(2), duration, (effectLevel - 1)));
                     }
                 }

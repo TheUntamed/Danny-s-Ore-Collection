@@ -288,8 +288,8 @@ public class Air {
         BUILDER.comment("Air Ores").push(PathHandler.getGeneralPath());
         disableAirOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disableEffectAirOres = BUILDER.comment("If true, air ores will not make players levitate while in their inventory/hand.").define("disableLevitationEffect", false);
-        onlyWhileSelectedAirOres = BUILDER.comment("If true, a player will only be levitate while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        effectDurationAirOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
+        onlyWhileSelectedAirOres = BUILDER.comment("If true, a player will only be levitate while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getOnlyWhileSelectedPath(), false);
+        effectDurationAirOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in inventory/hand the timer will refresh.").defineInRange(PathHandler.getEffectDurationPath(), 1, 1, 1000000);
         effectLevelAirOres = BUILDER.comment(CommentHandler.getEffectLevelComment()).defineInRange(PathHandler.getEffectLevelPath(), 1, 1, 128);
         BUILDER.comment("Stone Air Ore").push("stone_air_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());

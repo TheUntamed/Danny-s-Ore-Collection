@@ -83,11 +83,11 @@ public class PathHandler {
         return "general";
     }
 
-    public static String getDurationPath() {
-        return "duration";
-    }
+    public static String getEffectDurationPath() { return "duration"; }
 
-    public static String getSelectedPath() {
+    public static String getDisableEffectPath() { return "disableEffect"; }
+
+    public static String getOnlyWhileSelectedPath() {
         return "onlyWhileSelected";
     }
 

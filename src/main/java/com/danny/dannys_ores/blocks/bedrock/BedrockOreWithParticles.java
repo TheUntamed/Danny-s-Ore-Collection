@@ -25,13 +25,13 @@ public class BedrockOreWithParticles extends OreWithParticles {
      * This method was inspired by the Carbonado mod (by InsaneGames_)
      * https://www.curseforge.com/minecraft/mc-mods/carbonado
      *
-     * @param worldIn A World instance
-     * @param pos The position of the destroyed block.
+     * @param worldIn     A World instance
+     * @param pos         The position of the destroyed block.
      * @param explosionIn A Explosion
      */
     @Override
     public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
-        if(!worldIn.isRemote) {
+        if (!worldIn.isRemote) {
             if (General.replaceBedrockOreWithBedrockOnExplosion.get()) {
                 worldIn.setBlockState(pos, Blocks.BEDROCK.getDefaultState(), 3);
             }
@@ -40,23 +40,16 @@ public class BedrockOreWithParticles extends OreWithParticles {
     }
 
     /**
-     *  The resistance for bedrock ores can be defined via config.
-     *  This method can be called on a bedrock ore block to return the corresponding resistance.
+     * The resistance for bedrock ores can be defined via config.
+     * This method can be called on a bedrock ore block to return the corresponding resistance.
      *
      * @return The resistance of the block.
      */
     @SuppressWarnings("deprecation")
     @Override
     public float getExplosionResistance() {
-
-        ResourceLocation resLoc = this.getRegistryName();
-        if (resLoc != null) {
-            String blockName = resLoc.toString().split(":")[1];
-            UnmodifiableConfig config = ConfigHandler.getConfig(this);
-            double d = ((ForgeConfigSpec.DoubleValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getPropertiesPath() + "." + PathHandler.getResistancePath())).get();
-            return (float) d;
-        } else {
-            return this.blockResistance;
-        }
+        UnmodifiableConfig config = ConfigHandler.getConfig(this);
+        double d = ((ForgeConfigSpec.DoubleValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getModNamePath(this.getBlockBaseModId()) + "." + PathHandler.getBlockNamePath(this.getStoneVariant(), this.getRichnessType(), this.getOreType()) + "." + PathHandler.getPropertiesPath() + "." + PathHandler.getResistancePath())).get();
+        return (float) d;
     }
 }

@@ -287,8 +287,8 @@ public class PoorVulcanite {
         BUILDER.comment("Poor Vulcanite Ores").push(PathHandler.getGeneralPath());
         disablePoorVulcaniteOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disablePoorBurnEffectVulcaniteOres = BUILDER.comment("If true, poor vulcanite ores will not set players on fire while in their inventory/hand.").define("disableBurnEffect", false);
-        onlyWhileSelectedVulcaniteOres = BUILDER.comment("If true, a player will only be set on fire while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationBurnEffectVulcaniteOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
+        onlyWhileSelectedVulcaniteOres = BUILDER.comment("If true, a player will only be set on fire while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getOnlyWhileSelectedPath(), false);
+        durationBurnEffectVulcaniteOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getEffectDurationPath(), 1, 1, 1000000);
         BUILDER.comment("Stone Poor Vulcanite Ore").push("stone_poor_vulcanite_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStonePoorVulcaniteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);

@@ -15,6 +15,13 @@ public class Test {
     public ForgeConfigSpec create(String path, OreTypes oType, RichnessTypes rType) {
         ConfigTypes cType = oType.getConfigType();
         ForgeConfigSpec.BooleanValue disableOreType;
+        ForgeConfigSpec.DoubleValue explosionChance;
+        ForgeConfigSpec.DoubleValue explosionRange;
+        ForgeConfigSpec.BooleanValue explosionBreaksBlocks;
+        ForgeConfigSpec.BooleanValue disableEffect;
+        ForgeConfigSpec.BooleanValue onlyWhileSelected;
+        ForgeConfigSpec.IntValue effectDuration;
+        ForgeConfigSpec.IntValue effectLevel;
 
         ForgeConfigSpec.BooleanValue enableStoneOre;
         ForgeConfigSpec.IntValue veinSizeStoneOre;
@@ -25,6 +32,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistStoneOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistStoneOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistStoneOre;
+        ForgeConfigSpec.IntValue minXpStoneOre;
+        ForgeConfigSpec.IntValue maxXpStoneOre;
 
         ForgeConfigSpec.BooleanValue enableAndesiteOre;
         ForgeConfigSpec.IntValue veinSizeAndesiteOre;
@@ -35,6 +44,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistAndesiteOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistAndesiteOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistAndesiteOre;
+        ForgeConfigSpec.IntValue minXpAndesiteOre;
+        ForgeConfigSpec.IntValue maxXpAndesiteOre;
 
         ForgeConfigSpec.BooleanValue enableDioriteOre;
         ForgeConfigSpec.IntValue veinSizeDioriteOre;
@@ -45,6 +56,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistDioriteOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistDioriteOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistDioriteOre;
+        ForgeConfigSpec.IntValue minXpDioriteOre;
+        ForgeConfigSpec.IntValue maxXpDioriteOre;
 
         ForgeConfigSpec.BooleanValue enableGraniteOre;
         ForgeConfigSpec.IntValue veinSizeGraniteOre;
@@ -55,6 +68,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistGraniteOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistGraniteOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistGraniteOre;
+        ForgeConfigSpec.IntValue minXpGraniteOre;
+        ForgeConfigSpec.IntValue maxXpGraniteOre;
 
         ForgeConfigSpec.BooleanValue enableNetherrackOre;
         ForgeConfigSpec.IntValue veinSizeNetherrackOre;
@@ -65,6 +80,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistNetherrackOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistNetherrackOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistNetherrackOre;
+        ForgeConfigSpec.IntValue minXpNetherrackOre;
+        ForgeConfigSpec.IntValue maxXpNetherrackOre;
 
         ForgeConfigSpec.BooleanValue enableEndStoneOre;
         ForgeConfigSpec.IntValue veinSizeEndStoneOre;
@@ -75,6 +92,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEndStoneOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistEndStoneOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEndStoneOre;
+        ForgeConfigSpec.IntValue minXpEndStoneOre;
+        ForgeConfigSpec.IntValue maxXpEndStoneOre;
 
         ForgeConfigSpec.BooleanValue enableSandOre;
         ForgeConfigSpec.IntValue veinSizeSandOre;
@@ -85,6 +104,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistSandOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistSandOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistSandOre;
+        ForgeConfigSpec.IntValue minXpSandOre;
+        ForgeConfigSpec.IntValue maxXpSandOre;
 
         ForgeConfigSpec.BooleanValue enableRedSandOre;
         ForgeConfigSpec.IntValue veinSizeRedSandOre;
@@ -95,6 +116,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistRedSandOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandOre;
+        ForgeConfigSpec.IntValue minXpRedSandOre;
+        ForgeConfigSpec.IntValue maxXpRedSandOre;
 
         ForgeConfigSpec.BooleanValue enableSandstoneOre;
         ForgeConfigSpec.IntValue veinSizeSandstoneOre;
@@ -105,6 +128,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistSandstoneOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistSandstoneOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistSandstoneOre;
+        ForgeConfigSpec.IntValue minXpSandstoneOre;
+        ForgeConfigSpec.IntValue maxXpSandstoneOre;
 
         ForgeConfigSpec.BooleanValue enableRedSandstoneOre;
         ForgeConfigSpec.IntValue veinSizeRedSandstoneOre;
@@ -115,6 +140,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistRedSandstoneOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistRedSandstoneOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistRedSandstoneOre;
+        ForgeConfigSpec.IntValue minXpRedSandstoneOre;
+        ForgeConfigSpec.IntValue maxXpRedSandstoneOre;
 
         ForgeConfigSpec.BooleanValue enableGravelOre;
         ForgeConfigSpec.IntValue veinSizeGravelOre;
@@ -125,6 +152,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistGravelOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistGravelOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistGravelOre;
+        ForgeConfigSpec.IntValue minXpGravelOre;
+        ForgeConfigSpec.IntValue maxXpGravelOre;
 
         ForgeConfigSpec.BooleanValue enableBlueIceOre;
         ForgeConfigSpec.IntValue veinSizeBlueIceOre;
@@ -135,6 +164,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistBlueIceOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistBlueIceOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBlueIceOre;
+        ForgeConfigSpec.IntValue minXpBlueIceOre;
+        ForgeConfigSpec.IntValue maxXpBlueIceOre;
 
         ForgeConfigSpec.BooleanValue enablePackedIceOre;
         ForgeConfigSpec.IntValue veinSizePackedIceOre;
@@ -145,6 +176,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistPackedIceOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistPackedIceOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistPackedIceOre;
+        ForgeConfigSpec.IntValue minXpPackedIceOre;
+        ForgeConfigSpec.IntValue maxXpPackedIceOre;
 
         ForgeConfigSpec.BooleanValue enableBedrockOre;
         ForgeConfigSpec.IntValue veinSizeBedrockOre;
@@ -156,6 +189,8 @@ public class Test {
         ForgeConfigSpec.BooleanValue isBiomeWhitelistBedrockOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistBedrockOre;
         ForgeConfigSpec.DoubleValue resistanceBedrockOre;
+        ForgeConfigSpec.IntValue minXpBedrockOre;
+        ForgeConfigSpec.IntValue maxXpBedrockOre;
 
         ForgeConfigSpec.BooleanValue enableQuarkBasaltOre;
         ForgeConfigSpec.IntValue veinSizeQuarkBasaltOre;
@@ -166,6 +201,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistQuarkBasaltOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistQuarkBasaltOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistQuarkBasaltOre;
+        ForgeConfigSpec.IntValue minXpQuarkBasaltOre;
+        ForgeConfigSpec.IntValue maxXpQuarkBasaltOre;
 
         ForgeConfigSpec.BooleanValue enableQuarkLimestoneOre;
         ForgeConfigSpec.IntValue veinSizeQuarkLimestoneOre;
@@ -176,6 +213,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistQuarkLimestoneOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistQuarkLimestoneOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistQuarkLimestoneOre;
+        ForgeConfigSpec.IntValue minXpQuarkLimestoneOre;
+        ForgeConfigSpec.IntValue maxXpQuarkLimestoneOre;
 
         ForgeConfigSpec.BooleanValue enableQuarkJasperOre;
         ForgeConfigSpec.IntValue veinSizeQuarkJasperOre;
@@ -186,6 +225,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistQuarkJasperOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistQuarkJasperOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistQuarkJasperOre;
+        ForgeConfigSpec.IntValue minXpQuarkJasperOre;
+        ForgeConfigSpec.IntValue maxXpQuarkJasperOre;
 
         ForgeConfigSpec.BooleanValue enableQuarkMarbleOre;
         ForgeConfigSpec.IntValue veinSizeQuarkMarbleOre;
@@ -196,6 +237,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistQuarkMarbleOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistQuarkMarbleOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistQuarkMarbleOre;
+        ForgeConfigSpec.IntValue minXpQuarkMarbleOre;
+        ForgeConfigSpec.IntValue maxXpQuarkMarbleOre;
 
         ForgeConfigSpec.BooleanValue enableQuarkSlateOre;
         ForgeConfigSpec.IntValue veinSizeQuarkSlateOre;
@@ -206,6 +249,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistQuarkSlateOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistQuarkSlateOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistQuarkSlateOre;
+        ForgeConfigSpec.IntValue minXpQuarkSlateOre;
+        ForgeConfigSpec.IntValue maxXpQuarkSlateOre;
 
         ForgeConfigSpec.BooleanValue enableEmbellishcraftBasaltOre;
         ForgeConfigSpec.IntValue veinSizeEmbellishcraftBasaltOre;
@@ -216,6 +261,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEmbellishcraftBasaltOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftBasaltOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftBasaltOre;
+        ForgeConfigSpec.IntValue minXpEmbellishcraftBasaltOre;
+        ForgeConfigSpec.IntValue maxXpEmbellishcraftBasaltOre;
 
         ForgeConfigSpec.BooleanValue enableEmbellishcraftGneissOre;
         ForgeConfigSpec.IntValue veinSizeEmbellishcraftGneissOre;
@@ -226,6 +273,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEmbellishcraftGneissOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftGneissOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftGneissOre;
+        ForgeConfigSpec.IntValue minXpEmbellishcraftGneissOre;
+        ForgeConfigSpec.IntValue maxXpEmbellishcraftGneissOre;
 
         ForgeConfigSpec.BooleanValue enableEmbellishcraftJadeOre;
         ForgeConfigSpec.IntValue veinSizeEmbellishcraftJadeOre;
@@ -236,6 +285,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEmbellishcraftJadeOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftJadeOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftJadeOre;
+        ForgeConfigSpec.IntValue minXpEmbellishcraftJadeOre;
+        ForgeConfigSpec.IntValue maxXpEmbellishcraftJadeOre;
 
         ForgeConfigSpec.BooleanValue enableEmbellishcraftLarvikiteOre;
         ForgeConfigSpec.IntValue veinSizeEmbellishcraftLarvikiteOre;
@@ -246,6 +297,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEmbellishcraftLarvikiteOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftLarvikiteOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftLarvikiteOre;
+        ForgeConfigSpec.IntValue minXpEmbellishcraftLarvikiteOre;
+        ForgeConfigSpec.IntValue maxXpEmbellishcraftLarvikiteOre;
 
         ForgeConfigSpec.BooleanValue enableEmbellishcraftMarbleOre;
         ForgeConfigSpec.IntValue veinSizeEmbellishcraftMarbleOre;
@@ -256,6 +309,8 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEmbellishcraftMarbleOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftMarbleOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftMarbleOre;
+        ForgeConfigSpec.IntValue minXpEmbellishcraftMarbleOre;
+        ForgeConfigSpec.IntValue maxXpEmbellishcraftMarbleOre;
 
         ForgeConfigSpec.BooleanValue enableEmbellishcraftSlateOre;
         ForgeConfigSpec.IntValue veinSizeEmbellishcraftSlateOre;
@@ -266,26 +321,32 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistEmbellishcraftSlateOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistEmbellishcraftSlateOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistEmbellishcraftSlateOre;
+        ForgeConfigSpec.IntValue minXpEmbellishcraftSlateOre;
+        ForgeConfigSpec.IntValue maxXpEmbellishcraftSlateOre;
 
-        ForgeConfigSpec.BooleanValue enableMysticalAgricultureSoulstoneOre;
-        ForgeConfigSpec.IntValue veinSizeMysticalAgricultureSoulstoneOre;
-        ForgeConfigSpec.IntValue veinsPerChunkMysticalAgricultureSoulstoneOre;
-        ForgeConfigSpec.IntValue minHeightMysticalAgricultureSoulstoneOre;
-        ForgeConfigSpec.IntValue maxHeightMysticalAgricultureSoulstoneOre;
-        ForgeConfigSpec.BooleanValue isTempWhitelistMysticalAgricultureSoulstoneOre;
-        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistMysticalAgricultureSoulstoneOre;
-        ForgeConfigSpec.BooleanValue isBiomeWhitelistMysticalAgricultureSoulstoneOre;
-        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistMysticalAgricultureSoulstoneOre;
+        ForgeConfigSpec.BooleanValue enableMysticalagricultureSoulstoneOre;
+        ForgeConfigSpec.IntValue veinSizeMysticalagricultureSoulstoneOre;
+        ForgeConfigSpec.IntValue veinsPerChunkMysticalagricultureSoulstoneOre;
+        ForgeConfigSpec.IntValue minHeightMysticalagricultureSoulstoneOre;
+        ForgeConfigSpec.IntValue maxHeightMysticalagricultureSoulstoneOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistMysticalagricultureSoulstoneOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistMysticalagricultureSoulstoneOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistMysticalagricultureSoulstoneOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistMysticalagricultureSoulstoneOre;
+        ForgeConfigSpec.IntValue minXpMysticalagricultureSoulstoneOre;
+        ForgeConfigSpec.IntValue maxXpMysticalagricultureSoulstoneOre;
 
-        ForgeConfigSpec.BooleanValue enableTheMidnightNightstoneOre;
-        ForgeConfigSpec.IntValue veinSizeTheMidnightNightstoneOre;
-        ForgeConfigSpec.IntValue veinsPerChunkTheMidnightNightstoneOre;
-        ForgeConfigSpec.IntValue minHeightTheMidnightNightstoneOre;
-        ForgeConfigSpec.IntValue maxHeightTheMidnightNightstoneOre;
-        ForgeConfigSpec.BooleanValue isTempWhitelistTheMidnightNightstoneOre;
-        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistTheMidnightNightstoneOre;
-        ForgeConfigSpec.BooleanValue isBiomeWhitelistTheMidnightNightstoneOre;
-        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistTheMidnightNightstoneOre;
+        ForgeConfigSpec.BooleanValue enableMidnightNightstoneOre;
+        ForgeConfigSpec.IntValue veinSizeMidnightNightstoneOre;
+        ForgeConfigSpec.IntValue veinsPerChunkMidnightNightstoneOre;
+        ForgeConfigSpec.IntValue minHeightMidnightNightstoneOre;
+        ForgeConfigSpec.IntValue maxHeightMidnightNightstoneOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistMidnightNightstoneOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistMidnightNightstoneOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistMidnightNightstoneOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistMidnightNightstoneOre;
+        ForgeConfigSpec.IntValue minXpMidnightNightstoneOre;
+        ForgeConfigSpec.IntValue maxXpMidnightNightstoneOre;
 
         ForgeConfigSpec.BooleanValue enableHardenedStoneOre;
         ForgeConfigSpec.IntValue veinSizeHardenedStoneOre;
@@ -296,9 +357,23 @@ public class Test {
         ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistHardenedStoneOre;
         ForgeConfigSpec.BooleanValue isBiomeWhitelistHardenedStoneOre;
         ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistHardenedStoneOre;
+        ForgeConfigSpec.IntValue minXpHardenedStoneOre;
+        ForgeConfigSpec.IntValue maxXpHardenedStoneOre;
 
         BUILDER.comment(CommentHandler.getGeneralComment()).push(PathHandler.getGeneralPath());
             disableOreType = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
+            if (oType.getEffect().equals(Effects.EXPLODE)) {
+                explosionChance = BUILDER.comment(CommentHandler.getExplosionChanceComment()).defineInRange(PathHandler.getExplosionChancePath(), 10.0D, 0.0D, 100.0D);
+                explosionRange = BUILDER.comment(CommentHandler.getExplosionRangeComment()).defineInRange(PathHandler.getExplosionRangePath(), 3.0D, 0.0D, 100.0D);
+                explosionBreaksBlocks = BUILDER.comment(CommentHandler.getExplosionBreaksBlocksComment()).define(PathHandler.getExplosionBreaksBlocksPath(), false);
+            } else if(!oType.getEffect().equals(Effects.NONE)) {
+                disableEffect = BUILDER.comment(CommentHandler.getDisableEffectComment()).define(PathHandler.getDisableEffectPath(), false);
+                onlyWhileSelected = BUILDER.comment(CommentHandler.getOnlyWhileSelectedComment()).define(PathHandler.getOnlyWhileSelectedPath(), false);
+                effectDuration = BUILDER.comment(CommentHandler.getEffectDurationComment()).defineInRange(PathHandler.getEffectDurationPath(), 1, 1, 1000000);
+                if (!oType.getEffect().equals(Effects.BURN)) {
+                    effectLevel = BUILDER.comment(CommentHandler.getEffectLevelComment()).defineInRange(PathHandler.getEffectLevelPath(), 1, 1, 128);
+                }
+            }
             BUILDER.comment("Vanilla Stone Variants").push(PathHandler.getModNamePath(VariantsModId.MINECRAFT));
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.STONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.STONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -312,6 +387,12 @@ public class Test {
                         isBiomeWhitelistStoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistStoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                            minXpStoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                            maxXpStoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.ANDESITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.ANDESITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -325,6 +406,12 @@ public class Test {
                         isBiomeWhitelistAndesiteOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistAndesiteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpAndesiteOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpAndesiteOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.DIORITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.DIORITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -338,6 +425,12 @@ public class Test {
                         isBiomeWhitelistDioriteOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistDioriteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpDioriteOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpDioriteOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.GRANITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.GRANITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -351,6 +444,12 @@ public class Test {
                         isBiomeWhitelistGraniteOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistGraniteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpGraniteOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpGraniteOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.NETHERRACK, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.NETHERRACK, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -364,6 +463,12 @@ public class Test {
                         isBiomeWhitelistNetherrackOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistNetherrackOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpNetherrackOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpNetherrackOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.END_STONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.END_STONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -377,6 +482,12 @@ public class Test {
                         isBiomeWhitelistEndStoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistEndStoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpEndStoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpEndStoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.SAND, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.SAND, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -390,6 +501,12 @@ public class Test {
                         isBiomeWhitelistSandOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistSandOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpSandOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpSandOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.RED_SAND, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.RED_SAND, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -403,6 +520,12 @@ public class Test {
                     isBiomeWhitelistRedSandOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                     biomeBlacklistRedSandOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpRedSandOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpRedSandOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.SANDSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.SANDSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -416,6 +539,12 @@ public class Test {
                         isBiomeWhitelistSandstoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistSandstoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpSandstoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpSandstoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.RED_SANDSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.RED_SANDSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -429,6 +558,12 @@ public class Test {
                         isBiomeWhitelistRedSandstoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistRedSandstoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpRedSandstoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpRedSandstoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.GRAVEL, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.GRAVEL, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -442,6 +577,12 @@ public class Test {
                         isBiomeWhitelistGravelOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistGravelOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpGravelOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpGravelOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.BLUE_ICE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.BLUE_ICE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -455,6 +596,12 @@ public class Test {
                         isBiomeWhitelistBlueIceOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistBlueIceOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpBlueIceOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpBlueIceOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.PACKED_ICE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.PACKED_ICE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -468,6 +615,12 @@ public class Test {
                         isBiomeWhitelistPackedIceOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistPackedIceOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpPackedIceOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpPackedIceOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.BEDROCK, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.BEDROCK, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -483,6 +636,10 @@ public class Test {
                     BUILDER.pop();
                     BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
                         resistanceBedrockOre = BUILDER.comment(CommentHandler.getResistanceComment()).defineInRange(PathHandler.getResistancePath(), 9.0, 0.0, 3600000.0);
+                        if(oType.equals(OreTypes.XP)) {
+                            minXpBedrockOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                            maxXpBedrockOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        }
                     BUILDER.pop();
                 BUILDER.pop();
             BUILDER.pop();
@@ -499,6 +656,12 @@ public class Test {
                         isBiomeWhitelistQuarkBasaltOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistQuarkBasaltOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpQuarkBasaltOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpQuarkBasaltOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_LIMESTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_LIMESTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -512,6 +675,12 @@ public class Test {
                         isBiomeWhitelistQuarkLimestoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistQuarkLimestoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpQuarkLimestoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpQuarkLimestoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_JASPER, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_JASPER, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -525,6 +694,12 @@ public class Test {
                         isBiomeWhitelistQuarkJasperOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistQuarkJasperOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpQuarkJasperOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpQuarkJasperOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_MARBLE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_MARBLE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -538,6 +713,12 @@ public class Test {
                         isBiomeWhitelistQuarkMarbleOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistQuarkMarbleOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpQuarkMarbleOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpQuarkMarbleOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_SLATE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_SLATE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -551,6 +732,12 @@ public class Test {
                         isBiomeWhitelistQuarkSlateOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistQuarkSlateOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpQuarkSlateOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpQuarkSlateOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
             BUILDER.pop();
             BUILDER.comment("Embellishcraft Stone Variants").push(PathHandler.getModNamePath(VariantsModId.EMBELLISHCRAFT));
@@ -566,6 +753,12 @@ public class Test {
                         isBiomeWhitelistEmbellishcraftBasaltOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistEmbellishcraftBasaltOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpEmbellishcraftBasaltOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpEmbellishcraftBasaltOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_GNEISS, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_GNEISS, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -579,6 +772,12 @@ public class Test {
                         isBiomeWhitelistEmbellishcraftGneissOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistEmbellishcraftGneissOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpEmbellishcraftGneissOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpEmbellishcraftGneissOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_JADE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_JADE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -592,6 +791,12 @@ public class Test {
                         isBiomeWhitelistEmbellishcraftJadeOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistEmbellishcraftJadeOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpEmbellishcraftJadeOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpEmbellishcraftJadeOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_LARVIKITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_LARVIKITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -605,6 +810,12 @@ public class Test {
                         isBiomeWhitelistEmbellishcraftLarvikiteOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistEmbellishcraftLarvikiteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpEmbellishcraftLarvikiteOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpEmbellishcraftLarvikiteOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_MARBLE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_MARBLE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -618,6 +829,12 @@ public class Test {
                         isBiomeWhitelistEmbellishcraftMarbleOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistEmbellishcraftMarbleOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpEmbellishcraftMarbleOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpEmbellishcraftMarbleOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_SLATE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_SLATE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -631,36 +848,54 @@ public class Test {
                         isBiomeWhitelistEmbellishcraftSlateOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistEmbellishcraftSlateOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpEmbellishcraftSlateOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpEmbellishcraftSlateOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
             BUILDER.pop();
             BUILDER.comment("Mystical Agriculture Stone Variants").push(PathHandler.getModNamePath(VariantsModId.MYSTICALAGRICULTURE));
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.MYSTICALAGRICULTURE_SOULSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.MYSTICALAGRICULTURE_SOULSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableMysticalAgricultureSoulstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
-                        veinSizeMysticalAgricultureSoulstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
-                        veinsPerChunkMysticalAgricultureSoulstoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
-                        minHeightMysticalAgricultureSoulstoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
-                        maxHeightMysticalAgricultureSoulstoneOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
-                        isTempWhitelistMysticalAgricultureSoulstoneOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
-                        temperatureBlacklistMysticalAgricultureSoulstoneOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
-                        isBiomeWhitelistMysticalAgricultureSoulstoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-                        biomeBlacklistMysticalAgricultureSoulstoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                        enableMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        veinSizeMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
             BUILDER.pop();
             BUILDER.comment("The Midnight Stone Variants").push(PathHandler.getModNamePath(VariantsModId.MIDNIGHT));
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.MIDNIGHT_NIGHTSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.MIDNIGHT_NIGHTSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableTheMidnightNightstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
-                        veinSizeTheMidnightNightstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
-                        veinsPerChunkTheMidnightNightstoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
-                        minHeightTheMidnightNightstoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
-                        maxHeightTheMidnightNightstoneOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
-                        isTempWhitelistTheMidnightNightstoneOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
-                        temperatureBlacklistTheMidnightNightstoneOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
-                        isBiomeWhitelistTheMidnightNightstoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-                        biomeBlacklistTheMidnightNightstoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                        enableMidnightNightstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        veinSizeMidnightNightstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkMidnightNightstoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightMidnightNightstoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightMidnightNightstoneOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistMidnightNightstoneOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistMidnightNightstoneOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistMidnightNightstoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistMidnightNightstoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpMidnightNightstoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpMidnightNightstoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
             BUILDER.pop();
             BUILDER.comment("Danny's Ores Stone Variants").push(PathHandler.getModNamePath(VariantsModId.DANNYS_ORES));
@@ -676,6 +911,12 @@ public class Test {
                         isBiomeWhitelistHardenedStoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
                         biomeBlacklistHardenedStoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
                     BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpHardenedStoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpHardenedStoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
                 BUILDER.pop();
             BUILDER.pop();
         BUILDER.pop();

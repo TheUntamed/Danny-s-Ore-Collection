@@ -1,6 +1,7 @@
 package com.danny.dannys_ores.util;
 
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.blocks.SimpleBlock;
 import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.configs.ores.elementary.*;
@@ -22,6 +23,7 @@ import net.minecraftforge.fml.RegistryObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ConfigHandler {
 
@@ -277,11 +279,30 @@ public class ConfigHandler {
     public static void checkConfig(ArrayList<String> biomeVerify, ArrayList<String> tempVerify) {
         for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
             Block block = blockRO.get();
-            System.err.println("Config Checker current block: " + block);
-            ResourceLocation resLoc = block.getRegistryName();
-            if (resLoc != null) {
-                String blockName = resLoc.toString().split(":")[1];
-                UnmodifiableConfig config = ConfigHandler.getConfig(block);
+            UnmodifiableConfig config = ConfigHandler.getConfig(block);
+            if (block instanceof SimpleOre) {
+                SimpleOre ore = (SimpleOre) block;
+                OreTypes oType = ore.getOreType();
+                RichnessTypes rType = ore.getRichnessType();
+                StoneVariants variant = ore.getStoneVariant();
+                VariantsModId fillerBlockModId = ore.getBlockBaseModId();
+                ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathHandler.getGeneralPath() + "." + PathHandler.getModNamePath(fillerBlockModId) + "." + PathHandler.getBlockNamePath(variant, rType, oType) + "." + PathHandler.getGenerationPath() + "." + PathHandler.getBiomeBlacklistPath());
+                List<String> biomeList = inBiomeFCS.get();
+                ForgeConfigSpec.ConfigValue<List<String>> inTempFCS = config.get(PathHandler.getGeneralPath() + "." + PathHandler.getModNamePath(fillerBlockModId) + "." + PathHandler.getBlockNamePath(variant, rType, oType) + "." + PathHandler.getGenerationPath() + "." + PathHandler.getTemperatureBlacklistPath());
+                List<String> tempList = inTempFCS.get();
+                for (String name : biomeList) {
+                    if (!biomeVerify.contains(name)) {
+                        Main.LOGGER.warn("Invalid biome '" + name + "' in Danny's Ores Config in Biome Blacklist for '" + CommentHandler.getBlockNameComment(variant, rType, oType) + "', please check the entries!");
+                    }
+                }
+                for (String temp : tempList) {
+                    if (!tempVerify.contains(temp)) {
+                        Main.LOGGER.warn("Invalid temperature '" + temp + "' in Danny's Ores Config in Temperature Blacklist for '" + CommentHandler.getBlockNameComment(variant, rType, oType) + "', please check the entries!");
+                    }
+                }
+            } else if (block instanceof SimpleBlock) {
+                SimpleBlock simpleBlock = (SimpleBlock) block;
+                String blockName = Objects.requireNonNull(simpleBlock.getRegistryName()).toString();
                 ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getBiomeBlacklistPath());
                 List<String> biomeList = inBiomeFCS.get();
                 ForgeConfigSpec.ConfigValue<List<String>> inTempFCS = config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getTemperatureBlacklistPath());
@@ -296,8 +317,6 @@ public class ConfigHandler {
                         Main.LOGGER.warn("Invalid temperature '" + temp + "' in Danny's Ores Config in Temperature Blacklist for '" + blockName + "', please check the entries!");
                     }
                 }
-            } else {
-                throw new NullPointerException("Block '" + block + "' has no registry name!");
             }
         }
     }

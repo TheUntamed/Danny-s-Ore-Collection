@@ -1,6 +1,10 @@
 # TODOs
 
-* Configs for new ores
+* Fix Vanilla Ore generation
+* create config path builder
+* set ConfigTypes
+* dynamic effectDuration default and min value
+* code cleanup
 * Data Gen for new ores
 
 * Add particles to Charged Certus Quartz Ore and maybe some other ores

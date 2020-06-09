@@ -287,8 +287,8 @@ public class Order {
         BUILDER.comment("Order Ores").push(PathHandler.getGeneralPath());
         disableOrderOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disableBurnEffectOrderOres = BUILDER.comment("If true, order ores will not set players on order while in their inventory/hand.").define("disableBurnEffect", false);
-        onlyWhileSelectedOrderOres = BUILDER.comment("If true, a player will only be set on order while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationBurnEffectOrderOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
+        onlyWhileSelectedOrderOres = BUILDER.comment("If true, a player will only be set on order while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getOnlyWhileSelectedPath(), false);
+        durationBurnEffectOrderOres = BUILDER.comment("How long the effect will last (in seconds) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getEffectDurationPath(), 1, 1, 1000000);
         BUILDER.comment("Stone Order Ore").push("stone_order_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStoneOrderOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);

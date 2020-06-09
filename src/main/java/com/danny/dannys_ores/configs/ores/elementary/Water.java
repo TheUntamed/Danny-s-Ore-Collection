@@ -286,7 +286,7 @@ public class Water {
         BUILDER.comment("Water Ores").push(PathHandler.getGeneralPath());
         disableWaterOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disableEffectWaterOres = BUILDER.comment("If true, water ores will not reduce the air volume of players while in their inventory/hand.").define("disableDrownEffect", false);
-        onlyWhileSelectedWaterOres = BUILDER.comment("If true, the air volume of a player will only be reduced while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
+        onlyWhileSelectedWaterOres = BUILDER.comment("If true, the air volume of a player will only be reduced while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getOnlyWhileSelectedPath(), false);
         BUILDER.comment("Stone Water Ore").push("stone_water_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
         enableStoneWaterOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);

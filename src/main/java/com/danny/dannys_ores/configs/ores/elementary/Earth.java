@@ -288,8 +288,8 @@ public class Earth {
         BUILDER.comment("Earth Ores").push(PathHandler.getGeneralPath());
         disableEarthOres = BUILDER.comment(CommentHandler.getDisableAllVariantsComment()).define(PathHandler.getDisableAllVariantsPath(), false);
         disableEffectEarthOres = BUILDER.comment("If true, earth ores will not slow players down while in their inventory/hand.").define("disableSlownessEffect", false);
-        onlyWhileSelectedEarthOres = BUILDER.comment("If true, a player will only be slowed down while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getSelectedPath(), false);
-        durationSlownessEffectEarthOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getDurationPath(), 1, 1, 1000000);
+        onlyWhileSelectedEarthOres = BUILDER.comment("If true, a player will only be slowed down while holding the ore in a hand. If false, it just has to be in the inventory.").define(PathHandler.getOnlyWhileSelectedPath(), false);
+        durationSlownessEffectEarthOres = BUILDER.comment("How long the effect will last (in ticks) after removing the ore from the inventory/hand. While in hand/inventory the timer will refresh.").defineInRange(PathHandler.getEffectDurationPath(), 1, 1, 1000000);
         effectLevelEarthOres = BUILDER.comment(CommentHandler.getEffectLevelComment()).defineInRange(PathHandler.getEffectLevelPath(), 1, 1, 10);
         BUILDER.comment("Stone Earth Ore").push("stone_earth_ore");
         BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
