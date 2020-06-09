@@ -7,7 +7,6 @@ import com.danny.dannys_ores.util.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
-import net.minecraft.client.renderer.model.Variant;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
@@ -15,12 +14,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
 public class BlockInit {
+    public static HashMap<OreTypes, StoneVariants> vanilla = new HashMap<>();
 
     @ObjectHolder("quark:basalt")
     public static final Block QUARK_BASALT = null;
@@ -55,15 +53,14 @@ public class BlockInit {
     public static final RegistryObject<Block> HARDENED_COBBLESTONE = BLOCKS.register("hardened_cobblestone", () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(2.5F, 6.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE)));
 
     public static void initOres() {
-        //HashMap<OreTypes, StoneVariants> vanilla = new HashMap<>();
-        ArrayList<OreTypes> vanilla = new ArrayList<>();
-        vanilla.add(OreTypes.COAL);
-        vanilla.add(OreTypes.IRON);
-        vanilla.add(OreTypes.GOLD);
-        vanilla.add(OreTypes.LAPIS);
-        vanilla.add(OreTypes.REDSTONE);
-        vanilla.add(OreTypes.DIAMOND);
-        vanilla.add(OreTypes.EMERALD);
+        vanilla.put(OreTypes.COAL, StoneVariants.STONE);
+        vanilla.put(OreTypes.IRON, StoneVariants.STONE);
+        vanilla.put(OreTypes.GOLD, StoneVariants.STONE);
+        vanilla.put(OreTypes.LAPIS, StoneVariants.STONE);
+        vanilla.put(OreTypes.REDSTONE, StoneVariants.STONE);
+        vanilla.put(OreTypes.DIAMOND, StoneVariants.STONE);
+        vanilla.put(OreTypes.EMERALD, StoneVariants.STONE);
+        vanilla.put(OreTypes.QUARTZ, StoneVariants.NETHERRACK);
 
         for (RichnessTypes rType : RichnessTypes.values()) {
             String rTypeName = rType.getName();
@@ -112,7 +109,7 @@ public class BlockInit {
                                     //Main.LOGGER.info("The BlockInit reg name: " + regName);
                                     BLOCKS.register(regName, () -> new BedrockOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp));
                                 } else {
-                                    if (!rTypeNormal || !(variant.equals(StoneVariants.STONE) && vanilla.contains(oType) || variant.equals(StoneVariants.NETHERRACK) && oType.equals(OreTypes.QUARTZ))) {
+                                    if (!(rTypeNormal && vanilla.containsKey(oType) && variant.equals(vanilla.get(oType)))) {
                                         //Main.LOGGER.info("The BlockInit reg name: " + regName);
                                         BLOCKS.register(regName, () -> new SimpleOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()), variant, variant.getModid(), rType, oType, minXp, maxXp));
                                     }
