@@ -40,18 +40,6 @@ public class Main {
     public static final String MOD_ID = "dannys_ores";
     public static Main instance;
 
-    // True if the mod 'Quark' by Vazkii is in the mod list.
-    public static boolean quark;
-
-    // True if the mod 'Embellishcraft' by Mapper is in the mod list.
-    public static boolean embellishcraft;
-
-    // True if the mod 'The Midnight' by cipher_zero_x is in the mod list.
-    public static boolean theMidnight;
-
-    // True if the mod 'Mystical Agriculture' by BlakeBr0 is in the mod list.
-    public static boolean mysticalAgriculture;
-
 
     public Main() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -128,6 +116,12 @@ public class Main {
         LOGGER.debug("Registered BlockItems!");
     }
 
+    /**
+     * For the textures a background + overlay technique is used.
+     * For it to work the render type of all blocks has to be set to translucent.
+     *
+     * @param event The event for client setup.
+     */
     private void doClientStuff(final FMLClientSetupEvent event) {
         for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
             RenderTypeLookup.setRenderLayer(block.get(), RenderType.getTranslucent());

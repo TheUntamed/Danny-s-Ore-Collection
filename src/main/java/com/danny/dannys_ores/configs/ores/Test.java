@@ -12,6 +12,13 @@ public class Test {
     private ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     private ForgeConfigSpec spec;
 
+    /**
+     * Creates a config file for all ores with the given feature combination.
+     * @param path The directory the file should be placed in.
+     * @param oType The ore type.
+     * @param rType The richness type
+     * @return ForgeConfigSpec containing all config values and their unambiguously paths
+     */
     public ForgeConfigSpec create(String path, OreTypes oType, RichnessTypes rType) {
         ConfigTypes cType = oType.getConfigType();
         ForgeConfigSpec.BooleanValue disableOreType;
@@ -928,6 +935,11 @@ public class Test {
         return spec;
     }
 
+    /**
+     * Getter method.
+     *
+     * @return ForgeConfigSpec containing all config values and their unambiguously paths.
+     */
     public ForgeConfigSpec getSpec() {
         return spec;
     }

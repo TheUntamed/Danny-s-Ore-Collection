@@ -4,6 +4,12 @@ import net.minecraftforge.fml.ModList;
 
 public class ModHandler {
 
+    /**
+     * Checks if a given mod is loaded.
+     *
+     * @param modId The mod to check.
+     * @return True if the mod is in the forge mod list.
+     */
     public static boolean variantsModIdExists(VariantsModId modId) {
         ModList mods = ModList.get();
         switch (modId) {

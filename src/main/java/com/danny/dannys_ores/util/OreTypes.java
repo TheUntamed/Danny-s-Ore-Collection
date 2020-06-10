@@ -2,6 +2,9 @@ package com.danny.dannys_ores.util;
 
 import net.minecraft.particles.BasicParticleType;
 
+/**
+ * Provides the ore type feature. Each ore has exactly one of these features assigned.
+ */
 public enum OreTypes {
     //Vanilla
     COAL("coal", 0, 0, 2, Effects.NONE,null, true, ConfigTypes.COAL),

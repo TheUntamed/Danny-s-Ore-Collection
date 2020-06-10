@@ -20,8 +20,10 @@ import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.RegistryObject;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
@@ -32,15 +34,17 @@ public class ConfigHandler {
      * This method selects the correct config for a given block.
      *
      * @param block The block the config should be returned for.
-     *              return All Values of the config file that matches the block type.
+     * @return All Values of the config file that matches the block type.
      */
     public static UnmodifiableConfig getConfig(Block block) {
-
         if (block instanceof SimpleOre) {
             SimpleOre ore = (SimpleOre) block;
             return Config.allConfigs.get(ore.getRichnessType()).get(ore.getOreType()).getValues();
-        } else {
+        } else if (block instanceof SimpleBlock) {
             return Stones.spec.getValues();
+        } else {
+            HashMap<Block, Pair<OreTypes, StoneVariants>> vanilla = BlockInit.getFilledVanillaBlockMap();
+            return Config.allConfigs.get(RichnessTypes.NORMAL).get(vanilla.get(block).getLeft()).getValues();
         }
     }
 

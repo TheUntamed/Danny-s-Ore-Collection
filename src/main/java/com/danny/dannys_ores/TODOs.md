@@ -1,9 +1,9 @@
 # TODOs
 
-* Fix Vanilla Ore generation
 * create config path builder
 * set ConfigTypes
 * dynamic effectDuration default and min value
+* improve general and stone variants config
 * code cleanup
 * Data Gen for new ores
 

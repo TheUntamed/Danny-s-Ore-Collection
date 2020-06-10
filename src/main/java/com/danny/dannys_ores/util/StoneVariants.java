@@ -7,6 +7,9 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.common.ToolType;
 
+/**
+ * Provides the stone variant feature. Each ore has exactly one of these features assigned.
+ */
 public enum StoneVariants {
     STONE("stone", VariantsModId.MINECRAFT, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
     DIORITE("diorite", VariantsModId.MINECRAFT, Material.ROCK, MaterialColor.QUARTZ, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),

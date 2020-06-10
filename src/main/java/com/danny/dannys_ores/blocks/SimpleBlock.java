@@ -48,8 +48,8 @@ public class SimpleBlock extends Block {
             case QUARK_JASPER: return BlockInit.QUARK_JASPER;
             case QUARK_MARBLE: return BlockInit.QUARK_MARBLE;
             case QUARK_SLATE: return BlockInit.QUARK_SLATE;
-            case MYSTICALAGRICULTURE_SOULSTONE: return BlockInit.SOULSTONE;
-            case MIDNIGHT_NIGHTSTONE: return BlockInit.NIGHTSTONE;
+            case MYSTICALAGRICULTURE_SOULSTONE: return BlockInit.MYSTICALAGRICULTURE_SOULSTONE;
+            case MIDNIGHT_NIGHTSTONE: return BlockInit.MIDNIGHT_NIGHTSTONE;
             default:
                 throw new IllegalArgumentException("For the ore '" + this + "' with block base '" + blockBase + "' no block base could be returned!");
         }

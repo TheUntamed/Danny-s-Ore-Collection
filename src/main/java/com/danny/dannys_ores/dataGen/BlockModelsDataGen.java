@@ -25,6 +25,7 @@ public class BlockModelsDataGen extends BlockModelProvider {
             Block block = blockRO.get();
             Block fillerBlock;
             if (block instanceof SimpleBlock) {
+                SimpleBlock simpleBlock = (SimpleBlock) block;
                 fillerBlock = ((SimpleBlock) block).getBlockBase();
                 String fillerBlockName;
                 String blockName = block.getRegistryName().toString().split(":")[1];

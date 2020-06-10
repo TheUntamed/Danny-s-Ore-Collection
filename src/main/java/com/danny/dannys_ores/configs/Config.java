@@ -24,6 +24,9 @@ public class Config {
     private static HashMap<OreTypes, ForgeConfigSpec> denseConfigs = new HashMap<>();
     public static HashMap<RichnessTypes, HashMap<OreTypes, ForgeConfigSpec>> allConfigs = new HashMap<>();
 
+    /**
+     * Main method to creates all config folders and files.
+     */
     public static void loadConfigs() {
         createDirectories();
 
@@ -62,6 +65,9 @@ public class Config {
         allConfigs.put(RichnessTypes.DENSE, denseConfigs);
     }
 
+    /**
+     * Creates all config folders.
+     */
     private static void createDirectories() {
         Path configPath = FMLPaths.CONFIGDIR.get();
         myConfigPath = Paths.get(configPath.toAbsolutePath().toString(), Main.MOD_ID);

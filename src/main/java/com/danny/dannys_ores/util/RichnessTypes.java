@@ -1,6 +1,8 @@
 package com.danny.dannys_ores.util;
 
-
+/**
+ * Provides the richness type feature. Each ore has exactly one of these features assigned.
+ */
 public enum RichnessTypes {
     NORMAL("normal", 1.0F),
     POOR("poor", 0.5F),
