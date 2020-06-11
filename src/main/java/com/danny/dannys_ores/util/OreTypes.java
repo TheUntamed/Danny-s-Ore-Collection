@@ -8,13 +8,13 @@ import net.minecraft.particles.BasicParticleType;
 public enum OreTypes {
     //Vanilla
     COAL("coal", 0, 0, 2, Effects.NONE,null, true, ConfigTypes.COAL),
-    DIAMOND("diamond", 2, 3, 7, Effects.NONE,null, true, ConfigTypes.COAL),
-    EMERALD("emerald", 2, 3, 7, Effects.NONE,null, true, ConfigTypes.COAL),
-    GOLD("gold", 1, 0, 0, Effects.NONE,null, true, ConfigTypes.COAL),
-    IRON("iron", 1, 0, 0, Effects.NONE,null, true, ConfigTypes.COAL),
-    LAPIS("lapis", 1, 2, 5, Effects.NONE,null, true, ConfigTypes.COAL),
-    QUARTZ("quartz", 1, 2, 5, Effects.NONE,null, true, ConfigTypes.COAL),
-    REDSTONE("redstone", 2, 2, 5, Effects.NONE,null, true, ConfigTypes.COAL),
+    DIAMOND("diamond", 2, 3, 7, Effects.NONE,null, true, ConfigTypes.DIAMOND),
+    EMERALD("emerald", 2, 3, 7, Effects.NONE,null, true, ConfigTypes.EMERALD),
+    GOLD("gold", 1, 0, 0, Effects.NONE,null, true, ConfigTypes.GOLD),
+    IRON("iron", 1, 0, 0, Effects.NONE,null, true, ConfigTypes.IRON),
+    LAPIS("lapis", 1, 2, 5, Effects.NONE,null, true, ConfigTypes.LAPIS),
+    QUARTZ("quartz", 1, 2, 5, Effects.NONE,null, true, ConfigTypes.QUARTZ),
+    REDSTONE("redstone", 2, 2, 5, Effects.NONE,null, true, ConfigTypes.REDSTONE),
 
     //Gems
     AMETHYST("amethyst", 3, 3, 7, Effects.NONE,null, true, ConfigTypes.COAL),
@@ -144,5 +144,18 @@ public enum OreTypes {
 
     public Effects getEffect() {
         return effect;
+    }
+
+    /**
+     * This method is used by configs to define the default and minimum effect duration.
+     *
+     * @return The duration of an effect
+     */
+    public int getEffectDuration() {
+        if (this.getEffect().equals(Effects.POISON)) {
+            return 25;
+        } else {
+            return 1;
+        }
     }
 }
