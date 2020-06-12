@@ -463,8 +463,8 @@ public class Test {
                         enableNetherrackOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeNetherrackOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getNetherFactor()), 0, 65536);
                         veinsPerChunkNetherrackOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getNetherFactor()), 0, 65536);
-                        minHeightNetherrackOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), 128 - cType.getMaxY(), 0, 256);
-                        maxHeightNetherrackOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 128 - cType.getMinY(), 0, 256);
+                        minHeightNetherrackOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), Math.max(128 - cType.getMaxY(), 0), 0, 256);
+                        maxHeightNetherrackOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), Math.max(128 - cType.getMinY(), 0), 0, 256);
                         isTempWhitelistNetherrackOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
                         temperatureBlacklistNetherrackOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
                         isBiomeWhitelistNetherrackOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
@@ -499,8 +499,8 @@ public class Test {
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.SAND, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.SAND, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableSandOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
-                        veinSizeSandOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(0.5F), 0, 65536);
-                        veinsPerChunkSandOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(0.5F), 0, 65536);
+                        veinSizeSandOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
+                        veinsPerChunkSandOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                         minHeightSandOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
                         maxHeightSandOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 128, 0, 256);
                         isTempWhitelistSandOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
@@ -518,8 +518,8 @@ public class Test {
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.RED_SAND, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.RED_SAND, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                     enableRedSandOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
-                    veinSizeRedSandOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(0.5F), 0, 65536);
-                    veinsPerChunkRedSandOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(0.5F), 0, 65536);
+                    veinSizeRedSandOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
+                    veinsPerChunkRedSandOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                     minHeightRedSandOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
                     maxHeightRedSandOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 128, 0, 256);
                     isTempWhitelistRedSandOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
@@ -537,8 +537,8 @@ public class Test {
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.SANDSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.SANDSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableSandstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
-                        veinSizeSandstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(0.5F), 0, 65536);
-                        veinsPerChunkSandstoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(0.5F), 0, 65536);
+                        veinSizeSandstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
+                        veinsPerChunkSandstoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                         minHeightSandstoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
                         maxHeightSandstoneOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 128, 0, 256);
                         isTempWhitelistSandstoneOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
@@ -556,8 +556,8 @@ public class Test {
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.RED_SANDSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.RED_SANDSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableRedSandstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
-                        veinSizeRedSandstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(0.5F), 0, 65536);
-                        veinsPerChunkRedSandstoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(0.5F), 0, 65536);
+                        veinSizeRedSandstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
+                        veinsPerChunkRedSandstoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                         minHeightRedSandstoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
                         maxHeightRedSandstoneOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 128, 0, 256);
                         isTempWhitelistRedSandstoneOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
@@ -575,8 +575,8 @@ public class Test {
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.GRAVEL, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.GRAVEL, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableGravelOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
-                        veinSizeGravelOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(0.5F), 0, 65536);
-                        veinsPerChunkGravelOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(0.5F), 0, 65536);
+                        veinSizeGravelOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
+                        veinsPerChunkGravelOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                         minHeightGravelOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
                         maxHeightGravelOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 128, 0, 256);
                         isTempWhitelistGravelOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
@@ -594,8 +594,8 @@ public class Test {
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.BLUE_ICE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.BLUE_ICE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableBlueIceOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
-                        veinSizeBlueIceOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(0.5F), 0, 65536);
-                        veinsPerChunkBlueIceOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(0.5F), 0, 65536);
+                        veinSizeBlueIceOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
+                        veinsPerChunkBlueIceOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                         minHeightBlueIceOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
                         maxHeightBlueIceOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 128, 0, 256);
                         isTempWhitelistBlueIceOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
@@ -613,8 +613,8 @@ public class Test {
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.PACKED_ICE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.PACKED_ICE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enablePackedIceOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
-                        veinSizePackedIceOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(0.5F), 0, 65536);
-                        veinsPerChunkPackedIceOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(0.5F), 0, 65536);
+                        veinSizePackedIceOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
+                        veinsPerChunkPackedIceOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                         minHeightPackedIceOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
                         maxHeightPackedIceOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 128, 0, 256);
                         isTempWhitelistPackedIceOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
@@ -633,7 +633,7 @@ public class Test {
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
                         enableBedrockOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeBedrockOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);
-                        veinsPerChunkBedrockOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 1, 0, 65536);
+                        veinsPerChunkBedrockOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 4, 0, 65536);
                         minHeightBedrockOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), 0, 0, 256);
                         maxHeightBedrockOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 128, 0, 256);
                         isTempWhitelistBedrockOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
@@ -656,8 +656,8 @@ public class Test {
                         enableQuarkBasaltOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
                         veinSizeQuarkBasaltOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getNetherFactor()), 0, 65536);
                         veinsPerChunkQuarkBasaltOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getNetherFactor()), 0, 65536);
-                        minHeightQuarkBasaltOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), 128 - cType.getMaxY(), 0, 256);
-                        maxHeightQuarkBasaltOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), 128 - cType.getMinY(), 0, 256);
+                        minHeightQuarkBasaltOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), Math.max(128 - cType.getMaxY(), 0), 0, 256);
+                        maxHeightQuarkBasaltOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), Math.max(128 - cType.getMinY(), 0), 0, 256);
                         isTempWhitelistQuarkBasaltOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
                         temperatureBlacklistQuarkBasaltOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
                         isBiomeWhitelistQuarkBasaltOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
