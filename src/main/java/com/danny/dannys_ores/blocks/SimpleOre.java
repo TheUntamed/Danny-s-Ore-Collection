@@ -1,5 +1,7 @@
 package com.danny.dannys_ores.blocks;
 
+import com.danny.dannys_ores.configs.ConfigHandler;
+import com.danny.dannys_ores.configs.PathBuilder;
 import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
@@ -38,8 +40,8 @@ public class SimpleOre extends SimpleBlock {
             StoneVariants variant = this.getStoneVariant();
             VariantsModId fillerBlockModId = this.getBlockBaseModId();
             return MathHelper.nextInt(random,
-                    ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getModNamePath(fillerBlockModId) + "." + PathHandler.getBlockNamePath(variant, rType, oType) + "." + PathHandler.getPropertiesPath() + "." + PathHandler.getMinXpDropPath())).get(),
-                    ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getModNamePath(fillerBlockModId) + "." + PathHandler.getBlockNamePath(variant, rType, oType) + "." + PathHandler.getPropertiesPath() + "." + PathHandler.getMaxXpDropPath())).get());
+                    ((ForgeConfigSpec.IntValue) config.get(PathBuilder.getMinXpDropFullPath(fillerBlockModId, variant, rType, oType))).get(),
+                    ((ForgeConfigSpec.IntValue) config.get(PathBuilder.getMaxXpDropFullPath(fillerBlockModId, variant, rType, oType))).get());
         } else {
             return MathHelper.nextInt(RANDOM, minXp, maxXp);
         }

@@ -1,13 +1,14 @@
 package com.danny.dannys_ores.blocks.bedrock;
 
 import com.danny.dannys_ores.blocks.OreWithParticles;
-import com.danny.dannys_ores.configs.General;
+import com.danny.dannys_ores.configs.ConfigHandler;
+import com.danny.dannys_ores.configs.GeneralConfig;
+import com.danny.dannys_ores.configs.PathBuilder;
 import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.particles.BasicParticleType;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
@@ -32,7 +33,7 @@ public class BedrockOreWithParticles extends OreWithParticles {
     @Override
     public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
         if (!worldIn.isRemote) {
-            if (General.replaceBedrockOreWithBedrockOnExplosion.get()) {
+            if (GeneralConfig.replaceBedrockOreWithBedrockOnExplosion.get()) {
                 worldIn.setBlockState(pos, Blocks.BEDROCK.getDefaultState(), 3);
             }
             worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 2.0f, 1.5f);
@@ -49,7 +50,7 @@ public class BedrockOreWithParticles extends OreWithParticles {
     @Override
     public float getExplosionResistance() {
         UnmodifiableConfig config = ConfigHandler.getConfig(this);
-        double d = ((ForgeConfigSpec.DoubleValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getModNamePath(this.getBlockBaseModId()) + "." + PathHandler.getBlockNamePath(this.getStoneVariant(), this.getRichnessType(), this.getOreType()) + "." + PathHandler.getPropertiesPath() + "." + PathHandler.getResistancePath())).get();
+        double d = ((ForgeConfigSpec.DoubleValue) config.get(PathBuilder.getResistanceFullPath(this.getBlockBaseModId(), this.getStoneVariant(), this.getRichnessType(), this.getOreType()))).get();
         return (float) d;
     }
 }

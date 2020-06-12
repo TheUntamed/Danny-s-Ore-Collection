@@ -1,7 +1,7 @@
 package com.danny.dannys_ores.blockItems;
 
-import com.danny.dannys_ores.util.ConfigHandler;
-import com.danny.dannys_ores.util.PathHandler;
+import com.danny.dannys_ores.configs.ConfigHandler;
+import com.danny.dannys_ores.configs.PathBuilder;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -23,10 +23,10 @@ public class HotBlockItem extends BlockItem {
     public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
         if (!worldIn.isRemote) {
             if (entityIn instanceof PlayerEntity) {
-                if (!((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getDisableEffectPath())).get()) {
-                    boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getOnlyWhileSelectedPath())).get();
+                if (!((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getDisableEffectFullPath())).get()) {
+                    boolean onlyIfSelected = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getOnlyWhileSelectedFullPath())).get();
                     if (!onlyIfSelected || isSelected) {
-                        int duration = ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getEffectDurationPath())).get();
+                        int duration = ((ForgeConfigSpec.IntValue) config.get(PathBuilder.getEffectDurationFullPath())).get();
                         entityIn.setFire(duration);
                     }
                 }

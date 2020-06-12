@@ -1,7 +1,6 @@
 package com.danny.dannys_ores.configs;
 
 import com.danny.dannys_ores.Main;
-import com.danny.dannys_ores.configs.ores.Test;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -35,24 +34,24 @@ public class Config {
         String densePath = configPathDenseOres.toString();
         String poorPath = configPathPoorOres.toString();
 
-        General.loadConfig(generalPath);
-        Stones.loadConfig(generalPath);
+        GeneralConfig.loadConfig(generalPath);
+        StonesConfig.loadConfig(generalPath);
 
         for (RichnessTypes rType : RichnessTypes.values()) {
             for (OreTypes oType : OreTypes.values()) {
-                Test test = new Test();
+                OresConfig oresConfig = new OresConfig();
                 ForgeConfigSpec oreSpec;
                 if (rType.equals(RichnessTypes.NORMAL)) {
-                    oreSpec = test.create(normalPath, oType, rType);
+                    oreSpec = oresConfig.create(normalPath, oType, rType);
                     normalConfigs.put(oType, oreSpec);
                 } else if (rType.equals(RichnessTypes.POOR)) {
                     if(oType.isHasRichnessLevels()) {
-                        oreSpec = test.create(poorPath, oType, rType);
+                        oreSpec = oresConfig.create(poorPath, oType, rType);
                         poorConfigs.put(oType, oreSpec);
                     }
                 } else if (rType.equals(RichnessTypes.DENSE)) {
                     if(oType.isHasRichnessLevels()) {
-                        oreSpec = test.create(densePath, oType, rType);
+                        oreSpec = oresConfig.create(densePath, oType, rType);
                         denseConfigs.put(oType, oreSpec);
                     }
                 } else {

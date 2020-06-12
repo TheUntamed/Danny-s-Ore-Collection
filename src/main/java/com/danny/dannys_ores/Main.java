@@ -6,7 +6,8 @@ import com.danny.dannys_ores.configs.Config;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.OreTypes;
-import com.danny.dannys_ores.util.PathHandler;
+import com.danny.dannys_ores.util.RichnessTypes;
+import com.danny.dannys_ores.util.StoneVariants;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
@@ -16,7 +17,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -149,6 +149,15 @@ public class Main {
 
         @Override
         public ItemStack createIcon() {
+            for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+                Block block = blockRO.get();
+                if (block instanceof SimpleOre) {
+                    SimpleOre ore = (SimpleOre) block;
+                    if (ore.getOreType().equals(OreTypes.INSANIUM) && ore.getStoneVariant().equals(StoneVariants.HARDENED_STONE) && ore.getRichnessType().equals(RichnessTypes.NORMAL)) {
+                        return new ItemStack(Blocks.DIAMOND_ORE);
+                    }
+                }
+            }
             return new ItemStack(Blocks.DIAMOND_ORE);
         }
     }

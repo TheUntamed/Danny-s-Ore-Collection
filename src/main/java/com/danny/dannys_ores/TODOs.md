@@ -1,8 +1,7 @@
 # TODOs
 
-* Change nether y level generation
-* create config path builder
 * improve general and stone variants config
+* extend config path builder for general and stone variants config
 * code cleanup
 * Data Gen for new ores
 

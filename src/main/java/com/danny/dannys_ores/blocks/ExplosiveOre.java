@@ -1,5 +1,7 @@
 package com.danny.dannys_ores.blocks;
 
+import com.danny.dannys_ores.configs.ConfigHandler;
+import com.danny.dannys_ores.configs.PathBuilder;
 import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
@@ -25,12 +27,12 @@ public class ExplosiveOre extends SimpleOre {
         // This code is supposed to run server side only.
         if(!worldIn.isRemote) {
             UnmodifiableConfig config =  ConfigHandler.getConfig(this);
-            double chance = ((ForgeConfigSpec.DoubleValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getExplosionChancePath())).get();
+            double chance = ((ForgeConfigSpec.DoubleValue) config.get(PathBuilder.getExplosionChanceFullPath())).get();
             double rand = RANDOM.nextDouble() * 100;
             if (rand < chance) {
-                double explosionRange = ((ForgeConfigSpec.DoubleValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getExplosionRangePath())).get();
+                double explosionRange = ((ForgeConfigSpec.DoubleValue) config.get(PathBuilder.getExplosionRangeFullPath())).get();
                 Explosion.Mode eM = NONE;
-                if(((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getExplosionBreaksBlocksPath())).get()) {
+                if(((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getExplosionBreaksBlocksFullPath())).get()) {
                     eM = BREAK;
                 }
                 worldIn.createExplosion(null, pos.getX(), pos.getY(), pos.getZ(), (float) explosionRange, true, eM);
