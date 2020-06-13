@@ -4,6 +4,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 
+/**
+ * Provides some custom material types.
+ * The existing material types like SAND, GRAVEL and ICE do not require a tool
+ * but that's necessary to set a harvest level for blocks with those materials.
+ */
 public class MyMaterials extends Material.Builder {
 
     public MyMaterials(MaterialColor properties) {

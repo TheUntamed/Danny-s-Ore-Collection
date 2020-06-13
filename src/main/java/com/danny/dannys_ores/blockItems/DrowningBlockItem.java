@@ -13,6 +13,11 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeConfigSpec;
 
+/**
+ * An item of this class reduces a player's air volume while in his/her inventory/hand
+ * and might also drown the player.
+ * TODO: Having multiple different items of this class in the inventory multiplies the effect. (Shouldn't be.)
+ */
 public class DrowningBlockItem extends BlockItem {
     private UnmodifiableConfig config;
 

@@ -16,6 +16,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * This class has nothing to do with the creation process of the configs. For that see {@link Config}.
+ * It instead provides a method to get the correct config for a block
+ * and a config checker that checks the configs for invalid entries (has to be enabled in the general config).
+ */
 public class ConfigHandler {
 
     /**
@@ -23,7 +28,7 @@ public class ConfigHandler {
      * This method selects the correct config for a given block.
      *
      * @param block The block the config should be returned for.
-     * @return All Values of the config file that matches the block type.
+     * @return All values of the config file that matches the block type.
      */
     public static UnmodifiableConfig getConfig(Block block) {
         if (block instanceof SimpleOre) {
@@ -38,11 +43,11 @@ public class ConfigHandler {
     }
 
     /**
-     * Checks the Blacklists in all Configs (of this mod) for invalid entries and logs them.
+     * Checks the blacklists in all configs (of this mod) for invalid entries and logs them.
      * This should help the user to fix an error caused by an invalid entry.
      *
-     * @param biomeVerify A List of all Vanilla and modded biomes.
-     * @param tempVerify  A List of all Vanilla and modded biome temperatures.
+     * @param biomeVerify A List of all vanilla and modded biomes.
+     * @param tempVerify  A List of all vanilla and modded biome temperatures.
      */
     public static void checkConfig(ArrayList<String> biomeVerify, ArrayList<String> tempVerify) {
         for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
@@ -54,9 +59,9 @@ public class ConfigHandler {
                 RichnessTypes rType = ore.getRichnessType();
                 StoneVariants variant = ore.getStoneVariant();
                 VariantsModId fillerBlockModId = ore.getBlockBaseModId();
-                ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathHandler.getGeneralPath() + "." + PathHandler.getModNamePath(fillerBlockModId) + "." + PathHandler.getBlockNamePath(variant, rType, oType) + "." + PathHandler.getGenerationPath() + "." + PathHandler.getBiomeBlacklistPath());
+                ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathBuilder.getBiomeBlacklistFullPath(fillerBlockModId, variant, rType, oType));
                 List<String> biomeList = inBiomeFCS.get();
-                ForgeConfigSpec.ConfigValue<List<String>> inTempFCS = config.get(PathHandler.getGeneralPath() + "." + PathHandler.getModNamePath(fillerBlockModId) + "." + PathHandler.getBlockNamePath(variant, rType, oType) + "." + PathHandler.getGenerationPath() + "." + PathHandler.getTemperatureBlacklistPath());
+                ForgeConfigSpec.ConfigValue<List<String>> inTempFCS = config.get(PathBuilder.getTemperatureBlacklistFullPath(fillerBlockModId, variant, rType, oType));
                 List<String> tempList = inTempFCS.get();
                 for (String name : biomeList) {
                     if (!biomeVerify.contains(name)) {
@@ -71,9 +76,9 @@ public class ConfigHandler {
             } else if (block instanceof SimpleBlock) {
                 SimpleBlock simpleBlock = (SimpleBlock) block;
                 String blockName = Objects.requireNonNull(simpleBlock.getRegistryName()).toString();
-                ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getBiomeBlacklistPath());
+                ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathBuilder.getBiomeBlacklistFullPath(blockName));
                 List<String> biomeList = inBiomeFCS.get();
-                ForgeConfigSpec.ConfigValue<List<String>> inTempFCS = config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getTemperatureBlacklistPath());
+                ForgeConfigSpec.ConfigValue<List<String>> inTempFCS = config.get(PathBuilder.getTemperatureBlacklistFullPath(blockName));
                 List<String> tempList = inTempFCS.get();
                 for (String name : biomeList) {
                     if (!biomeVerify.contains(name)) {

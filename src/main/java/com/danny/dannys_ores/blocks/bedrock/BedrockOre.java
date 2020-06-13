@@ -13,6 +13,10 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeConfigSpec;
 
+/**
+ * A bedrock ore acts just like a simple ore but it also can be mined with explosions.
+ * Also the explosion resistance can be adjusted via config.
+ */
 public class BedrockOre extends SimpleOre {
 
     public BedrockOre(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {

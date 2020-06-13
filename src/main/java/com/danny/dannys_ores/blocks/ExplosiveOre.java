@@ -15,6 +15,9 @@ import net.minecraftforge.common.ForgeConfigSpec;
 import static net.minecraft.world.Explosion.Mode.BREAK;
 import static net.minecraft.world.Explosion.Mode.NONE;
 
+/**
+ * A simple ore that has a chance to explode when mined.
+ */
 public class ExplosiveOre extends SimpleOre {
 
     public ExplosiveOre(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {

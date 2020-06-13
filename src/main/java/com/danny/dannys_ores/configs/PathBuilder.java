@@ -18,10 +18,6 @@ public class PathBuilder {
         return getGeneralPath() + "." + rType.getName() + "." + PathHandler.getDisableAllVariantsPath();
     }
 
-    public static String getDisableAllVariantsFullPath() {
-        return getGeneralPath() + "." + PathHandler.getDisableAllVariantsPath();
-    }
-
     public static String getEnableVariantFullPath(VariantsModId fillerBlockModId, StoneVariants variant, RichnessTypes rType, OreTypes oType) {
         return getGenerationPath(fillerBlockModId, variant, rType, oType) + "." + PathHandler.getEnableVariantPath();
     }
@@ -115,6 +111,10 @@ public class PathBuilder {
     // Stone Variants //
     //################//
 
+    public static String getDisableAllVariantsFullPath() {
+        return getGeneralPath() + "." + PathHandler.getDisableAllVariantsPath();
+    }
+
     public static String getEnableVariantFullPath(String blockName) {
         return getGenerationPath(blockName) + "." + PathHandler.getEnableVariantPath();
     }
@@ -149,6 +149,10 @@ public class PathBuilder {
 
     public static String getBiomeBlacklistFullPath(String blockName) {
         return getGenerationPath(blockName) + "." + PathHandler.getBiomeBlacklistPath();
+    }
+
+    public static String getStoneVariantsFullPath(RichnessTypes rType, String variantWithOwner) {
+        return PathHandler.getGeneralPath() + "." + rType.getName() + "." + PathHandler.getStoneVariantsPath() + "." + variantWithOwner;
     }
 
 

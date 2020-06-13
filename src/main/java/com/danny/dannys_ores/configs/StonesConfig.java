@@ -7,6 +7,10 @@ import net.minecraftforge.fml.config.ModConfig;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Creates a config file to handle the configurations for all stone variants added by this mod.
+ * (Just hardened stone right now.)
+ */
 public class StonesConfig {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static ForgeConfigSpec spec;
@@ -49,6 +53,10 @@ public class StonesConfig {
         //BUILDER.pop();
     }
 
+    /**
+     * The method called
+     * @param path
+     */
     public static void loadConfig(String path) {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, StonesConfig.spec, path + "/stone_variants.toml");
     }

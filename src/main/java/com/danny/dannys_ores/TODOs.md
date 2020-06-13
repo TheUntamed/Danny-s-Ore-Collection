@@ -1,8 +1,6 @@
 # TODOs
 
-* improve general and stone variants config
-* extend config path builder for general and stone variants config
-* code cleanup
+* Fix dense lapis style textures
 * Data Gen for new ores
 
 * Add particles to Charged Certus Quartz Ore and maybe some other ores

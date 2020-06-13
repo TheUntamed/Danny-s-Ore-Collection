@@ -16,9 +16,7 @@ public class PathHandler {
 
     public PathHandler() { }
 
-    public static String getDisableAllVariantsPath() {
-        return "disableAllVariants";
-    }
+    public static String getDisableAllVariantsPath() { return "disableAllVariants"; }
 
     public static String getEnableVariantPath() {
         return "enableVariant";

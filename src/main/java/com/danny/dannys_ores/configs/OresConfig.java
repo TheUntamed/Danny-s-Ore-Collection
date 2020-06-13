@@ -13,7 +13,9 @@ public class OresConfig {
     private ForgeConfigSpec spec;
 
     /**
-     * Creates a config file for all ores with the given feature combination.
+     * An object of this class represents a config file for all stone variants
+     * of an ore type + richness type combination. E.g. 'dense lapis ore' or 'normal copper ore'.
+     *
      * @param path The directory the file should be placed in.
      * @param oType The ore type.
      * @param rType The richness type

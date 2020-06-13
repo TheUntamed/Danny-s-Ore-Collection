@@ -6,6 +6,12 @@ import com.danny.dannys_ores.util.StoneVariants;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 
+/**
+ * An object of this class represents a simple block of this mod.
+ * All blocks of this class also generate in world.
+ * A simple block has block properties, a block base (the stone variant that acts as filler block for the block),
+ * and the modId of the block base as enum element.
+ */
 public class SimpleBlock extends Block {
     private StoneVariants blockBase;
     private VariantsModId blockBaseModId;
@@ -16,10 +22,20 @@ public class SimpleBlock extends Block {
         this.blockBaseModId = blockBaseModId;
     }
 
+    /**
+     *
+     * @return The block base as enum element.
+     */
     public StoneVariants getStoneVariant() {
         return blockBase;
     }
 
+    /**
+     * Transforms the block base enum element into the actual block and returns it.
+     * TODO: Maybe there is a better method than a switch case to do this.
+     *
+     * @return The block base as actual block.
+     */
     public Block getBlockBase() {
         switch (blockBase) {
             case STONE: return Blocks.STONE;
@@ -55,6 +71,10 @@ public class SimpleBlock extends Block {
         }
     }
 
+    /**
+     *
+     * @return The modId of the block base as enum element.
+     */
     public VariantsModId getBlockBaseModId() {
         return blockBaseModId;
     }

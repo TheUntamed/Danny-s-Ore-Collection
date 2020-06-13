@@ -153,7 +153,7 @@ public class Main {
                 Block block = blockRO.get();
                 if (block instanceof SimpleOre) {
                     SimpleOre ore = (SimpleOre) block;
-                    if (ore.getOreType().equals(OreTypes.INSANIUM) && ore.getStoneVariant().equals(StoneVariants.HARDENED_STONE) && ore.getRichnessType().equals(RichnessTypes.NORMAL)) {
+                    if (ore.getOreType().equals(OreTypes.GOLD) && ore.getStoneVariant().equals(StoneVariants.RED_SAND) && ore.getRichnessType().equals(RichnessTypes.NORMAL)) {
                         return new ItemStack(ore);
                     }
                 }

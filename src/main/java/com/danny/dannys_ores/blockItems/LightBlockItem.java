@@ -14,6 +14,9 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeConfigSpec;
 
+/**
+ * An item of this class makes a player levitate while in his/her inventory/hand.
+ */
 public class LightBlockItem extends BlockItem {
     private UnmodifiableConfig config;
 

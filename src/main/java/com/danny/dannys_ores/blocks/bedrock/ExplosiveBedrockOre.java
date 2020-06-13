@@ -15,6 +15,9 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeConfigSpec;
 
+/**
+ * A simple bedrock ore that has a chance to explode when mined.
+ */
 public class ExplosiveBedrockOre extends ExplosiveOre {
 
     public ExplosiveBedrockOre(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId, RichnessTypes rType, OreTypes oType, int minXp, int maxXp) {

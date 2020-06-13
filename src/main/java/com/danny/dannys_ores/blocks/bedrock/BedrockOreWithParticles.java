@@ -16,6 +16,9 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeConfigSpec;
 
+/**
+ * There are no ores with particle effects right now.
+ */
 public class BedrockOreWithParticles extends OreWithParticles {
 
     public BedrockOreWithParticles(Block.Properties properties, StoneVariants blockBase, VariantsModId blockBaseModId, RichnessTypes rType, OreTypes oType, int minXp, int maxXp, BasicParticleType bpt) {

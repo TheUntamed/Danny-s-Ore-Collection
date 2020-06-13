@@ -11,6 +11,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeConfigSpec;
 
+/**
+ * An item of this class sets a player on fire while in his/her inventory/hand.
+ */
 public class HotBlockItem extends BlockItem {
     private UnmodifiableConfig config;
 

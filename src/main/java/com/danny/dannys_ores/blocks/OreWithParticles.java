@@ -14,6 +14,9 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
 
+/**
+ * There are no ores with particle effects right now.
+ */
 public class OreWithParticles extends SimpleOre {
     private BasicParticleType bpt;
 
@@ -25,7 +28,6 @@ public class OreWithParticles extends SimpleOre {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-        //Not used right now.
         //worldIn.addParticle(bpt, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 1, 0.0D,0.0D,0.0D);
         //worldIn.addParticle(bpt, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ(), 0.0D,0.0D,0.0D);
         //worldIn.addParticle(bpt, pos.getX(), pos.getY() + 0.5, pos.getZ() + 0.5, 0.0D,0.0D,0.0D);

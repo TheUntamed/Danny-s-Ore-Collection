@@ -32,7 +32,7 @@ public class GenerationHandler {
     /**
      * Called by Main class to process all ore generation.
      * <p>
-     * The config checker and disable features were inspired by the code of the mod almost-all-the-ores by waylanderou.
+     * The 'disable existing generation features' section was inspired by the code of the mod almost-all-the-ores (by waylanderou).
      * https://github.com/waylanderou/almost-all-the-ores
      */
     public static void generateOre() {
@@ -239,7 +239,7 @@ public class GenerationHandler {
         if (((ForgeConfigSpec.BooleanValue) generalConfig.get(PathBuilder.getDisableAllVariantsFullPath(rType))).get()) {
             return false;
         } else {
-            return !((ForgeConfigSpec.BooleanValue) generalConfig.get(PathHandler.getGeneralPath() + "." + rType.getName() + "." + PathHandler.getStoneVariantsPath() + "." + variantWithOwner)).get();
+            return !((ForgeConfigSpec.BooleanValue) generalConfig.get(PathBuilder.getStoneVariantsFullPath(rType, variantWithOwner))).get();
         }
     }
 
