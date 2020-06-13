@@ -104,15 +104,17 @@ public class PathHandler {
 
     public static String getExplosionBreaksBlocksPath() { return "explosionBreaksBlocks"; }
 
+    public static String getStoneVariantsPath() {
+        return "stoneVariants";
+    }
+
     public static String getAsLayerPath() { return "asLayer"; }
 
     public static String getBlockNamePath(StoneVariants variant, RichnessTypes rType, OreTypes oType) {
 
         if (rType.equals(RichnessTypes.NORMAL)) {
-            //Main.LOGGER.info("getBlockNamePath: " + variant.getBlockName() + "_" + oType.getName() + "_ore");
             return variant.getBlockName() + "_" + oType.getName() + "_ore";
         } else {
-            //Main.LOGGER.info("getBlockNamePath: " + variant.getBlockName() + "_" + rType.getName() + "_" + oType.getName() + "_ore");
             return variant.getBlockName() + "_" + rType.getName() + "_" + oType.getName() + "_ore";
         }
     }

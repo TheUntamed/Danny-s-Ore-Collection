@@ -154,7 +154,7 @@ public class Main {
                 if (block instanceof SimpleOre) {
                     SimpleOre ore = (SimpleOre) block;
                     if (ore.getOreType().equals(OreTypes.INSANIUM) && ore.getStoneVariant().equals(StoneVariants.HARDENED_STONE) && ore.getRichnessType().equals(RichnessTypes.NORMAL)) {
-                        return new ItemStack(Blocks.DIAMOND_ORE);
+                        return new ItemStack(ore);
                     }
                 }
             }

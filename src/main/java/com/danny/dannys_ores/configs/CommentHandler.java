@@ -13,7 +13,7 @@ public class CommentHandler {
     public CommentHandler() { }
 
     public static String getDisableAllVariantsComment() {
-        return "If false, all variants of this ore type will be disabled.";
+        return "If true, all variants of this ore type will be disabled.";
     }
 
     public static String getEnableVariantComment() {

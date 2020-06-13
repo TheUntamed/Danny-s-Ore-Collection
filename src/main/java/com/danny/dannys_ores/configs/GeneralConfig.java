@@ -132,8 +132,8 @@ public class GeneralConfig {
         BUILDER.comment(CommentHandler.getGeneralComment()).push(PathHandler.getGeneralPath());
             enableConfigChecker = BUILDER.comment("Checks your blacklists and whitelists for correct syntax. If something is wrong it will be printed to the log.").define("enableConfigChecker", false);
             BUILDER.comment("Settings that affect all normal ores. Normal means all ores that are not poor or dense.").push("normal");
-                disableNormalOreGeneration = BUILDER.comment("If true, all normal ores will be disabled.").define("allVariants", false);
-                BUILDER.comment("Disable all normal ores of a certain stone variant (only affects ores of this mod). For Vanilla and other mods' ores see 'vanilla_and_other_mods' settings in this file.").push("stone_variants");
+                disableNormalOreGeneration = BUILDER.comment("If true, all normal ores will be disabled.").define(PathHandler.getDisableAllVariantsPath(), false);
+                BUILDER.comment("Disable all normal ores of a certain stone variant (only affects ores of this mod). For Vanilla and other mods' ores see 'vanilla_and_other_mods' settings in this file.").push(PathHandler.getStoneVariantsPath());
                     BUILDER.comment("Vanilla stone variants").push("minecraft");
                         disableStoneNormalOreGeneration = BUILDER.comment("If true, the Stone variant of all normal ores (except vanilla ores) will be disabled.").define("stone", false);
                         disableAndesiteNormalOreGeneration = BUILDER.comment("If true, the Andesite variant of all normal ores will be disabled.").define("andesite", false);
@@ -171,8 +171,8 @@ public class GeneralConfig {
                 BUILDER.pop();
             BUILDER.pop();
             BUILDER.comment("Settings that affect all dense ores.").push("dense");
-                disableDenseOreGeneration = BUILDER.comment("If true, all dense ores will be disabled.").define("allVariants", false);
-                BUILDER.comment("Disable all dense ores of a certain stone variant (only affects ores of this mod).").push("stone_variants");
+                disableDenseOreGeneration = BUILDER.comment("If true, all dense ores will be disabled.").define(PathHandler.getDisableAllVariantsPath(), false);
+                BUILDER.comment("Disable all dense ores of a certain stone variant (only affects ores of this mod).").push(PathHandler.getStoneVariantsPath());
                     BUILDER.comment("Vanilla stone variants").push("minecraft");
                         disableStoneDenseOreGeneration = BUILDER.comment("If true, the Stone variant of all dense ores (except vanilla ores) will be disabled.").define("stone", false);
                         disableAndesiteDenseOreGeneration = BUILDER.comment("If true, the Andesite variant of all dense ores will be disabled.").define("andesite", false);
@@ -210,8 +210,8 @@ public class GeneralConfig {
                 BUILDER.pop();
             BUILDER.pop();
             BUILDER.comment("Settings that affect all poor ores.").push("poor");
-                disablePoorOreGeneration = BUILDER.comment("If true, all poor ores will be disabled.").define("allVariants", false);
-                BUILDER.comment("Disable all poor ores of a certain stone variant (only affects ores of this mod).").push("stone_variants");
+                disablePoorOreGeneration = BUILDER.comment("If true, all poor ores will be disabled.").define(PathHandler.getDisableAllVariantsPath(), false);
+                BUILDER.comment("Disable all poor ores of a certain stone variant (only affects ores of this mod).").push(PathHandler.getStoneVariantsPath());
                     BUILDER.comment("Vanilla stone variants").push("minecraft");
                         disableStonePoorOreGeneration = BUILDER.comment("If true, the Stone variant of all poor ores (except vanilla ores) will be disabled.").define("stone", false);
                         disableAndesitePoorOreGeneration = BUILDER.comment("If true, the Andesite variant of all poor ores will be disabled.").define("andesite", false);

@@ -31,7 +31,7 @@ public class GenerationHandler {
 
     /**
      * Called by Main class to process all ore generation.
-     *
+     * <p>
      * The config checker and disable features were inspired by the code of the mod almost-all-the-ores by waylanderou.
      * https://github.com/waylanderou/almost-all-the-ores
      */
@@ -122,48 +122,48 @@ public class GenerationHandler {
             // Add own generation
             for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
                 Block block = blockRO.get();
-                ResourceLocation resLoc = block.getRegistryName();
-                if (resLoc != null) {
-                    String regName = resLoc.toString();
-                    String blockName = regName.split(":")[1];
-                    if (block instanceof SimpleOre) {
-                        SimpleOre ore = (SimpleOre) block;
-                        if (ModHandler.variantsModIdExists(ore.getBlockBaseModId())) {
-                            StoneVariants variant = ore.getStoneVariant();
-                            Block fillerBlock = ore.getBlockBase();
-                            UnmodifiableConfig generalConfig = GeneralConfig.spec.getValues();
-                            if (getVariantGenerationStatus(generalConfig, ore, fillerBlock)) {
-                                UnmodifiableConfig config = ConfigHandler.getConfig(block);
-                                OreTypes oType = ore.getOreType();
-                                RichnessTypes rType = ore.getRichnessType();
-                                VariantsModId fillerBlockModId = ore.getBlockBaseModId();
-                                if (getOreTypeGenerationStatus(config)) {
-                                    if (getSpecificOreGenerationStatus(config, oType, rType, variant, fillerBlockModId, biomeName, tempName)) {
-                                        int veinSize = ((ForgeConfigSpec.IntValue) config.get(PathBuilder.getVeinSizeFullPath(fillerBlockModId, variant, rType, oType))).get();
-                                        int veinsPerChunk = ((ForgeConfigSpec.IntValue) config.get(PathBuilder.getVeinsPerChunkFullPath(fillerBlockModId, variant, rType, oType))).get();
-                                        int minHeight = ((ForgeConfigSpec.IntValue) config.get(PathBuilder.getMinHeightFullPath(fillerBlockModId, variant, rType, oType))).get();
-                                        int maxHeight = ((ForgeConfigSpec.IntValue) config.get(PathBuilder.getMaxHeightFullPath(fillerBlockModId, variant, rType, oType))).get();
-                                        if (veinSize == 0) {
-                                            Main.LOGGER.info("Generation of '" + block + "' is enabled but vein size is 0!");
-                                        } else if (veinSize < 3) {
-                                            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.EMERALD_ORE
-                                                    .withConfiguration(new ReplaceBlockConfig(fillerBlock.getDefaultState(), block.getDefaultState()))
-                                                    .withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(veinsPerChunk, minHeight, 0, maxHeight))));
-                                        } else {
-                                            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE
-                                                    .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), veinSize))
-                                                    .withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(veinsPerChunk, minHeight, 0, maxHeight))));
-                                        }
+                if (block instanceof SimpleOre) {
+                    SimpleOre ore = (SimpleOre) block;
+                    if (ModHandler.variantsModIdExists(ore.getBlockBaseModId())) {
+                        StoneVariants variant = ore.getStoneVariant();
+                        Block fillerBlock = ore.getBlockBase();
+                        UnmodifiableConfig generalConfig = GeneralConfig.spec.getValues();
+                        if (getVariantGenerationStatus(generalConfig, ore, fillerBlock)) {
+                            UnmodifiableConfig config = ConfigHandler.getConfig(block);
+                            OreTypes oType = ore.getOreType();
+                            RichnessTypes rType = ore.getRichnessType();
+                            VariantsModId fillerBlockModId = ore.getBlockBaseModId();
+                            if (getOreTypeGenerationStatus(config)) {
+                                if (getSpecificOreGenerationStatus(config, oType, rType, variant, fillerBlockModId, biomeName, tempName)) {
+                                    int veinSize = ((ForgeConfigSpec.IntValue) config.get(PathBuilder.getVeinSizeFullPath(fillerBlockModId, variant, rType, oType))).get();
+                                    int veinsPerChunk = ((ForgeConfigSpec.IntValue) config.get(PathBuilder.getVeinsPerChunkFullPath(fillerBlockModId, variant, rType, oType))).get();
+                                    int minHeight = ((ForgeConfigSpec.IntValue) config.get(PathBuilder.getMinHeightFullPath(fillerBlockModId, variant, rType, oType))).get();
+                                    int maxHeight = ((ForgeConfigSpec.IntValue) config.get(PathBuilder.getMaxHeightFullPath(fillerBlockModId, variant, rType, oType))).get();
+                                    if (veinSize == 0) {
+                                        Main.LOGGER.info("Generation of '" + block + "' is enabled but vein size is 0!");
+                                    } else if (veinSize < 3) {
+                                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.EMERALD_ORE
+                                                .withConfiguration(new ReplaceBlockConfig(fillerBlock.getDefaultState(), block.getDefaultState()))
+                                                .withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(veinsPerChunk, minHeight, 0, maxHeight))));
+                                    } else {
+                                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE
+                                                .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), veinSize))
+                                                .withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(veinsPerChunk, minHeight, 0, maxHeight))));
                                     }
                                 }
                             }
                         }
-                    } else if (block instanceof SimpleBlock) {
+                    }
+                } else if (block instanceof SimpleBlock) {
+                    ResourceLocation resLoc = block.getRegistryName();
+                    if (resLoc != null) {
+                        String regName = resLoc.toString();
+                        String blockName = regName.split(":")[1];
                         UnmodifiableConfig config = ConfigHandler.getConfig(block);
                         if (getStoneGenerationStatus(config, blockName, biomeName, tempName)) {
                             biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                                    .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, block.getDefaultState(), max(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.clusterSize")).get(), 3)))
-                                    .withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.clustersPerChunk")).get(), ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.minHeight")).get(), 0, ((ForgeConfigSpec.IntValue) config.get("general." + blockName + ".generation.maxHeight")).get()))));
+                                    .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, block.getDefaultState(), max(((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getClusterSizePath())).get(), 3)))
+                                    .withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getClustersPerChunkPath())).get(), ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getMinHeightPath())).get(), 0, ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getMaxHeightPath())).get()))));
                         }
                     }
                 }
@@ -228,18 +228,18 @@ public class GenerationHandler {
     /**
      * Checks the general configs if an ore is allowed to generate.
      *
-     * @param generalConfig      The config to check.
-     * @param ore         The ore to check the general generation for.
-     * @param fillerBlock The filler block of the ore the generation is checked for.
+     * @param generalConfig The config to check.
+     * @param ore           The ore to check the general generation for.
+     * @param fillerBlock   The filler block of the ore the generation is checked for.
      * @return True if the block should generate.
      */
     private static boolean getVariantGenerationStatus(UnmodifiableConfig generalConfig, SimpleOre ore, Block fillerBlock) {
         String variantWithOwner = getVariantWithModOwner(fillerBlock);
         RichnessTypes rType = ore.getRichnessType();
-        if (((ForgeConfigSpec.BooleanValue) generalConfig.get(PathHandler.getGeneralPath() + "." + rType.getName() + ".allVariants")).get()) {
+        if (((ForgeConfigSpec.BooleanValue) generalConfig.get(PathBuilder.getDisableAllVariantsFullPath(rType))).get()) {
             return false;
         } else {
-            return !((ForgeConfigSpec.BooleanValue) generalConfig.get(PathHandler.getGeneralPath() + "." + rType.getName() + ".stone_variants." + variantWithOwner)).get();
+            return !((ForgeConfigSpec.BooleanValue) generalConfig.get(PathHandler.getGeneralPath() + "." + rType.getName() + "." + PathHandler.getStoneVariantsPath() + "." + variantWithOwner)).get();
         }
     }
 
@@ -254,13 +254,13 @@ public class GenerationHandler {
      * @return True if the given block should generate. False if it shouldn't.
      */
     private static boolean getStoneGenerationStatus(UnmodifiableConfig config, String blockName, String biomeName, String tempName) {
-        boolean disableAll = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + PathHandler.getDisableAllVariantsPath())).get();
-        boolean stoneVariant = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getEnableVariantPath())).get();
-        boolean isTempWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getIsTempWhitelistPath())).get();
-        boolean isBiomeWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getIsBiomeWhitelistPath())).get();
-        ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getBiomeBlacklistPath());
+        boolean disableAll = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getDisableAllVariantsFullPath())).get();
+        boolean stoneVariant = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getEnableVariantFullPath(blockName))).get();
+        boolean isTempWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getIsTempWhitelistFullPath(blockName))).get();
+        boolean isBiomeWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getIsBiomeWhitelistFullPath(blockName))).get();
+        ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathBuilder.getBiomeBlacklistFullPath(blockName));
         List<String> biomeList = inBiomeFCS.get();
-        ForgeConfigSpec.ConfigValue<List<String>> inTempFCS = config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getTemperatureBlacklistPath());
+        ForgeConfigSpec.ConfigValue<List<String>> inTempFCS = config.get(PathBuilder.getTemperatureBlacklistFullPath(blockName));
         List<String> tempList = inTempFCS.get();
         boolean biomeAllowed = (isBiomeWhite && biomeList.contains(biomeName)) || (!isBiomeWhite && !biomeList.contains(biomeName));
         boolean tempAllowed = (isTempWhite && tempList.contains(tempName)) || (!isTempWhite && !tempList.contains(tempName));

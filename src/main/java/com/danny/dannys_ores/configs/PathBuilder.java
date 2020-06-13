@@ -10,6 +10,14 @@ import com.danny.dannys_ores.util.*;
  */
 public class PathBuilder {
 
+    //######//
+    // Ores //
+    //######//
+
+    public static String getDisableAllVariantsFullPath(RichnessTypes rType) {
+        return getGeneralPath() + "." + rType.getName() + "." + PathHandler.getDisableAllVariantsPath();
+    }
+
     public static String getDisableAllVariantsFullPath() {
         return getGeneralPath() + "." + PathHandler.getDisableAllVariantsPath();
     }
@@ -91,7 +99,6 @@ public class PathBuilder {
     }
 
 
-
     public static String getGenerationPath(VariantsModId fillerBlockModId, StoneVariants variant, RichnessTypes rType, OreTypes oType) {
         return getGeneralPath() + "." + PathHandler.getModNamePath(fillerBlockModId) + "." + PathHandler.getBlockNamePath(variant, rType, oType) + "." + PathHandler.getGenerationPath();
     }
@@ -102,5 +109,50 @@ public class PathBuilder {
 
     public static String getGeneralPath() {
         return PathHandler.getGeneralPath();
+    }
+
+    //################//
+    // Stone Variants //
+    //################//
+
+    public static String getEnableVariantFullPath(String blockName) {
+        return getGenerationPath(blockName) + "." + PathHandler.getEnableVariantPath();
+    }
+
+    public static String getVeinSizeFullPath(String blockName) {
+        return getGenerationPath(blockName) + "." + PathHandler.getVeinSizePath();
+    }
+
+    public static String getVeinsPerChunkFullPath(String blockName) {
+        return getGenerationPath(blockName) + "." + PathHandler.getVeinsPerChunkPath();
+    }
+
+    public static String getMinHeightFullPath(String blockName) {
+        return getGenerationPath(blockName) + "." + PathHandler.getMinHeightPath();
+    }
+
+    public static String getMaxHeightFullPath(String blockName) {
+        return getGenerationPath(blockName) + "." + PathHandler.getMaxHeightPath();
+    }
+
+    public static String getIsTempWhitelistFullPath(String blockName) {
+        return getGenerationPath(blockName) + "." + PathHandler.getIsTempWhitelistPath();
+    }
+
+    public static String getTemperatureBlacklistFullPath(String blockName) {
+        return getGenerationPath(blockName) + "." + PathHandler.getTemperatureBlacklistPath();
+    }
+
+    public static String getIsBiomeWhitelistFullPath(String blockName) {
+        return getGenerationPath(blockName) + "." + PathHandler.getIsBiomeWhitelistPath();
+    }
+
+    public static String getBiomeBlacklistFullPath(String blockName) {
+        return getGenerationPath(blockName) + "." + PathHandler.getBiomeBlacklistPath();
+    }
+
+
+    public static String getGenerationPath(String blockName) {
+        return getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath();
     }
 }
