@@ -1,0 +1,7 @@
+{
+  "parent": "dannys_ores:block/cube_overlayed",
+  "textures": {
+    "base": "dannys_ores:block/dannys_ores_hardened_stone",
+    "overlay": "dannys_ores:block/dense_prudentium_ore"
+  }
+}

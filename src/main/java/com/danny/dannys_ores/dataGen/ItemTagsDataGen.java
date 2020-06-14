@@ -34,26 +34,26 @@ public class ItemTagsDataGen extends ItemTagsProvider {
             Block block = regObj.get();
             if (block instanceof SimpleBlock) {
                 if (block instanceof SimpleOre) {
-                    SimpleOre oreBlock = (SimpleOre) block;
+                    SimpleOre ore = (SimpleOre) block;
                     // Because the ores are grouped by type in the BlockInit classes
                     // all ores of one type will always come after each other.
-                    ores.add(oreBlock.asItem());
+                    ores.add(ore.asItem());
                     if (oType == null) {
-                        oType = oreBlock.getOreType();
-                        rType = oreBlock.getRichnessType();
-                        oreType.add(oreBlock.asItem());
-                    } else if (oType != oreBlock.getOreType()) {
+                        oType = ore.getOreType();
+                        rType = ore.getRichnessType();
+                        oreType.add(ore.asItem());
+                    } else if (oType != ore.getOreType()) {
                         if (rType.equals(RichnessTypes.NORMAL)) {
                             addForgeTag("ores/" + oType.toString().toLowerCase(), oreType);
                         } else {
                             addForgeTag("ores/" + rType.toString().toLowerCase() + "_" + oType.toString().toLowerCase(), oreType);
                         }
                         oreType.clear();
-                        oType = oreBlock.getOreType();
-                        rType = oreBlock.getRichnessType();
-                        oreType.add(oreBlock.asItem());
+                        oType = ore.getOreType();
+                        rType = ore.getRichnessType();
+                        oreType.add(ore.asItem());
                     } else {
-                        oreType.add(oreBlock.asItem());
+                        oreType.add(ore.asItem());
                     }
 
                 } else {
@@ -66,6 +66,7 @@ public class ItemTagsDataGen extends ItemTagsProvider {
         }
         addForgeTag("ores", ores);
         addForgeTag("stone", stone);
+        addForgeTag("cobblestone", cobblestone);
     }
 
     private void addForgeTag(String name, ArrayList<Item> itemsIn) {

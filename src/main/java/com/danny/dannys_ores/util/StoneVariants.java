@@ -74,7 +74,7 @@ public enum StoneVariants {
         return this.resistance;
     }
 
-    public String getName() {
+    public String getFullName() {
         return this.modid.asLowerCaseString() + "_" + this.blockName;
     }
 

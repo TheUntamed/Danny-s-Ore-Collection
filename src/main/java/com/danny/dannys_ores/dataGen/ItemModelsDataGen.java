@@ -12,29 +12,28 @@ import net.minecraftforge.fml.RegistryObject;
 
 public class ItemModelsDataGen extends ItemModelProvider {
 
-        public ItemModelsDataGen(DataGenerator generator, String modid, ExistingFileHelper existingFileHelper) {
-            super(generator, modid, existingFileHelper);
-        }
+    public ItemModelsDataGen(DataGenerator generator, String modid, ExistingFileHelper existingFileHelper) {
+        super(generator, modid, existingFileHelper);
+    }
 
-        @Override
-        protected void registerModels() {
-                Main.LOGGER.debug("registerItemModels");
-                for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
-                        ResourceLocation resLoc = block.get().getRegistryName();
-                        if (resLoc != null) {
-                                String blockName = block.get().getRegistryName().toString().split(":")[1];
-                                blockParented(block.get(), "block/" + blockName);
-                        }
-                }
+    @Override
+    protected void registerModels() {
+        Main.LOGGER.debug("registerItemModels");
+        for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
+            ResourceLocation resLoc = block.get().getRegistryName();
+            assert resLoc != null;
+            String blockName = resLoc.toString().split(":")[1];
+            blockParented(resLoc, "block/" + blockName);
         }
+    }
 
-        public void blockParented(Block block, String model) {
-                Main.LOGGER.debug("Creating item block model for " + block.getRegistryName());
-                getBuilder(block.getRegistryName().getPath()).parent(new ModelFile.UncheckedModelFile(modLoc(model)));
-        }
+    public void blockParented(ResourceLocation resLoc, String model) {
+        Main.LOGGER.debug("Creating item block model for " + resLoc);
+        getBuilder(resLoc.getPath()).parent(new ModelFile.UncheckedModelFile(modLoc(model)));
+    }
 
-        @Override
-        public String getName() {
-                return "Danny's Ores - Item Models";
-        }
+    @Override
+    public String getName() {
+        return "Danny's Ores - Item Models";
+    }
 }

@@ -62,6 +62,9 @@ public class BlockInit {
      * The main method to initialize all the ores of this mod.
      */
     public static void initOres() {
+        // For testing. Will bypass the check for installed mods and just init all ores.
+        boolean testing = true;
+        Main.LOGGER.debug("Start block init.");
         HashMap<Block, Pair<OreTypes, StoneVariants>> vanilla = getFilledVanillaBlockMap();
         for (RichnessTypes rType : RichnessTypes.values()) {
             String rTypeName = rType.getName();
@@ -74,8 +77,8 @@ public class BlockInit {
                     // If the ore has particles or an explosion effect a different block class is required.
                     if (oType.getParticles() != null) {
                         for (StoneVariants variant : StoneVariants.values()) {
-                            if (ModHandler.variantsModIdExists(variant.getModid())) {
-                                String regName = getRegName(variant, rTypeName, rTypeNormal, oTypeName);
+                            if (ModHandler.variantsModIdExists(variant.getModid()) || testing) {
+                                String regName = getRegName(variant, rTypeName, oTypeName);
                                 int minXp = getMinXp(oType, variant, rType);
                                 int maxXp = getMaxXp(oType, variant, rType);
                                 if (variant.equals(StoneVariants.BEDROCK)) {
@@ -87,8 +90,8 @@ public class BlockInit {
                         }
                     } else if (oType.getEffect().equals(Effects.EXPLODE)) {
                         for (StoneVariants variant : StoneVariants.values()) {
-                            if (ModHandler.variantsModIdExists(variant.getModid())) {
-                                String regName = getRegName(variant, rTypeName, rTypeNormal, oTypeName);
+                            if (ModHandler.variantsModIdExists(variant.getModid()) || testing) {
+                                String regName = getRegName(variant, rTypeName, oTypeName);
                                 int minXp = getMinXp(oType, variant, rType);
                                 int maxXp = getMaxXp(oType, variant, rType);
                                 if (variant.equals(StoneVariants.BEDROCK)) {
@@ -100,8 +103,8 @@ public class BlockInit {
                         }
                     } else {
                         for (StoneVariants variant : StoneVariants.values()) {
-                            if (ModHandler.variantsModIdExists(variant.getModid())) {
-                                String regName = getRegName(variant, rTypeName, rTypeNormal, oTypeName);
+                            if (ModHandler.variantsModIdExists(variant.getModid()) || testing) {
+                                String regName = getRegName(variant, rTypeName, oTypeName);
                                 int minXp = getMinXp(oType, variant, rType);
                                 int maxXp = getMaxXp(oType, variant, rType);
                                 if (variant.equals(StoneVariants.BEDROCK)) {
@@ -117,6 +120,7 @@ public class BlockInit {
                 }
             }
         }
+        Main.LOGGER.debug("Finished block init.");
     }
 
     /**
@@ -142,22 +146,13 @@ public class BlockInit {
     /**
      * Creates the registry name of an ore based on the stone variant, richness type and ore type.
      *
-     * @param variant     The stone variant.
-     * @param rTypeName   The richness type as string.
-     * @param rTypeNormal True if the richness type is 'normal'.
-     * @param oTypeName   The ore type as string.
+     * @param variant   The stone variant.
+     * @param rTypeName The richness type as string.
+     * @param oTypeName The ore type as string.
      * @return registryName for an ore.
      */
-    private static String getRegName(StoneVariants variant, String rTypeName, boolean rTypeNormal, String oTypeName) {
-        // Normal Ores don't have the richness type 'normal' in their name.
-        if (rTypeNormal) {
-            rTypeName = "_";
-        } else {
-            rTypeName = "_" + rTypeName + "_";
-        }
-        // Ores with a variant of modid minecraft or dannys_ores don't have the modid in their name.
-        String variantName = variant.getName().replace("minecraft_", "").replace("dannys_ores_", "");
-        return variantName + rTypeName + oTypeName + "_ore";
+    private static String getRegName(StoneVariants variant, String rTypeName, String oTypeName) {
+        return variant.getFullName() + "_" + rTypeName + "_" + oTypeName + "_ore";
     }
 
     /**

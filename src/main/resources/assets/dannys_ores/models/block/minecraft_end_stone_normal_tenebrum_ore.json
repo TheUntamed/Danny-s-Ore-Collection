@@ -1,0 +1,7 @@
+{
+  "parent": "dannys_ores:block/cube_overlayed",
+  "textures": {
+    "base": "dannys_ores:block/minecraft_end_stone",
+    "overlay": "dannys_ores:block/normal_tenebrum_ore"
+  }
+}

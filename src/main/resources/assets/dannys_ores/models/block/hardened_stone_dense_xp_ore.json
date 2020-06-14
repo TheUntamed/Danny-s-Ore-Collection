@@ -1,7 +1,0 @@
-{
-  "parent": "dannys_ores:block/cube_overlayed",
-  "textures": {
-    "base": "dannys_ores:block/hardened_stone",
-    "overlay": "dannys_ores:block/dense_xp_ore"
-  }
-}

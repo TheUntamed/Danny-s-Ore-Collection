@@ -1,7 +1,0 @@
-{
-  "parent": "dannys_ores:block/cube_overlayed",
-  "textures": {
-    "base": "dannys_ores:block/netherrack",
-    "overlay": "dannys_ores:block/poor_vulcanite_ore"
-  }
-}

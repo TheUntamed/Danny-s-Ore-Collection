@@ -99,7 +99,12 @@ public class CommentHandler {
     public static String getAsLayerComment() { return "If true, this stone variant will generate as a layer instead of a cluster."; }
 
     public static String getBlockNameComment(StoneVariants variant, RichnessTypes rType, OreTypes oType) {
-        String oTypeName = oType.getName().substring(0, 1).toUpperCase() + oType.getName().substring(1);
+        String[] oTypeParts = oType.getName().split("_");
+        StringBuilder oTypeBuilder = new StringBuilder();
+        for (String oTypePart : oTypeParts) {
+            oTypeBuilder.append(oTypePart.substring(0, 1).toUpperCase()).append(oTypePart.substring(1)).append(" ");
+        }
+        String oTypeName = oTypeBuilder.toString();
         String[] variantNameSplit = variant.getBlockName().split("_");
         StringBuilder variantName = new StringBuilder();
         for (String part : variantNameSplit) {
@@ -107,10 +112,10 @@ public class CommentHandler {
         }
 
         if (rType.equals(RichnessTypes.NORMAL)) {
-            return variantName + oTypeName + " Ore";
+            return variantName + oTypeName + "Ore";
         } else {
             String rTypeName = rType.getName().substring(0, 1).toUpperCase() + rType.getName().substring(1);
-            return variantName + rTypeName + " " + oTypeName + " Ore";
+            return variantName + rTypeName + " " + oTypeName + "Ore";
         }
     }
 }

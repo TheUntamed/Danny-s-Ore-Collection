@@ -1,7 +1,0 @@
-{
-  "parent": "dannys_ores:block/cube_overlayed",
-  "textures": {
-    "base": "dannys_ores:block/quark_basalt",
-    "overlay": "dannys_ores:block/electrotine_ore"
-  }
-}

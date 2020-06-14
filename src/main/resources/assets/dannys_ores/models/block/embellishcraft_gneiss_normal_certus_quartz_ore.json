@@ -1,0 +1,7 @@
+{
+  "parent": "dannys_ores:block/cube_overlayed",
+  "textures": {
+    "base": "dannys_ores:block/embellishcraft_gneiss",
+    "overlay": "dannys_ores:block/normal_certus_quartz_ore"
+  }
+}

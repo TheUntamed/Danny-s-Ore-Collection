@@ -1,0 +1,7 @@
+{
+  "parent": "dannys_ores:block/cube_overlayed",
+  "textures": {
+    "base": "dannys_ores:block/minecraft_netherrack",
+    "overlay": "dannys_ores:block/poor_adamantium_ore"
+  }
+}

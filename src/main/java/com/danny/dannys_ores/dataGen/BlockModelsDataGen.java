@@ -2,7 +2,11 @@ package com.danny.dannys_ores.dataGen;
 
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blocks.SimpleBlock;
+import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.init.BlockInit;
+import com.danny.dannys_ores.util.OreTypes;
+import com.danny.dannys_ores.util.RichnessTypes;
+import com.danny.dannys_ores.util.StoneVariants;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
@@ -23,32 +27,29 @@ public class BlockModelsDataGen extends BlockModelProvider {
         Main.LOGGER.debug("registerBlockModels");
         for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
             Block block = blockRO.get();
-            Block fillerBlock;
-            if (block instanceof SimpleBlock) {
-                SimpleBlock simpleBlock = (SimpleBlock) block;
-                fillerBlock = ((SimpleBlock) block).getBlockBase();
-                String fillerBlockName;
-                String blockName = block.getRegistryName().toString().split(":")[1];
-                //When the fillerblock is from another mod it is unknown and the name has to be created by stringsplitting
-                //that's not fancy but it only has to generate the jsons once.
-                if (fillerBlock == null) {
-                    String[] name = blockName.split("_", 3);
-                    fillerBlockName = name[0] + "_" + name[1];
-                } else {
-                    ResourceLocation resLoc = fillerBlock.getRegistryName();
-                    fillerBlockName = resLoc.toString().split(":")[1];
-                }
-                String typeName = blockName.replace(fillerBlockName + "_", "").replace("redore", "redstone_ore");
-                doubleTextureBlock(block, "block/" + fillerBlockName, "block/" + typeName);
+            ResourceLocation resLoc = block.getRegistryName();
+            assert resLoc != null;
+            if (block instanceof SimpleOre) {
+                SimpleOre ore = (SimpleOre) block;
+                StoneVariants variant = ore.getStoneVariant();
+                RichnessTypes rType = ore.getRichnessType();
+                OreTypes oType = ore.getOreType();
+                System.err.println("The current ore: " + ore + " with variant " + variant + " and ore type " + oType);
+                doubleTextureBlock(resLoc, "block/" + variant.getFullName(),
+                        "block/" + rType.getName() + "_" + oType.getName() + "_ore");
+            } else {
+                String blockName = block.getRegistryName().toString().replace(":", "_");
+                System.err.println("The current block: " + blockName);
+                doubleTextureBlock(resLoc, "block/" + blockName, "block/" + blockName);
             }
         }
-
     }
 
-    public void doubleTextureBlock(Block block, String textureBackground, String textureOverlay) {
-        getBuilder(block.getRegistryName().getPath()).parent(getModelFile()).texture("base", textureBackground).texture("overlay", textureOverlay);
+    public void doubleTextureBlock(ResourceLocation resLoc, String textureBackground, String textureOverlay) {
 
-        Main.LOGGER.debug("Creating block models model for " + block.getRegistryName());
+        getBuilder(resLoc.getPath()).parent(getModelFile()).texture("base", textureBackground).texture("overlay", textureOverlay);
+
+        Main.LOGGER.debug("Creating block models model for " + resLoc);
     }
 
     private ModelFile getModelFile() {

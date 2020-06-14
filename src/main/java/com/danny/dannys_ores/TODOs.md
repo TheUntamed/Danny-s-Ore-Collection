@@ -1,7 +1,8 @@
 # TODOs
 
+* Couldn't read block tag list forge:ores/dense_uranium from forge:tags/blocks/ores/dense_uranium.json in data pack main
 * Fix dense lapis style textures
-* Data Gen for new ores
+* Manual Data Gen for new ores
 
 * Add particles to Charged Certus Quartz Ore and maybe some other ores
 * Add some abilities to Order Ore

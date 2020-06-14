@@ -1,7 +1,0 @@
-{
-  "parent": "dannys_ores:block/cube_overlayed",
-  "textures": {
-    "base": "dannys_ores:block/embellishcraft_jade",
-    "overlay": "dannys_ores:block/water_ore"
-  }
-}
