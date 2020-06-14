@@ -34,12 +34,10 @@ public class BlockModelsDataGen extends BlockModelProvider {
                 StoneVariants variant = ore.getStoneVariant();
                 RichnessTypes rType = ore.getRichnessType();
                 OreTypes oType = ore.getOreType();
-                System.err.println("The current ore: " + ore + " with variant " + variant + " and ore type " + oType);
                 doubleTextureBlock(resLoc, "block/" + variant.getFullName(),
                         "block/" + rType.getName() + "_" + oType.getName() + "_ore");
             } else {
                 String blockName = block.getRegistryName().toString().replace(":", "_");
-                System.err.println("The current block: " + blockName);
                 doubleTextureBlock(resLoc, "block/" + blockName, "block/" + blockName);
             }
         }

@@ -2,7 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 2,
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -32,8 +32,8 @@
                 {
                   "function": "minecraft:set_count",
                   "count": {
-                    "min": 6.0,
-                    "max": 8.0,
+                    "min": 4.0,
+                    "max": 5.0,
                     "type": "minecraft:uniform"
                   }
                 },
