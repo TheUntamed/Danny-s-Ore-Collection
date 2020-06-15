@@ -1,6 +1,5 @@
 # TODOs
 
-* Manual loot table rework for lucky ores
 * Couldn't read block tag list forge:ores/dense_uranium from forge:tags/blocks/ores/dense_uranium.json in data pack main
 * Fix dense lapis style textures
 

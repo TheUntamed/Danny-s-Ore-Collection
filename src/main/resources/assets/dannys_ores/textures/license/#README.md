@@ -78,3 +78,6 @@ https://www.curseforge.com/minecraft/mc-mods/nethercraft-classic
 The Nightstone texture comes from the mod 'The Midnight' (by cipher_zero_x).
 The Ore Overlays for the Archaic, Ebonite, Nagrilite and Tenebrum Ore are modified versions of the corresponding ore textures from 'The Midnight'.
 https://www.curseforge.com/minecraft/mc-mods/the-midnight
+
+The Ore Overlays for the  Ore are modified versions of the corresponding ore textures from 'Forbidden Arcanus' (by cesar_zorak).
+https://www.curseforge.com/minecraft/mc-mods/forbidden-arcanus
