@@ -18,6 +18,8 @@ public class ModHandler {
                 return true;
             case QUARK: return mods.isLoaded("quark");
             case EMBELLISHCRAFT: return mods.isLoaded("embellishcraft");
+            case CREATE: return mods.isLoaded("create");
+            case NETHERCRAFT: return mods.isLoaded("nethercraft");
             case MIDNIGHT: return mods.isLoaded("midnight");
             case MYSTICALAGRICULTURE: return mods.isLoaded("mysticalagriculture");
             default: return false;

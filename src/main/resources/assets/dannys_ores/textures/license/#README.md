@@ -81,3 +81,6 @@ https://www.curseforge.com/minecraft/mc-mods/the-midnight
 
 The Ore Overlays for the  Ore are modified versions of the corresponding ore textures from 'Forbidden Arcanus' (by cesar_zorak).
 https://www.curseforge.com/minecraft/mc-mods/forbidden-arcanus
+
+The Ore Overlays for the  Ore are modified versions of the corresponding ore textures from 'Create' (by simibubi).
+https://www.curseforge.com/minecraft/mc-mods/create

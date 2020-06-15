@@ -45,6 +45,20 @@ public class BlockInit {
     public static final Block EMBELLISHCRAFT_MARBLE = null;
     @ObjectHolder("embellishcraft:slate")
     public static final Block EMBELLISHCRAFT_SLATE = null;
+    @ObjectHolder("create:dark_scoria")
+    public static final Block CREATE_DARK_SCORIA = null;
+    @ObjectHolder("create:dolomite")
+    public static final Block CREATE_DOLOMITE = null;
+    @ObjectHolder("create:gabbro")
+    public static final Block CREATE_GABBRO = null;
+    @ObjectHolder("create:limestone")
+    public static final Block CREATE_LIMESTONE = null;
+    @ObjectHolder("create:scoria")
+    public static final Block CREATE_SCORIA = null;
+    @ObjectHolder("create:weathered_limestone")
+    public static final Block CREATE_WEATHERED_LIMESTONE = null;
+    @ObjectHolder("nethercraft:heat_sand")
+    public static final Block NETHERCRAFT_HEAT_SAND = null;
     @ObjectHolder("midnight:nightstone")
     public static final Block MIDNIGHT_NIGHTSTONE = null;
     @ObjectHolder("mysticalagriculture:soulstone")

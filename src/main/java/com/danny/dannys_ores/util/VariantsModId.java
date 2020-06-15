@@ -8,8 +8,10 @@ public enum VariantsModId {
     DANNYS_ORES,
     QUARK,
     EMBELLISHCRAFT,
+    CREATE,
     MIDNIGHT,
-    MYSTICALAGRICULTURE;
+    MYSTICALAGRICULTURE,
+    NETHERCRAFT;
 
     /**
      *

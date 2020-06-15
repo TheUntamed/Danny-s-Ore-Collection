@@ -20,6 +20,7 @@ public enum OreTypes {
     AMETHYST("amethyst", 3, 3, 7, Effects.NONE,null, true, ConfigTypes.DIAMOND),
     ANGLESITE("anglesite", 1, 0, 0, Effects.NONE,null, true, ConfigTypes.S3C4B0T48),
     APATITE("apatite", 1, 0, 2, Effects.NONE,null, true, ConfigTypes.S17C20B48T128),
+    // ARCANE_CRYSTAL("arcane_crystal", 0, 3, 7, Effects.NONE,null, false, ConfigTypes.S1C1B0T16),
     ARCHAIC("archaic", 0, 3, 7, Effects.NONE,null, false, ConfigTypes.S1C1B0T16),
     BENITOITE("benitoite", 1, 0, 0, Effects.NONE,null, true, ConfigTypes.S3C4B0T48),
     BLACK_OPAL("black_opal", 4, 5, 10, Effects.NONE,null, true, ConfigTypes.S1C1B0T16),
@@ -42,6 +43,7 @@ public enum OreTypes {
     PRUDENTIUM("prudentium", 2, 3, 6, Effects.NONE,null, true, ConfigTypes.S4C8B0T96),
     PYRITE("pyrite", 2, 0, 0, Effects.NONE,null, true, ConfigTypes.S6C3B16T128),
     RUBY("ruby", 2, 2, 7, Effects.NONE,null, true, ConfigTypes.S6C3B8T64),
+    //RUNESTONE("runestone", 3, 0, 0, Effects.NONE,null, false, ConfigTypes.GOLD),
     SAPPHIRE("sapphire", 2, 2, 7, Effects.NONE,null, true, ConfigTypes.S6C3B8T64),
     STICKY("sticky", 0, 1, 5, Effects.NONE,null, true, ConfigTypes.S1C11B40T128),
     SULFUR("sulfur", 1, 0, 0, Effects.NONE,null, true, ConfigTypes.S3C2B0T24N2),
@@ -49,6 +51,7 @@ public enum OreTypes {
     TERTIUM("tertium", 2, 4, 7, Effects.NONE,null, true, ConfigTypes.S2C4B0T64),
     W("w", 3, 0, 0, Effects.NONE,null, false, ConfigTypes.S2C1B16T64),
     WHITE_OPAL("white_opal", 4, 5, 10, Effects.NONE,null, true, ConfigTypes.S1C1B0T16),
+    //XPETRIFIED("xpetrified", 1, 0, 0, Effects.NONE,null, false, ConfigTypes.S1C11B40T128),
     ZANITE("zanite", 2, 2, 7, Effects.NONE,null, true, ConfigTypes.S6C3B8T64),
 
     //Elementary

@@ -53,19 +53,26 @@ public class SimpleBlock extends Block {
             case NETHERRACK: return Blocks.NETHERRACK;
             case END_STONE: return Blocks.END_STONE;
             case HARDENED_STONE: return BlockInit.HARDENED_STONE.get();
+            case QUARK_BASALT: return BlockInit.QUARK_BASALT;
+            case QUARK_LIMESTONE: return BlockInit.QUARK_LIMESTONE;
+            case QUARK_JASPER: return BlockInit.QUARK_JASPER;
+            case QUARK_MARBLE: return BlockInit.QUARK_MARBLE;
+            case QUARK_SLATE: return BlockInit.QUARK_SLATE;
+            case CREATE_DARK_SCORIA: return BlockInit.CREATE_DARK_SCORIA;
+            case CREATE_DOLOMITE: return BlockInit.CREATE_DOLOMITE;
+            case CREATE_GABBRO: return BlockInit.CREATE_GABBRO;
+            case CREATE_LIMESTONE: return BlockInit.CREATE_LIMESTONE;
+            case CREATE_SCORIA: return BlockInit.CREATE_SCORIA;
+            case CREATE_WEATHERED_LIMESTONE: return BlockInit.CREATE_WEATHERED_LIMESTONE;
+            case NETHERCRAFT_HEATSAND: return BlockInit.NETHERCRAFT_HEAT_SAND;
+            case MYSTICALAGRICULTURE_SOULSTONE: return BlockInit.MYSTICALAGRICULTURE_SOULSTONE;
+            case MIDNIGHT_NIGHTSTONE: return BlockInit.MIDNIGHT_NIGHTSTONE;
             case EMBELLISHCRAFT_BASALT: return BlockInit.EMBELLISHCRAFT_BASALT;
             case EMBELLISHCRAFT_GNEISS: return BlockInit.EMBELLISHCRAFT_GNEISS;
             case EMBELLISHCRAFT_JADE: return BlockInit.EMBELLISHCRAFT_JADE;
             case EMBELLISHCRAFT_LARVIKITE: return BlockInit.EMBELLISHCRAFT_LARVIKITE;
             case EMBELLISHCRAFT_MARBLE: return BlockInit.EMBELLISHCRAFT_MARBLE;
             case EMBELLISHCRAFT_SLATE: return BlockInit.EMBELLISHCRAFT_SLATE;
-            case QUARK_BASALT: return BlockInit.QUARK_BASALT;
-            case QUARK_LIMESTONE: return BlockInit.QUARK_LIMESTONE;
-            case QUARK_JASPER: return BlockInit.QUARK_JASPER;
-            case QUARK_MARBLE: return BlockInit.QUARK_MARBLE;
-            case QUARK_SLATE: return BlockInit.QUARK_SLATE;
-            case MYSTICALAGRICULTURE_SOULSTONE: return BlockInit.MYSTICALAGRICULTURE_SOULSTONE;
-            case MIDNIGHT_NIGHTSTONE: return BlockInit.MIDNIGHT_NIGHTSTONE;
             default:
                 throw new IllegalArgumentException("For the ore '" + this + "' with block base '" + blockBase + "' no block base could be returned!");
         }

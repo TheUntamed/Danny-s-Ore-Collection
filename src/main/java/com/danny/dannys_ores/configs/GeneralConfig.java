@@ -27,6 +27,9 @@ public class GeneralConfig {
     public static ForgeConfigSpec.BooleanValue disablePackedIceNormalOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableBedrockNormalOreGeneration;
 
+    // Danny's Ores
+    public static ForgeConfigSpec.BooleanValue disableHardenedStoneNormalOreGeneration;
+
     // Quark
     public static ForgeConfigSpec.BooleanValue disableQuarkBasaltNormalOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableQuarkLimestoneNormalOreGeneration;
@@ -42,8 +45,22 @@ public class GeneralConfig {
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftMarbleNormalOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftSlateNormalOreGeneration;
 
-    // Danny's Ores
-    public static ForgeConfigSpec.BooleanValue disableHardenedStoneNormalOreGeneration;
+    // Create
+    public static ForgeConfigSpec.BooleanValue disableCreateDarkScoriaNormalOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateDolomiteNormalOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateGabbroNormalOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateLimestoneNormalOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateScoriaNormalOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateWeatheredLimestoneNormalOreGeneration;
+
+    // Nethercraft
+    public static ForgeConfigSpec.BooleanValue disableNethercraftHeatSandNormalOreGeneration;
+
+    // Midnight
+    public static ForgeConfigSpec.BooleanValue disableMidnightNightstoneNormalOreGeneration;
+
+    // Mystical Agriculture
+    public static ForgeConfigSpec.BooleanValue disableMysticalagricultureSoulstoneNormalOreGeneration;
 
     //Dense
     // Vanilla
@@ -62,6 +79,9 @@ public class GeneralConfig {
     public static ForgeConfigSpec.BooleanValue disablePackedIceDenseOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableBedrockDenseOreGeneration;
 
+    // Danny's Ores
+    public static ForgeConfigSpec.BooleanValue disableHardenedStoneDenseOreGeneration;
+
     // Quark
     public static ForgeConfigSpec.BooleanValue disableQuarkBasaltDenseOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableQuarkLimestoneDenseOreGeneration;
@@ -77,8 +97,22 @@ public class GeneralConfig {
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftMarbleDenseOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftSlateDenseOreGeneration;
 
-    // Danny's Ores
-    public static ForgeConfigSpec.BooleanValue disableHardenedStoneDenseOreGeneration;
+    // Create
+    public static ForgeConfigSpec.BooleanValue disableCreateDarkScoriaDenseOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateDolomiteDenseOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateGabbroDenseOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateLimestoneDenseOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateScoriaDenseOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateWeatheredLimestoneDenseOreGeneration;
+
+    // Nethercraft
+    public static ForgeConfigSpec.BooleanValue disableNethercraftHeatSandDenseOreGeneration;
+
+    // Midnight
+    public static ForgeConfigSpec.BooleanValue disableMidnightNightstoneDenseOreGeneration;
+
+    // Mystical Agriculture
+    public static ForgeConfigSpec.BooleanValue disableMysticalagricultureSoulstoneDenseOreGeneration;
 
     //Poor
     // Vanilla
@@ -97,6 +131,9 @@ public class GeneralConfig {
     public static ForgeConfigSpec.BooleanValue disablePackedIcePoorOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableBedrockPoorOreGeneration;
 
+    // Danny's Ores
+    public static ForgeConfigSpec.BooleanValue disableHardenedStonePoorOreGeneration;
+
     // Quark
     public static ForgeConfigSpec.BooleanValue disableQuarkBasaltPoorOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableQuarkLimestonePoorOreGeneration;
@@ -112,8 +149,22 @@ public class GeneralConfig {
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftMarblePoorOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftSlatePoorOreGeneration;
 
-    // Danny's Ores
-    public static ForgeConfigSpec.BooleanValue disableHardenedStonePoorOreGeneration;
+    // Create
+    public static ForgeConfigSpec.BooleanValue disableCreateDarkScoriaPoorOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateDolomitePoorOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateGabbroPoorOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateLimestonePoorOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateScoriaPoorOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableCreateWeatheredLimestonePoorOreGeneration;
+
+    // Nethercraft
+    public static ForgeConfigSpec.BooleanValue disableNethercraftHeatSandPoorOreGeneration;
+
+    // Midnight
+    public static ForgeConfigSpec.BooleanValue disableMidnightNightstonePoorOreGeneration;
+
+    // Mystical Agriculture
+    public static ForgeConfigSpec.BooleanValue disableMysticalagricultureSoulstonePoorOreGeneration;
 
     public static ForgeConfigSpec.BooleanValue disableNormalOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableDenseOreGeneration;
@@ -150,6 +201,9 @@ public class GeneralConfig {
                         disablePackedIceNormalOreGeneration = BUILDER.comment("If true, the Packed Ice variant of all normal ores (except vanilla ores) will be disabled.").define("packed_ice", false);
                         disableBedrockNormalOreGeneration = BUILDER.comment("If true, the Bedrock variant of all normal ores (except vanilla ores) will be disabled.").define("bedrock", false);
                     BUILDER.pop();
+                    BUILDER.comment("Stone variants added by this mod.").push("dannys_ores");
+                        disableHardenedStoneNormalOreGeneration = BUILDER.comment("If true, the Hardened Stone variant of all normal ores (except vanilla ores) will be disabled.").define("hardened_stone", false);
+                    BUILDER.pop();
                     BUILDER.comment("Quark stone variants. Quark has to be installed for the ores to generate at all.").push("quark");
                         disableQuarkBasaltNormalOreGeneration = BUILDER.comment("If true, the (Quark) Basalt variant of all normal ores will be disabled.").define("basalt", false);
                         disableQuarkLimestoneNormalOreGeneration = BUILDER.comment("If true, the (Quark) Limestone variant of all normal ores will be disabled.").define("limestone", false);
@@ -165,8 +219,22 @@ public class GeneralConfig {
                         disableEmbellishcraftMarbleNormalOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Marble variant of all normal ores will be disabled.").define("marble", false);
                         disableEmbellishcraftSlateNormalOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Slate variant of all normal ores will be disabled.").define("slate", false);
                     BUILDER.pop();
-                    BUILDER.comment("Stone variants added by this mod.").push("dannys_ores");
-                        disableHardenedStoneNormalOreGeneration = BUILDER.comment("If true, the Hardened Stone variant of all normal ores (except vanilla ores) will be disabled.").define("hardened_stone", false);
+                    BUILDER.comment("Create stone variants. Create has to be installed for the ores to generate at all.").push("create");
+                        disableCreateDarkScoriaNormalOreGeneration = BUILDER.comment("If true, the (Create) Basalt variant of all normal ores will be disabled.").define("dark_scoria", false);
+                        disableCreateDolomiteNormalOreGeneration = BUILDER.comment("If true, the (Create) Gneiss variant of all normal ores will be disabled.").define("dolomite", false);
+                        disableCreateGabbroNormalOreGeneration = BUILDER.comment("If true, the (Create) Jade variant of all normal ores will be disabled.").define("gabbro", false);
+                        disableCreateLimestoneNormalOreGeneration = BUILDER.comment("If true, the (Create) Larvikite variant of all normal ores will be disabled.").define("limestone", false);
+                        disableCreateScoriaNormalOreGeneration = BUILDER.comment("If true, the (Create) Marble variant of all normal ores will be disabled.").define("scoria", false);
+                        disableCreateWeatheredLimestoneNormalOreGeneration = BUILDER.comment("If true, the (Create) Slate variant of all normal ores will be disabled.").define("weathered_limestone", false);
+                    BUILDER.pop();
+                    BUILDER.comment("Midnight stone variants. Midnight has to be installed for the ores to generate at all.").push("midnight");
+                        disableMidnightNightstoneNormalOreGeneration = BUILDER.comment("If true, the (Midnight) Basalt variant of all normal ores will be disabled.").define("nightstone", false);
+                    BUILDER.pop();
+                    BUILDER.comment("Nethercraft stone variants. Nethercraft has to be installed for the ores to generate at all.").push("nethercraft");
+                        disableNethercraftHeatSandNormalOreGeneration = BUILDER.comment("If true, the (Nethercraft) Basalt variant of all normal ores will be disabled.").define("heat_sand", false);
+                    BUILDER.pop();
+                    BUILDER.comment("Mystical Agriculture stone variants. Mystical Agriculture has to be installed for the ores to generate at all.").push("mysticalagriculture");
+                        disableMysticalagricultureSoulstoneNormalOreGeneration = BUILDER.comment("If true, the (Mystical Agriculture) Basalt variant of all normal ores will be disabled.").define("soulstone", false);
                     BUILDER.pop();
                 BUILDER.pop();
             BUILDER.pop();
@@ -189,6 +257,9 @@ public class GeneralConfig {
                         disablePackedIceDenseOreGeneration = BUILDER.comment("If true, the Packed Ice variant of all dense ores (except vanilla ores) will be disabled.").define("packed_ice", false);
                         disableBedrockDenseOreGeneration = BUILDER.comment("If true, the Bedrock variant of all dense ores (except vanilla ores) will be disabled.").define("bedrock", false);
                     BUILDER.pop();
+                    BUILDER.comment("Stone variants added by this mod.").push("dannys_ores");
+                        disableHardenedStoneDenseOreGeneration = BUILDER.comment("If true, the Hardened Stone variant of all dense ores (except vanilla ores) will be disabled.").define("hardened_stone", false);
+                    BUILDER.pop();
                     BUILDER.comment("Quark stone variants. Quark has to be installed for the ores to generate at all.").push("quark");
                         disableQuarkBasaltDenseOreGeneration = BUILDER.comment("If true, the (Quark) Basalt variant of all dense ores will be disabled.").define("basalt", false);
                         disableQuarkLimestoneDenseOreGeneration = BUILDER.comment("If true, the (Quark) Limestone variant of all dense ores will be disabled.").define("limestone", false);
@@ -204,8 +275,22 @@ public class GeneralConfig {
                         disableEmbellishcraftMarbleDenseOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Marble variant of all dense ores will be disabled.").define("marble", false);
                         disableEmbellishcraftSlateDenseOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Slate variant of all dense ores will be disabled.").define("slate", false);
                     BUILDER.pop();
-                    BUILDER.comment("Stone variants added by this mod.").push("dannys_ores");
-                        disableHardenedStoneDenseOreGeneration = BUILDER.comment("If true, the Hardened Stone variant of all dense ores (except vanilla ores) will be disabled.").define("hardened_stone", false);
+                    BUILDER.comment("Create stone variants. Create has to be installed for the ores to generate at all.").push("create");
+                        disableCreateDarkScoriaDenseOreGeneration = BUILDER.comment("If true, the (Create) Basalt variant of all normal ores will be disabled.").define("dark_scoria", false);
+                        disableCreateDolomiteDenseOreGeneration = BUILDER.comment("If true, the (Create) Gneiss variant of all normal ores will be disabled.").define("dolomite", false);
+                        disableCreateGabbroDenseOreGeneration = BUILDER.comment("If true, the (Create) Jade variant of all normal ores will be disabled.").define("gabbro", false);
+                        disableCreateLimestoneDenseOreGeneration = BUILDER.comment("If true, the (Create) Larvikite variant of all normal ores will be disabled.").define("limestone", false);
+                        disableCreateScoriaDenseOreGeneration = BUILDER.comment("If true, the (Create) Marble variant of all normal ores will be disabled.").define("scoria", false);
+                        disableCreateWeatheredLimestoneDenseOreGeneration = BUILDER.comment("If true, the (Create) Slate variant of all normal ores will be disabled.").define("weathered_limestone", false);
+                    BUILDER.pop();
+                    BUILDER.comment("Midnight stone variants. Midnight has to be installed for the ores to generate at all.").push("midnight");
+                        disableMidnightNightstoneDenseOreGeneration = BUILDER.comment("If true, the (Midnight) Basalt variant of all normal ores will be disabled.").define("nightstone", false);
+                    BUILDER.pop();
+                    BUILDER.comment("Nethercraft stone variants. Nethercraft has to be installed for the ores to generate at all.").push("nethercraft");
+                        disableNethercraftHeatSandDenseOreGeneration = BUILDER.comment("If true, the (Nethercraft) Basalt variant of all normal ores will be disabled.").define("heat_sand", false);
+                    BUILDER.pop();
+                    BUILDER.comment("Mystical Agriculture stone variants. Mystical Agriculture has to be installed for the ores to generate at all.").push("mysticalagriculture");
+                        disableMysticalagricultureSoulstoneDenseOreGeneration = BUILDER.comment("If true, the (Mystical Agriculture) Basalt variant of all normal ores will be disabled.").define("soulstone", false);
                     BUILDER.pop();
                 BUILDER.pop();
             BUILDER.pop();
@@ -228,6 +313,9 @@ public class GeneralConfig {
                         disablePackedIcePoorOreGeneration = BUILDER.comment("If true, the Packed Ice variant of all poor ores (except vanilla ores) will be disabled.").define("packed_ice", false);
                         disableBedrockPoorOreGeneration = BUILDER.comment("If true, the Bedrock variant of all poor ores (except vanilla ores) will be disabled.").define("bedrock", false);
                     BUILDER.pop();
+                    BUILDER.comment("Stone variants added by this mod.").push("dannys_ores");
+                        disableHardenedStonePoorOreGeneration = BUILDER.comment("If true, the Hardened Stone variant of all poor ores (except vanilla ores) will be disabled.").define("hardened_stone", false);
+                    BUILDER.pop();
                     BUILDER.comment("Quark stone variants. Quark has to be installed for the ores to generate at all.").push("quark");
                         disableQuarkBasaltPoorOreGeneration = BUILDER.comment("If true, the (Quark) Basalt variant of all poor ores will be disabled.").define("basalt", false);
                         disableQuarkLimestonePoorOreGeneration = BUILDER.comment("If true, the (Quark) Limestone variant of all poor ores will be disabled.").define("limestone", false);
@@ -243,8 +331,22 @@ public class GeneralConfig {
                         disableEmbellishcraftMarblePoorOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Marble variant of all poor ores will be disabled.").define("marble", false);
                         disableEmbellishcraftSlatePoorOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Slate variant of all poor ores will be disabled.").define("slate", false);
                     BUILDER.pop();
-                    BUILDER.comment("Stone variants added by this mod.").push("dannys_ores");
-                        disableHardenedStonePoorOreGeneration = BUILDER.comment("If true, the Hardened Stone variant of all poor ores (except vanilla ores) will be disabled.").define("hardened_stone", false);
+                    BUILDER.comment("Create stone variants. Create has to be installed for the ores to generate at all.").push("create");
+                        disableCreateDarkScoriaPoorOreGeneration = BUILDER.comment("If true, the (Create) Basalt variant of all normal ores will be disabled.").define("dark_scoria", false);
+                        disableCreateDolomitePoorOreGeneration = BUILDER.comment("If true, the (Create) Gneiss variant of all normal ores will be disabled.").define("dolomite", false);
+                        disableCreateGabbroPoorOreGeneration = BUILDER.comment("If true, the (Create) Jade variant of all normal ores will be disabled.").define("gabbro", false);
+                        disableCreateLimestonePoorOreGeneration = BUILDER.comment("If true, the (Create) Larvikite variant of all normal ores will be disabled.").define("limestone", false);
+                        disableCreateScoriaPoorOreGeneration = BUILDER.comment("If true, the (Create) Marble variant of all normal ores will be disabled.").define("scoria", false);
+                        disableCreateWeatheredLimestonePoorOreGeneration = BUILDER.comment("If true, the (Create) Slate variant of all normal ores will be disabled.").define("weathered_limestone", false);
+                    BUILDER.pop();
+                    BUILDER.comment("Midnight stone variants. Midnight has to be installed for the ores to generate at all.").push("midnight");
+                        disableMidnightNightstonePoorOreGeneration = BUILDER.comment("If true, the (Midnight) Basalt variant of all normal ores will be disabled.").define("nightstone", false);
+                    BUILDER.pop();
+                    BUILDER.comment("Nethercraft stone variants. Nethercraft has to be installed for the ores to generate at all.").push("nethercraft");
+                        disableNethercraftHeatSandPoorOreGeneration = BUILDER.comment("If true, the (Nethercraft) Basalt variant of all normal ores will be disabled.").define("heat_sand", false);
+                    BUILDER.pop();
+                    BUILDER.comment("Mystical Agriculture stone variants. Mystical Agriculture has to be installed for the ores to generate at all.").push("mysticalagriculture");
+                        disableMysticalagricultureSoulstonePoorOreGeneration = BUILDER.comment("If true, the (Mystical Agriculture) Basalt variant of all normal ores will be disabled.").define("soulstone", false);
                     BUILDER.pop();
                 BUILDER.pop();
             BUILDER.pop();
