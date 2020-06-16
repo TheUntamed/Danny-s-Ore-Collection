@@ -357,6 +357,90 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpMidnightNightstoneOre;
         ForgeConfigSpec.IntValue maxXpMidnightNightstoneOre;
 
+        ForgeConfigSpec.BooleanValue enableCreateDarkScoriaOre;
+        ForgeConfigSpec.IntValue veinSizeCreateDarkScoriaOre;
+        ForgeConfigSpec.IntValue veinsPerChunkCreateDarkScoriaOre;
+        ForgeConfigSpec.IntValue minHeightCreateDarkScoriaOre;
+        ForgeConfigSpec.IntValue maxHeightCreateDarkScoriaOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistCreateDarkScoriaOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistCreateDarkScoriaOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistCreateDarkScoriaOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistCreateDarkScoriaOre;
+        ForgeConfigSpec.IntValue minXpCreateDarkScoriaOre;
+        ForgeConfigSpec.IntValue maxXpCreateDarkScoriaOre;
+
+        ForgeConfigSpec.BooleanValue enableCreateDolomiteOre;
+        ForgeConfigSpec.IntValue veinSizeCreateDolomiteOre;
+        ForgeConfigSpec.IntValue veinsPerChunkCreateDolomiteOre;
+        ForgeConfigSpec.IntValue minHeightCreateDolomiteOre;
+        ForgeConfigSpec.IntValue maxHeightCreateDolomiteOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistCreateDolomiteOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistCreateDolomiteOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistCreateDolomiteOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistCreateDolomiteOre;
+        ForgeConfigSpec.IntValue minXpCreateDolomiteOre;
+        ForgeConfigSpec.IntValue maxXpCreateDolomiteOre;
+
+        ForgeConfigSpec.BooleanValue enableCreateGabbroOre;
+        ForgeConfigSpec.IntValue veinSizeCreateGabbroOre;
+        ForgeConfigSpec.IntValue veinsPerChunkCreateGabbroOre;
+        ForgeConfigSpec.IntValue minHeightCreateGabbroOre;
+        ForgeConfigSpec.IntValue maxHeightCreateGabbroOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistCreateGabbroOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistCreateGabbroOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistCreateGabbroOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistCreateGabbroOre;
+        ForgeConfigSpec.IntValue minXpCreateGabbroOre;
+        ForgeConfigSpec.IntValue maxXpCreateGabbroOre;
+
+        ForgeConfigSpec.BooleanValue enableCreateLimestoneOre;
+        ForgeConfigSpec.IntValue veinSizeCreateLimestoneOre;
+        ForgeConfigSpec.IntValue veinsPerChunkCreateLimestoneOre;
+        ForgeConfigSpec.IntValue minHeightCreateLimestoneOre;
+        ForgeConfigSpec.IntValue maxHeightCreateLimestoneOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistCreateLimestoneOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistCreateLimestoneOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistCreateLimestoneOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistCreateLimestoneOre;
+        ForgeConfigSpec.IntValue minXpCreateLimestoneOre;
+        ForgeConfigSpec.IntValue maxXpCreateLimestoneOre;
+
+        ForgeConfigSpec.BooleanValue enableCreateScoriaOre;
+        ForgeConfigSpec.IntValue veinSizeCreateScoriaOre;
+        ForgeConfigSpec.IntValue veinsPerChunkCreateScoriaOre;
+        ForgeConfigSpec.IntValue minHeightCreateScoriaOre;
+        ForgeConfigSpec.IntValue maxHeightCreateScoriaOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistCreateScoriaOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistCreateScoriaOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistCreateScoriaOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistCreateScoriaOre;
+        ForgeConfigSpec.IntValue minXpCreateScoriaOre;
+        ForgeConfigSpec.IntValue maxXpCreateScoriaOre;
+
+        ForgeConfigSpec.BooleanValue enableCreateWeatheredLimestoneOre;
+        ForgeConfigSpec.IntValue veinSizeCreateWeatheredLimestoneOre;
+        ForgeConfigSpec.IntValue veinsPerChunkCreateWeatheredLimestoneOre;
+        ForgeConfigSpec.IntValue minHeightCreateWeatheredLimestoneOre;
+        ForgeConfigSpec.IntValue maxHeightCreateWeatheredLimestoneOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistCreateWeatheredLimestoneOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistCreateWeatheredLimestoneOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistCreateWeatheredLimestoneOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistCreateWeatheredLimestoneOre;
+        ForgeConfigSpec.IntValue minXpCreateWeatheredLimestoneOre;
+        ForgeConfigSpec.IntValue maxXpCreateWeatheredLimestoneOre;
+
+        ForgeConfigSpec.BooleanValue enableNethercraftHeatSandOre;
+        ForgeConfigSpec.IntValue veinSizeNethercraftHeatSandOre;
+        ForgeConfigSpec.IntValue veinsPerChunkNethercraftHeatSandOre;
+        ForgeConfigSpec.IntValue minHeightNethercraftHeatSandOre;
+        ForgeConfigSpec.IntValue maxHeightNethercraftHeatSandOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistNethercraftHeatSandOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistNethercraftHeatSandOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistNethercraftHeatSandOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistNethercraftHeatSandOre;
+        ForgeConfigSpec.IntValue minXpNethercraftHeatSandOre;
+        ForgeConfigSpec.IntValue maxXpNethercraftHeatSandOre;
+
         ForgeConfigSpec.BooleanValue enableHardenedStoneOre;
         ForgeConfigSpec.IntValue veinSizeHardenedStoneOre;
         ForgeConfigSpec.IntValue veinsPerChunkHardenedStoneOre;
@@ -865,6 +949,122 @@ public class OresConfig {
                     }
                 BUILDER.pop();
             BUILDER.pop();
+            BUILDER.comment("Create Stone Variants").push(PathHandler.getModNamePath(VariantsModId.CREATE));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.CREATE_DARK_SCORIA, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.CREATE_DARK_SCORIA, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        enableCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        veinSizeCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.CREATE_DOLOMITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.CREATE_DOLOMITE, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        enableCreateDolomiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        veinSizeCreateDolomiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkCreateDolomiteOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightCreateDolomiteOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightCreateDolomiteOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistCreateDolomiteOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistCreateDolomiteOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistCreateDolomiteOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistCreateDolomiteOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpCreateDolomiteOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpCreateDolomiteOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.CREATE_GABBRO, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.CREATE_GABBRO, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        enableCreateGabbroOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        veinSizeCreateGabbroOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkCreateGabbroOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightCreateGabbroOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightCreateGabbroOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistCreateGabbroOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistCreateGabbroOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistCreateGabbroOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistCreateGabbroOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpCreateGabbroOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpCreateGabbroOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.CREATE_LIMESTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.CREATE_LIMESTONE, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        enableCreateLimestoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        veinSizeCreateLimestoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkCreateLimestoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightCreateLimestoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightCreateLimestoneOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistCreateLimestoneOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistCreateLimestoneOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistCreateLimestoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistCreateLimestoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpCreateLimestoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpCreateLimestoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.CREATE_SCORIA, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.CREATE_SCORIA, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        enableCreateScoriaOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        veinSizeCreateScoriaOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkCreateScoriaOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightCreateScoriaOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightCreateScoriaOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistCreateScoriaOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistCreateScoriaOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistCreateScoriaOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistCreateScoriaOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpCreateScoriaOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpCreateScoriaOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.CREATE_WEATHERED_LIMESTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.CREATE_WEATHERED_LIMESTONE, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        enableCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        veinSizeCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+            BUILDER.pop();
             BUILDER.comment("Mystical Agriculture Stone Variants").push(PathHandler.getModNamePath(VariantsModId.MYSTICALAGRICULTURE));
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.MYSTICALAGRICULTURE_SOULSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.MYSTICALAGRICULTURE_SOULSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
@@ -903,6 +1103,27 @@ public class OresConfig {
                         BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
                         minXpMidnightNightstoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
                         maxXpMidnightNightstoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+            BUILDER.pop();
+            BUILDER.comment("The Nethercraft Stone Variants").push(PathHandler.getModNamePath(VariantsModId.NETHERCRAFT));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.NETHERCRAFT_HEATSAND, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.NETHERCRAFT_HEATSAND, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        enableNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        veinSizeNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getNetherFactor()), 0, 65536);
+                        veinsPerChunkNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getNetherFactor()), 0, 65536);
+                        minHeightNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(),  Math.max(96 - cType.getMaxY(), 0), 0, 256);
+                        maxHeightNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), Math.max(128 - cType.getMinY(), 0), 0, 256);
+                        isTempWhitelistNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
                         BUILDER.pop();
                     }
                 BUILDER.pop();

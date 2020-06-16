@@ -42,7 +42,7 @@ public enum StoneVariants {
     CREATE_LIMESTONE("limestone", VariantsModId.CREATE, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
     CREATE_SCORIA("scoria", VariantsModId.CREATE, Material.ROCK, MaterialColor.BROWN, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
     CREATE_WEATHERED_LIMESTONE("weathered_limestone", VariantsModId.CREATE, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
-    NETHERCRAFT_HEATSAND("heat_sand", VariantsModId.CREATE, MyMaterials.SAND_ORE, MaterialColor.ADOBE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
+    NETHERCRAFT_HEATSAND("heat_sand", VariantsModId.NETHERCRAFT, MyMaterials.SAND_ORE, MaterialColor.ADOBE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
     MYSTICALAGRICULTURE_SOULSTONE("soulstone", VariantsModId.MYSTICALAGRICULTURE, Material.ROCK, MaterialColor.BROWN_TERRACOTTA, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
     MIDNIGHT_NIGHTSTONE("nightstone", VariantsModId.MIDNIGHT, Material.ROCK, MaterialColor.PURPLE_TERRACOTTA, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 1),
     HARDENED_STONE("hardened_stone", VariantsModId.DANNYS_ORES, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 4.0F, 6.0F, 0.6F, 1, 1);

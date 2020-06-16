@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dannys_ores:hardened_cobblestone"
+          "name": "dannys_ores:hardened_stone"
         }
       ],
       "conditions": [

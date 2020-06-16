@@ -6,6 +6,7 @@ import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
+import com.danny.dannys_ores.util.StoneVariants;
 import net.minecraft.block.Block;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;

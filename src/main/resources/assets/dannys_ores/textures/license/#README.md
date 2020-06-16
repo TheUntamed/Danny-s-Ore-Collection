@@ -80,7 +80,7 @@ The Nightstone texture comes from the mod 'The Midnight' (by cipher_zero_x).
 The Ore Overlays for the Archaic, Ebonite, Nagrilite and Tenebrum Ore are modified versions of the corresponding ore textures from 'The Midnight'.
 https://www.curseforge.com/minecraft/mc-mods/the-midnight
 
-The Ore Overlays for the Arcane Crystal, Runestone and Xpetrified Ore are modified versions of the corresponding ore textures from 'Forbidden Arcanus' (by cesar_zorak).
+The Ore Overlays for the Arcane Crystal and Runestone Ore are modified versions of the corresponding ore textures from 'Forbidden Arcanus' (by cesar_zorak).
 https://www.curseforge.com/minecraft/mc-mods/forbidden-arcanus
 
 The stone textures create_scoria, _dolomite, _gabbro, _limestone, _scoria and _weathered_limestone are from the mod 'Create' (by simibubi).
