@@ -7,10 +7,10 @@ You will also find the license of the mods in the corresponding .md files in thi
 The Hardened Stone texture comes from the mod 'Sonar Core' (by sonar_sonic).
 https://www.curseforge.com/minecraft/mc-mods/sonar-core
 
-The five stone textures named quark_basalt, _jasper, _limestone, _marble, _slate are from the mod 'Quark' (by Vazkii).
+The stone textures quark_basalt, _jasper, _limestone, _marble, _slate are from the mod 'Quark' (by Vazkii).
 https://www.curseforge.com/minecraft/mc-mods/quark
 
-The six stone textures named embellishcraft_basalt, _jade, _gneiss, _larvikite, _marble, _slate are from the mod Embellishcraft (by Mapper).
+The stone textures embellishcraft_basalt, _jade, _gneiss, _larvikite, _marble, _slate are from the mod Embellishcraft (by Mapper).
 https://www.curseforge.com/minecraft/mc-mods/embellishcraft
 
 The Ore Overlays for the Silver, Lead, Nickel, Zinc, Bauxite and Uraninite Ore are modified versions of the corresponding ore textures from 'Silent's Mechanisms' (by SilentChaos512).
@@ -72,15 +72,16 @@ https://www.curseforge.com/minecraft/mc-mods/rftools-base
 The Ore Overlays for the Boron, Magnesium, Lithium and Thorium Ore are modified versions of the corresponding ore textures from 'Nuclearcraft' (by tomdodd4598).
 https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-mod
 
-The Ore Overlays for the Foulite, Neridium, Pyridium, Linium and W-Ore are modified versions of the corresponding ore textures from 'Nethercraft Classic' (by ModdingLegacy).
+The Heat Sand texture comes from the mod 'Nethercraft Classic' (by ModdingLegacy).
+The Ore Overlays for the Foulite, Neridium, Pyridium, Linium and W-Ore are modified versions of the corresponding ore textures from 'Nethercraft Classic'.
 https://www.curseforge.com/minecraft/mc-mods/nethercraft-classic
 
 The Nightstone texture comes from the mod 'The Midnight' (by cipher_zero_x).
 The Ore Overlays for the Archaic, Ebonite, Nagrilite and Tenebrum Ore are modified versions of the corresponding ore textures from 'The Midnight'.
 https://www.curseforge.com/minecraft/mc-mods/the-midnight
 
-The Ore Overlays for the  Ore are modified versions of the corresponding ore textures from 'Forbidden Arcanus' (by cesar_zorak).
+The Ore Overlays for the Arcane Crystal, Runestone and Xpetrified Ore are modified versions of the corresponding ore textures from 'Forbidden Arcanus' (by cesar_zorak).
 https://www.curseforge.com/minecraft/mc-mods/forbidden-arcanus
 
-The Ore Overlays for the  Ore are modified versions of the corresponding ore textures from 'Create' (by simibubi).
+The stone textures create_scoria, _dolomite, _gabbro, _limestone, _scoria and _weathered_limestone are from the mod 'Create' (by simibubi).
 https://www.curseforge.com/minecraft/mc-mods/create
