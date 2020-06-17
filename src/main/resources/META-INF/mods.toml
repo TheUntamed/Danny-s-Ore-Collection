@@ -8,15 +8,15 @@ issueTrackerURL="http://my.issue.tracker/" #optional
 
 modId="dannys_ores" #mandatory
 
-version="1.15.2-0.1.0" #mandatory
+version="${version}" #mandatory
 
 displayName="Danny's Ores" #mandatory
 
-updateJSONURL="https://github.com/TheUntamed" #optional
+# updateJSONURL="http://myurl.me/" #optional
 
 displayURL="https://github.com/TheUntamed" #optional
 
-logoFile="examplemod.png" #optional
+logoFile="dannys_ores.png" #optional
 
 credits="Thanks for this example mod goes to Java" #optional
 
@@ -26,7 +26,7 @@ description='''
 Danny's Ores is a mod providing all the Ores you could ever dream of. This mod was made for Modpack developers but can be used by everyone who wants to.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.examplemod]] #optional
+[[dependencies.dannys_ores]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -38,7 +38,7 @@ Danny's Ores is a mod providing all the Ores you could ever dream of. This mod w
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.examplemod]]
+[[dependencies.dannys_ores]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.15.2]"
