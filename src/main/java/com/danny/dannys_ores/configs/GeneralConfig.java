@@ -98,7 +98,6 @@ public class GeneralConfig {
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftSlateDenseOreGeneration;
 
     // Create
-    public static ForgeConfigSpec.BooleanValue disableCreateDarkScoriaDenseOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableCreateDolomiteDenseOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableCreateGabbroDenseOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableCreateLimestoneDenseOreGeneration;
@@ -276,7 +275,6 @@ public class GeneralConfig {
                         disableEmbellishcraftSlateDenseOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Slate variant of all dense ores will be disabled.").define("slate", false);
                     BUILDER.pop();
                     BUILDER.comment("Create stone variants. Create has to be installed for the ores to generate at all.").push("create");
-                        disableCreateDarkScoriaDenseOreGeneration = BUILDER.comment("If true, the (Create) Basalt variant of all normal ores will be disabled.").define("dark_scoria", false);
                         disableCreateDolomiteDenseOreGeneration = BUILDER.comment("If true, the (Create) Gneiss variant of all normal ores will be disabled.").define("dolomite", false);
                         disableCreateGabbroDenseOreGeneration = BUILDER.comment("If true, the (Create) Jade variant of all normal ores will be disabled.").define("gabbro", false);
                         disableCreateLimestoneDenseOreGeneration = BUILDER.comment("If true, the (Create) Larvikite variant of all normal ores will be disabled.").define("limestone", false);

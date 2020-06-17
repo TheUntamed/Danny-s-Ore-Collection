@@ -83,5 +83,5 @@ https://www.curseforge.com/minecraft/mc-mods/the-midnight
 The Ore Overlays for the Arcane Crystal and Runestone Ore are modified versions of the corresponding ore textures from 'Forbidden Arcanus' (by cesar_zorak).
 https://www.curseforge.com/minecraft/mc-mods/forbidden-arcanus
 
-The stone textures create_scoria, _dolomite, _gabbro, _limestone, _scoria and _weathered_limestone are from the mod 'Create' (by simibubi).
+The stone textures create_scoria, _dolomite, _gabbro, _limestone, and _weathered_limestone are from the mod 'Create' (by simibubi).
 https://www.curseforge.com/minecraft/mc-mods/create

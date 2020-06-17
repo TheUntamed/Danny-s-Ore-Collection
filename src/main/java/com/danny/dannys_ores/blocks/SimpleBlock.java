@@ -58,7 +58,6 @@ public class SimpleBlock extends Block {
             case QUARK_JASPER: return BlockInit.QUARK_JASPER;
             case QUARK_MARBLE: return BlockInit.QUARK_MARBLE;
             case QUARK_SLATE: return BlockInit.QUARK_SLATE;
-            case CREATE_DARK_SCORIA: return BlockInit.CREATE_DARK_SCORIA;
             case CREATE_DOLOMITE: return BlockInit.CREATE_DOLOMITE;
             case CREATE_GABBRO: return BlockInit.CREATE_GABBRO;
             case CREATE_LIMESTONE: return BlockInit.CREATE_LIMESTONE;

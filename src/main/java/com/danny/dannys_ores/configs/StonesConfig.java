@@ -16,7 +16,7 @@ public class StonesConfig {
     public static ForgeConfigSpec spec;
     public static ForgeConfigSpec.BooleanValue disableAllVariants;
 
-    public static ForgeConfigSpec.BooleanValue enableHardenedStoneGeneration;
+    public static ForgeConfigSpec.BooleanValue disableHardenedStoneGeneration;
     public static ForgeConfigSpec.BooleanValue generateAsLayerHardenedStone;
     public static ForgeConfigSpec.IntValue clusterSizeHardenedStone;
     public static ForgeConfigSpec.IntValue clustersPerChunkHardenedStone;
@@ -34,7 +34,7 @@ public class StonesConfig {
         disableAllVariants = BUILDER.comment("Should stone variants added by this mod generate?").define(PathHandler.getDisableAllVariantsPath(), false);
             BUILDER.comment("Hardened Stone generation settings.").push("hardened_stone");
                 BUILDER.comment("Hardened Stone generation settings.").push(PathHandler.getGenerationPath());
-                    enableHardenedStoneGeneration = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                    disableHardenedStoneGeneration = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                     //generateAsLayerHardenedStone = BUILDER.comment(CommentHandler.getAsLayerComment()).define(PathHandler.getAsLayerPath(), false);
                     clusterSizeHardenedStone = BUILDER.comment(CommentHandler.getClusterSizeComment()).defineInRange(PathHandler.getClusterSizePath(), 33, 0, 65536);
                     clustersPerChunkHardenedStone = BUILDER.comment(CommentHandler.getClustersPerChunkComment()).defineInRange(PathHandler.getClustersPerChunkPath(), 10, 0, 65536);

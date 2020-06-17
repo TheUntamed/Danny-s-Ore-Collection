@@ -32,7 +32,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue effectDuration;
         ForgeConfigSpec.IntValue effectLevel;
 
-        ForgeConfigSpec.BooleanValue enableStoneOre;
+        ForgeConfigSpec.BooleanValue disableStoneOre;
         ForgeConfigSpec.IntValue veinSizeStoneOre;
         ForgeConfigSpec.IntValue veinsPerChunkStoneOre;
         ForgeConfigSpec.IntValue minHeightStoneOre;
@@ -44,7 +44,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpStoneOre;
         ForgeConfigSpec.IntValue maxXpStoneOre;
 
-        ForgeConfigSpec.BooleanValue enableAndesiteOre;
+        ForgeConfigSpec.BooleanValue disableAndesiteOre;
         ForgeConfigSpec.IntValue veinSizeAndesiteOre;
         ForgeConfigSpec.IntValue veinsPerChunkAndesiteOre;
         ForgeConfigSpec.IntValue minHeightAndesiteOre;
@@ -56,7 +56,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpAndesiteOre;
         ForgeConfigSpec.IntValue maxXpAndesiteOre;
 
-        ForgeConfigSpec.BooleanValue enableDioriteOre;
+        ForgeConfigSpec.BooleanValue disableDioriteOre;
         ForgeConfigSpec.IntValue veinSizeDioriteOre;
         ForgeConfigSpec.IntValue veinsPerChunkDioriteOre;
         ForgeConfigSpec.IntValue minHeightDioriteOre;
@@ -68,7 +68,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpDioriteOre;
         ForgeConfigSpec.IntValue maxXpDioriteOre;
 
-        ForgeConfigSpec.BooleanValue enableGraniteOre;
+        ForgeConfigSpec.BooleanValue disableGraniteOre;
         ForgeConfigSpec.IntValue veinSizeGraniteOre;
         ForgeConfigSpec.IntValue veinsPerChunkGraniteOre;
         ForgeConfigSpec.IntValue minHeightGraniteOre;
@@ -80,7 +80,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpGraniteOre;
         ForgeConfigSpec.IntValue maxXpGraniteOre;
 
-        ForgeConfigSpec.BooleanValue enableNetherrackOre;
+        ForgeConfigSpec.BooleanValue disableNetherrackOre;
         ForgeConfigSpec.IntValue veinSizeNetherrackOre;
         ForgeConfigSpec.IntValue veinsPerChunkNetherrackOre;
         ForgeConfigSpec.IntValue minHeightNetherrackOre;
@@ -92,7 +92,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpNetherrackOre;
         ForgeConfigSpec.IntValue maxXpNetherrackOre;
 
-        ForgeConfigSpec.BooleanValue enableEndStoneOre;
+        ForgeConfigSpec.BooleanValue disableEndStoneOre;
         ForgeConfigSpec.IntValue veinSizeEndStoneOre;
         ForgeConfigSpec.IntValue veinsPerChunkEndStoneOre;
         ForgeConfigSpec.IntValue minHeightEndStoneOre;
@@ -104,7 +104,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpEndStoneOre;
         ForgeConfigSpec.IntValue maxXpEndStoneOre;
 
-        ForgeConfigSpec.BooleanValue enableSandOre;
+        ForgeConfigSpec.BooleanValue disableSandOre;
         ForgeConfigSpec.IntValue veinSizeSandOre;
         ForgeConfigSpec.IntValue veinsPerChunkSandOre;
         ForgeConfigSpec.IntValue minHeightSandOre;
@@ -116,7 +116,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpSandOre;
         ForgeConfigSpec.IntValue maxXpSandOre;
 
-        ForgeConfigSpec.BooleanValue enableRedSandOre;
+        ForgeConfigSpec.BooleanValue disableRedSandOre;
         ForgeConfigSpec.IntValue veinSizeRedSandOre;
         ForgeConfigSpec.IntValue veinsPerChunkRedSandOre;
         ForgeConfigSpec.IntValue minHeightRedSandOre;
@@ -128,7 +128,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpRedSandOre;
         ForgeConfigSpec.IntValue maxXpRedSandOre;
 
-        ForgeConfigSpec.BooleanValue enableSandstoneOre;
+        ForgeConfigSpec.BooleanValue disableSandstoneOre;
         ForgeConfigSpec.IntValue veinSizeSandstoneOre;
         ForgeConfigSpec.IntValue veinsPerChunkSandstoneOre;
         ForgeConfigSpec.IntValue minHeightSandstoneOre;
@@ -140,7 +140,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpSandstoneOre;
         ForgeConfigSpec.IntValue maxXpSandstoneOre;
 
-        ForgeConfigSpec.BooleanValue enableRedSandstoneOre;
+        ForgeConfigSpec.BooleanValue disableRedSandstoneOre;
         ForgeConfigSpec.IntValue veinSizeRedSandstoneOre;
         ForgeConfigSpec.IntValue veinsPerChunkRedSandstoneOre;
         ForgeConfigSpec.IntValue minHeightRedSandstoneOre;
@@ -152,7 +152,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpRedSandstoneOre;
         ForgeConfigSpec.IntValue maxXpRedSandstoneOre;
 
-        ForgeConfigSpec.BooleanValue enableGravelOre;
+        ForgeConfigSpec.BooleanValue disableGravelOre;
         ForgeConfigSpec.IntValue veinSizeGravelOre;
         ForgeConfigSpec.IntValue veinsPerChunkGravelOre;
         ForgeConfigSpec.IntValue minHeightGravelOre;
@@ -164,7 +164,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpGravelOre;
         ForgeConfigSpec.IntValue maxXpGravelOre;
 
-        ForgeConfigSpec.BooleanValue enableBlueIceOre;
+        ForgeConfigSpec.BooleanValue disableBlueIceOre;
         ForgeConfigSpec.IntValue veinSizeBlueIceOre;
         ForgeConfigSpec.IntValue veinsPerChunkBlueIceOre;
         ForgeConfigSpec.IntValue minHeightBlueIceOre;
@@ -176,7 +176,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpBlueIceOre;
         ForgeConfigSpec.IntValue maxXpBlueIceOre;
 
-        ForgeConfigSpec.BooleanValue enablePackedIceOre;
+        ForgeConfigSpec.BooleanValue disablePackedIceOre;
         ForgeConfigSpec.IntValue veinSizePackedIceOre;
         ForgeConfigSpec.IntValue veinsPerChunkPackedIceOre;
         ForgeConfigSpec.IntValue minHeightPackedIceOre;
@@ -188,7 +188,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpPackedIceOre;
         ForgeConfigSpec.IntValue maxXpPackedIceOre;
 
-        ForgeConfigSpec.BooleanValue enableBedrockOre;
+        ForgeConfigSpec.BooleanValue disableBedrockOre;
         ForgeConfigSpec.IntValue veinSizeBedrockOre;
         ForgeConfigSpec.IntValue veinsPerChunkBedrockOre;
         ForgeConfigSpec.IntValue minHeightBedrockOre;
@@ -201,7 +201,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpBedrockOre;
         ForgeConfigSpec.IntValue maxXpBedrockOre;
 
-        ForgeConfigSpec.BooleanValue enableQuarkBasaltOre;
+        ForgeConfigSpec.BooleanValue disableQuarkBasaltOre;
         ForgeConfigSpec.IntValue veinSizeQuarkBasaltOre;
         ForgeConfigSpec.IntValue veinsPerChunkQuarkBasaltOre;
         ForgeConfigSpec.IntValue minHeightQuarkBasaltOre;
@@ -213,7 +213,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpQuarkBasaltOre;
         ForgeConfigSpec.IntValue maxXpQuarkBasaltOre;
 
-        ForgeConfigSpec.BooleanValue enableQuarkLimestoneOre;
+        ForgeConfigSpec.BooleanValue disableQuarkLimestoneOre;
         ForgeConfigSpec.IntValue veinSizeQuarkLimestoneOre;
         ForgeConfigSpec.IntValue veinsPerChunkQuarkLimestoneOre;
         ForgeConfigSpec.IntValue minHeightQuarkLimestoneOre;
@@ -225,7 +225,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpQuarkLimestoneOre;
         ForgeConfigSpec.IntValue maxXpQuarkLimestoneOre;
 
-        ForgeConfigSpec.BooleanValue enableQuarkJasperOre;
+        ForgeConfigSpec.BooleanValue disableQuarkJasperOre;
         ForgeConfigSpec.IntValue veinSizeQuarkJasperOre;
         ForgeConfigSpec.IntValue veinsPerChunkQuarkJasperOre;
         ForgeConfigSpec.IntValue minHeightQuarkJasperOre;
@@ -237,7 +237,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpQuarkJasperOre;
         ForgeConfigSpec.IntValue maxXpQuarkJasperOre;
 
-        ForgeConfigSpec.BooleanValue enableQuarkMarbleOre;
+        ForgeConfigSpec.BooleanValue disableQuarkMarbleOre;
         ForgeConfigSpec.IntValue veinSizeQuarkMarbleOre;
         ForgeConfigSpec.IntValue veinsPerChunkQuarkMarbleOre;
         ForgeConfigSpec.IntValue minHeightQuarkMarbleOre;
@@ -249,7 +249,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpQuarkMarbleOre;
         ForgeConfigSpec.IntValue maxXpQuarkMarbleOre;
 
-        ForgeConfigSpec.BooleanValue enableQuarkSlateOre;
+        ForgeConfigSpec.BooleanValue disableQuarkSlateOre;
         ForgeConfigSpec.IntValue veinSizeQuarkSlateOre;
         ForgeConfigSpec.IntValue veinsPerChunkQuarkSlateOre;
         ForgeConfigSpec.IntValue minHeightQuarkSlateOre;
@@ -261,7 +261,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpQuarkSlateOre;
         ForgeConfigSpec.IntValue maxXpQuarkSlateOre;
 
-        ForgeConfigSpec.BooleanValue enableEmbellishcraftBasaltOre;
+        ForgeConfigSpec.BooleanValue disableEmbellishcraftBasaltOre;
         ForgeConfigSpec.IntValue veinSizeEmbellishcraftBasaltOre;
         ForgeConfigSpec.IntValue veinsPerChunkEmbellishcraftBasaltOre;
         ForgeConfigSpec.IntValue minHeightEmbellishcraftBasaltOre;
@@ -273,7 +273,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpEmbellishcraftBasaltOre;
         ForgeConfigSpec.IntValue maxXpEmbellishcraftBasaltOre;
 
-        ForgeConfigSpec.BooleanValue enableEmbellishcraftGneissOre;
+        ForgeConfigSpec.BooleanValue disableEmbellishcraftGneissOre;
         ForgeConfigSpec.IntValue veinSizeEmbellishcraftGneissOre;
         ForgeConfigSpec.IntValue veinsPerChunkEmbellishcraftGneissOre;
         ForgeConfigSpec.IntValue minHeightEmbellishcraftGneissOre;
@@ -285,7 +285,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpEmbellishcraftGneissOre;
         ForgeConfigSpec.IntValue maxXpEmbellishcraftGneissOre;
 
-        ForgeConfigSpec.BooleanValue enableEmbellishcraftJadeOre;
+        ForgeConfigSpec.BooleanValue disableEmbellishcraftJadeOre;
         ForgeConfigSpec.IntValue veinSizeEmbellishcraftJadeOre;
         ForgeConfigSpec.IntValue veinsPerChunkEmbellishcraftJadeOre;
         ForgeConfigSpec.IntValue minHeightEmbellishcraftJadeOre;
@@ -297,7 +297,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpEmbellishcraftJadeOre;
         ForgeConfigSpec.IntValue maxXpEmbellishcraftJadeOre;
 
-        ForgeConfigSpec.BooleanValue enableEmbellishcraftLarvikiteOre;
+        ForgeConfigSpec.BooleanValue disableEmbellishcraftLarvikiteOre;
         ForgeConfigSpec.IntValue veinSizeEmbellishcraftLarvikiteOre;
         ForgeConfigSpec.IntValue veinsPerChunkEmbellishcraftLarvikiteOre;
         ForgeConfigSpec.IntValue minHeightEmbellishcraftLarvikiteOre;
@@ -309,7 +309,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpEmbellishcraftLarvikiteOre;
         ForgeConfigSpec.IntValue maxXpEmbellishcraftLarvikiteOre;
 
-        ForgeConfigSpec.BooleanValue enableEmbellishcraftMarbleOre;
+        ForgeConfigSpec.BooleanValue disableEmbellishcraftMarbleOre;
         ForgeConfigSpec.IntValue veinSizeEmbellishcraftMarbleOre;
         ForgeConfigSpec.IntValue veinsPerChunkEmbellishcraftMarbleOre;
         ForgeConfigSpec.IntValue minHeightEmbellishcraftMarbleOre;
@@ -321,7 +321,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpEmbellishcraftMarbleOre;
         ForgeConfigSpec.IntValue maxXpEmbellishcraftMarbleOre;
 
-        ForgeConfigSpec.BooleanValue enableEmbellishcraftSlateOre;
+        ForgeConfigSpec.BooleanValue disableEmbellishcraftSlateOre;
         ForgeConfigSpec.IntValue veinSizeEmbellishcraftSlateOre;
         ForgeConfigSpec.IntValue veinsPerChunkEmbellishcraftSlateOre;
         ForgeConfigSpec.IntValue minHeightEmbellishcraftSlateOre;
@@ -333,7 +333,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpEmbellishcraftSlateOre;
         ForgeConfigSpec.IntValue maxXpEmbellishcraftSlateOre;
 
-        ForgeConfigSpec.BooleanValue enableMysticalagricultureSoulstoneOre;
+        ForgeConfigSpec.BooleanValue disableMysticalagricultureSoulstoneOre;
         ForgeConfigSpec.IntValue veinSizeMysticalagricultureSoulstoneOre;
         ForgeConfigSpec.IntValue veinsPerChunkMysticalagricultureSoulstoneOre;
         ForgeConfigSpec.IntValue minHeightMysticalagricultureSoulstoneOre;
@@ -345,7 +345,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpMysticalagricultureSoulstoneOre;
         ForgeConfigSpec.IntValue maxXpMysticalagricultureSoulstoneOre;
 
-        ForgeConfigSpec.BooleanValue enableMidnightNightstoneOre;
+        ForgeConfigSpec.BooleanValue disableMidnightNightstoneOre;
         ForgeConfigSpec.IntValue veinSizeMidnightNightstoneOre;
         ForgeConfigSpec.IntValue veinsPerChunkMidnightNightstoneOre;
         ForgeConfigSpec.IntValue minHeightMidnightNightstoneOre;
@@ -357,19 +357,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpMidnightNightstoneOre;
         ForgeConfigSpec.IntValue maxXpMidnightNightstoneOre;
 
-        ForgeConfigSpec.BooleanValue enableCreateDarkScoriaOre;
-        ForgeConfigSpec.IntValue veinSizeCreateDarkScoriaOre;
-        ForgeConfigSpec.IntValue veinsPerChunkCreateDarkScoriaOre;
-        ForgeConfigSpec.IntValue minHeightCreateDarkScoriaOre;
-        ForgeConfigSpec.IntValue maxHeightCreateDarkScoriaOre;
-        ForgeConfigSpec.BooleanValue isTempWhitelistCreateDarkScoriaOre;
-        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistCreateDarkScoriaOre;
-        ForgeConfigSpec.BooleanValue isBiomeWhitelistCreateDarkScoriaOre;
-        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistCreateDarkScoriaOre;
-        ForgeConfigSpec.IntValue minXpCreateDarkScoriaOre;
-        ForgeConfigSpec.IntValue maxXpCreateDarkScoriaOre;
-
-        ForgeConfigSpec.BooleanValue enableCreateDolomiteOre;
+        ForgeConfigSpec.BooleanValue disableCreateDolomiteOre;
         ForgeConfigSpec.IntValue veinSizeCreateDolomiteOre;
         ForgeConfigSpec.IntValue veinsPerChunkCreateDolomiteOre;
         ForgeConfigSpec.IntValue minHeightCreateDolomiteOre;
@@ -381,7 +369,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpCreateDolomiteOre;
         ForgeConfigSpec.IntValue maxXpCreateDolomiteOre;
 
-        ForgeConfigSpec.BooleanValue enableCreateGabbroOre;
+        ForgeConfigSpec.BooleanValue disableCreateGabbroOre;
         ForgeConfigSpec.IntValue veinSizeCreateGabbroOre;
         ForgeConfigSpec.IntValue veinsPerChunkCreateGabbroOre;
         ForgeConfigSpec.IntValue minHeightCreateGabbroOre;
@@ -393,7 +381,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpCreateGabbroOre;
         ForgeConfigSpec.IntValue maxXpCreateGabbroOre;
 
-        ForgeConfigSpec.BooleanValue enableCreateLimestoneOre;
+        ForgeConfigSpec.BooleanValue disableCreateLimestoneOre;
         ForgeConfigSpec.IntValue veinSizeCreateLimestoneOre;
         ForgeConfigSpec.IntValue veinsPerChunkCreateLimestoneOre;
         ForgeConfigSpec.IntValue minHeightCreateLimestoneOre;
@@ -405,7 +393,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpCreateLimestoneOre;
         ForgeConfigSpec.IntValue maxXpCreateLimestoneOre;
 
-        ForgeConfigSpec.BooleanValue enableCreateScoriaOre;
+        ForgeConfigSpec.BooleanValue disableCreateScoriaOre;
         ForgeConfigSpec.IntValue veinSizeCreateScoriaOre;
         ForgeConfigSpec.IntValue veinsPerChunkCreateScoriaOre;
         ForgeConfigSpec.IntValue minHeightCreateScoriaOre;
@@ -417,7 +405,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpCreateScoriaOre;
         ForgeConfigSpec.IntValue maxXpCreateScoriaOre;
 
-        ForgeConfigSpec.BooleanValue enableCreateWeatheredLimestoneOre;
+        ForgeConfigSpec.BooleanValue disableCreateWeatheredLimestoneOre;
         ForgeConfigSpec.IntValue veinSizeCreateWeatheredLimestoneOre;
         ForgeConfigSpec.IntValue veinsPerChunkCreateWeatheredLimestoneOre;
         ForgeConfigSpec.IntValue minHeightCreateWeatheredLimestoneOre;
@@ -429,7 +417,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpCreateWeatheredLimestoneOre;
         ForgeConfigSpec.IntValue maxXpCreateWeatheredLimestoneOre;
 
-        ForgeConfigSpec.BooleanValue enableNethercraftHeatSandOre;
+        ForgeConfigSpec.BooleanValue disableNethercraftHeatSandOre;
         ForgeConfigSpec.IntValue veinSizeNethercraftHeatSandOre;
         ForgeConfigSpec.IntValue veinsPerChunkNethercraftHeatSandOre;
         ForgeConfigSpec.IntValue minHeightNethercraftHeatSandOre;
@@ -441,7 +429,7 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpNethercraftHeatSandOre;
         ForgeConfigSpec.IntValue maxXpNethercraftHeatSandOre;
 
-        ForgeConfigSpec.BooleanValue enableHardenedStoneOre;
+        ForgeConfigSpec.BooleanValue disableHardenedStoneOre;
         ForgeConfigSpec.IntValue veinSizeHardenedStoneOre;
         ForgeConfigSpec.IntValue veinsPerChunkHardenedStoneOre;
         ForgeConfigSpec.IntValue minHeightHardenedStoneOre;
@@ -470,7 +458,7 @@ public class OresConfig {
             BUILDER.comment("Vanilla Stone Variants").push(PathHandler.getModNamePath(VariantsModId.MINECRAFT));
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.STONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.STONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableStoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableStoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeStoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkStoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightStoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -489,7 +477,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.ANDESITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.ANDESITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableAndesiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableAndesiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeAndesiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkAndesiteOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightAndesiteOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -508,7 +496,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.DIORITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.DIORITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableDioriteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableDioriteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeDioriteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkDioriteOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightDioriteOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -527,7 +515,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.GRANITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.GRANITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableGraniteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableGraniteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeGraniteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkGraniteOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightGraniteOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -546,7 +534,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.NETHERRACK, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.NETHERRACK, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableNetherrackOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableNetherrackOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeNetherrackOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getNetherFactor()), 0, 65536);
                         veinsPerChunkNetherrackOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getNetherFactor()), 0, 65536);
                         minHeightNetherrackOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), Math.max(96 - cType.getMaxY(), 0), 0, 256);
@@ -565,7 +553,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.END_STONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.END_STONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableEndStoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableEndStoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeEndStoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getEndFactor()), 0, 65536);
                         veinsPerChunkEndStoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getEndFactor()), 0, 65536);
                         minHeightEndStoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), Math.min(cType.getMinY(), 56), 0, 256);
@@ -584,7 +572,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.SAND, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.SAND, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableSandOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableSandOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeSandOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
                         veinsPerChunkSandOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                         minHeightSandOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -603,7 +591,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.RED_SAND, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.RED_SAND, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                    enableRedSandOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                    disableRedSandOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                     veinSizeRedSandOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
                     veinsPerChunkRedSandOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                     minHeightRedSandOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -622,7 +610,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.SANDSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.SANDSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableSandstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableSandstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeSandstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
                         veinsPerChunkSandstoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                         minHeightSandstoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -641,7 +629,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.RED_SANDSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.RED_SANDSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableRedSandstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableRedSandstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeRedSandstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
                         veinsPerChunkRedSandstoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                         minHeightRedSandstoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -660,7 +648,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.GRAVEL, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.GRAVEL, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableGravelOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableGravelOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeGravelOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
                         veinsPerChunkGravelOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                         minHeightGravelOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -679,7 +667,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.BLUE_ICE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.BLUE_ICE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableBlueIceOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableBlueIceOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeBlueIceOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
                         veinsPerChunkBlueIceOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                         minHeightBlueIceOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -698,7 +686,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.PACKED_ICE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.PACKED_ICE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enablePackedIceOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disablePackedIceOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizePackedIceOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getSurfaceFactor()), 0, 65536);
                         veinsPerChunkPackedIceOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getSurfaceFactor()), 0, 65536);
                         minHeightPackedIceOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -717,7 +705,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.BEDROCK, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.BEDROCK, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableBedrockOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableBedrockOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeBedrockOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), 1, 0, 65536);
                         veinsPerChunkBedrockOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), 4, 0, 65536);
                         minHeightBedrockOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), 0, 0, 256);
@@ -739,7 +727,7 @@ public class OresConfig {
             BUILDER.comment("Quark Stone Variants").push(PathHandler.getModNamePath(VariantsModId.QUARK));
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_BASALT, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_BASALT, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableQuarkBasaltOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableQuarkBasaltOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeQuarkBasaltOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getNetherFactor()), 0, 65536);
                         veinsPerChunkQuarkBasaltOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getNetherFactor()), 0, 65536);
                         minHeightQuarkBasaltOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), Math.max(96 - cType.getMaxY(), 0), 0, 256);
@@ -758,7 +746,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_LIMESTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_LIMESTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableQuarkLimestoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableQuarkLimestoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeQuarkLimestoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkQuarkLimestoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightQuarkLimestoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -777,7 +765,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_JASPER, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_JASPER, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableQuarkJasperOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableQuarkJasperOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeQuarkJasperOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkQuarkJasperOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightQuarkJasperOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -796,7 +784,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_MARBLE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_MARBLE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableQuarkMarbleOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableQuarkMarbleOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeQuarkMarbleOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkQuarkMarbleOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightQuarkMarbleOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -815,7 +803,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.QUARK_SLATE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.QUARK_SLATE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableQuarkSlateOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableQuarkSlateOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeQuarkSlateOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkQuarkSlateOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightQuarkSlateOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -836,7 +824,7 @@ public class OresConfig {
             BUILDER.comment("Embellishcraft Stone Variants").push(PathHandler.getModNamePath(VariantsModId.EMBELLISHCRAFT));
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_BASALT, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_BASALT, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableEmbellishcraftBasaltOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableEmbellishcraftBasaltOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeEmbellishcraftBasaltOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkEmbellishcraftBasaltOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightEmbellishcraftBasaltOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -855,7 +843,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_GNEISS, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_GNEISS, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableEmbellishcraftGneissOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableEmbellishcraftGneissOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeEmbellishcraftGneissOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkEmbellishcraftGneissOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightEmbellishcraftGneissOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -874,7 +862,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_JADE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_JADE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableEmbellishcraftJadeOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableEmbellishcraftJadeOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeEmbellishcraftJadeOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkEmbellishcraftJadeOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightEmbellishcraftJadeOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -893,7 +881,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_LARVIKITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_LARVIKITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableEmbellishcraftLarvikiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableEmbellishcraftLarvikiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeEmbellishcraftLarvikiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkEmbellishcraftLarvikiteOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightEmbellishcraftLarvikiteOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -912,7 +900,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_MARBLE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_MARBLE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableEmbellishcraftMarbleOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableEmbellishcraftMarbleOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeEmbellishcraftMarbleOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkEmbellishcraftMarbleOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightEmbellishcraftMarbleOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -931,7 +919,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.EMBELLISHCRAFT_SLATE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.EMBELLISHCRAFT_SLATE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableEmbellishcraftSlateOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableEmbellishcraftSlateOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeEmbellishcraftSlateOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkEmbellishcraftSlateOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightEmbellishcraftSlateOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -950,28 +938,9 @@ public class OresConfig {
                 BUILDER.pop();
             BUILDER.pop();
             BUILDER.comment("Create Stone Variants").push(PathHandler.getModNamePath(VariantsModId.CREATE));
-                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.CREATE_DARK_SCORIA, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.CREATE_DARK_SCORIA, rType, oType));
-                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
-                        veinSizeCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
-                        veinsPerChunkCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
-                        minHeightCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
-                        maxHeightCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
-                        isTempWhitelistCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
-                        temperatureBlacklistCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
-                        isBiomeWhitelistCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
-                        biomeBlacklistCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
-                    BUILDER.pop();
-                    if(oType.equals(OreTypes.XP)) {
-                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
-                        minXpCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
-                        maxXpCreateDarkScoriaOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
-                        BUILDER.pop();
-                    }
-                BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.CREATE_DOLOMITE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.CREATE_DOLOMITE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableCreateDolomiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableCreateDolomiteOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeCreateDolomiteOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkCreateDolomiteOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightCreateDolomiteOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -990,7 +959,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.CREATE_GABBRO, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.CREATE_GABBRO, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableCreateGabbroOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableCreateGabbroOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeCreateGabbroOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkCreateGabbroOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightCreateGabbroOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -1009,7 +978,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.CREATE_LIMESTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.CREATE_LIMESTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableCreateLimestoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableCreateLimestoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeCreateLimestoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkCreateLimestoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightCreateLimestoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -1028,7 +997,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.CREATE_SCORIA, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.CREATE_SCORIA, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableCreateScoriaOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableCreateScoriaOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeCreateScoriaOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkCreateScoriaOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightCreateScoriaOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -1047,7 +1016,7 @@ public class OresConfig {
                 BUILDER.pop();
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.CREATE_WEATHERED_LIMESTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.CREATE_WEATHERED_LIMESTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightCreateWeatheredLimestoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -1068,7 +1037,7 @@ public class OresConfig {
             BUILDER.comment("Mystical Agriculture Stone Variants").push(PathHandler.getModNamePath(VariantsModId.MYSTICALAGRICULTURE));
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.MYSTICALAGRICULTURE_SOULSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.MYSTICALAGRICULTURE_SOULSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightMysticalagricultureSoulstoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -1089,7 +1058,7 @@ public class OresConfig {
             BUILDER.comment("The Midnight Stone Variants").push(PathHandler.getModNamePath(VariantsModId.MIDNIGHT));
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.MIDNIGHT_NIGHTSTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.MIDNIGHT_NIGHTSTONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableMidnightNightstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableMidnightNightstoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeMidnightNightstoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkMidnightNightstoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightMidnightNightstoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
@@ -1110,7 +1079,7 @@ public class OresConfig {
             BUILDER.comment("The Nethercraft Stone Variants").push(PathHandler.getModNamePath(VariantsModId.NETHERCRAFT));
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.NETHERCRAFT_HEATSAND, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.NETHERCRAFT_HEATSAND, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(cType.getNetherFactor()), 0, 65536);
                         veinsPerChunkNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(cType.getNetherFactor()), 0, 65536);
                         minHeightNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(),  Math.max(96 - cType.getMaxY(), 0), 0, 256);
@@ -1131,7 +1100,7 @@ public class OresConfig {
             BUILDER.comment("Danny's Ores Stone Variants").push(PathHandler.getModNamePath(VariantsModId.DANNYS_ORES));
                 BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.HARDENED_STONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.HARDENED_STONE, rType, oType));
                     BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
-                        enableHardenedStoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getEnableVariantPath(), true);
+                        disableHardenedStoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                         veinSizeHardenedStoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
                         veinsPerChunkHardenedStoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
                         minHeightHardenedStoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);

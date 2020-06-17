@@ -18,8 +18,8 @@ public class PathHandler {
 
     public static String getDisableAllVariantsPath() { return "disableAllVariants"; }
 
-    public static String getEnableVariantPath() {
-        return "enableVariant";
+    public static String getDisableVariantPath() {
+        return "disableVariant";
     }
 
     public static String getVeinSizePath() {

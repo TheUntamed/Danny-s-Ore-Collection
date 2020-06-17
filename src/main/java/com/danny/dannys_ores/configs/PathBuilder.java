@@ -18,8 +18,8 @@ public class PathBuilder {
         return getGeneralPath() + "." + rType.getName() + "." + PathHandler.getDisableAllVariantsPath();
     }
 
-    public static String getEnableVariantFullPath(VariantsModId fillerBlockModId, StoneVariants variant, RichnessTypes rType, OreTypes oType) {
-        return getGenerationPath(fillerBlockModId, variant, rType, oType) + "." + PathHandler.getEnableVariantPath();
+    public static String getDisableVariantFullPath(VariantsModId fillerBlockModId, StoneVariants variant, RichnessTypes rType, OreTypes oType) {
+        return getGenerationPath(fillerBlockModId, variant, rType, oType) + "." + PathHandler.getDisableVariantPath();
     }
 
     public static String getVeinSizeFullPath(VariantsModId fillerBlockModId, StoneVariants variant, RichnessTypes rType, OreTypes oType) {
@@ -115,8 +115,8 @@ public class PathBuilder {
         return getGeneralPath() + "." + PathHandler.getDisableAllVariantsPath();
     }
 
-    public static String getEnableVariantFullPath(String blockName) {
-        return getGenerationPath(blockName) + "." + PathHandler.getEnableVariantPath();
+    public static String getDisableVariantFullPath(String blockName) {
+        return getGenerationPath(blockName) + "." + PathHandler.getDisableVariantPath();
     }
 
     public static String getVeinSizeFullPath(String blockName) {

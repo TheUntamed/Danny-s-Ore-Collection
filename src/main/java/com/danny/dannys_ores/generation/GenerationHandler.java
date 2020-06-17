@@ -8,8 +8,10 @@ import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
@@ -24,6 +26,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.function.Predicate;
 
 import static java.lang.Math.max;
 
@@ -201,7 +204,7 @@ public class GenerationHandler {
      * @return True if an ore with the given features should generate. False if it shouldn't.
      */
     private static boolean getSpecificOreGenerationStatus(UnmodifiableConfig config, OreTypes oType, RichnessTypes rType, StoneVariants variant, VariantsModId fillerBlockModId, String biomeName, String tempName) {
-        boolean stoneVariant = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getEnableVariantFullPath(fillerBlockModId, variant, rType, oType))).get();
+        boolean disableVariant = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getDisableVariantFullPath(fillerBlockModId, variant, rType, oType))).get();
         boolean isTempWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getIsTempWhitelistFullPath(fillerBlockModId, variant, rType, oType))).get();
         boolean isBiomeWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getIsBiomeWhitelistFullPath(fillerBlockModId, variant, rType, oType))).get();
         ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathBuilder.getBiomeBlacklistFullPath(fillerBlockModId, variant, rType, oType));
@@ -211,7 +214,7 @@ public class GenerationHandler {
         boolean biomeAllowed = (isBiomeWhite && biomeList.contains(biomeName)) || (!isBiomeWhite && !biomeList.contains(biomeName));
         boolean tempAllowed = (isTempWhite && tempList.contains(tempName)) || (!isTempWhite && !tempList.contains(tempName));
 
-        return stoneVariant && biomeAllowed && tempAllowed;
+        return !disableVariant && biomeAllowed && tempAllowed;
     }
 
     /**
@@ -255,7 +258,7 @@ public class GenerationHandler {
      */
     private static boolean getStoneGenerationStatus(UnmodifiableConfig config, String blockName, String biomeName, String tempName) {
         boolean disableAll = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getDisableAllVariantsFullPath())).get();
-        boolean stoneVariant = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getEnableVariantFullPath(blockName))).get();
+        boolean disableVariant = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getDisableVariantFullPath(blockName))).get();
         boolean isTempWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getIsTempWhitelistFullPath(blockName))).get();
         boolean isBiomeWhite = ((ForgeConfigSpec.BooleanValue) config.get(PathBuilder.getIsBiomeWhitelistFullPath(blockName))).get();
         ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathBuilder.getBiomeBlacklistFullPath(blockName));
@@ -264,7 +267,7 @@ public class GenerationHandler {
         List<String> tempList = inTempFCS.get();
         boolean biomeAllowed = (isBiomeWhite && biomeList.contains(biomeName)) || (!isBiomeWhite && !biomeList.contains(biomeName));
         boolean tempAllowed = (isTempWhite && tempList.contains(tempName)) || (!isTempWhite && !tempList.contains(tempName));
-        return !disableAll && stoneVariant && biomeAllowed && tempAllowed;
+        return !disableAll && !disableVariant && biomeAllowed && tempAllowed;
     }
 
     /**
@@ -296,8 +299,8 @@ public class GenerationHandler {
         for (ConfiguredFeature<?, ?> feature : biome.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES)) {
             if (feature.config instanceof DecoratedFeatureConfig) {
                 if (((DecoratedFeatureConfig) feature.config).feature.feature instanceof OreFeature) {
-                    Block b = ((OreFeatureConfig) ((DecoratedFeatureConfig) feature.config).feature.config).state.getBlock();
-                    if (b == Blocks.IRON_ORE || b == Blocks.GOLD_ORE || b == Blocks.COAL_ORE || b == Blocks.DIAMOND_ORE || b == Blocks.EMERALD_ORE || b == Blocks.LAPIS_ORE || b == Blocks.REDSTONE_ORE) {
+                    Block block = ((OreFeatureConfig) ((DecoratedFeatureConfig) feature.config).feature.config).state.getBlock();
+                    if (BlockInit.getFilledVanillaBlockMap().containsKey(block)) {
                         featuresToRemove.add(feature);
                     }
                 }

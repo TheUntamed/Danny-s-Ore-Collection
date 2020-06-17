@@ -1,7 +1,0 @@
-{
-  "parent": "dannys_ores:block/cube_overlayed",
-  "textures": {
-    "base": "dannys_ores:block/create_dark_scoria",
-    "overlay": "dannys_ores:block/dense_prosperity_ore"
-  }
-}
