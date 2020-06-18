@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "forge:ores/dense_emerald"
+  },
+  "result": {
+    "item": "minecraft:emerald",
+    "count": 2
+  },
+  "experience": 2.0,
+  "cookingtime": 100
+}

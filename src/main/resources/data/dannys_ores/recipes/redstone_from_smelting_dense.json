@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:ores/dense_redstone"
+  },
+  "result":{
+    "item": "minecraft:redstone",
+    "count": 2
+  },
+  "experience": 1.4,
+  "cookingtime": 200
+}

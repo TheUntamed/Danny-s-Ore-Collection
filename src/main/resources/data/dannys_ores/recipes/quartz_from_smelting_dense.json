@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:ores/dense_quartz"
+  },
+  "result":{
+    "item": "minecraft:quartz",
+    "count": 2
+  },
+  "experience": 0.4,
+  "cookingtime": 200
+}

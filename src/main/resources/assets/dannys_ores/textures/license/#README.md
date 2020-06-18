@@ -1,6 +1,6 @@
 Some of the background textures are from other mods or vanilla minecraft
 and most of the overlay textures are based on the textures of other mods!
-The dense and poor ore overlays are based on the corresponding normal normal overlay.
+The dense and poor ore overlays are based on the corresponding normal overlay.
 Below all those mods are listed and linked.
 You will also find the license of the mods in the corresponding .md files in this folder!
 
@@ -85,3 +85,6 @@ https://www.curseforge.com/minecraft/mc-mods/forbidden-arcanus
 
 The stone textures create_scoria, _dolomite, _gabbro, _limestone, and _weathered_limestone are from the mod 'Create' (by simibubi).
 https://www.curseforge.com/minecraft/mc-mods/create
+
+The Ore Overlays for the Amber, Moonstone, Fiery Glass and Rockroot Ore are modified versions of the corresponding ore textures from 'Druidcraft' (by VulpTheHorseDog).
+https://www.curseforge.com/minecraft/mc-mods/druidcraft

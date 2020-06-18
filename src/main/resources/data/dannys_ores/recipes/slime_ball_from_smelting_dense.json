@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "forge:ores/dense_sticky"
+  },
+  "result":{
+    "item": "minecraft:slime_ball",
+    "count": 2
+  },
+  "experience": 0.2,
+  "cookingtime": 100
+}

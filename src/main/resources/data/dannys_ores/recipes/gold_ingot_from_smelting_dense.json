@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:ores/dense_gold"
+  },
+  "result": {
+    "item": "minecraft:gold_ingot",
+    "count": 2
+  },
+  "experience": 2.0,
+  "cookingtime": 200
+}
