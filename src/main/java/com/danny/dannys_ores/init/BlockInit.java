@@ -89,7 +89,8 @@ public class BlockInit {
                     // If the ore has particles or an explosion effect a different block class is required.
                     if (oType.getParticles() != null) {
                         for (StoneVariants variant : StoneVariants.values()) {
-                            if (ModHandler.variantsModIdExists(variant.getModid()) || testing) {
+                            // TODO: Right now all blocks have to be initialized because otherwise loottable and tag jsons throw errors and stop working.
+//                            if (ModHandler.variantsModIdExists(variant.getModid()) || testing) {
                                 String regName = getRegName(variant, rTypeName, oTypeName);
                                 int minXp = getMinXp(oType, variant, rType);
                                 int maxXp = getMaxXp(oType, variant, rType);
@@ -98,11 +99,11 @@ public class BlockInit {
                                 } else {
                                     BLOCKS.register(regName, () -> new OreWithParticles(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp, oType.getParticles()));
                                 }
-                            }
+//                            }
                         }
                     } else if (oType.getEffect().equals(Effects.EXPLODE)) {
                         for (StoneVariants variant : StoneVariants.values()) {
-                            if (ModHandler.variantsModIdExists(variant.getModid()) || testing) {
+//                            if (ModHandler.variantsModIdExists(variant.getModid()) || testing) {
                                 String regName = getRegName(variant, rTypeName, oTypeName);
                                 int minXp = getMinXp(oType, variant, rType);
                                 int maxXp = getMaxXp(oType, variant, rType);
@@ -111,11 +112,11 @@ public class BlockInit {
                                 } else {
                                     BLOCKS.register(regName, () -> new ExplosiveOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp));
                                 }
-                            }
+//                            }
                         }
                     } else {
                         for (StoneVariants variant : StoneVariants.values()) {
-                            if (ModHandler.variantsModIdExists(variant.getModid()) || testing) {
+//                            if (ModHandler.variantsModIdExists(variant.getModid()) || testing) {
                                 String regName = getRegName(variant, rTypeName, oTypeName);
                                 int minXp = getMinXp(oType, variant, rType);
                                 int maxXp = getMaxXp(oType, variant, rType);
@@ -126,7 +127,7 @@ public class BlockInit {
                                         BLOCKS.register(regName, () -> new SimpleOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness()*oType.getHardnessMultiplier(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp));
                                     }
                                 }
-                            }
+//                            }
                         }
                     }
                 }
