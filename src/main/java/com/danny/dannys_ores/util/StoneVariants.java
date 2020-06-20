@@ -1,10 +1,8 @@
 package com.danny.dannys_ores.util;
 
-import com.danny.dannys_ores.materials.MyMaterials;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
-import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.common.ToolType;
 
 /**
@@ -15,13 +13,13 @@ public enum StoneVariants {
     DIORITE("diorite", VariantsModId.MINECRAFT, Material.ROCK, MaterialColor.QUARTZ, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     ANDESITE("andesite", VariantsModId.MINECRAFT, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     GRANITE("granite", VariantsModId.MINECRAFT, Material.ROCK, MaterialColor.DIRT, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
-    SAND("sand", VariantsModId.MINECRAFT, MyMaterials.SAND_ORE, MaterialColor.SAND, ToolType.SHOVEL, SoundType.SAND, 3.0F, 3.0F, 0.6F, 0, 0, 1),
-    RED_SAND("red_sand", VariantsModId.MINECRAFT, MyMaterials.SAND_ORE, MaterialColor.ADOBE, ToolType.SHOVEL, SoundType.SAND, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    SAND("sand", VariantsModId.MINECRAFT, Material.SAND, MaterialColor.SAND, ToolType.SHOVEL, SoundType.SAND, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    RED_SAND("red_sand", VariantsModId.MINECRAFT, Material.SAND, MaterialColor.ADOBE, ToolType.SHOVEL, SoundType.SAND, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     SANDSTONE("sandstone", VariantsModId.MINECRAFT, Material.ROCK, MaterialColor.SAND, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     RED_SANDSTONE("red_sandstone", VariantsModId.MINECRAFT, Material.ROCK, MaterialColor.ADOBE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
-    GRAVEL("gravel", VariantsModId.MINECRAFT, MyMaterials.GRAVEL_ORE, MaterialColor.STONE, ToolType.SHOVEL, SoundType.GROUND, 3.0F, 3.0F, 0.6F, 0, 0, 1),
-    PACKED_ICE("packed_ice", VariantsModId.MINECRAFT, MyMaterials.ICE_ORE, MaterialColor.ICE, ToolType.PICKAXE, SoundType.GLASS, 3.0F, 3.0F, 0.98F, 0, 0, 0),
-    BLUE_ICE("blue_ice", VariantsModId.MINECRAFT, MyMaterials.ICE_ORE, MaterialColor.ICE, ToolType.PICKAXE, SoundType.GLASS, 3.0F, 3.0F, 0.989F, 0, 0, 0),
+    GRAVEL("gravel", VariantsModId.MINECRAFT, Material.SAND, MaterialColor.STONE, ToolType.SHOVEL, SoundType.GROUND, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    PACKED_ICE("packed_ice", VariantsModId.MINECRAFT, Material.ICE, MaterialColor.ICE, ToolType.PICKAXE, SoundType.GLASS, 3.0F, 3.0F, 0.98F, 0, 0, 0),
+    BLUE_ICE("blue_ice", VariantsModId.MINECRAFT, Material.ICE, MaterialColor.ICE, ToolType.PICKAXE, SoundType.GLASS, 3.0F, 3.0F, 0.989F, 0, 0, 0),
     BEDROCK("bedrock", VariantsModId.MINECRAFT, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, -1.0F, 9.0F, 0.6F, 0, 0, 1),
     NETHERRACK("netherrack", VariantsModId.MINECRAFT, Material.ROCK, MaterialColor.NETHERRACK, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     END_STONE("end_stone", VariantsModId.MINECRAFT, Material.ROCK, MaterialColor.SAND, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
@@ -41,7 +39,7 @@ public enum StoneVariants {
     CREATE_LIMESTONE("limestone", VariantsModId.CREATE, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     CREATE_SCORIA("scoria", VariantsModId.CREATE, Material.ROCK, MaterialColor.BROWN, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     CREATE_WEATHERED_LIMESTONE("weathered_limestone", VariantsModId.CREATE, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
-    NETHERCRAFT_HEATSAND("heat_sand", VariantsModId.NETHERCRAFT, MyMaterials.SAND_ORE, MaterialColor.ADOBE, ToolType.PICKAXE, SoundType.SAND, 3.0F, 3.0F, 0.6F, 0, 9, 1),
+    NETHERCRAFT_HEATSAND("heat_sand", VariantsModId.NETHERCRAFT, Material.SAND, MaterialColor.ADOBE, ToolType.PICKAXE, SoundType.SAND, 3.0F, 3.0F, 0.6F, 0, 9, 1),
     MYSTICALAGRICULTURE_SOULSTONE("soulstone", VariantsModId.MYSTICALAGRICULTURE, Material.ROCK, MaterialColor.BROWN_TERRACOTTA, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     MIDNIGHT_NIGHTSTONE("nightstone", VariantsModId.MIDNIGHT, Material.ROCK, MaterialColor.PURPLE_TERRACOTTA, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     HARDENED_STONE("hardened_stone", VariantsModId.DANNYS_ORES, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 4.0F, 6.0F, 0.6F, 1, 0, 1);

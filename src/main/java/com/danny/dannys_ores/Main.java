@@ -3,6 +3,7 @@ package com.danny.dannys_ores;
 import com.danny.dannys_ores.blockItems.*;
 import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.configs.Config;
+import com.danny.dannys_ores.events.OreBreak;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.OreTypes;
@@ -45,14 +46,14 @@ public class Main {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
+        instance = this;
+        MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(new OreBreak());
 
         BlockInit.BLOCKS.register(modEventBus);
         BlockInit.initOres();
 
         Config.loadConfigs();
-
-        instance = this;
-        MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

@@ -10,7 +10,7 @@ public enum OreTypes {
     COAL("coal", 0, 1.0F, 0, 2, Effects.NONE, null, true, ConfigTypes.COAL),
     DIAMOND("diamond", 2, 1.0F, 3, 7, Effects.NONE, null, true, ConfigTypes.DIAMOND),
     EMERALD("emerald", 2, 1.0F, 3, 7, Effects.NONE, null, true, ConfigTypes.EMERALD),
-    GOLD("gold", 1, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.GOLD),
+    GOLD("gold", 2, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.GOLD),
     IRON("iron", 1, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.IRON),
     LAPIS("lapis", 1, 1.0F, 2, 5, Effects.NONE, null, true, ConfigTypes.LAPIS),
     QUARTZ("quartz", 1, 1.0F, 2, 5, Effects.NONE, null, true, ConfigTypes.QUARTZ),
