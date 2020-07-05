@@ -88,3 +88,6 @@ https://www.curseforge.com/minecraft/mc-mods/create
 
 The Ore Overlays for the Amber, Moonstone, Fiery Glass and Rockroot Ore are modified versions of the corresponding ore textures from 'Druidcraft' (by VulpTheHorseDog).
 https://www.curseforge.com/minecraft/mc-mods/druidcraft
+
+The Ore Overly of Malachite Ore was inspired by the corresponding ore texture from 'Blue Power' (by Quetzi).
+https://www.curseforge.com/minecraft/mc-mods/blue-power

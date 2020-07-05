@@ -39,6 +39,7 @@ public enum OreTypes {
     INFERIUM("inferium", 1, 1.0F, 2, 5, Effects.NONE, null, true, ConfigTypes.S8C16B0T128),
     INSANIUM("insanium", 4, 1.0F, 7, 10, Effects.NONE, null, true, ConfigTypes.S1C1B0T16),
     LAVA_CRYSTAL("lava_crystal", 3, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S2C3B0T48N2),
+    MALACHITE("malachite", 2, 1.0F, 2, 7, Effects.NONE, null, true, ConfigTypes.S6C3B8T64),
     MOONSTONE("moonstone", 3, 1.0F, 6, 14, Effects.NONE, null, true, ConfigTypes.S4C3B0T128),
     NITER("niter", 1, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S2C8B40T128),
     PERIDOT("peridot", 2, 1.0F, 2, 7, Effects.NONE, null, true, ConfigTypes.S6C3B8T64),

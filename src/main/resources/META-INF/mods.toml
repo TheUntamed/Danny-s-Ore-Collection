@@ -10,7 +10,7 @@ modId="dannys_ores" #mandatory
 
 version="${version}" #mandatory
 
-displayName="Danny's Ores" #mandatory
+displayName="${mod_name}" #mandatory
 
 # updateJSONURL="http://myurl.me/" #optional
 

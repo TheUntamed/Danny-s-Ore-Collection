@@ -13,7 +13,6 @@ import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
  * The different data gen classes iterate over the BLOCKS registry object
  * which only contains ores based on stone variants of installed mods.
  * This means for other ores no data will be generated except the mod check if statements in {@link BlockInit} is deactivated.
- * TODO: Find a dynamic way to deactivate the mod check if statements.
  *
  * Credits to Affehund for his easy to understand explanations and examples about Data Generation.
  */
