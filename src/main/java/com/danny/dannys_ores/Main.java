@@ -7,6 +7,7 @@ import com.danny.dannys_ores.events.OreBreak;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.newMethod.MaterialTypeLoader;
+import com.danny.dannys_ores.newMethod.StoneVariantLoader;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
 import com.danny.dannys_ores.util.StoneVariants;
@@ -51,6 +52,7 @@ public class Main {
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new OreBreak());
 
+        StoneVariantLoader.loadStoneVariants();
         MaterialTypeLoader.loadMaterialTypes();
         BlockInit.BLOCKS.register(modEventBus);
         BlockInit.NEW_BLOCKS.register(modEventBus);

@@ -4,15 +4,16 @@ import net.minecraftforge.common.ToolType;
 
 public class StoneVariant {
     private final String modId;
+    private final String regName;
     private final String name;
     private final ToolType toolType;
     private final float hardness;
     private final float resistance;
 
-    public StoneVariant(String modId, String name, ToolType toolType, float hardness, float resistance) {
+    public StoneVariant(String modId, String regName, String name, ToolType toolType, float hardness, float resistance) {
         this.modId = modId;
+        this.regName = regName;
         this.name = name;
-        //ToolType.get("axe");
         this.toolType = toolType;
         this.hardness = hardness;
         this.resistance = resistance;
@@ -21,12 +22,14 @@ public class StoneVariant {
     }
 
     public String getModId() {
-        return modId;
+        return modId.toLowerCase();
     }
 
-    public String getName() {
-        return name;
+    public String getRegName() {
+        return regName.toLowerCase();
     }
+
+    public String getName() { return name; }
 
     public ToolType getToolType() {
         return toolType;

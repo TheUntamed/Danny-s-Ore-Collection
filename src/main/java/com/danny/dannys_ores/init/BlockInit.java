@@ -6,6 +6,7 @@ import com.danny.dannys_ores.blocks.bedrock.*;
 import com.danny.dannys_ores.newMethod.DannysOresAPI;
 import com.danny.dannys_ores.newMethod.MaterialType;
 import com.danny.dannys_ores.newMethod.NewBlock;
+import com.danny.dannys_ores.newMethod.StoneVariant;
 import com.danny.dannys_ores.util.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -142,7 +143,9 @@ public class BlockInit {
         Main.LOGGER.debug("Start new block init.");
         System.err.println("new block init!");
         for (MaterialType mType : DannysOresAPI.MATERIAL_TYPES) {
-            NEW_BLOCKS.register(mType.getRegName(), () -> new NewBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).harvestLevel(mType.getHarvestLevel())));
+            for (StoneVariant variant : DannysOresAPI.STONE_VARIANTS) {
+                NEW_BLOCKS.register(variant.getModId() + "_" + variant.getRegName() + "_" + mType.getRegName() + "_ore", () -> new NewBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).harvestLevel(mType.getHarvestLevel()).harvestTool(variant.getToolType()).hardnessAndResistance(variant.getHardness(), variant.getResistance()), mType, variant));
+            }
         }
 
         Main.LOGGER.debug("Finished new block init.");

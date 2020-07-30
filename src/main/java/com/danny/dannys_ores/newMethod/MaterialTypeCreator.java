@@ -6,7 +6,7 @@ import net.minecraft.util.JSONUtils;
 
 public class MaterialTypeCreator {
 
-    public static void create(String regName, JsonObject json) throws JsonSyntaxException {
+    public static void create(String fileName, JsonObject json) throws JsonSyntaxException {
         StringBuilder materialName = new StringBuilder();
         String materialCategory = JSONUtils.getString(json, "category");
         String materialColor = JSONUtils.getString(json, "color");
@@ -16,7 +16,7 @@ public class MaterialTypeCreator {
         if (json.has("name")) {
             materialName = new StringBuilder(JSONUtils.getString(json, "name"));
         } else {
-            String[] parts = regName.split(":")[1].split("_");
+            String[] parts = fileName.split(":")[1].split("_");
             for (String s : parts) {
                 materialName.append(s.substring(0, 1).toUpperCase()).append(s.substring(1).toUpperCase());
             }
@@ -32,6 +32,6 @@ public class MaterialTypeCreator {
 //        }
 
         System.err.println("creating: " + materialName);
-        new MaterialType(regName, materialName.toString(), category, harvestLevel, hasRichnessTypes);
+        new MaterialType(fileName, materialName.toString(), category, harvestLevel, hasRichnessTypes);
     }
 }

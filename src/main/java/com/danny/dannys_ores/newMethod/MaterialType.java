@@ -21,7 +21,7 @@ public class MaterialType {
     }
 
     public String getRegName() {
-        return regName;
+        return regName.toLowerCase();
     }
 
     public String getName() {

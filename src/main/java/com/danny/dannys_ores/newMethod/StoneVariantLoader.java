@@ -1,23 +1,25 @@
 package com.danny.dannys_ores.newMethod;
 
 import com.danny.dannys_ores.Main;
-import com.google.gson.*;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.commons.compress.utils.IOUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileFilter;
+import java.io.FileReader;
 
-public class MaterialTypeLoader {
+public class StoneVariantLoader {
 
-    public static void loadMaterialTypes() {
-        File dir = FMLPaths.CONFIGDIR.get().resolve("dannys_ores/types/").toFile();
+    public static void loadStoneVariants() {
+        File dir = FMLPaths.CONFIGDIR.get().resolve("dannys_ores/variants/").toFile();
         if (!dir.exists() && dir.mkdirs()) {
-            Main.LOGGER.info("Created /config/dannys_ores/types/ directory");
+            Main.LOGGER.info("Created /config/dannys_ores/variants/ directory");
         }
 
         File[] files = dir.listFiles((FileFilter) FileFilterUtils.suffixFileFilter(".json"));
@@ -27,18 +29,17 @@ public class MaterialTypeLoader {
         for (File file : files) {
             JsonObject json;
             FileReader reader = null;
-            ResourceLocation id = null;
-
+            System.err.println("start loading variants!");
             try {
                 JsonParser parser = new JsonParser();
                 reader = new FileReader(file);
                 json = parser.parse(reader).getAsJsonObject();
                 String fileName = file.getName().replace(".json", "");
-                MaterialTypeCreator.create(fileName, json);
-                System.err.println("loaded all types!");
+                StoneVariantCreator.create(fileName, json);
+                System.err.println("loaded all variants!");
                 reader.close();
             } catch (Exception e) {
-                Main.LOGGER.error("An error occurred while creating crop type with id {}", id, e);
+                Main.LOGGER.error("An error occurred while reading file {}", file, e);
             } finally {
                 IOUtils.closeQuietly(reader);
             }
