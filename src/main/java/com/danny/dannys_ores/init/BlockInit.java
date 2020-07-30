@@ -3,6 +3,9 @@ package com.danny.dannys_ores.init;
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blocks.*;
 import com.danny.dannys_ores.blocks.bedrock.*;
+import com.danny.dannys_ores.newMethod.DannysOresAPI;
+import com.danny.dannys_ores.newMethod.MaterialType;
+import com.danny.dannys_ores.newMethod.NewBlock;
 import com.danny.dannys_ores.util.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -64,6 +67,7 @@ public class BlockInit {
 
     // All registered blocks are saved inside this deferred registry object.
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
+    public static final DeferredRegister<Block> NEW_BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
 
     // The most simplest way to initialize a block. Impossible to implement for a lot of blocks.
     // For that reason ores are handled differently (see below).
@@ -134,6 +138,14 @@ public class BlockInit {
             }
         }
         Main.LOGGER.debug("Finished block init.");
+
+        Main.LOGGER.debug("Start new block init.");
+        System.err.println("new block init!");
+        for (MaterialType mType : DannysOresAPI.MATERIAL_TYPES) {
+            NEW_BLOCKS.register(mType.getRegName(), () -> new NewBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).harvestLevel(mType.getHarvestLevel())));
+        }
+
+        Main.LOGGER.debug("Finished new block init.");
     }
 
     /**

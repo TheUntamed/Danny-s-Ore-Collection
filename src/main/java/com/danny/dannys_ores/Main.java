@@ -6,6 +6,7 @@ import com.danny.dannys_ores.configs.Config;
 import com.danny.dannys_ores.events.OreBreak;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
+import com.danny.dannys_ores.newMethod.MaterialTypeLoader;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
 import com.danny.dannys_ores.util.StoneVariants;
@@ -50,13 +51,16 @@ public class Main {
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new OreBreak());
 
+        MaterialTypeLoader.loadMaterialTypes();
         BlockInit.BLOCKS.register(modEventBus);
+        BlockInit.NEW_BLOCKS.register(modEventBus);
         BlockInit.initOres();
 
         Config.loadConfigs();
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+        // MaterialTypeLoader.onCommonSetup();
     }
 
     /**
@@ -115,6 +119,13 @@ public class Main {
         });
 
         LOGGER.debug("Registered BlockItems!");
+
+        BlockInit.NEW_BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+            final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
+            final BlockItem blockItem = new BlockItem(block, properties);
+            blockItem.setRegistryName(block.getRegistryName());
+            registry.register(blockItem);
+        });
     }
 
     /**
