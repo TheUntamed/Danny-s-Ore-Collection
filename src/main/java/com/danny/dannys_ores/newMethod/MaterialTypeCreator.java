@@ -10,6 +10,7 @@ public class MaterialTypeCreator {
         StringBuilder materialName = new StringBuilder();
         String materialCategory = JSONUtils.getString(json, "category");
         String materialColor = JSONUtils.getString(json, "color");
+        JsonObject generation = JSONUtils.getJsonObject(json, "generation");
         int harvestLevel = 0;
         boolean hasRichnessTypes = JSONUtils.getBoolean(json, "richness");
 
@@ -32,6 +33,6 @@ public class MaterialTypeCreator {
 //        }
 
         System.err.println("creating: " + materialName);
-        new MaterialType(fileName, materialName.toString(), category, harvestLevel, hasRichnessTypes);
+        new MaterialType(fileName, materialName.toString(), category, harvestLevel, hasRichnessTypes, generation);
     }
 }

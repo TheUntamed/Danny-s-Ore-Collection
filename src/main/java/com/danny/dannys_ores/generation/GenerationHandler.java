@@ -5,6 +5,9 @@ import com.danny.dannys_ores.blocks.SimpleBlock;
 import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.init.BlockInit;
+import com.danny.dannys_ores.newMethod.MaterialType;
+import com.danny.dannys_ores.newMethod.NewBlock;
+import com.danny.dannys_ores.newMethod.StoneVariant;
 import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
@@ -171,6 +174,29 @@ public class GenerationHandler {
                     }
                 }
             }
+
+//            for (RegistryObject<Block> blockRO : BlockInit.NEW_BLOCKS.getEntries()) {
+//                Block block = blockRO.get();
+//                if (block instanceof NewBlock) {
+//                    NewBlock newBlock = (NewBlock) block;
+//                    MaterialType mType = newBlock.getMaterialType();
+//                    StoneVariant variant = newBlock.getStoneVariant();
+//                    if (mType.getShouldGenerate()) {
+//                        int veinSize = mType.getSize();
+//                        if (veinSize == 0) {
+//                            Main.LOGGER.info("Generation of '" + block + "' is enabled but vein size is 0!");
+//                        } else if (veinSize < 3) {
+//                            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.EMERALD_ORE
+//                                    .withConfiguration(new ReplaceBlockConfig(fillerBlock.getDefaultState(), block.getDefaultState()))
+//                                    .withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(mType.getCount(), mType.getMinY(), 0, mType.getMaxY()))));
+//                        } else {
+//                            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.ORE
+//                                    .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create(fillerBlock.toString(), null, new BlockMatcher(fillerBlock)), block.getDefaultState(), veinSize))
+//                                    .withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(mType.getCount(), mType.getMinY(), 0, mType.getMaxY()))));
+//                        }
+//                    }
+//                }
+//            }
         }
     }
 

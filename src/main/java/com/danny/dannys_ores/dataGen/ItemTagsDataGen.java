@@ -28,45 +28,54 @@ public class ItemTagsDataGen extends ItemTagsProvider {
 
     @Override
     protected void registerTags() {
-        OreTypes oType = null;
-        RichnessTypes rType = null;
-        for (RegistryObject<Block> regObj : BlockInit.BLOCKS.getEntries()) {
-            Block block = regObj.get();
-            if (block instanceof SimpleBlock) {
-                if (block instanceof SimpleOre) {
-                    SimpleOre ore = (SimpleOre) block;
-                    // Because the ores are grouped by type in the BlockInit classes
-                    // all ores of one type will always come after each other.
-                    ores.add(ore.asItem());
-                    if (oType == null) {
-                        oType = ore.getOreType();
-                        rType = ore.getRichnessType();
-                        oreType.add(ore.asItem());
-                    } else if (oType != ore.getOreType()) {
-                        if (rType.equals(RichnessTypes.NORMAL)) {
-                            addForgeTag("ores/" + oType.toString().toLowerCase(), oreType);
-                        } else {
-                            addForgeTag("ores/" + rType.toString().toLowerCase() + "_" + oType.toString().toLowerCase(), oreType);
-                        }
-                        oreType.clear();
-                        oType = ore.getOreType();
-                        rType = ore.getRichnessType();
-                        oreType.add(ore.asItem());
-                    } else {
-                        oreType.add(ore.asItem());
-                    }
-
-                } else {
-                    SimpleBlock simpleBlock = (SimpleBlock) block;
-                    stone.add(simpleBlock.asItem());
-                }
-            } else {
-                cobblestone.add(block.asItem());
-            }
+        for (OreTypes oType : OreTypes.values()) {
+            String tagName = "ores/" + oType.getName();
+            ResourceLocation loc = new ResourceLocation("forge", tagName);
+            getBuilder(new Tag<Item>(loc)).replace(false).build(loc);
         }
-        addForgeTag("ores", ores);
-        addForgeTag("stone", stone);
-        addForgeTag("cobblestone", cobblestone);
+
+        ResourceLocation locOres = new ResourceLocation("forge", "ores");
+        getBuilder(new Tag<Item>(locOres)).replace(false).build(locOres);
+
+//        OreTypes oType = null;
+//        RichnessTypes rType = null;
+//        for (RegistryObject<Block> regObj : BlockInit.BLOCKS.getEntries()) {
+//            Block block = regObj.get();
+//            if (block instanceof SimpleBlock) {
+//                if (block instanceof SimpleOre) {
+//                    SimpleOre ore = (SimpleOre) block;
+//                    // Because the ores are grouped by type in the BlockInit classes
+//                    // all ores of one type will always come after each other.
+//                    ores.add(ore.asItem());
+//                    if (oType == null) {
+//                        oType = ore.getOreType();
+//                        rType = ore.getRichnessType();
+//                        oreType.add(ore.asItem());
+//                    } else if (oType != ore.getOreType()) {
+//                        if (rType.equals(RichnessTypes.NORMAL)) {
+//                            addForgeTag("ores/" + oType.toString().toLowerCase(), oreType);
+//                        } else {
+//                            addForgeTag("ores/" + rType.toString().toLowerCase() + "_" + oType.toString().toLowerCase(), oreType);
+//                        }
+//                        oreType.clear();
+//                        oType = ore.getOreType();
+//                        rType = ore.getRichnessType();
+//                        oreType.add(ore.asItem());
+//                    } else {
+//                        oreType.add(ore.asItem());
+//                    }
+//
+//                } else {
+//                    SimpleBlock simpleBlock = (SimpleBlock) block;
+//                    stone.add(simpleBlock.asItem());
+//                }
+//            } else {
+//                cobblestone.add(block.asItem());
+//            }
+//        }
+//        addForgeTag("ores", ores);
+//        addForgeTag("stone", stone);
+//        addForgeTag("cobblestone", cobblestone);
     }
 
     private void addForgeTag(String name, ArrayList<Item> itemsIn) {

@@ -6,11 +6,15 @@ import com.danny.dannys_ores.configs.Config;
 import com.danny.dannys_ores.events.OreBreak;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
+import com.danny.dannys_ores.init.Tags;
+import com.danny.dannys_ores.newMethod.ColorHandler;
 import com.danny.dannys_ores.newMethod.MaterialTypeLoader;
+import com.danny.dannys_ores.newMethod.ModelHandler;
 import com.danny.dannys_ores.newMethod.StoneVariantLoader;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
 import com.danny.dannys_ores.util.StoneVariants;
+import com.google.common.collect.ImmutableSet;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
@@ -19,11 +23,15 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.TagsUpdatedEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -36,12 +44,16 @@ import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Objects;
+
 @Mod(Main.MOD_ID)
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
 public class Main {
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "dannys_ores";
     public static Main instance;
+    private static Tag<Block> testBlockTag;
+    private static Tag<Item> testItemTag;
 
 
     public Main() {
@@ -51,6 +63,15 @@ public class Main {
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new OreBreak());
+
+        DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
+            modEventBus.register(new ColorHandler());
+            modEventBus.register(new ModelHandler());
+        });
+
+//        addModListener<TextureStitchEvent.Pre> { SHItems.regTextures(it); }
+//        addModListener<ModelRegistryEvent> { SHItems.regModels(); }
+//        addModListener<ModelBakeEvent> { SHItems.regBakedModels(it); }
 
         StoneVariantLoader.loadStoneVariants();
         MaterialTypeLoader.loadMaterialTypes();
@@ -143,8 +164,35 @@ public class Main {
     }
 
     @SubscribeEvent
+    public void onClientSetupEvent(FMLClientSetupEvent event) {
+
+    }
+
+    @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
     }
+
+    @SubscribeEvent
+    public void tagsLoaded(TagsUpdatedEvent event) {
+        Tags.loadTags(event);
+    }
+
+    private static void setTag() {
+        if(testBlockTag != null) {
+            for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+                Block block = blockRO.get();
+                testBlockTag.getAllElements().add(block);
+                testBlockTag.getEntries().add(new Tag.TagEntry<Block>(Objects.requireNonNull(block.getRegistryName())));
+            }
+		}
+        if(testItemTag != null) {
+            for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+                Block block = blockRO.get();
+                testItemTag.getAllElements().add(block.asItem());
+                testItemTag.getEntries().add(new Tag.TagEntry<Item>(Objects.requireNonNull(block.getRegistryName())));
+            }
+        }
+	}
 
     @SubscribeEvent
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
