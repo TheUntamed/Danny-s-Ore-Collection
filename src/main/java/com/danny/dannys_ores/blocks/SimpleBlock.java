@@ -1,10 +1,14 @@
 package com.danny.dannys_ores.blocks;
 
 import com.danny.dannys_ores.init.BlockInit;
+import com.danny.dannys_ores.util.ModHandler;
 import com.danny.dannys_ores.util.VariantsModId;
 import com.danny.dannys_ores.util.StoneVariants;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 
 /**
  * An object of this class represents a simple block of this mod.
@@ -20,6 +24,13 @@ public class SimpleBlock extends Block {
         super(properties);
         this.blockBase = blockBase;
         this.blockBaseModId = blockBaseModId;
+    }
+
+    @Override
+    public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+        if (ModHandler.variantsModIdExists(this.getBlockBaseModId())) {
+            items.add(new ItemStack(this));
+        }
     }
 
     /**
@@ -72,6 +83,13 @@ public class SimpleBlock extends Block {
             case EMBELLISHCRAFT_LARVIKITE: return BlockInit.EMBELLISHCRAFT_LARVIKITE;
             case EMBELLISHCRAFT_MARBLE: return BlockInit.EMBELLISHCRAFT_MARBLE;
             case EMBELLISHCRAFT_SLATE: return BlockInit.EMBELLISHCRAFT_SLATE;
+            case ATUM_ALABASTER: return BlockInit.ATUM_ALABASTER;
+            case ATUM_MARL: return BlockInit.ATUM_MARL;
+            case ATUM_CRACKED_LIMESTONE: return BlockInit.ATUM_CRACKED_LIMESTONE;
+            case ATUM_LIMESTONE: return BlockInit.ATUM_LIMESTONE;
+            case ATUM_LIMESTONE_GRAVEL: return BlockInit.ATUM_LIMESTONE_GRAVEL;
+            case ATUM_PORPHYRY: return BlockInit.ATUM_PORPHYRY;
+            case ATUM_STRANGE_SAND: return BlockInit.ATUM_STRANGE_SAND;
             default:
                 throw new IllegalArgumentException("For the ore '" + this + "' with block base '" + blockBase + "' no block base could be returned!");
         }

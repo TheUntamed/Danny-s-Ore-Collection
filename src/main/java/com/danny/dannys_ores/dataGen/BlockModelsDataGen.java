@@ -7,6 +7,7 @@ import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
 import com.danny.dannys_ores.util.StoneVariants;
+import com.danny.dannys_ores.util.VariantsModId;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
@@ -34,7 +35,8 @@ public class BlockModelsDataGen extends BlockModelProvider {
                 StoneVariants variant = ore.getStoneVariant();
                 RichnessTypes rType = ore.getRichnessType();
                 OreTypes oType = ore.getOreType();
-                doubleTextureBlock(resLoc, "block/" + variant.getFullName(),
+                String backgroundPath = "block/" + variant.getFullName();
+                doubleTextureBlock(resLoc, backgroundPath,
                         "block/" + rType.getName() + "_" + oType.getName() + "_ore");
             } else {
                 String blockName = block.getRegistryName().toString().replace(":", "_");

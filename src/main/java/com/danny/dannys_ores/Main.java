@@ -14,7 +14,6 @@ import com.danny.dannys_ores.newMethod.StoneVariantLoader;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
 import com.danny.dannys_ores.util.StoneVariants;
-import com.google.common.collect.ImmutableSet;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
@@ -23,8 +22,9 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.storage.loot.*;
+import net.minecraft.world.storage.loot.conditions.SurvivesExplosion;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -44,16 +44,12 @@ import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Objects;
-
 @Mod(Main.MOD_ID)
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Bus.MOD)
 public class Main {
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "dannys_ores";
     public static Main instance;
-    private static Tag<Block> testBlockTag;
-    private static Tag<Item> testItemTag;
 
 
     public Main() {
@@ -176,23 +172,6 @@ public class Main {
     public void tagsLoaded(TagsUpdatedEvent event) {
         Tags.loadTags(event);
     }
-
-    private static void setTag() {
-        if(testBlockTag != null) {
-            for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
-                Block block = blockRO.get();
-                testBlockTag.getAllElements().add(block);
-                testBlockTag.getEntries().add(new Tag.TagEntry<Block>(Objects.requireNonNull(block.getRegistryName())));
-            }
-		}
-        if(testItemTag != null) {
-            for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
-                Block block = blockRO.get();
-                testItemTag.getAllElements().add(block.asItem());
-                testItemTag.getEntries().add(new Tag.TagEntry<Item>(Objects.requireNonNull(block.getRegistryName())));
-            }
-        }
-	}
 
     @SubscribeEvent
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {

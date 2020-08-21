@@ -11,7 +11,8 @@ public enum VariantsModId {
     CREATE,
     MIDNIGHT,
     MYSTICALAGRICULTURE,
-    NETHERCRAFT;
+    NETHERCRAFT,
+    ATUM;
 
     /**
      *

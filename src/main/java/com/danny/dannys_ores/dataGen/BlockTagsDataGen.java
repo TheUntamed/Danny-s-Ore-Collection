@@ -29,10 +29,17 @@ public class BlockTagsDataGen extends BlockTagsProvider {
 
     @Override
     protected void registerTags() {
-        for (OreTypes oType : OreTypes.values()) {
-            String tagName = "ores/" + oType.getName();
-            ResourceLocation loc = new ResourceLocation("forge", tagName);
-            getBuilder(new Tag<Block>(loc)).replace(false).build(loc);
+        for (RichnessTypes rType : RichnessTypes.values()) {
+            for (OreTypes oType : OreTypes.values()) {
+                String tagName;
+                if (rType.equals(RichnessTypes.NORMAL)) {
+                    tagName = "ores/" + oType.getName();
+                } else {
+                    tagName = "ores/" + rType.getName() + "_" + oType.getName();
+                }
+                ResourceLocation loc = new ResourceLocation("forge", tagName);
+                getBuilder(new Tag<Block>(loc)).replace(false).build(loc);
+            }
         }
 
         ResourceLocation locOres = new ResourceLocation("forge", "ores");

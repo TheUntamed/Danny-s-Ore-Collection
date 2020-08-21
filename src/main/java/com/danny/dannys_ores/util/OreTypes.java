@@ -6,7 +6,7 @@ import net.minecraft.particles.BasicParticleType;
  * Provides the ore type feature. Each ore has exactly one of these features assigned.
  */
 public enum OreTypes {
-    //Vanilla
+    // Vanilla
     COAL("coal", 0, 1.0F, 0, 2, Effects.NONE, null, true, ConfigTypes.COAL),
     DIAMOND("diamond", 2, 1.0F, 3, 7, Effects.NONE, null, true, ConfigTypes.DIAMOND),
     EMERALD("emerald", 2, 1.0F, 3, 7, Effects.NONE, null, true, ConfigTypes.EMERALD),
@@ -16,7 +16,7 @@ public enum OreTypes {
     QUARTZ("quartz", 1, 1.0F, 2, 5, Effects.NONE, null, true, ConfigTypes.QUARTZ),
     REDSTONE("redstone", 2, 1.0F, 2, 5, Effects.NONE, null, true, ConfigTypes.REDSTONE),
 
-    //Gems
+    // Gems
     AMBER("amber", 1, 1.0F, 6, 12, Effects.NONE, null, true, ConfigTypes.S4C2B0T128),
     AMETHYST("amethyst", 3, 1.0F, 3, 7, Effects.NONE, null, true, ConfigTypes.DIAMOND),
     ANGLESITE("anglesite", 1, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S3C4B0T48),
@@ -53,12 +53,12 @@ public enum OreTypes {
     SULFUR("sulfur", 1, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S3C2B0T24N2),
     SUPREMIUM("supremium", 3, 1.0F, 6, 9, Effects.NONE, null, true, ConfigTypes.S1C1B0T32),
     TERTIUM("tertium", 2, 1.0F, 4, 7, Effects.NONE, null, true, ConfigTypes.S2C4B0T64),
-    W("w", 3, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S2C1B16T64),
+    W("w", 3, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S2C1B16T64N2),
     WHITE_OPAL("white_opal", 4, 1.0F, 5, 10, Effects.NONE, null, true, ConfigTypes.S1C1B0T16),
     //XPETRIFIED("xpetrified", 2, 1.0F, 0, 0, Effects.NONE ,null, false, ConfigTypes.EMERALD),
     ZANITE("zanite", 2, 1.0F, 2, 7, Effects.NONE, null, true, ConfigTypes.S6C3B8T64),
 
-    //Elementary
+    // Elementary
     AIR("air", 1, 1.0F, 0, 0, Effects.LEVITATE, null, false, ConfigTypes.S4C5B0T32),
     EARTH("earth", 1, 1.0F, 0, 0, Effects.SLOW, null, false, ConfigTypes.S4C5B0T32),
     ENTROPY("entropy", 1, 1.0F, 0, 0, Effects.EXPLODE, null, false, ConfigTypes.S4C5B0T32),
@@ -66,11 +66,12 @@ public enum OreTypes {
     ORDER("order", 1, 1.0F, 0, 0, Effects.NONE, null, false, ConfigTypes.S4C5B0T32),
     WATER("water", 1, 1.0F, 0, 0, Effects.DROWN, null, false, ConfigTypes.S4C5B0T32),
 
-    //Other
+    // Other
     ADAMANTIUM("adamantium", 3, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S2C8B0T32),
     ARDITE("ardite", 1, 1.0F, 3, 0, Effects.NONE, null, true, ConfigTypes.S6C2B0T16),
     BAUXITE("bauxite", 1, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S4C4B20T48),
     BISMUTH("bismuth", 1, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S4C4B0T40),
+    BONE("bone", 0, 1.0F, 0, 2, Effects.NONE, null, true, ConfigTypes.S2C15B40T128),
     BORON("boron", 1, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S4C6B0T32),
     CHROME("chrome", 1, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S6C10B0T64),
     COBALT("cobalt", 3, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S6C2B0T16),
@@ -101,6 +102,7 @@ public enum OreTypes {
     TUNGSTEN("tungsten", 2, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S6C3B16T128),
     URANINITE("uraninite", 1, 1.0F, 0, 0, Effects.POISON, null, true, ConfigTypes.GOLD),
     VULCANITE("vulcanite", 1, 1.0F, 0, 0, Effects.BURN, null, true, ConfigTypes.S4C5B0T32),
+    WITHERED_BONE("withered_bone", 0, 1.0F, 0, 2, Effects.NONE, null, true, ConfigTypes.S2C5B40T128N2),
     XP("xp", 1, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S1C11B40T128),
     YELLORITE("yellorite", 1, 1.0F, 0, 0, Effects.POISON, null, true, ConfigTypes.GOLD),
     ZINC("zinc", 1, 1.0F, 0, 0, Effects.NONE, null, true, ConfigTypes.S4C8B24T64);

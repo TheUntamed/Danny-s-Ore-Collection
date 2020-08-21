@@ -42,6 +42,13 @@ public enum StoneVariants {
     NETHERCRAFT_HEATSAND("heat_sand", VariantsModId.NETHERCRAFT, Material.SAND, MaterialColor.ADOBE, ToolType.PICKAXE, SoundType.SAND, 3.0F, 3.0F, 0.6F, 0, 9, 1),
     MYSTICALAGRICULTURE_SOULSTONE("soulstone", VariantsModId.MYSTICALAGRICULTURE, Material.ROCK, MaterialColor.BROWN_TERRACOTTA, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     MIDNIGHT_NIGHTSTONE("nightstone", VariantsModId.MIDNIGHT, Material.ROCK, MaterialColor.PURPLE_TERRACOTTA, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    ATUM_STRANGE_SAND("strange_sand", VariantsModId.ATUM, Material.SAND, MaterialColor.SAND, ToolType.SHOVEL, SoundType.SAND, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    ATUM_LIMESTONE("limestone", VariantsModId.ATUM, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    ATUM_LIMESTONE_GRAVEL("limestone_gravel", VariantsModId.ATUM, Material.SAND, MaterialColor.STONE, ToolType.SHOVEL, SoundType.GROUND, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    ATUM_CRACKED_LIMESTONE("cracked_limestone", VariantsModId.ATUM, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    ATUM_ALABASTER("alabaster", VariantsModId.ATUM, Material.ROCK, MaterialColor.QUARTZ, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    ATUM_PORPHYRY("porphyry", VariantsModId.ATUM, Material.ROCK, MaterialColor.BLACK, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    ATUM_MARL("marl", VariantsModId.ATUM, Material.SAND, MaterialColor.SAND, ToolType.SHOVEL, SoundType.SAND, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     HARDENED_STONE("hardened_stone", VariantsModId.DANNYS_ORES, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 4.0F, 6.0F, 0.6F, 1, 0, 1);
 
     private final String blockName;

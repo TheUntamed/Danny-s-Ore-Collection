@@ -429,6 +429,90 @@ public class OresConfig {
         ForgeConfigSpec.IntValue minXpNethercraftHeatSandOre;
         ForgeConfigSpec.IntValue maxXpNethercraftHeatSandOre;
 
+        ForgeConfigSpec.BooleanValue disableAtumStrangeSandOre;
+        ForgeConfigSpec.IntValue veinSizeAtumStrangeSandOre;
+        ForgeConfigSpec.IntValue veinsPerChunkAtumStrangeSandOre;
+        ForgeConfigSpec.IntValue minHeightAtumStrangeSandOre;
+        ForgeConfigSpec.IntValue maxHeightAtumStrangeSandOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistAtumStrangeSandOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistAtumStrangeSandOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistAtumStrangeSandOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistAtumStrangeSandOre;
+        ForgeConfigSpec.IntValue minXpAtumStrangeSandOre;
+        ForgeConfigSpec.IntValue maxXpAtumStrangeSandOre;
+
+        ForgeConfigSpec.BooleanValue disableAtumLimestoneOre;
+        ForgeConfigSpec.IntValue veinSizeAtumLimestoneOre;
+        ForgeConfigSpec.IntValue veinsPerChunkAtumLimestoneOre;
+        ForgeConfigSpec.IntValue minHeightAtumLimestoneOre;
+        ForgeConfigSpec.IntValue maxHeightAtumLimestoneOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistAtumLimestoneOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistAtumLimestoneOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistAtumLimestoneOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistAtumLimestoneOre;
+        ForgeConfigSpec.IntValue minXpAtumLimestoneOre;
+        ForgeConfigSpec.IntValue maxXpAtumLimestoneOre;
+
+        ForgeConfigSpec.BooleanValue disableAtumCrackedLimestoneOre;
+        ForgeConfigSpec.IntValue veinSizeAtumCrackedLimestoneOre;
+        ForgeConfigSpec.IntValue veinsPerChunkAtumCrackedLimestoneOre;
+        ForgeConfigSpec.IntValue minHeightAtumCrackedLimestoneOre;
+        ForgeConfigSpec.IntValue maxHeightAtumCrackedLimestoneOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistAtumCrackedLimestoneOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistAtumCrackedLimestoneOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistAtumCrackedLimestoneOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistAtumCrackedLimestoneOre;
+        ForgeConfigSpec.IntValue minXpAtumCrackedLimestoneOre;
+        ForgeConfigSpec.IntValue maxXpAtumCrackedLimestoneOre;
+
+        ForgeConfigSpec.BooleanValue disableAtumLimestoneGravelOre;
+        ForgeConfigSpec.IntValue veinSizeAtumLimestoneGravelOre;
+        ForgeConfigSpec.IntValue veinsPerChunkAtumLimestoneGravelOre;
+        ForgeConfigSpec.IntValue minHeightAtumLimestoneGravelOre;
+        ForgeConfigSpec.IntValue maxHeightAtumLimestoneGravelOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistAtumLimestoneGravelOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistAtumLimestoneGravelOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistAtumLimestoneGravelOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistAtumLimestoneGravelOre;
+        ForgeConfigSpec.IntValue minXpAtumLimestoneGravelOre;
+        ForgeConfigSpec.IntValue maxXpAtumLimestoneGravelOre;
+
+        ForgeConfigSpec.BooleanValue disableAtumAlabasterOre;
+        ForgeConfigSpec.IntValue veinSizeAtumAlabasterOre;
+        ForgeConfigSpec.IntValue veinsPerChunkAtumAlabasterOre;
+        ForgeConfigSpec.IntValue minHeightAtumAlabasterOre;
+        ForgeConfigSpec.IntValue maxHeightAtumAlabasterOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistAtumAlabasterOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistAtumAlabasterOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistAtumAlabasterOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistAtumAlabasterOre;
+        ForgeConfigSpec.IntValue minXpAtumAlabasterOre;
+        ForgeConfigSpec.IntValue maxXpAtumAlabasterOre;
+
+        ForgeConfigSpec.BooleanValue disableAtumPorphyryOre;
+        ForgeConfigSpec.IntValue veinSizeAtumPorphyryOre;
+        ForgeConfigSpec.IntValue veinsPerChunkAtumPorphyryOre;
+        ForgeConfigSpec.IntValue minHeightAtumPorphyryOre;
+        ForgeConfigSpec.IntValue maxHeightAtumPorphyryOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistAtumPorphyryOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistAtumPorphyryOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistAtumPorphyryOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistAtumPorphyryOre;
+        ForgeConfigSpec.IntValue minXpAtumPorphyryOre;
+        ForgeConfigSpec.IntValue maxXpAtumPorphyryOre;
+
+        ForgeConfigSpec.BooleanValue disableAtumMarlOre;
+        ForgeConfigSpec.IntValue veinSizeAtumMarlOre;
+        ForgeConfigSpec.IntValue veinsPerChunkAtumMarlOre;
+        ForgeConfigSpec.IntValue minHeightAtumMarlOre;
+        ForgeConfigSpec.IntValue maxHeightAtumMarlOre;
+        ForgeConfigSpec.BooleanValue isTempWhitelistAtumMarlOre;
+        ForgeConfigSpec.ConfigValue<List<String>> temperatureBlacklistAtumMarlOre;
+        ForgeConfigSpec.BooleanValue isBiomeWhitelistAtumMarlOre;
+        ForgeConfigSpec.ConfigValue<List<String>> biomeBlacklistAtumMarlOre;
+        ForgeConfigSpec.IntValue minXpAtumMarlOre;
+        ForgeConfigSpec.IntValue maxXpAtumMarlOre;
+
         ForgeConfigSpec.BooleanValue disableHardenedStoneOre;
         ForgeConfigSpec.IntValue veinSizeHardenedStoneOre;
         ForgeConfigSpec.IntValue veinsPerChunkHardenedStoneOre;
@@ -1093,6 +1177,141 @@ public class OresConfig {
                         BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
                         minXpNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
                         maxXpNethercraftHeatSandOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+            BUILDER.pop();
+            BUILDER.comment("Atum 2 Stone Variants").push(PathHandler.getModNamePath(VariantsModId.ATUM));
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.ATUM_STRANGE_SAND, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.ATUM_STRANGE_SAND, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        disableAtumStrangeSandOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
+                        veinSizeAtumStrangeSandOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkAtumStrangeSandOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightAtumStrangeSandOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightAtumStrangeSandOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistAtumStrangeSandOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistAtumStrangeSandOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistAtumStrangeSandOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistAtumStrangeSandOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpAtumStrangeSandOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpAtumStrangeSandOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.ATUM_LIMESTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.ATUM_LIMESTONE, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        disableAtumLimestoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
+                        veinSizeAtumLimestoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkAtumLimestoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightAtumLimestoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightAtumLimestoneOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistAtumLimestoneOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistAtumLimestoneOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistAtumLimestoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistAtumLimestoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpAtumLimestoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpAtumLimestoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.ATUM_CRACKED_LIMESTONE, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.ATUM_CRACKED_LIMESTONE, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        disableAtumCrackedLimestoneOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
+                        veinSizeAtumCrackedLimestoneOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkAtumCrackedLimestoneOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightAtumCrackedLimestoneOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightAtumCrackedLimestoneOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistAtumCrackedLimestoneOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistAtumCrackedLimestoneOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistAtumCrackedLimestoneOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistAtumCrackedLimestoneOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpAtumCrackedLimestoneOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpAtumCrackedLimestoneOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.ATUM_LIMESTONE_GRAVEL, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.ATUM_LIMESTONE_GRAVEL, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        disableAtumLimestoneGravelOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
+                        veinSizeAtumLimestoneGravelOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkAtumLimestoneGravelOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightAtumLimestoneGravelOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightAtumLimestoneGravelOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistAtumLimestoneGravelOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistAtumLimestoneGravelOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistAtumLimestoneGravelOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistAtumLimestoneGravelOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpAtumLimestoneGravelOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpAtumLimestoneGravelOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.ATUM_ALABASTER, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.ATUM_ALABASTER, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        disableAtumAlabasterOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
+                        veinSizeAtumAlabasterOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkAtumAlabasterOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightAtumAlabasterOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightAtumAlabasterOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistAtumAlabasterOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistAtumAlabasterOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistAtumAlabasterOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistAtumAlabasterOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpAtumAlabasterOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpAtumAlabasterOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.ATUM_PORPHYRY, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.ATUM_PORPHYRY, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        disableAtumPorphyryOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
+                        veinSizeAtumPorphyryOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkAtumPorphyryOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightAtumPorphyryOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightAtumPorphyryOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistAtumPorphyryOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistAtumPorphyryOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistAtumPorphyryOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistAtumPorphyryOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpAtumPorphyryOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpAtumPorphyryOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
+                        BUILDER.pop();
+                    }
+                BUILDER.pop();
+                BUILDER.comment(CommentHandler.getBlockNameComment(StoneVariants.ATUM_MARL, rType, oType)).push(PathHandler.getBlockNamePath(StoneVariants.ATUM_MARL, rType, oType));
+                    BUILDER.comment(CommentHandler.getGenerationComment()).push(PathHandler.getGenerationPath());
+                        disableAtumMarlOre = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
+                        veinSizeAtumMarlOre = BUILDER.comment(CommentHandler.getVeinSizeComment()).defineInRange(PathHandler.getVeinSizePath(), cType.getVeinSize(), 0, 65536);
+                        veinsPerChunkAtumMarlOre = BUILDER.comment(CommentHandler.getVeinsPerChunkComment()).defineInRange(PathHandler.getVeinsPerChunkPath(), cType.getVeinsPerChunk(), 0, 65536);
+                        minHeightAtumMarlOre = BUILDER.comment(CommentHandler.getMinHeightComment()).defineInRange(PathHandler.getMinHeightPath(), cType.getMinY(), 0, 256);
+                        maxHeightAtumMarlOre = BUILDER.comment(CommentHandler.getMaxHeightComment()).defineInRange(PathHandler.getMaxHeightPath(), cType.getMaxY(), 0, 256);
+                        isTempWhitelistAtumMarlOre = BUILDER.comment(CommentHandler.getIsTempWhitelistComment()).define(PathHandler.getIsTempWhitelistPath(), false);
+                        temperatureBlacklistAtumMarlOre = BUILDER.comment(CommentHandler.getTemperatureBlacklistComment()).define(PathHandler.getTemperatureBlacklistPath(), new ArrayList<String>());
+                        isBiomeWhitelistAtumMarlOre = BUILDER.comment(CommentHandler.getIsBiomeWhitelistComment()).define(PathHandler.getIsBiomeWhitelistPath(), false);
+                        biomeBlacklistAtumMarlOre = BUILDER.comment(CommentHandler.getBiomeBlacklistComment()).define(PathHandler.getBiomeBlacklistPath(), new ArrayList<String>());
+                    BUILDER.pop();
+                    if(oType.equals(OreTypes.XP)) {
+                        BUILDER.comment(CommentHandler.getPropertiesComment()).push(PathHandler.getPropertiesPath());
+                        minXpAtumMarlOre = BUILDER.comment(CommentHandler.getMinXpDropComment()).defineInRange(PathHandler.getMinXpDropPath(), 20, 0, 1000000);
+                        maxXpAtumMarlOre = BUILDER.comment(CommentHandler.getMaxXpDropComment()).defineInRange(PathHandler.getMaxXpDropPath(), 50, 0, 1000000);
                         BUILDER.pop();
                     }
                 BUILDER.pop();

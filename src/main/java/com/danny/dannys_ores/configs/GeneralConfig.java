@@ -46,7 +46,6 @@ public class GeneralConfig {
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftSlateNormalOreGeneration;
 
     // Create
-    public static ForgeConfigSpec.BooleanValue disableCreateDarkScoriaNormalOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableCreateDolomiteNormalOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableCreateGabbroNormalOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableCreateLimestoneNormalOreGeneration;
@@ -61,6 +60,16 @@ public class GeneralConfig {
 
     // Mystical Agriculture
     public static ForgeConfigSpec.BooleanValue disableMysticalagricultureSoulstoneNormalOreGeneration;
+
+    // Atum
+    public static ForgeConfigSpec.BooleanValue disableAtumStrangeSandNormalOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumCrackedLimestoneNormalOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumLimestoneNormalOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumLimestoneGravelNormalOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumAlabasterNormalOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumPorphyryNormalOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumMarlNormalOreGeneration;
+
 
     //Dense
     // Vanilla
@@ -113,6 +122,15 @@ public class GeneralConfig {
     // Mystical Agriculture
     public static ForgeConfigSpec.BooleanValue disableMysticalagricultureSoulstoneDenseOreGeneration;
 
+    // Atum
+    public static ForgeConfigSpec.BooleanValue disableAtumStrangeSandDenseOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumCrackedLimestoneDenseOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumLimestoneDenseOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumLimestoneGravelDenseOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumAlabasterDenseOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumPorphyryDenseOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumMarlDenseOreGeneration;
+
     //Poor
     // Vanilla
     public static ForgeConfigSpec.BooleanValue disableStonePoorOreGeneration;
@@ -149,7 +167,6 @@ public class GeneralConfig {
     public static ForgeConfigSpec.BooleanValue disableEmbellishcraftSlatePoorOreGeneration;
 
     // Create
-    public static ForgeConfigSpec.BooleanValue disableCreateDarkScoriaPoorOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableCreateDolomitePoorOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableCreateGabbroPoorOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableCreateLimestonePoorOreGeneration;
@@ -164,6 +181,15 @@ public class GeneralConfig {
 
     // Mystical Agriculture
     public static ForgeConfigSpec.BooleanValue disableMysticalagricultureSoulstonePoorOreGeneration;
+
+    // Atum
+    public static ForgeConfigSpec.BooleanValue disableAtumStrangeSandPoorOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumCrackedLimestonePoorOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumLimestonePoorOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumLimestoneGravelPoorOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumAlabasterPoorOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumPorphyryPoorOreGeneration;
+    public static ForgeConfigSpec.BooleanValue disableAtumMarlPoorOreGeneration;
 
     public static ForgeConfigSpec.BooleanValue disableNormalOreGeneration;
     public static ForgeConfigSpec.BooleanValue disableDenseOreGeneration;
@@ -219,21 +245,29 @@ public class GeneralConfig {
                         disableEmbellishcraftSlateNormalOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Slate variant of all normal ores will be disabled.").define("slate", false);
                     BUILDER.pop();
                     BUILDER.comment("Create stone variants. Create has to be installed for the ores to generate at all.").push("create");
-                        disableCreateDarkScoriaNormalOreGeneration = BUILDER.comment("If true, the (Create) Basalt variant of all normal ores will be disabled.").define("dark_scoria", false);
-                        disableCreateDolomiteNormalOreGeneration = BUILDER.comment("If true, the (Create) Gneiss variant of all normal ores will be disabled.").define("dolomite", false);
-                        disableCreateGabbroNormalOreGeneration = BUILDER.comment("If true, the (Create) Jade variant of all normal ores will be disabled.").define("gabbro", false);
-                        disableCreateLimestoneNormalOreGeneration = BUILDER.comment("If true, the (Create) Larvikite variant of all normal ores will be disabled.").define("limestone", false);
-                        disableCreateScoriaNormalOreGeneration = BUILDER.comment("If true, the (Create) Marble variant of all normal ores will be disabled.").define("scoria", false);
-                        disableCreateWeatheredLimestoneNormalOreGeneration = BUILDER.comment("If true, the (Create) Slate variant of all normal ores will be disabled.").define("weathered_limestone", false);
+                        disableCreateDolomiteNormalOreGeneration = BUILDER.comment("If true, the (Create) Dolomite variant of all normal ores will be disabled.").define("dolomite", false);
+                        disableCreateGabbroNormalOreGeneration = BUILDER.comment("If true, the (Create) Gabbro variant of all normal ores will be disabled.").define("gabbro", false);
+                        disableCreateLimestoneNormalOreGeneration = BUILDER.comment("If true, the (Create) Limestone variant of all normal ores will be disabled.").define("limestone", false);
+                        disableCreateScoriaNormalOreGeneration = BUILDER.comment("If true, the (Create) Scoria variant of all normal ores will be disabled.").define("scoria", false);
+                        disableCreateWeatheredLimestoneNormalOreGeneration = BUILDER.comment("If true, the (Create) Weathered Limestone variant of all normal ores will be disabled.").define("weathered_limestone", false);
                     BUILDER.pop();
                     BUILDER.comment("Midnight stone variants. Midnight has to be installed for the ores to generate at all.").push("midnight");
-                        disableMidnightNightstoneNormalOreGeneration = BUILDER.comment("If true, the (Midnight) Basalt variant of all normal ores will be disabled.").define("nightstone", false);
+                        disableMidnightNightstoneNormalOreGeneration = BUILDER.comment("If true, the (Midnight) Nightstone variant of all normal ores will be disabled.").define("nightstone", false);
                     BUILDER.pop();
                     BUILDER.comment("Nethercraft stone variants. Nethercraft has to be installed for the ores to generate at all.").push("nethercraft");
-                        disableNethercraftHeatSandNormalOreGeneration = BUILDER.comment("If true, the (Nethercraft) Basalt variant of all normal ores will be disabled.").define("heat_sand", false);
+                        disableNethercraftHeatSandNormalOreGeneration = BUILDER.comment("If true, the (Nethercraft) Heat Sand variant of all normal ores will be disabled.").define("heat_sand", false);
                     BUILDER.pop();
                     BUILDER.comment("Mystical Agriculture stone variants. Mystical Agriculture has to be installed for the ores to generate at all.").push("mysticalagriculture");
-                        disableMysticalagricultureSoulstoneNormalOreGeneration = BUILDER.comment("If true, the (Mystical Agriculture) Basalt variant of all normal ores will be disabled.").define("soulstone", false);
+                        disableMysticalagricultureSoulstoneNormalOreGeneration = BUILDER.comment("If true, the (Mystical Agriculture) Soulstone variant of all normal ores will be disabled.").define("soulstone", false);
+                    BUILDER.pop();
+                    BUILDER.comment("Atum stone variants. Atum 2 has to be installed for the ores to generate at all.").push("atum");
+                        disableAtumStrangeSandNormalOreGeneration = BUILDER.comment("If true, the (Atum 2) Strange Sand variant of all normal ores will be disabled.").define("strange_sand", false);
+                        disableAtumLimestoneNormalOreGeneration = BUILDER.comment("If true, the (Atum 2) Limestone variant of all normal ores will be disabled.").define("limestone", false);
+                        disableAtumCrackedLimestoneNormalOreGeneration = BUILDER.comment("If true, the (Atum 2) Cracked Limestone variant of all normal ores will be disabled.").define("cracked_limestone", false);
+                        disableAtumLimestoneGravelNormalOreGeneration = BUILDER.comment("If true, the (Atum 2) Limestone Gravel variant of all normal ores will be disabled.").define("limestone_gravel", false);
+                        disableAtumAlabasterNormalOreGeneration = BUILDER.comment("If true, the (Atum 2) Alabaster variant of all normal ores will be disabled.").define("alabaster", false);
+                        disableAtumPorphyryNormalOreGeneration = BUILDER.comment("If true, the (Atum 2) Porphyry variant of all normal ores will be disabled.").define("porphyry", false);
+                        disableAtumMarlNormalOreGeneration = BUILDER.comment("If true, the (Atum 2) Marl variant of all normal ores will be disabled.").define("marl", false);
                     BUILDER.pop();
                 BUILDER.pop();
             BUILDER.pop();
@@ -275,20 +309,29 @@ public class GeneralConfig {
                         disableEmbellishcraftSlateDenseOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Slate variant of all dense ores will be disabled.").define("slate", false);
                     BUILDER.pop();
                     BUILDER.comment("Create stone variants. Create has to be installed for the ores to generate at all.").push("create");
-                        disableCreateDolomiteDenseOreGeneration = BUILDER.comment("If true, the (Create) Gneiss variant of all normal ores will be disabled.").define("dolomite", false);
-                        disableCreateGabbroDenseOreGeneration = BUILDER.comment("If true, the (Create) Jade variant of all normal ores will be disabled.").define("gabbro", false);
-                        disableCreateLimestoneDenseOreGeneration = BUILDER.comment("If true, the (Create) Larvikite variant of all normal ores will be disabled.").define("limestone", false);
-                        disableCreateScoriaDenseOreGeneration = BUILDER.comment("If true, the (Create) Marble variant of all normal ores will be disabled.").define("scoria", false);
-                        disableCreateWeatheredLimestoneDenseOreGeneration = BUILDER.comment("If true, the (Create) Slate variant of all normal ores will be disabled.").define("weathered_limestone", false);
+                        disableCreateDolomiteDenseOreGeneration = BUILDER.comment("If true, the (Create) Dolomite variant of all dense ores will be disabled.").define("dolomite", false);
+                        disableCreateGabbroDenseOreGeneration = BUILDER.comment("If true, the (Create) Gabbro variant of all dense ores will be disabled.").define("gabbro", false);
+                        disableCreateLimestoneDenseOreGeneration = BUILDER.comment("If true, the (Create) Limestone variant of all dense ores will be disabled.").define("limestone", false);
+                        disableCreateScoriaDenseOreGeneration = BUILDER.comment("If true, the (Create) Scoria variant of all dense ores will be disabled.").define("scoria", false);
+                        disableCreateWeatheredLimestoneDenseOreGeneration = BUILDER.comment("If true, the (Create) Weathered Limestone variant of all dense ores will be disabled.").define("weathered_limestone", false);
                     BUILDER.pop();
                     BUILDER.comment("Midnight stone variants. Midnight has to be installed for the ores to generate at all.").push("midnight");
-                        disableMidnightNightstoneDenseOreGeneration = BUILDER.comment("If true, the (Midnight) Basalt variant of all normal ores will be disabled.").define("nightstone", false);
+                        disableMidnightNightstoneDenseOreGeneration = BUILDER.comment("If true, the (Midnight) Nightstone variant of all dense ores will be disabled.").define("nightstone", false);
                     BUILDER.pop();
                     BUILDER.comment("Nethercraft stone variants. Nethercraft has to be installed for the ores to generate at all.").push("nethercraft");
-                        disableNethercraftHeatSandDenseOreGeneration = BUILDER.comment("If true, the (Nethercraft) Basalt variant of all normal ores will be disabled.").define("heat_sand", false);
+                        disableNethercraftHeatSandDenseOreGeneration = BUILDER.comment("If true, the (Nethercraft) Heat Sand variant of all dense ores will be disabled.").define("heat_sand", false);
                     BUILDER.pop();
                     BUILDER.comment("Mystical Agriculture stone variants. Mystical Agriculture has to be installed for the ores to generate at all.").push("mysticalagriculture");
-                        disableMysticalagricultureSoulstoneDenseOreGeneration = BUILDER.comment("If true, the (Mystical Agriculture) Basalt variant of all normal ores will be disabled.").define("soulstone", false);
+                        disableMysticalagricultureSoulstoneDenseOreGeneration = BUILDER.comment("If true, the (Mystical Agriculture) Soulstone variant of all dense ores will be disabled.").define("soulstone", false);
+                    BUILDER.pop();
+                    BUILDER.comment("Atum stone variants. Atum 2 has to be installed for the ores to generate at all.").push("atum");
+                        disableAtumStrangeSandDenseOreGeneration = BUILDER.comment("If true, the (Atum 2) Strange Sand variant of all dense ores will be disabled.").define("strange_sand", false);
+                        disableAtumLimestoneDenseOreGeneration = BUILDER.comment("If true, the (Atum 2) Limestone variant of all dense ores will be disabled.").define("limestone", false);
+                        disableAtumCrackedLimestoneDenseOreGeneration = BUILDER.comment("If true, the (Atum 2) Cracked Limestone variant of all dense ores will be disabled.").define("cracked_limestone", false);
+                        disableAtumLimestoneGravelDenseOreGeneration = BUILDER.comment("If true, the (Atum 2) Limestone Gravel variant of all dense ores will be disabled.").define("limestone_gravel", false);
+                        disableAtumAlabasterDenseOreGeneration = BUILDER.comment("If true, the (Atum 2) Alabaster variant of all dense ores will be disabled.").define("alabaster", false);
+                        disableAtumPorphyryDenseOreGeneration = BUILDER.comment("If true, the (Atum 2) Porphyry variant of all dense ores will be disabled.").define("porphyry", false);
+                        disableAtumMarlDenseOreGeneration = BUILDER.comment("If true, the (Atum 2) Marl variant of all dense ores will be disabled.").define("marl", false);
                     BUILDER.pop();
                 BUILDER.pop();
             BUILDER.pop();
@@ -330,21 +373,29 @@ public class GeneralConfig {
                         disableEmbellishcraftSlatePoorOreGeneration = BUILDER.comment("If true, the (Embellishcraft) Slate variant of all poor ores will be disabled.").define("slate", false);
                     BUILDER.pop();
                     BUILDER.comment("Create stone variants. Create has to be installed for the ores to generate at all.").push("create");
-                        disableCreateDarkScoriaPoorOreGeneration = BUILDER.comment("If true, the (Create) Basalt variant of all normal ores will be disabled.").define("dark_scoria", false);
-                        disableCreateDolomitePoorOreGeneration = BUILDER.comment("If true, the (Create) Gneiss variant of all normal ores will be disabled.").define("dolomite", false);
-                        disableCreateGabbroPoorOreGeneration = BUILDER.comment("If true, the (Create) Jade variant of all normal ores will be disabled.").define("gabbro", false);
-                        disableCreateLimestonePoorOreGeneration = BUILDER.comment("If true, the (Create) Larvikite variant of all normal ores will be disabled.").define("limestone", false);
-                        disableCreateScoriaPoorOreGeneration = BUILDER.comment("If true, the (Create) Marble variant of all normal ores will be disabled.").define("scoria", false);
-                        disableCreateWeatheredLimestonePoorOreGeneration = BUILDER.comment("If true, the (Create) Slate variant of all normal ores will be disabled.").define("weathered_limestone", false);
+                        disableCreateDolomitePoorOreGeneration = BUILDER.comment("If true, the (Create) Dolomite variant of all poor ores will be disabled.").define("dolomite", false);
+                        disableCreateGabbroPoorOreGeneration = BUILDER.comment("If true, the (Create) Gabbro variant of all poor ores will be disabled.").define("gabbro", false);
+                        disableCreateLimestonePoorOreGeneration = BUILDER.comment("If true, the (Create) Limestone variant of all poor ores will be disabled.").define("limestone", false);
+                        disableCreateScoriaPoorOreGeneration = BUILDER.comment("If true, the (Create) Scoria variant of all poor ores will be disabled.").define("scoria", false);
+                        disableCreateWeatheredLimestonePoorOreGeneration = BUILDER.comment("If true, the (Create) Weathered Limestone variant of all poor ores will be disabled.").define("weathered_limestone", false);
                     BUILDER.pop();
                     BUILDER.comment("Midnight stone variants. Midnight has to be installed for the ores to generate at all.").push("midnight");
-                        disableMidnightNightstonePoorOreGeneration = BUILDER.comment("If true, the (Midnight) Basalt variant of all normal ores will be disabled.").define("nightstone", false);
+                        disableMidnightNightstonePoorOreGeneration = BUILDER.comment("If true, the (Midnight) Nightstone variant of all poor ores will be disabled.").define("nightstone", false);
                     BUILDER.pop();
                     BUILDER.comment("Nethercraft stone variants. Nethercraft has to be installed for the ores to generate at all.").push("nethercraft");
-                        disableNethercraftHeatSandPoorOreGeneration = BUILDER.comment("If true, the (Nethercraft) Basalt variant of all normal ores will be disabled.").define("heat_sand", false);
+                        disableNethercraftHeatSandPoorOreGeneration = BUILDER.comment("If true, the (Nethercraft) Heat Sand variant of all poor ores will be disabled.").define("heat_sand", false);
                     BUILDER.pop();
                     BUILDER.comment("Mystical Agriculture stone variants. Mystical Agriculture has to be installed for the ores to generate at all.").push("mysticalagriculture");
-                        disableMysticalagricultureSoulstonePoorOreGeneration = BUILDER.comment("If true, the (Mystical Agriculture) Basalt variant of all normal ores will be disabled.").define("soulstone", false);
+                        disableMysticalagricultureSoulstonePoorOreGeneration = BUILDER.comment("If true, the (Mystical Agriculture) Soulstone variant of all poor ores will be disabled.").define("soulstone", false);
+                    BUILDER.pop();
+                    BUILDER.comment("Atum 2 stone variants. Atum 2 has to be installed for the ores to generate at all.").push("atum");
+                        disableAtumStrangeSandPoorOreGeneration = BUILDER.comment("If true, the (Atum 2) Strange Sand variant of all poor ores will be disabled.").define("strange_sand", false);
+                        disableAtumLimestonePoorOreGeneration = BUILDER.comment("If true, the (Atum 2) Limestone variant of all poor ores will be disabled.").define("limestone", false);
+                        disableAtumCrackedLimestonePoorOreGeneration = BUILDER.comment("If true, the (Atum 2) Cracked Limestone variant of all poor ores will be disabled.").define("cracked_limestone", false);
+                        disableAtumLimestoneGravelPoorOreGeneration = BUILDER.comment("If true, the (Atum 2) Limestone Gravel variant of all poor ores will be disabled.").define("limestone_gravel", false);
+                        disableAtumAlabasterPoorOreGeneration = BUILDER.comment("If true, the (Atum 2) Alabaster variant of all poor ores will be disabled.").define("alabaster", false);
+                        disableAtumPorphyryPoorOreGeneration = BUILDER.comment("If true, the (Atum 2) Porphyry variant of all poor ores will be disabled.").define("porphyry", false);
+                        disableAtumMarlPoorOreGeneration = BUILDER.comment("If true, the (Atum 2) Marl variant of all poor ores will be disabled.").define("marl", false);
                     BUILDER.pop();
                 BUILDER.pop();
             BUILDER.pop();
@@ -367,197 +418,6 @@ public class GeneralConfig {
     }
 
     public static void loadConfig(String path) {
-
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GeneralConfig.spec, path + "/#general.toml");
-
-//        Air.loadConfig(normalPath);
-//        Fire.loadConfig(normalPath);
-//        Earth.loadConfig(normalPath);
-//        Water.loadConfig(normalPath);
-//        Order.loadConfig(normalPath);
-//        Entropy.loadConfig(normalPath);
-//        Adamantium.loadConfig(normalPath);
-//        Bauxite.loadConfig(normalPath);
-//        Anglesite.loadConfig(normalPath);
-//        Amethyst.loadConfig(normalPath);
-//        Apatite.loadConfig(normalPath);
-//        Ardite.loadConfig(normalPath);
-//        Benitoite.loadConfig(normalPath);
-//        Bismuth.loadConfig(normalPath);
-//        BlackOpal.loadConfig(normalPath);
-//        Coal.loadConfig(normalPath);
-//        Copper.loadConfig(normalPath);
-//        Galena.loadConfig(normalPath);
-//        Diamond.loadConfig(normalPath);
-//        Electrotine.loadConfig(normalPath);
-//        Emerald.loadConfig(normalPath);
-//        Gold.loadConfig(normalPath);
-//        Imperium.loadConfig(normalPath);
-//        Inferium.loadConfig(normalPath);
-//        Insanium.loadConfig(normalPath);
-//        Iridium.loadConfig(normalPath);
-//        Iron.loadConfig(normalPath);
-//        Lapis.loadConfig(normalPath);
-//        Lead.loadConfig(normalPath);
-//        Lucky.loadConfig(normalPath);
-//        Mithril.loadConfig(normalPath);
-//        Nickel.loadConfig(normalPath);
-//        Osmium.loadConfig(normalPath);
-//        Peridot.loadConfig(normalPath);
-//        Platinum.loadConfig(normalPath);
-//        Pyrite.loadConfig(normalPath);
-//        Vulcanite.loadConfig(normalPath);
-//        Prosperity.loadConfig(normalPath);
-//        Prudentium.loadConfig(normalPath);
-//        Quartz.loadConfig(normalPath);
-//        Redstone.loadConfig(normalPath);
-//        Ruby.loadConfig(normalPath);
-//        Runite.loadConfig(normalPath);
-//        Sapphire.loadConfig(normalPath);
-//        Silver.loadConfig(normalPath);
-//        Soulium.loadConfig(normalPath);
-//        Supremium.loadConfig(normalPath);
-//        Tertium.loadConfig(normalPath);
-//        Tin.loadConfig(normalPath);
-//        Tungsten.loadConfig(normalPath);
-//        Uraninite.loadConfig(normalPath);
-//        WhiteOpal.loadConfig(normalPath);
-//        Xp.loadConfig(normalPath);
-//        Zanite.loadConfig(normalPath);
-//        Yellorite.loadConfig(normalPath);
-//        Zinc.loadConfig(normalPath);
-//        CertusQuartz.loadConfig(normalPath);
-//        ChargedCertusQuartz.loadConfig(normalPath);
-//        DimensionalShard.loadConfig(normalPath);
-//        LavaCrystal.loadConfig(normalPath);
-//        Sticky.loadConfig(normalPath);
-//        Steel.loadConfig(normalPath);
-//        Boron.loadConfig(normalPath);
-//        Magnesium.loadConfig(normalPath);
-//        Lithium.loadConfig(normalPath);
-//        Thorium.loadConfig(normalPath);
-//
-//        DenseAdamantium.loadConfig(densePath);
-//        DenseBauxite.loadConfig(densePath);
-//        DenseAnglesite.loadConfig(densePath);
-//        DenseAmethyst.loadConfig(densePath);
-//        DenseApatite.loadConfig(densePath);
-//        DenseArdite.loadConfig(densePath);
-//        DenseBenitoite.loadConfig(densePath);
-//        DenseBismuth.loadConfig(densePath);
-//        DenseBlackOpal.loadConfig(densePath);
-//        DenseCoal.loadConfig(densePath);
-//        DenseCopper.loadConfig(densePath);
-//        DenseGalena.loadConfig(densePath);
-//        DenseDiamond.loadConfig(densePath);
-//        DenseElectrotine.loadConfig(densePath);
-//        DenseEmerald.loadConfig(densePath);
-//        DenseGold.loadConfig(densePath);
-//        DenseImperium.loadConfig(densePath);
-//        DenseInferium.loadConfig(densePath);
-//        DenseInsanium.loadConfig(densePath);
-//        DenseIridium.loadConfig(densePath);
-//        DenseIron.loadConfig(densePath);
-//        DenseLapis.loadConfig(densePath);
-//        DenseLead.loadConfig(densePath);
-//        DenseLucky.loadConfig(densePath);
-//        DenseMithril.loadConfig(densePath);
-//        DenseNickel.loadConfig(densePath);
-//        DenseOsmium.loadConfig(densePath);
-//        DensePeridot.loadConfig(densePath);
-//        DensePlatinum.loadConfig(densePath);
-//        DensePyrite.loadConfig(densePath);
-//        DenseVulcanite.loadConfig(densePath);
-//        DenseProsperity.loadConfig(densePath);
-//        DensePrudentium.loadConfig(densePath);
-//        DenseQuartz.loadConfig(densePath);
-//        DenseRedstone.loadConfig(densePath);
-//        DenseRuby.loadConfig(densePath);
-//        DenseRunite.loadConfig(densePath);
-//        DenseSapphire.loadConfig(densePath);
-//        DenseSilver.loadConfig(densePath);
-//        DenseSoulium.loadConfig(densePath);
-//        DenseSupremium.loadConfig(densePath);
-//        DenseTertium.loadConfig(densePath);
-//        DenseTin.loadConfig(densePath);
-//        DenseTungsten.loadConfig(densePath);
-//        DenseUraninite.loadConfig(densePath);
-//        DenseWhiteOpal.loadConfig(densePath);
-//        DenseXp.loadConfig(densePath);
-//        DenseZanite.loadConfig(densePath);
-//        DenseYellorite.loadConfig(densePath);
-//        DenseZinc.loadConfig(densePath);
-//        DenseCertusQuartz.loadConfig(densePath);
-//        DenseChargedCertusQuartz.loadConfig(densePath);
-//        DenseDimensionalShard.loadConfig(densePath);
-//        DenseLavaCrystal.loadConfig(densePath);
-//        DenseSticky.loadConfig(densePath);
-//        DenseSteel.loadConfig(densePath);
-//        DenseBoron.loadConfig(densePath);
-//        DenseMagnesium.loadConfig(densePath);
-//        DenseLithium.loadConfig(densePath);
-//        DenseThorium.loadConfig(densePath);
-//
-//        PoorAdamantium.loadConfig(poorPath);
-//        PoorBauxite.loadConfig(poorPath);
-//        PoorAnglesite.loadConfig(poorPath);
-//        PoorAmethyst.loadConfig(poorPath);
-//        PoorApatite.loadConfig(poorPath);
-//        PoorArdite.loadConfig(poorPath);
-//        PoorBenitoite.loadConfig(poorPath);
-//        PoorBismuth.loadConfig(poorPath);
-//        PoorBlackOpal.loadConfig(poorPath);
-//        PoorCoal.loadConfig(poorPath);
-//        PoorCopper.loadConfig(poorPath);
-//        PoorGalena.loadConfig(poorPath);
-//        PoorDiamond.loadConfig(poorPath);
-//        PoorElectrotine.loadConfig(poorPath);
-//        PoorEmerald.loadConfig(poorPath);
-//        PoorGold.loadConfig(poorPath);
-//        PoorImperium.loadConfig(poorPath);
-//        PoorInferium.loadConfig(poorPath);
-//        PoorInsanium.loadConfig(poorPath);
-//        PoorIridium.loadConfig(poorPath);
-//        PoorIron.loadConfig(poorPath);
-//        PoorLapis.loadConfig(poorPath);
-//        PoorLead.loadConfig(poorPath);
-//        PoorLucky.loadConfig(poorPath);
-//        PoorMithril.loadConfig(poorPath);
-//        PoorNickel.loadConfig(poorPath);
-//        PoorOsmium.loadConfig(poorPath);
-//        PoorPeridot.loadConfig(poorPath);
-//        PoorPlatinum.loadConfig(poorPath);
-//        PoorPyrite.loadConfig(poorPath);
-//        PoorVulcanite.loadConfig(poorPath);
-//        PoorProsperity.loadConfig(poorPath);
-//        PoorPrudentium.loadConfig(poorPath);
-//        PoorQuartz.loadConfig(poorPath);
-//        PoorRedstone.loadConfig(poorPath);
-//        PoorRuby.loadConfig(poorPath);
-//        PoorRunite.loadConfig(poorPath);
-//        PoorSapphire.loadConfig(poorPath);
-//        PoorSilver.loadConfig(poorPath);
-//        PoorSoulium.loadConfig(poorPath);
-//        PoorSupremium.loadConfig(poorPath);
-//        PoorTertium.loadConfig(poorPath);
-//        PoorTin.loadConfig(poorPath);
-//        PoorTungsten.loadConfig(poorPath);
-//        PoorUraninite.loadConfig(poorPath);
-//        PoorWhiteOpal.loadConfig(poorPath);
-//        PoorXp.loadConfig(poorPath);
-//        PoorZanite.loadConfig(poorPath);
-//        PoorYellorite.loadConfig(poorPath);
-//        PoorZinc.loadConfig(poorPath);
-//        PoorCertusQuartz.loadConfig(poorPath);
-//        PoorChargedCertusQuartz.loadConfig(poorPath);
-//        PoorDimensionalShard.loadConfig(poorPath);
-//        PoorLavaCrystal.loadConfig(poorPath);
-//        PoorSticky.loadConfig(poorPath);
-//        PoorSteel.loadConfig(poorPath);
-//        PoorBoron.loadConfig(poorPath);
-//        PoorMagnesium.loadConfig(poorPath);
-//        PoorLithium.loadConfig(poorPath);
-//        PoorThorium.loadConfig(poorPath);
-
     }
 }

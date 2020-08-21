@@ -65,6 +65,20 @@ public class BlockInit {
     public static final Block MIDNIGHT_NIGHTSTONE = null;
     @ObjectHolder("mysticalagriculture:soulstone")
     public static final Block MYSTICALAGRICULTURE_SOULSTONE = null;
+    @ObjectHolder("atum:strange_sand")
+    public static final Block ATUM_STRANGE_SAND = null;
+    @ObjectHolder("atum:limestone")
+    public static final Block ATUM_LIMESTONE = null;
+    @ObjectHolder("atum:limestone_gravel")
+    public static final Block ATUM_LIMESTONE_GRAVEL = null;
+    @ObjectHolder("atum:limestone_cracked")
+    public static final Block ATUM_CRACKED_LIMESTONE = null;
+    @ObjectHolder("atum:alabaster")
+    public static final Block ATUM_ALABASTER = null;
+    @ObjectHolder("atum:porphyry")
+    public static final Block ATUM_PORPHYRY = null;
+    @ObjectHolder("atum:marl")
+    public static final Block ATUM_MARL = null;
 
     // All registered blocks are saved inside this deferred registry object.
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
@@ -80,7 +94,7 @@ public class BlockInit {
      */
     public static void initOres() {
         // For testing. Will bypass the check for installed mods and just init all ores.
-        boolean testing = false;
+        boolean testing = true;
         Main.LOGGER.debug("Start block init.");
         HashMap<Block, Pair<OreTypes, StoneVariants>> vanilla = getFilledVanillaBlockMap();
         for (RichnessTypes rType : RichnessTypes.values()) {
@@ -94,61 +108,54 @@ public class BlockInit {
                     // If the ore has particles or an explosion effect a different block class is required.
                     if (oType.getParticles() != null) {
                         for (StoneVariants variant : StoneVariants.values()) {
-                            // TODO: Right now all blocks have to be initialized because otherwise loottable and tag jsons throw errors and stop working.
-//                            if (ModHandler.variantsModIdExists(variant.getModid()) || testing) {
-                                String regName = getRegName(variant, rTypeName, oTypeName);
-                                int minXp = getMinXp(oType, variant, rType);
-                                int maxXp = getMaxXp(oType, variant, rType);
-                                if (variant.equals(StoneVariants.BEDROCK)) {
-                                    BLOCKS.register(regName, () -> new BedrockOreWithParticles(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp, oType.getParticles()));
-                                } else {
-                                    BLOCKS.register(regName, () -> new OreWithParticles(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp, oType.getParticles()));
-                                }
-//                            }
+                            String regName = getRegName(variant, rTypeName, oTypeName);
+                            int minXp = getMinXp(oType, variant, rType);
+                            int maxXp = getMaxXp(oType, variant, rType);
+                            if (variant.equals(StoneVariants.BEDROCK)) {
+                                BLOCKS.register(regName, () -> new BedrockOreWithParticles(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp, oType.getParticles()));
+                            } else {
+                                BLOCKS.register(regName, () -> new OreWithParticles(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp, oType.getParticles()));
+                            }
                         }
                     } else if (oType.getEffect().equals(Effects.EXPLODE)) {
                         for (StoneVariants variant : StoneVariants.values()) {
-//                            if (ModHandler.variantsModIdExists(variant.getModid()) || testing) {
-                                String regName = getRegName(variant, rTypeName, oTypeName);
-                                int minXp = getMinXp(oType, variant, rType);
-                                int maxXp = getMaxXp(oType, variant, rType);
-                                if (variant.equals(StoneVariants.BEDROCK)) {
-                                    BLOCKS.register(regName, () -> new ExplosiveBedrockOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp));
-                                } else {
-                                    BLOCKS.register(regName, () -> new ExplosiveOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp));
-                                }
-//                            }
+                            String regName = getRegName(variant, rTypeName, oTypeName);
+                            int minXp = getMinXp(oType, variant, rType);
+                            int maxXp = getMaxXp(oType, variant, rType);
+                            if (variant.equals(StoneVariants.BEDROCK)) {
+                                BLOCKS.register(regName, () -> new ExplosiveBedrockOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp));
+                            } else {
+                                BLOCKS.register(regName, () -> new ExplosiveOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp));
+                            }
                         }
                     } else {
                         for (StoneVariants variant : StoneVariants.values()) {
-//                            if (ModHandler.variantsModIdExists(variant.getModid()) || testing) {
-                                String regName = getRegName(variant, rTypeName, oTypeName);
-                                int minXp = getMinXp(oType, variant, rType);
-                                int maxXp = getMaxXp(oType, variant, rType);
-                                if (variant.equals(StoneVariants.BEDROCK)) {
-                                    BLOCKS.register(regName, () -> new BedrockOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp));
-                                } else {
-                                    if (!(rTypeNormal && vanilla.containsValue(Pair.of(oType, variant)))) {
-                                        BLOCKS.register(regName, () -> new SimpleOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness()*oType.getHardnessMultiplier(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp));
-                                    }
+                            String regName = getRegName(variant, rTypeName, oTypeName);
+                            int minXp = getMinXp(oType, variant, rType);
+                            int maxXp = getMaxXp(oType, variant, rType);
+                            if (variant.equals(StoneVariants.BEDROCK)) {
+                                BLOCKS.register(regName, () -> new BedrockOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp));
+                            } else {
+                                if (!(rTypeNormal && vanilla.containsValue(Pair.of(oType, variant)))) {
+                                    BLOCKS.register(regName, () -> new SimpleOre(Block.Properties.create(Material.ROCK, variant.getColor()).hardnessAndResistance(variant.getHardness() * oType.getHardnessMultiplier(), variant.getResistance()).harvestTool(variant.getToolType()).sound(variant.getSoundType()).harvestLevel(oType.getHarvestLevel() + variant.getIncreasedHarvestLevel()).lightValue(variant.getLightValue()), variant, variant.getModid(), rType, oType, minXp, maxXp));
                                 }
-//                            }
+                            }
                         }
                     }
                 }
             }
         }
-        Main.LOGGER.debug("Finished block init.");
-
-        Main.LOGGER.debug("Start new block init.");
-        System.err.println("new block init!");
-        for (MaterialType mType : DannysOresAPI.MATERIAL_TYPES) {
-            for (StoneVariant variant : DannysOresAPI.STONE_VARIANTS) {
-                NEW_BLOCKS.register(variant.getModId() + "_" + variant.getRegName() + "_" + mType.getRegName() + "_ore", () -> new NewBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).harvestLevel(mType.getHarvestLevel()).harvestTool(variant.getToolType()).hardnessAndResistance(variant.getHardness(), variant.getResistance()), mType, variant));
-            }
-        }
-
-        Main.LOGGER.debug("Finished new block init.");
+//        Main.LOGGER.debug("Finished block init.");
+//
+//        Main.LOGGER.debug("Start new block init.");
+//        System.err.println("new block init!");
+//        for (MaterialType mType : DannysOresAPI.MATERIAL_TYPES) {
+//            for (StoneVariant variant : DannysOresAPI.STONE_VARIANTS) {
+//                NEW_BLOCKS.register(variant.getModId() + "_" + variant.getRegName() + "_" + mType.getRegName() + "_ore", () -> new NewBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).harvestLevel(mType.getHarvestLevel()).harvestTool(variant.getToolType()).hardnessAndResistance(variant.getHardness(), variant.getResistance()), mType, variant));
+//            }
+//        }
+//
+//        Main.LOGGER.debug("Finished new block init.");
     }
 
     /**

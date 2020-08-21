@@ -1,0 +1,7 @@
+{
+  "parent": "dannys_ores:block/cube_overlayed",
+  "textures": {
+    "base": "dannys_ores:block/create_dolomite",
+    "overlay": "dannys_ores:block/normal_withered_bone_ore"
+  }
+}
