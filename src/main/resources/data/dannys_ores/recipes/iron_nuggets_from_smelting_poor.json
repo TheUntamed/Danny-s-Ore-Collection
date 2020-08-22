@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:ores/poor_iron"
+  },
+  "result": {
+    "item": "minecraft:iron_nugget",
+    "count": 5
+  },
+  "experience": 2.0,
+  "cookingtime": 200
+}

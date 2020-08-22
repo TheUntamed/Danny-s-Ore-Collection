@@ -6,12 +6,50 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dannys_ores:minecraft_diorite_dense_withered_bone_ore"
-        }
-      ],
-      "conditions": [
+          "name": "dannys_ores:minecraft_diorite_dense_withered_bone_ore",
+          "conditions": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:silk_touch"
+                  }
+                ]
+              }
+            }
+          ]
+        },
         {
-          "condition": "minecraft:survives_explosion"
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:wither_skeleton_skull",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance_with_looting",
+                  "chance": 0.1,
+                  "looting_multiplier": 0.1
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "enchantments": [
+                    {
+                      "enchantment": "minecraft:silk_touch"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
         }
       ]
     }

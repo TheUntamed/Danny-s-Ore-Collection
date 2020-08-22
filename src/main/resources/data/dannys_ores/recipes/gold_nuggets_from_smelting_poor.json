@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:ores/poor_gold"
+  },
+  "result": {
+    "item": "minecraft:gold_nugget",
+    "count": 5
+  },
+  "experience": 2.0,
+  "cookingtime": 200
+}

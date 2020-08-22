@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "forge:ores/poor_redstone"
+  },
+  "result":{
+    "item": "minecraft:redstone",
+    "count": 3
+  },
+  "experience": 0.4,
+  "cookingtime": 200
+}

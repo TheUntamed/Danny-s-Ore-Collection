@@ -1,7 +1,7 @@
 {
   "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "base": "dannys_ores:block/atum_limestone_gravel",
+    "base": "atum:block/limestone_gravel",
     "overlay": "dannys_ores:block/poor_lucky_ore"
   }
 }

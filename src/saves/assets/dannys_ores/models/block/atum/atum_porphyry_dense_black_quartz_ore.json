@@ -1,7 +1,7 @@
 {
   "parent": "dannys_ores:block/cube_overlayed",
   "textures": {
-    "base": "dannys_ores:block/atum_porphyry",
+    "base": "atum:block/porphyry",
     "overlay": "dannys_ores:block/dense_black_quartz_ore"
   }
 }

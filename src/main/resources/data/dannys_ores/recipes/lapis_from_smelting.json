@@ -3,7 +3,10 @@
   "ingredient": {
     "tag": "forge:ores/lapis"
   },
-  "result": "minecraft:lapis_lazuli",
+  "result": {
+    "item": "minecraft:lapis_lazuli",
+    "count": 7
+  },
   "experience": 0.2,
   "cookingtime": 200
 }

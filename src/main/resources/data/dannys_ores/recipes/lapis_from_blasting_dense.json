@@ -3,9 +3,9 @@
   "ingredient": {
     "tag": "forge:ores/dense_lapis"
   },
-  "result":{
+  "result": {
     "item": "minecraft:lapis_lazuli",
-    "count": 2
+    "count": 12
   },
   "experience": 0.4,
   "cookingtime": 100

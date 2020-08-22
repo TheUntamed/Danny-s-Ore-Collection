@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "forge:ores/poor_gold"
+  },
+  "result": {
+    "item": "minecraft:gold_nugget",
+    "count": 5
+  },
+  "experience": 1.0,
+  "cookingtime": 100
+}

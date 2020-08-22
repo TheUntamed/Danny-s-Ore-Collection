@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:ores/poor_lapis"
+  },
+  "result": {
+    "item": "minecraft:lapis_lazuli",
+    "count": 4
+  },
+  "experience": 0.1,
+  "cookingtime": 100
+}

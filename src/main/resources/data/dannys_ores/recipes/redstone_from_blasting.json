@@ -3,7 +3,10 @@
   "ingredient": {
     "tag": "forge:ores/redstone"
   },
-  "result": "minecraft:redstone",
+  "result":{
+    "item": "minecraft:redstone",
+    "count": 5
+  },
   "experience": 0.7,
   "cookingtime": 100
 }
