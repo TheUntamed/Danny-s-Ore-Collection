@@ -1,4 +1,4 @@
-Some of the background textures are from other mods or vanilla minecraft
+The background textures are from other mods or vanilla minecraft
 and most of the overlay textures are based on the textures of other mods!
 The dense and poor ore overlays are based on the corresponding normal overlay.
 Below all those mods are listed and linked.
@@ -7,10 +7,10 @@ You will also find the license of the mods in the corresponding .md files in thi
 The Hardened Stone texture comes from the mod 'Sonar Core' (by sonar_sonic).
 https://www.curseforge.com/minecraft/mc-mods/sonar-core
 
-The stone textures quark_basalt, _jasper, _limestone, _marble, _slate are from the mod 'Quark' (by Vazkii).
+The background textures of quark_basalt, _jasper, _limestone, _marble, and _slate ores are from the mod 'Quark' (by Vazkii).
 https://www.curseforge.com/minecraft/mc-mods/quark
 
-The stone textures embellishcraft_basalt, _jade, _gneiss, _larvikite, _marble, _slate are from the mod Embellishcraft (by Mapper).
+The background textures of embellishcraft_basalt, _jade, _gneiss, _larvikite, _marble, and _slate ores are from the mod Embellishcraft (by Mapper).
 https://www.curseforge.com/minecraft/mc-mods/embellishcraft
 
 The Ore Overlays for the Silver, Lead, Nickel, Zinc, Bauxite and Uraninite Ore are modified versions of the corresponding ore textures from 'Silent's Mechanisms' (by SilentChaos512).
@@ -43,7 +43,7 @@ https://www.curseforge.com/minecraft/mc-mods/substratum
 The Ore Overlays for the Ruby, Sapphire and Peridot Ore are modified versions of the corresponding ore textures from 'Project Red' (by MrTJP).
 https://www.curseforge.com/minecraft/mc-mods/project-red-world
 
-The Soulstone texture comes from the mod 'Mystical Agriculture' (by BlakeBr0).
+The background texture of soulstone ores is from the mod 'Mystical Agriculture' (by BlakeBr0).
 The Ore Overlays for the Inferium Ore are modified versions of the corresponding ore textures from 'Mystical Agriculture'.
 The Ore Overly of the Prudentium, Tertium, Imperium and Supremium Ore were inspired by the corresponding essence textures from 'Mystical Agriculture'.
 https://www.curseforge.com/minecraft/mc-mods/mystical-agriculture
@@ -72,18 +72,18 @@ https://www.curseforge.com/minecraft/mc-mods/rftools-base
 The Ore Overlays for the Boron, Magnesium, Lithium and Thorium Ore are modified versions of the corresponding ore textures from 'Nuclearcraft' (by tomdodd4598).
 https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-mod
 
-The Heat Sand texture comes from the mod 'Nethercraft Classic' (by ModdingLegacy).
+The background texture of heat sand ores is from the mod 'Nethercraft Classic' (by ModdingLegacy).
 The Ore Overlays for the Foulite, Neridium, Pyridium, Linium and W-Ore are modified versions of the corresponding ore textures from 'Nethercraft Classic'.
 https://www.curseforge.com/minecraft/mc-mods/nethercraft-classic
 
-The Nightstone texture comes from the mod 'The Midnight' (by cipher_zero_x).
+The background texture of nightstone ores is from the mod 'The Midnight' (by cipher_zero_x).
 The Ore Overlays for the Archaic, Ebonite, Nagrilite and Tenebrum Ore are modified versions of the corresponding ore textures from 'The Midnight'.
 https://www.curseforge.com/minecraft/mc-mods/the-midnight
 
 The Ore Overlays for the Arcane Crystal and Runestone Ore are modified versions of the corresponding ore textures from 'Forbidden Arcanus' (by cesar_zorak).
 https://www.curseforge.com/minecraft/mc-mods/forbidden-arcanus
 
-The stone textures create_scoria, _dolomite, _gabbro, _limestone, and _weathered_limestone are from the mod 'Create' (by simibubi).
+The background textures create_scoria, _dolomite, _gabbro, _limestone, and _weathered_limestone are from the mod 'Create' (by simibubi).
 https://www.curseforge.com/minecraft/mc-mods/create
 
 The Ore Overlays for the Amber, Moonstone, Fiery Glass and Rockroot Ore are modified versions of the corresponding ore textures from 'Druidcraft' (by VulpTheHorseDog).
@@ -91,3 +91,5 @@ https://www.curseforge.com/minecraft/mc-mods/druidcraft
 
 The Ore Overly of Malachite Ore was inspired by the corresponding ore texture from 'Blue Power' (by Quetzi).
 https://www.curseforge.com/minecraft/mc-mods/blue-power
+
+The background textures of atum_limestone, _cracked_limestone, _limestone_gravel, _marl, _alabaster, _porphyry, and _strange_sand ores are from the mod 'Atum 2' (by Shadowclaimer)
