@@ -23,6 +23,7 @@ public class ModHandler {
             case MIDNIGHT: return mods.isLoaded("midnight");
             case MYSTICALAGRICULTURE: return mods.isLoaded("mysticalagriculture");
             case ATUM: return mods.isLoaded("atum");
+            case NETHEREX: return mods.isLoaded("netherex");
             default: return false;
         }
     }

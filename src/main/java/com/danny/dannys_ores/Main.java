@@ -7,10 +7,6 @@ import com.danny.dannys_ores.events.OreBreak;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.init.Tags;
-import com.danny.dannys_ores.newMethod.ColorHandler;
-import com.danny.dannys_ores.newMethod.MaterialTypeLoader;
-import com.danny.dannys_ores.newMethod.ModelHandler;
-import com.danny.dannys_ores.newMethod.StoneVariantLoader;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
 import com.danny.dannys_ores.util.StoneVariants;
@@ -23,15 +19,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.storage.loot.*;
-import net.minecraft.world.storage.loot.conditions.SurvivesExplosion;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.TagsUpdatedEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -60,17 +52,17 @@ public class Main {
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new OreBreak());
 
-        DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
-            modEventBus.register(new ColorHandler());
-            modEventBus.register(new ModelHandler());
-        });
+//        DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
+//            modEventBus.register(new ColorHandler());
+//            modEventBus.register(new ModelHandler());
+//        });
 
 //        addModListener<TextureStitchEvent.Pre> { SHItems.regTextures(it); }
 //        addModListener<ModelRegistryEvent> { SHItems.regModels(); }
 //        addModListener<ModelBakeEvent> { SHItems.regBakedModels(it); }
 
-        StoneVariantLoader.loadStoneVariants();
-        MaterialTypeLoader.loadMaterialTypes();
+//        StoneVariantLoader.loadStoneVariants();
+//        MaterialTypeLoader.loadMaterialTypes();
         BlockInit.BLOCKS.register(modEventBus);
         BlockInit.NEW_BLOCKS.register(modEventBus);
         BlockInit.initOres();

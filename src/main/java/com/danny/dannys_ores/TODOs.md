@@ -1,8 +1,5 @@
 # TODOs
 
-* Add Furnace Recipe to Bone Ores
-* Add drops to Bone Ores
-
 * Rework elementary ore textures
 * Add particles to Charged Certus Quartz Ore and maybe some other ores
 * Add some abilities to Order Ore

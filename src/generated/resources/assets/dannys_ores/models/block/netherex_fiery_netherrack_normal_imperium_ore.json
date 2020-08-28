@@ -1,0 +1,7 @@
+{
+  "parent": "dannys_ores:block/cube_overlayed",
+  "textures": {
+    "base": "dannys_ores:block/netherex_fiery_netherrack",
+    "overlay": "dannys_ores:block/normal_imperium_ore"
+  }
+}

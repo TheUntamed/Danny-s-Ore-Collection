@@ -18,12 +18,20 @@ import java.util.ArrayList;
 
 public class MyBlockLootTables extends BlockLootTables {
 
+    public static LootTable.Builder dropSelf(Block block) {
+        return dropping(block);
+    }
+
     public static LootTable.Builder dropItemWithFortune(Block block, Item item) {
         return droppingItemWithFortune(block, item);
     }
 
-    public static LootTable.Builder dropSelf(Block block) {
-        return dropping(block);
+    public static LootTable.Builder dropItemWithFortuneDense(Block block, Item item) {
+        return droppingWithSilkTouch(block, withExplosionDecay(block, ItemLootEntry.builder(item).acceptFunction(SetCount.builder(RandomValueRange.of(2.0F, 2.0F))).acceptFunction(ApplyBonus.uniformBonusCount(Enchantments.FORTUNE))));
+    }
+
+    public static LootTable.Builder dropItemWithFortunePoor(Block block, Item item) {
+        return droppingWithSilkTouch(block, withExplosionDecay(block, ItemLootEntry.builder(item).acceptFunction(SetCount.builder(RandomValueRange.of(0.0F, 1.0F))).acceptFunction(ApplyBonus.uniformBonusCount(Enchantments.FORTUNE))));
     }
 
     public static LootTable.Builder redstone(Block block, Item item) {

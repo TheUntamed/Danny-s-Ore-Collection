@@ -1,0 +1,7 @@
+{
+  "parent": "dannys_ores:block/cube_overlayed",
+  "textures": {
+    "base": "netherex:block/icy_netherrack",
+    "overlay": "dannys_ores:block/poor_rockroot_ore"
+  }
+}

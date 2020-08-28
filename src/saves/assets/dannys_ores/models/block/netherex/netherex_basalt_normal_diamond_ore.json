@@ -1,0 +1,7 @@
+{
+  "parent": "dannys_ores:block/cube_overlayed",
+  "textures": {
+    "base": "netherex:block/basalt",
+    "overlay": "dannys_ores:block/normal_diamond_ore"
+  }
+}

@@ -65,7 +65,7 @@ public class BlockInit {
     public static final Block MIDNIGHT_NIGHTSTONE = null;
     @ObjectHolder("mysticalagriculture:soulstone")
     public static final Block MYSTICALAGRICULTURE_SOULSTONE = null;
-    @ObjectHolder("atum:strange_sand")
+    @ObjectHolder("atum:sand")
     public static final Block ATUM_STRANGE_SAND = null;
     @ObjectHolder("atum:limestone")
     public static final Block ATUM_LIMESTONE = null;

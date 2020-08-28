@@ -16,8 +16,8 @@ public class CommentHandler {
         return "If true, all variants of this ore type will be disabled.";
     }
 
-    public static String getEnableVariantComment() {
-        return "If false, this ore variant will not generate.";
+    public static String getDisableVariantComment() {
+        return "If true, this ore variant will not generate.";
     }
 
     public static String getVeinSizeComment() {

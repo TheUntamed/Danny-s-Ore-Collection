@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:ores/bone"
+  },
+  "result": {
+    "item": "minecraft:bone",
+    "count": 4
+  },
+  "experience": 0.2,
+  "cookingtime": 200
+}

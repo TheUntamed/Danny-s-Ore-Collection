@@ -89,7 +89,7 @@ public abstract class LootTablesBaseProvider extends LootTableProvider {
         } else if (oType.equals(OreTypes.LAPIS)) {
             return MyBlockLootTables.denseLapis(block, item);
         } else {
-            return MyBlockLootTables.dropItemWithFortune(block, item);
+            return MyBlockLootTables.dropItemWithFortuneDense(block, item);
         }
     }
 
@@ -99,7 +99,7 @@ public abstract class LootTablesBaseProvider extends LootTableProvider {
         } else if (oType.equals(OreTypes.LAPIS)) {
             return MyBlockLootTables.poorLapis(block, item);
         } else {
-            return MyBlockLootTables.dropItemWithFortune(block, item);
+            return MyBlockLootTables.dropItemWithFortunePoor(block, item);
         }
     }
 

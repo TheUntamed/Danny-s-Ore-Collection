@@ -12,7 +12,8 @@ public enum VariantsModId {
     MIDNIGHT,
     MYSTICALAGRICULTURE,
     NETHERCRAFT,
-    ATUM;
+    ATUM,
+    NETHEREX;
 
     /**
      *

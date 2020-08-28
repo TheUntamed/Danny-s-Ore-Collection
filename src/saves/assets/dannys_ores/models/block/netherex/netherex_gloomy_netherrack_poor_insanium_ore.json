@@ -1,0 +1,7 @@
+{
+  "parent": "dannys_ores:block/cube_overlayed",
+  "textures": {
+    "base": "netherex:block/gloomy_netherrack",
+    "overlay": "dannys_ores:block/poor_insanium_ore"
+  }
+}

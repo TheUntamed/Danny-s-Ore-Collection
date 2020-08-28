@@ -34,7 +34,7 @@ public class StonesConfig {
         disableAllVariants = BUILDER.comment("Should stone variants added by this mod generate?").define(PathHandler.getDisableAllVariantsPath(), false);
             BUILDER.comment("Hardened Stone generation settings.").push("hardened_stone");
                 BUILDER.comment("Hardened Stone generation settings.").push(PathHandler.getGenerationPath());
-                    disableHardenedStoneGeneration = BUILDER.comment(CommentHandler.getEnableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
+                    disableHardenedStoneGeneration = BUILDER.comment(CommentHandler.getDisableVariantComment()).define(PathHandler.getDisableVariantPath(), false);
                     //generateAsLayerHardenedStone = BUILDER.comment(CommentHandler.getAsLayerComment()).define(PathHandler.getAsLayerPath(), false);
                     clusterSizeHardenedStone = BUILDER.comment(CommentHandler.getClusterSizeComment()).defineInRange(PathHandler.getClusterSizePath(), 33, 0, 65536);
                     clustersPerChunkHardenedStone = BUILDER.comment(CommentHandler.getClustersPerChunkComment()).defineInRange(PathHandler.getClustersPerChunkPath(), 10, 0, 65536);

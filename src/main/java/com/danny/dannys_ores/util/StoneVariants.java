@@ -49,6 +49,12 @@ public enum StoneVariants {
     ATUM_ALABASTER("alabaster", VariantsModId.ATUM, Material.ROCK, MaterialColor.QUARTZ, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     ATUM_PORPHYRY("porphyry", VariantsModId.ATUM, Material.ROCK, MaterialColor.BLACK, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
     ATUM_MARL("marl", VariantsModId.ATUM, Material.SAND, MaterialColor.SAND, ToolType.SHOVEL, SoundType.SAND, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    NETHEREX_FIERY_NETHERRACK("fiery_netherrack", VariantsModId.NETHEREX, Material.ROCK, MaterialColor.SAND, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    NETHEREX_ICY_NETHERRACK("icy_netherrack", VariantsModId.NETHEREX, Material.ROCK, MaterialColor.MAGENTA, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    NETHEREX_GLOOMY_NETHERRACK("gloomy_netherrack", VariantsModId.NETHEREX, Material.ROCK, MaterialColor.NETHERRACK, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    NETHEREX_LIVELY_NETHERRACK("lively_netherrack", VariantsModId.NETHEREX, Material.ROCK, MaterialColor.PURPLE, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    NETHEREX_BASALT("basalt", VariantsModId.NETHEREX, Material.ROCK, MaterialColor.BLACK, ToolType.PICKAXE, SoundType.STONE, 3.0F, 3.0F, 0.6F, 0, 0, 1),
+    NETHEREX_FROSTBURN_ICE("frostburn_ice", VariantsModId.NETHEREX, Material.ICE, MaterialColor.ICE, ToolType.PICKAXE, SoundType.GLASS, 3.0F, 3.0F, 0.98F, 0, 0, 1),
     HARDENED_STONE("hardened_stone", VariantsModId.DANNYS_ORES, Material.ROCK, MaterialColor.STONE, ToolType.PICKAXE, SoundType.STONE, 4.0F, 6.0F, 0.6F, 1, 0, 1);
 
     private final String blockName;

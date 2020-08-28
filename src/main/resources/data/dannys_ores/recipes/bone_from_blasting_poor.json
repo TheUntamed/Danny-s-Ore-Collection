@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "forge:ores/poor_bone"
+  },
+  "result": {
+    "item": "minecraft:bone",
+    "count": 2
+  },
+  "experience": 0.1,
+  "cookingtime": 100
+}
