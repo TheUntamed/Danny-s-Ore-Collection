@@ -79,6 +79,18 @@ public class BlockInit {
     public static final Block ATUM_PORPHYRY = null;
     @ObjectHolder("atum:marl")
     public static final Block ATUM_MARL = null;
+    @ObjectHolder("netherex:fiery_netherrack")
+    public static final Block NETHEREX_FIERY_NETHERRACK = null;
+    @ObjectHolder("netherex:icy_netherrack")
+    public static final Block NETHEREX_ICY_NETHERRACK = null;
+    @ObjectHolder("netherex:gloomy_netherrack")
+    public static final Block NETHEREX_GLOOMY_NETHERRACK = null;
+    @ObjectHolder("netherex:lively_netherrack")
+    public static final Block NETHEREX_LIVELY_NETHERRACK = null;
+    @ObjectHolder("netherex:basalt")
+    public static final Block NETHEREX_BASALT = null;
+    @ObjectHolder("netherex:frostburn_ice")
+    public static final Block NETHEREX_FROSTBURN_ICE = null;
 
     // All registered blocks are saved inside this deferred registry object.
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);

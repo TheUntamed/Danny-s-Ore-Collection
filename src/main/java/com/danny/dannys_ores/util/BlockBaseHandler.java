@@ -60,6 +60,12 @@ public class BlockBaseHandler {
             case ATUM_LIMESTONE_GRAVEL: return BlockInit.ATUM_LIMESTONE_GRAVEL;
             case ATUM_PORPHYRY: return BlockInit.ATUM_PORPHYRY;
             case ATUM_STRANGE_SAND: return BlockInit.ATUM_STRANGE_SAND;
+            case NETHEREX_FIERY_NETHERRACK: return BlockInit.NETHEREX_FIERY_NETHERRACK;
+            case NETHEREX_ICY_NETHERRACK: return BlockInit.NETHEREX_ICY_NETHERRACK;
+            case NETHEREX_GLOOMY_NETHERRACK: return BlockInit.NETHEREX_GLOOMY_NETHERRACK;
+            case NETHEREX_LIVELY_NETHERRACK: return BlockInit.NETHEREX_LIVELY_NETHERRACK;
+            case NETHEREX_BASALT: return BlockInit.NETHEREX_BASALT;
+            case NETHEREX_FROSTBURN_ICE: return BlockInit.NETHEREX_FROSTBURN_ICE;
             default:
                 throw new IllegalArgumentException("For the Stone Variant '" + variant +  "' no block base could be returned!");
         }
