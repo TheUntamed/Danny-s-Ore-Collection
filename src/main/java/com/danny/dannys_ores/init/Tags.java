@@ -57,7 +57,7 @@ public class Tags {
     }
 
     private static void setTags() {
-        for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+        for (RegistryObject<Block> blockRO : BlockInit.ORES.getEntries()) {
             Block block = blockRO.get();
 
             if (block instanceof SimpleOre) {
@@ -98,7 +98,11 @@ public class Tags {
                     oresItemTag.getAllElements().add(block.asItem());
                     oresItemTag.getEntries().add(new Tag.TagEntry<Item>(Objects.requireNonNull(block.getRegistryName())));
                 }
-            } else if (block instanceof SimpleBlock) {
+            }
+        }
+        for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+            Block block = blockRO.get();
+            if (block instanceof SimpleBlock) {
                 wg_stone.getAllElements().add(block);
                 wg_stone.getEntries().add(new Tag.TagEntry<Block>(Objects.requireNonNull(block.getRegistryName())));
             }

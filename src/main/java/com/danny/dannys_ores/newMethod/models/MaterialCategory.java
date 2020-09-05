@@ -1,5 +1,7 @@
-package com.danny.dannys_ores.newMethod;
+package com.danny.dannys_ores.newMethod.models;
 
+
+import com.danny.dannys_ores.newMethod.DannysOresAPI;
 
 public class MaterialCategory {
     private String name;

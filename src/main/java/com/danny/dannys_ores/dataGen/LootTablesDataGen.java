@@ -22,7 +22,7 @@ public class LootTablesDataGen extends LootTablesBaseProvider {
      */
     @Override
     protected void addTables() {
-        for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+        for (RegistryObject<Block> blockRO : BlockInit.ORES.getEntries()) {
             Block block = blockRO.get();
             if (block instanceof SimpleOre) {
                 SimpleOre ore = ((SimpleOre) block);
@@ -111,6 +111,10 @@ public class LootTablesDataGen extends LootTablesBaseProvider {
             } else {
                 lootTables.put(block, basicBlockTable(block));
             }
+        }
+        for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+            Block block = blockRO.get();
+            lootTables.put(block, basicBlockTable(block));
         }
     }
 

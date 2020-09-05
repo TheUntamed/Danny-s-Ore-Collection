@@ -19,12 +19,19 @@ public class ItemModelsDataGen extends ItemModelProvider {
     @Override
     protected void registerModels() {
         Main.LOGGER.debug("registerItemModels");
-        for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
-            ResourceLocation resLoc = block.get().getRegistryName();
-            assert resLoc != null;
-            String blockName = resLoc.toString().split(":")[1];
-            blockParented(resLoc, "block/" + blockName);
+        for (RegistryObject<Block> block : BlockInit.ORES.getEntries()) {
+            registerRegistryObject(block);
         }
+        for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
+            registerRegistryObject(block);
+        }
+    }
+
+    private void registerRegistryObject(RegistryObject<Block> regObj) {
+        ResourceLocation resLoc = regObj.get().getRegistryName();
+        assert resLoc != null;
+        String blockName = resLoc.toString().split(":")[1];
+        blockParented(resLoc, "block/" + blockName);
     }
 
     public void blockParented(ResourceLocation resLoc, String model) {

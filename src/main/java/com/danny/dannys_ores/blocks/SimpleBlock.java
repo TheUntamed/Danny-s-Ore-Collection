@@ -5,11 +5,16 @@ import com.danny.dannys_ores.util.BlockBaseHandler;
 import com.danny.dannys_ores.util.ModHandler;
 import com.danny.dannys_ores.util.VariantsModId;
 import com.danny.dannys_ores.util.StoneVariants;
+import com.google.common.collect.Lists;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import net.minecraft.world.storage.loot.LootContext;
+
+import java.util.List;
 
 /**
  * An object of this class represents a simple block of this mod.

@@ -1,5 +1,7 @@
 package com.danny.dannys_ores.newMethod;
 
+import com.danny.dannys_ores.newMethod.models.MaterialCategory;
+import com.danny.dannys_ores.newMethod.models.MaterialType;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSyntaxException;
 import net.minecraft.util.JSONUtils;

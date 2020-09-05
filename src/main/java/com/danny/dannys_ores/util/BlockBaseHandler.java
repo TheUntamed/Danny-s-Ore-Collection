@@ -2,7 +2,6 @@ package com.danny.dannys_ores.util;
 
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.init.BlockInit;
-import com.danny.dannys_ores.newMethod.StoneVariant;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 

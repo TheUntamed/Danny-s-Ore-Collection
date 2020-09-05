@@ -1,5 +1,6 @@
-package com.danny.dannys_ores.newMethod;
+package com.danny.dannys_ores.newMethod.models;
 
+import com.danny.dannys_ores.newMethod.DannysOresAPI;
 import net.minecraftforge.common.ToolType;
 
 public class StoneVariant {

@@ -26,7 +26,7 @@ public class BlockModelsDataGen extends BlockModelProvider {
     protected void registerModels() {
 
         Main.LOGGER.debug("registerBlockModels");
-        for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+        for (RegistryObject<Block> blockRO : BlockInit.ORES.getEntries()) {
             Block block = blockRO.get();
             ResourceLocation resLoc = block.getRegistryName();
             assert resLoc != null;
@@ -39,10 +39,20 @@ public class BlockModelsDataGen extends BlockModelProvider {
                 doubleTextureBlock(resLoc, backgroundPath,
                         "block/" + rType.getName() + "_" + oType.getName() + "_ore");
             } else {
-                String blockName = block.getRegistryName().toString().replace(":", "_");
-                doubleTextureBlock(resLoc, "block/" + blockName, "block/" + blockName);
+                registerSimpleModel(resLoc);
             }
         }
+        for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+            Block block = blockRO.get();
+            ResourceLocation resLoc = block.getRegistryName();
+            assert resLoc != null;
+            registerSimpleModel(resLoc);
+        }
+    }
+
+    private void registerSimpleModel(ResourceLocation resLoc) {
+        String blockName = resLoc.toString().replace(":", "_");
+        doubleTextureBlock(resLoc, "block/" + blockName, "block/" + blockName);
     }
 
     public void doubleTextureBlock(ResourceLocation resLoc, String textureBackground, String textureOverlay) {

@@ -22,7 +22,7 @@ public class LanguagesDataGen extends LanguageProvider {
     @Override
     protected void addTranslations() {
         Main.LOGGER.debug("addTranslations");
-        for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+        for (RegistryObject<Block> blockRO : BlockInit.ORES.getEntries()) {
             Block block = blockRO.get();
             if (block instanceof SimpleOre) {
                 SimpleOre ore = (SimpleOre) block;

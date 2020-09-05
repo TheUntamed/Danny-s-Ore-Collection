@@ -1,5 +1,9 @@
 package com.danny.dannys_ores.newMethod;
 
+import com.danny.dannys_ores.newMethod.models.MaterialCategory;
+import com.danny.dannys_ores.newMethod.models.MaterialType;
+import com.danny.dannys_ores.newMethod.models.StoneVariant;
+
 import java.util.HashSet;
 import java.util.Set;
 

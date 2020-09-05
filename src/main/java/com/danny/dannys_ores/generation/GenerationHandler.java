@@ -5,16 +5,11 @@ import com.danny.dannys_ores.blocks.SimpleBlock;
 import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.configs.*;
 import com.danny.dannys_ores.init.BlockInit;
-import com.danny.dannys_ores.newMethod.MaterialType;
-import com.danny.dannys_ores.newMethod.NewBlock;
-import com.danny.dannys_ores.newMethod.StoneVariant;
 import com.danny.dannys_ores.util.*;
 import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
@@ -29,7 +24,6 @@ import org.apache.commons.lang3.tuple.Pair;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.function.Predicate;
 
 import static java.lang.Math.max;
 
@@ -126,7 +120,7 @@ public class GenerationHandler {
             }
 
             // Add own generation
-            for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+            for (RegistryObject<Block> blockRO : BlockInit.ORES.getEntries()) {
                 Block block = blockRO.get();
                 if (block instanceof SimpleOre) {
                     SimpleOre ore = (SimpleOre) block;
@@ -160,17 +154,20 @@ public class GenerationHandler {
                             }
                         }
                     }
-                } else if (block instanceof SimpleBlock) {
+                }
+            }
+            for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+                Block block = blockRO.get();
+                if (block instanceof SimpleBlock) {
                     ResourceLocation resLoc = block.getRegistryName();
-                    if (resLoc != null) {
-                        String regName = resLoc.toString();
-                        String blockName = regName.split(":")[1];
-                        UnmodifiableConfig config = ConfigHandler.getConfig(block);
-                        if (getStoneGenerationStatus(config, blockName, biomeName, tempName)) {
-                            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                                    .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, block.getDefaultState(), max(((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getClusterSizePath())).get(), 3)))
-                                    .withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getClustersPerChunkPath())).get(), ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getMinHeightPath())).get(), 0, ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getMaxHeightPath())).get()))));
-                        }
+                    assert resLoc != null;
+                    String regName = resLoc.toString();
+                    String blockName = regName.split(":")[1];
+                    UnmodifiableConfig config = ConfigHandler.getConfig(block);
+                    if (getStoneGenerationStatus(config, blockName, biomeName, tempName)) {
+                        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
+                                .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, block.getDefaultState(), max(((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getClusterSizePath())).get(), 3)))
+                                .withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getClustersPerChunkPath())).get(), ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getMinHeightPath())).get(), 0, ((ForgeConfigSpec.IntValue) config.get(PathHandler.getGeneralPath() + "." + blockName + "." + PathHandler.getGenerationPath() + "." + PathHandler.getMaxHeightPath())).get()))));
                     }
                 }
             }

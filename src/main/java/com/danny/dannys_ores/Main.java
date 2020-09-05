@@ -30,6 +30,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
+import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -63,8 +64,9 @@ public class Main {
 
 //        StoneVariantLoader.loadStoneVariants();
 //        MaterialTypeLoader.loadMaterialTypes();
+        BlockInit.ORES.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
-        BlockInit.NEW_BLOCKS.register(modEventBus);
+//        BlockInit.NEW_BLOCKS.register(modEventBus);
         BlockInit.initOres();
 
         Config.loadConfigs();
@@ -83,10 +85,10 @@ public class Main {
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         final IForgeRegistry<Item> registry = event.getRegistry();
 
-        BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+        BlockInit.ORES.getEntries().stream().map(RegistryObject::get).forEach(block -> {
             final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
             ResourceLocation resLoc = block.getRegistryName();
-            if (resLoc != null) {
+            assert resLoc != null;
                 if (block instanceof SimpleOre) {
                     SimpleOre oreBlock = (SimpleOre) block;
                     OreTypes oType = oreBlock.getOreType();
@@ -124,19 +126,24 @@ public class Main {
                     blockItem.setRegistryName(resLoc);
                     registry.register(blockItem);
                 }
-            } else {
-                throw new NullPointerException("block '" + block + "' has no registry name!");
-            }
+        });
+        BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+            final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
+            ResourceLocation resLoc = block.getRegistryName();
+            assert resLoc != null;
+            final BlockItem blockItem = new BlockItem(block, properties);
+            blockItem.setRegistryName(resLoc);
+            registry.register(blockItem);
         });
 
         LOGGER.debug("Registered BlockItems!");
 
-        BlockInit.NEW_BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
-            final BlockItem blockItem = new BlockItem(block, properties);
-            blockItem.setRegistryName(block.getRegistryName());
-            registry.register(blockItem);
-        });
+//        BlockInit.NEW_BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+//            final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
+//            final BlockItem blockItem = new BlockItem(block, properties);
+//            blockItem.setRegistryName(block.getRegistryName());
+//            registry.register(blockItem);
+//        });
     }
 
     /**
@@ -146,9 +153,14 @@ public class Main {
      * @param event The event for client setup.
      */
     private void doClientStuff(final FMLClientSetupEvent event) {
-        for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
+        for (RegistryObject<Block> block : BlockInit.ORES.getEntries()) {
             RenderTypeLookup.setRenderLayer(block.get(), RenderType.getTranslucent());
         }
+    }
+
+    @SubscribeEvent
+    public void beforeServerStart(final FMLServerAboutToStartEvent event) {
+//        event.getServer().getResourceManager().addReloadListener(DynamicDataPack.getInstance());
     }
 
     @SubscribeEvent
@@ -182,7 +194,7 @@ public class Main {
 
         @Override
         public ItemStack createIcon() {
-            for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+            for (RegistryObject<Block> blockRO : BlockInit.ORES.getEntries()) {
                 Block block = blockRO.get();
                 if (block instanceof SimpleOre) {
                     SimpleOre ore = (SimpleOre) block;

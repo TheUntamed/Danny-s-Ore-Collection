@@ -18,11 +18,18 @@ public class BlockStatesDataGen extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
-            ResourceLocation resLoc = block.get().getRegistryName();
-            if (resLoc != null) {
-                String blockName = resLoc.toString().split(":")[1];
-                singleTextureBlock(block.get(), blockName);
-            }
+            registerRegistryObject(block);
+        }
+        for (RegistryObject<Block> block : BlockInit.ORES.getEntries()) {
+            registerRegistryObject(block);
+        }
+    }
+
+    private void registerRegistryObject(RegistryObject<Block> regObj) {
+        ResourceLocation resLoc = regObj.get().getRegistryName();
+        if (resLoc != null) {
+            String blockName = resLoc.toString().split(":")[1];
+            singleTextureBlock(regObj.get(), blockName);
         }
     }
 
