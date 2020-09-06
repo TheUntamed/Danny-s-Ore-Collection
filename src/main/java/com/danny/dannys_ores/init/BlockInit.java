@@ -3,11 +3,13 @@ package com.danny.dannys_ores.init;
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blocks.*;
 import com.danny.dannys_ores.blocks.bedrock.*;
+import com.danny.dannys_ores.items.SimpleItem;
 import com.danny.dannys_ores.util.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
@@ -90,19 +92,20 @@ public class BlockInit {
 
     // All registered blocks are saved inside this deferred registry object.
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
+    public static final DeferredRegister<Block> STONES = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
     public static final DeferredRegister<Block> ORES = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
 //    public static final DeferredRegister<Block> NEW_BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
 
     // The most simplest way to initialize a block. Impossible to implement for a lot of blocks.
     // For that reason ores are handled differently (see below).
-    public static final RegistryObject<Block> HARDENED_STONE = BLOCKS.register("hardened_stone", () -> new SimpleBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(2.5F, 6.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), StoneVariants.STONE, VariantsModId.DANNYS_ORES));
-    public static final RegistryObject<Block> HARDENED_COBBLESTONE = BLOCKS.register("hardened_cobblestone", () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(2.5F, 6.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> HARDENED_STONE = STONES.register("hardened_stone", () -> new SimpleStoneBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(2.5F, 6.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE), StoneVariants.STONE, VariantsModId.DANNYS_ORES));
+    public static final RegistryObject<Block> HARDENED_COBBLESTONE = STONES.register("hardened_cobblestone", () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(2.5F, 6.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE)));
 
     /**
      * The main method to initialize all the ores of this mod.
      */
     public static void initOres() {
-        Main.LOGGER.debug("Start block init.");
+        Main.LOGGER.debug("Start ore init.");
         HashMap<Block, Pair<OreTypes, StoneVariants>> vanilla = getFilledVanillaBlockMap();
         for (RichnessTypes rType : RichnessTypes.values()) {
             String rTypeName = rType.getName();
@@ -152,8 +155,8 @@ public class BlockInit {
                 }
             }
         }
-//        Main.LOGGER.debug("Finished block init.");
-//
+        Main.LOGGER.debug("Finished ore init.");
+
 //        Main.LOGGER.debug("Start new block init.");
 //        System.err.println("new block init!");
 //        for (MaterialType mType : DannysOresAPI.MATERIAL_TYPES) {
@@ -163,6 +166,21 @@ public class BlockInit {
 //        }
 //
 //        Main.LOGGER.debug("Finished new block init.");
+    }
+
+    public static void initBlocks() {
+        Main.LOGGER.debug("Start block init.");
+        for (Forms form : Forms.values()) {
+            if (form.getIsBlock()) {
+                for (MaterialTypes material : MaterialTypes.values()) {
+                    MineralTypes mType = material.getMineralType();
+                    if (!material.getFormsToExclude().contains(form)) {
+                        BLOCKS.register(material.getName() + "_" + form.getName(), () -> new SimpleBlock(Block.Properties.create(material.getBlockMaterial(), material.getColor()).harvestTool(material.getTool()).harvestLevel(material.getHarvestLevel()).hardnessAndResistance(material.getHardness(), material.getResistance()).sound(material.getSound()).lightValue(material.getLightValue())));
+                    }
+                }
+            }
+        }
+        Main.LOGGER.debug("Finished block init.");
     }
 
     /**

@@ -42,6 +42,13 @@ public class BlockModelsDataGen extends BlockModelProvider {
                 registerSimpleModel(resLoc);
             }
         }
+        for (RegistryObject<Block> blockRO : BlockInit.STONES.getEntries()) {
+            Block block = blockRO.get();
+            ResourceLocation resLoc = block.getRegistryName();
+            assert resLoc != null;
+            registerSimpleModel(resLoc);
+        }
+
         for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
             Block block = blockRO.get();
             ResourceLocation resLoc = block.getRegistryName();

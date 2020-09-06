@@ -19,7 +19,7 @@ import java.util.Random;
  * An ore type could be 'Iron', 'Diamond', etc.
  * A richness type can be 'Dense', 'Normal' or 'Poor'
  */
-public class SimpleOre extends SimpleBlock {
+public class SimpleOre extends SimpleStoneBlock {
     private int minXp;
     private int maxXp;
     private OreTypes oType;

@@ -1,11 +1,12 @@
 package com.danny.dannys_ores;
 
-import com.danny.dannys_ores.blockItems.*;
 import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.configs.Config;
 import com.danny.dannys_ores.events.OreBreak;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
+import com.danny.dannys_ores.init.BlockItemInit;
+import com.danny.dannys_ores.init.ItemInit;
 import com.danny.dannys_ores.init.Tags;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
@@ -14,11 +15,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.item.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.TagsUpdatedEvent;
@@ -33,7 +30,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -64,10 +60,15 @@ public class Main {
 
 //        StoneVariantLoader.loadStoneVariants();
 //        MaterialTypeLoader.loadMaterialTypes();
+
+        ItemInit.ITEMS.register(modEventBus);
         BlockInit.ORES.register(modEventBus);
+        BlockInit.STONES.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
 //        BlockInit.NEW_BLOCKS.register(modEventBus);
+        ItemInit.initItems();
         BlockInit.initOres();
+        BlockInit.initBlocks();
 
         Config.loadConfigs();
     }
@@ -83,67 +84,7 @@ public class Main {
      */
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
-        final IForgeRegistry<Item> registry = event.getRegistry();
-
-        BlockInit.ORES.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
-            ResourceLocation resLoc = block.getRegistryName();
-            assert resLoc != null;
-                if (block instanceof SimpleOre) {
-                    SimpleOre oreBlock = (SimpleOre) block;
-                    OreTypes oType = oreBlock.getOreType();
-                    if (oType.equals(OreTypes.VULCANITE) || oType.equals(OreTypes.FIRE)) {
-                        final HotBlockItem blockItem = new HotBlockItem(block, properties);
-                        blockItem.setRegistryName(resLoc);
-                        registry.register(blockItem);
-                    } else if (oType.equals(OreTypes.URANINITE)) {
-                        final ToxicBlockItem blockItem = new ToxicBlockItem(block, properties);
-                        blockItem.setRegistryName(resLoc);
-                        registry.register(blockItem);
-                    } else if (oType.equals(OreTypes.YELLORITE)) {
-                        final ToxicBlockItem blockItem = new ToxicBlockItem(block, properties);
-                        blockItem.setRegistryName(resLoc);
-                        registry.register(blockItem);
-                    } else if (oType.equals(OreTypes.AIR)) {
-                        final LightBlockItem blockItem = new LightBlockItem(block, properties);
-                        blockItem.setRegistryName(resLoc);
-                        registry.register(blockItem);
-                    } else if (oType.equals(OreTypes.EARTH)) {
-                        final HeavyBlockItem blockItem = new HeavyBlockItem(block, properties);
-                        blockItem.setRegistryName(resLoc);
-                        registry.register(blockItem);
-                    } else if (oType.equals(OreTypes.WATER)) {
-                        final DrowningBlockItem blockItem = new DrowningBlockItem(block, properties);
-                        blockItem.setRegistryName(resLoc);
-                        registry.register(blockItem);
-                    } else {
-                        final BlockItem blockItem = new BlockItem(block, properties);
-                        blockItem.setRegistryName(resLoc);
-                        registry.register(blockItem);
-                    }
-                } else {
-                    final BlockItem blockItem = new BlockItem(block, properties);
-                    blockItem.setRegistryName(resLoc);
-                    registry.register(blockItem);
-                }
-        });
-        BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
-            ResourceLocation resLoc = block.getRegistryName();
-            assert resLoc != null;
-            final BlockItem blockItem = new BlockItem(block, properties);
-            blockItem.setRegistryName(resLoc);
-            registry.register(blockItem);
-        });
-
-        LOGGER.debug("Registered BlockItems!");
-
-//        BlockInit.NEW_BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-//            final Item.Properties properties = new Item.Properties().group(MyItemGroup.instance);
-//            final BlockItem blockItem = new BlockItem(block, properties);
-//            blockItem.setRegistryName(block.getRegistryName());
-//            registry.register(blockItem);
-//        });
+        BlockItemInit.registerBlockItems(event);
     }
 
     /**
@@ -185,10 +126,10 @@ public class Main {
     /**
      * Creates a custom item group (creative tab) for the blocks of this mod.
      */
-    public static class MyItemGroup extends ItemGroup {
-        public static final ItemGroup instance = new MyItemGroup(ItemGroup.GROUPS.length, "dannys_ores_tab");
+    public static class MyItemGroupOres extends ItemGroup {
+        public static final ItemGroup instance = new MyItemGroupOres(ItemGroup.GROUPS.length, "dannys_ores_ores");
 
-        private MyItemGroup(int index, String label) {
+        private MyItemGroupOres(int index, String label) {
             super(index, label);
         }
 
@@ -204,6 +145,52 @@ public class Main {
                 }
             }
             return new ItemStack(Blocks.DIAMOND_ORE);
+        }
+    }
+
+    public static class MyItemGroupItems extends ItemGroup {
+        public static final ItemGroup instance = new MyItemGroupItems(ItemGroup.GROUPS.length, "dannys_ores_items");
+
+        private MyItemGroupItems(int index, String label) {
+            super(index, label);
+        }
+
+        @Override
+        public ItemStack createIcon() {
+            //TODO: Change icon to item
+            for (RegistryObject<Block> blockRO : BlockInit.ORES.getEntries()) {
+                Block block = blockRO.get();
+                if (block instanceof SimpleOre) {
+                    SimpleOre ore = (SimpleOre) block;
+                    if (ore.getOreType().equals(OreTypes.GOLD) && ore.getStoneVariant().equals(StoneVariants.RED_SAND) && ore.getRichnessType().equals(RichnessTypes.NORMAL)) {
+                        return new ItemStack(ore);
+                    }
+                }
+            }
+            return new ItemStack(Items.DIAMOND);
+        }
+    }
+
+    public static class MyItemGroupStones extends ItemGroup {
+        public static final ItemGroup instance = new MyItemGroupStones(ItemGroup.GROUPS.length, "dannys_ores_stones");
+
+        private MyItemGroupStones(int index, String label) {
+            super(index, label);
+        }
+
+        @Override
+        public ItemStack createIcon() {
+            //TODO: Change icon to item
+            for (RegistryObject<Block> blockRO : BlockInit.STONES.getEntries()) {
+                Block block = blockRO.get();
+                if (block instanceof SimpleOre) {
+                    SimpleOre ore = (SimpleOre) block;
+                    if (ore.getOreType().equals(OreTypes.GOLD) && ore.getStoneVariant().equals(StoneVariants.RED_SAND) && ore.getRichnessType().equals(RichnessTypes.NORMAL)) {
+                        return new ItemStack(ore);
+                    }
+                }
+            }
+            return new ItemStack(Items.DIAMOND);
         }
     }
 }

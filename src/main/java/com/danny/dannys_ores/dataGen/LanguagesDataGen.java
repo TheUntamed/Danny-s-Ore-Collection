@@ -4,11 +4,13 @@ import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blocks.SimpleBlock;
 import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.init.BlockInit;
-import com.danny.dannys_ores.util.OreTypes;
-import com.danny.dannys_ores.util.RichnessTypes;
-import com.danny.dannys_ores.util.StoneVariants;
+import com.danny.dannys_ores.init.ItemInit;
+import com.danny.dannys_ores.items.SimpleItem;
+import com.danny.dannys_ores.newMethod.models.MaterialType;
+import com.danny.dannys_ores.util.*;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.fml.RegistryObject;
@@ -43,8 +45,73 @@ public class LanguagesDataGen extends LanguageProvider {
         add("block.minecraft.nether_quartz_ore", "Netherrack Quartz Ore");
         add("block.dannys_ores.hardened_stone", "Hardened Stone");
         add("block.dannys_ores.hardened_cobblestone", "Hardened Cobblestone");
-        add("itemGroup.dannys_ores_tab", "Danny's Ores");
+        add("itemGroup.dannys_ores_ores", "Danny's Ores: Ores");
+        add("itemGroup.dannys_ores_items", "Danny's Ores: Items");
+        add("itemGroup.dannys_ores_stones", "Danny's Ores: Stones");
+
+        for (RegistryObject<Item> itemRO : ItemInit.ITEMS.getEntries()) {
+            Item item = itemRO.get();
+            if (item instanceof SimpleItem) {
+                SimpleItem simple = (SimpleItem) item;
+                String displayName = getItemDisplayName(simple);
+                add(simple, displayName);
+            }
+        }
     }
+
+    private String getItemDisplayName(SimpleItem item) {
+        MineralTypes mType = item.getMType();
+        MaterialTypes material = item.getMaterial();
+        Forms form = item.getForm();
+
+        String[] materialParts = material.getName().split("_");
+        StringBuilder materialBuilder = new StringBuilder();
+        for (String materialPart : materialParts) {
+            materialBuilder.append(materialPart.substring(0, 1).toUpperCase()).append(materialPart.substring(1)).append(" ");
+        }
+        String materialName = materialBuilder.toString();
+
+        String[] formParts = form.getName().split("_");
+        StringBuilder formBuilder = new StringBuilder();
+        for (String formPart : formParts) {
+            formBuilder.append(formPart.substring(0, 1).toUpperCase()).append(formPart.substring(1)).append(" ");
+        }
+        String _formName = " " + formBuilder.toString();
+
+        if (mType.equals(MineralTypes.GEM)) {
+            if (form.equals(Forms.INGOT)) {
+                _formName = "";
+            } else if (form.equals(Forms.NUGGET)) {
+                _formName = " Piece";
+            }
+        } else if (mType.equals(MineralTypes.CRYSTAL)) {
+            if (form.equals(Forms.INGOT)) {
+                _formName = " Crystal";
+            } else if (form.equals(Forms.NUGGET)) {
+                _formName = " Shard";
+            }
+        } else if (mType.equals(MineralTypes.PEARL)) {
+            if (form.equals(Forms.INGOT)) {
+                _formName = " Pearl";
+            } else if (form.equals(Forms.NUGGET)) {
+                _formName = " Shard";
+            }
+        } else if (mType.equals(MineralTypes.POWDER)) {
+            if (form.equals(Forms.DUST)) {
+                _formName = " Powder";
+            }
+        } else if (mType.equals(MineralTypes.OTHER)) {
+            if (form.equals(Forms.INGOT)) {
+                _formName = "";
+            } else if (form.equals(Forms.NUGGET)) {
+                _formName = " Piece";
+            }
+        }
+
+        return materialName + _formName;
+    }
+
+
 
     /**
      * Constructs the display name of an ore based on it's stone variant, richness type and ore type.

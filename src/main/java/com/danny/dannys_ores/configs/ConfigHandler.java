@@ -50,7 +50,7 @@ public class ConfigHandler {
      * @param tempVerify  A List of all vanilla and modded biome temperatures.
      */
     public static void checkConfig(ArrayList<String> biomeVerify, ArrayList<String> tempVerify) {
-        for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+        for (RegistryObject<Block> blockRO : BlockInit.ORES.getEntries()) {
             Block block = blockRO.get();
             UnmodifiableConfig config = ConfigHandler.getConfig(block);
             if (block instanceof SimpleOre) {
@@ -73,7 +73,12 @@ public class ConfigHandler {
                         Main.LOGGER.warn("Invalid temperature '" + temp + "' in Danny's Ores Config in Temperature Blacklist for '" + CommentHandler.getBlockNameComment(variant, rType, oType) + "', please check the entries!");
                     }
                 }
-            } else if (block instanceof SimpleBlock) {
+            }
+        }
+        for (RegistryObject<Block> blockRO : BlockInit.STONES.getEntries()) {
+            Block block = blockRO.get();
+            UnmodifiableConfig config = ConfigHandler.getConfig(block);
+            if (block instanceof SimpleBlock) {
                 SimpleBlock simpleBlock = (SimpleBlock) block;
                 String blockName = Objects.requireNonNull(simpleBlock.getRegistryName()).toString();
                 ForgeConfigSpec.ConfigValue<List<String>> inBiomeFCS = config.get(PathBuilder.getBiomeBlacklistFullPath(blockName));

@@ -112,6 +112,10 @@ public class LootTablesDataGen extends LootTablesBaseProvider {
                 lootTables.put(block, basicBlockTable(block));
             }
         }
+        for (RegistryObject<Block> blockRO : BlockInit.STONES.getEntries()) {
+            Block block = blockRO.get();
+            lootTables.put(block, basicBlockTable(block));
+        }
         for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
             Block block = blockRO.get();
             lootTables.put(block, basicBlockTable(block));

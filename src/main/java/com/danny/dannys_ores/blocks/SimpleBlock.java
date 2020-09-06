@@ -23,43 +23,8 @@ import java.util.List;
  * and the modId of the block base as enum element.
  */
 public class SimpleBlock extends Block {
-    private StoneVariants variant;
-    private VariantsModId blockBaseModId;
 
-    public SimpleBlock(Block.Properties properties, StoneVariants variant, VariantsModId blockBaseModId) {
+    public SimpleBlock(Block.Properties properties) {
         super(properties);
-        this.variant = variant;
-        this.blockBaseModId = blockBaseModId;
-    }
-
-    @Override
-    public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
-        if (ModHandler.variantsModIdExists(this.getBlockBaseModId())) {
-            items.add(new ItemStack(this));
-        }
-    }
-
-    /**
-     *
-     * @return The block base as enum element.
-     */
-    public StoneVariants getStoneVariant() {
-        return variant;
-    }
-
-    /**
-     *
-     * @return The block base as actual block.
-     */
-    public Block getBlockBase() {
-        return BlockBaseHandler.getBlockBase(variant);
-    }
-
-    /**
-     *
-     * @return The modId of the block base as enum element.
-     */
-    public VariantsModId getBlockBaseModId() {
-        return blockBaseModId;
     }
 }

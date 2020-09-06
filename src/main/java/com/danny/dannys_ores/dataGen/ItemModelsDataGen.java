@@ -22,6 +22,9 @@ public class ItemModelsDataGen extends ItemModelProvider {
         for (RegistryObject<Block> block : BlockInit.ORES.getEntries()) {
             registerRegistryObject(block);
         }
+        for (RegistryObject<Block> block : BlockInit.STONES.getEntries()) {
+            registerRegistryObject(block);
+        }
         for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
             registerRegistryObject(block);
         }

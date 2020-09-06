@@ -17,10 +17,13 @@ public class BlockStatesDataGen extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
+        for (RegistryObject<Block> block : BlockInit.STONES.getEntries()) {
             registerRegistryObject(block);
         }
         for (RegistryObject<Block> block : BlockInit.ORES.getEntries()) {
+            registerRegistryObject(block);
+        }
+        for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
             registerRegistryObject(block);
         }
     }

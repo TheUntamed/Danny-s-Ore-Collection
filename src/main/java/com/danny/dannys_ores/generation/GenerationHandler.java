@@ -156,7 +156,7 @@ public class GenerationHandler {
                     }
                 }
             }
-            for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+            for (RegistryObject<Block> blockRO : BlockInit.STONES.getEntries()) {
                 Block block = blockRO.get();
                 if (block instanceof SimpleBlock) {
                     ResourceLocation resLoc = block.getRegistryName();
