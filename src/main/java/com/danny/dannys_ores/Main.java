@@ -2,12 +2,14 @@ package com.danny.dannys_ores;
 
 import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.configs.Config;
+import com.danny.dannys_ores.events.ColorHandler;
 import com.danny.dannys_ores.events.OreBreak;
 import com.danny.dannys_ores.generation.GenerationHandler;
 import com.danny.dannys_ores.init.BlockInit;
 import com.danny.dannys_ores.init.BlockItemInit;
 import com.danny.dannys_ores.init.ItemInit;
 import com.danny.dannys_ores.init.Tags;
+import com.danny.dannys_ores.newMethod.ModelHandler;
 import com.danny.dannys_ores.util.OreTypes;
 import com.danny.dannys_ores.util.RichnessTypes;
 import com.danny.dannys_ores.util.StoneVariants;
@@ -16,14 +18,18 @@ import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.*;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.TagsUpdatedEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import net.minecraftforge.fml.common.thread.EffectiveSide;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
@@ -45,14 +51,14 @@ public class Main {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
+        modEventBus.addListener(this::doClientStuff);
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new OreBreak());
-
-//        DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
-//            modEventBus.register(new ColorHandler());
-//            modEventBus.register(new ModelHandler());
-//        });
+        if (EffectiveSide.get() == LogicalSide.CLIENT) {
+            modEventBus.register(new ColorHandler());
+            modEventBus.register(new ModelHandler());
+        }
 
 //        addModListener<TextureStitchEvent.Pre> { SHItems.regTextures(it); }
 //        addModListener<ModelRegistryEvent> { SHItems.regModels(); }
@@ -61,10 +67,10 @@ public class Main {
 //        StoneVariantLoader.loadStoneVariants();
 //        MaterialTypeLoader.loadMaterialTypes();
 
-        ItemInit.ITEMS.register(modEventBus);
+        ItemInit.GRAYSCALE_ITEMS.register(modEventBus);
         BlockInit.ORES.register(modEventBus);
         BlockInit.STONES.register(modEventBus);
-        BlockInit.BLOCKS.register(modEventBus);
+        BlockInit.GRAYSCALE_BLOCKS.register(modEventBus);
 //        BlockInit.NEW_BLOCKS.register(modEventBus);
         ItemInit.initItems();
         BlockInit.initOres();

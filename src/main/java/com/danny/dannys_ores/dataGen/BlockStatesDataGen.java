@@ -23,7 +23,7 @@ public class BlockStatesDataGen extends BlockStateProvider {
         for (RegistryObject<Block> block : BlockInit.ORES.getEntries()) {
             registerRegistryObject(block);
         }
-        for (RegistryObject<Block> block : BlockInit.BLOCKS.getEntries()) {
+        for (RegistryObject<Block> block : BlockInit.GRAYSCALE_BLOCKS.getEntries()) {
             registerRegistryObject(block);
         }
     }

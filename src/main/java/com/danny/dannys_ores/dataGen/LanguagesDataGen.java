@@ -49,7 +49,7 @@ public class LanguagesDataGen extends LanguageProvider {
         add("itemGroup.dannys_ores_items", "Danny's Ores: Items");
         add("itemGroup.dannys_ores_stones", "Danny's Ores: Stones");
 
-        for (RegistryObject<Item> itemRO : ItemInit.ITEMS.getEntries()) {
+        for (RegistryObject<Item> itemRO : ItemInit.GRAYSCALE_ITEMS.getEntries()) {
             Item item = itemRO.get();
             if (item instanceof SimpleItem) {
                 SimpleItem simple = (SimpleItem) item;
@@ -69,42 +69,42 @@ public class LanguagesDataGen extends LanguageProvider {
         for (String materialPart : materialParts) {
             materialBuilder.append(materialPart.substring(0, 1).toUpperCase()).append(materialPart.substring(1)).append(" ");
         }
-        String materialName = materialBuilder.toString();
+        String materialName = materialBuilder.toString().trim();
 
         String[] formParts = form.getName().split("_");
         StringBuilder formBuilder = new StringBuilder();
         for (String formPart : formParts) {
             formBuilder.append(formPart.substring(0, 1).toUpperCase()).append(formPart.substring(1)).append(" ");
         }
-        String _formName = " " + formBuilder.toString();
+        String _formName = " " + formBuilder.toString().trim();
 
         if (mType.equals(MineralTypes.GEM)) {
             if (form.equals(Forms.INGOT)) {
                 _formName = "";
-            } else if (form.equals(Forms.NUGGET)) {
-                _formName = " Piece";
+//            } else if (form.equals(Forms.NUGGET)) {
+//                _formName = " Piece";
             }
         } else if (mType.equals(MineralTypes.CRYSTAL)) {
             if (form.equals(Forms.INGOT)) {
-                _formName = " Crystal";
-            } else if (form.equals(Forms.NUGGET)) {
-                _formName = " Shard";
+                _formName = "";
+//            } else if (form.equals(Forms.NUGGET)) {
+//                _formName = " Shard";
             }
         } else if (mType.equals(MineralTypes.PEARL)) {
             if (form.equals(Forms.INGOT)) {
                 _formName = " Pearl";
-            } else if (form.equals(Forms.NUGGET)) {
-                _formName = " Shard";
+//            } else if (form.equals(Forms.NUGGET)) {
+//                _formName = " Shard";
             }
         } else if (mType.equals(MineralTypes.POWDER)) {
-            if (form.equals(Forms.DUST)) {
-                _formName = " Powder";
-            }
+//            if (form.equals(Forms.DUST)) {
+//                _formName = " Powder";
+//            }
         } else if (mType.equals(MineralTypes.OTHER)) {
             if (form.equals(Forms.INGOT)) {
                 _formName = "";
-            } else if (form.equals(Forms.NUGGET)) {
-                _formName = " Piece";
+//            } else if (form.equals(Forms.NUGGET)) {
+//                _formName = " Piece";
             }
         }
 

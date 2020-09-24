@@ -2,14 +2,19 @@ package com.danny.dannys_ores.init;
 
 import com.danny.dannys_ores.Main;
 import com.danny.dannys_ores.blockItems.*;
+import com.danny.dannys_ores.blocks.GrayScaleBlock;
 import com.danny.dannys_ores.blocks.SimpleOre;
 import com.danny.dannys_ores.util.OreTypes;
+import net.minecraft.block.Block;
+import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.IForgeRegistry;
+
+import java.util.List;
 
 public class BlockItemInit {
 
@@ -58,13 +63,15 @@ public class BlockItemInit {
                 registry.register(blockItem);
             }
         });
-        BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            final Item.Properties properties = new Item.Properties().group(Main.MyItemGroupOres.instance);
-            ResourceLocation resLoc = block.getRegistryName();
-            assert resLoc != null;
-            final BlockItem blockItem = new BlockItem(block, properties);
-            blockItem.setRegistryName(resLoc);
-            registry.register(blockItem);
+        BlockInit.GRAYSCALE_BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+            if (block instanceof GrayScaleBlock) {
+                GrayScaleBlock grayScaleBlock = (GrayScaleBlock) block;
+                Main.LOGGER.debug("Register GrayScale BlockItems!");
+                grayScaleBlockItemRegistry(grayScaleBlock, registry);
+            }
+        });
+        BlockInit.STONES.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+            simpleBlockItemRegistry(block, registry);
         });
 
         Main.LOGGER.debug("Registered BlockItems!");
@@ -75,5 +82,23 @@ public class BlockItemInit {
 //            blockItem.setRegistryName(block.getRegistryName());
 //            registry.register(blockItem);
 //        });
+    }
+
+    private static void grayScaleBlockItemRegistry(GrayScaleBlock block, IForgeRegistry<Item> registry) {
+        final Item.Properties properties = new Item.Properties().group(Main.MyItemGroupOres.instance);
+        ResourceLocation resLoc = block.getRegistryName();
+        assert resLoc != null;
+        final BlockItem blockItem = new GrayScaleBlockItem(block, properties, block.getItemColor());
+        blockItem.setRegistryName(resLoc);
+        registry.register(blockItem);
+    }
+
+    private static void simpleBlockItemRegistry(Block block, IForgeRegistry<Item> registry) {
+        final Item.Properties properties = new Item.Properties().group(Main.MyItemGroupOres.instance);
+        ResourceLocation resLoc = block.getRegistryName();
+        assert resLoc != null;
+        final BlockItem blockItem = new BlockItem(block, properties);
+        blockItem.setRegistryName(resLoc);
+        registry.register(blockItem);
     }
 }

@@ -1,6 +1,7 @@
 package com.danny.dannys_ores.init;
 
 import com.danny.dannys_ores.Main;
+import com.danny.dannys_ores.items.GrayScaleItem;
 import com.danny.dannys_ores.items.SimpleItem;
 import com.danny.dannys_ores.util.Forms;
 import com.danny.dannys_ores.util.MaterialTypes;
@@ -10,7 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemInit {
-    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Main.MOD_ID);
+    public static final DeferredRegister<Item> GRAYSCALE_ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Main.MOD_ID);
 
     public static void initItems() {
         Main.LOGGER.debug("Start item init.");
@@ -19,7 +20,8 @@ public class ItemInit {
                 for (MaterialTypes material : MaterialTypes.values()) {
                     MineralTypes mType = material.getMineralType();
                     if (!material.getFormsToExclude().contains(form)) {
-                        ITEMS.register(material.getName() + "_" + form.getName(), () -> new SimpleItem(new Item.Properties().group(Main.MyItemGroupItems.instance), mType, material, form));
+                        Main.LOGGER.debug("init item: " + material.getName() + "_" + form.getName());
+                        GRAYSCALE_ITEMS.register(material.getName() + "_" + form.getName(), () -> new GrayScaleItem(new Item.Properties().group(Main.MyItemGroupItems.instance), mType, material, form, material.getItemColor()));
                     }
                 }
             }

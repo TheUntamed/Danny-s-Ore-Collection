@@ -2,12 +2,12 @@ package com.danny.dannys_ores.util;
 
 public enum Forms {
     INGOT("ingot", false),
-    NUGGET("nugget", false),
+//    NUGGET("nugget", false),
     STORAGE_BLOCK("block", true),
-    DUST("dust", false),
+//    DUST("dust", false),
     PLATE("plate", false),
-    GEAR("gear", false),
-    ROD("rod", false),
+//    GEAR("gear", false),
+//    ROD("rod", false),
     CASING("casing", true);
 
     private final String name;

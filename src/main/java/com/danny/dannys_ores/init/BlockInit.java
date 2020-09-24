@@ -90,8 +90,8 @@ public class BlockInit {
     @ObjectHolder("netherex:frostburn_ice")
     public static final Block NETHEREX_FROSTBURN_ICE = null;
 
-    // All registered blocks are saved inside this deferred registry object.
-    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
+    // All registered blocks are saved inside a deferred registry object.
+    public static final DeferredRegister<Block> GRAYSCALE_BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
     public static final DeferredRegister<Block> STONES = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
     public static final DeferredRegister<Block> ORES = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
 //    public static final DeferredRegister<Block> NEW_BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);
@@ -175,7 +175,7 @@ public class BlockInit {
                 for (MaterialTypes material : MaterialTypes.values()) {
                     MineralTypes mType = material.getMineralType();
                     if (!material.getFormsToExclude().contains(form)) {
-                        BLOCKS.register(material.getName() + "_" + form.getName(), () -> new SimpleBlock(Block.Properties.create(material.getBlockMaterial(), material.getColor()).harvestTool(material.getTool()).harvestLevel(material.getHarvestLevel()).hardnessAndResistance(material.getHardness(), material.getResistance()).sound(material.getSound()).lightValue(material.getLightValue())));
+                        GRAYSCALE_BLOCKS.register(material.getName() + "_" + form.getName(), () -> new GrayScaleBlock(Block.Properties.create(material.getBlockMaterial(), material.getMapColor()).harvestTool(material.getTool()).harvestLevel(material.getHarvestLevel()).hardnessAndResistance(material.getHardness(), material.getResistance()).sound(material.getSound()).lightValue(material.getLightValue()), material, form, material.getBlockColor(), material.getItemColor()));
                     }
                 }
             }

@@ -100,7 +100,7 @@ public class Tags {
                 }
             }
         }
-        for (RegistryObject<Block> blockRO : BlockInit.BLOCKS.getEntries()) {
+        for (RegistryObject<Block> blockRO : BlockInit.STONES.getEntries()) {
             Block block = blockRO.get();
             if (block instanceof SimpleBlock) {
                 wg_stone.getAllElements().add(block);

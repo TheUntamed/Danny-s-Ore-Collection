@@ -12315,5 +12315,8 @@
   "block.minecraft.lapis_ore": "Stone Lapis Ore",
   "block.minecraft.nether_quartz_ore": "Netherrack Quartz Ore",
   "block.minecraft.redstone_ore": "Stone Redstone Ore",
-  "itemGroup.dannys_ores_tab": "Danny's Ores"
+  "item.dannys_ores.coal_plate": "Coal  Plate ",
+  "itemGroup.dannys_ores_items": "Danny's Ores: Items",
+  "itemGroup.dannys_ores_ores": "Danny's Ores: Ores",
+  "itemGroup.dannys_ores_stones": "Danny's Ores: Stones"
 }
