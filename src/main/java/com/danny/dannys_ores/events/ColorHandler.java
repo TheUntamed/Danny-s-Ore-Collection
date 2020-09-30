@@ -28,7 +28,6 @@ public class ColorHandler {
             }
         }
         for (RegistryObject<Block> blockRo : BlockInit.GRAYSCALE_BLOCKS.getEntries()) {
-            Main.LOGGER.debug("Register GrayScale Block Color");
             Block block = blockRo.get();
 //            if (block instanceof  GrayScaleBlock) {
 //                Item blockItem = block.asItem();
